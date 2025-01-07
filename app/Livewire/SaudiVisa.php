@@ -21,10 +21,9 @@ class SaudiVisa extends Component
     public $visaType;
 
     public $showModal = false;
-    public function mount(){
-        $this->visaDetails = VisaDetail::where('delete_status', 1)->get();
-        //dd($this->visaDetails);
-    }
+    // public function mount(){
+    //     $this->visaDetails = VisaDetail::where('delete_status', 1)->get();
+    // }
     public function UserRequestVisaType($id)
     {
         $this->getVisaType = VisaDetail::find($id);
@@ -71,6 +70,7 @@ class SaudiVisa extends Component
 
     public function render()
     {
+        $this->visaDetails = VisaDetail::where('delete_status', 1)->get();
         return view('livewire.user_front.saudi-visa',['visaDetails' => $this->visaDetails]);
     }
 }

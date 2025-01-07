@@ -568,4 +568,5 @@
             }
         }
     </style>
+    
     <livewire:styles />
