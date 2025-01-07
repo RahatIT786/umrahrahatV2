@@ -123,7 +123,7 @@
     </div>
     </div>
     </div>
-    <div class="elementor-element elementor-element-b47abba e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="b47abba" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
+    <div class="elementor-element elementor-element-b47abba e-flex e-con-boxed  e-con e-parent" data-id="b47abba" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
         <div class="e-con-inner">
             <div class="elementor-element elementor-element-612d54b e-con-full e-flex e-con e-child" data-id="612d54b" data-element_type="container">
                 <div class="elementor-element elementor-element-96f3972 elementor-widget-tablet__width-initial elementor-widget elementor-widget-image" data-id="96f3972" data-element_type="widget" data-widget_type="image.default">
@@ -151,9 +151,9 @@
                 <div class="elementor-element elementor-element-0747914 elementor-tablet-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="0747914" data-element_type="widget" data-widget_type="button.default">
                     <div class="elementor-widget-container">
                         <div class="elementor-button-wrapper">
-                            <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+                            <a class="elementor-button elementor-button-link elementor-size-sm" href="tel:+971566115491.">
 						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Booking Now</span>
+									<span class="elementor-button-text">Contact Us</span>
 					</span>
 					</a>
                         </div>
@@ -284,17 +284,20 @@
                 <div class="elementor-widget-container">
                     <div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
                         <div class="elementor-image-carousel swiper-wrapper" aria-live="off">
-                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
-                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/Logo-1.png" alt="Logo-1" /></figure>
+                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img1.png') }}" style="height: 6rem;" alt="Logo-1" /></figure>
                             </div>
-                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
-                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/Logo-2.png" alt="Logo-2" /></figure>
+                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img2.png') }}" style="height: 4rem;" alt="Logo-2" /></figure>
                             </div>
-                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
-                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/Logo-3.png" alt="Logo-3" /></figure>
+                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img3.png') }}" style="height: 4rem;" alt="Logo-3" /></figure>
                             </div>
-                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
-                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/Logo-4.png" alt="Logo-4" /></figure>
+                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img4.png') }}" style="height: 6rem;" alt="Logo-4" /></figure>
+                            </div>
+                            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+                                <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img4.png') }}" style="height: 6rem;" alt="Logo-4" /></figure>
                             </div>
                         </div>
 

@@ -4,16 +4,16 @@
            <div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
                 <div class="elementor-image-carousel swiper-wrapper" aria-live="off">
                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
-                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img1.png') }}" style="height: 6rem;"  alt="Image"></figure>
+                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img1.png') }}" style="height: 4rem;"  alt="Image"></figure>
                     </div>
                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
                         <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img2.png') }}" style="height: 4rem;" alt="Logo-2" /></figure>
                     </div>
                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
-                     <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img3.png') }}" style="height: 4rem;" alt="Logo-3" /></figure>
+                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img3.png') }}" style="height: 4rem;" alt="Logo-3" /></figure>
                     </div>
                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
-                     <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img4.png') }}" style="height: 6rem;" alt="Logo-4" /></figure>
+                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img4.png') }}" style="height: 4rem;" alt="Logo-4" /></figure>
                     </div>
                 </div>
              </div>

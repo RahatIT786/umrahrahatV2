@@ -3,380 +3,72 @@
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-f5127c5 elementor-widget elementor-widget-heading" data-id="f5127c5" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">Pricing Plan</h2>
+                            <h2 class="elementor-heading-title elementor-size-default">Saudi Visa</h2>
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-6d3c8f1 elementor-widget elementor-widget-text-editor" data-id="6d3c8f1" data-element_type="widget" data-widget_type="text-editor.default">
                         <div class="elementor-widget-container">
-                            <p><a href="#">Home</a> &#8211; Pricing Plan</p>
+                            <p><a href="#">Home</a> &#8211; Saudi Visa</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-a1c0088 e-flex e-con-boxed e-con e-parent" data-id="a1c0088" data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-d5ef43c e-con-full e-flex e-con e-child" data-id="d5ef43c" data-element_type="container">
-                        <div class="elementor-element elementor-element-66e4c20 elementor-widget elementor-widget-heading" data-id="66e4c20" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                                <h6 class="elementor-heading-title elementor-size-default">Best Deal</h6>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-ef6cd7a elementor-widget elementor-widget-heading" data-id="ef6cd7a" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default">Umrah &amp; Hajj Special Packages</h2>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-66f2c62 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-id="66f2c62" data-element_type="widget" data-widget_type="text-editor.default">
-                            <div class="elementor-widget-container">
-                                <p>Morbi ex velit, lacinia ac diam eu, maximus posuere purus. nunc, vulputate a felis sed, facilisis ornare felis. Donec fermentum id ipsum vitae aliquet.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                      <div class="row elementor-element elementor-element-dfbafe1 e-con-full e-flex e-con e-child" data-id="dfbafe1" data-element_type="container">
-                        <div class="col-md-4 col-12 mb-4 elementor-element elementor-element-74d8db8 e-con-full e-flex elementor-invisible e-con e-child" data-id="74d8db8" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
-                            <div class="elementor-element elementor-element-9f68910 elementor-widget elementor-widget-rkit-pricelist" data-id="9f68910" data-element_type="widget" data-widget_type="rkit-pricelist.default">
-                                <div class="elementor-widget-container">
-                                    <div class="rkit-pricelist-container">
-                                        <div class="rkit-pricelist-item">
-                                            <div class="rkit-pricelist-ribbon rkit-pricelist-ribbon__right">
-                                                <div class="rkit-pricelist-ribbon__inner">
-                                                    14 Days </div>
+            <div class="container">
+              <div class="container" style="display: flex; flex-wrap:wrap; justify-content:center; gap:26px;margin-top:100px;margin-bottom:0px" class="row elementor-element elementor-element-dfbafe1 e-con-full e-flex e-con e-child" data-id="dfbafe1" data-element_type="container">
+                <div style="flex:1 1 auto; width:30rem; " class="col-md-6 col-4 mb-4 elementor-element elementor-element-74d8db8 e-con-full e-flex e-con e-child" data-id="74d8db8" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+                    <div class="elementor-element elementor-element-9f68910 elementor-widget elementor-widget-rkit-pricelist" data-id="9f68910" data-element_type="widget" data-widget_type="rkit-pricelist.default">
+                        <div class="elementor-widget-container d-flex justify-content-center" style="flex-wrap:wrap; gap:16px;">
+                            @foreach ($visaDetails as $visaDetail)
+                            <div class="rkit-pricelist-container shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 22rem;">
+                                <div class="rkit-pricelist-item" >
+                                    <div class="rkit-pricelist-ribbon rkit-pricelist-ribbon__right">
+                                        <div class="rkit-pricelist-ribbon__inner">
                                             </div>
+                                    </div>
 
-                                            <div class="rkit-pricelist-item-inner">
-                                                <div class="rkit-pricelist-item-title-section">
-                                                    <h4 class="rkit-pricelist-item-title">Silver Packages </h4>
-                                                    <span class="rkit-pricelist-item-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit elit tellus, luctus nec ullamcor.</span>
-                                                </div>
-                                                <div class="rkit-pricelist-item-inner-price">
-                                                    <div class="rkit-pricelist-item-price-section">
-                                                        <div class="price-container">
+                                    <div class="rkit-pricelist-item-inner">
+                                        <div class="rkit-pricelist-item-title-section">
+                                            <h4 class="rkit-pricelist-item-title">{{$visaDetail->visa_type}}</h4>
+                                            <!-- <span class="rkit-pricelist-item-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit elit tellus, luctus nec ullamcor.</span> -->
+                                        </div>
+                                        <div class="rkit-pricelist-item-inner-price">
+                                            <div class="rkit-pricelist-item-price-section">
+                                                <div class="price-container">
 
-                                                            <div class="sale-price-container-inline period-opsi">
-                                                                <div class="currency-option">
-                                                                    <p class="rkit-pricelist-item-currency">$</p>
+                                                    <div class="sale-price-container-inline period-opsi">
+                                                        <div class="currency-option">
+                                                        <p class="rkit-pricelist-item-sub-title-center">ADE</p>
 
-                                                                    <p class="rkit-pricelist-item-price">2.299</p>
-                                                                </div>
-                                                                <div class="period-option">
-                                                                    <p class="rkit-pricelist-item-sub-title-center">/Packages</p>
-                                                                </div>
-                                                            </div>
+                                                            <p class="rkit-pricelist-item-price">{{$visaDetail->price}}</p>
                                                         </div>
-
+                                                        <div class="period-option">
+                                                            <p class="rkit-pricelist-item-sub-title-center">/Packages</p>
+                                                        </div>
                                                     </div>
-                                                    <ul class="rkit-pricelist-item-description no-icon-hidden">
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Lorem ipsum dolor sit amet</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Consectetur adipiscing elit.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Proin non lobortis enim.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Aliquam erat volutpat.</li>
-                                                    </ul>
-                                                    <div class="rkit-pricelist-item-button ">
-                                                        <a href="" class=" button-element-price">
-                                            Book Now                                                                                    </a>
-                                                    </div>
-
                                                 </div>
+
                                             </div>
+                                            <ul class="rkit-pricelist-item-description no-icon-hidden">
+                                                <li class="divider_desc "> <i aria-hidden="true" class="bi bi-check-circle"></i>processing Time is {{$visaDetail->processing_time}} Day </li>
+                                                <li class="divider_desc "> <i aria-hidden="true" class="bi bi-check-circle"></i>{{$visaDetail->documents_required}} is Required</li>
+                                                <!-- <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Proin non lobortis enim.</li>
+                                                <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Aliquam erat volutpat.</li> -->
+                                            </ul>
+                                            <div class="rkit-pricelist-item-button ">
+                                            <a class=" button-element-price"  wire:click="UserRequestVisaType({{ $visaDetail->id }})" >Open Modal</a>
+                                                <!-- <a href="" class=" button-element-price">
+                                    Book Now                                                                                    </a> -->
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 col-12 mb-4 elementor-element elementor-element-e17c173 e-con-full e-flex elementor-invisible e-con e-child" data-id="e17c173" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-                            <div class="elementor-element elementor-element-c3cae6f elementor-widget elementor-widget-rkit-pricelist" data-id="c3cae6f" data-element_type="widget" data-widget_type="rkit-pricelist.default">
-                                <div class="elementor-widget-container">
-                                    <div class="rkit-pricelist-container">
-                                        <div class="rkit-pricelist-item">
-                                            <div class="rkit-pricelist-ribbon rkit-pricelist-ribbon__right">
-                                                <div class="rkit-pricelist-ribbon__inner">
-                                                    16 Days </div>
-                                            </div>
-
-                                            <div class="rkit-pricelist-item-inner">
-                                                <div class="rkit-pricelist-item-title-section">
-                                                    <h4 class="rkit-pricelist-item-title">Gold Packages </h4>
-                                                    <span class="rkit-pricelist-item-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit elit tellus, luctus nec ullamcor.</span>
-                                                </div>
-                                                <div class="rkit-pricelist-item-inner-price">
-                                                    <div class="rkit-pricelist-item-price-section">
-                                                        <div class="price-container">
-
-                                                            <div class="sale-price-container-inline period-opsi">
-                                                                <div class="currency-option">
-                                                                    <p class="rkit-pricelist-item-currency">$</p>
-
-                                                                    <p class="rkit-pricelist-item-price">3.499</p>
-                                                                </div>
-                                                                <div class="period-option">
-                                                                    <p class="rkit-pricelist-item-sub-title-center">/Packages</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="rkit-pricelist-item-description no-icon-hidden">
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Lorem ipsum dolor sit amet</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Consectetur adipiscing elit.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Proin non lobortis enim.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Aliquam erat volutpat.</li>
-                                                    </ul>
-                                                    <div class="rkit-pricelist-item-button ">
-                                                        <a href="" class=" button-element-price">
-                                            Book Now                                                                                    </a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-12 mb-4 elementor-element elementor-element-4b3e09f e-con-full e-flex elementor-invisible e-con e-child" data-id="4b3e09f" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
-                            <div class="elementor-element elementor-element-fe200cc elementor-widget elementor-widget-rkit-pricelist" data-id="fe200cc" data-element_type="widget" data-widget_type="rkit-pricelist.default">
-                                <div class="elementor-widget-container">
-                                    <div class="rkit-pricelist-container">
-                                        <div class="rkit-pricelist-item">
-                                            <div class="rkit-pricelist-ribbon rkit-pricelist-ribbon__right">
-                                                <div class="rkit-pricelist-ribbon__inner">
-                                                    18 Days </div>
-                                            </div>
-
-                                            <div class="rkit-pricelist-item-inner">
-                                                <div class="rkit-pricelist-item-title-section">
-                                                    <h4 class="rkit-pricelist-item-title">Platinum Packages </h4>
-                                                    <span class="rkit-pricelist-item-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit elit tellus, luctus nec ullamcor.</span>
-                                                </div>
-                                                <div class="rkit-pricelist-item-inner-price">
-                                                    <div class="rkit-pricelist-item-price-section">
-                                                        <div class="price-container">
-
-                                                            <div class="sale-price-container-inline period-opsi">
-                                                                <div class="currency-option">
-                                                                    <p class="rkit-pricelist-item-currency">$</p>
-
-                                                                    <p class="rkit-pricelist-item-price">4.999</p>
-                                                                </div>
-                                                                <div class="period-option">
-                                                                    <p class="rkit-pricelist-item-sub-title-center">/Packages</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="rkit-pricelist-item-description no-icon-hidden">
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Lorem ipsum dolor sit amet</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Consectetur adipiscing elit.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Proin non lobortis enim.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Aliquam erat volutpat.</li>
-                                                    </ul>
-                                                    <div class="rkit-pricelist-item-button ">
-                                                        <a href="" class=" button-element-price">
-                                            Book Now                                                                                    </a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-12 mb-4 elementor-element elementor-element-74d8db8 e-con-full e-flex elementor-invisible e-con e-child" data-id="74d8db8" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
-                            <div class="elementor-element elementor-element-9f68910 elementor-widget elementor-widget-rkit-pricelist" data-id="9f68910" data-element_type="widget" data-widget_type="rkit-pricelist.default">
-                                <div class="elementor-widget-container">
-                                    <div class="rkit-pricelist-container">
-                                        <div class="rkit-pricelist-item">
-                                            <div class="rkit-pricelist-ribbon rkit-pricelist-ribbon__right">
-                                                <div class="rkit-pricelist-ribbon__inner">
-                                                    14 Days </div>
-                                            </div>
-
-                                            <div class="rkit-pricelist-item-inner">
-                                                <div class="rkit-pricelist-item-title-section">
-                                                    <h4 class="rkit-pricelist-item-title">Silver Packages </h4>
-                                                    <span class="rkit-pricelist-item-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit elit tellus, luctus nec ullamcor.</span>
-                                                </div>
-                                                <div class="rkit-pricelist-item-inner-price">
-                                                    <div class="rkit-pricelist-item-price-section">
-                                                        <div class="price-container">
-
-                                                            <div class="sale-price-container-inline period-opsi">
-                                                                <div class="currency-option">
-                                                                    <p class="rkit-pricelist-item-currency">$</p>
-
-                                                                    <p class="rkit-pricelist-item-price">2.299</p>
-                                                                </div>
-                                                                <div class="period-option">
-                                                                    <p class="rkit-pricelist-item-sub-title-center">/Packages</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="rkit-pricelist-item-description no-icon-hidden">
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Lorem ipsum dolor sit amet</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Consectetur adipiscing elit.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Proin non lobortis enim.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Aliquam erat volutpat.</li>
-                                                    </ul>
-                                                    <div class="rkit-pricelist-item-button ">
-                                                        <a href="" class=" button-element-price">
-                                            Book Now                                                                                    </a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-12 mb-4 elementor-element elementor-element-e17c173 e-con-full e-flex elementor-invisible e-con e-child" data-id="e17c173" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-                            <div class="elementor-element elementor-element-c3cae6f elementor-widget elementor-widget-rkit-pricelist" data-id="c3cae6f" data-element_type="widget" data-widget_type="rkit-pricelist.default">
-                                <div class="elementor-widget-container">
-                                    <div class="rkit-pricelist-container">
-                                        <div class="rkit-pricelist-item">
-                                            <div class="rkit-pricelist-ribbon rkit-pricelist-ribbon__right">
-                                                <div class="rkit-pricelist-ribbon__inner">
-                                                    16 Days </div>
-                                            </div>
-
-                                            <div class="rkit-pricelist-item-inner">
-                                                <div class="rkit-pricelist-item-title-section">
-                                                    <h4 class="rkit-pricelist-item-title">Gold Packages </h4>
-                                                    <span class="rkit-pricelist-item-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit elit tellus, luctus nec ullamcor.</span>
-                                                </div>
-                                                <div class="rkit-pricelist-item-inner-price">
-                                                    <div class="rkit-pricelist-item-price-section">
-                                                        <div class="price-container">
-
-                                                            <div class="sale-price-container-inline period-opsi">
-                                                                <div class="currency-option">
-                                                                    <p class="rkit-pricelist-item-currency">$</p>
-
-                                                                    <p class="rkit-pricelist-item-price">3.499</p>
-                                                                </div>
-                                                                <div class="period-option">
-                                                                    <p class="rkit-pricelist-item-sub-title-center">/Packages</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="rkit-pricelist-item-description no-icon-hidden">
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Lorem ipsum dolor sit amet</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Consectetur adipiscing elit.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Proin non lobortis enim.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Aliquam erat volutpat.</li>
-                                                    </ul>
-                                                    <div class="rkit-pricelist-item-button ">
-                                                        <a href="" class=" button-element-price">
-                                            Book Now                                                                                    </a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-12 mb-4 elementor-element elementor-element-4b3e09f e-con-full e-flex elementor-invisible e-con e-child" data-id="4b3e09f" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
-                            <div class="elementor-element elementor-element-fe200cc elementor-widget elementor-widget-rkit-pricelist" data-id="fe200cc" data-element_type="widget" data-widget_type="rkit-pricelist.default">
-                                <div class="elementor-widget-container">
-                                    <div class="rkit-pricelist-container">
-                                        <div class="rkit-pricelist-item">
-                                            <div class="rkit-pricelist-ribbon rkit-pricelist-ribbon__right">
-                                                <div class="rkit-pricelist-ribbon__inner">
-                                                    18 Days </div>
-                                            </div>
-
-                                            <div class="rkit-pricelist-item-inner">
-                                                <div class="rkit-pricelist-item-title-section">
-                                                    <h4 class="rkit-pricelist-item-title">Platinum Packages </h4>
-                                                    <span class="rkit-pricelist-item-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit elit tellus, luctus nec ullamcor.</span>
-                                                </div>
-                                                <div class="rkit-pricelist-item-inner-price">
-                                                    <div class="rkit-pricelist-item-price-section">
-                                                        <div class="price-container">
-
-                                                            <div class="sale-price-container-inline period-opsi">
-                                                                <div class="currency-option">
-                                                                    <p class="rkit-pricelist-item-currency">$</p>
-
-                                                                    <p class="rkit-pricelist-item-price">4.999</p>
-                                                                </div>
-                                                                <div class="period-option">
-                                                                    <p class="rkit-pricelist-item-sub-title-center">/Packages</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="rkit-pricelist-item-description no-icon-hidden">
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Lorem ipsum dolor sit amet</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Consectetur adipiscing elit.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Proin non lobortis enim.</li>
-                                                        <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Aliquam erat volutpat.</li>
-                                                    </ul>
-                                                    <div class="rkit-pricelist-item-button ">
-                                                        <a href="" class=" button-element-price">
-                                            Book Now                                                                                    </a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-68fe85a e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="68fe85a" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-e5f048f e-con-full e-flex e-con e-child" data-id="e5f048f" data-element_type="container">
-                        <div class="elementor-element elementor-element-b86d5ad elementor-widget-tablet__width-initial elementor-widget elementor-widget-image" data-id="b86d5ad" data-element_type="widget" data-widget_type="image.default">
-                            <div class="elementor-widget-container">
-                                <img decoding="async" width="805" height="756" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/photo-14.png" class="attachment-full size-full wp-image-303" alt="" srcset="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/photo-14.png 805w, https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/photo-14-300x282.png 300w, https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/photo-14-768x721.png 768w, https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/photo-14-800x751.png 800w"
-                                    sizes="(max-width: 805px) 100vw, 805px" /> </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-4f8ebd6 e-con-full e-flex e-con e-child" data-id="4f8ebd6" data-element_type="container">
-                        <div class="elementor-element elementor-element-0c91986 elementor-widget elementor-widget-heading" data-id="0c91986" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                                <h6 class="elementor-heading-title elementor-size-default">Exclusive Deals</h6>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-f0cf7ee elementor-widget elementor-widget-heading" data-id="f0cf7ee" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                                <h3 class="elementor-heading-title elementor-size-default">Affordable &amp; Premium Hajj &amp; Umrah Packages</h3>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-926ec09 elementor-widget elementor-widget-text-editor" data-id="926ec09" data-element_type="widget" data-widget_type="text-editor.default">
-                            <div class="elementor-widget-container">
-                                <p>Our packages include everything from flights and accommodation to visa processing and guided tours, ensuring you receive the best value and exceptional service.</p>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-11686df elementor-tablet-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="11686df" data-element_type="widget" data-widget_type="button.default">
-                            <div class="elementor-widget-container">
-                                <div class="elementor-button-wrapper">
-                                    <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Booking Now</span>
-					</span>
-					</a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
+              </div>     
             </div>
             <div class="elementor-element elementor-element-bd9b785 e-flex e-con-boxed e-con e-parent" data-id="bd9b785" data-element_type="container">
                 <div class="e-con-inner">
@@ -691,8 +383,6 @@
                 </div>
             </button>
                                                         </div>
-
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -701,7 +391,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="elementor-element elementor-element-7ce6992 elementor-icon-list--layout-inline elementor-tablet-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7ce6992" data-element_type="widget" data-widget_type="icon-list.default">
+                        <!-- <div class="elementor-element elementor-element-7ce6992 elementor-icon-list--layout-inline elementor-tablet-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7ce6992" data-element_type="widget" data-widget_type="icon-list.default">
                             <div class="elementor-widget-container">
                                 <ul class="elementor-icon-list-items elementor-inline-items">
                                     <li class="elementor-icon-list-item elementor-inline-item">
@@ -721,8 +411,156 @@
                                     </li>
                                 </ul>
                           </div>
-                      </div>
+                      </div> -->
                  </div>
              </div>
         </div>
+   <!-- Modal Structure -->
+
+   <!-- Modal -->
+   <div 
+    class="modal fade @if($showModal) show @endif" 
+    id="enquiryModal" 
+    tabindex="-1" 
+    aria-labelledby="enquiryModalLabel" 
+    aria-hidden="true"
+    @if ($showModal) style="display: block;" @else style="display: none;" @endif
+>
+    <div class="" >
+        <div class="modal-content1" >
+            <div class="modal-header">
+                <h5 class="modal-title"  id="enquiryModalLabel">Enquiry Form</h5>
+                <button type="button" class="btn-close" wire:click="$set('showModal', false)" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form wire:submit.prevent="uservisaEnquiry">
+                    @csrf
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="name" wire:model="name" placeholder="Enter your full name" required>
+                        @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" id="phone" wire:model="phone" placeholder="Enter your phone number" required>
+                        @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="message" wire:model="message" rows="4" placeholder="Enter your enquiry details" required></textarea>
+                        @error('message') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Loading message -->
+                    <div wire:loading>
+                        Submitting...
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carousel (Hidden by default) -->
+<div id="photoCarousel" class="carousel slide" data-bs-ride="carousel" style="display: none;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ asset('asserts/user/img/img1.png') }}" class="d-block w-100" alt="Photo 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('asserts/user/img/img2.png') }}" class="d-block w-100" alt="Photo 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('asserts/user/img/img3.png') }}" class="d-block w-100" alt="Photo 1">
+    </div>
+    <!-- Add more carousel items as needed -->
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+ <!-- <div id="myModal"  class="modal"
+    @if ($showModal)
+        style="display: block;"
+    @else
+        style="display: none;"
+    @endif
+ >
+  <div class="modal-content1">
+    <h5>Contact Form</h5>
+    <span id="closeModalButton" class="close">&times;</span>
+    <form id="contactForm">
+      <div class="input-container">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="input-container">
+        <label for="number">Number</label>
+        <input type="text" id="number" name="number" required>
+      </div>
+      <div class="input-container">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</div> -->
+  </div>
+
+  <script>
+    document.getElementById('showCarouselButton').addEventListener('click', function() {
+        var carousel = document.getElementById('photoCarousel');
+        // Toggle display of the carousel
+        if (carousel.style.display === "none" || carousel.style.display === "") {
+            carousel.style.display = "block"; // Show the carousel
+        } else {
+            carousel.style.display = "none"; // Hide the carousel
+        }
+    });
+</script>
+
+  <!-- Modal Script -->
+<script>
+  // Get the modal and buttons
+  var modal = document.getElementById("myModal");
+  var openModalButton = document.getElementById("openModalButton");
+  var closeModalButton = document.getElementById("closeModalButton");
+
+  // Open the modal
+  openModalButton.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // Close the modal
+  closeModalButton.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Close the modal if clicked outside the modal content
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Handle form submission
+  document.getElementById("contactForm").onsubmit = function(event) {
+    event.preventDefault();
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("number").value;
+    var message = document.getElementById("message").value;
+    console.log("Name: " + name);
+    console.log("Number: " + number);
+    console.log("Message: " + message);
+    alert("Form Submitted!");
+    modal.style.display = "none";
+  }
+</script>
