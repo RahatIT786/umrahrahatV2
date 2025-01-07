@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="https://templatekit.rometheme.pro/prayer/xmlrpc.php" />
-    <title>Homepage &#8211; Prayer</title>
+    {{-- <link rel="shortcut icon" href="{{config('assets.images.favIcon'.env('APP_ENV'))}}" type="image/x-icon"> --}}
+    {{-- <link rel="shortcut icon" href="/asserts/user/img/rahatlogo.jpg" type="image/x-icon"> --}}
+    <link rel="shortcut icon" href="{{ config('assets.images.favIcon.' . (env('APP_ENV') === 'production' ? 'production' : 'local')) }}" type="image/x-icon">
+    <title>RahatGroup</title>
 
     <meta name='robots' content='max-image-preview:large' />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
