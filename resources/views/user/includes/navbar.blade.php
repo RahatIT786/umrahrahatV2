@@ -62,29 +62,29 @@
                                         <div class="rkit-navmenu rkit-responsive-menu rkit-responsive-tablet  rkit-navmenu-fullwidth">
                                             <ul class="rkit-menu-container">
                                                 <li class="rkit-menu-item rkit-menu-active  ">
-                                                    <a class="rkit-nav-link"  href="{{route('layouts.app')}}" wire:navigate >Home</a>
+                                                    <a class="rkit-nav-link"  href="{{route('layouts.app')}}" >Home</a>
                                                 </li>
                                                 <li class="rkit-menu-item   ">
-                                                    <a class="rkit-nav-link" href="{{ route('about') }}" wire:navigate >About Us</a>
+                                                    <a class="rkit-nav-link" href="{{ route('about') }}" >About Us</a>
                                                 </li>
                                                 <li class="rkit-menu-item   ">
-                                                    <a class="rkit-nav-link" href="{{ route('package') }}" wire:navigate >Umrah Packages</a>
+                                                    <a class="rkit-nav-link" href="{{ route('package') }}"  >Umrah Packages</a>
                                                 </li>
                                                 <li class="rkit-menu-item   ">
-                                                    <a class="rkit-nav-link" href="{{ route('saudi-visa') }}" wire:navigate >Saudi Visa</a>
+                                                    <a class="rkit-nav-link" href="{{ route('saudi-visa') }}" >Saudi Visa</a>
                                                 </li>
                                                 <li class="rkit-menu-item  rkit-dropdown-hover ">
                                                     <a class="rkit-nav-link" href="">
                                 Services                                <i aria-hidden="true" class="rkit-submenu-icon fas fa-caret-down"></i>                            </a>
                                                     <ul class="rkit-navmenu-dropdown">
                                                         <li class="rkit-submenu-item  ">
-                                                            <a href="{{ route('our-services') }}" wire:navigate class="rkit-nav-link"> Our Services  </a>
+                                                            <a href="{{ route('our-services') }}"  class="rkit-nav-link"> Our Services  </a>
                                                         </li>
                                                         <li class="rkit-submenu-item  ">
-                                                            <a href="{{route('blog')}}" wire:navigate class="rkit-nav-link">Blog  </a>
+                                                            <a href="{{route('blog')}}"  class="rkit-nav-link">Blog  </a>
                                                         </li>
                                                         <li class="rkit-submenu-item  ">
-                                                            <a href="{{route('gallery')}}" wire:navigate class="rkit-nav-link">
+                                                            <a href="{{route('gallery')}}" class="rkit-nav-link">
                                                 Gallery                                                                                        </a>
                                                         </li>
                                                     </ul>

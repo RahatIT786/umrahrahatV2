@@ -16,6 +16,7 @@
                         <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img4.png') }}" style="height: 4rem;" alt="Logo-4" /></figure>
                     </div>
                 </div>
-             </div>
-         </div>
-</div>
+            </div>
+        </div>
+    </div> 
+

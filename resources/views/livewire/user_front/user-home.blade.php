@@ -4,17 +4,17 @@
                     <div class="elementor-element elementor-element-d5119ee e-con-full e-flex elementor-invisible e-con e-child" data-id="d5119ee" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
                         <div class="elementor-element elementor-element-44b0248 elementor-widget elementor-widget-heading" data-id="44b0248" data-element_type="widget" data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h6 class="elementor-heading-title elementor-size-default">Welcome To Rahat</h6>
+                                <h6 class="elementor-heading-title elementor-size-default">Journey of a Lifetime</h6>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-4b49ac5 elementor-widget elementor-widget-heading" data-id="4b49ac5" data-element_type="widget" data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h1 class="elementor-heading-title elementor-size-default">Our Umrah And Hajj Packages Are The Perfect</h1>
+                                <h1 class="elementor-heading-title elementor-size-default">Book Your Hajj &amp; Umrah Journey with Confidence</h1>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-ff02337 elementor-widget elementor-widget-text-editor" data-id="ff02337" data-element_type="widget" data-widget_type="text-editor.default">
                             <div class="elementor-widget-container">
-                                <p>Rahat is a trusted travel agency specializing in Hajj and Umrah services, providing seamless, guided experiences for pilgrims.</p>
+                                <p>Our expert team offers tailored Hajj and Umrah packages designed to provide you with comfort, convenience, and seamless travel.</p>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-f11ba32 e-con-full e-flex e-con e-child" data-id="f11ba32" data-element_type="container">
@@ -126,12 +126,13 @@
                         </div>
                         <div class="elementor-element elementor-element-870989e elementor-widget elementor-widget-heading" data-id="870989e" data-element_type="widget" data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h3 class="elementor-heading-title elementor-size-default">Simplify Your Umrah Journey With Us</h3>
+                                <h3 class="elementor-heading-title elementor-size-default">Making Your Umrah &amp; Hajj Experience Smooth</h3>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-2cd41d2 elementor-widget elementor-widget-text-editor" data-id="2cd41d2" data-element_type="widget" data-widget_type="text-editor.default">
                             <div class="elementor-widget-container">
-                                <p>Our goal is to make your spiritual journey as smooth and fulfilling as possible, offering personalized packages and attentive support every step of the way. Trust Rahat for a worry-free Umrah experience that lets you focus on your worship and devotion.</p>
+                                <p>Welcome to Prayer, your trusted partner for planning and booking your sacred Hajj and Umrah pilgrimage. With years of experience in providing seamless travel solutions, we are dedicated to ensuring that your journey is
+                                    spiritually fulfilling, comfortable, and stress-free.</p>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-cc1d030 elementor-position-left elementor-mobile-position-left elementor-view-default elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="cc1d030" data-element_type="widget"
@@ -416,7 +417,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="elementor-element elementor-element-2315bc4 e-flex e-con-boxed e-con e-parent" data-id="2315bc4" data-element_type="container">
+            <div class="elementor-element elementor-element-2315bc4 e-flex e-con-boxed e-con e-parent" data-id="2315bc4" data-element_type="container">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-42b77a5 e-con-full e-flex e-con e-child" data-id="42b77a5" data-element_type="container">
                         <div class="elementor-element elementor-element-1d6d672 e-con-full e-flex e-con e-child" data-id="1d6d672" data-element_type="container">
@@ -526,7 +527,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="elementor-element elementor-element-4828b8d e-flex e-con-boxed e-con e-parent" data-id="4828b8d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-b3f89b1 e-con-full e-flex e-con e-child" data-id="b3f89b1" data-element_type="container">
@@ -587,7 +588,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="elementor-element elementor-element-9484c68 e-flex e-con-boxed e-con e-parent" data-id="9484c68" data-element_type="container">
+            <div class="elementor-element elementor-element-9484c68 e-flex e-con-boxed e-con e-parent" data-id="9484c68" data-element_type="container">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-b6c78d9 elementor-widget elementor-widget-heading" data-id="b6c78d9" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container">
@@ -727,8 +728,8 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
-            <div style="margin-top: 180px;" class=" elementor-element elementor-element-88ab681 e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="88ab681" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
+            </div>
+            <div class="elementor-element elementor-element-88ab681 e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="88ab681" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-cd005ef e-con-full e-flex e-con e-child" data-id="cd005ef" data-element_type="container">
                         <div class="elementor-element elementor-element-d578772 elementor-widget-tablet__width-initial elementor-widget elementor-widget-image" data-id="d578772" data-element_type="widget" data-widget_type="image.default">
@@ -884,7 +885,28 @@
                             </div>
                         </div>
                     </div>
-                    @include('livewire.user_front.components.partner-logos')
+                    <div class="elementor-element elementor-element-6471640 elementor-widget elementor-widget-image-carousel" data-id="6471640" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;4&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:100,&quot;sizes&quot;:[]},&quot;slides_to_show_tablet&quot;:&quot;4&quot;,&quot;slides_to_show_mobile&quot;:&quot;3&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500}"
+                        data-widget_type="image-carousel.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
+                                <div class="elementor-image-carousel swiper-wrapper" aria-live="off">
+                                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/Logo-1.png" alt="Logo-1" /></figure>
+                                    </div>
+                                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/Logo-2.png" alt="Logo-2" /></figure>
+                                    </div>
+                                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/Logo-3.png" alt="Logo-3" /></figure>
+                                    </div>
+                                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/Logo-4.png" alt="Logo-4" /></figure>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="elementor-element elementor-element-796794d e-flex e-con-boxed e-con e-parent" data-id="796794d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1054,7 +1076,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="elementor-element elementor-element-332460d e-flex e-con-boxed e-con e-parent" data-id="332460d" data-element_type="container">
+            <div class="elementor-element elementor-element-332460d e-flex e-con-boxed e-con e-parent" data-id="332460d" data-element_type="container">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-755ac27 e-con-full e-flex e-con e-child" data-id="755ac27" data-element_type="container">
                         <div class="elementor-element elementor-element-b70de35 e-con-full e-flex e-con e-child" data-id="b70de35" data-element_type="container">
@@ -1174,6 +1196,6 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
 

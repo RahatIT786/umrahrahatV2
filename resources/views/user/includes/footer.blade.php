@@ -2,17 +2,16 @@
             <div data-elementor-type="wp-post" data-elementor-id="589" class="elementor elementor-589">
                 <div class="elementor-element elementor-element-8b983c2 e-flex e-con-boxed e-con e-parent" data-id="8b983c2" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                     <div class="e-con-inner">
-                        
                         <div class="elementor-element elementor-element-7317f8c e-con-full e-flex e-con e-child" data-id="7317f8c" data-element_type="container">
                             <div class="elementor-element elementor-element-275e8c7 e-con-full e-flex e-con e-child" data-id="275e8c7" data-element_type="container">
                                 <div class="elementor-element elementor-element-e7b4acd elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="e7b4acd" data-element_type="widget" data-widget_type="image.default">
                                     <div class="elementor-widget-container">
-                                        <img width="600" height="207" src="{{ asset('asserts/user/img/rahatlogo1.png') }}" class="attachment-full size-full wp-image-594" alt="" 
+                                        <img width="600" height="207" src="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/logo-prayer.png" class="attachment-full size-full wp-image-594" alt="" srcset="https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/logo-prayer.png 600w, https://templatekit.rometheme.pro/prayer/wp-content/uploads/sites/32/2024/12/logo-prayer-300x104.png 300w"
                                             sizes="(max-width: 600px) 100vw, 600px" /> </div>
                                 </div>
                                 <div class="elementor-element elementor-element-146cfb9 elementor-widget elementor-widget-text-editor" data-id="146cfb9" data-element_type="widget" data-widget_type="text-editor.default">
                                     <div class="elementor-widget-container">
-                                        <p>We offer various packages according to the convenience and budget of the pilgrims. We have special Umrah packages by Air, car and luxury buses.</p>
+                                        <p>Welcome to Prayer, your trusted partner for planning and booking your sacred Hajj and Umrah pilgrimage.</p>
                                     </div>
                                 </div>
                             </div>
@@ -176,108 +175,6 @@
                                 </div>
                             </div>
                         </div>
-                        <hr>
-                        <div class="d-flex justify-content-evenly elementor-element elementor-element-7317f8c e-con-full e-flex e-con e-child" data-id="7317f8c" data-element_type="container">
-                            <!-- <div class="elementor-element elementor-element-275e8c7 e-con-full e-flex e-con e-child" data-id="275e8c7" data-element_type="container">
-                                <div class="elementor-element elementor-element-e7b4acd elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="e7b4acd" data-element_type="widget" data-widget_type="image.default">
-                                    <div class="elementor-widget-container">
-                                        <img width="600" height="207" src="{{ asset('asserts/user/img/rahatlogo1.png') }}" class="attachment-full size-full wp-image-594" alt="" 
-                                            sizes="(max-width: 600px) 100vw, 600px" /> </div>
-                                </div>
-                                <div class="elementor-element elementor-element-146cfb9 elementor-widget elementor-widget-text-editor" data-id="146cfb9" data-element_type="widget" data-widget_type="text-editor.default">
-                                    <div class="elementor-widget-container">
-                                        <p>We offer various packages according to the convenience and budget of the pilgrims. We have special Umrah packages by Air, car and luxury buses.</p>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div  class=" elementor-element elementor-element-e559330 e-con-full e-flex e-con e-child" data-id="e559330" data-element_type="container">
-                                <div class="elementor-element elementor-element-d136769 elementor-widget elementor-widget-heading" data-id="d136769" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h5 class="elementor-heading-title elementor-size-default">MAKKA - SAUDI</h5>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-51f5828 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="51f5828" data-element_type="widget" data-widget_type="icon-list.default">
-                                    <div class="elementor-widget-container">
-                                        <ul class="elementor-icon-list-items">
-                                            <li class="elementor-icon-list-item">
-                                              <a class="d-flex align-items-start" href="#">
-												<span class="elementor-icon-list-icon">
-							                      <i aria-hidden="true" style="font-size: 18px;" class="bi-geo-alt-fill"></i>						
-                                                </span>
-										         <span class="elementor-icon-list-text">
-                                                    Deafa International,<br> Ajyad Sud Street.<br> Anwar Deafa, Second Floor.
-                                                </span>
-											  </a>
-                                            </li>
-                                            <li class="elementor-icon-list-item">
-                                                <a class="d-flex align-items-start" href="tel:+966563898353">
-												<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" style="font-size: 18px;" class="bi-telephone-fill"></i>						</span>
-										<span class="elementor-icon-list-text">+966 56 389 8353</span>
-											</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-b396d41 e-con-full e-flex e-con e-child" data-id="b396d41" data-element_type="container">
-                                <div class="elementor-element elementor-element-4b51ce7 elementor-widget elementor-widget-heading" data-id="4b51ce7" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h5 class="elementor-heading-title elementor-size-default">MADINA - SAUDI</h5>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-a34f2ad elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="a34f2ad" data-element_type="widget" data-widget_type="icon-list.default">
-                                    <div class="elementor-widget-container">
-                                        <ul class="elementor-icon-list-items">
-                                            <li class="elementor-icon-list-item">
-                                                <a href="#" class="d-flex align-items-start">
-												<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" style="font-size: 18px;" class="bi-geo-alt-fill"></i>						</span>
-										<span class="elementor-icon-list-text">Ali ibne Talib Inside Qurban Mall. Awaali, Madina Munawwara.</span>
-											</a>
-                                            </li>
-                                            <li class="elementor-icon-list-item">
-                                                <a href="tel:+966543186894" class="d-flex align-items-start">
-												<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" style="font-size: 18px;" class="bi-telephone-fill"></i>						</span>
-										<span class="elementor-icon-list-text">+966 54 318 6894.</span>
-											</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-067d8d8 e-con-full e-flex e-con e-child" data-id="067d8d8" data-element_type="container">
-                                <div class="elementor-element elementor-element-afa6add elementor-widget elementor-widget-heading" data-id="afa6add" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h5 class="elementor-heading-title elementor-size-default">SHARJAH - DUBAI</h5>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-67b15e9 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="67b15e9" data-element_type="widget" data-widget_type="icon-list.default">
-                                    <div class="elementor-widget-container">
-                                        <ul class="elementor-icon-list-items">
-                                            <li class="elementor-icon-list-item">
-                                                <a href="#" class="d-flex align-items-start">
-
-												<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" style="font-size: 18px;" class="bi-geo-alt-fill"></i>						</span>
-										<span class="elementor-icon-list-text">705, F1 Building, Rolla Market, Near Hisn Fort. Sharjah.</span>
-											</a>
-                                            </li>
-                                            <li class="elementor-icon-list-item">
-                                                <a href="tel:+971566115491" class="d-flex align-items-start">
-
-												<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" style="font-size: 18px;" class="bi-telephone-fill"></i>						</span>
-										<span class="elementor-icon-list-text">+971 56 611 5491.</span>
-											</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
                         <div class="elementor-element elementor-element-2f8d87a elementor-widget elementor-widget-spacer" data-id="2f8d87a" data-element_type="widget" data-widget_type="spacer.default">
                             <div class="elementor-widget-container">
                                 <div class="elementor-spacer">
@@ -290,27 +187,25 @@
                                 <div class="elementor-element elementor-element-6d7abf8 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6d7abf8" data-element_type="widget" data-widget_type="icon-list.default">
                                     <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
-                                            <li class="d-flex align-items-start" class="elementor-icon-list-item">
-                                                <span class="elementor-icon-list-icon">
-							<i aria-hidden="true" style="font-size: 18px;" class="bi-geo-alt-fill"></i>						</span>
-                                                <span class="elementor-icon-list-text">705, F1 Building,<br> Rolla Market,<br> Near Hisn Fort.<br> Sharjah.</span>
-                                            </li>
                                             <li class="elementor-icon-list-item">
-                                                <a href="tel:+971566115491">
                                                 <span class="elementor-icon-list-icon">
-							    <i aria-hidden="true"  style="font-size: 18px;" class="bi-telephone-fill"></i>						</span>
-                                                <span class="elementor-icon-list-text">+971 56 611 5491</span>
-                                                </a>
+							<i aria-hidden="true" class="rtmicon rtmicon-pin-map-location"></i>						</span>
+                                                <span class="elementor-icon-list-text">KLLG St, No.99, Pku City, ID 28289</span>
                                             </li>
                                             <li class="elementor-icon-list-item">
                                                 <span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="bi-envelope-fill"  style="font-size: 18px;"></i>						</span>
-                                                <span class="elementor-icon-list-text">info@rahat.in</span>
+							<i aria-hidden="true" class="rtmicon rtmicon-phone-classic"></i>						</span>
+                                                <span class="elementor-icon-list-text">0761-8523-398</span>
+                                            </li>
+                                            <li class="elementor-icon-list-item">
+                                                <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="rtmicon rtmicon-envelope"></i>						</span>
+                                                <span class="elementor-icon-list-text">hello@domainsite.com</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <!-- <div class="elementor-element elementor-element-4845ad0 elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="4845ad0" data-element_type="widget" data-widget_type="social-icons.default">
+                                <div class="elementor-element elementor-element-4845ad0 elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="4845ad0" data-element_type="widget" data-widget_type="social-icons.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-social-icons-wrapper elementor-grid">
                                             <span class="elementor-grid-item">
@@ -335,7 +230,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                             <div class="elementor-element elementor-element-0b97700 e-con-full e-flex e-con e-child" data-id="0b97700" data-element_type="container">
                                 <div class="elementor-element elementor-element-a19a600 elementor-widget elementor-widget-heading" data-id="a19a600" data-element_type="widget" data-widget_type="heading.default">
