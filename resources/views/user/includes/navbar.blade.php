@@ -68,7 +68,7 @@
                                                     <a class="rkit-nav-link" href="{{ route('about') }}" wire:navigate >About Us</a>
                                                 </li>
                                                 <li class="rkit-menu-item   ">
-                                                    <a class="rkit-nav-link" href="{{ route('about') }}" wire:navigate >Umrah Packages</a>
+                                                    <a class="rkit-nav-link" href="{{ route('package') }}" wire:navigate >Umrah Packages</a>
                                                 </li>
                                                 <li class="rkit-menu-item   ">
                                                     <a class="rkit-nav-link" href="{{ route('saudi-visa') }}" wire:navigate >Saudi Visa</a>
