@@ -490,7 +490,7 @@
                         </div>
                         <div class="elementor-element elementor-element-ebc07b6 elementor-widget elementor-widget-heading" data-id="ebc07b6" data-element_type="widget" data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <p class="elementor-heading-title elementor-size-default">Copyright © 2024 Rometheme. All Rights Reserved.</p>
+                                <p class="elementor-heading-title elementor-size-default">Copyright © 2024 <a href="http://rahatitsolutions.com/">RahatIT Solution</a>. All Rights Reserved.</p>
                             </div>
                         </div>
                     </div>

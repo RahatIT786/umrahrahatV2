@@ -29,6 +29,9 @@ class PackageUserView extends Component
 
     public $customerChoosenPackage;
 
+    public $browcherPopUp;
+
+
 
     // package enquiry form submission variables
     public $customerName;
@@ -154,6 +157,14 @@ class PackageUserView extends Component
     public function closePackageDetails(){
         $this->selectedPackage = null;
         $this->selectedPackageId = null;
+    }
+
+
+    public function openBrowcher(){
+        $this->browcherPopUp=true;
+    }
+    public function closeBrowcher(){
+        $this->browcherPopUp=false;
     }
 
 
