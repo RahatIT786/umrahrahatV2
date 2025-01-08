@@ -18,8 +18,17 @@ return[
         
        
 
+        'about_img1'=> 'asserts/user/img/aboutimg1.jpg',
+        'about_img2'=> 'asserts/user/img/aboutimg2.jpg',
+        'about_img3'=> 'asserts/user/img/aboutimg3.jpeg',
+        'about_img4'=> 'asserts/user/img/aboutimg4.jpg',
 
+        //partner logos
 
+        'partner_logo1'=> 'asserts/user/img/parthnerlogo1.png',
+        'partner_logo2'=> 'asserts/user/img/parthnerlogo2.png',
+        'partner_logo3'=> 'asserts/user/img/parthnerlogo3.png',
+        'partner_logo4'=> 'asserts/user/img/parthnerlogo4.png',
 
 
 
