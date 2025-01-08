@@ -45,8 +45,8 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="index.html" class="nav-item nav-link active">Home</a>
-                                <a href="#about" class="nav-item nav-link">About</a>
+                                <a href="{{route('layouts.app')}}" wire:navigate class="nav-item nav-link active">Home</a>
+                                <a href="{{route('about')}}" wire:navigate class="nav-item nav-link">About</a>
                                 <a href="#service" class="nav-item nav-link">Service</a>
                                 <a href="room.html" class="nav-item nav-link">Packages</a>
                                 <div class="nav-item dropdown">
@@ -57,6 +57,7 @@
                                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                     </div>
                                 </div>
+                                <a href="{{route('blog')}}" wire:navigate class="nav-item nav-link">Blog</a>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
