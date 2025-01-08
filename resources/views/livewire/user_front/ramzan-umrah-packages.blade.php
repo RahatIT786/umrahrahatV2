@@ -1,66 +1,33 @@
 <section>
-
-
-
         <!-- Carousel Start -->
         <div class="container-fluid p-0 mb-5">
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="w-100 " src="asserts/user/img/haj/mecca1.jpg" alt="Image" style="height: 70vh; object-fit: cover;">
-                       
-                          
-
-
-
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Memorable and spiritually enriching Umrah pilgrimages </h1>
-                                <a href="room.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book A Package</a>
-                                <a href="team.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="w-100 " src="asserts/user/img/haj/mecca3.jpg" alt="Image" style="height: 70vh;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
-                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Throughout your life you have prayed, fasted and given in charity</h1>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Ramadan Umrah Packages </h1>
                                 <a href="room.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book A Package</a>
                                 <a href="team.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
         <!-- Carousel End -->
 
 
         <!-- Booking Start -->
-        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <!-- <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="bg-white shadow" style="padding: 35px;">
                     <div class="row g-2">
                         <div class="col-md-10">
                             <div class="row g-2">
                                 <div class="col-md-3">
-                                    <!-- <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div> -->
                                     <select class="form-select" >
                                         <option selected > Package</option>
                                         <option value="1">SuperSaver</option>
@@ -75,9 +42,6 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <!-- <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div> -->
                                     <select class="form-select" >
                                         <option selected >Category</option>
                                         <option value="1">Sharing</option>
@@ -113,7 +77,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Booking End -->
 
 
@@ -123,8 +87,8 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">HajUmrah</span></h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <h1 class="mb-4">RAMADAN UMRAH PACKAGE <span class="text-primary text-uppercase">FROM SHARJAH & DUBAI </span></h1>
+                        <p class="mb-4">RAHATUMRAH.COM is renowned in all over Dubai for its quality umrah services which includes cheapest 4 star and 5 star Umrah packages , Umrah packages by bus and by air. We are pleasured to announce Ramadan Umrah Package From Sharjah & Dubai 2024 for our valuable customers. Ramadan Umrah Package is available by bus and by air. Ramadan umrah package inlcudes umrah visa, 3 star hotel accommodation and luxury transportation with zayarat to make your umrah journey memorable.</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
@@ -191,25 +155,10 @@
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt="">
-                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">68,786.INR</small>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Super Saver</h5>
-                                    <div class="ps-2 ">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-file-shield text-primary me-2"></i>INSURANCE</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>HOTEL</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                    <small  ><i class="fa-solid fa-plane text-primary me-2"></i>FLIGHT</small>
+                                    <h5 class="mb-0">Umrah Package By Air Includes:</h5>
                                 </div>
                                 <div class="d-flex mb-3 " style="font-size: 12px;">
                                     <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
@@ -219,45 +168,30 @@
                                     <small  ><i class="fa-solid fa-bus text-primary me-2"></i>TRANSPORT</small>
                                 </div>
                                 <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZAM ZAM</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>SAUDI SIM</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-file-shield text-primary me-2"></i>INSURANCE</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>HOTEL</small>
                                     
-                                    </div>
-                                    
-                                    
-
-
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">More Packages</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="booking.html">Book Now</a>
+                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
+                                    <small  ><i class="fa-solid fa-plane text-primary me-2"></i>FLIGHT</small>
                                 </div>
+
+                                <p class="text-body mb-3">1 Year Saudi Visa with Insurance</p>
+                                <P>Direct Saudi Airline Return Tickets</P>
+                                <P>Complete Transportation</P>
+                                <P>Food Full Board (Breakfast, Lunch, Dinner)</P>
+                                <P>Visit of Historical Places (Ziyarat)</P>
+                                <P>Multilingual Tour Guide</P>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img//haj/pack2.jpg" alt="">
-                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">74,786.INR</small>
+                                <img class="img-fluid" src="asserts/user/img/haj/pack2.jpg" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Royal </h5>
-                                    <div class="ps-2">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-file-shield text-primary me-2"></i>INSURANCE</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>HOTEL</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                    <small  ><i class="fa-solid fa-plane text-primary me-2"></i>FLIGHT</small>
+                                    <h5 class="mb-0">Umrah Package By Bus Includes:</h5>
                                 </div>
                                 <div class="d-flex mb-3 " style="font-size: 12px;">
                                     <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
@@ -267,59 +201,39 @@
                                     <small  ><i class="fa-solid fa-bus text-primary me-2"></i>TRANSPORT</small>
                                 </div>
                                 <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZAM ZAM</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>SAUDI SIM</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-file-shield text-primary me-2"></i>INSURANCE</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>HOTEL</small>
                                     
-                                    </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">More Packages</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="booking.html">Book Now</a>
+                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
+                                    <small  ><i class="fa-solid fa-plane text-primary me-2"></i>FLIGHT</small>
                                 </div>
+
+                                <p class="text-body mb-3">1 Year Saudi Visa with Insurance</p>
+                                <P>Hotel Accommodation</P>
+                                <P>Complete Transportation</P>
+                                <P>Tour of Holy Places (Ziyarat)</P>
+                                <P>Multilingual Tour Guide</P>
+                                <br>
+                                <br>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img/haj/pack3.jpg" style="height: 17rem; width: auto;" alt="">
-                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">78,786.INR</small>
+                                <img class="img-fluid" style="height: 265px;" src="asserts/user/img/haj/pack3.jpg" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Classic</h5>
-                                    <div class="ps-2">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                    </div>
+                                    <h5 class="mb-0">Required Documents For Umrah Visa:</h5>
                                 </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-file-shield text-primary me-2"></i>INSURANCE</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>HOTEL</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                    <small  ><i class="fa-solid fa-plane text-primary me-2"></i>FLIGHT</small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-shirt text-primary me-2"></i>LAUNDRY</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-person-praying text-primary me-2"></i>ZIYARAT</small>
-                                    <small  ><i class="fa-solid fa-bus text-primary me-2"></i>TRANSPORT</small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZAM ZAM</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>SAUDI SIM</small>
-                                    
-                                    </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">More Packages</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="booking.html">Book Now</a>
-                                </div>
+
+                                <p class="text-body mb-3">Passport Copy (Passport should be valid for minimum 6 Months)</p>
+                                <P>UAE Visa/Emirates ID Copy (UAE Visa should be valid minimum 3 Month)</P>
+                                <P>One Passport Size photo with White Background</P>
+                                <P>Note: Non Residence/Tourist Visa holder can apply also</P>
+                                <br>
+                                <br>
                             </div>
                         </div>
                     </div>

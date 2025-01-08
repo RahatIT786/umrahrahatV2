@@ -23,6 +23,9 @@ use App\Livewire\OurService;
 use App\Livewire\Package;
 use App\Livewire\PackageUserView;
 use App\Livewire\RamzanUmrahPackages;
+use App\Livewire\SingleBlog1;
+use App\Livewire\SingleBlog2;
+use App\Livewire\SingleBlog3;
 use App\Livewire\UserAbout;
 use App\Livewire\SaudiVisa;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +42,9 @@ Route::get('/blog',Blog::class)->name('blog');
 Route::get('/gallery',Gallery::class)->name('gallery');
 Route::get('/saudi-visa',SaudiVisa::class)->name('saudi-visa'); 
 Route::get('/contact-us',ContactUs::class)->name('contact-us'); 
+Route::get('/single-blog1',SingleBlog1::class)->name('singleBlog1');
+Route::get('/single-blog2',SingleBlog2::class)->name('singleBlog2');
+Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');
 //USER ROUTES END
 
 Route::get('/login',[AuthController::class,'adminLoginForm'])->name('login');
