@@ -145,7 +145,7 @@
     <!-- Popup Content -->
     <div id="browserPopup" class="shadow-lg p-3 mb-5 bg-body rounded text-center " style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: fit-content; height: fit-content; background-color: whitesmoke;  padding: 20px; z-index: 1000; transition: opacity 0.5s ease; ">
         <div class="d-flex justify-content-end" >
-            <i class="bi bi-x-circle" style="cursor: pointer;" onclick="closeBrowcher()"></i>
+            <i class="bi bi-x-circle" style="cursor: pointer;" wire:click="closeBrowcher()"></i>
         </div>
         <h2 style="color: #bc8c1d;">Browcher</h2>
         <div>

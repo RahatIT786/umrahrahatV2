@@ -45,6 +45,12 @@ Route::get('/contact-us',ContactUs::class)->name('contact-us');
 Route::get('/single-blog1',SingleBlog1::class)->name('singleBlog1');
 Route::get('/single-blog2',SingleBlog2::class)->name('singleBlog2');
 Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');
+
+
+Route::get('/comming-soon',function(){
+return view('user.partials.comming_soon');
+})->name('coming-soon');
+
 //USER ROUTES END
 
 Route::get('/login',[AuthController::class,'adminLoginForm'])->name('login');
