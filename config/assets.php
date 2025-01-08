@@ -12,5 +12,16 @@ return[
             'local' => env('LOCAL_ASSETS_PATH') . 'user/img/banner.jpg',
             'production' => env('PUBLIC_ASSETS_PATH') . 'user/img/banner.jpg',
         ],
+
+        'feedback1'=>'asserts/user/img/haj/person1.jpg',
+        'feedback2'=>'asserts/user/img/haj/person2.jpg',
+        'feedback3'=>'asserts/user/img/haj/person3.jpg',
+
+
+
+
+
+
+
     ],
 ];

@@ -57,6 +57,7 @@ Route::get('/viewPackage/{id}',AdminViewPackage::class)->name('viewPackage');
 Route::get('/admin/package-request-history', PackageRequestHistory::class)->name('admin.package-request-history');
 Route::get('/admin/request-history', RequestHistory::class)->name('admin.visa-request-history');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
+Route::get('/optimize' ,[AuthController::class,'clearCache']);
 });
 
 //ADMIN ROUTES END

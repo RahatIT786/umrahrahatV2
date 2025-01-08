@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\SuperAdmin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -66,5 +67,11 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
         return redirect()->route('login');
     }
+
+    public function clearCache(){
+        Artisan::call('optimize');
+        return "DEAR ADMIN YOUR APPLICATION CACHES ARE CLEARED !";
+    }
+
 
 }
