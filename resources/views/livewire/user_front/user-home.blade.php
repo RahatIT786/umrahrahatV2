@@ -187,142 +187,65 @@
                     <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Package</span></h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt="">
-                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">68,786.INR</small>
+                  @foreach ($packages as $package )
+                  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            {{-- <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> --}}
+                            <img class="img-fluid" src="{{Storage::url($package->photo_path)}}" alt="" style="height: 15rem;">
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">10 days</small>
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">{{$package->package_name}}</h5>
+                                <div class="ps-2 ">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
                             </div>
-                            <div class="p-4 mt-2">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Super Saver</h5>
-                                    <div class="ps-2 ">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-file-shield text-primary me-2"></i>INSURANCE</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>HOTEL</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                    <small  ><i class="fa-solid fa-plane text-primary me-2"></i>FLIGHT</small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-shirt text-primary me-2"></i>LAUNDRY</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-person-praying text-primary me-2"></i>ZIYARAT</small>
-                                    <small  ><i class="fa-solid fa-bus text-primary me-2"></i>TRANSPORT</small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZAM ZAM</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>SAUDI SIM</small>
-                                    
-                                    </div>
-                                    
-                                    
+                            <div class="d-flex mb-3 " style="font-size: 12px;">
+                              
+                                <small class="border-end me-3 pe-3">
+                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span ><span style="font-size: 18px;">{{$package->sharing}}</span>.AED</span>
+                                </small>
+                                <small class="border-end me-3 pe-3">
+                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span ><span style="font-size: 18px;">{{$package->quint}}</span>.AED</span>
+                                </small>
+                                <small class=" me-3 pe-3">
+                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span ><span style="font-size: 18px;">{{$package->quad}}</span>.AED</span>
+                                </small>
+                            </div>
+                            <div class="d-flex mb-3 " style="font-size: 12px;">
+                             
+                                <small class="border-end me-3 pe-3">
+                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span ><span style="font-size: 18px;">{{$package->triple}}</span>.AED</span>
+                                </small>
+                                <small class="border-end me-3 pe-3">
+                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span ><span style="font-size: 18px;">{{$package->double}}</span>.AED</span>
+                                </small>
+                                <small class=" me-3 pe-3">
+                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span ><span style="font-size: 18px;">{{$package->single}}</span>.AED</span>
+                                </small>
+                            </div>
+                            <div>
+                                <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina </p>
+                            </div>
+                           
 
 
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">More Packages</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="booking.html">Book Now</a>
-                                </div>
+                            <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})"> <i class="fa-solid fa-book" ></i> View Browcher</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})"><i class="fa-regular fa-paper-plane" ></i>  Book Enquire</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img//haj/pack2.jpg" alt="">
-                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">74,786.INR</small>
-                            </div>
-                            <div class="p-4 mt-2">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Royal </h5>
-                                    <div class="ps-2">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-file-shield text-primary me-2"></i>INSURANCE</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>HOTEL</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                    <small  ><i class="fa-solid fa-plane text-primary me-2"></i>FLIGHT</small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-shirt text-primary me-2"></i>LAUNDRY</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-person-praying text-primary me-2"></i>ZIYARAT</small>
-                                    <small  ><i class="fa-solid fa-bus text-primary me-2"></i>TRANSPORT</small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZAM ZAM</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>SAUDI SIM</small>
-                                    
-                                    </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">More Packages</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="booking.html">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img/haj/pack3.jpg" style="height: 17rem; width: auto;" alt="">
-                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">78,786.INR</small>
-                            </div>
-                            <div class="p-4 mt-2">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Classic</h5>
-                                    <div class="ps-2">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-file-shield text-primary me-2"></i>INSURANCE</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>HOTEL</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                    <small  ><i class="fa-solid fa-plane text-primary me-2"></i>FLIGHT</small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-shirt text-primary me-2"></i>LAUNDRY</small>
-                                    
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-person-praying text-primary me-2"></i>ZIYARAT</small>
-                                    <small  ><i class="fa-solid fa-bus text-primary me-2"></i>TRANSPORT</small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZAM ZAM</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>SAUDI SIM</small>
-                                    
-                                    </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">More Packages</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="booking.html">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                  @endforeach
+                    
                 </div>
             </div>
         </div>
@@ -597,5 +520,86 @@
             </div>
         </div>
         <!-- Newsletter Start -->
+
+
+
+
+
+
+{{--view-browcher-start--}}
+@if ($browcherPopUp)
+<!-- Overlay Background -->
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;z-index: 999;"></div>
+
+<!-- Popup Content -->
+<div id="browserPopup" class="shadow-lg p-3 mb-5 bg-body rounded text-center " style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: fit-content; height: fit-content; background-color: whitesmoke;  padding: 20px; z-index: 1000; transition: opacity 0.5s ease; ">
+    <div class="d-flex justify-content-end" >
+        <i class="bi bi-x-circle" style="cursor: pointer;" wire:click="closeBrowcher()"></i>
+    </div>
+    <h2 style="color: #FEA116;">Browcher</h2>
+    <div>
+        <img src="{{Storage::url($browcherData->flyer_path)}}" alt="Browcher Image" style="max-height:50rem; width:50vw; max-width:35em;" class="img-fluid">
+    </div>
+
+   <div style="margin: 3rem auto">
+   <a href="tel:+971567866713" style="font-family: sans-serif; text-decoration: none; padding:9px 15px; border:1px solid #bc8c1d; border-radius: 5px;"> <i class="bi bi-telephone-fill"></i>&nbsp; click to call</a>
+   </div>
+   
+   
+</div>
+@endif
+
+{{--view-browcher-end--}}
+
+
+
+{{--view-enquire-start--}}
+@if ($enquirePopUp)
+<!-- Overlay Background -->
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;z-index: 999;"></div>
+
+<!-- Popup Content -->
+<div id="browserPopup" class="shadow-lg p-3 mb-5 bg-body rounded text-center " style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: fit-content; height: fit-content; background-color: whitesmoke;  padding: 20px; z-index: 1000; transition: opacity 0.5s ease; ">
+    <div class="d-flex justify-content-end" >
+        <i class="bi bi-x-circle" style="cursor: pointer;" wire:click="closeEnquire()"></i>
+    </div>
+    <form action="post" wire:submit.prevent="packageEnquirySubmitForm">
+    <h2 style="color: #FEA116;">Enquire</h2>
+    <div class="m-3">
+        <span>Choosed Package : <h4 style="color: #0F172B; text-transform:uppercase;" >{{$enquireData->package_name}}</h4> </span>
+
+    </div>
+    <div class="m-3">
+       <input class="form-control" type="text" placeholder="Enter your name" wire:model="customerName" required>
+    </div>
+    <div  class="m-3">
+        <input class="form-control" type="tel" placeholder="Enter your number"  wire:model="mobile" required>
+     </div>
+     <div  class="m-3 text-start">
+        <label for="query" >Enter your Query</label>
+        <textarea  class="form-control" name="" id="query" oninput="updateCharCount()" cols="30" rows="10" maxlength="100" placeholder="Enter your Query" wire:model="query">
+
+        </textarea>
+        
+     </div>
+     <p>Note: <span>our team will contact you</span></p>
+     <div>
+       <button type="submit" style="background: transparent; border:none;"> <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" >SUBMIT</a></button>
+     </div>
+
+   <div style="margin: 3rem auto">
+   <a href="tel:+971567866713" style="font-family: sans-serif; text-decoration: none; padding:9px 15px; border:1px solid #bc8c1d; border-radius: 5px;"> <i class="bi bi-telephone-fill"></i>&nbsp; click to call</a>
+   </div>
+</form>
+   
+</div>
+
+@endif
+
+{{--view-enquire-end--}}
+
+
+
+
 </section>
  

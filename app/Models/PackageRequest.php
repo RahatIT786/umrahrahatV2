@@ -10,6 +10,7 @@ class PackageRequest extends Model
         'customer_name',
         'mobile',
         'package_name',
-        'delete_status', 
+        'delete_status',
+        'query', 
     ];
 }
