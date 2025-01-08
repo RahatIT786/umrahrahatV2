@@ -110,8 +110,6 @@
                     </div>
                 </div>
 
-             
->>>>>> main
 {{--
   </div>
                 
@@ -162,23 +160,13 @@
     </div>
 @endif
 
-<script>
+<!-- <script>
     function closeBrowcher(){
         document.getElementById('browserPopup').style.display='none';
         @this.call('closeBrowcher');
         window.location.href="/package";
     }
-</script>
-
-    {{--  --}}
-
-
-
-
-
-
-
-
+</script> -->
 
     <div class="elementor-element elementor-element-68fe85a e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="68fe85a" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
         <div class="e-con-inner">
