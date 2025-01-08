@@ -7,7 +7,7 @@
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100 " src="img/haj/mecca1.jpg" alt="Image" style="height: 70vh; object-fit: cover;">
+                        <img class="w-100 " src="asserts/user/img/haj/mecca1.jpg" alt="Image" style="height: 70vh; object-fit: cover;">
                        
                           
 
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100 " src="img/haj/mecca3.jpg" alt="Image" style="height: 70vh;">
+                        <img class="w-100 " src="asserts/user/img/haj/mecca3.jpg" alt="Image" style="height: 70vh;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
@@ -160,16 +160,16 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/haj/macca.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="asserts/user/img/haj/macca.jpg" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/haj/childmeccac.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="asserts/user/img/haj/childmeccac.jpg">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/haj/masque.jpg">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="asserts/user/img/haj/masque.jpg">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/haj/peopelmacca.jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="asserts/user/img/haj/peopelmacca.jpg">
                             </div>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/haj/pack1.jpg" alt="">
+                                <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt="">
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">68,786.INR</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -238,7 +238,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img//haj/pack2.jpg" alt="">
+                                <img class="img-fluid" src="asserts/user/img//haj/pack2.jpg" alt="">
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">74,786.INR</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -282,7 +282,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/haj/pack3.jpg" style="height: 17rem; width: auto;" alt="">
+                                <img class="img-fluid" src="asserts/user/img/haj/pack3.jpg" style="height: 17rem; width: auto;" alt="">
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">78,786.INR</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -466,7 +466,7 @@
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/haj/person1.jpg" style="width: 45px; height: 45px; object-fit: contain;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset(config('assets.images.feedback1'))}}" style="width: 45px; height: 45px; object-fit: contain;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Shaikh</h6>
                                 <small>Akola(Maharashtra)</small>
@@ -477,7 +477,7 @@
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/haj/person2.jpg" style="width: 45px; height: 45px; object-fit: contain;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset(config('assets.images.feedback2'))}}" style="width: 45px; height: 45px; object-fit: contain;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Ansari Hammad</h6>
                                 <small>Hailakandi(Assam)</small>
@@ -488,7 +488,7 @@
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/haj/person3.jpg" style="width: 45px; height: 45px; object-fit: contain;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset(config('assets.images.feedback3'))}}" style="width: 45px; height: 45px; object-fit: contain;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Mohammed Milkan</h6>
                                 <small>Baraily(Uttar Pradhesh)</small>
