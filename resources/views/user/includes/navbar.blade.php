@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <a href="{{route('blog')}}" wire:navigate class="nav-item nav-link">Blog</a>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                                <a href="#" class="nav-item nav-link">Contact</a>
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                             <a href="#" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">RahatGroup<i class="fa fa-arrow-right ms-3"></i></a>

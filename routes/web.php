@@ -37,6 +37,10 @@ Route::get('/blog',Blog::class)->name('blog');
 Route::get('/gallery',Gallery::class)->name('gallery');
 Route::get('/saudi-visa',SaudiVisa::class)->name('saudi-visa'); 
 Route::get('/contact-us',ContactUs::class)->name('contact-us'); 
+
+Route::get('/comming-soon',function(){
+return view('user.partials.comming_soon');
+})->name('coming-soon');
 //USER ROUTES END
 
 Route::get('/login',[AuthController::class,'adminLoginForm'])->name('login');
