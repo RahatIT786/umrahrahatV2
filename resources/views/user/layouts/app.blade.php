@@ -1,3 +1,4 @@
+@include('user.includes.header')
 @include('user.includes.navbar') 
  <!-- This is where the content from the Livewire component will be injected -->
  <body>
