@@ -6,14 +6,8 @@
                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
                         <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img1.png') }}" style="height: 4rem;"  alt="Image"></figure>
                     </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-b9c53ce e-flex e-con-boxed e-con e-child" data-id="b9c53ce" data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-adfc3ce elementor-widget elementor-widget-image" data-id="adfc3ce" data-element_type="widget" data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                           <img loading="lazy" decoding="async" width="642" height="183" src="{{ asset('asserts/user/img/img6.png') }}" class="attachment-large size-large wp-image-229" alt="" sizes="(max-width: 642px) 100vw, 642px" /> 
-                        </div>
+                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img2.png') }}" style="height: 4rem;" alt="Logo-2" /></figure>
                     </div>
                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
                         <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img3.png') }}" style="height: 4rem;" alt="Logo-3" /></figure>
@@ -22,11 +16,6 @@
                         <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{ asset('asserts/user/img/img4.png') }}" style="height: 4rem;" alt="Logo-4" /></figure>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div> 
-
-
             </div>
         </div>
     </div> 

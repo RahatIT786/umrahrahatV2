@@ -1,98 +1,37 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="https://templatekit.rometheme.pro/prayer/xmlrpc.php" />
-    {{-- <link rel="shortcut icon" href="{{config('assets.images.favIcon'.env('APP_ENV'))}}" type="image/x-icon"> --}}
-    {{-- <link rel="shortcut icon" href="/asserts/user/img/rahatlogo.jpg" type="image/x-icon"> --}}
-    <link rel="shortcut icon" href="{{ config('assets.images.favIcon.' . (env('APP_ENV') === 'production' ? 'production' : 'local')) }}" type="image/x-icon">
-    <title>RahatGroup</title>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <meta name='robots' content='max-image-preview:large' />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Modal Styles -->
-<style>
- .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* Darkened background overlay */
-}
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-.modal-content1 {
-  background-color: white; /* Use your theme color for modal background */
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #f8c471; /* Use your theme color for the border */
-  width: 30%;
-  border-radius: 8px; /* Optional: add border-radius for rounded corners */
-  position: relative;
-}
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
 
-.close {
-  color: #c0392b; /* Use your theme color for close button */
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-.close:hover,
-.close:focus {
-  color:#641e16; /* Change close button color on hover */
-  text-decoration: none;
-  cursor: pointer;
-}
+    <!-- Libraries Stylesheet -->
+    <link href="asserts/user/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="asserts/user/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="asserts/user/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-.input-container {
-  margin-bottom: 10px;
-}
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="asserts/user/css/bootstrap.min.css" rel="stylesheet">
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #333; /* Text color for labels */
-}
+    <!-- Template Stylesheet -->
+    <link href="asserts/user/css/style.css" rel="stylesheet">
 
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-}
-
-button.submit-button {
-  background-color: #f8c471; /* Use your theme color for the submit button */
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button.submit-button:hover {
-  background-color: #e8b92f; /* Slightly darker shade for hover effect */
-}
-
-</style>
-<style>
-  .carousel-control-prev, .carousel-control-next {
-    z-index: 1000; /* Ensure buttons are on top */
-  }
-</style>
-    <!-- <meta name='robots' content='max-image-preview:large' />
->>>>>>> bf542e9096e97d1dfec602f38d06ff2e1cd034b5 -->
+        <!-- Font awsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <livewire:styles />
+</head>
