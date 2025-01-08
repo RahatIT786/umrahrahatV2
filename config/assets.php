@@ -16,7 +16,9 @@ return[
         'feedback1'=>'asserts/user/img/haj/person1.jpg',
         'feedback2'=>'asserts/user/img/haj/person2.jpg',
         'feedback3'=>'asserts/user/img/haj/person3.jpg',
-
+        
+        //About Page 
+        'about_banner'=> 'asserts/user/img/carousel-1.jpg',
 
 
 
