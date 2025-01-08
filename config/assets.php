@@ -10,9 +10,13 @@ return[
         'feedback2'=>'asserts/user/img/haj/person2.jpg',
         'feedback3'=>'asserts/user/img/haj/person3.jpg',
 
+
         //comming_soon image
         'soon'=>'/asserts/user/img/haj/soon.png',
 
+
+        
+       
 
 
 
