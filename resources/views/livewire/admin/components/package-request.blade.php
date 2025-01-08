@@ -25,6 +25,8 @@
                         <th scope="col">Customer Name</th>
                         <th scope="col">Contact</th>
                         <th scope="col">Package Name</th>
+                        <th scope="col">Enquiry</th>
+
                         <th scope="col">Enquired Date</th>
 
                         <th scope="col">Call Status</th>
@@ -47,6 +49,7 @@
                         </td>
                         <td>{{$data->mobile}}</td>
                         <td>{{$data->package_name}}</td>
+                        <td>{{$data->query}}</td>
                         <td>{{$data->created_at->format('d M Y')}}</td>
                         <td ><span style="cursor: pointer;" id="responded" wire:click="command({{$data->id}})" 
                             data-bs-toggle="modal" 

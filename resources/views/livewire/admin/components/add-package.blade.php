@@ -109,6 +109,29 @@
                             @endif
                     </div>
 
+                    <div class="col-md-12">
+                        <label for="validationDefault05" class="form-label">Package Flyer Image</label>
+                        <input type="file" class="form-control" id="validationDefault05" wire:model="flyer" value="" accept="image/*">
+                      
+                        @error('flyer') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+                    <div>
+                        {{-- @if ($photo)
+                        <img src="{{$photo->temporaryUrl() }}" alt="Preview_image" height="80" width="90">
+                           
+                        @endif --}}
+                        @if ($flyer)
+                                <div class="mt-2">
+                                    <img src="{{ $flyer->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
+                                </div>
+                            @elseif ($package_name && $flyer_path && $package_name)
+                                <div class="mt-2">
+                                    <img src="{{ asset('storage/'.$flyer_path) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
+                                </div>
+                            @endif
+                    </div>
+
+
 
                     {{-- <div class="col-md-6">
                         <label for="validationDefault04" class="form-label">Enter End Month</label>

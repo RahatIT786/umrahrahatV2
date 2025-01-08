@@ -25,9 +25,13 @@ class AddPackage extends Component
     public $note;
     public $includes;
     public $photo_path;
+    
 
 
     public $photo;
+
+    public $flyer;
+    public $flyer_path;
 
     // this is for month wise get wednesdays
     public $startYear;
@@ -93,6 +97,7 @@ class AddPackage extends Component
             $this->includes = $package->includes;
            
             $this->photo_path=$package->photo_path;
+            $this->flyer_path=$package->flyer_path;
         
 
 
@@ -229,20 +234,25 @@ class AddPackage extends Component
     public function packageSubmit()
     {
         $this->validate([
-            'photo'=>$this->photo_path ?'nullable|image|mimes:jpeg,png,jpg|max:2048': 'required|image|mimes:jpeg,png,jpg|max:2048'
+            'photo'=>$this->photo_path ?'nullable|image': 'required|image|',
+            'flyer'=>$this->flyer_path ?'nullable|image': 'required|image|',
         ]);
         $this->validate();
 
         $this->photo_path=null;
+        $this->flyer_path=null;
 
-        if($this->photo){
+        if($this->photo && $this->flyer){
             $this->photo_path=$this->photo->store('package_photos','public');
+            $this->flyer_path=$this->flyer->store('package_photos','public');
         }
        
        if($this->package_id){
 
         $package=Package::findOrFail($this->package_id);
+        //for image preview lable
         $this->photo_path=$package->photo_path;
+        $this->flyer_path=$package->flyer_path;
 
         $package->update([
             'package_name'=>$this->package_name ?: $package->package_name,
@@ -258,6 +268,7 @@ class AddPackage extends Component
         'note'=>$this->note ?: $package->note,
         'includes'=>$this->includes  ?: $package->includes,
         'photo_path'=>$this->photo_path  ?: $package->photo_path,
+        'flyer_path'=>$this->flyer_path ?: $package->flyer_path,
 
         ]);
         //   CalculateWednesdaysJob::dispatch($package, $this->startYear, $this->endYear, $this->startMonth, $this->endMonth);
@@ -287,6 +298,7 @@ class AddPackage extends Component
         'wednesday_dates'=> $getWednesday,
         'includes' => $this->includes,
         'photo_path' => $this->photo_path,// Save the photo path
+        'flyer_path'=>$this->flyer_path,
     ]);
 
     // $packageData=[
