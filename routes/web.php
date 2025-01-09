@@ -47,6 +47,8 @@ Route::get('/single-blog2',SingleBlog2::class)->name('singleBlog2');
 Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');
 
 
+
+
 Route::get('/comming-soon',function(){
 return view('user.partials.comming_soon');
 })->name('coming-soon');
@@ -72,6 +74,8 @@ Route::get('/admin/package-request-history', PackageRequestHistory::class)->name
 Route::get('/admin/request-history', RequestHistory::class)->name('admin.visa-request-history');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
+Route::get('/migrate' ,[AuthController::class,'migrate']);
+
 });
 
 //ADMIN ROUTES END
