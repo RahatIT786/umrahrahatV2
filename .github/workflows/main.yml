@@ -51,7 +51,10 @@ jobs:
           sudo systemctl start mysql
           sudo systemctl enable mysql
           sleep 10 # Wait for MySQL to initialize
-          mysql -e "CREATE DATABASE umrahrahat;"
+          # Set password for the root user
+          sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';"
+          # Create the database with the root user
+          mysql -u root -proot -e "CREATE DATABASE umrahrahat;"
 
     #step 7: run migrations and seed database
       - name: Run migrations
