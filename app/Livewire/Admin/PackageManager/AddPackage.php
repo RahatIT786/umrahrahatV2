@@ -470,7 +470,7 @@ class AddPackage extends Component
 
 
 
-    #[Layout('admin.layouts.app')]
+    #[Layout('admin.Layouts.app')]
     public function render()
     {
         return view('livewire.admin.components.add-package');
