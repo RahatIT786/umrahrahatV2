@@ -76,7 +76,7 @@ class AuthController extends Controller
     public function migrate(){
         try {
             // Capture the output from the Artisan command
-            $output = Artisan::call('migrate', ['--force' => true]); // '--force' to run without confirmation in production
+            Artisan::call('migrate', ['--force' => true]); // '--force' to run without confirmation in production
     
             // Get the output as a string
             $outputString = Artisan::output();
