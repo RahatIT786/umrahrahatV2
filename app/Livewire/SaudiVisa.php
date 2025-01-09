@@ -89,7 +89,7 @@ class SaudiVisa extends Component
         $this->reset(['name','phone','message']);
     }
     
-    #[Layout('user.layouts.app')]
+    #[Layout('user.Layouts.app')]
 
     public function render()
     {
