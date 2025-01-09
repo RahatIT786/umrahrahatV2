@@ -56,7 +56,7 @@
                                 <a href="{{route('layouts.app')}}" wire:navigate class="nav-item nav-link active">Home</a>
                                 <a href="{{route('about')}}" wire:navigate class="nav-item nav-link">About</a>
                                 <div class="nav-item dropdown">
-                                    <a href="{{route('about')}}" wire:navigate class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Package</a>
+                                    <a href="{{route('about')}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Package</a>
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="#" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
                                         <a href="#" class="dropdown-item">Umrah Packages By Air From Dubai</a>

@@ -110,11 +110,11 @@ window.onload = function() {
                                 </div>
                             </div>
                             <div>
-                                <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center"> </p>
+                                <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">Processing Time  {{$visaDetail->processing_time}} Days</p>
                             </div>
-                           
-
-
+                            <div>
+                                <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">AED . {{$visaDetail->price}}</p>
+                            </div>
                             <p class="text-body mb-3 text-justify">We provide professional visa services for Saudi Arabia, including Tourist, Business, and other visa types. Count on us for efficient and reliable visa processing tailored to your needs.</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$visaDetail->id}})"> <i class="fa-solid fa-book" ></i> View Browcher</a>
