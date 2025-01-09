@@ -13,10 +13,11 @@
   <link href="{{ asset('public/asserts/admin/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
   <link href="{{ asset('public/asserts/admin/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
   <!-- Bootstrap CSS -->
-  <link href="{{ asset('pulbic/asserts/admin/css/bootstrap.min.css') }}" rel="stylesheet" />
-  <link href="{{ asset('pulbic/asserts/admin/css/bootstrap-extended.css') }}" rel="stylesheet" />
-  <link href="{{ asset('pulbic/asserts/admin/css/style.css') }}" rel="stylesheet" />
-  <link href="{{ asset('pulbic/asserts/admin/css/icons.css') }}" rel="stylesheet">
+
+  <link href="{{ asset('public/asserts/admin/css/bootstrap.min.css') }}" rel="stylesheet" />
+  <link href="{{ asset('public/asserts/admin/css/bootstrap-extended.css') }}" rel="stylesheet" />
+  <link href="{{ asset('public/asserts/admin/css/style.css') }}" rel="stylesheet" />
+  <link href="{{ asset('public/asserts/admin/css/icons.css') }}" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
