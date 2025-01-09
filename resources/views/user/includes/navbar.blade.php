@@ -30,7 +30,7 @@
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2 ">
                                 <i class="fa-solid fa-globe text-primary me-2"></i>
-                                <p class="mb-0"><a href="" style="color:#666565; " >Global</a></p>
+                                <p class="mb-0"><a href="#footer-contact" style="color:#666565; " >Global</a></p>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
@@ -53,10 +53,10 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="{{route('layouts.app')}}" wire:navigate class="nav-item nav-link active">Home</a>
-                                <a href="{{route('about')}}" wire:navigate class="nav-item nav-link">About</a>
+                                <a href="{{route('layouts.app')}}"  class="nav-item nav-link active">Home</a>
+                                <a href="{{route('about')}}"  class="nav-item nav-link">About</a>
                                 <div class="nav-item dropdown">
-                                    <a href="{{route('about')}}" wire:navigate class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Package</a>
+                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Package</a>
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="#" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
                                         <a href="#" class="dropdown-item">Umrah Packages By Air From Dubai</a>
@@ -65,8 +65,8 @@
                                     </div>
                                 </div>
                                 <a href="{{route('saudi-visa')}}"  class="nav-item nav-link">Saudi Visa</a>
-                                <a href="{{route('ramzan-umrah-package')}}" wire:navigate class="nav-item nav-link">Ramadan Umrah Packages</a>
-                                <a href="{{route('blog')}}" wire:navigate class="nav-item nav-link">Blog</a>
+                                <a href="{{route('ramzan-umrah-package')}}"  class="nav-item nav-link">Ramadan Umrah Packages</a>
+                                <a href="{{route('blog')}}"  class="nav-item nav-link">Blog</a>
 
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
