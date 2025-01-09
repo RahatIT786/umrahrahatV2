@@ -47,8 +47,10 @@ jobs:
     #step 6: setup the database
       - name: Set up database
         run:  |
-          sudo apt-get update -y 
           sudo apt-get install -y mysql-server
+          sudo systemctl start mysql
+          sudo systemctl enable mysql
+          sleep 10 # Wait for MySQL to initialize
           mysql -e "CREATE DATABASE umrahrahat;"
 
     #step 7: run migrations and seed database
