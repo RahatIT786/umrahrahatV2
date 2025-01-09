@@ -14,6 +14,7 @@ class VisaDetail extends Model
         'processing_time',
         'price',
         'file_path',
+        'flyer_path',
         'delete_status',
     ];
 }

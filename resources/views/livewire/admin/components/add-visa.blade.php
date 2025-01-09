@@ -46,10 +46,10 @@
                             @error('price') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <!-- File Upload -->
-                        <div class="col-md-12 mb-3">
-                            <label for="file" class="form-label">Upload Supporting Image</label>
-                            <input type="file" id="file" class="form-control" wire:model="file" accept="image/*">
+                        <!-- File Upload for Supporting Image -->
+                        <div class="col-md-6 mb-3">
+                            <label for="file1" class="form-label">Upload Supporting Image</label>
+                            <input type="file" id="file1" class="form-control" wire:model="file" accept="image/*">
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
                             @error('file') <span class="text-danger">{{ $message }}</span> @enderror
 
@@ -58,9 +58,28 @@
                                 <div class="mt-3">
                                     <img src="{{ $file->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
-                            @elseif ($visaId && $filePath && $visaType)
+                            @elseif ($visaId && $filePath)
                                 <div class="mt-3">
                                     <img src="{{ asset('storage/' . $filePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
+                                </div>
+                            @endif
+                        </div>
+
+                        <!-- File Upload for Flyer -->
+                        <div class="col-md-6 mb-3">
+                            <label for="file2" class="form-label">Saudi Visa Flyer</label>
+                            <input type="file" id="file2" class="form-control" wire:model="flyer" accept="image/*">
+                            <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
+                            @error('flyer') <span class="text-danger">{{ $message }}</span> @enderror
+
+                            <!-- Show Uploaded or Current Flyer -->
+                            @if ($flyer)
+                                <div class="mt-3">
+                                    <img src="{{ $flyer->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
+                                </div>
+                            @elseif ($visaId && $flyerPath)
+                                <div class="mt-3">
+                                    <img src="{{ asset('storage/' . $flyerPath) }}" alt="Current Flyer" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
                             @endif
                         </div>

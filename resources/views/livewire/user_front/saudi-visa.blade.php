@@ -1,566 +1,267 @@
-<div data-elementor-type="wp-post" data-elementor-id="1015" class="elementor elementor-1015">
-            <div class="elementor-element elementor-element-6f1fb5d e-flex e-con-boxed e-con e-parent" data-id="6f1fb5d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-f5127c5 elementor-widget elementor-widget-heading" data-id="f5127c5" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">Saudi Visa</h2>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-6d3c8f1 elementor-widget elementor-widget-text-editor" data-id="6d3c8f1" data-element_type="widget" data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <p><a href="#">Home</a> &#8211; Saudi Visa</p>
-                        </div>
-                    </div>
+<section>
+      <!-- Page Header Start -->
+      <div class="container-fluid page-header mb-5 p-0" style="background-image: url(asserts/user/img/haj/mecca3.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Saudi Visa</h1>
+                    <!-- <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Rooms</li>
+                        </ol>
+                    </nav> -->
                 </div>
             </div>
-            <div class="container">
-              <div class="container" style="display: flex; flex-wrap:wrap; justify-content:center; gap:26px;margin-top:100px;margin-bottom:0px" class="row elementor-element elementor-element-dfbafe1 e-con-full e-flex e-con e-child" data-id="dfbafe1" data-element_type="container">
-                <div style="flex:1 1 auto; width:30rem; " class="col-md-6 col-4 mb-4 elementor-element elementor-element-74d8db8 e-con-full e-flex e-con e-child" data-id="74d8db8" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
-                    <div class="elementor-element elementor-element-9f68910 elementor-widget elementor-widget-rkit-pricelist" data-id="9f68910" data-element_type="widget" data-widget_type="rkit-pricelist.default">
-                        <div class="elementor-widget-container d-flex justify-content-center" style="flex-wrap:wrap; gap:16px;">
-                            @foreach ($visaDetails as $visaDetail)
-                            <div class="rkit-pricelist-container shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 22rem;">
-                                <div class="rkit-pricelist-item" >
-                                    <div class="rkit-pricelist-ribbon rkit-pricelist-ribbon__right">
-                                        <div class="rkit-pricelist-ribbon__inner">
-                                            </div>
-                                    </div>
-
-                                    <div class="rkit-pricelist-item-inner">
-                                        <div class="rkit-pricelist-item-title-section">
-                                            <h4 class="rkit-pricelist-item-title">{{$visaDetail->visa_type}}</h4>
-                                            <!-- <span class="rkit-pricelist-item-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit elit tellus, luctus nec ullamcor.</span> -->
-                                        </div>
-                                        <div class="rkit-pricelist-item-inner-price">
-                                            <div class="rkit-pricelist-item-price-section">
-                                                <div class="price-container">
-
-                                                    <div class="sale-price-container-inline period-opsi">
-                                                        <div class="currency-option">
-                                                        <p class="rkit-pricelist-item-sub-title-center">ADE</p>
-
-                                                            <p class="rkit-pricelist-item-price">{{$visaDetail->price}}</p>
-                                                        </div>
-                                                        <div class="period-option">
-                                                            <p class="rkit-pricelist-item-sub-title-center">/Packages</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <ul class="rkit-pricelist-item-description no-icon-hidden">
-                                                <li class="divider_desc "> <i aria-hidden="true" class="bi bi-check-circle"></i>processing Time is {{$visaDetail->processing_time}} Day </li>
-                                                <li class="divider_desc "> <i aria-hidden="true" class="bi bi-check-circle"></i>{{$visaDetail->documents_required}} is Required</li>
-                                                <!-- <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Proin non lobortis enim.</li>
-                                                <li class="divider_desc "> <i aria-hidden="true" class="icon-list-feature rtmicon rtmicon-circle-check"></i> Aliquam erat volutpat.</li> -->
-                                            </ul>
-                                            <div class="rkit-pricelist-item-button ">
-                                            <a class=" button-element-price"  wire:click="UserRequestVisaType({{ $visaDetail->id }})" >Open Modal</a>
-                                                <!-- <a href="" class=" button-element-price">
-                                    Book Now                                                                                    </a> -->
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-              </div>     
-            </div>
-            <div class="elementor-element elementor-element-bd9b785 e-flex e-con-boxed e-con e-parent" data-id="bd9b785" data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-dae632c e-con-full e-flex e-con e-child" data-id="dae632c" data-element_type="container">
-                        <div class="elementor-element elementor-element-26df5af e-con-full e-flex e-con e-child" data-id="26df5af" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-element elementor-element-f669761 e-con-full e-flex e-con e-child" data-id="f669761" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="elementor-element elementor-element-501ac44 elementor-widget elementor-widget-heading" data-id="501ac44" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h5 class="elementor-heading-title elementor-size-default">Get Discount Up To</h5>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-26a19a9 elementor-widget elementor-widget-heading" data-id="26a19a9" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">30%</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-214a5fc e-con-full e-flex e-con e-child" data-id="214a5fc" data-element_type="container">
-                        <div class="elementor-element elementor-element-66a6f9d elementor-widget elementor-widget-heading" data-id="66a6f9d" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                                <h6 class="elementor-heading-title elementor-size-default">Register</h6>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-256c1ea elementor-widget elementor-widget-heading" data-id="256c1ea" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                                <h3 class="elementor-heading-title elementor-size-default">Apply Your Hajj and Umrah Get Special Offer</h3>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-adc3f6a elementor-widget elementor-widget-text-editor" data-id="adc3f6a" data-element_type="widget" data-widget_type="text-editor.default">
-                            <div class="elementor-widget-container">
-                                <p>Experience a hassle-free Hajj or Umrah journey with our premium services designed for your comfort. From luxury accommodations near the Holy Mosques.</p>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-d814924 elementor-widget elementor-widget-rform" data-id="d814924" data-element_type="widget" data-widget_type="rform.default">
-                            <div class="elementor-widget-container">
-                                <form id="rform" data-form="634">
-                                    <div class="require-login msg">
-                                        <div class="require-msg-body">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#FF0000" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                        </svg>
-                                            <div style="width: 100% ;">
-                                                <h5>Required Login</h5>
-                                                Please Login for Submit Form.
-                                            </div>
-                                            <div>
-                                                <a type="button" class="close-msg">Close</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="success-submit msg">
-                                        <div class="success-body">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#4CAF50" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                        </svg>
-                                            <div style="width: 100%;">
-                                                <h5>Success</h5>
-                                                Thank you! Form submitted successfully. </div>
-                                            <div>
-                                                <a type="button" class="close-msg">Close</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <style>
-                                        .elementor-634 .elementor-element.elementor-element-ef612ae {
-                                            --display: flex;
-                                            --flex-direction: column;
-                                            --container-widget-width: 100%;
-                                            --container-widget-height: initial;
-                                            --container-widget-flex-grow: 0;
-                                            --container-widget-align-self: initial;
-                                            --flex-wrap-mobile: wrap;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-204555a .rform-input {
-                                            background-color: var( --e-global-color-primary);
-                                            padding: 16px 32px 16px 32px;
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-204555a .rform-input::placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-204555a .rform-input::-webkit-input-placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-204555a .rform-input::-ms-input-placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-204555a .rform-error {
-                                            text-align: left;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-bced227 {
-                                            --display: flex;
-                                            --flex-direction: row;
-                                            --container-widget-width: initial;
-                                            --container-widget-height: 100%;
-                                            --container-widget-flex-grow: 1;
-                                            --container-widget-align-self: stretch;
-                                            --flex-wrap-mobile: wrap;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-46a454b .rform-input {
-                                            background-color: var( --e-global-color-primary);
-                                            padding: 16px 32px 16px 32px;
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-46a454b {
-                                            width: var( --container-widget-width, 50%);
-                                            max-width: 50%;
-                                            --container-widget-width: 50%;
-                                            --container-widget-flex-grow: 0;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-46a454b .rform-input::placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-46a454b .rform-input::-webkit-input-placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-46a454b .rform-input::-ms-input-placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-46a454b .rform-error {
-                                            text-align: left;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-c4bf394 .rform-input-tel {
-                                            background-color: var( --e-global-color-primary);
-                                            padding: 16px 32px 16px 32px;
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-c4bf394 {
-                                            width: var( --container-widget-width, 50%);
-                                            max-width: 50%;
-                                            --container-widget-width: 50%;
-                                            --container-widget-flex-grow: 0;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-c4bf394 .rform-input-tel::placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-c4bf394 .rform-input-tel::-webkit-input-placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-c4bf394 .rform-input-tel::-ms-input-placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-c4bf394 .iti--separate-dial-code .iti__selected-flag {
-                                            color: var( --e-global-color-secondary);
-                                            border-radius: 5px 0px 0px 5px;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-c4bf394 .rform-error {
-                                            text-align: left;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-20ad4c8 .rform-options-container ul {
-                                            border-radius: 0px 0px 10px 10px;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-20ad4c8 .rform-option:hover {
-                                            color: var( --e-global-color-primary);
-                                            background-color: var( --e-global-color-accent);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-20ad4c8 .rform-error {
-                                            text-align: left;
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-1fc8423 .rform-input {
-                                            background-color: var( --e-global-color-primary);
-                                            height: 200px;
-                                            padding: 16px 32px 16px 32px;
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-1fc8423 .rform-input::placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-1fc8423 .rform-input::-webkit-input-placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-1fc8423 .rform-input::-ms-input-placeholder {
-                                            color: var( --e-global-color-text);
-                                        }
-
-                                        .elementor-634 .elementor-element.elementor-element-1fc8423 .rform-error {
-                                            text-align: left;
-                                        }
-
-                                        @media(max-width:767px) {
-                                            .elementor-634 .elementor-element.elementor-element-46a454b {
-                                                --container-widget-width: 100%;
-                                                --container-widget-flex-grow: 0;
-                                                width: var( --container-widget-width, 100%);
-                                                max-width: 100%;
-                                            }
-                                            .elementor-634 .elementor-element.elementor-element-c4bf394 {
-                                                --container-widget-width: 100%;
-                                                --container-widget-flex-grow: 0;
-                                                width: var( --container-widget-width, 100%);
-                                                max-width: 100%;
-                                            }
-                                        }
-                                    </style>
-                                    <div data-elementor-type="wp-post" data-elementor-id="634" class="elementor elementor-634">
-                                        <div class="elementor-element elementor-element-ef612ae e-flex e-con-boxed e-con e-parent" data-id="ef612ae" data-element_type="container">
-                                            <div class="e-con-inner">
-                                                <div class="elementor-element elementor-element-204555a elementor-widget elementor-widget-text" data-id="204555a" data-element_type="widget" data-widget_type="text.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="rform-container">
-                                                            <div class="rform-control ">
-                                                                <input name="rform-text" placeholder="Name" class="rform-input" id="rform-input-text-33838426" type="text" onblur="validate_input( 'rform-input-text-' , 'rform-input-err-' ,'33838426')" aria-invalid=false data-val="by_char" required>
-                                                            </div>
-                                                            <span role="alert" class="rform-error" id="rform-input-err-33838426">This field is required</span>
-                                                            <div class="rform-help-text">
-                                                                <span></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-bced227 e-con-full e-flex e-con e-child" data-id="bced227" data-element_type="container">
-                                                    <div class="elementor-element elementor-element-46a454b elementor-widget__width-initial elementor-widget elementor-widget-email" data-id="46a454b" data-element_type="widget" data-widget_type="email.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="rform-container">
-                                                                <div class="rform-control ">
-                                                                    <input name="rform-email" placeholder="Email Here" class="rform-input" id="rform-input-email-74073419" type="email" onblur="validate_input( 'rform-input-email-' , 'rform-input-err-' ,'74073419')" aria-invalid=false data-val="by_char" required>
-                                                                </div>
-                                                                <span role="alert" class="rform-error" id="rform-input-err-74073419">This field is required</span>
-                                                                <div class="rform-help-text">
-                                                                    <span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-element elementor-element-c4bf394 elementor-widget__width-initial elementor-widget elementor-widget-rform_phone" data-id="c4bf394" data-element_type="widget" data-widget_type="rform_phone.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="rform-container">
-                                                                <div class="rform-control ">
-                                                                    <input data-default-countries="ID" name="rform-phone" placeholder="Number Here" class="rform-input-tel" id="rform-input-tel-206304148" type="tel" onblur="validate_input( 'rform-input-tel-' , 'rform-input-err-' ,'206304148')" aria-invalid=false required
-                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                                                </div>
-                                                                <span role="alert" class="rform-error" id="rform-input-err-206304148">This field is required</span>
-                                                                <div class="rform-help-text">
-                                                                    <span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-20ad4c8 elementor-widget elementor-widget-select" data-id="20ad4c8" data-element_type="widget" data-widget_type="select.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="rform-container">
-                                                            <div class="rform-control ">
-                                                                <div class="rform-select-container">
-                                                                    <div class="rform-select-div">
-                                                                        <input id="rform-select-34264264" class="rform-select" type="text" placeholder="Please Choose Packages" readonly required>
-                                                                        <input class="rform-select-input" type="text" name="rform-select" value="" hidden>
-                                                                    </div>
-                                                                    <div class="rform-options-container">
-                                                                        <ul>
-                                                                            <li class="rform-option" data-value="item-1">Silver Packages</li>
-                                                                            <li class="rform-option" data-value="item-2">Gold Packages</li>
-                                                                            <li class="rform-option" data-value="item-3">Platinum Packages</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <span role="alert" class="rform-error" id="rform-select-err-34264264">This field is required</span>
-                                                            <div class="rform-help-text">
-                                                                <span></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-1fc8423 elementor-widget elementor-widget-text-area" data-id="1fc8423" data-element_type="widget" data-widget_type="text-area.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="rform-container">
-                                                            <div class="rform-control ">
-                                                                <textarea name="rform-message " placeholder="Message Here" class="rform-input" id="rform-input-textarea-33326115" type="text" onblur="validate_input( 'rform-input-textarea-' , 'rform-input-err-' ,'33326115')" aria-invalid=false data-val="by_char" required></textarea>
-                                                            </div>
-                                                            <span role="alert" class="rform-error" id="rform-input-err-33326115">This field is required</span>
-                                                            <div class="rform-help-text">
-                                                                <span></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-77813d2 elementor-widget elementor-widget-rform_button_submit" data-id="77813d2" data-element_type="widget" data-widget_type="rform_button_submit.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="rform-button-container">
-                                                            <button class="rform-button-submit rform-btn-fullwidth" type="button" id="rform-button-submit">
-                                Send Message                                <div class="loading">
-                    <div id="loading"></div>
-                </div>
-            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- <div class="elementor-element elementor-element-7ce6992 elementor-icon-list--layout-inline elementor-tablet-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7ce6992" data-element_type="widget" data-widget_type="icon-list.default">
-                            <div class="elementor-widget-container">
-                                <ul class="elementor-icon-list-items elementor-inline-items">
-                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                        <span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="rtmicon rtmicon-pin-map-location"></i>						</span>
-                                        <span class="elementor-icon-list-text">KLLG St, No.99, Pku City, ID 28289</span>
-                                    </li>
-                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                        <span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="rtmicon rtmicon-phone-classic"></i>						</span>
-                                        <span class="elementor-icon-list-text">0761-8523-398</span>
-                                    </li>
-                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                        <span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="rtmicon rtmicon-envelope"></i>						</span>
-                                        <span class="elementor-icon-list-text">hello@domainsite.com</span>
-                                    </li>
-                                </ul>
-                          </div>
-                      </div> -->
-                 </div>
-             </div>
         </div>
-   <!-- Modal Structure -->
+        <!-- Page Header End -->
 
-   <!-- Modal -->
-   <div 
-    class="modal fade @if($showModal) show @endif" 
-    id="enquiryModal" 
-    tabindex="-1" 
-    aria-labelledby="enquiryModalLabel" 
-    aria-hidden="true"
-    @if ($showModal) style="display: block;" @else style="display: none;" @endif
->
-    <div class="" >
-        <div class="modal-content1" >
-            <div class="modal-header">
-                <h5 class="modal-title"  id="enquiryModalLabel">Enquiry Form</h5>
-                <button type="button" class="btn-close" wire:click="$set('showModal', false)" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form wire:submit.prevent="uservisaEnquiry">
-                    @csrf
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="name" wire:model="name" placeholder="Enter your full name" required>
-                        @error('name') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
-                    <div class="mb-3">
-                        <input type="tel" class="form-control" id="phone" wire:model="phone" placeholder="Enter your phone number" required>
-                        @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" id="message" wire:model="message" rows="4" placeholder="Enter your enquiry details" required></textarea>
-                        @error('message') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
 
-                    <!-- Loading message -->
-                    <div wire:loading>
-                        Submitting...
+       <!-- Booking Start -->
+       <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
+    <div class="container">
+        <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
+            <div class="row g-2">
+                <div class="col-md-3 text-center">
+                    <div class="counter">
+                        <h2 style="color:#FEAF39" id="clients-count">0</h2>
+                        <h5>Clients</h5>
                     </div>
-
-                    <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="counter">
+                        <h2 style="color:#FEAF39" id="success-rate">0</h2>
+                        <h5>Success Rate</h5>
                     </div>
-                </form>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="counter">
+                        <h2 style="color:#FEAF39" id="rating-clients">0</h2>
+                        <h5>Rating Clients</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="counter">
+                        <h2 style="color:#FEAF39" id="experience-years">0</h2>
+                        <h5>Years of Experience</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Carousel (Hidden by default) -->
-<div id="photoCarousel" class="carousel slide" data-bs-ride="carousel" style="display: none;">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{{ asset('asserts/user/img/img1.png') }}" class="d-block w-100" alt="Photo 1">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ asset('asserts/user/img/img2.png') }}" class="d-block w-100" alt="Photo 1">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ asset('asserts/user/img/img3.png') }}" class="d-block w-100" alt="Photo 1">
-    </div>
-    <!-- Add more carousel items as needed -->
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
- <!-- <div id="myModal"  class="modal"
-    @if ($showModal)
-        style="display: block;"
-    @else
-        style="display: none;"
-    @endif
- >
-  <div class="modal-content1">
-    <h5>Contact Form</h5>
-    <span id="closeModalButton" class="close">&times;</span>
-    <form id="contactForm">
-      <div class="input-container">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="input-container">
-        <label for="number">Number</label>
-        <input type="text" id="number" name="number" required>
-      </div>
-      <div class="input-container">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" class="submit-button">Submit</button>
-    </form>
-  </div>
-</div> -->
-  </div>
-
-  <script>
-    document.getElementById('showCarouselButton').addEventListener('click', function() {
-        var carousel = document.getElementById('photoCarousel');
-        // Toggle display of the carousel
-        if (carousel.style.display === "none" || carousel.style.display === "") {
-            carousel.style.display = "block"; // Show the carousel
-        } else {
-            carousel.style.display = "none"; // Hide the carousel
-        }
-    });
-</script>
-
-  <!-- Modal Script -->
 <script>
-  // Get the modal and buttons
-  var modal = document.getElementById("myModal");
-  var openModalButton = document.getElementById("openModalButton");
-  var closeModalButton = document.getElementById("closeModalButton");
+// Function to animate numbers
+function animateNumber(id, start, end, duration, suffix = '') {
+    let current = start;
+    let increment = end > start ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / (end - start)));
+    let element = document.getElementById(id);
+    
+    let timer = setInterval(function() {
+        current += increment;
+        element.textContent = current + suffix;
+        
+        if (current === end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
 
-  // Open the modal
-  openModalButton.onclick = function() {
-    modal.style.display = "block";
-  }
-
-  // Close the modal
-  closeModalButton.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  // Close the modal if clicked outside the modal content
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
-  // Handle form submission
-  document.getElementById("contactForm").onsubmit = function(event) {
-    event.preventDefault();
-    var name = document.getElementById("name").value;
-    var number = document.getElementById("number").value;
-    var message = document.getElementById("message").value;
-    console.log("Name: " + name);
-    console.log("Number: " + number);
-    console.log("Message: " + message);
-    alert("Form Submitted!");
-    modal.style.display = "none";
-  }
+// Call animateNumber for each counter with appropriate values
+window.onload = function() {
+    animateNumber('clients-count', 0, 5, 3000, 'K +');  // 5K+ Clients
+    animateNumber('success-rate', 0, 97, 3000, '%');    // 87% Success Rate
+    animateNumber('rating-clients', 0, 4, 3000);      // 4.7 Rating Clients
+    animateNumber('experience-years', 0, 20, 3000, '+'); // 20+ Years of Experience
+};
 </script>
+
+
+        <!-- Booking End -->
+
+
+        <!-- Package Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Saudi Visa</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Visa Service</span></h1>
+                </div>
+                <div class="row g-4">
+                  @foreach ($visaDetails as $visaDetail )
+                  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            {{-- <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> --}}
+                            <img class="img-fluid" src="{{Storage::url($visaDetail->file_path)}}" alt="" style="height: 15rem;">
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"></small>
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">{{$visaDetail->visa_type}}</h5>
+                                <div class="ps-2 ">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <div>
+                                <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center"> </p>
+                            </div>
+                           
+
+
+                            <p class="text-body mb-3 text-justify">We provide professional visa services for Saudi Arabia, including Tourist, Business, and other visa types. Count on us for efficient and reliable visa processing tailored to your needs.</p>
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$visaDetail->id}})"> <i class="fa-solid fa-book" ></i> View Browcher</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$visaDetail->id}})"><i class="fa-regular fa-paper-plane" ></i>  Book Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  @endforeach
+                    
+                </div>
+            </div>
+        </div>
+        <!-- package End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl testimonial mt-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 90px;">
+            <div class="container">
+                <div class="owl-carousel testimonial-carousel py-5">
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>"Excellent service! The team at [Your Agency Name] made the visa process for Saudi Arabia so smooth and fast. Highly recommend them for their professionalism and quick turnaround."</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Ayesha Khan</h6>
+                                <small> Business Visa Applicant</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>"I was worried about getting my Saudi Tourist visa, but [Your Agency Name] took care of everything. Their process was clear, and I received my visa on time. I’ll definitely use them again!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Ravi Patel</h6>
+                                <small> Tourist Visa Applicant</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>"The visa processing was quick and hassle-free. I needed a Business visa urgently, and Rahat Group's delivered exceptional service. I’m grateful for their support!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Mohammad Ali</h6>
+                                <small> Business Visa Applicant</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Newsletter Start -->
+        <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 border rounded p-1">
+                    <div class="border rounded text-center p-1">
+                        <div class="bg-white rounded text-center p-5">
+                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
+                            <div class="position-relative mx-auto" style="max-width: 400px;">
+                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter Start -->
+
+{{--view-browcher-start--}}
+@if ($browcherPopUp)
+<!-- Overlay Background -->
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;z-index: 999;"></div>
+
+<!-- Popup Content -->
+<div id="browserPopup" class="shadow-lg p-3 mb-5 bg-body rounded text-center " style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: fit-content; height: fit-content; background-color: whitesmoke;  padding: 20px; z-index: 1000; transition: opacity 0.5s ease; ">
+    <div class="d-flex justify-content-end" >
+        <i class="bi bi-x-circle" style="cursor: pointer;" wire:click="closeBrowcher()"></i>
+    </div>
+    <h2 style="color: #FEA116;">Browcher</h2>
+    <div>
+        <img src="{{Storage::url($browcherData->flyer_path)}}" alt="Browcher Image" style="max-height:50rem; width:50vw; max-width:35em;" class="img-fluid">
+    </div>
+
+   <div style="margin: 3rem auto">
+   <a href="tel:+971567866713" style="font-family: sans-serif; text-decoration: none; padding:9px 15px; border:1px solid #bc8c1d; border-radius: 5px;"> <i class="bi bi-telephone-fill"></i>&nbsp; click to call</a>
+   </div>
+   
+   
+</div>
+@endif
+
+{{--view-browcher-end--}}
+
+
+
+{{--view-enquire-start--}}
+@if ($enquirePopUp)
+<!-- Overlay Background -->
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;z-index: 999;"></div>
+
+<!-- Popup Content -->
+<div id="browserPopup" class="shadow-lg p-3 mb-5 bg-body rounded text-center " style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: fit-content; height: fit-content; background-color: whitesmoke;  padding: 20px; z-index: 1000; transition: opacity 0.5s ease; ">
+    <div class="d-flex justify-content-end" >
+        <i class="bi bi-x-circle" style="cursor: pointer;" wire:click="closeEnquire()"></i>
+    </div>
+    <form action="post" wire:submit.prevent="uservisaEnquiry">
+    <h2 style="color: #FEA116;">Enquire</h2>
+    <div class="m-3">
+        <span>Choosed Visa : <h4 style="color: #0F172B; text-transform:uppercase;" >{{$enquireData->visa_type}}</h4> </span>
+
+    </div>
+    <div class="m-3">
+       <input class="form-control" type="text" placeholder="Enter your name" wire:model="name" required>
+    </div>
+    <div  class="m-3">
+        <input class="form-control" type="tel" placeholder="Enter your number"  wire:model="phone" required>
+     </div>
+     <div  class="m-3 text-start">
+        <label for="query" >Enter your Query</label>
+        <textarea  class="form-control" name="" id="query" wire:model="message"  cols="30" rows="10" maxlength="100" placeholder="Enter your Query" wire:model="query">
+
+        </textarea>
+        
+     </div>
+     <p>Note: <span>our team will contact you</span></p>
+     <div>
+       <button type="submit" style="background: transparent; border:none;"> <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" >SUBMIT</a></button>
+     </div>
+
+   <div style="margin: 3rem auto">
+   <a href="tel:+971567866713" style="font-family: sans-serif; text-decoration: none; padding:9px 15px; border:1px solid #bc8c1d; border-radius: 5px;"> <i class="bi bi-telephone-fill"></i>&nbsp; click to call</a>
+   </div>
+</form>
+   
+</div>
+
+@endif
+
+{{--view-enquire-end--}}
+
+</section>
