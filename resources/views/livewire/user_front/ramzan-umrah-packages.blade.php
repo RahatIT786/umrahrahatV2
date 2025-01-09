@@ -4,7 +4,7 @@
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100 " src="asserts/user/img/haj/mecca1.jpg" alt="Image" style="height: 70vh; object-fit: cover;">
+                        <img class="w-100 " src="{{asset('public/asserts/user/img/haj/mecca1.jpg')}}" alt="Image" style="height: 70vh; object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
@@ -130,16 +130,16 @@ window.onload = function() {
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="asserts/user/img/haj/macca.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('public/asserts/user/img/haj/macca.jpg')}}" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="asserts/user/img/haj/childmeccac.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('public/asserts/user/img/haj/childmeccac.jpg')}}">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="asserts/user/img/haj/masque.jpg">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('public/asserts/user/img/haj/masque.jpg')}}">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="asserts/user/img/haj/peopelmacca.jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('public/asserts/user/img/haj/peopelmacca.jpg')}}">
                             </div>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ window.onload = function() {
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt="">
+                                <img class="img-fluid" src="{{asset('public/asserts/user/img/haj/pack1.jpg')}}" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
@@ -193,7 +193,7 @@ window.onload = function() {
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img/haj/pack2.jpg" alt="">
+                                <img class="img-fluid" src="{{asset('public/asserts/user/img/haj/pack2.jpg')}}" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
@@ -227,7 +227,7 @@ window.onload = function() {
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" style="height: 265px;" src="asserts/user/img/haj/pack3.jpg" alt="">
+                                <img class="img-fluid" style="height: 265px;" src="{{asset('public/asserts/user/img/haj/pack3.jpg')}}" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">

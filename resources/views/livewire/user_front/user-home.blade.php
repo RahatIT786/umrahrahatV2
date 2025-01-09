@@ -4,7 +4,7 @@
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100 " src="asserts/user/img/haj/mecca1.jpg" alt="Image" style="height: 70vh; object-fit: cover;">
+                        <img class="w-100 " src="{{asset('public/asserts/user/img/haj/mecca1.jpg')}}" alt="Image" style="height: 70vh; object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100 " src="asserts/user/img/haj/mecca3.jpg" alt="Image" style="height: 70vh;">
+                        <img class="w-100 " src="{{asset('public/asserts/user/img/haj/mecca3.jpg')}}" alt="Image" style="height: 70vh;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
@@ -149,16 +149,16 @@ window.onload = function() {
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="asserts/user/img/haj/macca.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('public/asserts/user/img/haj/macca.jpg')}}" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="asserts/user/img/haj/childmeccac.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('public/asserts/user/img/haj/childmeccac.jpg')}}">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="asserts/user/img/haj/masque.jpg">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('public/asserts/user/img/haj/masque.jpg')}}">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="asserts/user/img/haj/peopelmacca.jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('public/asserts/user/img/haj/peopelmacca.jpg')}}">
                             </div>
                         </div>
                     </div>
@@ -378,7 +378,7 @@ window.onload = function() {
                         <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                             <p>"The Umrah package from Rahat Group was truly exceptional. Everything was perfectly organized, from the flights to the accommodation. I felt completely at ease throughout the journey. Highly recommend!"</p>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="{{asset(config('assets.images.feedback1'))}}" style="width: 45px; height: 45px; object-fit: contain;">
+                                <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person1.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
                                 <div class="ps-3">
                                     <h6 class="fw-bold mb-1">Shaikh</h6>
                                     <small>Akola(Maharashtra)</small>
@@ -389,7 +389,7 @@ window.onload = function() {
                         <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                             <p>"I had an unforgettable experience with Rahat Group's Umrah package. I will definitely choose them again for future trips. The guides were knowledgeable, the accommodations were comfortable, and the entire trip was stress-free."</p>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="{{asset(config('assets.images.feedback2'))}}" style="width: 45px; height: 45px; object-fit: contain;">
+                                <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person2.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
                                 <div class="ps-3">
                                     <h6 class="fw-bold mb-1">Ansari Hammad</h6>
                                     <small>Hailakandi(Assam)</small>
@@ -400,7 +400,7 @@ window.onload = function() {
                         <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                             <p>"Rahat Group provided an outstanding Umrah service. Their attention to detail, friendly staff, and seamless arrangements allowed me to focus entirely on my worship. I will definitely choose them again for future trips."</p>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="{{asset(config('assets.images.feedback3'))}}" style="width: 45px; height: 45px; object-fit: contain;">
+                                <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person3.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
                                 <div class="ps-3">
                                     <h6 class="fw-bold mb-1">Mohammed Milkan</h6>
                                     <small>Baraily(Uttar Pradhesh)</small>
