@@ -1,6 +1,6 @@
 name: umrahrahat-CICD
 
-on: 
+on:
   push:
     branches:
       - main
@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
+      # Step 1: Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-    # Step 2: Install dependencies
+      # Step 2: Install dependencies
       - name: Install dependencies
         run: composer install --no-progress --no-suggest --prefer-dist
 
-    # Step 3: Set up PHP
+      # Step 3: Set up PHP
       - name: Setup PHP 
         uses: shivammathur/setup-php@v2
         with:
@@ -30,15 +30,15 @@ jobs:
           ini-values: post_max_size=256M, upload_max_filesize=256M
           coverage: none
 
-    # Step 4: Copy .env file
+      # Step 4: Copy .env file
       - name: Copy .env file
         run: cp .env.example .env
 
-    # Step 5: Generate app key
+      # Step 5: Generate app key
       - name: Generate app key
         run: php artisan key:generate
 
-    # Step 6: Install MySQL and set root password
+      # Step 6: Install MySQL and set root password
       - name: Set up MySQL and database
         run: |
           sudo apt-get update
@@ -51,7 +51,7 @@ jobs:
           # Create the database
           mysql -u root -proot -e "CREATE DATABASE umrahrahat;"
 
-    # Step 7: Run migrations and seed database
+      # Step 7: Run migrations and seed database
       - name: Run migrations
         env:
           DB_CONNECTION: mysql
@@ -60,7 +60,7 @@ jobs:
           DB_PASSWORD: root
         run: php artisan migrate --seed
 
-    # Step 8: Run tests
+      # Step 8: Run tests
       - name: Run tests
         env:
           APP_ENV: testing
