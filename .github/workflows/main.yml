@@ -41,7 +41,7 @@ jobs:
       - name: Set up database
         run:  |
           sudo apt-get update -y 
-          sudo apt-get install -y mysql-server
+          sudo apt-get install -y mariadb-server
           mysql -e "CREATE DATABASE umrahrahat;"
 
     #step 7: run migrations and seed database
