@@ -82,13 +82,13 @@ jobs:
             echo "Testing links in $file"
             grep -oP '(?<=src=")[^"]*' "$file" | while read url; do
               if [[ ! "$url" =~ ^https?:// ]]; then
-                url="https://yourwebsite.com/$url"
+                url="https://umrahrahat.com/$url"
               fi
               curl -s -o /dev/null -w "%{http_code}" "$url" | grep -q "200" || echo "Broken image: $url"
             done
             grep -oP '(?<=href=")[^"]*\.css' "$file" | while read url; do
               if [[ ! "$url" =~ ^https?:// ]]; then
-                url="https://yourwebsite.com/$url"
+                url="https://umrahrahat.com/$url"
               fi
               curl -s -o /dev/null -w "%{http_code}" "$url" | grep -q "200" || echo "Broken CSS: $url"
             done
