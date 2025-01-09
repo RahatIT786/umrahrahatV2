@@ -415,7 +415,7 @@ window.onload = function() {
 
 
         <!-- Team Start -->
-        <div class="container-xxl py-5">
+        <!-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">Our Hotels</h6>
@@ -427,9 +427,6 @@ window.onload = function() {
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/haj/hotel1.jpg" alt="" style="height: 13rem; width: 100%;">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a> -->
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -443,9 +440,7 @@ window.onload = function() {
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/haj/hotel2.jpg" alt="" style="height: 15rem; width: auto;">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a> -->
+                                    
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -459,9 +454,7 @@ window.onload = function() {
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/haj/hotel3.jpg" alt="" style="height: 15rem; width: auto;">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a> -->
+                                   
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -475,9 +468,7 @@ window.onload = function() {
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/haj/hotel4.jpg" alt="" style="height: 15rem; width: auto;">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a> -->
+                                    
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -488,7 +479,7 @@ window.onload = function() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Team End -->
 
 
