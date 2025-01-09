@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="container pb-5">
-                <div class="row g-5 d-flex justify-content-center"> 
+                <div class="row g-5 d-flex justify-content-center" id="footer-contact"> 
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">MAKKA - SAUDI</h6>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Deafa International, <br> Ajyad Sud Street.<br> Anwar Deafa, Second Floor.</p>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">MADINA - SAUDI</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Ali ibne Talib Inside Qurban Mall.<br> Awaali,<br> Madina Munawwara..</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Ali ibne Talib Inside Qurban Mall.<br> Awaali,<br> Madina Munawwara.</p>
                         <p class="mb-2"><a style="color:white" href="tel:+966543186894."><i class="fa fa-phone-alt me-3"></i>+966 54 318 6894</a> </p>
                     </div>
                     <div class="col-md-6 col-lg-3">
