@@ -16,6 +16,13 @@ jobs:
     #step 1: checkout the repositary
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Fix broken packages and update
+        run: |
+          sudo apt-get install -f
+          sudo dpkg --configure -a
+          sudo apt-get update -y
+          sudo apt-get install --reinstall liblzma-dev debsuryorg-archive-keyring
      
     #step 2: setup PHP
       - name:  Setup PHP 
@@ -41,7 +48,7 @@ jobs:
       - name: Set up database
         run:  |
           sudo apt-get update -y 
-          sudo apt-get install -y mariadb-server
+          sudo apt-get install -y mysql-server
           mysql -e "CREATE DATABASE umrahrahat;"
 
     #step 7: run migrations and seed database
