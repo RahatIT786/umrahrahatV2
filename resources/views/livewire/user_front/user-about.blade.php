@@ -1,6 +1,6 @@
 <section>
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(asserts/user/img/haj/mecca3.jpg);">
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('public/asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
@@ -61,16 +61,16 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset(config('assets.images.about_img1'))}}" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('public/asserts/user/img/aboutimg1.jpg')}}" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset(config('assets.images.about_img2'))}}" >
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('public/asserts/user/img/aboutimg2.jpg')}}" >
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset(config('assets.images.about_img3'))}}">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('public/asserts/user/img/aboutimg3.jpeg')}}">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset(config('assets.images.about_img4'))}}">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('public/asserts/user/img/aboutimg4.jpg')}}">
                             </div>
                         </div>
                     </div>
@@ -91,28 +91,28 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded  overflow-hidden">
                             <div class="position-relative d-flex justify-content-center align-items-center" >
-                                <img class="img-fluid" style="height: 6rem;" src="asserts/user/img/partnerlogo1.png" alt="">
+                                <img class="img-fluid" style="height: 6rem;" src="{{asset('public/asserts/user/img/partnerlogo1.png')}}" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative d-flex justify-content-center align-items-center">
-                              <img class="img-fluid"  style="height: 4rem;" src="asserts/user/img/parthnerlogo2.png" alt="">
+                              <img class="img-fluid"  style="height: 4rem;" src="{{asset('public/asserts/user/img/parthnerlogo2.png')}}" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="rounded  overflow-hidden">
                             <div class="position-relative d-flex justify-content-center align-items-center">
-                                <img class="img-fluid"  style="height: 4rem;" src="asserts/user/img/parthnerlogo3.png" alt="">
+                                <img class="img-fluid"  style="height: 4rem;" src="{{asset('public/asserts/user/img/parthnerlogo3.png')}}" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="rounded  overflow-hidden">
                             <div class="position-relative d-flex justify-content-center align-items-center">
-                              <img class="img-fluid"  style="height: 6rem;" src="asserts/user/img/parthnerlogo4.png" alt="">
+                              <img class="img-fluid"  style="height: 6rem;" src="{{asset('public/asserts/user/img/parthnerlogo4.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                     <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="rounded custom-shadow overflow-hidden">
                             <div class="position-relative d-flex justify-content-center">
-                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="asserts/user/img/icon2.png" alt="">
+                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="{{asset('public/asserts/user/img/icon2.png')}}" alt="">
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h2 class="fw-bold mb-0">our vision</h2>
@@ -164,7 +164,7 @@
                     <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="rounded custom-shadow overflow-hidden">
                             <div class="position-relative d-flex justify-content-center">
-                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="asserts/user/img/icon2.png" alt="">
+                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="{{asset('public/asserts/user/img/icon2.png')}}" alt="">
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h2 class="fw-bold mb-0">our Mision</h2>
