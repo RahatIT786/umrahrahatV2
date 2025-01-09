@@ -9,8 +9,8 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Ramadan Umrah Packages </h1>
-                                <a href="room.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book A Package</a>
-                                <a href="team.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
+                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book A Package</a>
+                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
                             </div>
                         </div>
                     </div>
@@ -21,63 +21,69 @@
 
 
         <!-- Booking Start -->
-        <!-- <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <select class="form-select" >
-                                        <option selected > Package</option>
-                                        <option value="1">SuperSaver</option>
-                                        <option value="2">Royal</option>
-                                        <option value="3">Classic</option>
-                                        <option value="4">Bronze</option>
-                                        <option value="5">Silver</option>
-                                        <option value="6">Gold</option>
-                                        <option value="7">Elite</option>
-                                        <option value="8">Esteem</option>
-                                        <option value="9">Executive</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select" >
-                                        <option selected >Category</option>
-                                        <option value="1">Sharing</option>
-                                        <option value="2">Quad</option>
-                                        <option value="3">Triple</option>
-                                        <option value="4">Double</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="text" class="form-control" placeholder="Enter mobile number">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
-                        </div>
+              <!-- Booking Start -->
+  <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
+    <div class="container">
+        <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
+            <div class="row g-2">
+                <div class="col-md-3 text-center">
+                    <div class="counter">
+                        <h2 style="color:#FEAF39" id="clients-count">0</h2>
+                        <h5>Clients</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="counter">
+                        <h2 style="color:#FEAF39" id="success-rate">0</h2>
+                        <h5>Success Rate</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="counter">
+                        <h2 style="color:#FEAF39" id="rating-clients">0</h2>
+                        <h5>Rating Clients</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="counter">
+                        <h2 style="color:#FEAF39" id="experience-years">0</h2>
+                        <h5>Years of Experience</h5>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+    </div>
+</div>
+
+<script>
+// Function to animate numbers
+function animateNumber(id, start, end, duration, suffix = '') {
+    let current = start;
+    let increment = end > start ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / (end - start)));
+    let element = document.getElementById(id);
+    
+    let timer = setInterval(function() {
+        current += increment;
+        element.textContent = current + suffix;
+        
+        if (current === end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+
+// Call animateNumber for each counter with appropriate values
+window.onload = function() {
+    animateNumber('clients-count', 0, 5, 3000, 'K +');  // 5K+ Clients
+    animateNumber('success-rate', 0, 97, 3000, '%');    // 87% Success Rate
+    animateNumber('rating-clients', 0, 4, 3000);      // 4.7 Rating Clients
+    animateNumber('experience-years', 0, 20, 3000, '+'); // 20+ Years of Experience
+};
+</script>
+
+
+        <!-- Booking End -->
         <!-- Booking End -->
 
 
@@ -250,7 +256,7 @@
                     <div class="p-5">
                         <h6 class="section-title text-start text-white text-uppercase mb-3">RAHAT GROUP</h6>
                         <h1 class="text-white mb-4">Dedicated to ensuring a seamless and fulfilling experience for every pilgrim</h1>
-                        <p class="text-white mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p class="text-white mb-4">Rahat Group offers a wide range of services, including Hajj and Umrah packages, elite catering, visa processing, and travel services, providing quality and tailored experiences for its customers.</p>
                         <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Our Package</a>
                         <a href="" class="btn btn-light py-md-3 px-md-5">Book A Package</a>
                     </div>
@@ -305,7 +311,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Rooms & Appartment</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Our rooms and apartments offer comfort, convenience, and modern amenities. Whether you're traveling for business or leisure, enjoy a relaxing stay with well-furnished spaces and excellent service.</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -316,7 +322,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Food & Restaurant</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Indulge in a variety of delicious cuisines at our restaurant, offering a blend of local and international dishes. Enjoy a delightful dining experience with fresh ingredients and exceptional service.</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -328,7 +334,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Flight & Transport</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">We provide seamless flight and transport services, ensuring a comfortable journey from start to finish. Enjoy reliable and timely travel options, including airport transfers and customized travel arrangements.</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
@@ -340,7 +346,7 @@
                             </div>
                            
                             <h5 class="mb-3">Visa & Insurance </h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Our visa and insurance services ensure a hassle-free travel experience. We assist with visa applications and provide comprehensive travel insurance options, offering peace of mind for your international trips.</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -352,7 +358,7 @@
                               
                             </div>
                             <h5 class="mb-3">Ziyarat</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Experience the spiritual journey of Ziyarat, visiting sacred sites and historic locations. Our services provide guided tours to key religious destinations, enriching your pilgrimage with meaningful insights and comfort.</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
@@ -364,7 +370,7 @@
                             </div>
                            
                             <h5 class="mb-3">Laundry</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Our laundry service offers convenient and efficient cleaning for your clothes. With quick turnaround times and attention to detail, we ensure your garments are fresh, clean, and ready for use.</p>
                         </a>
                     </div>
                 </div>
@@ -374,7 +380,7 @@
 
 
         <!-- Testimonial Start -->
-        <div class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
+        <!-- <div class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="owl-carousel testimonial-carousel py-5">
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
@@ -412,7 +418,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Testimonial End -->
 
 

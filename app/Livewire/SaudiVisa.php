@@ -19,7 +19,10 @@ class SaudiVisa extends Component
     public $getVisaType;
     public $data;
     public $visaType;
-
+    public $browcherPopUp;
+    public $enquirePopUp;
+    public $browcherData;
+    public $enquireData;
     public $showModal = false;
     // public function mount(){
     //     $this->visaDetails = VisaDetail::where('delete_status', 1)->get();
@@ -39,6 +42,26 @@ class SaudiVisa extends Component
     {
         $this->showModal = false; // Close the modal
     }
+    public function openBrowcher($packageId){
+        //dump($packageId);
+        $this->browcherPopUp=true;
+        $this->browcherData= VisaDetail::where('delete_status',1)->findOrFail($packageId);
+    }
+    public function closeBrowcher(){
+        $this->browcherPopUp=false;
+        $this->browcherData=null;
+    }
+    public function openEnquire($packageId){
+        //dump($packageId);
+        $this->enquirePopUp=true;
+        $this->enquireData=VisaDetail::where('delete_status',1)->findOrFail($packageId);
+        //dump($this->enquireData);
+
+    }
+    public function closeEnquire(){
+        $this->enquirePopUp=false;
+        $this->enquireData=null;
+    }
     protected $rules = [
         'name'=> 'required|string',
         'phone'=> 'required|numeric',
@@ -52,11 +75,11 @@ class SaudiVisa extends Component
             'name'=> $this->name,
             'phone'=> $this->phone,
             'message'=> $this->message,
-            'visaType' => $this->visaType,
+            'visaType' => $this->enquireData->visa_type,
             'delete_status' => 1,
             'status' => 1,
         ]);
-        $this->showModal = false;
+        $this->enquirePopUp=false;
     
         // Check if data is correctly created
         //Log::info('Enquiry created:', $this->data->toArray());

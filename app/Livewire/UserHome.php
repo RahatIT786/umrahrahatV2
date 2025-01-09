@@ -22,9 +22,6 @@ class UserHome extends Component
     public $browcherData;
 
     public $enquireData;
-
-
-
     public $customerName;
     public $mobile;
     public $query;
@@ -37,14 +34,9 @@ class UserHome extends Component
         return Package::where('delete_status',false)->get();
     }
 
-
-
     public function openBrowcher($packageId){
         $this->browcherPopUp=true;
-
         $this->browcherData= Package::where('delete_status',false)->findOrFail($packageId);
-
-
     }
     public function closeBrowcher(){
         $this->browcherPopUp=false;

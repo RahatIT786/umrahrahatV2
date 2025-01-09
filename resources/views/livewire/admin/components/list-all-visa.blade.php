@@ -31,6 +31,7 @@
                     <tr>
                         <th class="border-0 py-2">S.No</th>
                         <th class="border-0 py-2">Visa Image</th>
+                        <th class="border-0 py-2">Flyer Image</th>
                         <th class="border-0 py-2">Visa Type</th>
                         <th class="border-0 py-2">Documents</th>
                         <th class="border-0 py-2">Processing Time</th>
@@ -50,17 +51,24 @@
                                     No Image available
                                 @endif
                             </td>
+                            <td>
+                                @if ($visa->flyer_path)
+                                    <img src="{{Storage::url($visa->flyer_path) }}" alt="Flyer Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
+                                @else
+                                    No Flyer available
+                                @endif
+                            </td>
                             <td>{{ $visa->visa_type }}</td>
                             <td>{{ $visa->documents_required }}</td>
                             <td>{{ $visa->processing_time }} days</td>
                             <td>${{ number_format($visa->price, 2) }}</td>
                             <td class="text-center">
-                                <a class="text-primary" href="{{ route('editdata', ['id' => $visa->id]) }}" data-bs-toggle="tooltip"  data-bs-placement="bottom" title="Edit">
+                                <a class="text-primary" href="{{ route('editdata', ['id' => $visa->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a  wire:click="confirmDelete({{ $visa->id }})" class="text-danger"  data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
+                                <a wire:click="confirmDelete({{ $visa->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
                                     <i class="bi bi-trash-fill"></i>
                                 </a>
                             </td>
@@ -71,54 +79,35 @@
         </div>
 
         <!-- Modal for Delete Confirmation -->
-        <!-- <div class="modal fade" id="exampleVerticallycenteredModal" tabindex="-1" aria-hidden="true" @if($showModal) style="display: block;" @endif>
+        <div class="modal fade @if($showModal) show @endif" 
+             id="exampleVerticallycenteredModal" 
+             tabindex="-1" 
+             aria-labelledby="exampleModalCenterTitle" 
+             aria-hidden="true"
+             @if($showModal) style="display: block;" @endif>
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Confirm Deletion</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Confirm Deletion</h5>
+                        <button type="button" class="btn-close" 
+                                data-bs-dismiss="modal" 
+                                aria-label="Close"
+                                wire:click="closeModal"></button>
                     </div>
                     <div class="modal-body">
                         Are you sure you want to delete this visa?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-danger" wire:click="deleteData" >Delete</button>
+                        <button type="button" class="btn btn-secondary" 
+                                data-bs-dismiss="modal" 
+                                wire:click="closeModal">Cancel</button>
+                        <button type="button" class="btn btn-danger" 
+                                wire:click="deleteData" 
+                                data-bs-dismiss="modal">Delete</button>
                     </div>
                 </div>
             </div>
-        </div> -->
-
-        <div class="modal fade @if($showModal) show @endif" 
-     id="exampleVerticallycenteredModal" 
-     tabindex="-1" 
-     aria-labelledby="exampleModalCenterTitle" 
-     aria-hidden="true"
-     @if($showModal) style="display: block;" @endif>
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Confirm Deletion</h5>
-                <button type="button" class="btn-close" 
-                        data-bs-dismiss="modal" 
-                        aria-label="Close"
-                        wire:click="closeModal"></button>
-            </div>
-            <div class="modal-body">
-                Are you sure you want to delete this visa?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" 
-                        data-bs-dismiss="modal" 
-                        wire:click="closeModal">Cancel</button>
-                <button type="button" class="btn btn-danger" 
-                        wire:click="deleteData" 
-                        data-bs-dismiss="modal">Delete</button>
-            </div>
         </div>
-    </div>
-</div>
-
 
         <!-- Pagination -->
         <div class="d-flex justify-content-end mt-3">

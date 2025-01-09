@@ -167,14 +167,9 @@ class PackageUserView extends Component
         $this->browcherPopUp=false;
     }
 
-
-
-
-
-
-   
+    #[Layout('user.Layouts.app')]   
     public function render()
     {
-        return view('livewire.user_front.package')->layout('user.layouts.app');
+        return view('livewire.user_front.package');
     }
 }

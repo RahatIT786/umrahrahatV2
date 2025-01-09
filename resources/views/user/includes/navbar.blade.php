@@ -10,7 +10,7 @@
   <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <a href="#" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         {{-- <h1 class="m-0 text-primary text-uppercase">HajUmrah</h1> --}}
                         <img style="height:4rem;" src="{{asset('asserts/user/img/haj/rahat_logo.png')}}" alt="rahat_logo">
                     </a>
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <a href="#" class="navbar-brand d-block d-lg-none">
                             {{-- <h1 class="m-0 text-primary text-uppercase">HajUmrah</h1> --}}
                             <img style="height:4rem;" src="{{asset('asserts/user/img/haj/rahat_logo.png')}}" alt="rahat_logo">
                         </a>
@@ -56,23 +56,21 @@
                                 <a href="{{route('layouts.app')}}" wire:navigate class="nav-item nav-link active">Home</a>
                                 <a href="{{route('about')}}" wire:navigate class="nav-item nav-link">About</a>
                                 <div class="nav-item dropdown">
-                                    <a href="{{route('about')}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Package</a>
+                                    <a href="{{route('about')}}" wire:navigate class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Package</a>
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="booking.html" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
-                                        <a href="booking.html" class="dropdown-item">Umrah Packages By Air From Dubai</a>
-                                        <a href="team.html" class="dropdown-item">Umrah Visa from Dubai</a>
-                                        <a href="testimonial.html" class="dropdown-item">Umrah Packages from Sharjah</a>
+                                        <a href="#" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
+                                        <a href="#" class="dropdown-item">Umrah Packages By Air From Dubai</a>
+                                        <a href="#" class="dropdown-item">Umrah Visa from Dubai</a>
+                                        <a href="#" class="dropdown-item">Umrah Packages from Sharjah</a>
                                     </div>
                                 </div>
-                                <a href="#service" class="nav-item nav-link">Saudi Visa</a>
-                                <a href="{{route('ramzan-umrah-package')}}" class="nav-item nav-link">Ramadan Umrah Packages</a>
+                                <a href="{{route('saudi-visa')}}"  class="nav-item nav-link">Saudi Visa</a>
+                                <a href="{{route('ramzan-umrah-package')}}" wire:navigate class="nav-item nav-link">Ramadan Umrah Packages</a>
                                 <a href="{{route('blog')}}" wire:navigate class="nav-item nav-link">Blog</a>
-
-                                <a href="#" class="nav-item nav-link">Contact</a>
 
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
-                            <a href="#" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">RahatGroup<i class="fa fa-arrow-right ms-3"></i></a>
+                            <a href="{{route('contact-us')}}" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
 
                         </div>
                     </nav>

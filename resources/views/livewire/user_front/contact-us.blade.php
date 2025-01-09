@@ -20,15 +20,15 @@
                         <div class="row gy-4">
                             <div class="col-md-4">
                                 <h6 class="section-title text-start text-primary text-uppercase">Booking</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
+                                <p><a style="color: #797d7f;" href="https://api.whatsapp.com/send/?phone=%2B971567866713&text=Hello%2C+I+want+some+details+about+package&type=phone_number&app_absent=0"><i class="fab fa-whatsapp text-primary me-2"></i>+971 56 786 6713</a></p>
                             </div>
                             <div class="col-md-4">
                                 <h6 class="section-title text-start text-primary text-uppercase">General</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
+                                <p><a style="color: #797d7f;" href="mailto:info@rahat.in"><i class="fa fa-envelope-open text-primary me-2"></i>info@rahat.in</a></p>
                             </div>
                             <div class="col-md-4">
                                 <h6 class="section-title text-start text-primary text-uppercase">Technical</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
+                                <p><a style="color: #797d7f;" href="mailto:shoeb@rahat.in"><i class="fa fa-envelope-open text-primary me-2"></i>shoeb@rahat.in</a></p>
                             </div>
                         </div>
                     </div>
