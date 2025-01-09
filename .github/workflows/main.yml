@@ -62,7 +62,7 @@ jobs:
           DB_CONNECTION: mysql
           DB_DATABASE: umrahrahat
           DB_USERNAME: root
-          DB_PASSWORD: ""
+          DB_PASSWORD: root
         run: php artisan migrate --seed
 
     #step 8: Run tests
@@ -72,7 +72,7 @@ jobs:
            DB_CONNECTION: mysql
            DB_DATABASE: umrahrahat
            DB_USERNAME: root
-           DB_PASSWORD: ""
+           DB_PASSWORD: root
         run: php artisan test
 
 
