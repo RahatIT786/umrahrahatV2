@@ -39,17 +39,17 @@ jobs:
         run: php artisan key:generate
 
       # Step 6: Install MySQL and set root password
-      - name: Set up MySQL and database
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y mysql-server
-          sudo systemctl start mysql
-          sudo systemctl enable mysql
-          sleep 10 # Wait for MySQL to initialize
+      # - name: Set up MySQL and database
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y mysql-server
+      #     sudo systemctl start mysql
+      #     sudo systemctl enable mysql
+      #     sleep 10 # Wait for MySQL to initialize
           # Set root password to 'root'
-          sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
-          # Create the database
-          mysql -u root -proot -e "CREATE DATABASE umrahrahat;"
+          # sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
+          # # Create the database
+          # mysql -u root -proot -e "CREATE DATABASE umrahrahat;"
 
       # Step 7: Run migrations and seed database
       - name: Run migrations
