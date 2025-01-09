@@ -14,14 +14,14 @@
               <li class="nav-item dropdown dropdown-user-setting">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret show" aria-expanded="true" href="#" data-bs-toggle="dropdown">
                   <div class="user-setting d-flex align-items-center">
-                    <img src="{{asset("images/rahatITdepartment.png")}}" class="user-img" alt="">
+                    <img src="{{asset("public/images/rahatITdepartment.png")}}" class="user-img" alt="">
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li>
                      <a class="dropdown-item" href="#">
                        <div class="d-flex align-items-center">
-                          <img src="{{asset("images/rahatITdepartment.png")}}" alt="" class="rounded-circle" width="54" height="54">
+                          <img src="{{asset("public/images/rahatITdepartment.png")}}" alt="" class="rounded-circle" width="54" height="54">
                           <div class="ms-3">
                             <h6 class="mb-0 dropdown-user-name">Rahat IT</h6>
                             <small class="mb-0 dropdown-user-designation text-secondary">Tech Team</small>
