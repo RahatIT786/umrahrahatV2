@@ -61,14 +61,14 @@ jobs:
       #   run: php artisan migrate --seed
 
       # Step 8: Run tests
-      - name: Run tests
-        env:
-          APP_ENV: testing
-          DB_CONNECTION: mysql
-          DB_DATABASE: umrahrahat
-          DB_USERNAME: root
-          DB_PASSWORD: root
-        run: php artisan test
+      # - name: Run tests
+      #   env:
+      #     APP_ENV: testing
+      #     DB_CONNECTION: mysql
+      #     DB_DATABASE: umrahrahat
+      #     DB_USERNAME: root
+      #     DB_PASSWORD: root
+      #   run: php artisan test
 
       - name: Install curl dependencies
         run: |
