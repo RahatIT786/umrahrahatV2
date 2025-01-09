@@ -22,7 +22,7 @@ jobs:
           sudo apt-get install -f
           sudo dpkg --configure -a
           sudo apt-get update -y
-          sudo apt-get install --reinstall liblzma-dev debsuryorg-archive-keyring
+          sudo apt-get install --reinstall liblzma-dev 
      
     #step 2: setup PHP
       - name:  Setup PHP 
