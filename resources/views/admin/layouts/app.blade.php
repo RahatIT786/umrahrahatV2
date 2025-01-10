@@ -8,16 +8,15 @@
   <link rel="icon" href="{{ asset('asserts\user\img\rahatlogo.jpg') }}" type="image/png" />
   <!--plugins-->
 
-  <link href="{{ asset('public/asserts/admin/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
-  <link href="{{ asset('public/asserts/admin/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-  <link href="{{ asset('public/asserts/admin/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-  <link href="{{ asset('public/asserts/admin/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
+  <link href="{{ asset('asserts/admin/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
   <!-- Bootstrap CSS -->
-
-  <link href="{{ asset('public/asserts/admin/css/bootstrap.min.css') }}" rel="stylesheet" />
-  <link href="{{ asset('public/asserts/admin/css/bootstrap-extended.css') }}" rel="stylesheet" />
-  <link href="{{ asset('public/asserts/admin/css/style.css') }}" rel="stylesheet" />
-  <link href="{{ asset('public/asserts/admin/css/icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('asserts/admin/css/bootstrap.min.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/css/bootstrap-extended.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/css/style.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/css/icons.css') }}" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -25,17 +24,13 @@
 
   <!-- loader-->
 
-	<link href="{{ asset('public/asserts/admin/css/pace.min.css') }}" rel="stylesheet" />
+	<link href="{{ asset('asserts/admin/css/pace.min.css') }}" rel="stylesheet" />
 
   <!--Theme Styles-->
-  <link href="{{ asset('public/asserts/admin/css/dark-theme.css') }}" rel="stylesheet" />
-  <link href="{{ asset('public/asserts/admin/css/light-theme.css') }}" rel="stylesheet" />
-  <link href="{{ asset('public/asserts/admin/css/semi-dark.css') }}" rel="stylesheet" />
-  <link href="{{ asset('public/asserts/admin/css/header-colors.css') }}" rel="stylesheet" />
-
-
-  
-  
+  <link href="{{ asset('asserts/admin/css/dark-theme.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/css/light-theme.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/css/semi-dark.css') }}" rel="stylesheet" />
+  <link href="{{ asset('asserts/admin/css/header-colors.css') }}" rel="stylesheet" />
 
     <title>Umrah Rahat - Admin</title>
     @livewireStyles
@@ -58,23 +53,22 @@
 <footer class="footer card mb-0 rounded-0 justify-content-center align-items-center">
   <!-- Bootstrap bundle JS -->
 
-  <script src="{{asset('public/asserts/admin/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('public/asserts/admin/js/jquery.min.js')}}"></script>
-  <script src="{{asset('public/asserts/admin/plugins/simplebar/js/simplebar.min.js')}}"></script>
-  <script src="{{asset('public/asserts/admin/plugins/metismenu/js/metisMenu.min.js')}}"></script>
-  <script src="{{asset('public/asserts/admin/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
-  <script src="{{asset('public/asserts/admin/js/pace.min.js')}}"></script>
+  <script src="{{asset('asserts/admin/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('asserts/admin/js/jquery.min.js')}}"></script>
+  <script src="{{asset('asserts/admin/plugins/simplebar/js/simplebar.min.js')}}"></script>
+  <script src="{{asset('asserts/admin/plugins/metismenu/js/metisMenu.min.js')}}"></script>
+  <script src="{{asset('asserts/admin/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
+  <script src="{{asset('asserts/admin/js/pace.min.js')}}"></script>
 
-  <script src="{{asset('public/asserts/admin/plugins/chartjs/js/Chart.min.js')}}"></script>
-  <script src="{{asset('public/asserts/admin/plugins/chartjs/js/Chart.extension.js')}}"></script>
-  <script src="{{asset('public/asserts/admin/plugins/apexcharts-bundle/js/apexcharts.min.js')}}"></script>
+  <script src="{{asset('asserts/admin/plugins/chartjs/js/Chart.min.js')}}"></script>
+  <script src="{{asset('asserts/admin/plugins/chartjs/js/Chart.extension.js')}}"></script>
+  <script src="{{asset('asserts/admin/plugins/apexcharts-bundle/js/apexcharts.min.js')}}"></script>
    <!-- Vector map JavaScript -->
-   <script src="{{asset('public/asserts/admin/plugins/vectormap/jquery-jvectormap-2.0.2.min.js')}}"></script>
-   <script src="{{asset('public/asserts/admin/plugins/vectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
+   <script src="{{asset('asserts/admin/plugins/vectormap/jquery-jvectormap-2.0.2.min.js')}}"></script>
+   <script src="{{asset('asserts/admin/plugins/vectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
   <!--app-->
-  <script src="{{asset('public/asserts/admin/js/app.js')}}"></script>
-  <script src="{{asset('public/asserts/admin/js/index.js')}}"></script>
-
+  <script src="{{asset('asserts/admin/js/app.js')}}"></script>
+  <script src="{{asset('asserts/admin/js/index.js')}}"></script>
   <!-- Bootstrap 5 JavaScript -->
  
 

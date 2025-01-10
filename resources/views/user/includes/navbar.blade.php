@@ -60,10 +60,10 @@
                                     <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Package</a>
 
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="#" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
-                                        <a href="#" class="dropdown-item">Umrah Packages By Air From Dubai</a>
-                                        <a href="#" class="dropdown-item">Umrah Visa from Dubai</a>
-                                        <a href="#" class="dropdown-item">Umrah Packages from Sharjah</a>
+                                        <a href="{{route('umrahByBus')}}" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
+                                        <a href="{{route('umrahByAir')}}" class="dropdown-item">Umrah Packages By Air From Dubai</a>
+                                        <a href="{{route('umrahVisaDubai')}}" class="dropdown-item">Umrah Visa from Dubai</a>
+                                        <a href="{{route('umrahPackageSharjah')}}" class="dropdown-item">Umrah Packages from Sharjah</a>
                                     </div>
                                 </div>
                                 <a href="{{route('saudi-visa')}}"  class="nav-item nav-link">Saudi Visa</a>
