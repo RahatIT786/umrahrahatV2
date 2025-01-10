@@ -7,7 +7,7 @@ use Livewire\Attributes\Layout;
 
 class SingleBlog3 extends Component
 {
-    #[Layout('user.layouts.app')]
+    #[Layout('user.Layouts.app')]
     public function render()
     {
         return view('livewire.user_front.single-blog3');

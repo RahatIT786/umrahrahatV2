@@ -138,7 +138,7 @@ window.onload = function() {
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>"Excellent service! The team at [Your Agency Name] made the visa process for Saudi Arabia so smooth and fast. Highly recommend them for their professionalism and quick turnaround."</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/testimonial-1.jpg')}}" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person1.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Ayesha Khan</h6>
                                 <small> Business Visa Applicant</small>
@@ -147,9 +147,9 @@ window.onload = function() {
                         <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>"I was worried about getting my Saudi Tourist visa, but [Your Agency Name] took care of everything. Their process was clear, and I received my visa on time. I’ll definitely use them again!"</p>
+                        <p>"I was worried about getting my Saudi Tourist visa, but Rahat Group took care of everything. Their process was clear, and I received my visa on time. I’ll definitely use them again!"</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/testimonial-2.jpg')}}" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person2.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Ravi Patel</h6>
                                 <small> Tourist Visa Applicant</small>
@@ -160,7 +160,7 @@ window.onload = function() {
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>"The visa processing was quick and hassle-free. I needed a Business visa urgently, and Rahat Group's delivered exceptional service. I’m grateful for their support!"</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/testimonial-3.jpg')}}" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person3.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Mohammad Ali</h6>
                                 <small> Business Visa Applicant</small>

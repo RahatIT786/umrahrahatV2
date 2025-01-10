@@ -37,7 +37,7 @@
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('public/asserts/user/img/aboutimg1.jpg')}}" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('public/asserts/user/img/aboutimg2.jpg'))}}">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('public/asserts/user/img/aboutimg2.jpg')}}">
                             </div>
                             <div class="col-6 text-end">
                                 <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('public/asserts/user/img/aboutimg3.jpeg')}}">
@@ -80,7 +80,7 @@
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h2 class="fw-bold mb-0">our Mision</h2>
-                                <h5 class="mt-4" >Our Mission is to provide guidance and support for pilgrims.</h5>
+                                <h5 class="mt-4" >Our Mission is to provide guidance and support.</h5>
                                 <p style="font-size: 18px;" class="mt-4">Our mission is to offer unparalleled support and services, ensuring pilgrims embark on meaningful Hajj and Umrah journeys. We are dedicated to creating enriching experiences that promote spiritual growth, unity, and a deeper connection to faith.</p>
                             </div>
                         </div>
