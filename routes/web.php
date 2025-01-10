@@ -30,6 +30,7 @@ use App\Livewire\UserAbout;
 use App\Livewire\SaudiVisa;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
+use Illuminate\Support\Facades\Artisan;
 use Livewire\Livewire;
 
 //USER ROUTES START
@@ -75,6 +76,15 @@ Route::get('/admin/request-history', RequestHistory::class)->name('admin.visa-re
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
 Route::get('/migrate' ,[AuthController::class,'migrate']);
+Route::get('/link',function(){
+    Artisan::call('storage:link');
+         return 'Storage Link fixed';
+    
+    });
+
+
+
+
 
 });
 
