@@ -91,5 +91,15 @@ class AuthController extends Controller
         }
     }
 
+    public function setStorageLink(){
+        try {
+            // Use Artisan to create the symbolic link
+            Artisan::call('storage:link');
+            return 'Symbolic link created successfully.';
+        } catch (\Exception $e) {
+            return 'Failed to create symbolic link: ' . $e->getMessage();
+        }
+    }
+
 
 }
