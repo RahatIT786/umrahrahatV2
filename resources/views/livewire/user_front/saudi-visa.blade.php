@@ -1,6 +1,6 @@
 <section>
       <!-- Page Header Start -->
-      <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('public/asserts/user/img/haj/mecca3.jpg')}});">
+      <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Saudi Visa</h1>
@@ -95,7 +95,7 @@ window.onload = function() {
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
                             {{-- <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> --}}
-                            <img class="img-fluid" src="/public/{{Storage::url($visaDetail->file_path)}}" alt="" style="height: 15rem;">
+                            <img class="img-fluid" src="{{Storage::url($visaDetail->file_path)}}" alt="" style="height: 15rem;">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"></small>
                         </div>
                         <div class="p-4 mt-2">
@@ -138,7 +138,7 @@ window.onload = function() {
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>"Excellent service! The team at [Your Agency Name] made the visa process for Saudi Arabia so smooth and fast. Highly recommend them for their professionalism and quick turnaround."</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person1.jpg')}}" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('asserts/user/img/haj/person1.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Ayesha Khan</h6>
                                 <small> Business Visa Applicant</small>
@@ -149,7 +149,7 @@ window.onload = function() {
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>"I was worried about getting my Saudi Tourist visa, but Rahat Group took care of everything. Their process was clear, and I received my visa on time. I’ll definitely use them again!"</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person2.jpg')}}" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('asserts/user/img/haj/person2.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Ravi Patel</h6>
                                 <small> Tourist Visa Applicant</small>
@@ -160,7 +160,7 @@ window.onload = function() {
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>"The visa processing was quick and hassle-free. I needed a Business visa urgently, and Rahat Group's delivered exceptional service. I’m grateful for their support!"</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person3.jpg')}}" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('asserts/user/img/haj/person3.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Mohammad Ali</h6>
                                 <small> Business Visa Applicant</small>
@@ -204,7 +204,7 @@ window.onload = function() {
     </div>
     <h2 style="color: #FEA116;">Browcher</h2>
     <div>
-        <img src="/public/{{Storage::url($browcherData->flyer_path)}}" alt="Browcher Image" style="max-height:50rem; width:50vw; max-width:35em;" class="img-fluid">
+        <img src="{{Storage::url($browcherData->flyer_path)}}" alt="Browcher Image" style="max-height:50rem; width:50vw; max-width:35em;" class="img-fluid">
     </div>
 
    <div style="margin: 3rem auto">
