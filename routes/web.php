@@ -30,6 +30,7 @@ use App\Livewire\UserAbout;
 use App\Livewire\SaudiVisa;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
+use Illuminate\Support\Facades\Artisan;
 use Livewire\Livewire;
 
 //USER ROUTES START
@@ -45,6 +46,8 @@ Route::get('/contact-us',ContactUs::class)->name('contact-us');
 Route::get('/single-blog1',SingleBlog1::class)->name('singleBlog1');
 Route::get('/single-blog2',SingleBlog2::class)->name('singleBlog2');
 Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');
+
+
 
 
 Route::get('/comming-soon',function(){
@@ -72,6 +75,13 @@ Route::get('/admin/package-request-history', PackageRequestHistory::class)->name
 Route::get('/admin/request-history', RequestHistory::class)->name('admin.visa-request-history');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
+Route::get('/migrate' ,[AuthController::class,'migrate']);
+Route::get('/storageLink',[AuthController::class,'setStorageLink']);
+
+
+
+
+
 });
 
 //ADMIN ROUTES END
