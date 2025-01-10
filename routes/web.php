@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\RoutingController;
 use App\Livewire\Admin\Components\AddVisa;
@@ -46,6 +47,7 @@ Route::get('/contact-us',ContactUs::class)->name('contact-us');
 Route::get('/single-blog1',SingleBlog1::class)->name('singleBlog1');
 Route::get('/single-blog2',SingleBlog2::class)->name('singleBlog2');
 Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');
+Route::post('/send-contact-details',[ContactMailController::class,'sendDetails'])->name('send.details');
 
 
 

@@ -45,13 +45,13 @@
                                     <a href="" class="logo-dark">
                                         {{-- <img src="/images/logo-dark.png" height="32" alt="logo dark"> --}}
                                        
-                                        <img src="{{asset('asserts/user/img/umrah_dark.png')}}" height="100" alt="logo dark">
+                                        <img src="{{asset('asserts/user/img/haj/rahat_logo.png')}}" height="100" alt="logo dark">
                                         
                                     </a>
     
                                     <a  class="logo-light">
                                        
-                                        <img src="{{asset('asserts/user/img/UMRAH_COLOR.png')}}" height="100" alt="logo dark">
+                                        <img src="{{asset('asserts/user/img/haj/rahat_logo.png')}}" height="100" alt="logo dark">
                                     </a>
                                 </div>
                                 <h4 class="fw-bold text-dark mb-2">Admin Login</h3>
