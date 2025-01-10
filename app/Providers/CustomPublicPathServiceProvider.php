@@ -12,7 +12,7 @@ class CustomPublicPathServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind('path.public',function(){
-            return 'https://umrahrahat.com/public';
+            return base_path('public_html/public');
         });
     }
 
