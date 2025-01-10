@@ -91,17 +91,17 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="public/asserts/user/lib/wow/wow.min.js"></script>
-    <script src="public/asserts/user/lib/easing/easing.min.js"></script>
-    <script src="public/asserts/user/lib/waypoints/waypoints.min.js"></script>
-    <script src="public/asserts/user/lib/counterup/counterup.min.js"></script>
-    <script src="public/asserts/user/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="public/asserts/user/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="public/asserts/user/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="public/asserts/user/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="asserts/user/lib/wow/wow.min.js"></script>
+    <script src="asserts/user/lib/easing/easing.min.js"></script>
+    <script src="asserts/user/lib/waypoints/waypoints.min.js"></script>
+    <script src="asserts/user/lib/counterup/counterup.min.js"></script>
+    <script src="asserts/user/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="asserts/user/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="asserts/user/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="asserts/user/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="public/asserts/user/js/main.js"></script>
+    <script src="asserts/user/js/main.js"></script>
     <livewire:scripts />
 </body>
 
