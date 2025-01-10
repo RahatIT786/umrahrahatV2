@@ -76,11 +76,7 @@ Route::get('/admin/request-history', RequestHistory::class)->name('admin.visa-re
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
 Route::get('/migrate' ,[AuthController::class,'migrate']);
-Route::get('/link',function(){
-    Artisan::call('storage:link');
-         return 'Storage Link fixed';
-    
-    });
+Route::get('/storageLink',[AuthController::class,'setStorageLink']);
 
 
 
