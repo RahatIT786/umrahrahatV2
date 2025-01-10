@@ -4,7 +4,7 @@
               <img src="{{asset('images/umrah_dark.png')}}" class="logo-icon" alt="logo icon">
             </div> --}}
             <div>
-              <img src="{{asset('images/umrah_dark.png')}}" class="logo-icon" alt="logo icon" style="height: 7rem; width:auto;">
+              <img src="{{asset('/public/asserts/user/img/haj/rahat_logo.png')}}" class="logo-icon" alt="logo icon" style="height: 7rem; width:auto;">
             </div>
             <div class="toggle-icon ms-auto"> <i class="bi bi-list"></i>
             </div>
