@@ -112,8 +112,8 @@ window.onload = function() {
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">HajUmrah</span></h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Rahat Group</span></h1>
+                        <p class="mb-4"> Our mission is to provide exceptional Hajj and Umrah services that cater to the spiritual and logistical needs of our pilgrims. With years of experience and a dedicated team, we are committed to making your pilgrimage a seamless and enriching experience.</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
