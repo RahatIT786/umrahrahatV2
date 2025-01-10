@@ -34,6 +34,7 @@ use App\Livewire\UserAbout;
 use App\Livewire\SaudiVisa;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
+use Illuminate\Support\Facades\Artisan;
 use Livewire\Livewire;
 
 //USER ROUTES START
@@ -53,6 +54,8 @@ Route::get('/umrah-by-bus',UmrahByBus::class)->name('umrahByBus');
 Route::get('/umrah-by-air',UmrahByAir::class)->name('umrahByAir');
 Route::get('/umrah-visa-dubai',UmrahVisaFromDubai::class)->name('umrahVisaDubai');
 Route::get('/umrah-pakage-sharjah',UmrahPackageSharjah::class)->name('umrahPackageSharjah');
+
+
 
 Route::get('/comming-soon',function(){
 return view('user.partials.comming_soon');
@@ -79,6 +82,13 @@ Route::get('/admin/package-request-history', PackageRequestHistory::class)->name
 Route::get('/admin/request-history', RequestHistory::class)->name('admin.visa-request-history');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
+Route::get('/migrate' ,[AuthController::class,'migrate']);
+Route::get('/storageLink',[AuthController::class,'setStorageLink']);
+
+
+
+
+
 });
 
 //ADMIN ROUTES END

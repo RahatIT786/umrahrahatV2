@@ -73,5 +73,34 @@ class AuthController extends Controller
         return "DEAR ADMIN YOUR APPLICATION CACHES ARE CLEARED !";
     }
 
+    public function migrate(){
+        try {
+            // Capture the output from the Artisan command
+            Artisan::call('migrate', ['--force' => true]); // '--force' to run without confirmation in production
+    
+            // Get the output as a string
+            $outputString = Artisan::output();
+    
+            // Return the output to the view or as a response
+            // return response()->json(['status' => 'success', 'message' => $outputString]);
+            return $outputString;
+        } catch (\Exception $e) {
+            // Catch any errors and return them
+           return $e->getMessage();
+            // return response()->json(['status' => 'error', 'message' => $e->getMessage()]);
+        }
+    }
+
+    public function setStorageLink()
+    {
+        try {
+            // Use Artisan to create the symbolic link
+            Artisan::call('storage:link');
+            return 'Symbolic link created successfully.';
+        } catch (\Exception $e) {
+            return 'Failed to create symbolic link: ' . $e->getMessage();
+        }
+    }
+
 
 }
