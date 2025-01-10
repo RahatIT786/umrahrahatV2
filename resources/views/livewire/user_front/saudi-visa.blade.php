@@ -95,7 +95,7 @@ window.onload = function() {
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
                             {{-- <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> --}}
-                            <img class="img-fluid" src="{{Storage::url($visaDetail->file_path)}}" alt="" style="height: 15rem;">
+                            <img class="img-fluid" src="/public/{{Storage::url($visaDetail->file_path)}}" alt="" style="height: 15rem;">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"></small>
                         </div>
                         <div class="p-4 mt-2">
@@ -204,7 +204,7 @@ window.onload = function() {
     </div>
     <h2 style="color: #FEA116;">Browcher</h2>
     <div>
-        <img src="{{Storage::url($browcherData->flyer_path)}}" alt="Browcher Image" style="max-height:50rem; width:50vw; max-width:35em;" class="img-fluid">
+        <img src="/public/{{Storage::url($browcherData->flyer_path)}}" alt="Browcher Image" style="max-height:50rem; width:50vw; max-width:35em;" class="img-fluid">
     </div>
 
    <div style="margin: 3rem auto">
