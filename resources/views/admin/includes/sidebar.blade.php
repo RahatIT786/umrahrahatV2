@@ -5,7 +5,7 @@
             </div> --}}
             <div>
 
-              <img src="{{asset('/public/asserts/user/img/haj/rahat_logo.png')}}" class="logo-icon" alt="logo icon" style="height: 7rem; width:auto;">
+              <img src="{{asset('asserts/user/img/haj/rahat_logo.png')}}" class="logo-icon" alt="logo icon" style="height: 4rem; width:auto;">
 
             </div>
             <div class="toggle-icon ms-auto"> <i class="bi bi-list"></i>
@@ -61,6 +61,18 @@
                 </li>
                 <li> 
                   <a href="{{ route('admin.visa-request-history') }}" wire:navigate><i class="bi bi-circle"></i>Visa Request History</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Newsletter Emails</div>
+              </a>
+              <ul>
+                <li> 
+                  <a href="{{ route('admin.newsletters') }}" wire:navigate><i class="bi bi-circle"></i>All Newsletter Emails</a>
                 </li>
               </ul>
             </li>

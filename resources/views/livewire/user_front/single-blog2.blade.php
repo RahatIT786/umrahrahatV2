@@ -1,6 +1,6 @@
 <section>
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('public/asserts/user/img/haj/mecca3.jpg')}});">
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">The Unchanging Message</h1>
@@ -34,16 +34,16 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('public/asserts/user/img/aboutimg1.jpg')}}" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('asserts/user/img/aboutimg1.jpg')}}" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('public/asserts/user/img/aboutimg2.jpg')}}">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('asserts/user/img/aboutimg2.jpg')}}">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('public/asserts/user/img/aboutimg3.jpeg')}}">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('asserts/user/img/aboutimg3.jpeg')}}">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('public/asserts/user/img/aboutimg4.jpeg')}}">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('asserts/user/img/aboutimg4.jpeg')}}">
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="rounded custom-shadow overflow-hidden">
                             <div class="position-relative d-flex justify-content-center">
-                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="{{asset('public/asserts/user/img/icon2.png')}}" alt="">
+                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="{{asset('asserts/user/img/icon2.png')}}" alt="">
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h2 class="fw-bold mb-0">our vision</h2>
@@ -76,7 +76,7 @@
                     <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="rounded custom-shadow overflow-hidden">
                             <div class="position-relative d-flex justify-content-center">
-                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="{{asset('public/asserts/user/img/icon2.png')}}" alt="">
+                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="{{asset('asserts/user/img/icon2.png')}}" alt="">
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h2 class="fw-bold mb-0">our Mision</h2>
@@ -92,20 +92,6 @@
      
 
         <!-- Newsletter Start -->
-        <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 border rounded p-1">
-                    <div class="border rounded text-center p-1">
-                        <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
-                            <div class="position-relative mx-auto" style="max-width: 400px;">
-                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <livewire:NewsLetter />
         <!-- Newsletter Start -->
 </section>
