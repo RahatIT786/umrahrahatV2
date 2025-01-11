@@ -4,7 +4,7 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-3">
                         <div class=" rounded p-4">
-                            <img src="public/asserts/user/img/haj/RAHAT_UMRAH_LOGO.png" style="height: 7rem;" alt="">
+                            <img src="asserts/user/img/haj/RAHAT_UMRAH_LOGO.png" style="height: 7rem;" alt="">
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">

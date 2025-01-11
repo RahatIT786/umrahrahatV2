@@ -7,6 +7,7 @@ use App\Http\Controllers\PdfTemplateController;
 use App\Http\Controllers\RoutingController;
 use App\Livewire\Admin\Components\AddVisa;
 use App\Livewire\Admin\Components\ListAllVisa;
+use App\Livewire\Admin\Components\NewsLetter;
 use App\Livewire\Admin\Components\PackageRequest;
 
 
@@ -88,6 +89,7 @@ Route::get('/editPackage/{id}',AddPackage::class)->name('editPackage');
 Route::get('/viewPackage/{id}',AdminViewPackage::class)->name('viewPackage');
 Route::get('/admin/package-request-history', PackageRequestHistory::class)->name('admin.package-request-history');
 Route::get('/admin/request-history', RequestHistory::class)->name('admin.visa-request-history');
+Route::get('/admin/newsletter', NewsLetter::class)->name('admin.newsletters');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
 Route::get('/migrate' ,[AuthController::class,'migrate']);

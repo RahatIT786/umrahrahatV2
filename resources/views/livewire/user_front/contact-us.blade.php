@@ -40,6 +40,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
+
                             <div>
                                 @if (session()->has('mailSuccess'))
                                     <div id="successMessage" class="alert alert-success text-center">{{session('mailSuccess')}}</div>
@@ -56,6 +57,7 @@
                             </script>
                             <form method="post" action="{{route('send.details')}}">
                                 @csrf
+
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
