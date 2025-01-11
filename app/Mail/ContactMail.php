@@ -71,11 +71,21 @@ class ContactMail extends Mailable
         //             name : ".$this->data['name'].
         //             "email :".$this->data['mail']);
 
-        $content = '<h1>Contact Details</h1>';
-        $content .= '<p>Name: ' . $this->data['name'] . '</p>';
-        $content .= '<p>Email: ' . $this->data['mail'] . '</p>';
+        // $content = '<h1>Contact Details</h1>';
+        // $content .= '<p>Name: ' . $this->data['name'] . '</p>';
+        // $content .= '<p>Email: ' . $this->data['mail'] . '</p>';
+      
+        // $content .= '<p>Message: ' . $this->data['message'] . '</p>';
+        // $content.='<br> <p>This Message comes from umrahrahat.com | customer Contact Details</p>';
+       
+
+        $content = view('mail_template.contact_mail', [
+            'name' => $this->data['name'],
+            'email' => $this->data['mail'],
+            'message' => $this->data['message']
+        ])->render();
     
-        return $this->subject('New Content Received')
+        return $this->subject('New Content Received | '.$this->data['subject'])
                     ->html($content);
     }
 }
