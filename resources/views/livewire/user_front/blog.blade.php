@@ -1,6 +1,6 @@
 <section>
      <!-- Page Header Start -->
-     <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('public/asserts/user/img/haj/mecca3.jpg')}});">
+     <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Article & News</h1>
@@ -81,7 +81,7 @@ window.onload = function() {
                     <div class="col-lg-4 col-md-6 wow fadeInUp " data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('public/asserts/user/img/aboutimg1.jpg')}}" style="height: 200px; width:100%" alt="">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/aboutimg1.jpg')}}" style="height: 200px; width:100%" alt="">
                             </div>
                             <div class="p-4 mt-2 ">
                                 <p class="text-body mb-3">The ultimate act of worship, Hajj and Umrah, represents a deep spiritual journey of devotion, submission, and faith...</p>
@@ -95,7 +95,7 @@ window.onload = function() {
                     <div class="col-lg-4 col-md-6 wow fadeInUp  " data-wow-delay="0.3s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('public/asserts/user/img/aboutimg2.jpg')}}" style="height: 200px; width:100%" alt="">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/aboutimg2.jpg')}}" style="height: 200px; width:100%" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <p class="text-body mb-3">The balancing act of hard work in this world and trust in fate for the Hereafter emphasizes the importance of striving...</p>
@@ -109,7 +109,7 @@ window.onload = function() {
                     <div class="col-lg-4 col-md-6 wow fadeInUp " data-wow-delay="0.6s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('public/asserts/user/img/aboutimg3.jpeg')}}" style="height: 200px; width:100%" alt="">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/aboutimg3.jpeg')}}" style="height: 200px; width:100%" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
@@ -133,7 +133,7 @@ window.onload = function() {
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>"The Umrah package from Rahat Group was truly exceptional. Everything was perfectly organized, from the flights to the accommodation. I felt completely at ease throughout the journey. Highly recommend!"</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person2.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('asserts/user/img/haj/person2.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Shaikh</h6>
                                 <small>Akola(Maharashtra)</small>
@@ -144,7 +144,7 @@ window.onload = function() {
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>"I had an unforgettable experience with Rahat Group's Umrah package. I will definitely choose them again for future trips. The guides were knowledgeable, the accommodations were comfortable."</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person1.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('asserts/user/img/haj/person1.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Ansari Hammad</h6>
                                 <small>Hailakandi(Assam)</small>
@@ -155,7 +155,7 @@ window.onload = function() {
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>"Rahat Group provided an outstanding Umrah service. Their attention to detail, friendly staff, and seamless arrangements allowed me to focus entirely on my worship. I will definitely choose them again for future trips."</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('public/asserts/user/img/haj/person3.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('asserts/user/img/haj/person3.jpg')}}" style="width: 45px; height: 45px; object-fit: contain;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Mohammed Milkan</h6>
                                 <small>Baraily(Uttar Pradhesh)</small>
