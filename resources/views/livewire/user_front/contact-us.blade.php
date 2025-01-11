@@ -42,9 +42,18 @@
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
                             <div>
                                 @if (session()->has('mailSuccess'))
-                                    <div id="successMessage" class="alert alert-success text-center">{{session('message')}}</div>
+                                    <div id="successMessage" class="alert alert-success text-center">{{session('mailSuccess')}}</div>
                                 @endif
                             </div>
+                            <script>
+                                // Check if the success message exists
+                                if (document.getElementById('successMessage')) {
+                                    // Set a timeout to hide the message after 3 seconds
+                                    setTimeout(function() {
+                                        document.getElementById('successMessage').style.display = 'none';
+                                    }, 3000); // 3000ms = 3 seconds
+                                }
+                            </script>
                             <form method="post" action="{{route('send.details')}}">
                                 @csrf
                                 <div class="row g-3">

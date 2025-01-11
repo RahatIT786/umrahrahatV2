@@ -27,7 +27,7 @@ class ContactMailController extends Controller
         ];
 
 
-        $adminEmail='mohamedabusinai2020@gmail.com';
+        $adminEmail='rahatitsolution786@gmail.com';
         try{
             Mail::to($adminEmail)->send(new ContactMail($data));
             // return "mail sended successfully ";

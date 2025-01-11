@@ -242,17 +242,21 @@ class AddPackage extends Component
         $this->photo_path=null;
         $this->flyer_path=null;
 
-        if($this->photo && $this->flyer){
+        if($this->photo ){
             $this->photo_path=$this->photo->store('package_photos','public');
-            $this->flyer_path=$this->flyer->store('package_photos','public');
+          
         }
        
+        if( $this->flyer){
+            $this->flyer_path=$this->flyer->store('package_photos','public');
+
+        }
        if($this->package_id){
 
         $package=Package::findOrFail($this->package_id);
         //for image preview lable
-        $this->photo_path=$package->photo_path;
-        $this->flyer_path=$package->flyer_path;
+        // $this->photo_path=$package->photo_path;
+        // $this->flyer_path=$package->flyer_path;
 
         $package->update([
             'package_name'=>$this->package_name ?: $package->package_name,
@@ -267,8 +271,8 @@ class AddPackage extends Component
         'wednesday_dates'=>$this->wednesdays  ?: $package->wednesday_dates,
         'note'=>$this->note ?: $package->note,
         'includes'=>$this->includes  ?: $package->includes,
-        'photo_path'=>$this->photo_path  ?: $package->photo_path,
-        'flyer_path'=>$this->flyer_path ?: $package->flyer_path,
+        'photo_path'=>$this->photo_path  ?? $package->photo_path,
+        'flyer_path'=>$this->flyer_path ?? $package->flyer_path,
 
         ]);
         //   CalculateWednesdaysJob::dispatch($package, $this->startYear, $this->endYear, $this->startMonth, $this->endMonth);
