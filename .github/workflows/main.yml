@@ -38,25 +38,7 @@ jobs:
       - name: Generate app key
         run: php artisan key:generate
         
-  deploy:
-    name: Deploy to Shared Hosting
-    runs-on: ubuntu-latest
-
-    steps:
-      # Step 1: Checkout the repository
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Step 2: Deploy to FTP
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          host: ${{ secrets.FTP_SERVER }}  # FTP host (e.g., ftp.umrahrahat.com)
-          username: ${{ secrets.FTP_USERNAME }}  # FTP username
-          password: ${{ secrets.FTP_PASSWORD }}  # FTP password
-          port: ${{ secrets.FTP_PORT }}  # FTP port (usually 21)
-          local-dir: ./  # Local directory to upload (usually the root directory)
-          remote-dir: /home4/umrahrahat/public_html  # Remote directory in cPanel
+  
 
       # Step 3: Install curl dependencies
       - name: Install curl dependencies
