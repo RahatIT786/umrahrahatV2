@@ -181,7 +181,7 @@ window.onload = function() {
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
                             {{-- <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> --}}
-                            <img class="img-fluid" src="{{Storage::url($package->photo_path)}}" alt="" style="height: 15rem;">
+                            <img class="img-fluid" src="{{Storage::url($package->photo_path)}}" alt="" style="height: 15rem; width:100%;" >
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
                         </div>
                         <div class="p-4 mt-2">
