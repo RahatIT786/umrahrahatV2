@@ -49,7 +49,7 @@ jobs:
 
       # Step 2: Deploy to FTP
       - name: Deploy to FTP
-        uses: appleboy/ftp-action@v1.1.0
+        uses: appleboy/ftp-action@latest
         with:
           host: ${{ secrets.FTP_HOST }}  # FTP host (e.g., ftp.umrahrahat.com)
           username: ${{ secrets.FTP_USERNAME }}  # FTP username
