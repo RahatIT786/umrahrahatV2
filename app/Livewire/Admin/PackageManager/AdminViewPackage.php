@@ -22,6 +22,9 @@ class AdminViewPackage extends Component
     public $note;
     public $includes;
     public $photo;
+
+    public $flyerImage;
+
     public function mount($id = null){
         $package=Package::findOrFail($id);
 
@@ -41,6 +44,7 @@ class AdminViewPackage extends Component
         $this->note = $package->note;
         $this->includes = $package->includes;
         $this->photo = $package->photo_path;
+        $this->flyerImage=$package->flyer_path;
 
         $dates=collect($package->wednesday_dates); 
         $minDate = $dates->min();  // Get the earliest date

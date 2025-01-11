@@ -2,7 +2,7 @@
                <div class="card ">
                  <div class="card-body">
                    <div class="d-flex align-items-center">
-                      <h5 class="mb-0">Package Details</h5>
+                      <h5 class="mb-0">Package Management</h5>
                       
                        <form class="ms-auto position-relative" style="margin-right: 5rem">
                          {{-- <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-search"></i></div>

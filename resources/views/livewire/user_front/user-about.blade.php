@@ -164,7 +164,11 @@
                     <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="rounded custom-shadow overflow-hidden">
                             <div class="position-relative d-flex justify-content-center">
-                                <img class="img-fluid" style="height: 150px; border-radius:50%" src="{{asset('asserts/user/img/icon2.png')}}" alt="">
+
+                                <img class="img-fluid" style="height: 100px; border-radius:50% ; margin-top:3rem;" src="{{asset('asserts/user/img/haj/arrow.png')}}" alt="">
+
+                              
+
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h2 class="fw-bold mb-0">our Mision</h2>

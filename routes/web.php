@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\PdfTemplateController;
 use App\Http\Controllers\RoutingController;
 use App\Livewire\Admin\Components\AddVisa;
 use App\Livewire\Admin\Components\ListAllVisa;
@@ -61,6 +62,7 @@ Route::get('/umrah-by-air',UmrahByAir::class)->name('umrahByAir');
 Route::get('/umrah-visa-dubai',UmrahVisaFromDubai::class)->name('umrahVisaDubai');
 Route::get('/umrah-pakage-sharjah',UmrahPackageSharjah::class)->name('umrahPackageSharjah');
 
+Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
 
 
 

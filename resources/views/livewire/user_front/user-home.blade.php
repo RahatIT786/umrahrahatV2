@@ -173,7 +173,7 @@ window.onload = function() {
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">Our Package</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Package</span></h1>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Package </span></h1>
                 </div>
                 <div class="row g-4">
                   @foreach ($packages as $package )
@@ -250,7 +250,7 @@ window.onload = function() {
                         <h1 class="text-white mb-4">Dedicated to ensuring a seamless and fulfilling experience for every pilgrim</h1>
                         <p class="text-white mb-4">Rahat Group offers a wide range of services, including Hajj and Umrah packages, elite catering, visa processing, and travel services, providing quality and tailored experiences for its customers.</p>
                         <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Our Package</a>
-                        <a href="" class="btn btn-light py-md-3 px-md-5">Book A Package</a>
+                        <a href="{{route('package.download')}}" class="btn btn-light py-md-3 px-md-5">Book A Package</a>
                     </div>
                 </div>
                 <div class="col-md-6">

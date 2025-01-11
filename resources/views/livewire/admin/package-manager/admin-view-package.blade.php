@@ -90,6 +90,23 @@
             </div>
         </div>
 
+        <div>
+            <label for="example-textarea" class="form-label">Package Flyer Image</label>
+
+            <div>
+                    <!-- Show uploaded image if available -->
+                    @if ($flyerImage)
+                        <div class="mt-2">
+                            <img src="{{ asset('storage/' . $flyerImage) }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
+                        </div>
+                    @elseif ( $flyerImage)
+                        <div class="mt-2">
+                            <img src="{{ asset('storage/' . $flyerImage) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
+                        </div>
+                    @endif
+            </div>
+        </div>
+
         <!-- Save Button -->
         <div class="d-flex justify-content-end m-2">
         <a href="{{ route('admin.package-manager') }}" class="btn btn-primary">{{ 'Close' }}</a>
