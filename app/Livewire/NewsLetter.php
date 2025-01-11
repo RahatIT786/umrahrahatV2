@@ -43,7 +43,7 @@ class NewsLetter extends Component
         }catch(Exception $e){
             $this->reset(['email']);
             //dd($this->email);
-            //dd($e->getMessage());
+            
             // return $e->getMessage();
             return redirect()->route('layouts.app');
         }
