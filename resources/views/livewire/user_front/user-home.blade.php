@@ -182,7 +182,7 @@ window.onload = function() {
                         <div class="position-relative">
                             {{-- <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> --}}
                             <img class="img-fluid" src="{{Storage::url($package->photo_path)}}" alt="" style="height: 15rem;">
-                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">10 days</small>
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
                         </div>
                         <div class="p-4 mt-2">
                             <div class="d-flex justify-content-between mb-3">
