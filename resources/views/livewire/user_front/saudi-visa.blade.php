@@ -218,8 +218,6 @@ window.onload = function() {
 {{--view-browcher-end--}}
 {{--  --}}
 
-
-
 {{--view-enquire-start--}}
 @if ($enquirePopUp)
 <!-- Overlay Background -->
