@@ -18,7 +18,7 @@
         <!-- Carousel End -->
 
         <!-- About Start -->
-        <div class="" id="about">
+        <div class="" id="about" style="margin-bottom: 150px;">
             <div class="container" >
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-12">
