@@ -51,7 +51,7 @@
                                 @endif
                             </td>
                             <td>{{ $Hotel->hotelName }}</td>
-                            <td>${{ number_format($Hotel->hotelPrice, 2) }}</td>
+                            <td>{{ number_format($Hotel->hotelPrice, 2) }}</td>
                             <td>{{ $Hotel->hotelCity }} days</td>
                             <td>{{ $Hotel->hotelStarRating }}</td>
                             
