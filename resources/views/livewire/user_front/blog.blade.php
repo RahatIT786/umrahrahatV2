@@ -61,10 +61,10 @@ function animateNumber(id, start, end, duration, suffix = '') {
 
 // Call animateNumber for each counter with appropriate values
 window.onload = function() {
-    animateNumber('clients-count', 0, 5, 3000, 'K +');  // 5K+ Clients
-    animateNumber('success-rate', 0, 97, 3000, '%');    // 87% Success Rate
-    animateNumber('rating-clients', 0, 4, 3000);      // 4.7 Rating Clients
-    animateNumber('experience-years', 0, 20, 3000, '+'); // 20+ Years of Experience
+    animateNumber('clients-count', 0, 720, 3000, 'K +');  // 5K+ Clients
+    animateNumber('success-rate', 0, 99, 3000, '%');    // 87% Success Rate
+    animateNumber('rating-clients', 0,4, 3000,'.5');      // 4.7 Rating Clients
+    animateNumber('experience-years', 0, 18, 3000, '+'); // 20+ Years of Experience
 };
 </script>
 

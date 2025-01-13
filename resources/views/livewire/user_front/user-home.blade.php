@@ -95,11 +95,14 @@ function animateNumber(id, start, end, duration, suffix = '') {
 
 // Call animateNumber for each counter with appropriate values
 window.onload = function() {
-    animateNumber('clients-count', 0, 5, 3000, 'K +');  // 5K+ Clients
-    animateNumber('success-rate', 0, 97, 3000, '%');    // 87% Success Rate
-    animateNumber('rating-clients', 0, 4, 3000);      // 4.7 Rating Clients
-    animateNumber('experience-years', 0, 20, 3000, '+'); // 20+ Years of Experience
+    animateNumber('clients-count', 0, 720, 3000, 'K +');  // 5K+ Clients
+    animateNumber('success-rate', 0, 99, 3000, '%');    // 87% Success Rate
+    animateNumber('rating-clients', 0,4, 3000,'.5');      // 4.7 Rating Clients
+    animateNumber('experience-years', 0, 17, 3000, '+'); // 20+ Years of Experience
 };
+
+
+
 </script>
 
 
@@ -227,7 +230,7 @@ window.onload = function() {
 
                             <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
                             <div class="d-flex justify-content-between">
-                                <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})"> <i class="fa-solid fa-book" ></i> View Browcher</a>
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})"> <i class="fa-solid fa-book" ></i> View Brochure</a>
                                 <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})"><i class="fa-regular fa-paper-plane" ></i>  Book Enquire</a>
                             </div>
                         </div>
@@ -495,7 +498,7 @@ window.onload = function() {
     <div class="d-flex justify-content-end" >
         <i class="bi bi-x-circle" style="cursor: pointer;" wire:click="closeBrowcher()"></i>
     </div>
-    <h2 style="color: #FEA116;">Browcher</h2>
+    <h2 style="color: #FEA116;">Brochure</h2>
     <div>
         <img src="{{Storage::url($browcherData->flyer_path)}}" alt="Browcher Image" style="max-height:50rem; width:50vw; max-width:35em;" class="img-fluid">
     </div>

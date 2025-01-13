@@ -117,7 +117,7 @@ window.onload = function() {
                             </div>
                             <p class="text-body mb-3 text-justify">We provide professional visa services for Saudi Arabia, including Tourist, Business, and other visa types. Count on us for efficient and reliable visa processing tailored to your needs.</p>
                             <div class="d-flex justify-content-between">
-                                <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$visaDetail->id}})"> <i class="fa-solid fa-book" ></i> View Browcher</a>
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$visaDetail->id}})"> <i class="fa-solid fa-book" ></i> View Brochure</a>
                                 <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$visaDetail->id}})"><i class="fa-regular fa-paper-plane" ></i>  Book Enquire</a>
                             </div>
                         </div>
@@ -188,7 +188,7 @@ window.onload = function() {
     <div class="d-flex justify-content-end" >
         <i class="bi bi-x-circle" style="cursor: pointer;" wire:click="closeBrowcher()"></i>
     </div>
-    <h2 style="color: #FEA116;">Browcher</h2>
+    <h2 style="color: #FEA116;">Brochure</h2>
     <div>
         <img src="{{Storage::url($browcherData->flyer_path)}}" alt="Browcher Image" style="max-height:50rem; width:50vw; max-width:35em;" class="img-fluid">
     </div>

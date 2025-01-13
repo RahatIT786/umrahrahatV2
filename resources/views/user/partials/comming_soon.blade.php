@@ -19,12 +19,12 @@
     </style>
   </head>
   <body>
-    <div class="container d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;" >
+    <div class="container d-flex align-items-center justify-content-center" style="height: 100vh; width: 100%;" >
         <div class="text-center">
             
-            <img src="{{asset(config('assets.images.soon'))}}" alt="soon_png" style="height:30vw;">
+            <img src="{{asset('asserts/user/img/haj/soon.png')}}" alt="soon_png" style="height:30vw;">
             <h1 class="title">page under maintanance</h1>
-            <button class="btn btn-success" > <a href="{{route('layouts.app')}}">BACK TO HOME</a> </button>
+            <button class="btn btn-success" > <a href="{{route('layouts.app')}}" style="color: white; text-decoration:none; font-weight:500;">BACK TO HOME</a> </button>
         </div>
     </div>
 
