@@ -170,6 +170,6 @@ window.onload = function() {
 
 
         <!-- Newsletter Start -->
-        <livewire:NewsLetter />
+
         <!-- Newsletter Start -->
 </section>

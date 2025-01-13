@@ -1,4 +1,4 @@
-<section>
+<section style="margin-bottom:100px">
         <!-- Carousel Start -->
         <div class="container-fluid p-0 mb-5">
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -94,8 +94,8 @@ window.onload = function() {
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
                         <h1 class="mb-4">RAMADAN UMRAH PACKAGE <span class="text-primary text-uppercase">FROM SHARJAH & DUBAI </span></h1>
-                        <p class="mb-4">RAHATUMRAH.COM is renowned in all over Dubai for its quality umrah services which includes cheapest 4 star and 5 star Umrah packages , Umrah packages by bus and by air. We are pleasured to announce Ramadan Umrah Package From Sharjah & Dubai 2024 for our valuable customers. Ramadan Umrah Package is available by bus and by air. Ramadan umrah package inlcudes umrah visa, 3 star hotel accommodation and luxury transportation with zayarat to make your umrah journey memorable.</p>
-                        <div class="row g-3 pb-4">
+                        <p class="mb-4">Umrahraht.com is renowned in all over Dubai for its quality umrah services which includes cheapest 4 star and 5 star Umrah packages , Umrah packages by bus and by air. We are pleasured to announce Ramadan Umrah Package From Sharjah & Dubai 2024 for our valuable customers. Ramadan Umrah Package is available by bus and by air. Ramadan umrah package inlcudes umrah visa, 3 star hotel accommodation and luxury transportation with zayarat to make your umrah journey memorable.</p>
+                        <!-- <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
@@ -118,8 +118,37 @@ window.onload = function() {
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <!-- <h2 class="mb-1" data-toggle="counter-up">100 </h2> -->
                                         <h2 class="mb-1" ><span data-toggle="counter-up">100</span>k</h2>
+                                        <p class="mb-0">Happy Clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="row g-3 pb-4">
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">35,000</h2>
+                                        <p class="mb-0">Travel Agency</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">280</h2>
+                                        <p class="mb-0">Staffs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                                        <!-- <h2 class="mb-1" data-toggle="counter-up">100 </h2> -->
+                                        <h2 class="mb-1" ><span data-toggle="counter-up">720</span>k</h2>
                                         <p class="mb-0">Happy Clients</p>
                                     </div>
                                 </div>
