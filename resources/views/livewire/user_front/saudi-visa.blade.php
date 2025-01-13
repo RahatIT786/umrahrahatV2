@@ -175,7 +175,7 @@ window.onload = function() {
 
 
         <!-- Newsletter Start -->
-        <livewire:NewsLetter />
+       
         <!-- Newsletter Start -->
 
 {{--view-browcher-start--}}

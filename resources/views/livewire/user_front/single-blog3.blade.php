@@ -92,6 +92,6 @@
      
 
         <!-- Newsletter Start -->
-        <livewire:NewsLetter />
+     
         <!-- Newsletter Start -->
 </section>

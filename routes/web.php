@@ -21,14 +21,17 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\PackageManager\ListPackage;
 use App\Livewire\Admin\PackageManager\AddPackage;
 use App\Livewire\ContactUs;
+use App\Livewire\FAQ;
 use App\Livewire\Gallery;
 use App\Livewire\OurService;
 use App\Livewire\Package;
 use App\Livewire\PackageUserView;
+use App\Livewire\PrivacyPolicy;
 use App\Livewire\RamzanUmrahPackages;
 use App\Livewire\SingleBlog1;
 use App\Livewire\SingleBlog2;
 use App\Livewire\SingleBlog3;
+use App\Livewire\TermsOfService;
 use App\Livewire\UmrahByAir;
 use App\Livewire\UmrahByBus;
 use App\Livewire\UmrahPackageSharjah;
@@ -53,9 +56,11 @@ Route::get('/contact-us',ContactUs::class)->name('contact-us');
 Route::get('/single-blog1',SingleBlog1::class)->name('singleBlog1');
 Route::get('/single-blog2',SingleBlog2::class)->name('singleBlog2');
 Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');
+Route::get('/privacy-policy',PrivacyPolicy::class)->name('privacy-policy');
+Route::get('/term-of-service',TermsOfService::class)->name('term-of-service');
+Route::get('/FAQ',FAQ::class)->name('FAQ');
 
 Route::post('/send-contact-details',[ContactMailController::class,'sendDetails'])->name('send.details');
-
 
 Route::get('/umrah-by-bus',UmrahByBus::class)->name('umrahByBus');
 Route::get('/umrah-by-air',UmrahByAir::class)->name('umrahByAir');
