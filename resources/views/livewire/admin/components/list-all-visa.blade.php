@@ -61,7 +61,7 @@
                             <td>{{ $visa->visa_type }}</td>
                             <td>{{ $visa->documents_required }}</td>
                             <td>{{ $visa->processing_time }} days</td>
-                            <td>${{ number_format($visa->price, 2) }}</td>
+                            <td>{{ number_format($visa->price, 2) }}</td>
                             <td class="text-center">
                                 <a class="text-primary" href="{{ route('editdata', ['id' => $visa->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="bi bi-pencil-fill"></i>
