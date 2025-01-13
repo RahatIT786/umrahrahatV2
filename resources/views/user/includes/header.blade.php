@@ -34,7 +34,7 @@
         <!-- Font awsome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.css">
-    <livewire:styles />
+    
     <style>
         .dropdown-item:hover{
             background-color: #FEAF39;
@@ -47,4 +47,39 @@
                 -4px 0 8px rgba(0, 0, 0, 0.1);
         }
     </style>
+    
+    <style>
+        .faq-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+        }
+        .faq-content {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        }
+        .faq-question {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        }
+        .faq-answer {
+        padding: 15px;
+        background-color: #f1f1f1;
+        border-left: 4px solid #007bff;
+        display: none;
+        }
+        .faq-question .arrow {
+        transition: transform 0.3s;
+        }
+        .faq-question.active .arrow {
+        transform: rotate(180deg);
+        }
+    </style>
+    <livewire:styles />
 </head>

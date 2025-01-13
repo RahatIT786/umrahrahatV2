@@ -10,7 +10,7 @@
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
                         <p class="mb-2"><a style="color:white" href="tel:+966563898353"><i class="fa fa-phone-alt me-3"></i>+966 56 389 8353</a></p>
-                        <p class="mb-2"><a style="color:white" href="mailto:info@rahat.com"></a><i class="fa fa-envelope me-3"></i>info@rahat.com</p>
+                        <p class="mb-2"><a style="color:white" href="mailto:info@rahat.in"></a><i class="fa fa-envelope me-3"></i>info@rahat.in</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/rahattravelsofindia/"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/rahattravelsofindia/"><i class="fab fa-facebook-f"></i></a>
@@ -73,9 +73,9 @@
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
                                 <a href="{{route('layouts.app')}}">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
+                                <a href="{{route('privacy-policy')}}">Privacy Policy</a>
+                                <a href="{{route('term-of-service')}}">Terms of Service</a>
+                                <a href="{{route('FAQ')}}">FAQ's</a>
                             </div>
                         </div>
                     </div>

@@ -107,19 +107,19 @@ window.onload = function() {
 
 
         <!-- About Start -->
-        <div class="container-xxl py-5" id="about">
+        <div class="container-xxl " id="about">
             <div class="container" >
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
                         <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Rahat Group</span></h1>
-                        <p class="mb-4"> Our mission is to provide exceptional Hajj and Umrah services that cater to the spiritual and logistical needs of our pilgrims. With years of experience and a dedicated team, we are committed to making your pilgrimage a seamless and enriching experience.</p>
+                        <p class="mb-4"> Your premier partner in facilitating memorable and spiritually enriching Umrah pilgrimages. Founded in 2007, our company has established itself as a leading provider of exceptional Hajj & Umrah services, dedicated to ensuring a seamless and fulfilling experience for every pilgrim.</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">2000</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">35,000</h2>
                                         <p class="mb-0">Travel Agency</p>
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@ window.onload = function() {
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">132</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">280</h2>
                                         <p class="mb-0">Staffs</p>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@ window.onload = function() {
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
                                         <!-- <h2 class="mb-1" data-toggle="counter-up">100 </h2> -->
-                                        <h2 class="mb-1" ><span data-toggle="counter-up">100</span>k</h2>
+                                        <h2 class="mb-1" ><span data-toggle="counter-up">720</span>k</h2>
                                         <p class="mb-0">Happy Clients</p>
                                     </div>
                                 </div>
@@ -288,86 +288,7 @@ window.onload = function() {
 
 
         <!-- Service Start -->
-        <div class="container-xxl py-5" id="service">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-hotel fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Rooms & Appartment</h5>
-                            <p class="text-body mb-0">Our rooms and apartments offer comfort, convenience, and modern amenities. Whether you're traveling for business or leisure, enjoy a relaxing stay with well-furnished spaces and excellent service..</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-utensils fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Food & Restaurant</h5>
-                            <p class="text-body mb-0">Indulge in a variety of delicious cuisines at our restaurant, offering a blend of local and international dishes. Enjoy a delightful dining experience with fresh ingredients and exceptional service.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-bus fa-2x text-primary"></i>
-                                   
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Flight & Transport</h5>
-                            <p class="text-body mb-0">We provide seamless flight and transport services, ensuring a comfortable journey from start to finish. Enjoy reliable and timely travel options, including airport transfers and customized travel arrangements.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-file-shield fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                           
-                            <h5 class="mb-3">Visa & Insurance </h5>
-                            <p class="text-body mb-0">Our visa and insurance services ensure a hassle-free travel experience. We assist with visa applications and provide comprehensive travel insurance options, offering peace of mind for your international trips.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-person-praying fa-2x text-primary"></i>
-                                </div>
-                              
-                            </div>
-                            <h5 class="mb-3">Ziyarat</h5>
-                            <p class="text-body mb-0">Experience the spiritual journey of Ziyarat, visiting sacred sites and historic locations. Our services provide guided tours to key religious destinations, enriching your pilgrimage with meaningful insights and comfort.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-shirt fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                           
-                            <h5 class="mb-3">Laundry</h5>
-                            <p class="text-body mb-0">Our laundry service offers convenient and efficient cleaning for your clothes. With quick turnaround times and attention to detail, we ensure your garments are fresh, clean, and ready for use.</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <livewire:OurService />
         <!-- Service End -->
 
 
@@ -482,7 +403,6 @@ window.onload = function() {
         </div> -->
         <!-- Team End -->
         {{-- --}}
-        <livewire:NewsLetter />
         
 
 {{--view-browcher-start--}}

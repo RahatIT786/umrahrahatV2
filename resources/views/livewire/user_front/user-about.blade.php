@@ -25,15 +25,16 @@
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">who we are</h6>
                         <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">RAHAT </span></h1>
-                        <p class="mb-4">UMRAHRAHAT.COM is supervised by Professional Executives with long and rich experience of the Hajj and Umra Service. Our aim is to provide the most Professional Service to the pilgrims under the guidance of experienced scholars, catering all categories of affordability & luxuries, according to the budget of each family or group of pilgrims. Pilgrims can visit historical places in Makkah and Madina led by experienced guides.</p>
+                        <p class="mb-4">your premier partner in facilitating memorable and spiritually enriching Umrah pilgrimages. Founded in 2007, our company has established itself as a leading provider of exceptional
+                                 Hajj & Umrah services, dedicated to ensuring a seamless and fulfilling experience for every pilgrim.</p>
                         <P>We offer various packages according to the convenience and budget of the pilgrims. We have special Umra packages by Air, car and luxury buses</P>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">Rooms</p>
+                                        <h2 class="mb-1" data-toggle="counter-up">35,000</h2>
+                                        <p class="mb-0">Travel Agency</p>
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +42,7 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">280</h2>
                                         <p class="mb-0">Staffs</p>
                                     </div>
                                 </div>
@@ -50,8 +51,9 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">Clients</p>
+                                        <!-- <h2 class="mb-1" data-toggle="counter-up">100 </h2> -->
+                                        <h2 class="mb-1" ><span data-toggle="counter-up">720</span>k</h2>
+                                        <p class="mb-0">Happy Clients</p>
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +144,7 @@
 
 
                <!-- Team Start -->
-        <div class=" py-5">
+        <div class="" style="margin-bottom: 200px;">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">our value</h6>
@@ -157,7 +159,8 @@
                             <div class="text-center p-4 mt-3">
                                 <h2 class="fw-bold mb-0">our vision</h2>
                                 <h5  class="mt-4">Our Vision is to empower individuals and families</h5>
-                                <p style="font-size: 18px;" class="mt-4">Our vision is to serve as the guiding light for spiritual fulfillment, leading pilgrims on deeply transformative journeys of Hajj and Umrah. We aspire to foster a global community bound by a shared pursuit of divine enlightenment, unity, and spiritual growth. </p>
+                                <p style="font-size: 18px;" class="mt-4">To be the leading Umrah service provider renowned for exceptional quality, compassionate service, and a deep commitment to the spiritual fulfillment of our clients. We aim to continuously enhance our offerings to meet the evolving needs of the global Muslim community.</p>
+                                <br>
                             </div>
                         </div>
                     </div>
@@ -173,7 +176,7 @@
                             <div class="text-center p-4 mt-3">
                                 <h2 class="fw-bold mb-0">our Mision</h2>
                                 <h5 class="mt-4" >Our Mission is to provide guidance and support.</h5>
-                                <p style="font-size: 18px;" class="mt-4">Our mission is to offer unparalleled support and services, ensuring pilgrims embark on meaningful Hajj and Umrah journeys. We are dedicated to creating enriching experiences that promote spiritual growth, unity, and a deeper connection to faith.</p>
+                                <p style="font-size: 18px;" class="mt-4">At RAHAT, our mission is to provide unparalleled Umrah services with a focus on comfort, convenience, and spiritual enrichment. We are committed to helping Muslims from around the world fulfill their sacred pilgrimage with ease and dignity, offering personalized support every step of the way.</p>
                             </div>
                         </div>
                     </div>
@@ -184,6 +187,6 @@
      
 
         <!-- Newsletter Start -->
-        <livewire:NewsLetter />
+       
         <!-- Newsletter Start -->
 </section>
