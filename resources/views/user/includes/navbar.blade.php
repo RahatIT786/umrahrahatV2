@@ -21,16 +21,22 @@
                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
                                
-                                <p class="mb-0"><a href="mailto:info@rahat.in" style="color:#666565; " >info@rahat.in</a></p>
-                            </div>
-                            <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                                <p class="mb-0"><a href="mailto:info@rahat.in" style="color:#666565; " >info@rahat.in</a></p> &nbsp; &nbsp;
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
                                
                                 <p class="mb-0"><a href="tel:+917506195551" style="color:#666565; " >+917506195551</a></p>
                             </div>
+                            <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                                <i class="fa fa-envelope text-primary me-2"></i>
+                               
+                                <p class="mb-0"><a href="mailto:dubai@rahat.in" style="color:#666565; " >dubai@rahat.in</a></p> &nbsp; &nbsp;
+                                <i class="fa fa-phone-alt text-primary me-2"></i>
+                               
+                                <p class="mb-0"><a href="tel:+971567866713" style="color:#666565; " >+971567866713</a></p>
+                            </div>
                             <div class="h-100 d-inline-flex align-items-center py-2 ">
                                 <i class="fa-solid fa-globe text-primary me-2"></i>
-                                <p class="mb-0"><a href="#footer-contact" style="color:#666565; " >Global</a></p>
+                                <p class="mb-0"><a href="#footer-contact" style="color:#666565; " >International</a></p>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
@@ -57,17 +63,36 @@
                                 <a href="{{route('about')}}"  class="nav-item nav-link">About</a>
                                 <div class="nav-item dropdown">
 
-                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Package</a>
+                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Packages</a>
 
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('umrahByBus')}}" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
-                                        <a href="{{route('umrahByAir')}}" class="dropdown-item">Umrah Packages By Air From Dubai</a>
-                                        <a href="{{route('umrahVisaDubai')}}" class="dropdown-item">Umrah Visa from Dubai</a>
-                                        <a href="{{route('umrahPackageSharjah')}}" class="dropdown-item">Umrah Packages from Sharjah</a>
+                                        <a href="{{route('umrahByAir')}}" class="dropdown-item">Umrah Packages By Flight From Dubai</a>
+                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Bus </a>
+                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Flight </a>
+                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Umrah Packages from India</a>
                                     </div>
                                 </div>
-                                <a href="{{route('saudi-visa')}}"  class="nav-item nav-link">Saudi Visa</a>
-                                <a href="{{route('ramzan-umrah-package')}}"  class="nav-item nav-link">Ramadan Umrah Packages</a>
+                              
+
+                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link " >Hajj Packages</a>
+
+                                   
+                               
+                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Hotels</a>
+                                <div class="nav-item dropdown">
+
+                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Visas</a>
+
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Dubai Visa</a>
+                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Saudi Visa</a>
+                     
+                                    </div>
+                                </div>
+                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Transport</a>
+                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Forex</a>
+                                {{-- <a href="{{route('ramzan-umrah-package')}}"  class="nav-item nav-link">Ramadan Umrah Packages</a> --}}
                                 <a href="{{route('blog')}}"  class="nav-item nav-link">Blog</a>
 
                             </div>
