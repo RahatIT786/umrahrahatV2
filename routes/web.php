@@ -27,6 +27,7 @@ use App\Livewire\ContactUs;
 use App\Livewire\FAQ;
 use App\Livewire\Gallery;
 use App\Livewire\Hotels;
+use App\Livewire\HotelSingleDetail;
 use App\Livewire\OurService;
 use App\Livewire\Package;
 use App\Livewire\PackageUserView;
@@ -64,6 +65,8 @@ Route::get('/privacy-policy',PrivacyPolicy::class)->name('privacy-policy');
 Route::get('/term-of-service',TermsOfService::class)->name('term-of-service');
 Route::get('/FAQ',FAQ::class)->name('FAQ');
 Route::get('/hotels',Hotels::class)->name('hotels');
+Route::get('/hotel-detail/{id}',HotelSingleDetail::class)->name('hotel-Detail');
+
 
 Route::post('/send-contact-details',[ContactMailController::class,'sendDetails'])->name('send.details');
 
