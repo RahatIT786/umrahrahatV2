@@ -35,8 +35,9 @@
                         <th class="border-0 py-2">Hotel Price</th>
                         <th class="border-0 py-2">Hotel City</th>
                         <th class="border-0 py-2">hotel Star Rating</th>
-                        <!-- <th class="border-0 py-2 text-center">Edit</th>
-                        <th class="border-0 py-2 text-center">Delete</th> -->
+                        <th class="border-0 py-2 text-center">View</th>
+                        <th class="border-0 py-2 text-center">Edit</th>
+                        <th class="border-0 py-2 text-center">Delete</th> 
                     </tr>
                 </thead>
                 <tbody>
@@ -53,18 +54,37 @@
                             <td>{{ $Hotel->hotelName }}</td>
                             <td>{{ number_format($Hotel->hotelPrice, 2) }}</td>
                             <td>{{ $Hotel->hotelCity }} days</td>
-                            <td>{{ $Hotel->hotelStarRating }}</td>
+                            <td>
+                                @if ($Hotel->hotelStarRating == '2')
+                                    2 Star Hotel
+                                @elseif ($Hotel->hotelStarRating == '3')
+                                    3 Star Hotel
+                                @elseif ($Hotel->hotelStarRating == '4')
+                                    4 Star Hotel
+                                @elseif ($Hotel->hotelStarRating == '5')   
+                                    5 Star Hotel
+                                @elseif ($Hotel->hotelStarRating == '6')
+                                    Building Accomutation Stars
+                                @elseif ($Hotel->hotelStarRating == '7')
+                                    Standard Hotel Stars
+                                @endif
+                            </td>
+                            <td class="text-center">
+                                <a class="text-warning" href="{{ route('viewHotelData', ['id' => $Hotel->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
+                                    <i class="bi bi-eye-fill"></i>
+                                </a> &nbsp;
+                            </td>
                             
-                            {{-- <td class="text-center">
-                                <a class="text-primary" href="{{ route('editdata', ['id' => $visa->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                            <td class="text-center">
+                                <a class="text-primary" href="{{ route('editHotelData', ['id' => $Hotel->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a wire:click="confirmDelete({{ $visa->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
+                                <a wire:click="confirmDelete({{ $Hotel->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
                                     <i class="bi bi-trash-fill"></i>
                                 </a>
-                            </td> --}}
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -72,7 +92,7 @@
         </div>
 
         <!-- Modal for Delete Confirmation -->
-      {{--  <div class="modal fade @if($showModal) show @endif" 
+       <div class="modal fade @if($showModal) show @endif" 
              id="exampleVerticallycenteredModal" 
              tabindex="-1" 
              aria-labelledby="exampleModalCenterTitle" 
@@ -88,7 +108,7 @@
                                 wire:click="closeModal"></button>
                     </div>
                     <div class="modal-body">
-                        Are you sure you want to delete this visa?
+                        Are you sure you want to delete this Hotel?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" 
@@ -102,10 +122,6 @@
             </div>
         </div>
 
-        <!-- Pagination -->
-        <div class="d-flex justify-content-end mt-3">
-            {{ $visaDetails->links() }}
-        </div>  --}}
-
+     
     </div>
 </div>
