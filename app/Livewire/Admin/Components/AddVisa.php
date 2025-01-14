@@ -59,7 +59,7 @@ class AddVisa extends Component
             $this->processingTime = $visa->processing_time;
             $this->price = $visa->price;
             $this->filePath = $visa->file_path;
-            $this->flyerPath = $visa->flyer_path; // Corrected line
+            $this->flyerPath = $visa->flyer_path;
         }
     }
 
@@ -95,7 +95,6 @@ class AddVisa extends Component
             ]);
             session()->flash('message', 'Visa details added successfully!');
         }
-
         // Reset form fields
         $this->reset(['visaType', 'documentsRequired', 'processingTime', 'price', 'file', 'flyer']);
     }

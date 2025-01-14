@@ -79,7 +79,7 @@
 
                                    
                                
-                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Hotels</a>
+                                <a href="{{route('hotels')}}"  class="nav-item nav-link">Hotels</a>
                                 <div class="nav-item dropdown">
 
                                     <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Visas</a>

@@ -16,6 +16,7 @@ use App\Livewire\Admin\Components\PackageRequest;
 
 use App\Livewire\Admin\Components\PackageRequestHistory;
 use App\Livewire\Admin\Components\RequestHistory;
+use App\Livewire\Admin\Components\ViewHotelDetails;
 use App\Livewire\Admin\Components\VisaRequest;
 use App\Livewire\Admin\PackageManager\AdminViewPackage;
 use App\Livewire\Blog;
@@ -25,6 +26,7 @@ use App\Livewire\Admin\PackageManager\AddPackage;
 use App\Livewire\ContactUs;
 use App\Livewire\FAQ;
 use App\Livewire\Gallery;
+use App\Livewire\Hotels;
 use App\Livewire\OurService;
 use App\Livewire\Package;
 use App\Livewire\PackageUserView;
@@ -61,6 +63,7 @@ Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');
 Route::get('/privacy-policy',PrivacyPolicy::class)->name('privacy-policy');
 Route::get('/term-of-service',TermsOfService::class)->name('term-of-service');
 Route::get('/FAQ',FAQ::class)->name('FAQ');
+Route::get('/hotels',Hotels::class)->name('hotels');
 
 Route::post('/send-contact-details',[ContactMailController::class,'sendDetails'])->name('send.details');
 
@@ -99,6 +102,8 @@ Route::get('/admin/request-history', RequestHistory::class)->name('admin.visa-re
 Route::get('/admin/newsletter', NewsLetter::class)->name('admin.newsletters');
 Route::get('/admin/hotel-details', ListHotalDetails::class)->name('admin.listHotelDetails');
 Route::get('/admin/add-hotel-details',AddHotalDetais::class)->name('admin.addHotelDetails');
+Route::get('/admin/edit-hotal/{id}',AddHotalDetais::class)->name('editHotelData');
+Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelData');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
 Route::get('/migrate' ,[AuthController::class,'migrate']);

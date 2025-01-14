@@ -24,6 +24,12 @@ class AddHotalDetais extends Component
     public $hotelDistance;
     public $hotelMainImage;
     public $hotelImage1;
+    public $hotelMainImagePath;
+    public $hotelImage1Path;
+    public $hotelImage2Path;
+    public $hotelImage3Path;
+    public $hotelImage4Path;
+    public $hotelImage5Path;
     public $hotelImage2;
     public $hotelImage3;
     public $hotelImage4;
@@ -35,8 +41,8 @@ class AddHotalDetais extends Component
         "hotelPrice"=> "required|numeric",
         "hotelCity"=> "required|string",
         "hotelStarRating"=> "required|string",
-        "hotelAddress"=> "required|string|max:500",
-        "hotelDiscription"=> "required|string|max:500",
+        "hotelAddress"=> "required|string|max:1000",
+        "hotelDiscription"=> "required|string|max:1000",
         "hotelCheckInTime"=>"required",
         "hotelCheckOutTime"=> "required",
         "hotelDistance"=>"required|numeric",
@@ -64,11 +70,11 @@ class AddHotalDetais extends Component
         
         'hotelAddress.required' => 'Hotel address is required.',
         'hotelAddress.string' => 'Hotel address must be a string.',
-        'hotelAddress.max' => 'Hotel address cannot exceed 500 characters.',
+        'hotelAddress.max' => 'Hotel address cannot exceed 1000 characters.',
         
         'hotelDiscription.required' => 'Hotel description is required.',
         'hotelDiscription.string' => 'Hotel description must be a string.',
-        'hotelDiscription.max' => 'Hotel description cannot exceed 500 characters.',
+        'hotelDiscription.max' => 'Hotel description cannot exceed 1000 characters.',
         
         'hotelCheckInTime.required' => 'Hotel check-in time is required.',
         
@@ -98,7 +104,7 @@ class AddHotalDetais extends Component
 
     public function mount($id = null){
         if($id){
-            $hotel = HotelDetail::findOrFail($this->hotelId);
+            $hotel = HotelDetail::findOrFail( $id );
             $this->hotelId = $hotel->id;
             $this->hotelName = $hotel->hotelName;
             $this->hotelPrice =$hotel->hotelPrice;
@@ -109,11 +115,12 @@ class AddHotalDetais extends Component
             $this->hotelCheckInTime = $hotel->hotelCheckInTime;
             $this->hotelCheckOutTime = $hotel->hotelCheckOutTime;
             $this->hotelDistance = $hotel->hotelDistance;
-            $this->hotelMainImage = $hotel->hotelMainImage;
-            $this->hotelImage1 = $hotel->hotelImage1;
-            $this->hotelImage2 = $hotel->hotelImage2;
-            $this->hotelImage3 = $hotel->hotelImage3;
-            $this->hotelImage4 = $hotel->hotelImage4;
+            $this->hotelMainImagePath = $hotel->hotelMainImage;
+            $this->hotelImage1Path = $hotel->hotelImage1;
+            $this->hotelImage2Path = $hotel->hotelImage2;
+            $this->hotelImage3Path = $hotel->hotelImage3;
+            $this->hotelImage4Path = $hotel->hotelImage4;
+            $this->hotelImage5Path = $hotel->hotelImage5;
             
         }
     }
