@@ -109,7 +109,7 @@
                                     </div>
                                     <p class="text-body mb-3">{{ \Illuminate\Support\Str::limit($hotelDetail->hotelDiscription, 250, '...') }}</p>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('hotel-Detail',['id'=>$hotelDetail->id])}}">View Detail</a>
                                         <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
                                     </div>
                                 </div>
