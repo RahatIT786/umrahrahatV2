@@ -59,11 +59,11 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="{{route('layouts.app')}}"  class="nav-item nav-link active">Home</a>
-                                <a href="{{route('about')}}"  class="nav-item nav-link">About</a>
+                                <a href="{{route('layouts.app')}}"  class="nav-item nav-link {{request()->routeIs('layouts.app') ?'active' : '' }}">Home</a>
+                                <a href="{{route('about')}}"  class="nav-item nav-link {{request()->routeIs('about') ?'active' : '' }}">About</a>
                                 <div class="nav-item dropdown">
 
-                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Packages</a>
+                                    <a   class="nav-link dropdown-toggle {{request()->routeIs('umrahByBus','umrahByAir') ?'active' : '' }}" data-bs-toggle="dropdown">Umrah Packages</a>
 
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('umrahByBus')}}" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
@@ -82,7 +82,7 @@
                                 <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Hotels</a>
                                 <div class="nav-item dropdown">
 
-                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Visas</a>
+                                    <a   class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Visas</a>
 
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Dubai Visa</a>
@@ -93,7 +93,7 @@
                                 <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Transport</a>
                                 <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Forex</a>
                                 {{-- <a href="{{route('ramzan-umrah-package')}}"  class="nav-item nav-link">Ramadan Umrah Packages</a> --}}
-                                <a href="{{route('blog')}}"  class="nav-item nav-link">Blog</a>
+                                <a href="{{route('blog')}}"  class="nav-item nav-link {{request()->routeIs('blog') ? 'active' : ''}}">Blog</a>
 
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->

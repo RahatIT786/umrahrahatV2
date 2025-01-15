@@ -32,6 +32,12 @@
   <link href="{{ asset('asserts/admin/css/semi-dark.css') }}" rel="stylesheet" />
   <link href="{{ asset('asserts/admin/css/header-colors.css') }}" rel="stylesheet" />
 
+
+
+<!-- Include Chosen CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
+
+
     <title>Umrah Rahat - Admin</title>
     @livewireStyles
 </head>
@@ -71,6 +77,15 @@
   <script src="{{asset('asserts/admin/js/index.js')}}"></script>
   <!-- Bootstrap 5 JavaScript -->
  
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+<!-- Include Chosen JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
     new PerfectScrollbar(".review-list")

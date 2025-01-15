@@ -3,12 +3,14 @@
                  <div class="card-body">
                    <div class="d-flex align-items-center">
                       <h5 class="mb-0">Package Management</h5>
-                      
+                      <button href="{{route('admin.create-package')}}" wire:navigate class="btn btn-primary shadow-lg"><i class="bi bi-bag-plus"></i>&nbsp; CREATE-PACKAGE</button>
+                    
                        <form class="ms-auto position-relative" style="margin-right: 5rem">
                          {{-- <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-search"></i></div>
                          <input class="form-control ps-5" type="text" placeholder="search"> --}}
                        </form>
                        <button href="{{route('admin.package-add')}}" wire:navigate class="btn btn-primary shadow-lg"><i class="bi bi-bag-plus"></i>&nbsp; CREATE</button>
+                       
                    </div>
                    <div class="table-responsive mt-3 ">
                      <table class="table align-middle">
