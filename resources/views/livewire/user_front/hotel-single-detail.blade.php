@@ -114,7 +114,7 @@
                             <!-- Price Section -->
                             <div class="mb-3">
                              <h3 class="mb-4 section-title text-start text-primary text-uppercase">Price per Night</h3>
-                                <h4>{{$hotel_detail->hotelPrice}} SAR</h4> <!-- You can dynamically set this value -->
+                                <h4>{{$hotel_detail->hotelPrice}} {{$hotel_detail->currency}}</h4> <!-- You can dynamically set this value -->
                             </div>
                     <div class="border p-5 rounded booking-form" style="width: 450px;">
                         <h4 class="mb-4 text-uppercase">Book Your Stay</h4>

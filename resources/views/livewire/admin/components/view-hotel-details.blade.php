@@ -15,11 +15,35 @@
                             @error('hotelName') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
+
+
                         <!-- Hotel Price -->
                         <div class="col-md-6 mb-3">
                             <label for="hotelPrice" class="form-label">Hotel Price</label>
                             <input type="text" id="hotelPrice" wire:model="hotelPrice" class="form-control" placeholder="Enter Hotel Price" readonly>
                             @error('hotelPrice') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+                    
+                        <!-- Currency Selection -->
+                        <div class="col-md-12 mb-3 d-flex ">
+                            <label class="form-label ml-4">Select Currency</label>
+                            <div style="margin-left: 20px;" class="form-check ">
+                                <input type="radio" id="currencyINR" name="currency" value="INR" wire:model="currency" class="form-check-input">
+                                <label for="currencyINR" class="form-check-label ml-4">INR</label>
+                            </div>
+                            <div style="margin-left: 20px;" class="form-check ">
+                                <input type="radio" id="currencyAED" name="currency" value="AED" wire:model="currency" class="form-check-input">
+                                <label for="currencyAED" class="form-check-label ml-4">AED</label>
+                            </div>
+                            <div style="margin-left: 20px;" class="form-check ">
+                                <input type="radio" id="currencyUSD" name="currency" value="USD" wire:model="currency" class="form-check-input">
+                                <label for="currencyUSD" class="form-check-label ml-4">USD</label>
+                            </div>
+                            <div style="margin-left: 20px;" class="form-check ml-5">
+                                <input type="radio" id="currencySAR" name="currency" value="SAR" wire:model="currency" class="form-check-input">
+                                <label for="currencySAR" class="form-check-label">SAR</label>
+                            </div>
+                            @error('currency') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
                         <!-- Hotel City -->

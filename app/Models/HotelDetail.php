@@ -12,6 +12,7 @@ class HotelDetail extends Model
     protected $fillable = [
         'hotelName',
         'hotelPrice',
+        'currency',
         'hotelCity',
         'hotelStarRating',
         'hotelAddress',
