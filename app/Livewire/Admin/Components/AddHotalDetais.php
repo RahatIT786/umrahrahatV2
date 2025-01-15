@@ -15,6 +15,7 @@ class AddHotalDetais extends Component
     public $hotelId;
     public $hotelName;
     public $hotelPrice;
+    public $currency;
     public $hotelCity;
     public $hotelStarRating;
     public $hotelAddress;
@@ -39,6 +40,7 @@ class AddHotalDetais extends Component
     protected $rules = [
         "hotelName"=> "required|string|max:150",
         "hotelPrice"=> "required|numeric",
+        "currency"=> "required",
         "hotelCity"=> "required|string",
         "hotelStarRating"=> "required|string",
         "hotelAddress"=> "required|string|max:1000",
@@ -108,6 +110,7 @@ class AddHotalDetais extends Component
             $this->hotelId = $hotel->id;
             $this->hotelName = $hotel->hotelName;
             $this->hotelPrice =$hotel->hotelPrice;
+            $this->currency = $hotel->currency;
             $this->hotelCity = $hotel->hotelCity;
             $this->hotelStarRating = $hotel->hotelStarRating;
             $this->hotelAddress = $hotel->hotelAddress;
@@ -150,6 +153,7 @@ class AddHotalDetais extends Component
             $hotel->update([
                 'hotelName' => $this->hotelName,
                 'hotelPrice' => $this->hotelPrice,
+                'currency' => $this->currency,
                 'hotelCity' => $this->hotelCity,
                 'hotelStarRating' => $this->hotelStarRating,
                 'hotelAddress' => $this->hotelAddress,
@@ -171,6 +175,7 @@ class AddHotalDetais extends Component
             HotelDetail::create([
                 'hotelName' => $this->hotelName,
                 'hotelPrice' => $this->hotelPrice,
+                'currency' => $this->currency,
                 'hotelCity' => $this->hotelCity,
                 'hotelStarRating' => $this->hotelStarRating,
                 'hotelAddress' => $this->hotelAddress,
@@ -192,7 +197,8 @@ class AddHotalDetais extends Component
         // Reset form fields
         $this->reset([
             'hotelName', 
-            'hotelPrice', 
+            'hotelPrice',
+            'currency', 
             'hotelCity', 
             'hotelStarRating', 
             'hotelAddress', 

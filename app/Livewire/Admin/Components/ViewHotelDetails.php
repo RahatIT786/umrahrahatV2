@@ -11,6 +11,7 @@ class ViewHotelDetails extends Component
     public $hotelId;
     public $hotelName;
     public $hotelPrice;
+    public $currency;
     public $hotelCity;
     public $hotelStarRating;
     public $hotelAddress;
@@ -32,6 +33,7 @@ class ViewHotelDetails extends Component
             $this->hotelId = $hotel->id;
             $this->hotelName = $hotel->hotelName;
             $this->hotelPrice =$hotel->hotelPrice;
+            $this->currency =$hotel->currency;
             $this->hotelCity = $hotel->hotelCity;
             $this->hotelStarRating = $hotel->hotelStarRating;
             $this->hotelAddress = $hotel->hotelAddress;
