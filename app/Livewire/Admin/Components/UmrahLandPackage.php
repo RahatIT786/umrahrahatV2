@@ -178,8 +178,39 @@ class UmrahLandPackage extends Component
                     session()->flash('message', 'Visa details added successfully!');
 
                     // $this->alert('success', 'Created Successfully');
-                    //$this->reset(['name', 'package_type_ids', 'description', 'payment_policy', 'cancellation_policy', 'inclusion']);
-                    //return redirect()->route('admin.umrah-land-packages')->with('success', 'Package created successfully.');;
+                    //return redirect()->route('admin.umrah-land-packages')->with('success', 'Package created successfully.');
+                    // Reset form fields after successful submission
+                    $this->reset([
+                        'package_name',
+                        'packageImage',
+                        'packageDescription',
+                        'package_type_ids',
+                        'makka_rating',
+                        'makkaHotel',
+                        'madina_rating',
+                        'madinaHotel',
+                        'food_type',
+                        'laundray_type',
+                        'includes',
+                        'g_share_price',
+                        'qt_share_price',
+                        'qd_share_price',
+                        't_share_price',
+                        'd_share_price',
+                        'single_price',
+                        'child_w_b',
+                        'child_wo_b',
+                        'infants',
+                        'paymentPolicy',
+                        'importantNotes',
+                        'cancellationPolicy',
+                        'FlightTransport',
+                        'packageMeals',
+                        'packageVisaTaxes',
+                        'packageInclusion',
+                        'packageExclusion',
+                        'packageItinerary',
+                    ]);
     }
 
     #[Layout('admin.Layouts.app')]
