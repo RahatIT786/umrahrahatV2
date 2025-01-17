@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'e45faed74cddd4be2a5001ffc2f48a87f7afc442',
+        'reference' => '2a9c5a303e3e88fe11fb8584f495877c254aa12a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -406,6 +406,15 @@
                 0 => 'v11.36.1',
             ),
         ),
+        'jantinnerezo/livewire-alert' => array(
+            'pretty_version' => 'v3.0.2',
+            'version' => '3.0.2.0',
+            'reference' => '24281639258daf80fe0a585f55b7490a88fd68ef',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jantinnerezo/livewire-alert',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -424,7 +433,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e45faed74cddd4be2a5001ffc2f48a87f7afc442',
+            'reference' => '2a9c5a303e3e88fe11fb8584f495877c254aa12a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

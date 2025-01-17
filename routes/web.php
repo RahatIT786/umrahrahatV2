@@ -16,6 +16,7 @@ use App\Livewire\Admin\Components\PackageRequest;
 
 use App\Livewire\Admin\Components\PackageRequestHistory;
 use App\Livewire\Admin\Components\RequestHistory;
+use App\Livewire\Admin\Components\UmrahLandPackage;
 use App\Livewire\Admin\Components\ViewHotelDetails;
 use App\Livewire\Admin\Components\VisaRequest;
 use App\Livewire\Admin\PackageManager\AdminViewPackage;
@@ -107,6 +108,7 @@ Route::get('/admin/hotel-details', ListHotalDetails::class)->name('admin.listHot
 Route::get('/admin/add-hotel-details',AddHotalDetais::class)->name('admin.addHotelDetails');
 Route::get('/admin/edit-hotal/{id}',AddHotalDetais::class)->name('editHotelData');
 Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelData');
+Route::get('/admin/umrah-land-package',UmrahLandPackage::class)->name('admin.umrah-land-packages');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
 Route::get('/migrate' ,[AuthController::class,'migrate']);

@@ -97,7 +97,7 @@ class AddVisa extends Component
         }
         // Reset form fields
         $this->reset(['visaType', 'documentsRequired', 'processingTime', 'price', 'file', 'flyer']);
-    }
+    }   
 
     #[Layout('admin.Layouts.app')]
     public function render()
