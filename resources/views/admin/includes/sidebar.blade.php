@@ -97,6 +97,21 @@
                 </li> -->
               </ul>
             </li>
+            <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Settings</div>
+              </a>
+              <ul>
+                <li> 
+                  <a href="{{ route('admin.flight-managent') }}" wire:navigate><i class="bi bi-circle"></i>Flight Management</a>
+                </li>
+                <li> 
+                  <a href="" wire:navigate><i class="bi bi-circle"></i>Departure city</a>
+                </li>
+              </ul>
+            </li>
           </ul>
           <!--end navigation-->
        </aside>

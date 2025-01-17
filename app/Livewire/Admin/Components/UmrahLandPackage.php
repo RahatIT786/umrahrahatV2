@@ -175,7 +175,7 @@ class UmrahLandPackage extends Component
 
                         PackageDetail::create($details);
                     }
-                    session()->flash('message', 'Visa details added successfully!');
+                    session()->flash('message', 'Package details added successfully!');
 
                     // $this->alert('success', 'Created Successfully');
                     //return redirect()->route('admin.umrah-land-packages')->with('success', 'Package created successfully.');
