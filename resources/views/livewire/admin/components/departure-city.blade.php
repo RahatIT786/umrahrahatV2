@@ -10,17 +10,17 @@
 
         <!-- Header with Create Button -->
         <div class="d-flex align-items-center justify-content-between mb-3">
-            <h6 class="card-title mb-0">Visa Management</h6>
-            <a href="{{ route('admin.visa-add') }}" wire:navigate class="btn btn-sm btn-primary">
-                <i class="bx bx-plus me-1"></i> Create Visa
+            <h6 class="card-title mb-0">Departure City Management</h6>
+            <a href="{{ route('add.departureCity') }}" wire:navigate class="btn btn-sm btn-primary">
+                <i class="bx bx-plus me-1"></i> Create Departure City
             </a>
         </div>
 
         <!-- Search Bar -->
         <div class="d-flex align-items-center mb-3">
-            <h4 class="mb-0">All Visa Types</h4>
+            <h4 class="mb-0">All Departure City</h4>
             <form class="ms-auto position-relative" wire:submit.prevent="">
-                <input type="text" class="form-control" placeholder="Search Visa" wire:model.live="search">
+                <input type="text" class="form-control" placeholder="Search City" wire:model.live="search">
             </form>
         </div>
 
@@ -30,45 +30,31 @@
                 <thead class="table-secondary">
                     <tr>
                         <th class="border-0 py-2">S.No</th>
-                        <th class="border-0 py-2">Visa Image</th>
-                        <th class="border-0 py-2">Flyer Image</th>
-                        <th class="border-0 py-2">Visa Type</th>
-                        <th class="border-0 py-2">Documents</th>
-                        <th class="border-0 py-2">Processing Time</th>
-                        <th class="border-0 py-2">Price</th>
+                        <th class="border-0 py-2">City Image</th>
+                        <th class="border-0 py-2">City Name</th>
                         <th class="border-0 py-2 text-center">Edit</th>
                         <th class="border-0 py-2 text-center">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($visaDetails as $index => $visa)
+                    @foreach ($CityDetails as $index => $city)
                         <tr>
-                            <td>{{ $visaDetails->firstItem() + $index }}</td>
+                            <td>{{ $index + 1 }}</td>
                             <td>
-                                @if ($visa->file_path)
-                                    <img src="{{Storage::url($visa->file_path) }}" alt="Visa Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
+                                @if ($city->CityImagePath)
+                                    <img src="{{Storage::url($city->CityImagePath) }}" alt="Visa Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
                                 @else
                                     No Image available
                                 @endif
                             </td>
-                            <td>
-                                @if ($visa->flyer_path)
-                                    <img src="{{Storage::url($visa->flyer_path) }}" alt="Flyer Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
-                                @else
-                                    No Flyer available
-                                @endif
-                            </td>
-                            <td>{{ $visa->visa_type }}</td>
-                            <td>{{ $visa->documents_required }}</td>
-                            <td>{{ $visa->processing_time }} days</td>
-                            <td>{{ number_format($visa->price, 2) }}</td>
+                            <td>{{ $city->CityName }}</td>
                             <td class="text-center">
-                                <a class="text-primary" href="{{ route('editdata', ['id' => $visa->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                                <a class="text-primary" href="{{ route('editCitydata', ['id' => $city->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a wire:click="confirmDelete({{ $visa->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
+                                <a wire:click="confirmDelete({{ $city->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
                                     <i class="bi bi-trash-fill"></i>
                                 </a>
                             </td>
@@ -95,7 +81,7 @@
                                 wire:click="closeModal"></button>
                     </div>
                     <div class="modal-body">
-                        Are you sure you want to delete this visa?
+                        Are you sure you want to delete this City?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" 
@@ -108,11 +94,5 @@
                 </div>
             </div>
         </div>
-
-        <!-- Pagination -->
-        <div class="d-flex justify-content-end mt-3">
-            {{ $visaDetails->links() }}
-        </div>
-
     </div>
 </div>

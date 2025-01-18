@@ -108,7 +108,7 @@
                   <a href="{{ route('admin.flight-managent') }}" wire:navigate><i class="bi bi-circle"></i>Flight Management</a>
                 </li>
                 <li> 
-                  <a href="" wire:navigate><i class="bi bi-circle"></i>Departure city</a>
+                  <a href="{{ route('admin.departure-city') }}" wire:navigate><i class="bi bi-circle"></i>Departure city</a>
                 </li>
               </ul>
             </li>

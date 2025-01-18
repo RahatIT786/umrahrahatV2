@@ -12,7 +12,7 @@
         <div class="d-flex align-items-center justify-content-between mb-3">
             <h6 class="card-title mb-0">Flight Management</h6>
             <a href="{{ route('addFlight') }}" wire:navigate class="btn btn-sm btn-primary">
-                <i class="bx bx-plus me-1"></i> Create Visa
+                <i class="bx bx-plus me-1"></i> Create Flight
             </a>
         </div>
 
@@ -20,7 +20,7 @@
         <div class="d-flex align-items-center mb-3">
             <h4 class="mb-0">All Flights</h4>
             <form class="ms-auto position-relative" wire:submit.prevent="">
-                <input type="text" class="form-control" placeholder="Search Visa" wire:model.live="search">
+                <input type="text" class="form-control" placeholder="Search Flight" wire:model.live="search">
             </form>
         </div>
 

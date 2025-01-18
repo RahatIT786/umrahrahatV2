@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PdfTemplateController;
 use App\Http\Controllers\RoutingController;
+use App\Livewire\Admin\Components\AddDepartureCity;
 use App\Livewire\Admin\Components\AddflightManagent;
 use App\Livewire\Admin\Components\AddHotalDetais;
 use App\Livewire\Admin\Components\AddVisa;
@@ -116,6 +117,8 @@ Route::get('/admin/flight-management',FlightManagent::class)->name('admin.flight
 Route::get('/admin/add-flight-details',AddflightManagent::class)->name('addFlight');
 Route::get('/flightDataEdit/{id}',AddflightManagent::class)->name('flightDataEdit');
 Route::get('/admin/departure-city',DepartureCity::class)->name('admin.departure-city');
+Route::get('/admin/add-departure-city',AddDepartureCity::class)->name('add.departureCity');
+Route::get('/admin/EditCity/{id}',AddDepartureCity::class)->name('editCitydata');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
 Route::get('/migrate' ,[AuthController::class,'migrate']);
