@@ -32,6 +32,11 @@
   <link href="{{ asset('asserts/admin/css/semi-dark.css') }}" rel="stylesheet" />
   <link href="{{ asset('asserts/admin/css/header-colors.css') }}" rel="stylesheet" />
 
+
+
+
+   <!-- Summernote CSS for proper styling (optional for display) -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-lite.min.css" rel="stylesheet">
     <title>Umrah Rahat - Admin</title>
     @livewireStyles
 </head>
@@ -72,9 +77,43 @@
   <!-- Bootstrap 5 JavaScript -->
  
 
+   <!-- Optional: Summernote JS for additional features -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-lite.min.js"></script>
   <script>
     new PerfectScrollbar(".review-list")
     new PerfectScrollbar(".chat-talk")
  </script>
+
+
+
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function() {
+      $('.summernote').summernote({
+          height: 300, // set editor height
+          toolbar: [
+              ['style', ['style']],
+              ['font', ['bold', 'italic', 'underline', 'clear']],
+              ['fontname', ['fontname']],
+              ['color', ['color']],
+              ['para', ['ul', 'ol', 'paragraph']],
+              // ['table', ['table']],
+              // ['insert', ['link', 'picture', 'video']],
+              // ['view', ['fullscreen', 'codeview', 'help']]
+          ]
+      });
+  });
+
+
+
+ 
+
+</script>
 </footer>
 </html>
