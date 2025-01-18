@@ -15,6 +15,7 @@ use App\Livewire\Admin\Components\PackageRequest;
 
 
 use App\Livewire\Admin\Components\PackageRequestHistory;
+use App\Livewire\Admin\Components\RamzaanPackage;
 use App\Livewire\Admin\Components\RequestHistory;
 use App\Livewire\Admin\Components\ViewHotelDetails;
 use App\Livewire\Admin\Components\VisaRequest;
@@ -108,10 +109,13 @@ Route::get('/admin/add-hotel-details',AddHotalDetais::class)->name('admin.addHot
 Route::get('/admin/edit-hotal/{id}',AddHotalDetais::class)->name('editHotelData');
 Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelData');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
+// ---------------------------
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
 Route::get('/migrate' ,[AuthController::class,'migrate']);
 Route::get('/storageLink',[AuthController::class,'setStorageLink']);
+// ---------------------------
 
+Route::get('/package/ramzan',RamzaanPackage::class)->name('package.ramzan');
 
 
 

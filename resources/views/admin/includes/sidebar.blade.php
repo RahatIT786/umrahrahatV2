@@ -32,6 +32,11 @@
                         <i class="bi bi-circle"></i>List All Package
                     </a>
                 </li>
+                <li>
+                  <a href="{{route('package.ramzan')}}" wire:navigate>
+                      <i class="bi bi-circle"></i>Ramzaan Package Manager
+                  </a>
+              </li>
                 <li> <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
                 </li>
               </ul>
