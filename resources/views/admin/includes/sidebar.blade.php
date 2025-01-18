@@ -33,11 +33,20 @@
                     </a>
                 </li>
                 <li>
+
                   <a href="{{route('package.ramzan')}}" wire:navigate>
                       <i class="bi bi-circle"></i>Ramzaan Package Manager
                   </a>
               </li>
                 <li> <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
+
+                    <a href="{{route('admin.umrah-land-packages')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>Umrah Land Packages
+                    </a>
+                </li>
+                <li> 
+                  <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
+
                 </li>
               </ul>
             </li>
@@ -94,6 +103,21 @@
                 <!-- <li> 
                   <a href="{{ route('admin.visa-request-history') }}" wire:navigate><i class="bi bi-circle"></i></a>
                 </li> -->
+              </ul>
+            </li>
+            <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Settings</div>
+              </a>
+              <ul>
+                <li> 
+                  <a href="{{ route('admin.flight-managent') }}" wire:navigate><i class="bi bi-circle"></i>Flight Management</a>
+                </li>
+                <li> 
+                  <a href="{{ route('admin.departure-city') }}" wire:navigate><i class="bi bi-circle"></i>Departure city</a>
+                </li>
               </ul>
             </li>
           </ul>
