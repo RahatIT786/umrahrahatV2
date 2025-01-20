@@ -70,6 +70,8 @@
                                 <h3>{{ ucfirst($package['name']) }} Package</h3>
                                 <p><strong>City:</strong> {{ ucfirst($package['city']) }}</p>
                                 <p><strong>Days:</strong> {{ $package['days'] }}</p>
+                                <p><strong>Airline:</strong> {{ $package['airline'] }}</p>  
+                                <p><strong>Sharing Price:</strong> {{ $package['sharing'] == '' }}</p>
                                 <p><strong>Airline:</strong> {{ $package['airline'] }}</p>
 
                                 {{-- <p><strong>Sharing Price:</strong> {{ $package['sharing'] ?? ''}}</p> --}}
@@ -79,6 +81,7 @@
 
 
                                 <p><strong>Sharing Price:</strong> {{ $package['sharing'] == null ? 0 : 0 }}</p>
+
 
                                 <p><strong>Quad Price:</strong> {{ $package['quad'] }}</p>
                                 <p><strong>Triple Price:</strong> {{ $package['triple'] }}</p>
