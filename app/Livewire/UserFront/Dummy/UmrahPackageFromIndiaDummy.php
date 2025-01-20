@@ -21,15 +21,15 @@ class UmrahPackageFromIndiaDummy extends Component
     public $ah = 'ahmedabad';
 
     // package types variables
-    public $ss = 'super saver';
-    public $rl = 'royal';
-    public $cl = 'classic';
-    public $bro = 'bronze';
-    public $sil = 'silver';
-    public $gol = 'gold';
-    public $eli = 'elite';
-    public $est = 'esteem';
-    public $exe = 'executive';
+    public $ss = 'Super saver';
+    public $rl = 'Royal';
+    public $cl = 'Classic';
+    public $bro = 'Bronze';
+    public $sil = 'Silver';
+    public $gol = 'Gold';
+    public $eli = 'Elite';
+    public $est = 'Esteem';
+    public $exe = 'Executive';
 
     // sharings variables
     public $shr = "sharing"; 
@@ -83,11 +83,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa,
                     "sharing" => 72786,
+                    "quint" => '',
                     "quad" => 72786,
                     "triple" => 72786,
                     "double" => 72786,
                     "single" => 72786,
-                ],
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
+                ],                   
                 $this->rl => [
                     "id" => 2,
                     "name" => $this->rl,
@@ -95,10 +97,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 78786,
+                    "quint" => '',
                     "quad" => 80786,
                     "triple" => 84786,
                     "double" => 90786,
                     "single" => 110786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -107,10 +111,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 82786,
+                    "quint" => '',
                     "quad" => 84786,
                     "triple" => 88786,
                     "double" => 97786,
                     "single" => 121786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
 
                 $this->bro=> [
@@ -120,10 +126,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 85786,
+                    "quint" => '',
                     "quad" => 88786,
                     "triple" => 93786,
                     "double" => 102786,
                     "single" => 132786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -132,10 +140,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 92786,
+                    "quint" => '',
                     "quad" => 97786,
                     "triple" => 104786,
                     "double" => 120786,
                     "single" => 166786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -144,10 +154,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" =>'' ,
+                    "quint" => '',
                     "quad" => 112786,
                     "triple" => 123786,
                     "double" => 146786,
                     "single" => 214786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->eli => [
                     "id" => 7,
@@ -156,10 +168,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" =>'' ,
+                    "quint" => '',
                     "quad" => 126786,
                     "triple" => 137786,
                     "double" => 154786,
                     "single" => 230786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->est => [
                     "id" => 8,
@@ -168,10 +182,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" =>'' ,
+                    "quint" => '',
                     "quad" => 156786,
                     "triple" => 177786,
                     "double" => 218786,
                     "single" => 358786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->exe => [
                     "id" => 9,
@@ -180,10 +196,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" =>'' ,
+                    "quint" => '',
                     "quad" => 170786,
                     "triple" => 194786,
                     "double" => 243786,
                     "single" => 407786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
             ],
 
@@ -194,13 +212,14 @@ class UmrahPackageFromIndiaDummy extends Component
                     "name" => $this->ss,
                     "city" => $this->l,
                     "days" => 16,
-
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 84786,
+                    "quint" => '',
                     "quad" => 85786,
                     "triple" => 86786,
                     "double" => 89786,
                     "single" => 98786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -209,10 +228,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 91786,
+                    "quint" => '',
                     "quad" => 93786,
                     "triple" => 97786,
                     "double" => 105786,
                     "single" => 127786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -221,10 +242,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 95786,
+                    "quint" => '',
                     "quad" => 98786,
                     "triple" => 102786,
                     "double" => 112786,
                     "single" => 140786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
 
                 $this->bro=> [
@@ -234,10 +257,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 98786,
+                    "quint" => '',
                     "quad" => 101786,
                     "triple" => 107786,
                     "double" => 108786,
                     "single" => 152786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -246,10 +271,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" => 107786,
+                    "quint" => '',
                     "quad" => 112786,
                     "triple" => 121786,
                     "double" => 138786,
                     "single" => 191786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -258,10 +285,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 14,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" =>'' ,
+                    "quint" => '',
                     "quad" => 130786,
                     "triple" => 143786,
                     "double" => 168786,
                     "single" => 246786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->eli => [
                     "id" => 7,
@@ -270,10 +299,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" =>'' ,
+                    "quint" => '',
                     "quad" => 146786,
                     "triple" => 158786,
                     "double" => 177786,
                     "single" => 264786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->est => [
                     "id" => 8,
@@ -282,10 +313,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" =>'' ,
+                    "quint" => '',
                     "quad" => 180786,
                     "triple" => 203786,
                     "double" => 250786,
                     "single" => 410786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->exe => [
                     "id" => 9,
@@ -294,10 +327,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, // Using instance variable
                     "sharing" =>'' ,
+                    "quint" => '',
                     "quad" => 195786,
                     "triple" => 223786,
                     "double" => 280786,
                     "single" => 467786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
 
                     // "airline" => $this->sa, 
                     // "sharing" => 78786,
@@ -316,12 +351,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => $this->ban,
                     "days" => 16,
                     "airline" => $this->sa, 
-                  
                     "sharing" => 78786,
+                    "quint" => '',
                     "quad" => 79786,
                     "triple" => 80786,
                     "double" => 83786,
                     "single" => 71786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -330,10 +366,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 84786,
+                    "quint" => '',
                     "quad" => 86786,
                     "triple" => 90786,
                     "double" => 96786,
                     "single" => 116786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -342,10 +380,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 88786,
+                    "quint" => '',
                     "quad" => 90786,
                     "triple" => 94786,
                     "double" => 103786,
                     "single" => 127786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->bro => [
                     "id" => 4,
@@ -354,10 +394,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 91786,
+                    "quint" => '',
                     "quad" => 94786,
                     "triple" => 99786,
                     "double" => 108786,
                     "single" => 138786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -366,10 +408,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 98786,
+                    "quint" => '',
                     "quad" => 103786,
                     "triple" => 110786,
                     "double" => 126786,
                     "single" => 172786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -378,10 +422,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => '',
+                    "quint" => '',
                     "quad" => 118786,
                     "triple" => 130786,
                     "double" => 152786,
                     "single" => 220786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->eli => [
                     "id" => 7,
@@ -390,10 +436,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => '',
+                    "quint" => '',
                     "quad" => 132786,
                     "triple" => 143786,
                     "double" => 160786,
                     "single" => 236786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->est => [
                     "id" => 8,
@@ -402,10 +450,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => '',
+                    "quint" => '',
                     "quad" => 162786,
                     "triple" => 183786,
                     "double" => 224786,
                     "single" => 364786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->exe => [
                     "id" => 9,
@@ -414,10 +464,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => '',
+                    "quint" => '',
                     "quad" => 176786,
                     "triple" => 200786,
                     "double" => 250786,
                     "single" => 413786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
             ],
             
@@ -430,10 +482,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 76786,
+                    "quint" => '',
                     "quad" => 77786,
                     "triple" => 79786,
                     "double" => 82786,
                     "single" => 91786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -442,10 +496,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 83786,
+                    "quint" => '',
                     "quad" => 86786,
                     "triple" => 90786,
                     "double" => 97786,
                     "single" => 120786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -454,10 +510,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 87786,
+                    "quint" => '',
                     "quad" => 90786,
                     "triple" => 95786,
                     "double" => 104786,
                     "single" => 133786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->bro => [
                     "id" => 4,
@@ -466,10 +524,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 91786,
+                    "quint" => '',
                     "quad" => 94786,
                     "triple" => 100786,
                     "double" => 111786,
                     "single" => 145786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -478,10 +538,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => 99786,
+                    "quint" => '',
                     "quad" => 104786,
                     "triple" => 113786,
                     "double" => 131786,
                     "single" => 184786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -490,10 +552,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => '',
+                    "quint" => '',
                     "quad" => 122786,
                     "triple" => 135786,
                     "double" => 161786,
                     "single" => 238786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->eli => [
                     "id" => 7,
@@ -502,10 +566,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => '',
+                    "quint" => '',
                     "quad" => 138786,
                     "triple" => 150786,
                     "double" => 170786,
                     "single" => 257786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->est => [
                     "id" => 8,
@@ -514,10 +580,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => '',
+                    "quint" => '',
                     "quad" => 172786,
                     "triple" => 196786,
                     "double" => 243786,
                     "single" => 403786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->exe => [
                     "id" => 9,
@@ -526,10 +594,12 @@ class UmrahPackageFromIndiaDummy extends Component
                     "days" => 16,
                     "airline" => $this->sa, 
                     "sharing" => '',
+                    "quint" => '',
                     "quad" => 188786,
                     "triple" => 216786,
                     "double" => 272786,
                     "single" => 459786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
 
                 ],
             ],
@@ -548,11 +618,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 3,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 25786,
                     "quad" => 26786,
                     "triple" => 27786,
                     "double" => 28786,
                     "single" => 29786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -560,11 +632,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 3,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 27786,
                     "quad" => 28786,
                     "triple" => 29786,
                     "double" => 30786,
                     "single" => 32786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -572,11 +646,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 3,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 28786,
                     "quad" => 29786,
                     "triple" => 30786,
                     "double" => 31786,
                     "single" => 35786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
 
                 $this->bro=> [
@@ -585,11 +661,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 3,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 29786,
                     "quad" => 30786,
                     "triple" => 31786,
                     "double" => 32786,
                     "single" => 37786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -597,11 +675,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 3,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 30786,
                     "quad" => 32786,
                     "triple" => 35786,
                     "double" => 37786,
                     "single" => 42786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -609,11 +689,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 3,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 32786,
                     "quad" => 33786,
                     "triple" => 37786,
                     "double" => 40786,
                     "single" => 53786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
             ],
 
@@ -624,11 +706,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 27786,
                     "quad" => 28786,
                     "triple" => 29786,
                     "double" => 30786,
                     "single" => 31786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -636,11 +720,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 29786,
                     "quad" => 30786,
                     "triple" => 31786,
                     "double" => 32786,
                     "single" => 39786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -648,11 +734,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 30786,
                     "quad" => 31786,
                     "triple" => 32786,
                     "double" => 35786,
                     "single" => 44786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
 
                 $this->bro=> [
@@ -661,11 +749,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 31786,
                     "quad" => 32786,
                     "triple" => 33786,
                     "double" => 37786,
                     "single" => 46786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -673,11 +763,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 33786,
                     "quad" => 34786,
                     "triple" => 36786,
                     "double" => 41786,
                     "single" => 55786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -685,11 +777,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 37786,
                     "quad" => 39786,
                     "triple" => 43786,
                     "double" => 50786,
                     "single" => 72786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
             ],
 
@@ -700,11 +794,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 8,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 28786,
                     "quad" => 29786,
                     "triple" => 30786,
                     "double" => 31786,
                     "single" => 36786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -712,11 +808,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 8,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 32786,
                     "quad" => 33786,
                     "triple" => 35786,
                     "double" => 39786,
                     "single" => 50786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -724,11 +822,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 8,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 34786,
                     "quad" => 36786,
                     "triple" => 38786,
                     "double" => 44786,
                     "single" => 59786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
 
                 $this->bro=> [
@@ -737,11 +837,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 35786,
                     "quad" => 37786,
                     "triple" => 40786,
                     "double" => 45786,
                     "single" => 77786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -749,11 +851,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 8,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 39786,
                     "quad" => 41786,
                     "triple" => 45786,
                     "double" => 53786,
                     "single" => 77786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -761,11 +865,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 45786,
                     "quad" => 49786,
                     "triple" => 54786,
                     "double" => 66786,
                     "single" => 99786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
             ],
 
@@ -776,11 +882,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 10,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 29786,
                     "quad" => 31786,
                     "triple" => 32786,
                     "double" => 33786,
                     "single" => 39786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -788,11 +896,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 10,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 34786,
                     "quad" => 35786,
                     "triple" => 38786,
                     "double" => 42786,
                     "single" => 56786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -800,11 +910,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 10,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 37786,
                     "quad" => 39786,
                     "triple" => 42786,
                     "double" => 48786,
                     "single" => 68786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
 
                 $this->bro=> [
@@ -813,11 +925,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 10,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 38786,
                     "quad" => 40786,
                     "triple" => 44786,
                     "double" => 51786,
                     "single" => 72786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -825,11 +939,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 10,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 42786,
                     "quad" => 45786,
                     "triple" => 50786,
                     "double" => 60786,
                     "single" => 90786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -837,11 +953,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 5,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 51786,
                     "quad" => 55786,
                     "triple" => 62786,
                     "double" => 76786,
                     "single" => 118786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
             ],
         ];
@@ -856,11 +974,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 18,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 34786,
                     "quad" => 36786,
                     "triple" => 38786,
                     "double" => 41786,
                     "single" => 51786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -868,11 +988,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 18,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 42786,
                     "quad" => 45786,
                     "triple" => 49786,
                     "double" => 57786,
                     "single" => 82786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -880,11 +1002,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 18,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 48786,
                     "quad" => 51786,
                     "triple" => 57786,
                     "double" => 68786,
                     "single" => 103786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
 
                 $this->bro=> [
@@ -893,11 +1017,13 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 18,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 50786,
                     "quad" => 54786,
                     "triple" => 60786,
                     "double" => 73786,
                     "single" => 110786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -905,6 +1031,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 18,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 57786,
                     "quad" => 63786,
                     "triple" => 72786,
@@ -917,6 +1044,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 18,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 72786,
                     "quad" => 80786,
                     "triple" => 93786,
@@ -931,6 +1059,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 20,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 35786,
                     "quad" => 37786,
                     "triple" => 39786,
@@ -943,6 +1072,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 20,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 44786,
                     "quad" => 47786,
                     "triple" => 51786,
@@ -955,6 +1085,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 20,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 50786,
                     "quad" => 54786,
                     "triple" => 60786,
@@ -968,6 +1099,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 20,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 53786,
                     "quad" => 57786,
                     "triple" => 64786,
@@ -980,6 +1112,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 20,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 61786,
                     "quad" => 67786,
                     "triple" => 77786,
@@ -992,6 +1125,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 20,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 78786,
                     "quad" => 86786,
                     "triple" => 100786,
@@ -1006,6 +1140,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 25,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 38786,
                     "quad" => 41786,
                     "triple" => 43786,
@@ -1018,6 +1153,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 25,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 49786,
                     "quad" => 53786,
                     "triple" => 58786,
@@ -1030,6 +1166,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 25,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 57786,
                     "quad" => 62786,
                     "triple" => 70786,
@@ -1043,6 +1180,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 25,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 60786,
                     "quad" => 66786,
                     "triple" => 74786,
@@ -1055,6 +1193,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 25,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 70786,
                     "quad" => 78786,
                     "triple" => 90786,
@@ -1067,6 +1206,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 25,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 91786,
                     "quad" => 102786,
                     "triple" => 119786,
@@ -1081,6 +1221,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 30,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 41786,
                     "quad" => 44786,
                     "triple" => 47786,
@@ -1093,6 +1234,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 30,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 54786,
                     "quad" => 58786,
                     "triple" => 65786,
@@ -1105,6 +1247,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 30,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 64786,
                     "quad" => 69786,
                     "triple" => 79786,
@@ -1118,6 +1261,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 30,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 68786,
                     "quad" => 74786,
                     "triple" => 84786,
@@ -1130,6 +1274,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 30,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 80786,
                     "quad" => 89786,
                     "triple" => 104786,
@@ -1142,6 +1287,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "city" => '',
                     "days" => 30,
                     "airline" => '',
+                    "sharing" => '',
                     "quint" => 105786,
                     "quad" => 117786,
                     "triple" => 138786,
