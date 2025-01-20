@@ -22,13 +22,17 @@
                         <div class="col-md-9">
                             <div class="row g-2">
                                 <form class="col-md-4"  wire:submit.prevent="">
-                                    <select class="form-select" wire:model.live="searchCity">
-                                        <option value='' selected>City</option>
+                                    <select class="form-select" wire:model.live="searchByCity">
+                                        {{-- <option value='' selected>City</option>
                                         <option value="MAKKAH">MAKKAH</option>
                                         <option value="MADINAH">MADINAH</option>
                                         <option value="BAGHDAD">BAGHDAD</option>
                                         <option value="NAJAF">NAJAF</option>
-                                        <option value="KARBALA">KARBALA</option>
+                                        <option value="KARBALA">KARBALA</option> --}}
+                                        <option value="" selected disabled>select city</option>
+                                        @foreach ($cities as $ct)
+                                            <option value="{{$ct}}" >{{ucfirst($ct)}}</option>
+                                        @endforeach
                                     </select>
                                 </form>
                                 <form class="col-md-4" wire:submit.prevent="">
@@ -61,9 +65,9 @@
                     <h6 class="section-title text-center text-primary text-uppercase">Our Packages</h6>
                     <!-- <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Hotels</span></h1> -->
                 </div>
-                <div class="row g-4">
+                <div class="row g-4" >
                     <h1>Umrah Packages</h1>
-                    @foreach ($umrahIndia as $city => $packages)
+                    @foreach ($dummyarray as $city => $packages)
                         <h2>{{ ucfirst($city) }} Packages</h2>
                         @foreach ($packages as $type => $package)
                             <div>
