@@ -8,21 +8,29 @@ use App\Http\Controllers\RoutingController;
 use App\Livewire\Admin\Components\AddDepartureCity;
 use App\Livewire\Admin\Components\AddflightManagent;
 use App\Livewire\Admin\Components\AddHotalDetais;
+use App\Livewire\Admin\Components\AddInclusionMaster;
+use App\Livewire\Admin\Components\AddPackageTypeMaster;
 use App\Livewire\Admin\Components\AddVisa;
 use App\Livewire\Admin\Components\DepartureCity;
 use App\Livewire\Admin\Components\FlightManagent;
+use App\Livewire\Admin\Components\InclusionMaster;
 use App\Livewire\Admin\Components\ListAllVisa;
 use App\Livewire\Admin\Components\ListHotalDetails;
+use App\Livewire\Admin\Components\ListUmrahPackages;
 use App\Livewire\Admin\Components\NewsLetter;
 use App\Livewire\Admin\Components\PackageRequest;
 
 
 
 use App\Livewire\Admin\Components\PackageRequestHistory;
+use App\Livewire\Admin\Components\PackageTypeMaster;
+
 use App\Livewire\Admin\Components\RamzaanPackage;
+
 use App\Livewire\Admin\Components\RequestHistory;
 use App\Livewire\Admin\Components\UmrahLandPackage;
 use App\Livewire\Admin\Components\ViewHotelDetails;
+use App\Livewire\Admin\Components\ViewUmrahPackages;
 use App\Livewire\Admin\Components\VisaRequest;
 use App\Livewire\Admin\PackageManager\AdminViewPackage;
 use App\Livewire\Blog;
@@ -49,6 +57,8 @@ use App\Livewire\UmrahPackageSharjah;
 use App\Livewire\UmrahVisaFromDubai;
 use App\Livewire\UserAbout;
 use App\Livewire\SaudiVisa;
+use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
+use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
 use Illuminate\Support\Facades\Artisan;
@@ -72,7 +82,8 @@ Route::get('/term-of-service',TermsOfService::class)->name('term-of-service');
 Route::get('/FAQ',FAQ::class)->name('FAQ');
 Route::get('/hotels',Hotels::class)->name('hotels');
 Route::get('/hotel-detail/{id}',HotelSingleDetail::class)->name('hotel-Detail');
-
+Route::get('/umrah-packageFromindia',UmrahPackageFromIndiaDummy::class)->name('umrahPackageFromIndia');
+Route::get('/ramzan-packageFromindia',RamzanPackageFromIndiaDummy::class)->name('ramzanPackageFromIndia');
 
 Route::post('/send-contact-details',[ContactMailController::class,'sendDetails'])->name('send.details');
 
@@ -113,6 +124,8 @@ Route::get('/admin/hotel-details', ListHotalDetails::class)->name('admin.listHot
 Route::get('/admin/add-hotel-details',AddHotalDetais::class)->name('admin.addHotelDetails');
 Route::get('/admin/edit-hotal/{id}',AddHotalDetais::class)->name('editHotelData');
 Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelData');
+Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
+Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');
 Route::get('/admin/umrah-land-package',UmrahLandPackage::class)->name('admin.umrah-land-packages');
 Route::get('/admin/flight-management',FlightManagent::class)->name('admin.flight-managent');
 Route::get('/admin/add-flight-details',AddflightManagent::class)->name('addFlight');
@@ -120,6 +133,12 @@ Route::get('/flightDataEdit/{id}',AddflightManagent::class)->name('flightDataEdi
 Route::get('/admin/departure-city',DepartureCity::class)->name('admin.departure-city');
 Route::get('/admin/add-departure-city',AddDepartureCity::class)->name('add.departureCity');
 Route::get('/admin/EditCity/{id}',AddDepartureCity::class)->name('editCitydata');
+Route::get('/admin/package-types',PackageTypeMaster::class)->name('admin.package-types');
+Route::get('/admin/add-package-type',AddPackageTypeMaster::class)->name('addPackageType');
+Route::get('/admin/editPackageType/{id}',AddPackageTypeMaster::class)->name('packageTypeEdit');
+Route::get('/admin/inclusion',InclusionMaster::class)->name('admin.inclusion');
+Route::get('/admin/add-inclusion',AddInclusionMaster::class)->name('addInclusions');
+Route::get('/admin/editInclusion/{id}',AddInclusionMaster::class)->name('editInclusion');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
 // ---------------------------
 Route::get('/optimize' ,[AuthController::class,'clearCache']);

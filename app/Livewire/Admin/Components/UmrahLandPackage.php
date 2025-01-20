@@ -10,6 +10,10 @@ use App\Models\mainPackage;
 use App\Models\PackageDetail;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Illuminate\Support\Str;
+use App\Models\PackageType;
+use App\Models\inclusion;
+use App\Models\FlightManagement;
+use App\Models\DepartureCity;
 
 class UmrahLandPackage extends Component
 {
@@ -22,17 +26,27 @@ class UmrahLandPackage extends Component
     public $madina_rating = [];
     public $madinaHotel = [], $madina_hotel = [];
     public $packageType = [];
+    Public $packageIncludes = [];
+    public $flights = [];
+    public $departureCities = [];
+    public $DepartureCity = [];
     public $food_type = [];
     public  $laundray_type = [];
     public $includes = [];
+    public $flightList = [];
 
     public $g_share_price = [], $qt_share_price = [], $qd_share_price = [], $t_share_price = [], $d_share_price = [], $single_price = [], $child_w_b = [], $child_wo_b = [], $infants = [];
 
     public $paymentPolicy, $importantNotes, $cancellationPolicy, $FlightTransport, $packageMeals, $packageVisaTaxes, $packageInclusion, $packageExclusion, $packageItinerary;
 
+    public function mount(){
+        $this->packageType = PackageType::where('delete_status',1)->get();
+        $this->packageIncludes = inclusion::where('delete_status',1)->get();
+        $this->flightList = FlightManagement::where('delete_status',1)->get();
+        $this->DepartureCity = DepartureCity::where('delete_status',1)->get();
+    }
     public function getMakkaHotel($index)
     {
-
         // Fetch hotels based on the selected rating
         $hotels = HotelDetail::where('hotelStarRating', $this->makka_rating[$index])
             ->where('deleteStatus',1)
@@ -107,23 +121,33 @@ class UmrahLandPackage extends Component
     }
     
 
-                public function save(){
-                    foreach ($this->package_type_ids as $key => $value) {
-                        $this->validatePackage($key);
-                    }
-
-                // Create package
-                //dump($this->package_type_ids);
-                $keys = array_values($this->package_type_ids);
-                //dump($keys);
-                $id_string = implode(',', $keys);
-                //dd($id_string);
+        public function save(){
+            foreach ($this->package_type_ids as $key => $value) {
+                $this->validatePackage($key);
+            }
+            $packageImagePath = $this->packageImage ? $this->packageImage->store('uploads', 'public') : null;
+            $key = array_values($this->package_type_ids);
+            $id_string = implode(',', $key);
+            $keys = array_values($this->includes);
+            $package_includes = implode(',', $keys);
         
+            // Use $this->flights instead of $this->keys
+            $allFlights = implode(',', $this->flights);
+            //dump($allFlights);
+        
+            // Using $this->departureCities
+            $values = array_values($this->departureCities);
+            $departCity = implode(',', $values);
+            //dump($departCity);
+
                 $pkg_data = [
                     'name' => $this->package_name,
                     'package_type_ids' => $id_string,
                     'description' => $this->packageDescription,
-                    'packageImage' => $this->packageImage,
+                    'packageImage' => $packageImagePath,
+                    'package_includes' =>  $package_includes,
+                    'flights' => $allFlights,
+                    'Depart_city' => $departCity,
                     'payment_policy' => $this->paymentPolicy,
                     'important_notes' => $this->importantNotes,
                     'cancellation_policy' => $this->cancellationPolicy,
@@ -136,14 +160,14 @@ class UmrahLandPackage extends Component
                     'delete_status' => true,
                 ];
 
-                $package = mainPackage::create($pkg_data);
+                 $package = mainPackage::create($pkg_data);
 
-            //   dump($package);
+                //dump($package);
 
                 //Create Package details
-                    $details_data = [];
-                    $keys = array_values($this->includes);
-                    $package_includes = implode(',', $keys);
+                    // $details_data = [];
+                    // $keys = array_values($this->includes);
+                    // $package_includes = implode(',', $keys);
 
                     foreach ($this->package_type_ids as $key => $value) {
                         // $keys = array_keys($this->package_includes[$key]);
@@ -167,7 +191,7 @@ class UmrahLandPackage extends Component
                             'child_with_bed' => isset($this->child_w_b[$key]) && $this->child_w_b[$key] != "" ? $this->child_w_b[$key] : 0, 
                             'child_no_bed' => $this->child_wo_b[$key],
                             'infant' => isset($this->infants[$key]) && $this->infants[$key] != "" ? $this->infants[$key] : 0,
-                            'package_includes' => $package_includes,
+                            
                         ];
                     }
                     //dd($details_data);
@@ -192,6 +216,8 @@ class UmrahLandPackage extends Component
                         'food_type',
                         'laundray_type',
                         'includes',
+                        'flights',
+                        'departureCities',
                         'g_share_price',
                         'qt_share_price',
                         'qd_share_price',

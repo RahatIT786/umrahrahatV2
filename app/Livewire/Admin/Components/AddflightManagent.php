@@ -56,7 +56,7 @@ class AddflightManagent extends Component
             FlightManagement::create([
                 'FlightName' => $this->FlightName,
                 'FlightImagePath' => $FlightImagePath,
-                'delete_status' => 1,
+                'delete_status' => true,
             ]);
             session()->flash('message', 'Flight details added successfully!');
         }
