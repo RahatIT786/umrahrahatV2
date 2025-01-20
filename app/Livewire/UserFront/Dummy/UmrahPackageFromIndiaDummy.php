@@ -1057,6 +1057,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 72786,
                     "double" => 90786,
                     "single" => 143786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -1070,6 +1071,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 93786,
                     "double" => 118786,
                     "single" => 194786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
             ],
             $this->tweentyDays => [
@@ -1085,6 +1087,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 39786,
                     "double" => 43786,
                     "single" => 54786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -1098,6 +1101,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 51786,
                     "double" => 61786,
                     "single" => 89786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -1111,6 +1115,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 60786,
                     "double" => 73786,
                     "single" => 111786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
 
                 $this->bro=> [
@@ -1125,6 +1130,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 64786,
                     "double" => 78786,
                     "single" => 120786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -1138,6 +1144,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 77786,
                     "double" => 97786,
                     "single" => 156786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -1151,6 +1158,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 100786,
                     "double" => 128786,
                     "single" => 213786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
             ],
             $this->tweentyfive => [
@@ -1166,6 +1174,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 43786,
                     "double" => 48786,
                     "single" => 62786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -1179,6 +1188,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 58786,
                     "double" => 70786,
                     "single" => 105786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -1192,6 +1202,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 70786,
                     "double" => 86786,
                     "single" => 133786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
 
                 $this->bro=> [
@@ -1206,6 +1217,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 74786,
                     "double" => 92786,
                     "single" => 144786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -1219,6 +1231,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 90786,
                     "double" => 115786,
                     "single" => 190786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -1232,6 +1245,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 119786,
                     "double" => 155786,
                     "single" => 260786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
             ],
             $this->thitydays => [
@@ -1247,6 +1261,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 47786,
                     "double" => 53786,
                     "single" => 70786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->rl => [
                     "id" => 2,
@@ -1260,6 +1275,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 65786,
                     "double" => 79786,
                     "single" => 122786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ],
                 $this->cl => [
                     "id" => 3,
@@ -1273,6 +1289,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 79786,
                     "double" => 98786,
                     "single" => 155786,
+                    "image" => 'asserts/user/img/aboutimg2.jpg'
                 ],
 
                 $this->bro=> [
@@ -1287,6 +1304,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 84786,
                     "double" => 105786,
                     "single" => 168786,
+                    "image" => 'asserts/user/img/aboutimg3.jpeg'
                 ],
                 $this->sil => [
                     "id" => 5,
@@ -1300,6 +1318,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 104786,
                     "double" => 133786,
                     "single" => 223786,
+                    "image" => 'asserts/user/img/aboutimg4.jpg'
                 ],
                 $this->gol => [
                     "id" => 6,
@@ -1313,6 +1332,7 @@ class UmrahPackageFromIndiaDummy extends Component
                     "triple" => 138786,
                     "double" => 181786,
                     "single" => 307786,
+                    "image" => 'asserts/user/img/aboutimg1.jpg'
                 ], 
             ]
         ];
