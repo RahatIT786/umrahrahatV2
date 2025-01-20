@@ -21,36 +21,56 @@
                         </div>
                         <div class="col-md-9">
                             <div class="row g-2">
-                                <form class="col-md-4"  wire:submit.prevent="">
-                                    <select class="form-select" wire:model.live="searchByCity">
-                                        {{-- <option value='' selected>City</option>
-                                        <option value="MAKKAH">MAKKAH</option>
-                                        <option value="MADINAH">MADINAH</option>
-                                        <option value="BAGHDAD">BAGHDAD</option>
-                                        <option value="NAJAF">NAJAF</option>
-                                        <option value="KARBALA">KARBALA</option> --}}
-                                        <option value="" selected disabled>select city</option>
-                                        @foreach ($cities as $ct)
-                                            <option value="{{$ct}}" >{{ucfirst($ct)}}</option>
-                                        @endforeach
-                                    </select>
-                                </form>
                                 <form class="col-md-4" wire:submit.prevent="">
-                                    <select class="form-select" wire:model.live="searchRating">
-                                        <option value='' selected>Star Rating</option>
-                                        <option value="2">2 Stars</option>
+                                    <select class="form-select" wire:model.live="filtermodel">
+                                        <option value='0' selected disabled>select option</option>
+                                        <option value="1">search by City</option>
+                                        <option value="2">search by Days</option>
+                                        {{-- <option value="2">2 Stars</option>
                                         <option value="3">3 Stars</option>
                                         <option value="4">4 Stars</option>
                                         <option value="5">5 Stars</option>
                                         <option value="6">Building Accomutation Stars</option>
-                                        <option value="7">Standard Hotel Stars</option>
+                                        <option value="7">Standard Hotel Stars</option> --}}
                                     </select>
                                 </form>
-                                <div class="col-md-4">
+                               @if ($bycity)
+                               <form class="col-md-4"  wire:submit.prevent="">
+                                <select class="form-select" wire:model.live="searchByCity">
+                                    {{-- <option value='' selected>City</option>
+                                    <option value="MAKKAH">MAKKAH</option>
+                                    <option value="MADINAH">MADINAH</option>
+                                    <option value="BAGHDAD">BAGHDAD</option>
+                                    <option value="NAJAF">NAJAF</option>
+                                    <option value="KARBALA">KARBALA</option> --}}
+                                    <option value="" selected disabled>select city</option>
+                                    @foreach ($cities as $ct)
+                                        <option value="{{$ct}}" >{{ucfirst($ct)}}</option>
+                                    @endforeach
+                                </select>
+                            </form>
+                                   
+                               @endif
+
+                               @if ($bydays)
+                               <form class="col-md-4"  wire:submit.prevent="">
+                                <select class="form-select" wire:model.live="searchByDays">
+                                   
+                                    <option value="" selected disabled>select Days</option>
+                                    @foreach ($days as $day)
+                                        <option value="{{$day}}" >{{$day}}</option>
+                                        
+                                    @endforeach
+                                </select>
+                            </form>
+                                   
+                               @endif
+                               
+                                {{-- <div class="col-md-4">
                                     <form wire:submit.prevent="" class="date" id="date2" >
                                         <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="No of Days" />
                                     </form>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
