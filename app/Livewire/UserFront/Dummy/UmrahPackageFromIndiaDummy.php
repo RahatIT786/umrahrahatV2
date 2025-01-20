@@ -40,13 +40,25 @@ class UmrahPackageFromIndiaDummy extends Component
     public $sgl = "single"; 
 
     // Umrah India package array (moved to mount method)
+    public $cities=['mumbai','delhi','lucknow','bangalore'];
     public $umrahIndia = [];
+
+
+    // search filter variable for wire model 
+    public $searchByCity;
 
     public function mount()
     {
         $this->umrahPackage();
 
     }
+
+    
+
+
+
+
+
     public function umrahPackage(){
         $this->umrahIndia = [
             $this->mb => [
@@ -510,10 +522,64 @@ class UmrahPackageFromIndiaDummy extends Component
 
         ];
     }
+    public $dummyarray=[];
 
     #[Layout('user.Layouts.app')]
     public function render()
     {
-        return view('livewire.user_front.dummy.umrah-package-from-india-dummy');
+        // $filteredPackages = [];
+
+        // if($this->searchByCity){
+        //   foreach($this->umrahIndia as $city => $packages){
+        //     if($city === $this->searchByCity){
+        //         $filteredPackages[$city]=$packages;
+        //     }
+        //   }
+        // }
+
+
+        if($this->searchByCity === 'mumbai'){
+            $this->dummyarray = [$this->mb => $this->umrahIndia[$this->mb]];
+        }
+        elseif($this->searchByCity === 'bangalore'){
+            $this->dummyarray = [$this->ban => $this->umrahIndia[$this->ban]];
+
+        }
+        elseif($this->searchByCity === 'lucknow'){
+            $this->dummyarray = [$this->l => $this->umrahIndia[$this->l]];
+
+        }
+        elseif($this->searchByCity === 'delhi'){
+            $this->dummyarray = [$this->del => $this->umrahIndia[$this->del]];
+
+        }
+        else{
+            $this->dummyarray = [$this->mb => $this->umrahIndia[$this->mb]];
+            
+          
+          
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // return view('livewire.user_front.dummy.umrah-package-from-india-dummy',[
+        //     'filteredPackages' => $filteredPackages,
+        //     'cities' => array_keys($this->umrahIndia),
+        // ]);
+         return view('livewire.user_front.dummy.umrah-package-from-india-dummy',[
+            'umrahIndia'=>$this->umrahIndia 
+         ]);
     }
 }
