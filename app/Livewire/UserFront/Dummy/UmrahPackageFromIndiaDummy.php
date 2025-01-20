@@ -1350,11 +1350,13 @@ class UmrahPackageFromIndiaDummy extends Component
      if($this->filtermodel === '1'){
         $this->bydays=false;
         $this->bycity=true;
+        $this->searchByDays='';
 
     }
     elseif($this->filtermodel === '2'){
         $this->bycity=false;
         $this->bydays=true;
+        $this->searchByCity='';
 
     }
     else{
