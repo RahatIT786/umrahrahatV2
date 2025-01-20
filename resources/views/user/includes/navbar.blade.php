@@ -68,9 +68,10 @@
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('umrahByBus')}}" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
                                         <a href="{{route('umrahByAir')}}" class="dropdown-item">Umrah Packages By Flight From Dubai</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Bus </a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Flight </a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Umrah Packages from India</a>
+                                        <!-- <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Bus </a>
+                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Flight </a> -->
+                                        <a href="{{route('umrahPackageFromIndia')}}" class="dropdown-item">Umrah Packages from India</a>
+                                        <a href="{{route('ramzanPackageFromIndia')}}" class="dropdown-item">Ramzan Packages from India</a>
                                     </div>
                                 </div>
                               

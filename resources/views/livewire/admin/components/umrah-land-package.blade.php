@@ -21,56 +21,17 @@
                         </div>
 
                      <!-- Package Type* -->
-                     <div class="col-md-12 mb-3">
-                        <label class="form-label">Package Includes</label>
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Package Type</label>
 
                         <div class="d-flex">
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="SuperSaver" value="1" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="SuperSaver">Super Saver</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="Royal" value="2" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="Royal">Royal</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="Classic" value="3" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="Classic">Classic</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="Bronze" value="4" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="Bronze">Bronze</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="Silver" value="5" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="Silver">Silver</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="Gold" value="6" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="Gold">Gold</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="Elite" value="7" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="Elite">Elite</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="Esteem" value="8" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="Esteem">Esteem</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="Executive" value="9" wire:model.live="package_type_ids">
-                                <label class="form-check-label" for="Executive">Executive</label>
-                            </div>
+                            @foreach ($packageType as $key => $value)
+                                <div class="form-check" style="margin-right:20px">
+                                    <input class="form-check-input" type="checkbox" id="{{ $value->id }}" value="{{ $value->id }}" wire:model.live="package_type_ids">
+                                    <label class="form-check-label" for="{{ $value->id }}">{{ $value->packageType }}</label>
+                                </div>
+                            @endforeach
                         </div>
-
                         @error('packageType') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
@@ -93,12 +54,12 @@
                                 <div class="mt-3">
                                     <img src="{{ $packageImage->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
-                            {{--@elseif ($hotelId && $hotelMainImagePath)
+                            @elseif ( $packageImagePath)
                                 <div class="mt-3">
-                                    <img src="{{ asset($hotelMainImagePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
+                                    <img src="{{ asset($packageImagePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
-                            @endif--}}
                             @endif
+        
                         </div>
 
 
@@ -107,47 +68,44 @@
                         <label class="form-label">Package Includes</label>
 
                         <div class="d-flex">
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="zamzam" value="zamzam" wire:model="includes">
-                                <label class="form-check-label" for="zamzam">Zamzam</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="transfers" value="transfers" wire:model="includes">
-                                <label class="form-check-label" for="transfers">Transfers</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="saudiSim" value="saudiSim" wire:model="includes">
-                                <label class="form-check-label" for="saudiSim">Saudi Sim</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="welcomeKit" value="welcomeKit" wire:model="includes">
-                                <label class="form-check-label" for="welcomeKit">Welcome Kit</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="meals" value="meals" wire:model="includes">
-                                <label class="form-check-label" for="meals">Meals</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="ziyarat" value="ziyarat" wire:model="includes">
-                                <label class="form-check-label" for="ziyarat">Ziyarat</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="visa" value="visa" wire:model="includes">
-                                <label class="form-check-label" for="visa">Visa</label>
-                            </div>
-
-                            <div class="form-check" style="margin-right:20px">
-                                <input class="form-check-input" type="checkbox" id="ticket" value="ticket" wire:model="includes">
-                                <label class="form-check-label" for="ticket">Ticket</label>
-                            </div>
+                            @foreach ($packageIncludes as $index => $value)
+                                <div class="form-check" style="margin-right:20px">
+                                    <input class="form-check-input" type="checkbox" id="{{$value->InclusionName}}" value="{{$value->id}}" wire:model="includes">
+                                    <label class="form-check-label" for="{{$value->InclusionName}}">{{$value->InclusionName}}</label>
+                                </div>
+                            @endforeach
                         </div>
                         @error('includes') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Flight Name -->
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Flights</label>
+
+                        <div class="d-flex">
+                            @foreach ($flightList as $index => $value)
+                                <div class="form-check" style="margin-right:20px">
+                                    <input class="form-check-input" type="checkbox" id="{{$value->FlightName}}" value="{{$value->id}}" wire:model="flights">
+                                    <label class="form-check-label" for="{{$value->FlightName}}">{{$value->	FlightName}}</label>
+                                </div>
+                            @endforeach
+                        </div>
+                        @error('flights') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Departure City Name -->
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Departure City</label>
+
+                        <div class="d-flex">
+                            @foreach ($DepartureCity as $index => $value)
+                                <div class="form-check" style="margin-right:20px">
+                                    <input class="form-check-input" type="checkbox" id="{{$value->CityName}}" value="{{$value->id}}" wire:model="departureCities">
+                                    <label class="form-check-label" for="{{$value->CityName}}">{{$value->CityName}}</label>
+                                </div>
+                            @endforeach
+                        </div>
+                        @error('departureCity') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
                     <!-- Policies -->
@@ -228,25 +186,11 @@
                      @foreach ( $package_type_ids as $k => $v )
                          <hr>
                          <div class="card-header">
-                            @if ($v == 1)
-                              <h4>Super Saver</h4>
-                            @elseif($v == 2)
-                              <h4>Gold</h4>
-                            @elseif($v == 3)
-                              <h4>Silver</h4>
-                            @elseif($v == 4)
-                              <h4>Executive</h4>
-                            @elseif($v == 5)
-                              <h4>Esteem</h4>
-                            @elseif($v == 6)
-                              <h4>Elite</h4>
-                            @elseif($v == 7)
-                              <h4>Bronze</h4>
-                            @elseif($v == 8)
-                              <h4>Royal</h4>
-                            @elseif($v == 9)
-                              <h4>Classic</h4>
-                            @endif
+                            @foreach ($packageType as $key => $value)
+                               @if ( $v == $value->id)
+                                  <h4>{{ $value->packageType }}</h4>
+                               @endif 
+                            @endforeach
                         </div>
                         <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
 

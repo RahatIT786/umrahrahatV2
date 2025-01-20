@@ -57,7 +57,7 @@ class AddDepartureCity extends Component
             DepartureCity::create([
                 'CityName' => $this->CityName,
                 'CityImagePath' => $CityImagePath,
-                'delete_status' => 1,
+                'delete_status' => true,
             ]);
             session()->flash('message', 'Departure City details added successfully!');
         }
