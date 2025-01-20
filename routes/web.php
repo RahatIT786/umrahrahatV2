@@ -24,6 +24,9 @@ use App\Livewire\Admin\Components\PackageRequest;
 
 use App\Livewire\Admin\Components\PackageRequestHistory;
 use App\Livewire\Admin\Components\PackageTypeMaster;
+
+use App\Livewire\Admin\Components\RamzaanPackage;
+
 use App\Livewire\Admin\Components\RequestHistory;
 use App\Livewire\Admin\Components\UmrahLandPackage;
 use App\Livewire\Admin\Components\ViewHotelDetails;
@@ -137,10 +140,13 @@ Route::get('/admin/inclusion',InclusionMaster::class)->name('admin.inclusion');
 Route::get('/admin/add-inclusion',AddInclusionMaster::class)->name('addInclusions');
 Route::get('/admin/editInclusion/{id}',AddInclusionMaster::class)->name('editInclusion');
 Route::post('/admin/logout',[AuthController::class,'logout'])->name('admin.logout');
+// ---------------------------
 Route::get('/optimize' ,[AuthController::class,'clearCache']);
 Route::get('/migrate' ,[AuthController::class,'migrate']);
 Route::get('/storageLink',[AuthController::class,'setStorageLink']);
+// ---------------------------
 
+Route::get('/package/ramzan',RamzaanPackage::class)->name('package.ramzan');
 
 
 
