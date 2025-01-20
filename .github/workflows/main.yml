@@ -22,13 +22,13 @@ jobs:
         run: composer install --no-progress --no-suggest --prefer-dist
 
       # Step 3: Set up PHP
-      # - name: Setup PHP 
-      #   uses: shivammathur/setup-php@v2
-      #   with:
-      #     php-version: '8.2'
-      #     extensions: mbstring, bcmath, pdo_mysql
-      #     ini-values: post_max_size=256M, upload_max_filesize=256M
-      #     coverage: none
+      - name: Setup PHP 
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, bcmath, pdo_mysql
+          ini-values: post_max_size=256M, upload_max_filesize=256M
+          coverage: none
 
       # Step 4: Copy .env file
       - name: Copy .env file
