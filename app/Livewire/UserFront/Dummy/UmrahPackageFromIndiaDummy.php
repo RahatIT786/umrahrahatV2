@@ -3,9 +3,11 @@
 namespace App\Livewire\UserFront\Dummy;
 
 use Livewire\Component;
+use Livewire\Attributes\Layout;
 
 class UmrahPackageFromIndiaDummy extends Component
 {
+
 
 
     // AIRLINE VARIABLES 
@@ -86,6 +88,9 @@ class UmrahPackageFromIndiaDummy extends Component
 
 
 
+
+
+    #[Layout('user.Layouts.app')]
 
     public function render()
     {
