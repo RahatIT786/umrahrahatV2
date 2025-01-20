@@ -40,28 +40,48 @@ class UmrahPackageFromIndiaDummy extends Component
     public $sgl = "single"; 
 
     // Days
-    public $threedays = "3 Days";
-    public $fivedays = "5 Days";
-    public $eightdays = "8 Days";
-    public $tendays = "10 Days"; 
-    public $eighteendays = "18 Days";
-    public $tweentyDays = "20 Days";
-    public $tweentyfive = "25 Days";
-    public $thitydays = "30 Days";
+    // public $threedays = "3";
+    // public $fivedays = "5";
+    // public $eightdays = "8";
+    // public $tendays = "10"; 
+    // public $eighteendays = "18";
+    // public $tweentyDays = "20";
+    // public $tweentyfive = "25";
+    // public $thitydays = "30";
+    public $threedays = "three";
+    public $fivedays = "five";
+    public $eightdays = "eight";
+    public $tendays = "ten"; 
+    public $eighteendays = "eighteen";
+    public $tweentyDays = "twenty";
+    public $tweentyfive = "twentyfive";
+    public $thitydays = "thirty";
 
     // Umrah India package array (moved to mount method)
     public $cities=['mumbai','delhi','lucknow','bangalore'];
+    // public $days=['3','5 ','8','10','18','20','25','30',];
+    public $days=['three','five','eight','ten','eighteen','twenty','twentyfive','thirty'];
     public $umrahIndia = [];
     public $umrahShort = [];
     public $umrahLong = [];
     public $dummyarray=[];
 
+
+
     // search filter variable for wire model 
     public $searchByCity;
+    public $searchByDays;
+
+    public $filtermodel;
+
+    public $bycity;
+    public $bydays;
+
 
     public function mount()
     {
         $this->umrahPackage();
+        $this->umrahShortPackage();
 
 
     }
@@ -1302,40 +1322,68 @@ class UmrahPackageFromIndiaDummy extends Component
     #[Layout('user.Layouts.app')]
     public function render()
     {
-        // $filteredPackages = [];
+     // choose  filter type function 
+     if($this->filtermodel === '1'){
+        $this->bydays=false;
+        $this->bycity=true;
 
-        // if($this->searchByCity){
-        //   foreach($this->umrahIndia as $city => $packages){
-        //     if($city === $this->searchByCity){
-        //         $filteredPackages[$city]=$packages;
-        //     }
-        //   }
-        // }
+    }
+    elseif($this->filtermodel === '2'){
+        $this->bycity=false;
+        $this->bydays=true;
 
+    }
+    else{
+        $this->filtermodel = '0';
+    }
 
-        if($this->searchByCity === 'mumbai'){
+        // search by city filter function 
+        if($this->searchByCity === 'mumbai' && $this->filtermodel === '1'){
             $this->dummyarray = [$this->mb => $this->umrahIndia[$this->mb]];
         }
-        elseif($this->searchByCity === 'bangalore'){
+        elseif($this->searchByCity === 'bangalore'  && $this->filtermodel === '1'){
             $this->dummyarray = [$this->ban => $this->umrahIndia[$this->ban]];
 
         }
-        elseif($this->searchByCity === 'lucknow'){
+        elseif($this->searchByCity === 'lucknow'  && $this->filtermodel === '1'){
             $this->dummyarray = [$this->l => $this->umrahIndia[$this->l]];
 
         }
-        elseif($this->searchByCity === 'delhi'){
+        elseif($this->searchByCity === 'delhi'  && $this->filtermodel === '1'){
             $this->dummyarray = [$this->del => $this->umrahIndia[$this->del]];
 
         }
         else{
-            $this->dummyarray = [$this->mb => $this->umrahIndia[$this->mb]];
+            // $this->dummyarray = [$this->mb => $this->umrahIndia[$this->mb]];
             
           
           
         }
+
+       
         
 
+        // search by days filter function 
+ 
+        if($this->searchByDays === "three" && $this->filtermodel === '2' ){
+            // dd($this->searchByDays );
+            $this->dummyarray = [$this->threedays => $this->umrahShort[$this->threedays]];
+            // $this->dummyarray = [$this->l => $this->umrahIndia[$this->l]];
+            // dd($this->dummyarray);
+
+
+        }
+        elseif($this->searchByDays === "five" && $this->filtermodel === '2'){
+            // $this->dummyarray = [$this->del => $this->umrahIndia[$this->del]];
+            $this->dummyarray = [$this->fivedays => $this->umrahShort[$this->fivedays]];
+
+
+        }
+        elseif($this->searchByDays === "eight" && $this->filtermodel === '2'){
+            $this->dummyarray = [$this->ban => $this->umrahIndia[$this->ban]];
+
+
+        }
 
 
 
