@@ -76,13 +76,8 @@
 
                                 {{-- <p><strong>Sharing Price:</strong> {{ $package['sharing'] ?? ''}}</p> --}}
                                 @if (!empty($package['sharing']))
-    <p><strong>Sharing Price:</strong> ${{ number_format($package['sharing'], 2) }}</p>
-@endif
-
-
-                                <p><strong>Sharing Price:</strong> {{ $package['sharing'] == null ? 0 : 0 }}</p>
-
-
+                                    <p><strong>Sharing Price:</strong> ${{ number_format($package['sharing'], 2) }}</p>
+                                @endif
                                 <p><strong>Quad Price:</strong> {{ $package['quad'] }}</p>
                                 <p><strong>Triple Price:</strong> {{ $package['triple'] }}</p>
                                 <p><strong>Double Price:</strong> {{ $package['double'] }}</p>

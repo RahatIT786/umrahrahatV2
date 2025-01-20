@@ -44,7 +44,10 @@ class UmrahPackageFromIndiaDummy extends Component
 
     public function mount()
     {
-        // Now we can access instance variables here and populate $umrahIndia dynamically
+        $this->umrahPackage();
+
+    }
+    public function umrahPackage(){
         $this->umrahIndia = [
             $this->mb => [
                 $this->ss => [
@@ -158,7 +161,7 @@ class UmrahPackageFromIndiaDummy extends Component
                 ],
             ],
 
-            // bangalore 
+           
             $this->l => [
                 $this->ss => [
                     "id" => 1,
@@ -277,8 +280,9 @@ class UmrahPackageFromIndiaDummy extends Component
                     // "double" => 83786,
                     // "single" => 71786,
                 ],
-
             ],
+
+            // bangalore 
             $this->ban=>[
                 $this->ss => [
                     "id" => 1,
@@ -390,6 +394,8 @@ class UmrahPackageFromIndiaDummy extends Component
                     "single" => 413786,
                 ],
             ],
+            
+            //Delhi
             $this->del => [
                 $this->ss => [
                     "id" => 1,
