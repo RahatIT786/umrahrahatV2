@@ -62,6 +62,23 @@
                     <!-- <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Hotels</span></h1> -->
                 </div>
                 <div class="row g-4">
+                    <h1>Umrah Packages</h1>
+                    @foreach ($umrahIndia as $city => $packages)
+                        <h2>{{ ucfirst($city) }} Packages</h2>
+                        @foreach ($packages as $type => $package)
+                            <div>
+                                <h3>{{ ucfirst($package['name']) }} Package</h3>
+                                <p><strong>City:</strong> {{ ucfirst($package['city']) }}</p>
+                                <p><strong>Days:</strong> {{ $package['days'] }}</p>
+                                <p><strong>Airline:</strong> {{ $package['airline'] }}</p>
+                                <p><strong>Sharing Price:</strong> {{ $package['sharing'] }}</p>
+                                <p><strong>Quad Price:</strong> {{ $package['quad'] }}</p>
+                                <p><strong>Triple Price:</strong> {{ $package['triple'] }}</p>
+                                <p><strong>Double Price:</strong> {{ $package['double'] }}</p>
+                                <p><strong>Single Price:</strong> {{ $package['single'] }}</p>
+                            </div>
+                        @endforeach
+                    @endforeach
     
                 {{--    @if ($hotelDetails->count() > 0)
                         @foreach ($hotelDetails as $hotelDetail)
