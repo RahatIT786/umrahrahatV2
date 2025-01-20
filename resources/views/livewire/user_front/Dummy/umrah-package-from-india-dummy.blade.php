@@ -59,7 +59,7 @@
         </div>
         <!-- Booking End -->
     <!-- Room Start -->
-        <div class=" py-5">
+      {{--  <div class=" py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">Our Packages</h6>
@@ -75,10 +75,6 @@
                                 <p><strong>City:</strong> {{ ucfirst($package['city']) }}</p>
                                 <p><strong>Days:</strong> {{ $package['days'] }}</p>
                                 <p><strong>Airline:</strong> {{ $package['airline'] }}</p>  
-                                <p><strong>Sharing Price:</strong> {{ $package['sharing'] == '' }}</p>
-                                <p><strong>Airline:</strong> {{ $package['airline'] }}</p>
-
-                                {{-- <p><strong>Sharing Price:</strong> {{ $package['sharing'] ?? ''}}</p> --}}
                                 @if (!empty($package['sharing']))
                                     <p><strong>Sharing Price:</strong> ${{ number_format($package['sharing'], 2) }}</p>
                                 @endif
@@ -89,68 +85,99 @@
                             </div>
                         @endforeach
                     @endforeach
-    
-                {{--    @if ($hotelDetails->count() > 0)
-                        @foreach ($hotelDetails as $hotelDetail)
+                </div>
+            </div>
+        </div> --}}
+
+        <!-- Package Start -->
+       <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Our Package</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Package </span></h1>
+                </div>
+                <div class="row g-4">
+                @foreach ($dummyarray as $city => $packages)
+                    @foreach ($packages as $package )
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="room-item shadow rounded overflow-hidden">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="{{asset($hotelDetail->hotelMainImage)}}" style="height: 300px;width:100%" alt="">
-                                    <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$hotelDetail->hotelPrice}}/Night</small>
+                                    <img class="img-fluid" src="{{ asset($package['image']) }}" alt="" style="height: 15rem; width:100%;">
+                                    <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$package['days']}} Days</small>
                                 </div>
                                 <div class="p-4 mt-2">
                                     <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mb-0">{{ $hotelDetail->hotelName }}</h5>
-                                        
+                                        <h5 class="mb-0">{{$package['name']}}</h5>
+                                        <div class="ps-2 ">
+                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small>
+                                        </div>
                                     </div>
-                                    <div class="d-flex mb-3 justify-content-between">
-                                        <small class="border-end me-3 pe-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{$hotelDetail->hotelCity}}</small>
-                                        <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
-                                        @if($hotelDetail->hotelStarRating == '2')
-                                            <div class="ps-2">
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                            </div>
-                                        @elseif($hotelDetail->hotelStarRating == '3')
-                                            <div class="ps-2">
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                            </div>
-                                        @elseif($hotelDetail->hotelStarRating == '4')
-                                            <div class="ps-2">
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                            </div>
-                                        @elseif($hotelDetail->hotelStarRating == '5')
-                                            <div class="ps-2">
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                            </div>
+                                    <div class="d-flex mb-3 " style="font-size: 12px;">
+ 
+
+                                        @if (!empty($package['quad']))
+                                            <small class=" me-3 pe-3">
+                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span ><span style="font-size: 15px;"> &#8377;{{number_format($package['quad'], 2)}}</span></span>
+                                            </small>
+                                        @endif
+
+                                        @if (!empty($package['double']))
+                                            <small class="border-end me-3 pe-3">
+                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double : <span><span style="font-size: 15px;"> &#8377;{{number_format($package['double'], 2)}}</span></span>
+                                            </small>
+                                        @endif
+
+                                    </div>
+                                    <div class="d-flex mb-3 " style="font-size: 12px;">
+                                        
+                                        @if (!empty($package['triple']))
+                                            <small class="border-end me-3 pe-3">
+                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span><span style="font-size: 15px;"> &#8377;{{number_format($package['triple'], 2)}}</span></span>
+                                            </small>
+                                        @endif
+
+                                        @if (!empty($package['single']))
+                                            <small class=" me-3 pe-3">
+                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span ><span style="font-size: 15px;">&#8377;{{number_format($package['single'], 2)}}</span></span>
+                                            </small>
+                                        @endif
+
+                                    </div>
+                                    <div class="d-flex mb-3 " style="font-size: 12px;">
+                                        @if (!empty($package['sharing']))
+                                            <small class="border-end me-3 pe-3">
+                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span ><span style="font-size: 15px;"> &#8377;{{number_format($package['sharing'], 2)}}</span></span>
+                                            </small>
+                                        @endif
+
+                                        @if (!empty($package['quint']))
+                                            <small class="border-end me-3 pe-3">
+                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span ><span style="font-size: 15px;"> &#8377;{{number_format($package['quint'], 2)}}</span></span>
+                                            </small>
                                         @endif
                                     </div>
-                                    <p class="text-body mb-3">{{ \Illuminate\Support\Str::limit($hotelDetail->hotelDiscription, 250, '...') }}</p>
-                                    <div class="d-flex justify-content-between">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('hotel-Detail',['id'=>$hotelDetail->id])}}">View Detail</a>
-                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                                                   
+                                    <div>
+                                        <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">{{$package['days']}} Days ,    {{$package['days'] - 1}}  Nights  </p>
                                     </div>
+                                
+
+
+                                    <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
+
                                 </div>
                             </div>
                         </div>
-                        @endforeach
-                    @else
-                        <div class="d-flex justify-content-center align-items-center text-center" style="height: 100%;">
-                            <h3>Oops! It looks like there are no hotels that match your search criteria. Please try adjusting your filters.</h3>
-                        </div>
-                    @endif --}}
+                  @endforeach
+                @endforeach
                 </div>
             </div>
         </div>
+        <!-- package End -->
     <!-- Room End -->
 
 </section>
