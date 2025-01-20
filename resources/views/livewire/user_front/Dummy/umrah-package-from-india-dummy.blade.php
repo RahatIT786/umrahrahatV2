@@ -58,7 +58,7 @@
                                    
                                     <option value="" selected disabled>select Days</option>
                                     @foreach ($days as $day)
-                                        <option value="{{$day}}" >{{$day}}</option>
+                                        <option value="{{$day}}" >{{ucfirst($day)}}</option>
                                         
                                     @endforeach
                                 </select>
