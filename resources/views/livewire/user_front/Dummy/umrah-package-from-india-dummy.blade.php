@@ -136,51 +136,67 @@
                                             <small class="fa fa-star text-primary"></small>
                                         </div>
                                     </div>
-                                    <div class="d-flex mb-3 " style="font-size: 12px;">
- 
-
-                                        @if (!empty($package['quad']))
-                                            <small class=" me-3 pe-3">
-                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span ><span style="font-size: 15px;"> &#8377;{{number_format($package['quad'], 2)}}</span></span>
-                                            </small>
-                                        @endif
-
-                                        @if (!empty($package['double']))
-                                            <small class="border-end me-3 pe-3">
-                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double : <span><span style="font-size: 15px;"> &#8377;{{number_format($package['double'], 2)}}</span></span>
-                                            </small>
-                                        @endif
-
-                                    </div>
-                                    <div class="d-flex mb-3 " style="font-size: 12px;">
-                                        
-                                        @if (!empty($package['triple']))
-                                            <small class="border-end me-3 pe-3">
-                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span><span style="font-size: 15px;"> &#8377;{{number_format($package['triple'], 2)}}</span></span>
-                                            </small>
-                                        @endif
-
-                                        @if (!empty($package['single']))
-                                            <small class=" me-3 pe-3">
-                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span ><span style="font-size: 15px;">&#8377;{{number_format($package['single'], 2)}}</span></span>
-                                            </small>
-                                        @endif
-
-                                    </div>
-                                    <div class="d-flex mb-3 " style="font-size: 12px;">
+                                    <div class="container">
+                                        <!-- First Row -->
+                                        <div class="d-flex mb-3" style="font-size: 12px;">
                                         @if (!empty($package['sharing']))
-                                            <small class="border-end me-3 pe-3">
-                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span ><span style="font-size: 15px;"> &#8377;{{number_format($package['sharing'], 2)}}</span></span>
-                                            </small>
-                                        @endif
+                                                <div class="col flex-fill">
+                                                    <small class="border-end me-3 pe-3">
+                                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span><span style="font-size: 15px;">&#8377;{{ $package['sharing'] }}</span></span>
+                                                    </small>
+                                                </div>
+                                            @endif
 
-                                        @if (!empty($package['quint']))
-                                            <small class="border-end me-3 pe-3">
-                                                <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span ><span style="font-size: 15px;"> &#8377;{{number_format($package['quint'], 2)}}</span></span>
-                                            </small>
-                                        @endif
-                                    </div>
-                                                                   
+                                            @if (!empty($package['quint']))
+                                                <div class="col flex-fill">
+                                                    <small class="border-end me-3 pe-3">
+                                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint : <span><span style="font-size: 15px;">&#8377;{{ $package['quint'] }}</span></span>
+                                                    </small>
+                                                </div>
+                                            @endif
+    
+                                        </div>
+
+                                        <!-- Second Row -->
+                                        <div class="d-flex mb-3" style="font-size: 12px;">
+                                        @if (!empty($package['quad']))
+                                                <div class="col flex-fill">
+                                                    <small class="me-3 pe-3">
+                                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span><span style="font-size: 15px;">&#8377;{{ $package['quad'] }}</span></span>
+                                                    </small>
+                                                </div>
+                                            @endif
+
+                                            @if (!empty($package['double']))
+                                                <div class="col flex-fill">
+                                                    <small class="border-end me-3 pe-3">
+                                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double : <span><span style="font-size: 15px;">&#8377;{{ $package['double'] }}</span></span>
+                                                    </small>
+                                                </div>
+                                            @endif
+
+                                        </div>
+
+                                        <!-- Third Row -->
+                                        <div class="d-flex mb-3" style="font-size: 12px;">
+                                        @if (!empty($package['triple']))
+                                                <div class="col flex-fill">
+                                                    <small class="border-end me-3 pe-3">
+                                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span><span style="font-size: 15px;">&#8377;{{ $package['triple'] }}</span></span>
+                                                    </small>
+                                                </div>
+                                            @endif
+
+                                            @if (!empty($package['single']))
+                                                <div class="col flex-fill">
+                                                    <small class="me-3 pe-3">
+                                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span><span style="font-size: 15px;">&#8377;{{ $package['single'] }}</span></span>
+                                                    </small>
+                                                </div>
+                                            @endif
+
+                                        </div>
+                                    </div>                            
                                     <div>
                                         <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">{{$package['days']}} Days ,    {{$package['days'] - 1}}  Nights  </p>
                                     </div>
