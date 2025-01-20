@@ -74,6 +74,8 @@ class UmrahPackageFromIndiaDummy extends Component
 
     public $filtermodel;
 
+    public $title='Mumbai';
+
     public $bycity;
     public $bydays;
 
@@ -82,6 +84,8 @@ class UmrahPackageFromIndiaDummy extends Component
     {
         $this->umrahPackage();
         $this->umrahShortPackage();
+        $this->umrahLongPackage();
+        $this->dummyarray = [$this->mb => $this->umrahIndia[$this->mb]];
 
 
     }
@@ -1339,17 +1343,21 @@ class UmrahPackageFromIndiaDummy extends Component
 
         // search by city filter function 
         if($this->searchByCity === 'mumbai' && $this->filtermodel === '1'){
+            $this->title='Mumbai';
             $this->dummyarray = [$this->mb => $this->umrahIndia[$this->mb]];
         }
         elseif($this->searchByCity === 'bangalore'  && $this->filtermodel === '1'){
+            $this->title='Bangalore';
             $this->dummyarray = [$this->ban => $this->umrahIndia[$this->ban]];
 
         }
         elseif($this->searchByCity === 'lucknow'  && $this->filtermodel === '1'){
+            $this->title='Lucknow';
             $this->dummyarray = [$this->l => $this->umrahIndia[$this->l]];
 
         }
         elseif($this->searchByCity === 'delhi'  && $this->filtermodel === '1'){
+            $this->title='Delhi';
             $this->dummyarray = [$this->del => $this->umrahIndia[$this->del]];
 
         }
@@ -1367,6 +1375,7 @@ class UmrahPackageFromIndiaDummy extends Component
  
         if($this->searchByDays === "three" && $this->filtermodel === '2' ){
             // dd($this->searchByDays );
+            $this->title='3 days';
             $this->dummyarray = [$this->threedays => $this->umrahShort[$this->threedays]];
             // $this->dummyarray = [$this->l => $this->umrahIndia[$this->l]];
             // dd($this->dummyarray);
@@ -1374,13 +1383,45 @@ class UmrahPackageFromIndiaDummy extends Component
 
         }
         elseif($this->searchByDays === "five" && $this->filtermodel === '2'){
+            $this->title='5 days';
             // $this->dummyarray = [$this->del => $this->umrahIndia[$this->del]];
             $this->dummyarray = [$this->fivedays => $this->umrahShort[$this->fivedays]];
 
 
         }
         elseif($this->searchByDays === "eight" && $this->filtermodel === '2'){
-            $this->dummyarray = [$this->ban => $this->umrahIndia[$this->ban]];
+            $this->title='8 days';
+            $this->dummyarray = [$this->eightdays => $this->umrahShort[$this->eightdays]];
+
+
+        }
+        elseif($this->searchByDays === "ten" && $this->filtermodel === '2'){
+            $this->title='10 days';
+            $this->dummyarray = [$this->tendays => $this->umrahShort[$this->tendays]];
+
+
+        }
+        elseif($this->searchByDays === "eighteen" && $this->filtermodel === '2'){
+            $this->title='18 days';
+            $this->dummyarray = [$this->eighteendays => $this->umrahLong[$this->eighteendays]];
+
+
+        }
+        elseif($this->searchByDays === "twenty" && $this->filtermodel === '2'){
+            $this->title='20 days';
+            $this->dummyarray = [$this->tweentyDays => $this->umrahLong[$this->tweentyDays]];
+
+
+        }
+        elseif($this->searchByDays === "twentyfive" && $this->filtermodel === '2'){
+            $this->title='25 days';
+            $this->dummyarray = [$this->tweentyfive => $this->umrahLong[$this->tweentyfive]];
+
+
+        }
+        elseif($this->searchByDays === "thirty" && $this->filtermodel === '2'){
+            $this->title='30 days';
+            $this->dummyarray = [$this->thitydays => $this->umrahLong[$this->thitydays]];
 
 
         }
