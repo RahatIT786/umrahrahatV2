@@ -270,7 +270,23 @@ class UmrahPackageFromIndiaDummy extends Component
                     "double" => 280786,
                     "single" => 467786,
 
+                    // "airline" => $this->sa, 
+                    // "sharing" => 78786,
+                    // "quad" => 79786,
+                    // "triple" => 80786,
+                    // "double" => 83786,
+                    // "single" => 71786,
+                ],
+
+            ],
+            $this->ban=>[
+                $this->ss => [
+                    "id" => 1,
+                    "name" => "Super Saver",
+                    "city" => $this->ban,
+                    "days" => 16,
                     "airline" => $this->sa, 
+                  
                     "sharing" => 78786,
                     "quad" => 79786,
                     "triple" => 80786,
