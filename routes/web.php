@@ -60,6 +60,7 @@ use App\Livewire\UserAbout;
 use App\Livewire\SaudiVisa;
 use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
+use App\Livewire\UserFront\Umrah\UmrahByBusFromUAE;
 use App\Livewire\UserFront\Umrah\UmrahMainPackage;
 use App\Livewire\UserFront\Umrah\ViewPackageDetails;
 use App\Livewire\UserFront\Umrahv2\Transport;
@@ -108,6 +109,8 @@ Route::get('/partner-with-us',PartnerWithUs::class)->name('partner-with-us');
 Route::get('/sightseeing',Sightseeing::class)->name('sightseeing');
 Route::get('/catring',Catring::class)->name('catring');
 
+//umrah by bus
+Route::get('/umrah-by-bus',UmrahByBusFromUAE::class)->name('umrah-by-bus-from-uae');
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
 

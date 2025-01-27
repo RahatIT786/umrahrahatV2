@@ -8,7 +8,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
                             <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                            <h1 class="display-3 text-white mb-4 animated slideInDown">{{ "package name" }}</h1>
+                            <h1 class="display-3 text-white mb-4 animated slideInDown">{{ $this->packages->name }}</h1>
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                         <label class="particles-checkbox-container">
                             <input type="radio" class="particles-checkbox" name="package_type" id="{{ $id }}"
                                 value="{{ $id }}" wire:change="changeFlavour"
-                                wire:model="selectedPackageFlavourId">
+                                wire:model="selectedPackageFlavourId"  @if ($loop->first) checked @endif >
                             <span class="paln-label" for="{{ $id }}">
                                 <p>{{ $type }}</p>
                             </span>
@@ -176,8 +176,9 @@
             <div id="Hotels" class="tab-pane fade show active" role="tabpanel">
                 <div class="container">
                     <div class="row">
-                  @foreach ($makkah_hotel_details as $makkah_hotel)
-                      {{dd($makkah_hotel)}}
+                        @if (!empty($makkah_hotel_details))
+                        @foreach ($makkah_hotel_details as $makkah_hotel)
+                     
                          <!-- <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                           <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
@@ -227,7 +228,8 @@
                             </div>
                         </div>
                         </div> -->
-                        @endforeach 
+                        @endforeach
+                        @endif
 
                       {{-- @foreach ($madina_hotel_details as $madina_hotel)
                         <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -291,12 +293,12 @@
                             <div class="packageoverviewbox">
                                 <div class="row">
                                     <div class="col-9 padding5px">
-                                        <h6>TourCost &amp; Transport</h6>
+                                        <h6>{{$this->g_share}}</h6>
                                         <div class="infotxt">
                                             <span id="lblNoRecordFlightTransport" style="display: none;">No Record Found</span>
                                             <ul id="ulFlightTransport">
                                                 <li>Return Air Tickets</li>
-                                                <li>Round Trip Transfers</li>
+                                                <li>{{$this->g_share}}</li>
                                             </ul>
                                         </div>
                                     </div>
