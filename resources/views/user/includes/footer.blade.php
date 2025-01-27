@@ -9,33 +9,44 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><a style="color:white" href="tel:+966563898353"><i class="fa fa-phone-alt me-3"></i>+966 56 389 8353</a></p>
-                        <p class="mb-2"><a style="color:white" href="mailto:info@rahat.in"></a><i class="fa fa-envelope me-3"></i>info@rahat.in</p>
+                        <p class="mb-2"><a style="color:white" href="tel:+971566115491"><i class="fa fa-phone-alt me-3"></i>+971 56 6115491  </a></p>
+                        <p class="mb-2"><a style="color:white" href="tel:+971567866713"><i class="fa fa-phone-alt me-3"></i>+971 56 7866713 </a></p>
+                        <p class="mb-2"><a style="color:white" href="mailto:dubai@Rahat.in"><i class="fa fa-envelope me-3"></i>Dubai@Rahat.in</a></p>
+                       
+                       
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/rahattravelsofindia/"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/rahattravelsofindia/"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@RahatGroup"><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/send/?phone=%2B971567866713&text=Hello%2C+I+want+some+details+about+package&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
-                        </div>
+                        </div><br>
+                        <p>Dubai | Sharjah | Abu Dhabi</p>
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="{{route('about')}}">About Us</a>
-                                <a class="btn btn-link" href="{{route('contact-us')}}">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
-                                <a class="btn btn-link" href="">Support</a>
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">About US</h6>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Who We are</a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Mission and Vision</a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Why Choose Us</a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Awards & Recognition</a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Directors Speak</a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Agents Speak</a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Partner with Us</a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Bank Accounts</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                <a class="btn btn-link" href="">Food & Restaurant</a>
-                                <a class="btn btn-link" href="">Rooms & Appartment</a>
-                                <a class="btn btn-link" href="">Flight & Transport</a>
-                                <a class="btn btn-link" href="">Visa & Insurance</a>
-                                <a class="btn btn-link" href="">Ziyarat </a>
-                                <a class="btn btn-link" href="">Laundry </a>
+                               
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Umrah Packages </a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Hotels & Rooms </a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Visas & Insurance </a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Catering Services </a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Laundry Services </a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Sightseeing in Makka Madina </a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Guides and Assistance </a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Pickup & Drop Services </a>
+                               
                             </div>
                         </div>
                     </div>
