@@ -77,7 +77,7 @@
                                 </div>
                               
 
-                                <a href="{{route('transport')}}"  class="nav-item nav-link " >Transport</a>
+                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link " >Hajj Packages</a>
 
                                    
                                
