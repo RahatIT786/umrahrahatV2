@@ -82,7 +82,7 @@
                                     </a>
 
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">By Bus from UAE</a>
+                                        <a href="{{route('ramzaan.bybus')}}" class="dropdown-item">By Bus from UAE</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">By Flight from UAE</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Land Packages (All Gulf)</a>
                      
@@ -106,12 +106,12 @@
                                 </div>
                                 <div class="nav-item dropdown">
 
-                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
+                                    <a   class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
                                         <img style="height:30px;" src="{{asset('images/Kaba_Icon.png')}}" alt="">
                                         Hajj</a>
 
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Short Hajj</a>
+                                        <a href="{{route('hajj.bybus')}}" class="dropdown-item">Short Hajj</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Long Hajj</a>
                      
                                     </div>
@@ -119,7 +119,7 @@
                                 <a href="{{route('coming-soon')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect " >
                                     <img style="height:30px;" src="{{asset('images/Hotel_Icon.png')}}" alt="">
                                     Hotels</a>
-                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect"  >
+                                <a href="{{route('umrahVisaDubai')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect"  >
                                     <img style="height:30px;" src="{{asset('images/Visa_Icon.png')}}" alt="">
                                     
                                         Visa

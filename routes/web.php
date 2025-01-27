@@ -62,7 +62,10 @@ use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use App\Livewire\UserFront\Umrah\UmrahMainPackage;
 use App\Livewire\UserFront\Umrah\ViewPackageDetails;
+use App\Livewire\UserFront\Umrahv2\HajjPackage;
+use App\Livewire\UserFront\Umrahv2\RamzaanPackage as Umrahv2RamzaanPackage;
 use App\Livewire\UserFront\Umrahv2\Transport;
+use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
 use Illuminate\Support\Facades\Artisan;
@@ -101,6 +104,8 @@ Route::get('/view-package-detail/{package}',ViewPackageDetails::class)->name('vi
 
 //umrah v2
 Route::get('/transport',Transport::class)->name('transport');
+Route::get('/pack/ramzaan/bybus',Umrahv2RamzaanPackage::class)->name('ramzaan.bybus');
+Route::get('/pack/hajj/bybus',HajjPackage::class)->name('hajj.bybus');
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
 
