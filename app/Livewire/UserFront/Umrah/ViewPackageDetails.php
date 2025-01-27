@@ -67,17 +67,19 @@ class ViewPackageDetails extends Component
             $packageTypeIds = $this->packages->pkgDetails->pluck('packageType.id');
             $this->packageType = PackageType::whereIn('id', $packageTypeIds)->pluck('packageType', 'id');
             // dd($this->packageType);
+            // $this->selectedPackageFlavourId = array_key_first($this->packageType);
         } else {
             $this->packageType = collect();
         }
 
-        // $this->selectedPackageFlavourId = PackageType::whereIn('id', $packageTypeIds)->first()->id;
+         $this->selectedPackageFlavourId = PackageType::whereIn('id', $packageTypeIds)->first()->id;
         // // $this->allIncludes = Helper::packageIncludesOptions();
         // $firstFlavour = $this->packages->pkgDetails->where('pkg_type_id', $this->selectedPackageFlavourId)->first()->package_includes;
         // $this->pkgIncludes = explode(",", $firstFlavour);
-        // $this->updatePackageIncludes();
+         $this->updatePackageIncludes();
         // $this->service_id = $this->packages->service_id;
         // $this->package_id = $this->packages->id;
+        
     }
 
     public function putInData()

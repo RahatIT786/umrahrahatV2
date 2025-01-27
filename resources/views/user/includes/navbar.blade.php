@@ -67,7 +67,7 @@
                                         <span>Umrah</span> </a>
 
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">By Bus From UAE</a>
+                                        <a href="{{route('umrah-by-bus-from-uae')}}" class="dropdown-item">By Bus From UAE</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">By Flight from UAE</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Land Packages (All Gulf)</a>
                      
@@ -125,7 +125,7 @@
                                         Visa
                                     
                                 </a>
-                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
+                                <a href="{{route('umrahMainPackage')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
                                     <img style="height:30px;" src="{{asset('images/Transport_Icon.png')}}" alt="">
                                     Transfers </a>
                                 <a href="{{route('sightseeing')}}"  class="nav-item nav-link  d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
