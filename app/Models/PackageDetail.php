@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PackageDetail extends Model
 {
@@ -33,6 +34,11 @@ class PackageDetail extends Model
         'infant',
         'package_includes',
     ];
+
+    public function packageType(): BelongsTo
+    {
+        return $this->belongsTo(PackageType::class, 'pkg_type_id');
+    }
 
     // Optionally, you can cast some attributes to specific data types
     protected $casts = [

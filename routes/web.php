@@ -60,6 +60,9 @@ use App\Livewire\UserAbout;
 use App\Livewire\SaudiVisa;
 use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
+use App\Livewire\UserFront\Umrah\UmrahMainPackage;
+use App\Livewire\UserFront\Umrah\ViewPackageDetails;
+use App\Livewire\UserFront\Umrahv2\Transport;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
 use Illuminate\Support\Facades\Artisan;
@@ -93,9 +96,13 @@ Route::get('/umrah-by-air',UmrahByAir::class)->name('umrahByAir');
 Route::get('/umrah-visa-dubai',UmrahVisaFromDubai::class)->name('umrahVisaDubai');
 Route::get('/umrah-pakage-sharjah',UmrahPackageSharjah::class)->name('umrahPackageSharjah');
 
+Route::get('/umrah-packages',UmrahMainPackage::class)->name('umrahMainPackage');
+Route::get('/view-package-detail/{package}',ViewPackageDetails::class)->name('viewPackageDetails');
+
+//umrah v2
+Route::get('/transport',Transport::class)->name('transport');
+
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
-
-
 
 Route::get('/comming-soon',function(){
 return view('user.partials.comming_soon');

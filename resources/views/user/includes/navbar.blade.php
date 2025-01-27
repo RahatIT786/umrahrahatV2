@@ -152,7 +152,8 @@
                                         <!-- <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Bus </a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Flight </a> -->
                                         <a href="{{route('umrahPackageFromIndia')}}" class="dropdown-item">Umrah Packages from India</a>
-                                        <a href="{{route('ramzanPackageFromIndia')}}" class="dropdown-item">Ramzan Packages from India</a>
+                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Packages from India</a>
+                                        <a href="{{route('umrahMainPackage')}}"class="dropdown-item" >Umrah Package Details</a>
                                     </div>
                                 </div> --}}
                               
