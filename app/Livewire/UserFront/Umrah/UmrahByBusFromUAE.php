@@ -23,10 +23,11 @@ class UmrahByBusFromUAE extends Component
     {
         // Fetch inclusions with delete_status 1
         $this->inclusions = Inclusion::where('delete_status', 1)->get();
+        //dd( $this->inclusions);
         $this->allCities = DepartureCity::where('delete_status', 1)->get();
         // Get and process all depart city data
         $this->departCities = $this->getAllDepartCities();
-        $this->packageDays =MainPackage::where('delete_status', 1)->pluck('package_days');
+        $this->packageDays =MainPackage::where('delete_status', 1)->where('service_type','3')->pluck('package_days');
     }
 
     public function getAllDepartCities()
@@ -56,7 +57,7 @@ class UmrahByBusFromUAE extends Component
     public function render()
     {
         // Fetch all main packages with delete_status 1
-        $query = MainPackage::where('delete_status', 1);
+        $query = MainPackage::where('delete_status', 1)->where('service_type','3');
         if ($this->searchCity) {
             $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
         }

@@ -224,10 +224,10 @@
                                     </div>
                                 </div>
                            
-                                <div>
+                                <!-- <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina </p>
-                                </div>
-                                <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
+                                </div> -->
+                                <!-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> -->
                             </div>
                         </div>
                         </div>
@@ -275,10 +275,10 @@
                                     </div>
                                 </div>
 
-                                <div>
+                                <!-- <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina </p>
-                                </div>
-                                <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
+                                </div> -->
+                                <!-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> -->
                             </div>
                            </div>
                          </div>
