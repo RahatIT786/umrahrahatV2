@@ -14,6 +14,7 @@ class mainPackage extends Model
 
     protected $fillable = [ 
         'name',
+        'package_days',
         'package_type_ids',
         'description',
         'packageImage',
@@ -48,15 +49,40 @@ class mainPackage extends Model
     }
     public function getPkgTypeNamesAttribute()
     {
+        
         if (empty($this->type_ids)) {
             return [];
         }
-
+        
         // Convert the comma-separated string into an array
         $pkgTypeIds = explode(',', $this->type_ids);
         
         // Retrieve the names from the PkgType model
         return PackageType::whereIn('id', $pkgTypeIds)->pluck('package_type','id')->toArray();
+    }
+
+    public function getPkgFlights(){
+        if(empty($this->flight_ids)){
+            return [];
+        }
+        $flightIds = explode(',', $this->flight_ids);
+        return FlightManagement::whereIn('id', $flightIds)->pluck('FlightName','id')->toArray();
+    }
+
+    public function getPkgDepartureCities(){
+        if(empty($this->departure_city_ids)){
+            return [];
+        }
+        $departureCityIds = explode(',', $this->departure_city_ids);
+        return DepartureCity::whereIn('id', $departureCityIds)->pluck('CityName','id')->toArray();
+    }
+
+    public function getPkgInclusions(){
+        if(empty($this->inclusion_ids)){
+            return [];
+        }
+        $inclusionIds = explode(',', $this->inclusion_ids);
+        return inclusion::whereIn('id', $inclusionIds)->pluck('InclusionName','id')->toArray();
     }
 
     protected $casts = [

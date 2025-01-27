@@ -66,7 +66,7 @@ return [
     'providers' => [
         'admins' => [
             'driver' => 'eloquent',
-            'model'=>App\Models\SuperAdmin::class,
+             'model'=>App\Models\SuperAdmin::class,
             // 'model' => env('AUTH_MODEL', App\Models\SuperAdmin::class),
         ],
 
