@@ -4,7 +4,7 @@ namespace App\Livewire\UserFront\Umrah;
 
 use Livewire\Component;
 use App\Models\MainPackage;
-use App\Models\Inclusion;
+use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
 use Livewire\Attributes\Layout; 
 
