@@ -468,7 +468,7 @@
                                 <div class="row" style="margin-top:40px">
                                 <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
                                     <ul>
-                                        @foreach (explode('.', $packages->inclusion) as $sentence)
+                                        @foreach (explode('.', $packages->payment_policy) as $sentence)
                                             @if(trim($sentence)) <!-- Check if the sentence is not empty -->
                                                 <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
                                             @endif
@@ -514,7 +514,7 @@
                                 <div class="row">
                                 <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
                                     <ul>
-                                        @foreach (explode('.', $packages->inclusion) as $sentence)
+                                        @foreach (explode('.', $packages->itinerary) as $sentence)
                                             @if(trim($sentence)) <!-- Check if the sentence is not empty -->
                                                 <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
                                             @endif
