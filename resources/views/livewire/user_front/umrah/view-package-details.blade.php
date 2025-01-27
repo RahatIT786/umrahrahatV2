@@ -289,47 +289,151 @@
             <div id="TourCost" class="tab-pane fade show" role="tabpanel">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-12 col-sm-12">
                             <div class="packageoverviewbox">
                                 <div class="row">
-                                    <div class="col-9 padding5px">
-                                        <h6>{{$this->g_share}}</h6>
-                                        <div class="infotxt">
-                                            <span id="lblNoRecordFlightTransport" style="display: none;">No Record Found</span>
-                                            <ul id="ulFlightTransport">
-                                                <li>Return Air Tickets</li>
-                                                <li>{{$this->g_share}}</li>
-                                            </ul>
-                                        </div>
+                                <div class="room-rates">
+
+                                <div class="rates-row">
+                                    <div class="rate">
+                                    <h3>Sharing</h3>
+                                    <span class="rate-value">{{ $this->g_share}}</span>
+                                    <span class="rate-icon">
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                    </span> <!-- Example icon -->
                                     </div>
-                                    <div class="col-3 text-end">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 293.64 293.43">
-                                            <path d="M3,217.9c5.1-5,10.22-10,15.3-15,3.61-3.55,7.21-7.11,10.73-10.75a4.12,4.12,0,0,1,4.21-1.43c11.65,2.06,23.34,3.94,35,5.75a4.6,4.6,0,0,0,3.5-1q29.87-30.92,59.57-62c.25-.26.45-.58.93-1.19L9.36,56.66a17.64,17.64,0,0,0,3.1-1.92C21.21,46.06,30,37.4,38.57,28.58A4.48,4.48,0,0,1,44,27.28q54.27,18.07,108.61,36c10.59,3.51,21.2,7,31.75,10.59,2.38.83,3.85.57,5.66-1.34,19-19.92,38.07-39.72,57.1-59.6,5.69-5.95,12.54-9.26,20.8-9.36a27.81,27.81,0,0,1,26.21,17.12c4.57,11.22,3,21.83-5.49,30.5-11,11.27-22.61,22-34,32.87-9.15,8.81-18.29,17.64-27.53,26.35A3.83,3.83,0,0,0,226,115.1Q249.4,185.54,272.73,256c.77,2.32.53,3.7-1.25,5.43-8.82,8.61-17.49,17.36-26.17,26.11a19.9,19.9,0,0,0-1.95,3.11L167.65,167.7c-.9.81-1.66,1.47-2.38,2.17q-30.21,28.95-60.43,57.88a4.27,4.27,0,0,0-1.38,4.28c2,11.67,3.91,23.34,5.7,35A4.88,4.88,0,0,1,108,270.7c-7.95,8.13-16,16.13-24.06,24.18-.66.65-1.22,1.41-1.82,2.12h-.58a2.91,2.91,0,0,0,0-.84c-6.51-18.62-13-37.24-19.62-55.81a4.85,4.85,0,0,0-2.76-2.4q-17.88-6.42-35.85-12.62C16.52,223,9.75,220.76,3,218.48Z" transform="translate(-3 -3.57)"></path>
-                                        </svg>
+                                    
+                                    <div class="rate">
+                                    <h3>Quint</h3>
+                                    <span class="rate-value">{{$this->qt_share}}</span>
+                                    <span class="rate-icon">
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                    </span> <!-- Example icon -->
                                     </div>
+                                    
+                                    <div class="rate">
+                                    <h3>Quat</h3>
+                                    <span class="rate-value">{{$this->qd_share}}</span>
+                                    <span class="rate-icon">
+                                    
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        
+                                    </span> <!-- Example icon -->
+                                    </div>
+                                    
+                                    <div class="rate">
+                                    <h3>Triple</h3>
+                                    <span class="rate-value">{{$this->t_share}}</span>
+                                    <span class="rate-icon">
+                                  
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                    </span> <!-- Example icon -->
+                                    </div>
+
+                                    <div class="rate">
+                                    <h3>Double</h3>
+                                    <span class="rate-value">{{$this->d_share}}</span>
+                                    <span class="rate-icon">
+                                   
+                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user"></i>
+                                    </span> <!-- Example icon -->
+                                    </div>
+
+                                    <div class="rate">
+                                    <h3>Single</h3>
+                                    <span class="rate-value">{{$this->single}}</span>
+                                    <span class="rate-icon">        
+                                        <i class="fa-solid fa-user"></i>
+                                       
+                                    </span> <!-- Example icon -->
+                                    </div>
+                                </div>
+
+                                <!-- <h3>Child Rates</h3> -->
+                                <div class="rates-row">
+                                    <div class="rate">
+                                    <h4>Child with Bed</h4>
+                                    <span class="rate-value">{{$this->child_with_bed}}</span>
+                                    <span class="rate-icon"><i class="fa-solid fa-child"></i> + <i class="fa-solid fa-bed"></i></span> <!-- Example icon -->
+                                    </div>
+                                    
+                                    <div class="rate">
+                                    <h4>Child without Bed</h4>
+                                    <span class="rate-value">{{$this->child_no_bed}}</span>
+                                    <span class="rate-icon"><i class="fa-solid fa-child"></i> </span><!-- Example icon -->
+                                    </div>
+                                    
+                                    <div class="rate">
+                                    <h4>Infant</h4>
+                                    <span class="rate-value">{{$this->infant}}</span>
+                                    <span class="rate-icon"><i class="fa-solid fa-baby-carriage"></i></span> <!-- Example icon -->
+                                    </div>
+                                </div>
+                                </div>
+
+                                <style>
+                                    .room-rates {
+                                font-family: Arial, sans-serif;
+                                margin: 20px;
+                                }
+
+                                h2, h3 {
+                                text-align: center;
+                                }
+
+                                .rates-row {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+                                gap: 20px;  /* Adjust space between items */
+                                margin-bottom: 20px;
+                                }
+
+                                .rate {
+                                flex: 1 1 150px; /* Adjust the size of each rate box */
+                                padding: 15px;
+                                border: 1px solid #ccc;
+                                border-radius: 8px;
+                                text-align: center;
+                                background-color: #f9f9f9;
+                                }
+
+                                .rate h3, .rate h4 {
+                                margin: 10px 0;
+                                }
+
+                                .rate-value {
+                                display: block;
+                                font-size: 18px;
+                                margin-top: 5px;
+                                }
+
+                                .rate-icon {
+                                font-size: 30px;
+                                margin-top: 10px;
+                                }
+
+                                </style>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="packageoverviewbox">
-                                <div class="row">
-                                    <div class="col-9">
-                                        <h6>Meals</h6>
-                                        <div class="infotxt">
-                                            <span id="lblNoRecordMeals" style="display: none;">No Record Found</span>
-                                            <ul id="ulMeals">
-                                                <li>Food :: Indian Set Menu 3 Meals.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 text-end">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 287.48 286.82">
-                                            <path d="M294,186.21c-1.11-.08-2.22-.23-3.33-.23-10.48,0-21,0-31.44,0-7,0-10.14-3.2-10.14-10.1q0-66.51,0-133A36.44,36.44,0,0,1,282.88,6.38C288.24,6,292,7.68,294,12.74Z" transform="translate(-6.52 -6.32)"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
