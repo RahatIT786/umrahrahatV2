@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PdfTemplateController;
+use App\Http\Controllers\RamzaanPackageController;
 use App\Http\Controllers\RoutingController;
 use App\Livewire\Admin\Components\AddDepartureCity;
 use App\Livewire\Admin\Components\AddflightManagent;
@@ -154,3 +155,16 @@ Route::get('/package/ramzan',RamzaanPackage::class)->name('package.ramzan');
 });
 
 //ADMIN ROUTES END
+
+
+
+
+
+
+
+
+
+
+// -----only-for-testing-routes---------------------
+Route::get('/addpackdata',[RamzaanPackageController::class,'createPackageWithMultipleFlavours']);
+// -----only-for-testing-routes---------------------

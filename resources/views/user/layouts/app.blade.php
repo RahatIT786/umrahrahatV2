@@ -25,6 +25,17 @@
 
 }
 </style>
+
+<style>
+    .zoom-effect img {
+        transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+    }
+    
+    .zoom-effect img:hover {
+        transform: scale(1.2); /* Zooms the image by 20% */
+    }
+    </style>
+    
  <body>
 
     <div id="whatsapp">
