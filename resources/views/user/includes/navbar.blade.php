@@ -119,7 +119,7 @@
                                 <a href="{{route('hotels')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect " >
                                     <img style="height:30px;" src="{{asset('images/Hotel_Icon.png')}}" alt="">
                                     Hotels</a>
-                                <a href="{{route('umrahVisaDubai')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect"  >
+                                <a href="{{route('saudi-visa')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect"  >
                                     <img style="height:30px;" src="{{asset('images/Visa_Icon.png')}}" alt="">
                                     
                                         Visa
