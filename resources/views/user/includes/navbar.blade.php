@@ -77,7 +77,8 @@
                                 </div>
                               
 
-                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link " >Hajj Packages</a>
+                                <a href="{{route('sightseeing')}}"  class="nav-item nav-link " >sightseeing</a>
+                                <a href="{{route('catring')}}"  class="nav-item nav-link " >catring</a>
 
                                    
                                
@@ -96,6 +97,7 @@
                                 <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Forex</a>
                                 {{-- <a href="{{route('ramzan-umrah-package')}}"  class="nav-item nav-link">Ramadan Umrah Packages</a> --}}
                                 <a href="{{route('blog')}}"  class="nav-item nav-link">Blog</a>
+                                <a href="{{route('partner-with-us')}}"  class="nav-item nav-link">Partner With Us</a>
 
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->

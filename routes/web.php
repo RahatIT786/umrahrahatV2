@@ -62,6 +62,9 @@ use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use App\Livewire\UserFront\Umrah\UmrahMainPackage;
 use App\Livewire\UserFront\Umrah\ViewPackageDetails;
 use App\Livewire\UserFront\Umrahv2\Transport;
+use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
+use App\Livewire\UserFront\Umrahv2\Sightseeing;
+use App\Livewire\UserFront\Umrahv2\Catring;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
 use Illuminate\Support\Facades\Artisan;
@@ -100,6 +103,10 @@ Route::get('/view-package-detail/{package}',ViewPackageDetails::class)->name('vi
 
 //umrah v2
 Route::get('/transport',Transport::class)->name('transport');
+Route::get('/partner-with-us',PartnerWithUs::class)->name('partner-with-us');
+Route::get('/sightseeing',Sightseeing::class)->name('sightseeing');
+Route::get('/catring',Catring::class)->name('catring');
+
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
 
