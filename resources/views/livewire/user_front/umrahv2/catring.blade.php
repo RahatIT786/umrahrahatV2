@@ -41,21 +41,18 @@
     </div>
 </div> -->
 
-
-
-
         <!-- Room Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Blogs</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Blogs</span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase"></h6>
+                    <h1 class="mb-5">Our Catring Service<span class="text-primary text-uppercase"></span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp " data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/aboutimg1.jpg')}}" style="height: 200px; width:100%" alt="">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/catring1.jpg')}}" style="height: 200px; width:100%" alt="">
                             </div>
                             <div class="p-4 mt-2 ">
                                 <p class="text-body mb-3">The ultimate act of worship, Hajj and Umrah, represents a deep spiritual journey of devotion, submission, and faith...</p>
@@ -69,7 +66,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp  " data-wow-delay="0.3s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/aboutimg2.jpg')}}" style="height: 200px; width:100%" alt="">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/catring2.jpg')}}" style="height: 200px; width:100%" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <p class="text-body mb-3">The balancing act of hard work in this world and trust in fate for the Hereafter emphasizes the importance of striving...</p>
@@ -83,7 +80,21 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp " data-wow-delay="0.6s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/aboutimg3.jpeg')}}" style="height: 200px; width:100%" alt="">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/catring3.jpg')}}" style="height: 200px; width:100%" alt="">
+                            </div>
+                            <div class="p-4 mt-2">
+                                <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog3')}}">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp " data-wow-delay="0.6s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/catring4.jpg')}}" style="height: 200px; width:100%" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
