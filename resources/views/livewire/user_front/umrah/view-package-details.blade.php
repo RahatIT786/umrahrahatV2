@@ -437,6 +437,122 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Package Overview -->
+            <div id="PackageOverview" class="tab-pane fade show" role="tabpanel">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="packageoverviewbox">
+                                <div class="row" style="margin-top:40px">
+                                <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
+                                    <ul>
+                                        @foreach (explode('.', $packages->inclusion) as $sentence)
+                                            @if(trim($sentence)) <!-- Check if the sentence is not empty -->
+                                                <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Includion and exclution -->
+            <div id="InclusionsExclusions" class="tab-pane fade show" role="tabpanel">
+                <div class="container">
+                    <div class="row" style="margin-top:40px">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="packageoverviewbox">
+                                <div class="row">
+                                <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
+                                    <ul>
+                                        @foreach (explode('.', $packages->inclusion) as $sentence)
+                                            @if(trim($sentence)) <!-- Check if the sentence is not empty -->
+                                                <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Itinerary -->
+            <div id="Itinerary" class="tab-pane fade show" role="tabpanel">
+                <div class="container">
+                    <div class="row" style="margin-top:40px">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="packageoverviewbox">
+                                <div class="row">
+                                <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
+                                    <ul>
+                                        @foreach (explode('.', $packages->inclusion) as $sentence)
+                                            @if(trim($sentence)) <!-- Check if the sentence is not empty -->
+                                                <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paymrnt policy -->  
+            <div id="PaymentPolicy" class="tab-pane fade show" role="tabpanel">
+                <div class="container">
+                    <div class="row" style="margin-top:40px">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="packageoverviewbox">
+                                <div class="row">
+                                <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
+                                    <ul>
+                                        @foreach (explode('.', $packages->payment_policy) as $sentence)
+                                            @if(trim($sentence)) <!-- Check if the sentence is not empty -->
+                                                <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- cancelation policy -->
+            <div id="CancellationPolicy" class="tab-pane fade show" role="tabpanel">
+                <div class="container">
+                    <div class="row" style="margin-top:40px">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="packageoverviewbox">
+                                <div class="row">
+                                <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
+                                    <ul>
+                                        @foreach (explode('.', $packages->cancellation_policy) as $sentence)
+                                            @if(trim($sentence)) <!-- Check if the sentence is not empty -->
+                                                <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
