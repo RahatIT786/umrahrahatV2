@@ -295,6 +295,8 @@
                                 <div class="room-rates">
 
                                 <div class="rates-row">
+                                   
+                                    @if ($this->g_share > 0 )
                                     <div class="rate">
                                     <h3>Sharing</h3>
                                     <span class="rate-value">{{ $this->g_share}}</span>
@@ -307,7 +309,9 @@
                                         <i class="fa-solid fa-user"></i>
                                     </span> <!-- Example icon -->
                                     </div>
-                                    
+                                    @endif
+
+                                    @if ($this->qt_share > 0)
                                     <div class="rate">
                                     <h3>Quint</h3>
                                     <span class="rate-value">{{$this->qt_share}}</span>
@@ -319,7 +323,9 @@
                                         <i class="fa-solid fa-user"></i>
                                     </span> <!-- Example icon -->
                                     </div>
+                                    @endif
                                     
+                                    @if ($this->qd_share > 0)
                                     <div class="rate">
                                     <h3>Quat</h3>
                                     <span class="rate-value">{{$this->qd_share}}</span>
@@ -332,7 +338,9 @@
                                         
                                     </span> <!-- Example icon -->
                                     </div>
+                                    @endif
                                     
+                                    @if ($this->t_share > 0)
                                     <div class="rate">
                                     <h3>Triple</h3>
                                     <span class="rate-value">{{$this->t_share}}</span>
@@ -343,7 +351,9 @@
                                         <i class="fa-solid fa-user"></i>
                                     </span> <!-- Example icon -->
                                     </div>
+                                    @endif
 
+                                    @if ($this->d_share > 0)
                                     <div class="rate">
                                     <h3>Double</h3>
                                     <span class="rate-value">{{$this->d_share}}</span>
@@ -353,7 +363,9 @@
                                         <i class="fa-solid fa-user"></i>
                                     </span> <!-- Example icon -->
                                     </div>
-
+                                    @endif
+                                    
+                                    @if ($this->single)
                                     <div class="rate">
                                     <h3>Single</h3>
                                     <span class="rate-value">{{$this->single}}</span>
@@ -362,27 +374,36 @@
                                        
                                     </span> <!-- Example icon -->
                                     </div>
+                                    @endif
+  
                                 </div>
 
                                 <!-- <h3>Child Rates</h3> -->
                                 <div class="rates-row">
+                                    @if ($this->child_with_bed > 0)
                                     <div class="rate">
                                     <h4>Child with Bed</h4>
                                     <span class="rate-value">{{$this->child_with_bed}}</span>
                                     <span class="rate-icon"><i class="fa-solid fa-child"></i> + <i class="fa-solid fa-bed"></i></span> <!-- Example icon -->
                                     </div>
-                                    
+                                    @endif
+
+                                    @if ($this->child_no_bed > 0)
                                     <div class="rate">
                                     <h4>Child without Bed</h4>
                                     <span class="rate-value">{{$this->child_no_bed}}</span>
                                     <span class="rate-icon"><i class="fa-solid fa-child"></i> </span><!-- Example icon -->
                                     </div>
-                                    
+                                    @endif
+
+                                    @if ($this->infant)
                                     <div class="rate">
                                     <h4>Infant</h4>
                                     <span class="rate-value">{{$this->infant}}</span>
                                     <span class="rate-icon"><i class="fa-solid fa-baby-carriage"></i></span> <!-- Example icon -->
                                     </div>
+                                    @endif
+
                                 </div>
                                 </div>
 
