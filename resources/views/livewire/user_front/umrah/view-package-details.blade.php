@@ -365,7 +365,7 @@
                                     </div>
                                     @endif
                                     
-                                    @if ($this->single)
+                                    @if ($this->single > 0)
                                     <div class="rate">
                                     <h3>Single</h3>
                                     <span class="rate-value">{{$this->single}}</span>
@@ -396,7 +396,7 @@
                                     </div>
                                     @endif
 
-                                    @if ($this->infant)
+                                    @if ($this->infant > 0)
                                     <div class="rate">
                                     <h4>Infant</h4>
                                     <span class="rate-value">{{$this->infant}}</span>
