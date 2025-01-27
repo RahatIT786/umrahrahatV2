@@ -64,6 +64,7 @@ use App\Livewire\UserFront\Umrah\UmrahByBusFromUAE;
 use App\Livewire\UserFront\Umrah\UmrahMainPackage;
 use App\Livewire\UserFront\Umrah\ViewPackageDetails;
 use App\Livewire\UserFront\Umrahv2\HajjPackage;
+use App\Livewire\UserFront\Umrahv2\HajjPackageLong;
 use App\Livewire\UserFront\Umrahv2\RamzaanPackage as Umrahv2RamzaanPackage;
 use App\Livewire\UserFront\Umrahv2\Transport;
 
@@ -114,6 +115,7 @@ Route::get('/transport',Transport::class)->name('transport');
 
 Route::get('/pack/ramzaan/bybus',Umrahv2RamzaanPackage::class)->name('ramzaan.bybus');
 Route::get('/pack/hajj/bybus',HajjPackage::class)->name('hajj.bybus');
+Route::get('/pack/hajj/long',HajjPackageLong::class)->name('hajj.bybus.long');
 
 Route::get('/partner-with-us',PartnerWithUs::class)->name('partner-with-us');
 Route::get('/sightseeing',Sightseeing::class)->name('sightseeing');

@@ -8,7 +8,7 @@ use App\Models\Inclusion;
 use App\Models\DepartureCity;
 use Livewire\Attributes\Layout; 
 
-class HajjPackage extends Component
+class HajjPackageLong extends Component
 {
     public $allPackages;
     public $inclusions;
@@ -34,7 +34,7 @@ class HajjPackage extends Component
         // Fetch all packages from the database
         $packages = MainPackage::where('delete_status', 1)
         ->where('service_type', '2')
-        ->where('package_days', '<=', 18)
+        ->where('package_days', '>=', 18)
         ->get();
         
         // Map over each package and convert `depart_city` to an array
@@ -61,7 +61,8 @@ class HajjPackage extends Component
         // Fetch all main packages with delete_status 1
         $query = MainPackage::where('delete_status', 1)
         ->where('service_type', '2')
-        ->where('package_days', '<=', 18);
+        ->where('package_days', '>=', 18);
+        
         if ($this->searchCity) {
             $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
         }
@@ -70,6 +71,6 @@ class HajjPackage extends Component
         }
         $this->allPackages = $query->get();
         // Render the Livewire view with allPackages data
-        return view('livewire.user_front.umrahv2.hajj-package', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
+        return view('livewire.user_front.umrahv2.hajj-package-long', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
     }
 }
