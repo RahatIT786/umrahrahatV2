@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ramzaan_pack_infants', function (Blueprint $table) {
+        Schema::create('ramzaan_sharings', function (Blueprint $table) {
             $table->id();
-            $table->integer('infant');
-            $table->integer('child');
-            $table->integer('child_without_bed');
-            $table->integer('child_with_bed');
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ramzaan_pack_infants');
+        Schema::dropIfExists('ramzaan_sharings');
     }
 };
