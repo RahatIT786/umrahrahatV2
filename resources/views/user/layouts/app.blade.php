@@ -27,6 +27,17 @@
 </style>
 
 <style>
+
+    .zoom-effect img {
+        transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+    }
+    
+    .zoom-effect img:hover {
+        transform: scale(1.2); /* Zooms the image by 20% */
+    }
+   
+    
+
     /* Ensure the entire navigation tab container takes full width */
     .transformer-tabs {
       width: 100%;  /* Set container width to 100% */
@@ -94,6 +105,7 @@
       }
     }
 </style>
+
 
  <body>
 

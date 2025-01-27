@@ -37,13 +37,15 @@
                         <i class="bi bi-circle"></i>List All Package
                     </a>
                 </li>
-                <!-- <li>
+                
+            <li>
 
 
-                  <a href="{{route('package.ramzan')}}" wire:navigate>
+                  <a href="{{route('package.ramzan')}}" >
                       <i class="bi bi-circle"></i>Ramzaan Package Manager
                   </a>
               </li>
+                   <!--
                 <li> <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
                     <a href="{{route('admin.umrah-land-packages')}}" wire:navigate>
                         <i class="bi bi-circle"></i>Umrah Land Packages
