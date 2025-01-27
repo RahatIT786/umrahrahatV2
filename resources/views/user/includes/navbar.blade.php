@@ -128,15 +128,15 @@
                                 <a href="{{route('coming-soon')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
                                     <img style="height:30px;" src="{{asset('images/Transport_Icon.png')}}" alt="">
                                     Transfers </a>
-                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link  d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
+                                <a href="{{route('sightseeing')}}"  class="nav-item nav-link  d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
                                     <img style="height:30px;" src="{{asset('images/SIGHTSEEING_2nd_Icon.png')}}" alt="">
                                     Sightseeing</a>
                                 
-                                <a href="{{route('coming-soon')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
+                                <a href="{{route('catring')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
                                     <img style="height: 30px; display: block;" src="{{asset('images/Catering_Icon.png')}}" alt="Catering Icon">
                                     <span>Catering</span>
                                 </a>
-                                <a href="{{route('coming-soon')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
+                                <a href="{{route('partner-with-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
                                     <img style="height: 30px; display: block" src="{{asset('images/Partner_With_Us_Icon.png')}}" alt="">
                                    <span> Partner With Us</span>
                                 </a>
@@ -160,6 +160,7 @@
 
                                 {{-- <a href="{{route('coming-soon')}}"  class="nav-item nav-link " >Hajj Packages</a> --}}
 
+
                                    
                                
                                 {{-- <a href="{{route('hotels')}}"  class="nav-item nav-link">Hotels</a> --}}
@@ -176,7 +177,9 @@
                                 {{-- <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Transport</a> --}}
                                 {{-- <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Forex</a> --}}
                                 {{-- <a href="{{route('ramzan-umrah-package')}}"  class="nav-item nav-link">Ramadan Umrah Packages</a> --}}
+
                                 {{-- <a href="{{route('blog')}}"  class="nav-item nav-link">Blog</a> --}}
+
 
                             </div>
                   
