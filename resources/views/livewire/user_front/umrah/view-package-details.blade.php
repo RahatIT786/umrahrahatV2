@@ -182,8 +182,10 @@
             <!-- Hotels tab content start -->
             <div id="Hotels" class="tab-pane fade show active" role="tabpanel">
                 <div class="container">
-                    <div class="row">
+                    <div class="row" style="margin-top:20px">
+                        
                          <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                         <h3 class="mb-3 section-title text-start text-primary text-uppercase">{{$makkah_hotel_details->hotelCity}} Hotel</h3>
                           <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid"  src="{{asset($makkah_hotel_details->hotelImage1)}}" alt="test"> 
@@ -192,39 +194,36 @@
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">name</h5>
+                                    <h5 class="mb-0">{{$makkah_hotel_details->hotelName}}</h5>
                                     <div class="ps-2 ">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
+                                        @if ($makkah_hotel_details->hotelStarRating == 1)
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
+                                        @if ($makkah_hotel_details->hotelStarRating == 2)
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
+                                        @if ($makkah_hotel_details->hotelStarRating == 3)
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
+                                        @if ($makkah_hotel_details->hotelStarRating == 4)
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
+                                        @if ($makkah_hotel_details->hotelStarRating == 5)
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span ><span style="font-size: 18px;">tr</span>.AED</span>
-                                    </small>
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span ><span style="font-size: 18px;">fd</span>.AED</span>
-                                    </small>
-                                    <small class=" me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span ><span style="font-size: 18px;">fd</span>.AED</span>
-                                    </small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span ><span style="font-size: 18px;">gg</span>.AED</span>
-                                    </small>
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span ><span style="font-size: 18px;">g</span>.AED</span>
-                                    </small>
-                                    <small class=" me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span ><span style="font-size: 18px;">fg</span>.AED</span>
-                                    </small>
-                                </div>
+                           
                                 <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina </p>
                                 </div>
@@ -237,6 +236,7 @@
 
                  
                         <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h3 class="mb-3 section-title text-start text-primary text-uppercase">{{$madina_hotel_details->hotelCity}} Hotel</h3>
                           <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid" src="{{asset($madina_hotel_details->hotelImage1)}}" alt=""> 
@@ -245,39 +245,36 @@
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">name</h5>
+                                    <h5 class="mb-0">{{$madina_hotel_details->hotelName}}</h5>
                                     <div class="ps-2 ">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
+                                        @if ($madina_hotel_details->hotelStarRating == 1)
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
+                                        @if ($madina_hotel_details->hotelStarRating == 2)
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
+                                        @if ($madina_hotel_details->hotelStarRating == 3)
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
+                                        @if ($madina_hotel_details->hotelStarRating == 4)
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
+                                        @if ($madina_hotel_details->hotelStarRating == 5)
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                         <small class="fa fa-star text-primary"></small>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span ><span style="font-size: 18px;">tr</span>.AED</span>
-                                    </small>
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span ><span style="font-size: 18px;">fd</span>.AED</span>
-                                    </small>
-                                    <small class=" me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span ><span style="font-size: 18px;">fd</span>.AED</span>
-                                    </small>
-                                </div>
-                                <div class="d-flex mb-3 " style="font-size: 12px;">
-                                
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span ><span style="font-size: 18px;">gg</span>.AED</span>
-                                    </small>
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span ><span style="font-size: 18px;">g</span>.AED</span>
-                                    </small>
-                                    <small class=" me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span ><span style="font-size: 18px;">fg</span>.AED</span>
-                                    </small>
-                                </div>
+
                                 <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina </p>
                                 </div>

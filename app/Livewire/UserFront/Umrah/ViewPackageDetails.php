@@ -120,7 +120,7 @@ class ViewPackageDetails extends Component
         // Update hotels
         $this->makkahotel = $selectedFlavour->makka_hotel_id;
         $this->makkah_hotel_details =$this->getMakkahHotel($this->makkahotel);
-       // dd($this->makkah_hotel_details);
+        //dd($this->makkah_hotel_details);
         $this->madinahotel = $selectedFlavour->madina_hotel_id;
         $this->madina_hotel_details = $this->getMadinahHotel($this->madinahotel);
         //dd($this->madina_hotel_details);
