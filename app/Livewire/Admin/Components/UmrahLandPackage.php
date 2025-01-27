@@ -34,6 +34,7 @@ class UmrahLandPackage extends Component
     public  $laundray_type = [];
     public $includes = [];
     public $flightList = [];
+    public $package_days;
 
     public $g_share_price = [], $qt_share_price = [], $qd_share_price = [], $t_share_price = [], $d_share_price = [], $single_price = [], $child_w_b = [], $child_wo_b = [], $infants = [];
 
@@ -69,6 +70,7 @@ class UmrahLandPackage extends Component
     {
         $this->validate([
             'package_name' => 'required',
+            'package_days' => 'required',
             'package_type_ids' => 'required|array|min:1',
             'packageDescription' => 'required',
             'packageImage' => 'required',
@@ -142,6 +144,7 @@ class UmrahLandPackage extends Component
 
                 $pkg_data = [
                     'name' => $this->package_name,
+                    'package_days' => $this->package_days,
                     'package_type_ids' => $id_string,
                     'description' => $this->packageDescription,
                     'packageImage' => $packageImagePath,
@@ -206,6 +209,7 @@ class UmrahLandPackage extends Component
                     // Reset form fields after successful submission
                     $this->reset([
                         'package_name',
+                        'package_days',
                         'packageImage',
                         'packageDescription',
                         'package_type_ids',

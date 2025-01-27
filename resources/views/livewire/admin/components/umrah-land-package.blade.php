@@ -14,11 +14,18 @@
                   <form class="row g-3" wire:submit.prevent="save" onsubmit="event.preventDefault();">
                         
                         <!-- Package Master Name* -->
-                        <div class="col-md-12 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label for="package_name" class="form-label">Package Master Name*</label>
                             <input type="text" id="package_name" wire:model="package_name" class="form-control" placeholder="Enter Package Master Name">
                             @error('package_name') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="package_days" class="form-label">No Of Days*</label>
+                            <input type="number" min="1" id="package_days" wire:model="package_days" class="form-control" placeholder="Enter No of Days">
+                            @error('package_days') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
 
                      <!-- Package Type* -->
                     <div class="col-md-12 mb-3">
@@ -53,10 +60,6 @@
                             @if ($packageImage)
                                 <div class="mt-3">
                                     <img src="{{ $packageImage->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
-                                </div>
-                            @elseif ( $packageImagePath)
-                                <div class="mt-3">
-                                    <img src="{{ asset($packageImagePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
                             @endif
         

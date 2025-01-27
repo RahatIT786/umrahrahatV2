@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container pb-5">
+            <!-- <div class="container pb-5">
                 <div class="row g-5 d-flex justify-content-center" id="footer-contact"> 
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">MAKKA - SAUDI</h6>
@@ -59,7 +59,7 @@
                         <p class="mb-2"><a style="color:white" href="tel:+971566115491"><i class="fa fa-phone-alt me-3"></i>+971 56 611 5491.</a> </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
      
             <div class="container">
                 <div class="copyright">
@@ -89,6 +89,7 @@
     </div>
 
     <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('asserts/user/lib/wow/wow.min.js')}}"></script>
