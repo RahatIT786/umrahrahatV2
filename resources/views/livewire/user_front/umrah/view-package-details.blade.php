@@ -25,15 +25,17 @@
                 <div class="col-lg-9">
                     <!-- Hotel Address -->
                     <div class="mb-4 hotel-address">
-                    <h3 class="mb-3 section-title text-start text-primary text-uppercase">package name</h3>
-                    <h4 class="mb-5"><span class="text-primary"><i class="fa fa-map-marker-alt"></i></span>  {{ "package name" }} </h4>
+                    <h3 class="mb-3 section-title text-start text-primary text-uppercase">{{$packages->name}}</h3>
+                    <!-- <h4 class="mb-5"><span class="text-primary"><i class="fa fa-map-marker-alt"></i></span>  {{ "package name" }} </h4> -->
                     </div>
                     <div class="container-fluid p-0 mb-5 hotel-banner">
                         <div class="custom-carousel" id="hotel-images-carousel">
                             <div class="custom-carousel-wrapper">
-                                <div class="custom-carousel-item">
-                                   {{-- <img class="w-100" src="{{ asset($hotel_detail->hotelMainImage) }}" alt="Hotel Image"> --}}
-                                </div>
+                               
+                                    <div class="custom-carousel-item">
+                                     <img class="w-100" src="{{ Storage::url($this->packages->packageImage)}}" alt="Hotel Image"> 
+                                    </div>
+                               
                             </div>
 
                             <!-- Carousel Controls -->
@@ -45,11 +47,16 @@
 
                     <!-- Hotel Description -->
                     <div class="mt-4">
-                        <h3 class="mb-4 section-title text-start text-primary text-uppercase">Discription</h3>
-                        <h5 class="mb-5" style="line-height: 1.8;">{{ "Discription" }} </h5>
+                        <h5 class="mb-5" style="line-height: 1.8;">{{ "Description" }}</h5>
+
+                        <ul>
+                            @foreach (explode('.', $packages->description) as $sentence)
+                                @if(trim($sentence)) <!-- Check if the sentence is not empty -->
+                                    <li><h5>{{ trim($sentence) }}.</h5></li> <!-- Add a period at the end of each sentence -->
+                                @endif
+                            @endforeach
+                        </ul>
                     </div>
-
-
                 </div>
 
                 <!-- Right Section: Booking Form -->
@@ -176,13 +183,10 @@
             <div id="Hotels" class="tab-pane fade show active" role="tabpanel">
                 <div class="container">
                     <div class="row">
-                        @if (!empty($makkah_hotel_details))
-                        @foreach ($makkah_hotel_details as $makkah_hotel)
-                     
-                         <!-- <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                         <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                           <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> 
+                                <img class="img-fluid"  src="{{asset($makkah_hotel_details->hotelImage1)}}" alt="test"> 
                                
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
                             </div>
@@ -227,15 +231,15 @@
                                 <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
                             </div>
                         </div>
-                        </div> -->
-                        @endforeach
-                        @endif
+                        </div>
+                       
+                        
 
-                      {{-- @foreach ($madina_hotel_details as $madina_hotel)
+                 
                         <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                           <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> 
+                                <img class="img-fluid" src="{{asset($madina_hotel_details->hotelImage1)}}" alt=""> 
                                 
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
                             </div>
@@ -281,7 +285,6 @@
                             </div>
                            </div>
                          </div>
-                        @endforeach --}}
                     </div>
                 </div>
             </div>
