@@ -26,6 +26,17 @@
                             @error('package_days') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
+                        <div class="col-md-6 mb-3">
+                        <label  class="form-label">Service Type</label>
+                                <select class="form-control" wire:model="service_type" wire:change="service_type">
+                                    <option value="">Select Service Type</option>
+                                    <option value="1">Ramzan</option>
+                                    <option value="2">Hajj</option>
+                                    <option value="3">Umrah</option>
+                                </select>
+                                @error("service_type")<span class="text-danger">{{ $message }}</span>@enderror
+                        </div>
+
 
                      <!-- Package Type* -->
                     <div class="col-md-12 mb-3">

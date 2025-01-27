@@ -35,6 +35,7 @@ class UmrahLandPackage extends Component
     public $includes = [];
     public $flightList = [];
     public $package_days;
+    public $service_type;
 
     public $g_share_price = [], $qt_share_price = [], $qd_share_price = [], $t_share_price = [], $d_share_price = [], $single_price = [], $child_w_b = [], $child_wo_b = [], $infants = [];
 
@@ -70,6 +71,7 @@ class UmrahLandPackage extends Component
     {
         $this->validate([
             'package_name' => 'required',
+            'service_type' => 'required',
             'package_days' => 'required',
             'package_type_ids' => 'required|array|min:1',
             'packageDescription' => 'required',
@@ -144,6 +146,7 @@ class UmrahLandPackage extends Component
 
                 $pkg_data = [
                     'name' => $this->package_name,
+                    'service_type' => $this->service_type,
                     'package_days' => $this->package_days,
                     'package_type_ids' => $id_string,
                     'description' => $this->packageDescription,
