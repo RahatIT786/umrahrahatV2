@@ -112,7 +112,7 @@
 
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('hajj.bybus')}}" class="dropdown-item">Short Hajj</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Long Hajj</a>
+                                        <a href="{{route('hajj.bybus.long')}}" class="dropdown-item">Long Hajj</a>
                      
                                     </div>
                                 </div>
