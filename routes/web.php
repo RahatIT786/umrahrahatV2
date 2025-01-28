@@ -39,6 +39,7 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\PackageManager\ListPackage;
 use App\Livewire\Admin\PackageManager\AddPackage;
 use App\Livewire\ContactUs;
+use App\Livewire\DirectorSpeak;
 use App\Livewire\FAQ;
 use App\Livewire\Gallery;
 use App\Livewire\Hotels;
@@ -60,6 +61,8 @@ use App\Livewire\UserAbout;
 use App\Livewire\SaudiVisa;
 use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
+use App\Livewire\MissionVision;
+use App\Livewire\AgentSpeak;
 use App\Livewire\UserFront\Umrah\UmrahByBusFromUAE;
 use App\Livewire\UserFront\Umrah\UmrahMainPackage;
 use App\Livewire\UserFront\Umrah\ViewPackageDetails;
@@ -67,6 +70,10 @@ use App\Livewire\UserFront\Umrahv2\HajjPackage;
 use App\Livewire\UserFront\Umrahv2\HajjPackageLong;
 use App\Livewire\UserFront\Umrahv2\RamzaanPackage as Umrahv2RamzaanPackage;
 use App\Livewire\UserFront\Umrahv2\Transport;
+
+use App\Livewire\WhyChooseUs;
+use App\Livewire\PartnerFooter;
+use App\Livewire\WhoWeAre; // Ensure this class exists in the specified namespace
 
 use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
 
@@ -117,12 +124,20 @@ Route::get('/pack/ramzaan/bybus',Umrahv2RamzaanPackage::class)->name('ramzaan.by
 Route::get('/pack/hajj/bybus',HajjPackage::class)->name('hajj.bybus');
 Route::get('/pack/hajj/long',HajjPackageLong::class)->name('hajj.bybus.long');
 
-Route::get('/partner-with-us',PartnerWithUs::class)->name('partner-with-us');
+// Route::get('/partner-with-us',PartnerWithUs::class)->name('partner-with-us');
 Route::get('/sightseeing',Sightseeing::class)->name('sightseeing');
 Route::get('/catring',Catring::class)->name('catring');
 
 //umrah by bus
 Route::get('/umrah-by-bus',UmrahByBusFromUAE::class)->name('umrah-by-bus-from-uae');
+
+//footer pages
+Route::get('/who-we-are',WhoWeAre::class)->name('who-we-are');
+Route::get('/mission-vision',MissionVision::class)->name('mission-vision');
+Route::get('/why-choose-us',WhyChooseUs::class)->name('why-choose-us');
+Route::get('/partner-with-us',PartnerFooter::class)->name('partner-with-us');
+Route::get('/director-speak',DirectorSpeak::class)->name('director-speak');
+Route::get('/agent-speak',AgentSpeak::class)->name('agent-speak');
 
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
