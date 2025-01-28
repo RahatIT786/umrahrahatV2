@@ -30,7 +30,7 @@
                                 <a class="btn btn-link" href="{{route('ourservices')}}">Our Services</a>
                                 <a class="btn btn-link" href="{{route('mission-vision')}}">Mission and Vision</a>
                                 <a class="btn btn-link" href="{{route('why-choose-us')}}">Why Choose Us</a>
-                                <a class="btn btn-link" href="{{route('our-awards')}}">Awards & Recognition</a>
+                                <a class="btn btn-link" href="{{route('coming-soon')}}">Awards & Recognition</a>
                                 <a class="btn btn-link" href="{{route('director-speak')}}">Directors Speak</a>
                                 <a class="btn btn-link" href="{{route('agent-speak')}}">Agents Speak</a>
                                 <a class="btn btn-link" href="{{route('partner-with-us')}}">Partner with Us</a>
