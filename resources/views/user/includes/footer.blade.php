@@ -29,7 +29,7 @@
                                 <a class="btn btn-link" href="{{route('who-we-are')}}">Who We are</a>
                                 <a class="btn btn-link" href="{{route('mission-vision')}}">Mission and Vision</a>
                                 <a class="btn btn-link" href="{{route('why-choose-us')}}">Why Choose Us</a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Awards & Recognition</a>
+                                <a class="btn btn-link" href="{{route('our-awards')}}">Awards & Recognition</a>
                                 <a class="btn btn-link" href="{{route('director-speak')}}">Directors Speak</a>
                                 <a class="btn btn-link" href="{{route('agent-speak')}}">Agents Speak</a>
                                 <a class="btn btn-link" href="{{route('partner-with-us')}}">Partner with Us</a>
@@ -39,11 +39,11 @@
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
                                
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Umrah Packages </a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Hotels & Rooms </a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Visas & Insurance </a>
+                                <a class="btn btn-link" href="{{route('hotels')}}">Hotels & Rooms </a>
+                                <a class="btn btn-link" href="{{route('saudi-visa')}}">Visas & Insurance </a>
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Catering Services </a>
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Laundry Services </a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Sightseeing in Makka Madina </a>
+                                <a class="btn btn-link" href="{{route('sightseeing')}}">Sightseeing in Makka Madina </a>
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Guides and Assistance </a>
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Pickup & Drop Services </a>
                                
@@ -111,6 +111,9 @@
     <script src="{{asset('asserts/user/lib/tempusdominus/js/moment.min.js')}}"></script>
     <script src="{{asset('asserts/user/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
     <script src="{{asset('asserts/user/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+    
+    <!-- award Script -->
+    <script src="{{asset('asserts/user/js/awardScript.js')}}"></script>
 
     <!-- Template Javascript -->
     <script src="{{asset('asserts/user/js/main.js')}}"></script>

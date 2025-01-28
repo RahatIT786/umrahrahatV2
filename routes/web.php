@@ -34,6 +34,11 @@ use App\Livewire\Admin\Components\ViewHotelDetails;
 use App\Livewire\Admin\Components\ViewUmrahPackages;
 use App\Livewire\Admin\Components\VisaRequest;
 use App\Livewire\Admin\PackageManager\AdminViewPackage;
+
+//catring controller
+use App\Livewire\Admin\Components\Catringlist;
+use App\Livewire\Admin\Components\AddCatring;
+
 use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\PackageManager\ListPackage;
@@ -63,6 +68,7 @@ use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use App\Livewire\MissionVision;
 use App\Livewire\AgentSpeak;
+use App\Livewire\OurAwards;
 use App\Livewire\UserFront\Umrah\UmrahByBusFromUAE;
 use App\Livewire\UserFront\Umrah\UmrahMainPackage;
 use App\Livewire\UserFront\Umrah\ViewPackageDetails;
@@ -138,6 +144,7 @@ Route::get('/why-choose-us',WhyChooseUs::class)->name('why-choose-us');
 Route::get('/partner-with-us',PartnerFooter::class)->name('partner-with-us');
 Route::get('/director-speak',DirectorSpeak::class)->name('director-speak');
 Route::get('/agent-speak',AgentSpeak::class)->name('agent-speak');
+Route::get('/our-awards',OurAwards::class)->name('our-awards');
 
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
@@ -170,6 +177,11 @@ Route::get('/admin/hotel-details', ListHotalDetails::class)->name('admin.listHot
 Route::get('/admin/add-hotel-details',AddHotalDetais::class)->name('admin.addHotelDetails');
 Route::get('/admin/edit-hotal/{id}',AddHotalDetais::class)->name('editHotelData');
 Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelData');
+
+//catring controller
+Route::get('/admin/catring-details',Catringlist::class)->name('admin.catring-list');
+Route::get('/admin/add-catring',AddCatring::class)->name('admin.add-catring');
+
 Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
 Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');
 Route::get('/admin/umrah-land-package',UmrahLandPackage::class)->name('admin.umrah-land-packages');
