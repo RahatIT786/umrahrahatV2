@@ -34,6 +34,8 @@ use App\Livewire\Admin\Components\ViewHotelDetails;
 use App\Livewire\Admin\Components\ViewUmrahPackages;
 use App\Livewire\Admin\Components\VisaRequest;
 use App\Livewire\Admin\PackageManager\AdminViewPackage;
+use App\Livewire\Admin\umrahv2\AgentSignup;
+use App\Livewire\Admin\umrahv2\QuickEnquires;
 use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\PackageManager\ListPackage;
@@ -63,6 +65,8 @@ use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use App\Livewire\MissionVision;
 use App\Livewire\AgentSpeak;
+use App\Livewire\BankAccount;
+use App\Livewire\OurServices;
 use App\Livewire\UserFront\Umrah\UmrahByBusFromUAE;
 use App\Livewire\UserFront\Umrah\UmrahMainPackage;
 use App\Livewire\UserFront\Umrah\ViewPackageDetails;
@@ -127,6 +131,9 @@ Route::get('/pack/hajj/long',HajjPackageLong::class)->name('hajj.bybus.long');
 // Route::get('/partner-with-us',PartnerWithUs::class)->name('partner-with-us');
 Route::get('/sightseeing',Sightseeing::class)->name('sightseeing');
 Route::get('/catring',Catring::class)->name('catring');
+Route::get('/bankaccount',BankAccount::class)->name('bankaccount');
+Route::get('/ourservices',OurServices::class)->name('ourservices');
+
 
 //umrah by bus
 Route::get('/umrah-by-bus',UmrahByBusFromUAE::class)->name('umrah-by-bus-from-uae');
@@ -193,6 +200,9 @@ Route::get('/storageLink',[AuthController::class,'setStorageLink']);
 // ---------------------------
 
 Route::get('/package/ramzan',RamzaanPackage::class)->name('package.ramzan');
+
+Route::get('/admin/quickenquire',QuickEnquires::class)->name('quick.enquiries');
+Route::get('/admin/agentsignup',AgentSignup::class)->name('agentsignup');
 
 
 

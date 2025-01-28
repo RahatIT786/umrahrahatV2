@@ -85,6 +85,7 @@
                 </li>
               </ul>
             </li>
+           
             <!-- <li>
               <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bi bi-award-fill"></i>
@@ -131,6 +132,42 @@
                 <li> 
                   <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
                 </li>
+              </ul>
+            </li>
+
+            <li class="menu-label">Enquires</li>
+            <li>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi bi-basket2-fill"></i>
+                </div>
+                <div class="menu-title">Quick Enquires</div>
+              </a>
+              <ul>
+                <!-- <li>
+                    <a href="{{route('admin.package-manager')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>List All Package
+                    </a>
+                </li> -->
+                <li>
+                    <a href="{{route('quick.enquiries')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>Enquires From User
+                    </a>
+                </li>
+                
+            <li>
+
+
+                  <a href="{{route('agentsignup')}}" >
+                      <i class="bi bi-circle"></i>Enquires From Agent
+                  </a>
+              </li>
+                   <!--
+                <li> <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
+                    <a href="{{route('admin.umrah-land-packages')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>Umrah Land Packages
+                    </a>
+                </li> -->
+                
               </ul>
             </li>
           </ul>
