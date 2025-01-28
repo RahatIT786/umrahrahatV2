@@ -125,7 +125,7 @@
                                         Visa
                                     
                                 </a>
-                                <a href="{{route('umrahMainPackage')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
+                                <a href=""  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
                                     <img style="height:30px;" src="{{asset('images/Transport_Icon.png')}}" alt="">
                                     Transfers </a>
                                 <a href="{{route('sightseeing')}}"  class="nav-item nav-link  d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
@@ -138,7 +138,7 @@
                                 </a>
                                 <a href="{{route('partner-with-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
                                     <img style="height: 30px; display: block" src="{{asset('images/Partner_With_Us_Icon.png')}}" alt="">
-                                   <span> Partner With Us</span>
+                                   <span>Join Us</span>
                                 </a>
                                 {{-- <a href="{{route('layouts.app')}}"  class="nav-item nav-link active">Umrah </a>
                                 <a href="{{route('about')}}"  class="nav-item nav-link">Ramzan </a> --}}

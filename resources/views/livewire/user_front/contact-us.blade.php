@@ -13,8 +13,8 @@
                 <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
-                        <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
+                        <!-- <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
+                        <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1> -->
                     </div>
                     <div class="row g-4">
                         <div class="col-12">
@@ -24,12 +24,12 @@
                                     <p><a style="color: #797d7f;" href="https://api.whatsapp.com/send/?phone=%2B971567866713&text=Hello%2C+I+want+some+details+about+package&type=phone_number&app_absent=0"><i class="fab fa-whatsapp text-primary me-2"></i>+971 56 786 6713</a></p>
                                 </div>
                                 <div class="col-md-4">
-                                    <h6 class="section-title text-start text-primary text-uppercase">General</h6>
-                                    <p><a style="color: #797d7f;" href="mailto:info@rahat.in"><i class="fa fa-envelope-open text-primary me-2"></i>info@rahat.in</a></p>
+                                    <h6 class="section-title text-start text-primary text-uppercase">Clients</h6>
+                                    <p><a style="color: #797d7f;" href="mailto:dubai@rahat.in"><i class="fa fa-envelope-open text-primary me-2"></i>dubai@rahat.in</a></p>
                                 </div>
                                 <div class="col-md-4">
-                                    <h6 class="section-title text-start text-primary text-uppercase">Technical</h6>
-                                    <p><a style="color: #797d7f;" href="mailto:shoeb@rahat.in"><i class="fa fa-envelope-open text-primary me-2"></i>shoeb@rahat.in</a></p>
+                                    <h6 class="section-title text-start text-primary text-uppercase">Agents</h6>
+                                    <p><a style="color: #797d7f;" href="mailto:nazim@rahat.in"><i class="fa fa-envelope-open text-primary me-2"></i>nazim@rahat.in</a></p>
                                 </div>
                             </div>
                         </div>

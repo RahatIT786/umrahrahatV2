@@ -1,5 +1,5 @@
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s" style="visibility: visible;animation-delay: 0.1s;animation-name: fadeIn;padding-top: 50px;">
             <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-3">
@@ -26,13 +26,13 @@
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">About US</h6>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Who We are</a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Mission and Vision</a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Why Choose Us</a>
+                                <a class="btn btn-link" href="{{route('who-we-are')}}">Who We are</a>
+                                <a class="btn btn-link" href="{{route('mission-vision')}}">Mission and Vision</a>
+                                <a class="btn btn-link" href="{{route('why-choose-us')}}">Why Choose Us</a>
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Awards & Recognition</a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Directors Speak</a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Agents Speak</a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Partner with Us</a>
+                                <a class="btn btn-link" href="{{route('director-speak')}}">Directors Speak</a>
+                                <a class="btn btn-link" href="{{route('agent-speak')}}">Agents Speak</a>
+                                <a class="btn btn-link" href="{{route('partner-with-us')}}">Partner with Us</a>
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Bank Accounts</a>
                             </div>
                             <div class="col-md-6">
