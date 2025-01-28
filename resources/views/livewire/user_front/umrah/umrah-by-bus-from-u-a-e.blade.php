@@ -125,12 +125,14 @@
                                     <p class="text-body mb-3 text-justify">{{ \Illuminate\Support\Str::limit($package->description, 250, '...') }}</p>
 
                                     <div class="d-flex justify-content-between">
+
                                         <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{ route('viewPackageDetails', ['package' => $package->id]) }}">
                                             <i class="fa-solid fa-book"></i> View Package
                                         </a>
                                         <a class="btn btn-sm btn-dark rounded py-2 px-4">
                                             <i class="fa-regular fa-paper-plane"></i> Book Enquire
                                         </a>
+
                                     </div>
                                 </div>
                             </div>
@@ -142,5 +144,84 @@
             </div>
         </div>
         <!-- package End -->
+
+
+
+        <!--enquire form start-->
+      {{-- @if ($umrahEmquire) --}}
+      <div id="popupContainer">
+        <div id="popupForm" class="popup-form hdden">
+          <div class="form-container">
+            <button id="closeForm" class="close-btn" wire:click='umrahEnquirePopupClose'>&times;</button>
+            <h2 class="form-title">Quick Book</h2>
+            <p class="text-center ">Feel free to submit your query</p>
+            <form wire:submit.prevent="quickEnquireSumbit">
+                @csrf
+                @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+              <!-- Name -->
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" wire:model='name' required>
+                @error('name') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Mobile -->
+              <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobile" placeholder="Enter your mobile number" wire:model='mobile' required>
+                @error('mobile') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Date of Travel -->
+              <div class="form-group">
+                <label for="date">Date of Travel</label>
+                <input type="date" id="date" wire:model='date_of_travel' required>
+                @error('date_of_travel') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Total Pax -->
+              <div class="form-group">
+                <label for="pax">Total Pax</label>
+                <input type="number" id="pax" placeholder="Enter number of travelers" wire:model='total_pax' required>
+                @error('total_pax') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Travel Mode -->
+              <div class="form-group">
+                <label for="mode">Travel Mode</label>
+                <select id="mode" wire:model='travel_type' required>
+                  <option value="">Select</option>
+                  <option value="Bus">By Bus</option>
+                  <option value="Flight">By Flight</option>
+                </select>
+                @error('travel_type') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+          
+      
+     
+        <script>
+// JavaScript function to show the form after a delay of 3 seconds (3000 milliseconds)
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('popupContainer').classList.add('show');
+    }, 4000); // Show the form after 3 seconds
+});
+
+// JavaScript function to close the form
+function closeForm() {
+    document.getElementById('popupContainer').classList.remove('show');
+}
+</script>
+
+   
+          
+      {{-- @endif --}}
+        <!---enquire form end-->
     <!-- Room End -->
 </section>

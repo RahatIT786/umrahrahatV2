@@ -27,13 +27,14 @@
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">About US</h6>
                                 <a class="btn btn-link" href="{{route('who-we-are')}}">Who We are</a>
+                                <a class="btn btn-link" href="{{route('ourservices')}}">Our Services</a>
                                 <a class="btn btn-link" href="{{route('mission-vision')}}">Mission and Vision</a>
                                 <a class="btn btn-link" href="{{route('why-choose-us')}}">Why Choose Us</a>
                                 <a class="btn btn-link" href="{{route('our-awards')}}">Awards & Recognition</a>
                                 <a class="btn btn-link" href="{{route('director-speak')}}">Directors Speak</a>
                                 <a class="btn btn-link" href="{{route('agent-speak')}}">Agents Speak</a>
                                 <a class="btn btn-link" href="{{route('partner-with-us')}}">Partner with Us</a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Bank Accounts</a>
+                                <a class="btn btn-link" href="{{route('bankaccount')}}">Bank Accounts</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
