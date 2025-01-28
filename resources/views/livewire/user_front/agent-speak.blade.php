@@ -33,47 +33,73 @@
                         
                     </div>
                 </div>
-                <h4 class="section-title text-start text-primary mb-5 text-uppercase">People Love RAHAT .. Watch some of Our Agents Speak...</h4>
+                <h4 class="section-title text-start text-primary my-5 text-uppercase">People Love RAHAT .. Watch some of Our Agents Speak...</h4>
                 <div>
     <div class="container-fluid p-0">
         <div class="owl-carousel testimonial-carousel py-5" data-items="3" data-loop="true" data-autoplay="true" data-margin="30">
             <!-- YouTube Video 1 -->
-            <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vbREORgANBE?autoplay=1&controls=0&loop=1&playlist=vbREORgANBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div style="height:500px;width:500px" class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                <div class="embed-responsive ">
+                    <iframe  style="height:500px;width:500px"  class="embed-responsive-item" src="https://www.youtube.com/embed/vbREORgANBE?autoplay=1&controls=0&loop=1&playlist=vbREORgANBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 700px;">
+                <!-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="" style="max-width: 500px;">
                         <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Customer Review</h6>
                         <h1 class="display-3 text-white mb-4 animated slideInDown">Shaikh's Experience</h1>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- YouTube Video 2 -->
-            <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2g5pU4t_gSg?autoplay=1&controls=0&loop=1&playlist=2g5pU4t_gSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div style="height:500px;width:500px" class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                <div class="embed-responsive ">
+                  <iframe width="500" height="500" src="https://www.youtube.com/embed/ZjlB1NqAdZ8?si=X8wVEm-IGNFWwYW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 700px;">
+                <!-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="" style="max-width: 500px;">
                         <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Customer Review</h6>
                         <h1 class="display-3 text-white mb-4 animated slideInDown">Ansari Hammad's Experience</h1>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- YouTube Video 3 -->
-            <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tvpel2LeCjE?autoplay=1&controls=0&loop=1&playlist=tvpel2LeCjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div style="height:500px;width:500px" class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                <div class="embed-responsive">
+                <iframe width="500" height="500" src="https://www.youtube.com/embed/wpVaK-E9T7s?si=q5biYSOJpc5HnITu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 700px;">
+                <!-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="" style="max-width: 500px;">
                         <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Customer Review</h6>
                         <h1 class="display-3 text-white mb-4 animated slideInDown">Mohammed Milkan's Experience</h1>
                     </div>
+                </div> -->
+            </div>
+            
+            <!-- YouTube Video 4 -->
+            <div style="height:500px;width:500px" class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                <div class="embed-responsive">
+                <iframe width="500" height="500" src="https://www.youtube.com/embed/GG41qrQjlLk?si=8xwO3BgbosIFXWsi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                <!-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="" style="max-width: 500px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Customer Review</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown">Mohammed Milkan's Experience</h1>
+                    </div>
+                </div> -->
+            </div>
+            
+            <!-- YouTube Video 5 -->
+            <div style="height:500px;width:500px" class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                <div class="embed-responsive">
+                <iframe width="500" height="500" src="https://www.youtube.com/embed/TPqPl_KBYQI?si=TMkkbwfAEThr-ORw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <!-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="" style="max-width: 500px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Customer Review</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown">Mohammed Milkan's Experience</h1>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
