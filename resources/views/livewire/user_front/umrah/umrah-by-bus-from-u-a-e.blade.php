@@ -66,25 +66,25 @@
                 <div class="row g-4">
                    
                     @foreach ($allPackages as $package )
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="room-item shadow rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="{{  Storage::url($package->packageImage)}}" alt="" style="height: 15rem; width:100%;">
-                                    <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$package->package_days}} Days</small>
+                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="row g-0">
+                                <!-- Left Column: Image Section (col-4) -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="position-relative">
+                                        <img class="img-fluid" src="{{ Storage::url($package->packageImage) }}" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
+                                        <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$package->package_days}} Days</small>
+                                    </div>
                                 </div>
-                                <div class="p-4 mt-2">
+
+                                <!-- Right Column: Package Details Section (col-8) -->
+                                <div class="col-lg-8 col-md-6 p-4 mt-2">
                                     <div class="d-flex justify-content-between mb-3">
                                         <h5 class="mb-0">{{$package->name}}</h5>
-                                        <!-- <div class="ps-2 ">
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                        </div> -->
                                     </div>
+
                                     <div class="container">
-                                        <!-- First Row -->
+                                        <!-- First Row for Inclusions -->
                                         @php
                                             // Convert the comma-separated string to an array
                                             $packageIncludes = explode(',', $package->package_includes);
@@ -116,18 +116,29 @@
                                                 @endforeach
                                             @endforeach
                                         </div>
-                                    </div>                            
-                                    <div>
-                                        <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center"> {{$package->package_days}} Days , {{$package->package_days-1}}   Nights  </p>
                                     </div>
+
+                                    <div>
+                                        <p style="border: 1px dashed #FEA116; padding: 2px 4px;" class="text-center">{{$package->package_days}} Days , {{$package->package_days - 1}} Nights</p>
+                                    </div>
+
                                     <p class="text-body mb-3 text-justify">{{ \Illuminate\Support\Str::limit($package->description, 250, '...') }}</p>
+
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{route('viewPackageDetails',['package'=>$package->id])}}"> <i class="fa-solid fa-book" ></i> View Package</a>
-                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" ><i class="fa-regular fa-paper-plane"  ></i> Book Enquire</a>
+
+                                        <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{ route('viewPackageDetails', ['package' => $package->id]) }}">
+                                            <i class="fa-solid fa-book"></i> View Package
+                                        </a>
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4">
+                                            <i class="fa-regular fa-paper-plane"></i> Book Enquire
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
                     @endforeach
                 </div>
             </div>

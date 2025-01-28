@@ -19,7 +19,7 @@
               </a>
             </li>
            
-            <li class="menu-label">Package Controller</li>
+           
             <li>
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi bi-basket2-fill"></i>
@@ -61,7 +61,7 @@
               <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bi bi-award-fill"></i>
                 </div>
-                <div class="menu-title">Saudi Visa Manager</div>
+                <div class="menu-title">Saudi Visa Controller</div>
               </a>
               <ul>
                 <l`i> <a href="{{ route('admin.saudi-visa') }}" wire:navigate><i class="bi bi-circle"></i>List All Visa</a>
@@ -102,7 +102,7 @@
               <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bi bi-award-fill"></i>
                 </div>
-                <div class="menu-title">Hotel Management</div>
+                <div class="menu-title">Hotel Controller</div>
               </a>
               <ul>
                 <li> 
@@ -113,6 +113,21 @@
                 </li> -->
               </ul>
             </li>
+
+            <!-- <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Catring Controller</div>
+              </a>
+              <ul>
+                <li> 
+                  <a href="{{ route('admin.catring-list') }}" wire:navigate><i class="bi bi-circle"></i>Catring Food list</a>
+                </li>
+          
+              </ul>
+            </li> -->
+
             <li>
               <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bi bi-award-fill"></i>

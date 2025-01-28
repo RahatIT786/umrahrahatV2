@@ -259,62 +259,70 @@ window.onload = function() {
                 </div>
                 <div class="row g-4">
                   @foreach ($packages as $package )
-                  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="room-item shadow rounded overflow-hidden">
-                        <div class="position-relative">
-                            {{-- <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> --}}
-                            <img class="img-fluid" src="{{Storage::exists($package->photo_path) ? Storage::url($package->photo_path) : asset('asserts/user/img/haj/masque.jpg')}}" alt="" style="height: 15rem; width:100%;" >
-                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
-                        </div>
-                        <div class="p-4 mt-2">
-                            <div class="d-flex justify-content-between mb-3">
-                                <h5 class="mb-0">{{$package->package_name}}</h5>
-                                <div class="ps-2 ">
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
+                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="row g-0">
+                                <!-- Left Column: Image Section -->
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="position-relative">
+                                        <img class="img-fluid" src="{{Storage::exists($package->photo_path) ? Storage::url($package->photo_path) : asset('asserts/user/img/haj/masque.jpg')}}" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
+                                        <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-flex mb-3 " style="font-size: 12px;">
-                              
-                                <small class="border-end me-3 pe-3">
-                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span ><span style="font-size: 18px;">{{$package->sharing}}</span>.AED</span>
-                                </small>
-                                <small class="border-end me-3 pe-3">
-                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span ><span style="font-size: 18px;">{{$package->quint}}</span>.AED</span>
-                                </small>
-                                <small class=" me-3 pe-3">
-                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span ><span style="font-size: 18px;">{{$package->quad}}</span>.AED</span>
-                                </small>
-                            </div>
-                            <div class="d-flex mb-3 " style="font-size: 12px;">
-                             
-                                <small class="border-end me-3 pe-3">
-                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span ><span style="font-size: 18px;">{{$package->triple}}</span>.AED</span>
-                                </small>
-                                <small class="border-end me-3 pe-3">
-                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span ><span style="font-size: 18px;">{{$package->double}}</span>.AED</span>
-                                </small>
-                                <small class=" me-3 pe-3">
-                                    <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span ><span style="font-size: 18px;">{{$package->single}}</span>.AED</span>
-                                </small>
-                            </div>
-                            <div>
-                                <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina </p>
-                            </div>
-                           
 
+                                <!-- Right Column: Package Details -->
+                                <div class="col-lg-8 col-md-8 p-4 mt-2">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <h5 class="mb-0">{{$package->package_name}}</h5>
+                                        <div class="ps-2">
+                                            <!-- Rating stars -->
+                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-3" style="font-size: 12px;">
+                                        <small class="border-end me-3 pe-3">
+                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{$package->sharing}}</span>.AED</span>
+                                        </small>
+                                        <small class="border-end me-3 pe-3">
+                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span><span style="font-size: 18px;">{{$package->quint}}</span>.AED</span>
+                                        </small>
+                                        <small class="me-3 pe-3">
+                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span><span style="font-size: 18px;">{{$package->quad}}</span>.AED</span>
+                                        </small>
+                                    </div>
+                                    <div class="d-flex mb-3" style="font-size: 12px;">
+                                        <small class="border-end me-3 pe-3">
+                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span><span style="font-size: 18px;">{{$package->triple}}</span>.AED</span>
+                                        </small>
+                                        <small class="border-end me-3 pe-3">
+                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{$package->double}}</span>.AED</span>
+                                        </small>
+                                        <small class="me-3 pe-3">
+                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{$package->single}}</span>.AED</span>
+                                        </small>
+                                    </div>
+                                    <div>
+                                        <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
+                                    </div>
 
-                            <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
-                            <div class="d-flex justify-content-between">
-                                <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})"> <i class="fa-solid fa-book" ></i> View Brochure</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})"><i class="fa-regular fa-paper-plane" ></i>  Book Enquire</a>
+                                    <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})">
+                                            <i class="fa-solid fa-book"></i> View Brochure
+                                        </a>
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
+                                            <i class="fa-regular fa-paper-plane"></i>  Book Enquire
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
                   @endforeach
                     
                 </div>

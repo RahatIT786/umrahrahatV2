@@ -9,13 +9,13 @@
   <!-- Header Start -->
   <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
-                <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="#" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                <div class="col-lg-2 bg-dark d-none d-lg-block">
+                    <a href="{{route('layouts.app')}}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         {{-- <h1 class="m-0 text-primary text-uppercase">HajUmrah</h1> --}}
                         <img style="height:7rem;" src="{{asset('asserts/user/img/haj/RAHAT_UMRAH_LOGO.png')}}" alt="rahat_logo">
                     </a>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-10">
                     <div class="row gx-0 bg-white d-none d-lg-flex">
                         <div class="col-lg-7 px-5 text-start">
                             {{-- <div class="h-100 d-inline-flex align-items-center py-2 me-4">
@@ -136,9 +136,9 @@
                                     <img style="height: 30px; display: block;" src="{{asset('images/Catering_Icon.png')}}" alt="Catering Icon">
                                     <span>Catering</span>
                                 </a>
-                                <a href="{{route('partner-with-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
-                                    <img style="height: 30px; display: block" src="{{asset('images/Partner_With_Us_Icon.png')}}" alt="">
-                                   <span>Join Us</span>
+                                <a href="" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
+                                    <img style="height: 30px; display: block" src="{{asset('images/Holiday_Icon.png')}}" alt="">
+                                   <span>Holidays</span>
                                 </a>
                                 {{-- <a href="{{route('layouts.app')}}"  class="nav-item nav-link active">Umrah </a>
                                 <a href="{{route('about')}}"  class="nav-item nav-link">Ramzan </a> --}}
@@ -182,8 +182,16 @@
 
 
                             </div>
+                            <div class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
+                                <a style="color:black" href="{{route('partner-with-us')}}">Join Us</a> &nbsp;
+                            </div>
+                            
+                            <div style="margin-left: 0px;" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
+                                
+                                <a style="color:black" href="{{route('contact-us')}}">Contact Us</a>
+                            </div>
                   
-                            <a href="{{route('contact-us')}}" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
+                            <!-- <a href="{{route('contact-us')}}" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a> -->
 
                         </div>
                     </nav>

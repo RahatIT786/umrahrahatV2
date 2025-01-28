@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Umrah Rahat</title>
+    <title>Indias Best Umrah Company is Rahat Group</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -39,7 +39,9 @@
      <!-- Bootstrap JS (make sure you have included Bootstrap's JS for tab functionality) -->
      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     
-
+    <!-- award style -->
+    <link rel="stylesheet" href="{{asset('asserts/user/css/awardStyle.css')}}">
+    <!-- award style -->
     <link rel="stylesheet" href="{{asset('asserts/user/css/buttonStyle.css')}}">
     <style>
         .dropdown-item:hover{
