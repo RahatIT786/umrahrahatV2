@@ -1,4 +1,6 @@
+<section>
 
+    
 <div class="card ">
     <div class="card-body">
       <div class="d-flex align-items-center">
@@ -84,4 +86,9 @@ aria-hidden="true"
 
       </div>
     </div>
+
+    <!--enquire form -->
+
   </div>
+
+</section>

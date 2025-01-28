@@ -208,6 +208,135 @@ function closeForm() {
 }
 </script>
 
+<style>
+    /* Scoped Styles for #popupContainer */
+  
+  /* Global Container for Scoping */
+  #popupContainer {
+    position: relative;
+    display: none;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+  }
+  
+  #popupContainer.show {
+          display: block;
+          opacity: 1;
+      }
+  /* Open Form Button */
+  #popupContainer .open-form-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  #popupContainer .open-form-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Popup Form */
+  #popupContainer .popup-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  #popupContainer .hidden {
+    display: none;
+  }
+  
+  /* Form Container */
+  #popupContainer .form-container {
+    background: white;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Close Button */
+  #popupContainer .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Form Title */
+  #popupContainer .form-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form Group */
+  #popupContainer .form-group {
+    margin-bottom: 15px;
+  }
+  #popupContainer .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  #popupContainer .form-group input,
+  #popupContainer .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Submit Button */
+  #popupContainer .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #popupContainer .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  </style>
+
+
+
+
    
           
       {{-- @endif --}}
