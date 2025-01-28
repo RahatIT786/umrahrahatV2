@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Package;
 use App\Models\PackageRequest;
+use App\Models\UmrahEnquire;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 
@@ -25,6 +26,16 @@ class UserHome extends Component
     public $customerName;
     public $mobile;
     public $query;
+
+     //for enquire form variables
+     public $umrahEmquire;
+
+     //popup form variable 
+     public $name;
+     public $qmobile;
+     public $date_of_travel;
+     public $total_pax;
+     public $travel_type;
     public function mount(){
         $this->packages=$this->getAllPackage();
 
@@ -70,6 +81,26 @@ class UserHome extends Component
         ]);
 
         $this->enquirePopUp=false;
+    }
+
+
+    public function umrahEnquirePopupClose(){
+        $this->umrahEmquire=false;
+    }
+
+    public function quickEnquireSumbit(){
+
+        // $this->validate();
+       UmrahEnquire::create([
+        'name' => $this->name,
+        'mobile' => $this->qmobile,
+        'date_of_travel' => $this->date_of_travel,
+        'total_pax' => $this->total_pax,
+        'travel_type' => $this->travel_type,
+    ]);
+    
+    $this->umrahEmquire=false;
+    session()->flash('success', 'Your enquiry has been submitted successfully!');
     }
 
     

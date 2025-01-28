@@ -2,6 +2,7 @@
 
 namespace App\Livewire\UserFront\Umrah;
 
+use App\Models\UmrahEnquire;
 use Livewire\Component;
 use App\Models\mainPackage as MainPackage;
 use App\Models\inclusion as Inclusion;
@@ -19,8 +20,27 @@ class UmrahByBusFromUAE extends Component
     public $searchDays;
     public $packageDays;
 
+    //for enquire form variables
+    public $umrahEmquire;
+
+    //popup form variable 
+    public $name;
+    public $mobile;
+    public $date_of_travel;
+    public $total_pax;
+    public $travel_type;
+
+    protected $rules = [
+        'name' => 'required|string|max:255',
+        'mobile' => 'required|string|max:15',
+        'date_of_travel' => 'required|date',
+        'total_pax' => 'required|integer',
+        'travel_type' => 'required|string',
+    ];
+
     public function mount()
     {
+        // $this->umrahEmquire=true;
         // Fetch inclusions with delete_status 1
         $this->inclusions = Inclusion::where('delete_status', 1)->get();
         //dd( $this->inclusions);
@@ -52,6 +72,35 @@ class UmrahByBusFromUAE extends Component
         // Return the unique cities
         return $uniqueCities;
     }
+
+    public function umrahEnquirePopu(){
+      
+        $this->umrahEmquire=true;
+    }
+    public function umrahEnquirePopupClose(){
+        $this->umrahEmquire=false;
+    }
+
+    public function quickEnquireSumbit(){
+
+        // $this->validate();
+       UmrahEnquire::create([
+        'name' => $this->name,
+        'mobile' => $this->mobile,
+        'date_of_travel' => $this->date_of_travel,
+        'total_pax' => $this->total_pax,
+        'travel_type' => $this->travel_type,
+    ]);
+    
+    $this->umrahEmquire=false;
+    session()->flash('success', 'Your enquiry has been submitted successfully!');
+    }
+
+
+
+
+
+
 
     #[Layout('user.Layouts.app')]
     public function render()

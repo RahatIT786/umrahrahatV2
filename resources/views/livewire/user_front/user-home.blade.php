@@ -1,4 +1,83 @@
 <section>
+    <div id="popupContainerHome">
+        <div id="popupForm" class="popup-form hdden">
+          <div class="form-container">
+            <button id="closeForm" class="close-btn" wire:click='umrahEnquirePopupClose'>&times;</button>
+            <h2 class="form-title">Quick Book</h2>
+            <p class="text-center ">Feel free to submit your query</p>
+            <form wire:submit.prevent="quickEnquireSumbit">
+                @csrf
+                @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+              <!-- Name -->
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" wire:model='name' required>
+                @error('name') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Mobile -->
+              <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobile" placeholder="Enter your mobile number" wire:model='qmobile' required>
+                @error('mobile') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Date of Travel -->
+              <div class="form-group">
+                <label for="date">Date of Travel</label>
+                <input type="date" id="date" wire:model='date_of_travel' required>
+                @error('date_of_travel') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Total Pax -->
+              <div class="form-group">
+                <label for="pax">Total Pax</label>
+                <input type="number" id="pax" placeholder="Enter number of travelers" wire:model='total_pax' required>
+                @error('total_pax') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Travel Mode -->
+              <div class="form-group">
+                <label for="mode">Travel Mode</label>
+                <select id="mode" wire:model='travel_type' required>
+                  <option value="">Select</option>
+                  <option value="Bus">By Bus</option>
+                  <option value="Flight">By Flight</option>
+                </select>
+                @error('travel_type') <span class="error">{{ $message }}</span> @enderror
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+          
+      
+     
+        <script>
+// JavaScript function to show the form after a delay of 3 seconds (3000 milliseconds)
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('popupContainerHome').classList.add('show');
+    }, 4000); // Show the form after 3 seconds
+});
+
+// JavaScript function to close the form
+function closeForm() {
+    document.getElementById('popupContainerHome').classList.remove('show');
+}
+</script>
+
+
+
+
+
+
+
+
+
+
         <!-- Carousel Start -->
         <div class="container-fluid p-0 mb-5">
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -20,7 +99,7 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Throughout your life you have prayed, fasted and given in charity</h1>
-                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book A Package</a>
+                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Quick Book</a>
                                 <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
                             </div>
                         </div>
