@@ -97,106 +97,106 @@
         </div>
         <!-- About End -->
 
-        @push('styles')
-        <style>
-            /* Form container styling */
-            #agentSignup.form-container {
-                background-color: #fff;
-                padding: 20px 30px;
-                width: 100%;
-                max-width: 500px;
-                margin: 50px auto;
-                border-radius: 10px;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-                animation: fadeIn 0.3s ease;
-            }
-        
-            /* Fade in effect */
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(-20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        
-            /* Form title styling */
-            #agentSignup .form-title {
-                font-size: 24px;
-                font-weight: bold;
-                color: #333;
-                margin-bottom: 20px;
-                text-align: center;
-            }
-        
-            /* Form group styling */
-            #agentSignup .form-group {
-                margin-bottom: 15px;
-            }
-        
-            /* Label styling */
-            #agentSignup .form-group label {
-                display: block;
-                margin-bottom: 5px;
-                font-size: 14px;
-                color: #555;
-            }
-        
-            /* Input and select field styling */
-            #agentSignup .form-group input,
-            #agentSignup .form-group select {
-                width: 100%;
-                padding: 10px;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                font-size: 14px;
-                box-sizing: border-box;
-            }
-        
-            /* Error message styling */
-            #agentSignup .error {
-                color: red;
-                font-size: 12px;
-                margin-top: 5px;
-            }
-        
-            /* Submit button styling */
-            #agentSignup .submit-btn {
-                width: 100%;
-                padding: 10px;
-                background-color: #28a745;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
-        
-            /* Submit button hover effect */
-            #agentSignup .submit-btn:hover {
-                background-color: #218838;
-            }
-        
-            /* Success alert message styling */
-            #agentSignup .alert-success {
-                padding: 10px;
-                background-color: #d4edda;
-                color: #155724;
-                border: 1px solid #c3e6cb;
-                border-radius: 5px;
-                margin-bottom: 15px;
-            }
-        
-            /* Centering the error messages and form */
-            .text-center {
-                text-align: center;
-            }
-        </style>
-        
-        @endpush
+      
+
+        <!---agent-signup---->
+<style>
+    /* Form container styling */
+    #agentSignup.form-container {
+        background-color: #fff;
+        padding: 20px 30px;
+        width: 100%;
+        max-width: 500px;
+        margin: 50px auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease;
+    }
+  
+    /* Fade in effect */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+  
+    /* Form title styling */
+    #agentSignup .form-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+  
+    /* Form group styling */
+    #agentSignup .form-group {
+        margin-bottom: 15px;
+    }
+  
+    /* Label styling */
+    #agentSignup .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #555;
+    }
+  
+    /* Input and select field styling */
+    #agentSignup .form-group input,
+    #agentSignup .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+  
+    /* Error message styling */
+    #agentSignup .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+  
+    /* Submit button styling */
+    #agentSignup .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+  
+    /* Submit button hover effect */
+    #agentSignup .submit-btn:hover {
+        background-color: #218838;
+    }
+  
+    /* Success alert message styling */
+    #agentSignup .alert-success {
+        padding: 10px;
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+  
+    /* Centering the error messages and form */
+    .text-center {
+        text-align: center;
+    }
+  </style>
 </section>
  
