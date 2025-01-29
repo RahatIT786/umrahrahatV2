@@ -134,108 +134,6 @@
     </div>
 
  <div>
-  <style>
-    /* Floating Chat Icon */
-    .chat-icon {
-      z-index: 5;
-        position: fixed;
-        bottom: 11rem;
-        right: 20px;
-        background-color: #FEAF39;
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-        cursor: pointer;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-  
-    /* Chat Box */
-    .chat-box {
-      z-index: 5;
-        position: fixed;
-        bottom: 14rem;
-        right: 50px;
-        width: 300px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        display: none;
-        flex-direction: column;
-        padding: 15px;
-        /* Smooth Transition */
-      /* opacity: 0;*/
-      transform: translateY(20px); 
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-  
-    /* Chat Box Header */
-    .chat-header {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-  
-    /* Close Button */
-    .close-btn {
-        cursor: pointer;
-        color: red;
-        font-weight: bold;
-    }
-  
-    /* Form Inputs */
-    .chat-box input, .chat-box textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
-  
-    /* Submit Button */
-    .chat-box button {
-        background-color: #FEAF39;
-        color: white;
-        border: none;
-        padding: 8px;
-        width: 100%;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-  
-    /* Style for the text above the icon */
-  #text .text {
-      font-size: 14px;
-      font-weight: bold;
-      color: #007bff;
-      margin-bottom: 5px;
-      opacity: 0; /* Initially hidden */
-      transform: translateY(-20px); /* Start off-screen */
-      transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
-  }
-  
-  /* Add animation when the chat icon is active */
-  .chat-container:hover .text {
-      opacity: 1; /* Show the text */
-      transform: translateY(0); /* Move the text into place */
-  }
-  
-  </style>
-
-<script>
-  function toggleChat() {
-      let chatBox = document.getElementById("chatBox");
-      chatBox.style.display = (chatBox.style.display === "none" || chatBox.style.display === "") ? "block" : "none";
-  }
-
- 
-</script>
 
   <!------>
   <div class="chat-icon" onclick="toggleChat()">
@@ -293,6 +191,114 @@
         <button class="mt-3" type="submit">Send</button>
     </form>
 </div>
+
+
+
+<style>
+  /* Floating Chat Icon */
+  .chat-icon {
+    z-index: 5;
+      position: fixed;
+      bottom: 11rem;
+      right: 20px;
+      background-color: #FEAF39;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Chat Box */
+  .chat-box {
+    z-index: 5;
+      position: fixed;
+      bottom: 14rem;
+      right: 50px;
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      display: none;
+      flex-direction: column;
+      padding: 15px;
+      /* Smooth Transition */
+    /* opacity: 0;*/
+    transform: translateY(20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Chat Box Header */
+  .chat-header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  /* Close Button */
+  .close-btn {
+      cursor: pointer;
+      color: red;
+      font-weight: bold;
+  }
+
+  /* Form Inputs */
+  .chat-box input, .chat-box textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+  }
+
+  /* Submit Button */
+  .chat-box button {
+      background-color: #FEAF39;
+      color: white;
+      border: none;
+      padding: 8px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  /* Style for the text above the icon */
+#text .text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Start off-screen */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Add animation when the chat icon is active */
+.chat-container:hover .text {
+    opacity: 1; /* Show the text */
+    transform: translateY(0); /* Move the text into place */
+}
+
+</style>
+
+<script>
+function toggleChat() {
+    let chatBox = document.getElementById("chatBox");
+    chatBox.style.display = (chatBox.style.display === "none" || chatBox.style.display === "") ? "block" : "none";
+}
+
+
+</script>
+
+
+
  </div>
 
 
