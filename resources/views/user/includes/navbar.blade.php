@@ -57,20 +57,19 @@
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+                      
+                        
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0 " >
                                 <div class="nav-item dropdown">
-                                    
-
-                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
+                                    <a class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center" id="umrahDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                         <img style="height:30px;" src="{{asset('images/umrah_Icon.png')}}" alt="">
-                                        <span>Umrah</span> </a>
-
-                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <span>Umrah</span>
+                                    </a>
+                                    <div class="dropdown-menu rounded-0 m-0" aria-labelledby="umrahDropdown">
                                         <a href="{{route('umrah-by-bus-from-uae')}}" class="dropdown-item">By Bus From UAE</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">By Flight from UAE</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Land Packages (All Gulf)</a>
-                     
                                     </div>
                                 </div>
                                 <div class="nav-item dropdown">
@@ -90,11 +89,11 @@
                                 </div>
                                 <div class="nav-item dropdown">
 
-                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
+                                    <a    class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
                                         <img style="height:30px;" src="{{asset('images/Majid_Icon.png')}}" alt="">
                                         Ziyarats</a>
 
-                                    <div class="dropdown-menu rounded-0 m-0">
+                                    <div class="dropdown-menu rounded-0 m-0" >
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Jordan</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Baghdad</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Egypt</a>
@@ -142,21 +141,6 @@
                                 </a>
                                 {{-- <a href="{{route('layouts.app')}}"  class="nav-item nav-link active">Umrah </a>
                                 <a href="{{route('about')}}"  class="nav-item nav-link">Ramzan </a> --}}
-                                {{-- <div class="nav-item dropdown">
-
-                                    <a href="{{route('about')}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Umrah Packages</a>
-
-                                    <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="{{route('umrahByBus')}}" class="dropdown-item">Umrah Packages By Bus From Dubai</a>
-                                        <a href="{{route('umrahByAir')}}" class="dropdown-item">Umrah Packages By Flight From Dubai</a>
-                                        <!-- <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Bus </a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Umrah By Flight </a> -->
-                                        <a href="{{route('umrahPackageFromIndia')}}" class="dropdown-item">Umrah Packages from India</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Ramzan Packages from India</a>
-                                        <a href="{{route('umrahMainPackage')}}"class="dropdown-item" >Umrah Package Details</a>
-                                    </div>
-                                </div> --}}
-                              
 
                                 {{-- <a href="{{route('coming-soon')}}"  class="nav-item nav-link " >Hajj Packages</a> --}}
 
@@ -191,4 +175,7 @@
             </div>
       </div>
   <!-- Header End -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </section>
