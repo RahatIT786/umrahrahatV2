@@ -5,6 +5,7 @@ namespace App\Livewire\Admin\Components;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\WithFileUploads;
+use App\Models\sightController;
 
 class AddSightSeeing extends Component
 {
@@ -68,17 +69,17 @@ class AddSightSeeing extends Component
 
     public function mount($id = null){
         if($id){
-            $sight = HotelDetail::findOrFail( $id );
+            $sight = sightController::findOrFail( $id );
             $this->sightId = $sight->id;
             $this->sightName = $sight->sightName;
             $this->sightPrice =$sight->sightPrice;
             $this->currency = $sight->currency;
             $this->sightCity = $sight->sightCity;
             $this->sightDiscription = $sight->sightDiscription;
-            $this->sightMainImagePath = $sight->sightMainImagePath;
-            $this->sightImage1Path = $sight->sightImage1Path;
-            $this->sightImage2Path = $sight->sightImage2Path;
-            $this->sightImage3Path = $sight->sightImage3Path;
+            $this->sightMainImagePath = $sight->sightMainImage;
+            $this->sightImage1Path = $sight->sightImage1;
+            $this->sightImage2Path = $sight->sightImage2;
+            $this->sightImage3Path = $sight->sightImage3;
         }
     }
 
@@ -96,64 +97,52 @@ class AddSightSeeing extends Component
 
         if ($this->sightId) {
             // Update existing hotel record
-            $sight = HotelDetail::findOrFail($this->hotelId);
+            $sight = sightController::findOrFail($this->sightId);
             $sight->update([
                 'sightName' => $this->sightName,
                 'sightPrice' => $this->sightPrice,
                 'currency' => $this->currency,
                 'sightCity' => $this->sightCity,
                 'sightDiscription' => $this->sightDiscription,
-                'sightMainImagePath' => $sightMainImagePath ?? $sight->hotelMainImage,
-                'hotelImage1' => $hotelImage1Url ?? $hotel->hotelImage1,
-                'hotelImage2' => $hotelImage2Url ?? $hotel->hotelImage2,
-                'hotelImage3' => $hotelImage3Url ?? $hotel->hotelImage3,
-                'hotelImage4' => $hotelImage4Url ?? $hotel->hotelImage4,
-                'hotelImage5' => $hotelImage5Url ?? $hotel->hotelImage5,
+                'sightMainImage' => $sightMainImagePath ?? $sight->sightMainImage,
+                'sightImage1' => $sightImage1Path ?? $sight->sightImage1,
+                'sightImage2' => $sightImage2Path ?? $sight->sightImage2,
+                'sightImage3' => $sightImage3Path ?? $sight->sightImage3,
                 'deleteStatus' => $this->deleteStatus,
             ]);
             session()->flash('message', 'Hotel details updated successfully!');
         } else {
             // Create new hotel record
-            HotelDetail::create([
-                'hotelName' => $this->hotelName,
-                'hotelPrice' => $this->hotelPrice,
+            sightController::create([
+                'sightName' => $this->sightName,
+                'sightPrice' => $this->sightPrice,
                 'currency' => $this->currency,
-                'hotelCity' => $this->hotelCity,
-                'hotelStarRating' => $this->hotelStarRating,
-                'hotelAddress' => $this->hotelAddress,
-                'hotelDiscription' => $this->hotelDiscription,
-                'hotelCheckInTime' => $this->hotelCheckInTime,
-                'hotelCheckOutTime' => $this->hotelCheckOutTime,
-                'hotelDistance' => $this->hotelDistance,
-                'hotelMainImage' => $hotelMainImageUrl,
-                'hotelImage1' => $hotelImage1Url,
-                'hotelImage2' => $hotelImage2Url,
-                'hotelImage3' => $hotelImage3Url,
-                'hotelImage4' => $hotelImage4Url,
-                'hotelImage5' => $hotelImage5Url,
+                'sightCity' => $this->sightCity,
+                'sightDiscription' => $this->sightDiscription,
+                'sightMainImage' => $sightMainImagePath,
+                'sightImage1' => $sightImage1Path,
+                'sightImage2' => $sightImage2Path,
+                'sightImage3' => $sightImage3Path,
                 'deleteStatus' => $this->deleteStatus, 
             ]);
-            session()->flash('message', 'Hotel details added successfully!');
+            session()->flash('message', 'Sight details added successfully!');
         }
 
         // Reset form fields
         $this->reset([
-            'hotelName', 
-            'hotelPrice',
+            'sightName', 
+            'sightPrice',
             'currency', 
-            'hotelCity', 
-            'hotelStarRating', 
-            'hotelAddress', 
-            'hotelDiscription',
-            'hotelCheckInTime',
-            'hotelCheckOutTime',
-            'hotelDistance',
-            'hotelMainImage',
-            'hotelImage1',
-            'hotelImage2',
-            'hotelImage3',
-            'hotelImage4',
-            'hotelImage5',
+            'sightCity', 
+            'sightDiscription', 
+            'sightMainImage', 
+            'sightImage1',
+            'sightImage2',
+            'sightImage3',
+            'sightMainImagePath',
+            'sightImage1Path',
+            'sightImage2Path',
+            'sightImage3Path'
         ]);
     }
     #[Layout('admin.Layouts.app')]
