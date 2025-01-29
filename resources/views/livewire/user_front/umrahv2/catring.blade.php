@@ -65,26 +65,28 @@
                             </div>
                         </div>
                     </div> --}}
-                    <div class="col-lg-8 col-md-10 wow fadeInUp  " data-wow-delay="0.3s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative  p-3 col-lg-4 col-md-4">
-                                <img class="img-fluid " src="{{asset('asserts/user/img/catring2.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
+                @foreach ($foodDetails as $food)
+                <div class="col-lg-8 col-md-10 wow fadeInUp  " data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
+                        <div class="position-relative  p-3 col-lg-4 col-md-4">
+                            <img class="img-fluid " src="{{asset('asserts/user/img/catring2.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5>{{$food['foodType']}}</h5>
+                                <h6 class="me-2">{{$food['foodPrice']}} ﷼</h6>
                             </div>
-                            <div class="p-4 mt-2">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h5>Bronze Menu</h5>
-                                    <h6 class="me-2">75 ﷼</h6>
-                                </div>
-                                <div class="d-flex flex-column justify-content-between h-90">
-                                    <p class="text-body mb-3">The balancing act of hard work in this world and trust in fate for the Hereafter emphasizes the importance of striving...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{asset('pdf/food_menu/bronzeMenu.pdf')}}">Food Menu</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog2')}}">Read More</a>
-                                </div>
-                                </div>
+                            <div class="d-flex flex-column justify-content-between h-90">
+                                <p class="text-body mb-3">The balancing act of hard work in this world and trust in fate for the Hereafter emphasizes the importance of striving...</p>
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{asset('pdf/food_menu/bronzeMenu.pdf')}}">Food Menu</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog2')}}">Read More</a>
+                            </div>
                             </div>
                         </div>
                     </div>
+                </div>                    
+                @endforeach
                     {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
                         <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
                             <div class="position-relative  p-3 col-lg-4">
