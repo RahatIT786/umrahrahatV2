@@ -10,17 +10,17 @@
 
         <!-- Header with Create Button -->
         <div class="d-flex align-items-center justify-content-between mb-3">
-            <h6 class="card-title mb-0">Catring Management</h6>
-            <a href="{{route('admin.add-catring')}}" wire:navigate class="btn btn-sm btn-primary">
-                <i class="bx bx-plus me-1"></i> Add Food
+            <h6 class="card-title mb-0">Sight Seeing Management</h6>
+            <a href="{{route('admin.add-sight')}}" wire:navigate class="btn btn-sm btn-primary">
+                <i class="bx bx-plus me-1"></i>Add Sight
             </a>
         </div>
 
         <!-- Search Bar -->
         <div class="d-flex align-items-center mb-3">
-            <h4 class="mb-0">All Food List</h4>
+            <h4 class="mb-0">All Sights List</h4>
             <form class="ms-auto position-relative" wire:submit.prevent="">
-                <input type="text" class="form-control" placeholder="Search Food" wire:model.live="search">
+                <input type="text" class="form-control" placeholder="Search Sight" wire:model.live="search">
             </form>
         </div>
 
@@ -30,15 +30,16 @@
                 <thead class="table-secondary">
                     <tr>
                         <th class="border-0 py-2">S.No</th>
-                        <th class="border-0 py-2">Main Food Image</th>
-                        <th class="border-0 py-2">Food Type</th>
-                        <th class="border-0 py-2">Food Price</th>
+                        <th class="border-0 py-2">Main Sight Image</th>
+                        <th class="border-0 py-2">Name</th>
+                        <th class="border-0 py-2">Place</th>
+                        <th class="border-0 py-2">Price</th>
                         <th class="border-0 py-2 text-center">View</th>
                         <th class="border-0 py-2 text-center">Edit</th>
                         <th class="border-0 py-2 text-center">Delete</th> 
                     </tr>
                 </thead>
-                <tbody>
+              {{-- <tbody>
                     @foreach ($foodDetails as $index => $foods)
                         <tr>
                             <td>{{  $index + 1}}</td>
@@ -69,12 +70,12 @@
                             </td>
                         </tr>
                     @endforeach
-                </tbody>
+                </tbody> --}}
             </table>
         </div>
 
         <!-- Modal for Delete Confirmation -->
-       <div class="modal fade @if($showModal) show @endif" 
+      {{-- <div class="modal fade @if($showModal) show @endif" 
              id="exampleVerticallycenteredModal" 
              tabindex="-1" 
              aria-labelledby="exampleModalCenterTitle" 
@@ -102,6 +103,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>

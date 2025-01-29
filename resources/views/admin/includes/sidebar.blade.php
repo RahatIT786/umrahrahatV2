@@ -114,7 +114,7 @@
               </ul>
             </li>
 
-            <!-- <li>
+            <li>
               <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bi bi-award-fill"></i>
                 </div>
@@ -126,7 +126,21 @@
                 </li>
           
               </ul>
-            </li> -->
+            </li>
+
+            <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Sight Seeing Controller</div>
+              </a>
+              <ul>
+                <li> 
+                  <a href="{{ route('admin.sight-seeing-list') }}" wire:navigate><i class="bi bi-circle"></i>Sight Seeing list</a>
+                </li>
+          
+              </ul>
+            </li>
 
             <li>
               <a class="has-arrow" href="javascript:;">
