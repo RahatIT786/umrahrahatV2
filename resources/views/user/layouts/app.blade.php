@@ -228,6 +228,15 @@
   
   </style>
 
+<script>
+  function toggleChat() {
+      let chatBox = document.getElementById("chatBox");
+      chatBox.style.display = (chatBox.style.display === "none" || chatBox.style.display === "") ? "block" : "none";
+  }
+
+ 
+</script>
+
   <!------>
   <div class="chat-icon" onclick="toggleChat()">
     💬
@@ -295,14 +304,7 @@
 @include('user.includes.footer')
 
 
-<script>
-  function toggleChat() {
-      let chatBox = document.getElementById("chatBox");
-      chatBox.style.display = (chatBox.style.display === "none" || chatBox.style.display === "") ? "block" : "none";
-  }
 
- 
-</script>
 
 
 
