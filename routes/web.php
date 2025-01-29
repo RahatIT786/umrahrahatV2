@@ -39,7 +39,11 @@ use App\Livewire\Admin\PackageManager\AdminViewPackage;
 //catring controller
 use App\Livewire\Admin\Components\Catringlist;
 use App\Livewire\Admin\Components\AddCatring;
+use App\Livewire\Admin\Components\CatringView;
 
+//Sight Seeing Controller
+use App\Livewire\Admin\Components\ListSightSeeing;
+use App\Livewire\Admin\Components\AddSightSeeing;
 
 use App\Livewire\Admin\umrahv2\AgentSignup;
 use App\Livewire\Admin\umrahv2\QuickEnquires;
@@ -194,6 +198,12 @@ Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelDat
 //catring controller
 Route::get('/admin/catring-details',Catringlist::class)->name('admin.catring-list');
 Route::get('/admin/add-catring',AddCatring::class)->name('admin.add-catring');
+Route::get('/admin/edit-catring-details/{id}',AddCatring::class)->name('admin.edit-carting');
+Route::get('/admin/view-catring-details/{id}',CatringView::class)->name('admin.view-catringDetails');
+
+//sightseeing Controller
+Route::get('/admin/sightseeing',ListSightSeeing::class)->name('admin.sight-seeing-list');
+Route::get('/admin/add-sight',AddSightSeeing::class)->name('admin.add-sight');
 
 Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
 Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');
