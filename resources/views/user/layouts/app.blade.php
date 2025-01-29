@@ -128,7 +128,7 @@
     </div>
 
     <div id="call">
-        <a href="tel:+971567866713">
+        <a href="tel:++971566115491">
         <img src="{{asset('asserts/user/img/call_logo.png')}}" alt="call_logo" style="height: 100%;">
     </a>
     </div>
