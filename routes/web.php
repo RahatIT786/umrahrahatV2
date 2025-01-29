@@ -145,7 +145,7 @@ Route::get('/sightseeing',Sightseeing::class)->name('sightseeing');
 Route::get('/catring',Catring::class)->name('catring');
 Route::get('/bankaccount',BankAccount::class)->name('bankaccount');
 Route::get('/ourservices',OurServices::class)->name('ourservices');
-
+Route::post('/qbook/chat',[RamzaanPackageController::class ,'saveQbookChat'])->name('qbook.submitForm');
 
 //umrah by bus
 Route::get('/umrah-by-bus',UmrahByBusFromUAE::class)->name('umrah-by-bus-from-uae');

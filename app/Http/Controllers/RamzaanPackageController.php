@@ -9,7 +9,9 @@ use App\Models\inclusion;
 use App\Models\RamzaanFlavour;
 use App\Models\RamzaanPackage;
 use App\Models\RamzaanSharing;
+use App\Models\UmrahEnquire;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class RamzaanPackageController extends Controller
 {
@@ -126,6 +128,38 @@ class RamzaanPackageController extends Controller
     //     ]);
     // }
 
+
+    public function saveQbookChat(Request $request){
+       
+        // dd($request->all());
+        //  $validated=$request->validate([
+        //      'name'=>'required|string|',
+        //      'mobile'=>'required|string|',
+        //      'date_of_travel'=>'required|',
+        //      'total_pax'=>'required|',
+        //      'travel_type'=>'required|string|',
+        //  ]);
+ 
+         try {
+            $umrah = UmrahEnquire::create([
+                'name'=>$request->name,
+                     'mobile'=>$request->qmobile,
+                     'date_of_travel'=>$request->date_of_travel,
+                     'total_pax'=>$request->total_pax,
+                     'travel_type'=>$request->travel_type,
+            ]);
+
+            Log::info('Quick Book Enquiry Saved to db',$umrah->toArray());
+            // dd($umrah);
+        } catch (\Exception $e) {
+            Log::error('Error saving Quick book  data:', ['error' => $e->getMessage()]);
+            // dd('Error saving data: ' . $e->getMessage());
+        }
+        return redirect()->back();
+        
+             // Return a response (for example, success message)
+    // return response()->json(['status' => 'success', 'message' => 'Form submitted successfully!']);
+     }
 
 
 
