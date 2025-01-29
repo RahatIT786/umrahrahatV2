@@ -48,39 +48,47 @@
                     <h6 class="section-title text-center text-primary text-uppercase"></h6>
                     <h1 class="mb-5">Our Catring Service<span class="text-primary text-uppercase"></span></h1>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp " data-wow-delay="0.1s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring1.jpg')}}" style="height: 200px; width:100%" alt="">
+                <div class="row g-4 d-flex flex-column  align-items-center">
+                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
+                            <div class="position-relative p-3 col-lg-4">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/catring1.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
                             </div>
-                            <div class="p-4 mt-2 ">
+                            <div class="p-4 mt-2 " >
+                               <div class="d-flex flex-column justify-content-between h-100">
                                 <p class="text-body mb-3">The ultimate act of worship, Hajj and Umrah, represents a deep spiritual journey of devotion, submission, and faith...</p>
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:navigate href="{{route('singleBlog1')}}">Read More</a>
                                 </div>
+                               </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp  " data-wow-delay="0.3s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring2.jpg')}}" style="height: 200px; width:100%" alt="">
+                    </div> --}}
+                    <div class="col-lg-8 col-md-10 wow fadeInUp  " data-wow-delay="0.3s">
+                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
+                            <div class="position-relative  p-3 col-lg-4 col-md-4">
+                                <img class="img-fluid " src="{{asset('asserts/user/img/catring2.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
                             </div>
                             <div class="p-4 mt-2">
-                                <p class="text-body mb-3">The balancing act of hard work in this world and trust in fate for the Hereafter emphasizes the importance of striving...</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h5>Bronze Menu</h5>
+                                    <h6 class="me-2">75 ﷼</h6>
+                                </div>
+                                <div class="d-flex flex-column justify-content-between h-90">
+                                    <p class="text-body mb-3">The balancing act of hard work in this world and trust in fate for the Hereafter emphasizes the importance of striving...</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{asset('pdf/food_menu/bronzeMenu.pdf')}}">Food Menu</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog2')}}">Read More</a>
                                 </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp " data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring3.jpg')}}" style="height: 200px; width:100%" alt="">
+                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
+                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
+                            <div class="position-relative  p-3 col-lg-4">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/catring3.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
@@ -90,11 +98,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp " data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring4.jpg')}}" style="height: 200px; width:100%" alt="">
+                    </div> --}}
+                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
+                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
+                            <div class="position-relative p-3 col-lg-4">
+                                <img class="img-fluid" src="{{asset('asserts/user/img/catring4.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
                             </div>
                             <div class="p-4 mt-2">
                                 <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
@@ -104,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
