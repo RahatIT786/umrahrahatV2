@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\RamzaanPackType;
+use App\Models\UmrahEnquire;
 use Illuminate\Http\Request;
 
 abstract class Controller
@@ -14,5 +15,7 @@ abstract class Controller
     //         'type_name'=>'supersaver'
     //     ])
     // }
+    
+
     
 }

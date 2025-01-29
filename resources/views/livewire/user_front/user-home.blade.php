@@ -2,7 +2,7 @@
     <div id="popupContainerHome">
         <div id="popupForm" class="popup-form hdden">
           <div class="form-container">
-            <button id="closeForm" class="close-btn" wire:click='umrahEnquirePopupClose'>&times;</button>
+            <button id="closeForm" class="close-btn" onclick="closeForm()">&times;</button>
             <h2 class="form-title">Quick Book</h2>
             <p class="text-center ">Feel free to submit your query</p>
             <form wire:submit.prevent="quickEnquireSumbit">
@@ -281,6 +281,7 @@ function closeForm() {
     </div>
 </div>
 
+
 <script>
 // Function to animate numbers
 function animateNumber(id, start, end, duration, suffix = '') {
@@ -299,14 +300,22 @@ function animateNumber(id, start, end, duration, suffix = '') {
     }, stepTime);
 }
 
-// Call animateNumber for each counter with appropriate values
-window.onload = function() {
-    animateNumber('clients-count', 0, 720, 3000, 'K +');  // 5K+ Clients
-    animateNumber('success-rate', 0, 99, 3000, '%');    // 87% Success Rate
-    animateNumber('rating-clients', 0,4, 3000,'.5');      // 4.7 Rating Clients
-    animateNumber('experience-years', 0, 17, 3000, '+'); // 20+ Years of Experience
-};
 
+
+function startAnimations() {
+        animateNumber('clients-count', 0, 720, 3000, 'K +');
+        animateNumber('success-rate', 0, 99, 3000, '%');
+        animateNumber('rating-clients', 0, 4, 3000, '.5');
+        animateNumber('experience-years', 0, 17, 3000, '+');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        startAnimations();
+    });
+
+    Livewire.hook('message.processed', (message, component) => {
+        startAnimations();  // Run again when Livewire updates
+    });
 
 
 </script>
