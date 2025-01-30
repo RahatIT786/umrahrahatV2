@@ -32,11 +32,11 @@ class AddCatring extends Component
         "foodPrice"=> "required|numeric",
         "currency"=> "required",
         "foodBreakFast"=> "required|string|max:1000",
-        "foodLunch"=> "required|string|max:1000",
-        "foodDinner"=> "required|string|max:1000",
+        // "foodLunch"=> "required|string|max:1000",
+        // "foodDinner"=> "required|string|max:1000",
         'foodBreakFastImage' => 'nullable|image|max:5120',
-        'foodLunchImage'=> 'nullable|image|max:5120',
-        'foodDinnerImage'=> 'nullable|image|max:5120',
+        // 'foodLunchImage'=> 'nullable|image|max:5120',
+        // 'foodDinnerImage'=> 'nullable|image|max:5120',
         'footPdf'=> 'nullable',
     ];
 
@@ -117,14 +117,14 @@ class AddCatring extends Component
                 'foodType' => $this->foodType,
                 'foodPrice' => $this->foodPrice,
                 'currency' => $this->currency,
-                'foodBreakFast' => $this->foodBreakFast,
-                'foodLunch' => $this->foodLunch,
-                'foodDinner' => $this->foodDinner,
-                'foodBreakFastImagePath' => $foodBreakFastImagePath,
-                'foodLunchImagePath' => $foodLunchImagePath,
-                'foodDinnerImagePath' => $foodDinnerImagePath,
+                'foodBreakFast' => $this->foodBreakFast,// this is using for description
+                // 'foodLunch' => $this->foodLunch,
+                // 'foodDinner' => $this->foodDinner,
+                'foodBreakFastImagePath' => $foodBreakFastImagePath, // this is using for food image
+                // 'foodLunchImagePath' => $foodLunchImagePath,
+                // 'foodDinnerImagePath' => $foodDinnerImagePath,
                 'footPdf' => $footPdfPath,
-                'delete_status' => true,
+               
             ]);
             session()->flash('message', 'Catering details added successfully!');
         }

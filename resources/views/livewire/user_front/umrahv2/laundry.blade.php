@@ -3,7 +3,7 @@
      <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Catering</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Laundry</h1>
                 </div>
             </div>
         </div>
@@ -45,17 +45,18 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase"></h6>
-                    <h1 class="mb-5">Our Catring Service<span class="text-primary text-uppercase"></span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">RahatGroup</h6>
+                    <h1 class="mb-5">Our Laundry Service<span class="text-primary text-uppercase"></span></h1>
                 </div>
                 <div class="row g-4 d-flex flex-column  align-items-center">
-                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.1s">
+                    {{-- <div class="col-lg-8 col-md-10 wow fadeInUp " data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative p-3 col-lg-4">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring1.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
+                            <div class="position-relative p-3 col-lg-4 col-md-4">
+                                <img class="img-fluid" src="{{asset('images/bookmyassistant.jpeg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
                             </div>
                             <div class="p-4 mt-2 " >
                                <div class="d-flex flex-column justify-content-between h-100">
+                                <h3>{{}}</h3>
                                 <p class="text-body mb-3">The ultimate act of worship, Hajj and Umrah, represents a deep spiritual journey of devotion, submission, and faith...</p>
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
@@ -65,23 +66,34 @@
                             </div>
                         </div>
                     </div> --}}
-                @foreach ($foodDetails as $food)
+                @foreach ($laundryDetails as $landry)
                 <div class="col-lg-8 col-md-10 wow fadeInUp  " data-wow-delay="0.3s">
                     <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
                         <div class="position-relative  p-3 col-lg-4 col-md-4">
-                            <img class="img-fluid " src="{{Storage::url($food['foodBreakFastImagePath'])}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
+                            <img class="img-fluid " src="{{Storage::url($landry['image_path'])}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
                         </div>
                         <div class="p-4 mt-2">
                             <div class="d-flex align-items-center justify-content-between">
-                                <h5>{{$food['foodType']}}</h5>
-                                <h6 class="me-2">{{$food['foodPrice']}} .<span>{{$food['currency']}}</span></h6>
+                                <h5>{{$landry['laundry_type']}}</h5>
+                                <div>
+                                    <h6 class="">{{$landry['price']}} .<span>AED</span></h6>
+                                    <del style="font-size: 14px;" >{{ round($landry['price'] * 1.1) }}.00. <span>AED</span> </del>
+                                </div>
                             </div>
-                            <div class="d-flex flex-column justify-content-between h-90">
-                                <p class="text-body mb-3">{{ Str::limit($food['foodBreakFast'], 200, '...') }}</p>
+                            <div>
+                                <span>Washing Days : {{$landry['days']}}</span>
+                                <p>How Many Cloths : {{$landry['cloth_count']}}</p>
+                            </div>
+                            <div class="d-flex flex-column justify-content-between h-90 ">
+                                {{-- <p class="text-body mb-3">{{ Str::limit($landry['note'], 300, '...') }}</p> --}}
+                                <div class="m-2">
+                                    <h5>Free Benifits</h5>
+                                    {!! $landry['note'] !!}
+                                </div>
 
                             <div class="d-flex justify-content-between">
-                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{Storage::url($food['footPdf'])}}">Food Menu</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog2')}}">Read More</a>
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Book Here</a>
+                                {{-- <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog2')}}">Read More</a> --}}
                             </div>
                             </div>
                         </div>

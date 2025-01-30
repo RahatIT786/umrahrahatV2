@@ -43,9 +43,9 @@
                                 <a class="btn btn-link" href="{{route('hotels')}}">Hotels & Rooms </a>
                                 <a class="btn btn-link" href="{{route('saudi-visa')}}">Visas & Insurance </a>
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Catering Services </a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Laundry Services </a>
+                                <a class="btn btn-link" href="{{route('user.laundry')}}">Laundry Services </a>
                                 <a class="btn btn-link" href="{{route('sightseeing')}}">Sightseeing in Makka Madina </a>
-                                <a class="btn btn-link" href="{{route('coming-soon')}}">Guides and Assistance </a>
+                                <a class="btn btn-link" href="{{route('myassistant')}}">Guides and Assistance </a>
                                 <a class="btn btn-link" href="{{route('coming-soon')}}">Pickup & Drop Services </a>
                                
                             </div>

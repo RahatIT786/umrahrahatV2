@@ -37,6 +37,7 @@ class CatringView extends Component
             $this->foodBreakFast = $foods->foodBreakFast;
             $this->foodLunch = $foods->foodLunch;
             $this->foodDinner = $foods->foodDinner;
+            $this->footPdf=$foods->footPdf;
             $this->foodBreakFastImagePath = $foods->foodBreakFastImagePath;
             $this->foodLunchImagePath = $foods->foodLunchImagePath;
             $this->foodDinnerImagePath = $foods->foodDinnerImagePath;

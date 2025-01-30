@@ -54,16 +54,17 @@
 
 
 
-                    <h5>BreakFast , Lunch and Dinner</h5>
+                    {{-- <h5>BreakFast , Lunch and Dinner</h5> --}}
+                    <h5>Food Description</h5>
                     <hr>
                     <!-- Flight & Transport -->
                    
-                        <div class="col-md-4 mb-3">
-                            <label for="foodBreakFast" class="form-label">BreakFast</label>
+                        <div class="col-md-12 mb-3">
+                            <label for="foodBreakFast" class="form-label">Description</label>
                             <textarea id="foodBreakFast" wire:model="foodBreakFast" class="form-control " placeholder="Enter Breakfast " readonly></textarea>
                         </div>
 
-                        <!-- Meals -->
+                        {{-- <!-- Meals -->
                         <div class="col-md-4 mb-3">
                             <label for="foodLunch" class="form-label">Lunch</label>
                             <textarea id="foodLunch" wire:model="foodLunch" class="form-control " placeholder="Enter Lunch" readonly></textarea>
@@ -73,12 +74,12 @@
                         <div class="col-md-4 mb-3">
                             <label for="foodDinner" class="form-label">Dinner</label>
                             <textarea id="foodDinner" wire:model="foodDinner" class="form-control " placeholder="Enter Dinner" readonly></textarea>
-                        </div>
+                        </div> --}}
              
 
 
                      <!-- File Upload for Supporting Image -->
-                      <div class="col-md-4 mb-3">
+                      <div class="col-md-6 mb-3">
                             <label for="foodBreakFastImage" class="form-label">Breakfast Image</label>
                             <input type="file" id="foodBreakFastImage" class="form-control" wire:model="foodBreakFastImage" accept="image/*" readonly>
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
@@ -97,7 +98,7 @@
                       </div>
 
 
-                      <div class="col-md-4 mb-3">
+                      {{-- <div class="col-md-4 mb-3">
                             <label for="foodLunchImage" class="form-label">Lunch Image</label>
                             <input type="file" id="foodLunchImage" class="form-control" wire:model="foodLunchImage" accept="image/*" readonly>
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
@@ -131,11 +132,18 @@
                                     <img src="{{ asset('storage/' . $foodDinnerImagePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
                             @endif
-                      </div>
+                      </div> --}}
 
-                      <div class="col-md-12 mb-3">
+                      <div class="col-md-6 mb-3">
                             <label for="footPdf" class="form-label">Food PDF</label>
-                            <input type="file" id="footPdf" class="form-control" wire:model="footPdf" accept="image/*" readonly>
+                           
+                            {{-- @if ( $footPdfPath) --}}
+                          <div>
+                            <a href="{{ asset('storage/' . $footPdf) }}">click to view pdf</a>
+                          </div>
+{{--                                 
+                            @endif --}}
+                            {{-- <input type="file" id="footPdf" class="form-control" wire:model="footPdf" accept="image/*" readonly>
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
                             @error('footPdf') <span class="text-danger">{{ $message }}</span> @enderror
 
@@ -148,7 +156,7 @@
                                 <div class="mt-3">
                                     <img src="{{ asset('storage/' . $footPdfPath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
-                            @endif
+                            @endif --}}
                       </div>
 
 

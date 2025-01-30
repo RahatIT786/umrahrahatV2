@@ -52,6 +52,8 @@ use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\PackageManager\ListPackage;
 use App\Livewire\Admin\PackageManager\AddPackage;
+use App\Livewire\Admin\umrahv2\AddAssistant;
+use App\Livewire\Admin\umrahv2\Laundry;
 use App\Livewire\ContactUs;
 use App\Livewire\DirectorSpeak;
 use App\Livewire\FAQ;
@@ -93,6 +95,7 @@ use App\Livewire\UserFront\Umrahv2\Transport;
 
 use App\Livewire\WhyChooseUs;
 use App\Livewire\PartnerFooter;
+use App\Livewire\UserFront\Umrahv2\Assistant;
 use App\Livewire\WhoWeAre; // Ensure this class exists in the specified namespace
 
 use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
@@ -100,7 +103,7 @@ use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
 use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
 use App\Livewire\UserFront\Umrahv2\Sightseeing;
 use App\Livewire\UserFront\Umrahv2\Catring;
-
+use App\Livewire\UserFront\Umrahv2\Laundry as Umrahv2Laundry;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
 use Illuminate\Support\Facades\Artisan;
@@ -163,6 +166,12 @@ Route::get('/director-speak',DirectorSpeak::class)->name('director-speak');
 Route::get('/agent-speak',AgentSpeak::class)->name('agent-speak');
 Route::get('/our-awards',OurAwards::class)->name('our-awards');
 
+//laundry routes
+Route::get('/user/laundry',Umrahv2Laundry::class)->name('user.laundry');
+
+//book my assitant
+Route::get('/user/myassistant',Assistant::class)->name('myassistant');
+
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
 
@@ -195,6 +204,7 @@ Route::get('/admin/add-hotel-details',AddHotalDetais::class)->name('admin.addHot
 Route::get('/admin/edit-hotal/{id}',AddHotalDetais::class)->name('editHotelData');
 Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelData');
 
+
 //catring controller
 Route::get('/admin/catring-details',Catringlist::class)->name('admin.catring-list');
 Route::get('/admin/add-catring',AddCatring::class)->name('admin.add-catring');
@@ -205,6 +215,13 @@ Route::get('/admin/view-catring-details/{id}',CatringView::class)->name('admin.v
 Route::get('/admin/sightseeing',ListSightSeeing::class)->name('admin.sight-seeing-list');
 Route::get('/admin/add-sight',AddSightSeeing::class)->name('admin.add-sight');
 Route::get('/admin/edit-sight-details/{id}',AddSightSeeing::class)->name('admin.edit-sight');
+
+//laundry Controller
+Route::get('/admin/addlaundry',Laundry::class)->name('admin.laundry');
+
+
+
+
 
 Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
 Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');

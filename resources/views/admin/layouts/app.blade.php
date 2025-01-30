@@ -33,8 +33,6 @@
   <link href="{{ asset('asserts/admin/css/header-colors.css') }}" rel="stylesheet" />
 
 
-   <!-- Select2 CSS -->
-   <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
 
 
    <!-- Summernote CSS for proper styling (optional for display) -->
@@ -123,30 +121,7 @@
 
 
 
-<!-- Include Select2 JS -->
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script>
-  $(document).ready(function() {
-         
-         $("#package_type").select2({
-             placeholder: "Select a Package Type",
-             allowClear: true
-         
-}).on('change', function (e) {
-     // Trigger Livewire update
-     var componentId = 'package-select'; // Replace with your Livewire component ID (if needed)
-        Livewire.find(componentId).set('selectedOptions', $(this).val());
- });
-         $('select').select2({
-         placeholder: 'select pack types',
-        allowClear: true
-});
 
 
-
-
-     });
-     
-</script>
 </footer>
 </html>
