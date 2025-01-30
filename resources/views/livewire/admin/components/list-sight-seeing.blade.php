@@ -34,48 +34,49 @@
                         <th class="border-0 py-2">Name</th>
                         <th class="border-0 py-2">Place</th>
                         <th class="border-0 py-2">Price</th>
-                        <th class="border-0 py-2 text-center">View</th>
+                        <!-- <th class="border-0 py-2 text-center">View</th> -->
                         <th class="border-0 py-2 text-center">Edit</th>
                         <th class="border-0 py-2 text-center">Delete</th> 
                     </tr>
                 </thead>
-              {{-- <tbody>
-                    @foreach ($foodDetails as $index => $foods)
+                <tbody>
+                    @foreach ($sightDetail as $index => $sights)
                         <tr>
                             <td>{{  $index + 1}}</td>
                             <td>
-                                @if ($foods->foodBreakFastImagePath)
-                                    <img src="{{Storage::url($foods->foodBreakFastImagePath)}}" alt="food Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
+                                @if ($sights->sightMainImage)
+                                    <img src="{{Storage::url($sights->sightMainImage)}}" alt="food Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
                                 @else
                                     No Image available
                                 @endif
                             </td>
-                            <td>{{ $foods->	foodType }}</td>
-                            <td>{{ number_format($foods->foodPrice, 2) }}</td>
-                            <td class="text-center">
-                                <a class="text-warning" href="{{ route('admin.view-catringDetails', ['id' => $foods->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
+                            <td>{{ $sights->sightName }}</td>
+                            <td>{{ $sights->sightCity }}</td>
+                            <td>{{ number_format($sights->sightPrice, 2) }}</td>
+                            <!-- <td class="text-center">
+                                <a class="text-warning" href="{{ route('admin.view-catringDetails', ['id' => $sights->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
                                     <i class="bi bi-eye-fill"></i>
                                 </a> &nbsp;
-                            </td>
+                            </td> -->
                             
                             <td class="text-center">
-                                <a class="text-primary" href="{{ route('admin.edit-carting', ['id' => $foods->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                                <a class="text-primary" href="{{route('admin.edit-sight',['id' => $sights->id])}}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a wire:click="confirmDelete({{ $foods->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
+                                <a wire:click="confirmDelete({{ $sights->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
                                     <i class="bi bi-trash-fill"></i>
                                 </a>
                             </td>
                         </tr>
                     @endforeach
-                </tbody> --}}
+                </tbody>
             </table>
         </div>
 
         <!-- Modal for Delete Confirmation -->
-      {{-- <div class="modal fade @if($showModal) show @endif" 
+       <div class="modal fade @if($showModal) show @endif" 
              id="exampleVerticallycenteredModal" 
              tabindex="-1" 
              aria-labelledby="exampleModalCenterTitle" 
@@ -91,7 +92,7 @@
                                 wire:click="closeModal"></button>
                     </div>
                     <div class="modal-body">
-                        Are you sure you want to delete this Food type?
+                        Are you sure you want to delete this Sight type?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" 
@@ -103,6 +104,6 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
     </div>
 </div>
