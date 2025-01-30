@@ -16,6 +16,8 @@ class AddSightSeeing extends Component
     public $sightPrice;
     public $currency;
     public $sightCity;
+    public $sightInclusion;
+    public $sightNotes;
     public $sightDiscription;
     public $sightMainImage;
     public $sightImage1;
@@ -76,6 +78,8 @@ class AddSightSeeing extends Component
             $this->currency = $sight->currency;
             $this->sightCity = $sight->sightCity;
             $this->sightDiscription = $sight->sightDiscription;
+            $this->sightInclusion = $sight->sightInclusion;
+            $this->sightNotes = $sight->sightNotes;
             $this->sightMainImagePath = $sight->sightMainImage;
             $this->sightImage1Path = $sight->sightImage1;
             $this->sightImage2Path = $sight->sightImage2;
@@ -104,6 +108,8 @@ class AddSightSeeing extends Component
                 'currency' => $this->currency,
                 'sightCity' => $this->sightCity,
                 'sightDiscription' => $this->sightDiscription,
+                'sightInclusion' => $this->sightInclusion,
+                'sightNotes' => $this->sightNotes,
                 'sightMainImage' => $sightMainImagePath ?? $sight->sightMainImage,
                 'sightImage1' => $sightImage1Path ?? $sight->sightImage1,
                 'sightImage2' => $sightImage2Path ?? $sight->sightImage2,
@@ -119,6 +125,8 @@ class AddSightSeeing extends Component
                 'currency' => $this->currency,
                 'sightCity' => $this->sightCity,
                 'sightDiscription' => $this->sightDiscription,
+                'sightInclusion' => $this->sightInclusion,
+                'sightNotes' => $this->sightNotes,
                 'sightMainImage' => $sightMainImagePath,
                 'sightImage1' => $sightImage1Path,
                 'sightImage2' => $sightImage2Path,
@@ -135,6 +143,8 @@ class AddSightSeeing extends Component
             'currency', 
             'sightCity', 
             'sightDiscription', 
+            'sightInclusion',
+            'sightNotes',
             'sightMainImage', 
             'sightImage1',
             'sightImage2',

@@ -20,6 +20,13 @@ class AddVisa extends Component
     public $filePath;
     public $flyer;
     public $flyerPath;
+    public $visaTypes = [
+        'UMRAH VISA',
+        'TOURIST VISA',
+        'BUSINESS VISA',
+        'PERSONAL VISA'
+    ];
+    
 
     protected $rules = [
         'visaType' => 'required|string',
@@ -52,6 +59,7 @@ class AddVisa extends Component
     public function mount($id = null)
     {
         if ($id) {
+           
             $visa = VisaDetail::findOrFail($id);
             $this->visaId = $visa->id;
             $this->visaType = $visa->visa_type;
@@ -73,6 +81,7 @@ class AddVisa extends Component
         if ($this->visaId) {
             // Update existing visa
             $visa = VisaDetail::findOrFail($this->visaId);
+           // dd($this->visaType);
             $visa->update([
                 'visa_type' => $this->visaType,
                 'documents_required' => $this->documentsRequired,

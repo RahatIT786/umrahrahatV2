@@ -13,14 +13,14 @@
                     @endif
                     <form class="row g-3 needs-validation" wire:submit.prevent="submit">
                         <!-- Visa Type -->
+            
                         <div class="col-md-6 mb-3">
                             <label for="VisaType" class="form-label">Visa Type</label>
                             <select class="form-select" id="VisaType" wire:model="visaType">
                                 <option value="">Select visa type</option>
-                                <option value="UMRAH VISA">UMRAH VISA</option>
-                                <option value="TOURIST VISA">TOURIST VISA</option>
-                                <option value="BUSINESS VISA">BUSINESS VISA</option>
-                                <option value="PERSONAL VISA">PERSONAL VISA</option>
+                                @foreach($visaTypes as $type)
+                                    <option value="{{ $type }}">{{ $type }}</option>
+                                @endforeach
                             </select>
                             @error('visaType') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>

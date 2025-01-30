@@ -19,6 +19,8 @@ class sightController extends Model
         'currency',
         'sightCity',
         'sightDiscription',
+        'sightInclusion',
+        'sightNotes',
         'sightMainImage',
         'sightImage1',
         'sightImage2',
