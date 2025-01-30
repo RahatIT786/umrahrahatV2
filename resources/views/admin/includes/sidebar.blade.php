@@ -122,6 +122,7 @@
               </a>
               <ul>
                 <li> 
+                  
                   <a href="{{ route('admin.catring-list') }}" wire:navigate><i class="bi bi-circle"></i>Catring Food list</a>
                 </li>
           
@@ -149,7 +150,8 @@
               </a>
               <ul>
                 <li> 
-                  <a href="{{ route('admin.laundry') }}" wire:navigate><i class="bi bi-circle"></i>List All Laundry</a>
+                  <a href="{{ route('admin.list-laundry') }}" wire:navigate><i class="bi bi-circle"></i>List All Laundry</a>
+                  {{-- <a href="{{ route('admin.laundry') }}" wire:navigate><i class="bi bi-circle"></i>List All Laundry</a> --}}
                 </li>
           
               </ul>

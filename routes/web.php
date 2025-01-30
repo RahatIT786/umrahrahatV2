@@ -54,6 +54,7 @@ use App\Livewire\Admin\PackageManager\ListPackage;
 use App\Livewire\Admin\PackageManager\AddPackage;
 use App\Livewire\Admin\umrahv2\AddAssistant;
 use App\Livewire\Admin\umrahv2\Laundry;
+use App\Livewire\Admin\umrahv2\ListLaundry;
 use App\Livewire\ContactUs;
 use App\Livewire\DirectorSpeak;
 use App\Livewire\FAQ;
@@ -218,6 +219,7 @@ Route::get('/admin/edit-sight-details/{id}',AddSightSeeing::class)->name('admin.
 
 //laundry Controller
 Route::get('/admin/addlaundry',Laundry::class)->name('admin.laundry');
+Route::get('/admin/listlaundry',ListLaundry::class)->name('admin.list-laundry');
 
 
 
