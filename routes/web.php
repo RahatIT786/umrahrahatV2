@@ -214,6 +214,7 @@ Route::get('/admin/view-catring-details/{id}',CatringView::class)->name('admin.v
 //sightseeing Controller
 Route::get('/admin/sightseeing',ListSightSeeing::class)->name('admin.sight-seeing-list');
 Route::get('/admin/add-sight',AddSightSeeing::class)->name('admin.add-sight');
+Route::get('/admin/edit-sight-details/{id}',AddSightSeeing::class)->name('admin.edit-sight');
 
 //laundry Controller
 Route::get('/admin/addlaundry',Laundry::class)->name('admin.laundry');

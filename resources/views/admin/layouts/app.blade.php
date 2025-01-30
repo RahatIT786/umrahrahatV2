@@ -33,7 +33,7 @@
   <link href="{{ asset('asserts/admin/css/header-colors.css') }}" rel="stylesheet" />
 
 
-   
+
 
    <!-- Summernote CSS for proper styling (optional for display) -->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-lite.min.css" rel="stylesheet">
