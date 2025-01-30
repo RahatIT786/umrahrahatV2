@@ -57,7 +57,7 @@
                         <div class="col-md-6 mb-3">
                             <label for="sightCity" class="form-label">Sight City</label>
                             <select class="form-select" id="sightCity" wire:model="sightCity">
-                                <option value="">Select City</option>
+                                <option value="select city">Select City</option>
                                 <option value="MAKKAH">MAKKAH</option>
                                 <option value="MADINAH">MADINAH</option>
                                 <option value="BAGHDAD">BAGHDAD</option>
@@ -72,6 +72,22 @@
                             <label for="sightDiscription" class="form-label">Sight Discription</label>
                             <textarea id="sightDiscription" wire:model="sightDiscription" class="form-control" placeholder="Enter Sight Discription"></textarea>
                             @error('sightDiscription') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        
+                        <!-- Hotel Discription -->
+                        <div class="col-md-6 mb-3">
+                            <label for="sightInclusion" class="form-label">Sight Discription</label>
+                            <textarea id="sightInclusion" wire:model="sightInclusion" class="form-control" placeholder="Enter Sight Inclusion"></textarea>
+                            @error('sightInclusion') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        
+                        <!-- Hotel Discription -->
+                        <div class="col-md-6 mb-3">
+                            <label for="sightNotes" class="form-label">Sight Discription</label>
+                            <textarea id="sightNotes" wire:model="sightNotes" class="form-control" placeholder="Enter Sight Notes"></textarea>
+                            @error('sightNotes') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
                         <!-- File Upload for Main Hotel Image -->
