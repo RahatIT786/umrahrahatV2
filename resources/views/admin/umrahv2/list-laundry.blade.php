@@ -10,7 +10,7 @@
 
         <!-- Header with Create Button -->
         <div class="d-flex align-items-center justify-content-between mb-3">
-            <h6 class="card-title mb-0">Catring Management</h6>
+            <h6 class="card-title mb-0">Laundry Management</h6>
             <a href="{{route('admin.laundry')}}" wire:navigate class="btn btn-sm btn-primary">
                 <i class="bx bx-plus me-1"></i> Add Laundry
             </a>
@@ -18,9 +18,9 @@
 
         <!-- Search Bar -->
         <div class="d-flex align-items-center mb-3">
-            <h4 class="mb-0">All Food List</h4>
+            <h4 class="mb-0">All Laundry List</h4>
             <form class="ms-auto position-relative" wire:submit.prevent="">
-                <input type="text" class="form-control" placeholder="Search Food" wire:model.live="search">
+                {{-- <input type="text" class="form-control" placeholder="Search Food" wire:model.live="search"> --}}
             </form>
         </div>
 
