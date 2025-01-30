@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('foodType');
             $table->decimal('foodPrice', 8, 2);
             $table->string('currency');
-            $table->text('foodBreakFast')->nullable();
+            $table->text('foodBreakFast')->nullable();// this is using for description 
             $table->text('foodLunch')->nullable();
             $table->text('foodDinner')->nullable();
             $table->string('foodBreakFastImagePath')->nullable();

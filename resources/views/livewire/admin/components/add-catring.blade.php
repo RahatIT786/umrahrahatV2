@@ -8,7 +8,7 @@
                 </div>
                 <div class="card-body">
                     @if (session()->has('message'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success text-center">
                             {{ session('message') }}
                         </div>
                     @endif
@@ -30,7 +30,7 @@
 
                         <!-- Currency Selection -->
                         <div class="col-md-12 mb-3">
-                            <label class="form-label">Select Currency</label>
+                            <label class="form-label">Select Currencwy</label>
                             <div class="form-check">
                                 <input type="radio" id="currencyINR" name="currency" value="INR" wire:model="currency" class="form-check-input">
                                 <label for="currencyINR" class="form-check-label">INR</label>
@@ -54,16 +54,17 @@
 
 
 
-                    <h5>BreakFast , Lunch and Dinner</h5>
+                    {{-- <h5>BreakFast , Lunch and Dinner</h5> --}}
+                    <h5>Food Description</h5>
                     <hr>
                     <!-- Flight & Transport -->
                    
-                        <div class="col-md-4 mb-3">
-                            <label for="foodBreakFast" class="form-label">BreakFast</label>
-                            <textarea id="foodBreakFast" wire:model="foodBreakFast" class="form-control " placeholder="Enter Breakfast "></textarea>
+                        <div class="col-md-12 mb-3">
+                            <label for="foodBreakFast" class="form-label">Description</label>
+                            <textarea id="foodBreakFast" wire:model="foodBreakFast" class="form-control " placeholder="Enter Description "></textarea>
                         </div>
 
-                        <!-- Meals -->
+                        {{-- <!-- Meals -->
                         <div class="col-md-4 mb-3">
                             <label for="foodLunch" class="form-label">Lunch</label>
                             <textarea id="foodLunch" wire:model="foodLunch" class="form-control " placeholder="Enter Lunch"></textarea>
@@ -73,19 +74,19 @@
                         <div class="col-md-4 mb-3">
                             <label for="foodDinner" class="form-label">Dinner</label>
                             <textarea id="foodDinner" wire:model="foodDinner" class="form-control " placeholder="Enter Dinner"></textarea>
-                        </div>
+                        </div> --}}
              
 
 
                      <!-- File Upload for Supporting Image -->
-                      <div class="col-md-4 mb-3">
-                            <label for="foodBreakFastImage" class="form-label">Breakfast Image</label>
+                      <div class="col-md-6 mb-3">
+                            <label for="foodBreakFastImage" class="form-label">Food Image</label>
                             <input type="file" id="foodBreakFastImage" class="form-control" wire:model="foodBreakFastImage" accept="image/*">
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
                             @error('foodBreakFastImage') <span class="text-danger">{{ $message }}</span> @enderror
 
                             <!-- Show Uploaded or Current Image -->
-                            @if ($foodBreakFastImage)
+                            {{-- @if ($foodBreakFastImage)
                                 <div class="mt-3">
                                     <img src="{{ $foodBreakFastImage->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
@@ -93,11 +94,11 @@
                                 <div class="mt-3">
                                     <img src="{{ asset('storage/' . $foodBreakFastImagePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
-                            @endif
+                            @endif --}}
                       </div>
 
 
-                      <div class="col-md-4 mb-3">
+                      {{-- <div class="col-md-4 mb-3">
                             <label for="foodLunchImage" class="form-label">Lunch Image</label>
                             <input type="file" id="foodLunchImage" class="form-control" wire:model="foodLunchImage" accept="image/*">
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
@@ -113,9 +114,9 @@
                                     <img src="{{ asset('storage/' . $foodLunchImagePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
                             @endif
-                      </div>
+                      </div> --}}
 
-                      <div class="col-md-4 mb-3">
+                      {{-- <div class="col-md-4 mb-3">
                             <label for="foodDinnerImage" class="form-label">Dinner Image</label>
                             <input type="file" id="foodDinnerImage" class="form-control" wire:model="foodDinnerImage" accept="image/*">
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
@@ -131,16 +132,16 @@
                                     <img src="{{ asset('storage/' . $foodDinnerImagePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
                             @endif
-                      </div>
+                      </div> --}}
 
-                      <div class="col-md-12 mb-3">
+                      <div class="col-md-6 mb-3">
                             <label for="footPdf" class="form-label">Food PDF</label>
-                            <input type="file" id="footPdf" class="form-control" wire:model="footPdf" accept="image/*">
-                            <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
+                            <input type="file" id="footPdf" class="form-control" wire:model="footPdf" accept="application/pdf">
+                            <small class="form-text text-muted">Allowed file types: .pdf</small>
                             @error('footPdf') <span class="text-danger">{{ $message }}</span> @enderror
 
                             <!-- Show Uploaded or Current Image -->
-                            @if ($footPdf)
+                            {{-- @if ($footPdf)
                             <div class="mt-3">
                                 <img src="{{ $footPdf->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
                             </div>
@@ -148,7 +149,7 @@
                                 <div class="mt-3">
                                     <img src="{{ asset('storage/' . $footPdfPath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
-                            @endif
+                            @endif --}}
                       </div>
 
 

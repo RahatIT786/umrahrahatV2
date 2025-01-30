@@ -141,6 +141,32 @@
           
               </ul>
             </li>
+            <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Laundry Controller</div>
+              </a>
+              <ul>
+                <li> 
+                  <a href="{{ route('admin.laundry') }}" wire:navigate><i class="bi bi-circle"></i>List All Laundry</a>
+                </li>
+          
+              </ul>
+            </li>
+            <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Assitant Controller</div>
+              </a>
+              <ul>
+                <li> 
+                  {{-- <a href="{{ route('admin.assistant') }}" wire:navigate><i class="bi bi-circle"></i>View Assitant</a> --}}
+                </li>
+          
+              </ul>
+            </li>
 
             <li>
               <a class="has-arrow" href="javascript:;">
