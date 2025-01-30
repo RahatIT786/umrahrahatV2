@@ -17,5 +17,6 @@ class Laundry extends Model
         'note',
         'description',
         'image_path',
+         'delete_status',
     ];
 }
