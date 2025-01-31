@@ -4,7 +4,7 @@
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100 " src="{{asset('asserts/user/img/haj/mecca1.jpg')}}" alt="Image" style="height: 70vh; object-fit: cover;">
+                        <img class="w-100 " src="{{asset('asserts/user/img/haj/mecca1.jpg')}}" alt="Image" style="height: 30vh; object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
@@ -21,7 +21,7 @@
         <div class="" id="about">
             <div class="container" >
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-12">
+                    <div class="col-lg-8">
                         <h6 class="section-title text-start text-primary text-uppercase">Agent Speak</h6>
                         <h1 class="mb-4">What Rahat's Agents Say About Us<span class="text-primary text-uppercase"> </span></h1>
                         <p class="mb-4">At Rahat Travels of India, our agents are more than just team members—they are the backbone of our success and the heart of our operations. Their loyalty and commitment have been instrumental in building our reputation for excellence in Hajj and Umrah services.</p>
@@ -31,6 +31,19 @@
                         <p>Join us and witness the passion, integrity, and dedication that define our team</p>
                         <!-- <h3>Rahat Travels Of India Pvt. Ltd. Terms & Conditions</h3> -->
                         
+                    </div>
+                    <div class="col-lg-4 ">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('asserts/user/img/haj/mecca2.jpg')}}" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('asserts/user/img/haj/masque.jpg')}}">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('asserts/user/img/muzdalifah.jpg')}}"> 
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <h4 class="section-title text-start text-primary my-5 text-uppercase">People Love RAHAT .. Watch some of Our Agents Speak...</h4>

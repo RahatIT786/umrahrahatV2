@@ -25,7 +25,7 @@
         <div class="" id="about">
             <div class="container" >
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-12">
+                    <div class="col-lg-8">
                         <h6 class="section-title text-start text-primary text-uppercase">Dear RAHAT Community,</h6>
                         <!-- <h1 class="mb-4">Our Mission<span class="text-primary text-uppercase"> </span></h1> -->
                         <p class="mb-4">I am delighted to address you today as we reflect on our journey and look ahead to the promising future that lies before us. Over the years, our team's dedication and hard work have propelled us to new heights, and I am immensely proud of what we have achieved together.</p>
@@ -47,7 +47,19 @@
                         <p>Imran Rahatullah Shaikh</p>
                         <p> <strong>Managing Director</strong></p>    
                         <p>Rahat Group Of Companies</p>
-                        
+                    </div>
+                    <div class="col-lg-4 ">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('asserts/user/img/haj/mecca2.jpg')}}" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('asserts/user/img/haj/masque.jpg')}}">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('asserts/user/img/muzdalifah.jpg')}}"> 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
