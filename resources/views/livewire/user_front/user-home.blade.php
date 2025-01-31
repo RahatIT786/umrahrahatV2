@@ -248,7 +248,7 @@ function closeForm() {
 
 
         <!-- Booking Start -->
-  <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
+  {{-- <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
     <div class="container">
         <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
             <div class="row g-2">
@@ -279,7 +279,7 @@ function closeForm() {
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 
 <script>
@@ -409,14 +409,15 @@ function startAnimations() {
                                 <!-- Right Column: Package Details -->
                                 <div class="col-lg-8 col-md-8 p-4 mt-2">
                                     <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mb-0">{{$package->package_name}}</h5>
+                                        <h5 class="mb-0">{{ucfirst($package->package_name)}}</h5>
                                         <div class="ps-2">
                                             <!-- Rating stars -->
+                                            {{-- <small class="fa fa-star text-primary"></small>
                                             <small class="fa fa-star text-primary"></small>
                                             <small class="fa fa-star text-primary"></small>
                                             <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
+                                            <small class="fa fa-star text-primary"></small> --}}
+                                            <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
                                         </div>
                                     </div>
                                     <div class="d-flex mb-3" style="font-size: 12px;">
@@ -444,11 +445,29 @@ function startAnimations() {
                                     <div>
                                         <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
                                     </div>
-
-                                    <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p>
+                                    <div >
+                                       <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Hotel : </span><span >Al Deafah in Makka</span> | Anwar Deafah in Madina  </div>
+                                       <div class="d-flex align-items-center  flex-md-row flex-column">
+                                        <div>
+                                            <span style="font-weight:500; color: #0D1425;"><i class="fa-solid fa-bag-shopping"></i> What you get:</span>
+                                        </div>
+                                       <div class="d-flex gap-3 mt-3 mb-3 ms-3 ">
+                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-bowl-food"></i> <span style="font-size: 12px;">MEALS</span></span>
+                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-jug-detergent"></i> <span style="font-size: 12px;">LAUNDRY</span></span>
+                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-file-shield"></i><span style="font-size: 12px;">BORDER TAX</span></span>
+                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-sim-card"></i> <span style="font-size: 12px;">SAUDI SIM</span></span>
+                                        <span class="d-flex flex-column justify-content-center align-items-center"> <span style="font-size: 12px;"> <a >VIEW MORE <i class="fa-solid fa-arrow-right"></i></a></span></span>
+                                       
+                                       
+                                       </div>
+                                        
+                                       </div>
+                                    </div>
+                                    
+                                    {{-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> --}}
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})">
-                                            <i class="fa-solid fa-book"></i> View Brochure
+                                            <i class="fa-solid fa-file-zipper"></i>  View Package
                                         </a>
                                         <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
                                             <i class="fa-regular fa-paper-plane"></i>  Book Enquire
@@ -464,7 +483,7 @@ function startAnimations() {
                 </div>
             </div>
         </div>
-        <!-- package End -->
+        
 
 
         <!-- Video Start -->

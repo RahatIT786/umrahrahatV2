@@ -18,38 +18,48 @@
 
 
        <!-- Booking Start -->
-       <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
-    <div class="container">
-        <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
-            <div class="row g-2">
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="clients-count">0</h2>
-                        <h5>Clients</h5>
+       <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="bg-white shadow" style="padding: 35px;">
+                <div class="row g-2">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100">Search Hotels</button>
                     </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="success-rate">0</h2>
-                        <h5>Success Rate</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="rating-clients">0</h2>
-                        <h5>Rating Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="experience-years">0</h2>
-                        <h5>Years of Experience</h5>
+                    <div class="col-md-9">
+                        <div class="row g-2">
+                            <form class="col-md-4"  wire:submit.prevent="">
+                                <select class="form-select" wire:model.live="searchCity">
+                                    <option value='' selected>City</option>
+                                    <option value="MAKKAH">MAKKAH</option>
+                                    <option value="MADINAH">MADINAH</option>
+                                    <option value="BAGHDAD">BAGHDAD</option>
+                                    <option value="NAJAF">NAJAF</option>
+                                    <option value="KARBALA">KARBALA</option>
+                                </select>
+                            </form>
+                            <form class="col-md-4" wire:submit.prevent="">
+                                <select class="form-select" wire:model.live="searchRating">
+                                    <option value='' selected>Star Rating</option>
+                                    <option value="2">2 Stars</option>
+                                    <option value="3">3 Stars</option>
+                                    <option value="4">4 Stars</option>
+                                    <option value="5">5 Stars</option>
+                                    <option value="6">Building Accomutation Stars</option>
+                                    <option value="7">Standard Hotel Stars</option>
+                                </select>
+                            </form>
+                            <div class="col-md-4">
+                                <form wire:submit.prevent="" class="date" id="date2" >
+                                    <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Hotel Name" />
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- Booking End -->
 
 <script>
 // Function to animate numbers
