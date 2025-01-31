@@ -180,7 +180,7 @@
             </div>
         </nav>
         <!-- Tab Name end here -->
-         
+
 <style>
     .zoom-effect img {
         transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
@@ -199,6 +199,7 @@
       /* background-color: #fff;   */
       height: 65px;
       /* border: 2px solid black; */
+      background-color: none !important;
     }
     
     .nav-tabs-package {
