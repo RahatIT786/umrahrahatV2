@@ -149,7 +149,7 @@
     <div class="col-md-12">
     <div class="tabs" style="width: 100%;">
         <!-- Tab Name start here -->
-        <nav role="navigation" class="transformer-tabs" style="width: 100%;">
+        <nav role="navigation" class="transformer-tabs" id="navtabs" style="width: 100%;">
             <div class="container" style="width: 100%;">
                 <div class="nav nav-tabs-package" id="nav-tab" role="tablist">
                     <div class="nav-item-package">
@@ -190,7 +190,9 @@
         transform: scale(1.2); /* Zooms the image by 20% */
     }
    
-    
+    #navtabs {
+        background-color: transparent;
+    }
 
     /* Ensure the entire navigation tab container takes full width */
     .transformer-tabs {
