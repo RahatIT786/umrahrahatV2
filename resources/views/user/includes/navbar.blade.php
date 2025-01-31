@@ -129,7 +129,7 @@
                                         Visa
                                     
                                 </a>
-                                <a href=""  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
+                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
                                     <img style="height:30px;" src="{{asset('images/Transport_Icon.png')}}" alt="">
                                     Transfers </a>
                                 <a href="{{route('sightseeing')}}"  class="nav-item nav-link  d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
@@ -139,6 +139,10 @@
                                 <a href="{{route('catring')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
                                     <img style="height: 30px; display: block;" src="{{asset('images/Catering_Icon.png')}}" alt="Catering Icon">
                                     <span>Catering</span>
+                                </a>
+                                <a href="https://rahatholidays.com/" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
+                                    <img style="height: 30px; display: block;" src="{{asset('images/Holiday_Icon.png')}}" alt="Catering Icon">
+                                    <span>Holidays</span>
                                 </a>
                                 <a href="{{route('partner-with-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
                                     <img style="height: 30px; display: block" src="{{asset('images/Partner_With_Us_Icon.png')}}" alt="">
@@ -151,12 +155,12 @@
                                         services</a>
 
                                     <div class="dropdown-menu rounded-0 m-0" >
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Laundry</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Guide and Assitant</a>
+                                        <a href="{{route('user.laundry')}}" class="dropdown-item">Laundry</a>
+                                        <a href="{{route('myassistant')}}" class="dropdown-item">Guide and Assitant</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Pickup & Drop Service</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Transports</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Catering</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Visa</a>
+                                        <a href="{{route('catring')}}" class="dropdown-item">Catering</a>
+                                        <a href="{{route('saudi-visa')}}" class="dropdown-item">Visa</a>
                      
                                     </div>
                                 </div>
