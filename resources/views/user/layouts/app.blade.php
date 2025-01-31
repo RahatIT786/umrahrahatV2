@@ -41,18 +41,26 @@
     /* Ensure the entire navigation tab container takes full width */
     .transformer-tabs {
       width: 100%;  /* Set container width to 100% */
-      padding: 0;   /* Remove any padding */
-      background-color: #FEAF39;  /* Background color for the tabs */
+      padding: 20;   /* Remove any padding */
+      /* background-color: #fff;   */
+      height: 65px;
+      /* border: 2px solid black; */
     }
     
     .nav-tabs-package {
       display: flex;              /* Display tabs in a row */
       justify-content: space-between;  /* Distribute space evenly between tabs */
       width: 100%;  /* Ensure tabs take full width */
-      background-color: #FEAF39; /* Background color for the tabs */
+      background-color: #fff; /* Background color for the tabs */
       padding: 0;
       border: none;
       align-items: center;
+      height: 60px;
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      box-shadow: rgb(113, 123, 134) 0px 20px 30px -10px;
+      /* box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+      /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+      /* border: 2px solid black; */
     }
 
     .nav-item-package {
@@ -62,7 +70,7 @@
 
     .nav-link-package{
       display: block;
-      padding: 14px 0;
+      padding: 54px 0;
       color: #555;
       font-weight: 600;
       text-transform: uppercase;
@@ -80,14 +88,39 @@
 
     /* Active tab styling */
     .nav-link-package.active {
-      color: #fff;
+      color: black;
       border-radius: 5px 5px 0 0;
     }
 
     /* Hover effect for the tabs */
     .nav-item-package:hover .nav-link-package {
-      color: #fff;
+      color: black;
     }
+
+    .nav-link-package {
+    position: relative;
+    padding: 10px 15px;
+    color: black;
+    font-weight: bold;
+    height: 50px;
+}
+
+.nav-link-package.active {
+    color: black;
+}
+
+.nav-link-package.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 50%;
+    height: 5px;
+    background-color: red;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
 
     /* Mobile view adjustments */
     @media (max-width: 768px) {

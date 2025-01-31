@@ -14,12 +14,14 @@ use App\Models\PackageType;
 use App\Models\inclusion;
 use App\Models\FlightManagement;
 use App\Models\DepartureCity;
+use App\Models\CateringController;
+use App\Models\Laundry;
 
 class UmrahLandPackage extends Component
 {
     use LivewireAlert, WithFileUploads;
 
-    public $package_name, $packageImage, $packageDescription;
+    public $package_name = 'default value', $packageImage, $packageDescription;
     public $package_type_ids = [];
     public $makka_rating = [];
     public $makkaHotel = [], $makka_hotel = [];
@@ -36,10 +38,22 @@ class UmrahLandPackage extends Component
     public $flightList = [];
     public $package_days;
     public $service_type;
+    public $foodController;
+    public $laundrayController;
 
     public $g_share_price = [], $qt_share_price = [], $qd_share_price = [], $t_share_price = [], $d_share_price = [], $single_price = [], $child_w_b = [], $child_wo_b = [], $infants = [];
 
-    public $paymentPolicy ; 
+    public $paymentPolicy = 'A minimum of Rs. 40,000 per person must be paid to secure a booking if the departure date is after 21 days.
+50% of the total amount is due 21 to 30 days before departure.
+Full payment is required 21 days before departure, or the booking will be canceled without prior notice.
+The tour cost remains the same for bookings through Agents, but Rahat Travels Of India Pvt. Ltd. is not responsible for any cash transactions with Agents.
+For bookings within 21 days of departure,
+100% payment is required.
+For advance bookings, 100% payment must be cleared at least 21 days before departure.
+No tickets will be issued if the payment for tickets is not completed 21 days before departure, in accordance with airline regulations.
+Indian passport valid for at least 6 months having minimum 2 blank pages.
+Pan card copy (Linked with Aadhar Number)' ; 
+
     public $importantNotes = 'All Prices quoted are per person and in Indian Rupees.
 In case of package booked without umrah visa through us, than transportation will be subject to availability.
 Peak season groups will have an additional surcharge of Rs. 4000/ per person.
@@ -65,12 +79,19 @@ Services, Itinerary, and prices are subject to Saudi and Indian Government regul
 Complimentary ZAM ZAM will be given only if accepted by the Airlines at the airport.
 Arabic dates may be changed subject to sighting of moon.
 Subject to Mumbai Jurisdiction only.',
+
  $cancellationPolicy = 'Rs. 40,000 per person is non-refundable.
 50% of the package amount is non-refundable if canceled 21 to 30 days before departure.
 100% of the package amount is non-refundable if canceled within 21 days of departure.
 Date change charges: Rs. 10,000 per person, plus any applicable additional charges, for changes made 21 to 30 days before departure. Otherwise, the cancellation policies apply.
 No date changes are allowed within 20 days of departure; cancellations apply.', 
-$FlightTransport = '', $packageMeals, $packageVisaTaxes, 
+$FlightTransport = '
+Economy Class Return Ticket
+Round Trip Transfers on SIC Basis',
+$packageMeals = 'Breakfast, Lunch & Dinner
+Prepared by Indian Chefs in Hygienic & Licensed Kitchens.
+Served in Buffet Style in Our Allotment Hotels & Food Parcels in 4 & 5 Star Hotels.',
+$packageVisaTaxes = 'Single Entry Umrah Visa with Insurance is included.', 
 $packageInclusion = 'Return Flights in Economy Class. (VIA Flight on FIT Basis)
 Visa & Insurance.
 Hotels Stay. (Bus Service)
@@ -116,7 +137,17 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
         $this->packageIncludes = inclusion::where('delete_status',1)->get();
         $this->flightList = FlightManagement::where('delete_status',1)->get();
         $this->DepartureCity = DepartureCity::where('delete_status',1)->get();
+        $this->foodController = CateringController::where('delete_status',1)->get();
+        $this->laundrayController = Laundry::where('delete_status',1)->get();
     }
+    public $selected_package_type = null;
+
+
+    public function updatedSelectedPackageType($value)
+    {
+        $this->package_type_ids = $value ? [$value] : []; // Store it as an array
+    }
+
     public function getMakkaHotel($index)
     {
         // Fetch hotels based on the selected rating

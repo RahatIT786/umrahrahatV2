@@ -14,11 +14,24 @@
                   <form class="row g-3" wire:submit.prevent="save" onsubmit="event.preventDefault();">
                         
                         <!-- Package Master Name* -->
-                        <div class="col-md-6 mb-3">
+                        {{-- <div class="col-md-6 mb-3">
                             <label for="package_name" class="form-label">Package Master Name*</label>
                             <input type="text" id="package_name" wire:model="package_name" class="form-control" placeholder="Enter Package Master Name">
                             @error('package_name') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div> --}}
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Package Name</label>
+                            <select class="form-control" id="packageType" wire:model.live="selected_package_type">
+                                <option value="">Select Package Type</option>
+                                @foreach ($packageType as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->packageType }}</option>
+                                @endforeach
+                            </select>
+                            @error("selected_package_type") <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
+
+
 
                         <div class="col-md-6 mb-3">
                             <label for="package_days" class="form-label">No Of Days*</label>
@@ -39,7 +52,7 @@
 
 
                      <!-- Package Type* -->
-                    <div class="col-md-12 mb-3">
+                    {{-- <div class="col-md-12 mb-3">
                         <label class="form-label">Package Type</label>
 
                         <div class="d-flex">
@@ -51,7 +64,7 @@
                             @endforeach
                         </div>
                         @error('packageType') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
+                    </div> --}}
 
                         <!--Package Discription -->
                         <div class="col-md-6 mb-3">
@@ -61,7 +74,7 @@
                         </div>
 
                         <!-- Package Image -->
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-12 mb-3">
                             <label for="packageImage" class="form-label">Package Image</label>
                             <input type="file" id="packageImage" class="form-control" wire:model="packageImage" accept="image/*">
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
@@ -78,10 +91,10 @@
 
 
                      <!-- Package Includes -->
-                    <div class="col-md-12 mb-3">
+                    <div class="col-md-4 mb-3">
                         <label class="form-label">Package Includes</label>
 
-                        <div class="d-flex">
+                        <div class="">
                             @foreach ($packageIncludes as $index => $value)
                                 <div class="form-check" style="margin-right:20px">
                                     <input class="form-check-input" type="checkbox" id="{{$value->InclusionName}}" value="{{$value->id}}" wire:model="includes">
@@ -93,10 +106,10 @@
                     </div>
 
                     <!-- Flight Name -->
-                    <div class="col-md-12 mb-3">
+                    <div class="col-md-4 mb-3">
                         <label class="form-label">Flights</label>
 
-                        <div class="d-flex">
+                        <div class="">
                             @foreach ($flightList as $index => $value)
                                 <div class="form-check" style="margin-right:20px">
                                     <input class="form-check-input" type="checkbox" id="{{$value->FlightName}}" value="{{$value->id}}" wire:model="flights">
@@ -108,10 +121,10 @@
                     </div>
 
                     <!-- Departure City Name -->
-                    <div class="col-md-12 mb-3">
+                    <div class="col-md-4 mb-3">
                         <label class="form-label">Departure City</label>
 
-                        <div class="d-flex">
+                        <div class="">
                             @foreach ($DepartureCity as $index => $value)
                                 <div class="form-check" style="margin-right:20px">
                                     <input class="form-check-input" type="checkbox" id="{{$value->CityName}}" value="{{$value->id}}" wire:model="departureCities">
@@ -270,15 +283,9 @@
                             <label for="SuperSaver_MealType" class="form-label">Meal Type</label>
                             <select class="form-control" wire:model="food_type.{{ $k }}" >
                                 <option value="">Select Meal Type</option>
-                                <option value="1">Super Saver</option>
-                                <option value="2">Gold</option>
-                                <option value="3">Sliver</option>
-                                <option value="4">Executive</option>
-                                <option value="5">Esteem</option>
-                                <option value="6">Elite</option>
-                                <option value="7">Bronze</option>
-                                <option value="8">Royal</option>
-                                <option value="9">Classic</option>
+                                @foreach ($foodController as $index => $value)
+                                  <option value="{{$value->id }}">{{$value->foodType}}</option>
+                                @endforeach
                             </select>
                             @error("food_type.{$k}")<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
@@ -289,11 +296,9 @@
                                 <label  class="form-label">Laundry Type</label>
                                 <select class="form-control" wire:model="laundray_type.{{ $k }}">
                                     <option value="">Select Laundry Type</option>
-                                    <option value="1">One Time</option>
-                                    <option value="2">Two Time</option>
-                                    <option value="3">Three Time</option>
-                                    <option value="4">Daily</option>
-                                    <option value="5">Alternative Days</option>
+                                    @foreach ($laundrayController as $index => $value)
+                                    <option value="{{$value->id }}">{{$value->laundry_type}}</option>
+                                    @endforeach
                                 </select>
                                 @error("laundray_type.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
@@ -349,7 +354,7 @@
                                 @error("child_wo_b.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             <div class="col-lg-2">
-                                <label  class="form-label">Child Infant Bed*</label>
+                                <label  class="form-label">Child Infant*</label>
                                 <input type="text" id="infants{{ $k }}" wire:model="infants.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                                 @error("infants.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
