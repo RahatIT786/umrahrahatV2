@@ -22,7 +22,7 @@
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Package Name</label>
-                            <select class="form-control" id="packageType" wire:model.live="selected_package_type">
+                            <select class="form-control" id="packageType" wire:model.live="selected_package_type" required>
                                 <option value="">Select Package Type</option>
                                 @foreach ($packageType as $key => $value)
                                     <option value="{{ $value->id }}">{{ $value->packageType }}</option>
