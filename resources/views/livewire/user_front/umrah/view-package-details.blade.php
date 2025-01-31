@@ -159,12 +159,15 @@
                         <a href="#TourCost" id="lnkTourCost" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Tour Cost</a>
                     </div>
                     <div class="nav-item-package">
-                        <a href="#PackageOverview" style="text-decoration: none;" id="lnkPackageOverview" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Package Overview</a>
+                        <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Itinerary</a>
                     </div>
+                    <!-- <div class="nav-item-package">
+                        <a href="#PackageOverview" style="text-decoration: none;" id="lnkPackageOverview" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Package Overview</a>
+                    </div> -->
                     <div class="nav-item-package">
                         <a href="#InclusionsExclusions" style="text-decoration: none;" id="lnkInclusionsExclusions" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Inclusions / Exclusions</a>
                     </div>
-                    <div class="nav-item-package">
+                    <!-- <div class="nav-item-package">
                         <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Itinerary</a>
                     </div>
                     <div class="nav-item-package">
@@ -172,7 +175,7 @@
                     </div>
                     <div class="nav-item-package">
                         <a href="#CancellationPolicy" style="text-decoration: none;" id="lnkCancellationPolicy" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Cancellation Policy</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </nav>
@@ -484,46 +487,507 @@
 
             <!-- Includion and exclution -->
             <div id="InclusionsExclusions" class="tab-pane fade show" role="tabpanel">
-                <div class="container">
-                    <div class="row" style="margin-top:40px">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="packageoverviewbox">
-                                <div class="row">
-                                <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
-                                    <ul>
-                                        @foreach (explode('.', $packages->inclusion) as $sentence)
-                                            @if(trim($sentence)) <!-- Check if the sentence is not empty -->
-                                                <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
-                                            @endif
-                                        @endforeach
-                                    </ul>
-                                </div>
+    <div class="container">
+        <div class="row" style="margin-top:40px">
+            <div class="col-md-12 col-sm-12">
+                <div class="packageoverviewbox">
+                    <div class="row">
+                        <!-- Box 1 -->
+                        <div class="col-md-12 col-sm-12 mb-3">
+                            <div class="box box-1">
+                                <h5 style="font-size:xx-large">INCLUSION</h5>
+                                <ul style=" list-style-type: none; padding-left: 0;">
+                                @foreach (explode('.', $packages->inclusion) as $sentence)
+                                    @if(trim($sentence))
+                                        <li style="padding-left: 0; margin: 0;">
+                                            <div class="d-flex">
+                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                &nbsp; {{ trim($sentence) }}
+                                            </div>
+                                        </li>
+                                    @endif
+                                @endforeach
+                                </ul>
                             </div>
                         </div>
                         
+                        <!-- Box 2 -->
+                        <div class="col-md-12 col-sm-12 mb-3">
+                            <div class="box box-2">
+                                <h5 style="font-size:xx-large">Exclusions</h5>
+                                <ul>
+                                    @foreach (explode('.', $packages->exclusion) as $sentence)
+                                        @if(trim($sentence))
+                                            <li style="padding-left: 0; margin: 0;">
+                                                <div class="d-flex">
+                                                    <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                    &nbsp; {{ trim($sentence) }}.
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Box 3 -->
+                        <div class="col-md-12 col-sm-12 mb-3">
+                            <div class="box box-3">
+                                <h5 style="font-size:xx-large">Cancellation Policy</h5>
+                                <ul>
+                                    @foreach (explode('.', $packages->cancellation_policy) as $sentence)
+                                        @if(trim($sentence))
+                                            <li style="padding-left: 0; margin: 0;">
+                                                <div class="d-flex">
+                                                    <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                    &nbsp; {{ trim($sentence) }}.
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Box 4 -->
+                        <div class="col-md-12 col-sm-12 mb-3">
+                            <div class="box box-4">
+                            <h5 style="font-size:xx-large">Payment Policy</h5>
+                                <ul>
+                                    @foreach (explode('.', $packages->payment_policy) as $sentence)
+                                        @if(trim($sentence))
+                                            <li style="padding-left: 0; margin: 0;">
+                                                <div class="d-flex">
+                                                    <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                    &nbsp; {{ trim($sentence) }}.
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+<style>
+
+ul {
+    list-style-type: none;
+    padding-left: 0; /* Remove default left padding */
+}
+
+li {
+    padding: 5px 0; /* Reduce space between list items */
+    margin: 0;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items */
+}
+
+.circle-wrapper {
+    width: 30px; /* Adjust circle size */
+    height: 30px; /* Adjust circle size */
+    margin-right: 10px; /* Space between the circle and the text */
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    color: #fff;
+    font-size: 18px; /* Adjust icon size */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 2.5px;
+    background-clip: content-box;
+    animation: spin 10s linear infinite;
+}
+
+.circle-wrapper:active .circle {
+    animation: spin 2s linear infinite;
+}
+
+.success {
+    background-color: #4BB543;
+    border: 2.5px dashed #4BB543;
+}
+
+@keyframes spin { 
+    100% { 
+        transform: rotateZ(360deg);
+    }
+}
+
+
+/* .page-wrapper {
+  height: 100vh;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+        /* General box styling */
+.box {
+    background-color: #fff; /* White background for the boxes */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; /* Box shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect to make the box lift */
+.box:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Adjust spacing for each box in a row */
+.col-md-3 {
+    display: flex;
+    justify-content: center; /* Align boxes in the center */
+}
+
+/* Optional: Add some padding to the entire section */
+.packageoverviewbox {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+/* List styling inside the boxes */
+.box ul {
+    padding-left: 20px;
+}
+
+.box li {
+    margin-bottom: 3px;
+}
+
+/* Style the headers inside each box */
+.box h5 {
+    color: #333; /* Dark color for header */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Ensure boxes are aligned in a row */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Wrap the boxes on smaller screens */
+}
+
+.col-md-3, .col-sm-6 {
+    padding: 10px; /* Space between boxes */
+}
+
+@media (max-width: 767px) {
+    .col-md-3 {
+        width: 100%; /* On small screens, make boxes full width */
+    }
+}
+
+    </style>
+</div>
+
+
 
             <!-- Itinerary -->
             <div id="Itinerary" class="tab-pane fade show" role="tabpanel">
                 <div class="container">
                     <div class="row" style="margin-top:40px">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="packageoverviewbox">
-                                <div class="row">
-                                <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
-                                    <ul>
-                                        @foreach (explode('.', $packages->itinerary) as $sentence)
-                                            @if(trim($sentence)) <!-- Check if the sentence is not empty -->
-                                                <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
-                                            @endif
-                                        @endforeach
-                                    </ul>
+
+                        <!-- itenary -->
+                        <div class="container">
+                            <div class="timeline">
+                                @foreach (explode('.', $packages->itinerary) as $sentence)
+                                    @if(trim($sentence))
+                                    <div class="timeline-container primary">
+                                        <div class="timeline-icon">
+                                            <i class="far fa-grin-wink"></i>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <!-- <h4 class="timeline-title"><span class="badge">Primary</span></h4> -->
+                                            <p>{{ trim($sentence) }}</p>
+                                            <!-- <p class="timeline-subtitle">1 Hours Ago</p> -->
+                                        </div>
+                                    </div>
+                                    @endif
+                                @endforeach
+                                <!-- <div class="timeline-container primary">
+                                    <div class="timeline-icon">
+                                        <i class="far fa-grin-wink"></i>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h4 class="timeline-title"><span class="badge">Primary</span></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                                        <p class="timeline-subtitle">1 Hours Ago</p>
+                                    </div>
                                 </div>
+                                <div class="timeline-container danger">
+                                    <div class="timeline-icon">
+                                        <i class="far fa-grin-hearts"></i>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h4 class="timeline-title"><span class="badge">Danger</span></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                                        <p class="timeline-subtitle">2 Hours Ago</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-container success">
+                                    <div class="timeline-icon">
+                                        <i class="far fa-grin-tears"></i>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h4 class="timeline-title"><span class="badge">Success</span></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                                        <p class="timeline-subtitle">6 Hours Ago</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-container warning">
+                                    <div class="timeline-icon">
+                                        <i class="far fa-grimace"></i>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h4 class="timeline-title"><span class="badge">Warning</span></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                                        <p class="timeline-subtitle">1 Day Ago</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-container">
+                                    <div class="timeline-icon">
+                                        <i class="far fa-grin-beam-sweat"></i>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h4 class="timeline-title"><span class="badge">Secondary</span></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                                        <p class="timeline-subtitle">3 Days Ago</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-container info">
+                                    <div class="timeline-icon">
+                                        <i class="far fa-grin"></i>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h4 class="timeline-title"><span class="badge">Info</span></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                                        <p class="timeline-subtitle">4 Days Ago</p>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
-                        
+        <!-- itenaru -->
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Niramit:300,300i,700');
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+  --primary: #1d8cf8;
+  --secondary: #4f537b;
+  --info: #11cdef;
+  --success: #00bf9a;
+  --warning: #ff8d72;
+  --danger: #fd5d93;
+
+  /* --body-bg: #1e1e2f; */
+  --timeline-before-bg: #222a42;
+  --timeline-body-bg: #27293d;
+  --timeline-body-round: 3px;
+  --timeline-body-shadow: 1px 3px 9px rgba(0,0,0, .1);
+}
+
+/* body {
+  font-family: 'K2D', sans-serif;
+  background: var(--body-bg);
+  letter-spacing: 1px;
+} */
+
+/* Page container */
+/* .container {
+  max-width: 650px;
+  margin: 50px auto;
+} */
+
+/* Typography */
+/* p {
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 14px;
+  opacity: .8;
+} */
+
+/* Timeline style */
+.timeline {
+  position: relative;
+  padding-left: 4rem;
+  margin: 0 0 0 30px;
+  color: white;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--timeline-body-bg);
+}
+
+.timeline-container {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -88px;
+  top: 4px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2rem;
+  background: var(--secondary);
+}
+
+.timeline-icon i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.timeline-body {
+  background: var(--timeline-body-bg);
+  border-radius: var(--timeline-body-round);
+  padding: 20px 20px 15px;
+  box-shadow: var(--timeline-body-shadow);
+}
+
+.timeline-body::before {
+  content: '';
+  background: inherit;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -10px;
+  transform: rotate(45deg);
+  border-radius: 0 0 0 2px;
+}
+
+.timeline-title {
+  margin-bottom: 1.4rem;
+}
+
+.timeline-title .badge {
+  background: var(--secondary);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.timeline-subtitle {
+  font-weight: 300;
+  font-style: italic;
+  opacity: .4;
+  margin-top: 16px;
+  font-size: 11px;
+}
+
+/* Primary Timeline */
+.primary .badge,
+.primary .timeline-icon {
+  background: var(--primary) !important;
+}
+
+/* Info Timeline */
+.info .badge,
+.info .timeline-icon {
+  background: var(--info) !important;
+}
+
+/* Success Timeline */
+.success .badge,
+.success .timeline-icon {
+  background: var(--success) !important;
+}
+
+/* Warning Timeline */
+.warning .badge,
+.warning .timeline-icon {
+  background: var(--warning) !important;
+}
+
+/* Danger Timeline */
+.danger .badge,
+.danger .timeline-icon {
+  background: var(--danger) !important;
+}
+
+.author {
+  font-family: inherit;
+  padding: 3em;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.author a:link,
+.author a:visited {
+  color: white;
+}
+
+/* .author a:hover {
+  text-decoration: none;
+} */
+
+/* .btn:link,
+.btn:visited {
+  margin-top: 1em;
+  text-decoration: none;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: black;
+  padding: 1.5em 2rem;
+  border-radius: 1em;
+  transition: .5s all;
+} */
+
+/* .btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: lighten(black, 10%);
+} */
+
+</style>
                     </div>
                 </div>
             </div>
