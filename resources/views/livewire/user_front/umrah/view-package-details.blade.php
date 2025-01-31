@@ -1,6 +1,6 @@
-<section class="hotel-page" style="margin-bottom:100px">
+<section class="" style="margin-bottom:100px">
     <!-- Hotel Banner Start -->
-    <div class="container-fluid p-0 mb-5 hotel-banner">
+    <div class=" p-0 mb-5 hotel-banner">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -28,32 +28,35 @@
                     <h3 class="mb-3 section-title text-start text-primary text-uppercase">{{$packages->name}}</h3>
                     <!-- <h4 class="mb-5"><span class="text-primary"><i class="fa fa-map-marker-alt"></i></span>  {{ "package name" }} </h4> -->
                     </div>
-                    <div class="container-fluid p-0 mb-5 hotel-banner">
-                        <div class="custom-carousel" id="hotel-images-carousel">
-                            <div class="custom-carousel-wrapper">
+                    <div class="container-fluid p-0 mb-5">
+                        <div class="" id="">
+                            <div class="">
                                
-                                    <div class="custom-carousel-item">
-                                     <img class="w-100" src="{{ Storage::url($this->packages->packageImage)}}" alt="Hotel Image"> 
+                                    <div class="">
+                                    <img  src="{{ Storage::url($this->packages->packageImage) }}" style="height: 35rem; width: 100%;" alt="Hotel Image"> 
                                     </div>
                                
                             </div>
 
                             <!-- Carousel Controls -->
-                            <button class="custom-carousel-prev" id="prev-btn">&#10094;</button>
-                            <button class="custom-carousel-next" id="next-btn">&#10095;</button>
+                            <!-- <button class="custom-carousel-prev" id="prev-btn">&#10094;</button>
+                            <button class="custom-carousel-next" id="next-btn">&#10095;</button> -->
                         </div>
                     </div>
                     <!-- Hotel Banner End -->
 
                     <!-- Hotel Description -->
                     <div class="mt-4">
-                        <h5 class="mb-5" style="line-height: 1.8;">{{ "Description" }}</h5>
-
+                    <h5 style="font-size: xx-large; font-family: 'Poppins', sans-serif;">DISCRIPTION</h5>
                         <ul>
                             @foreach (explode('.', $packages->description) as $sentence)
-                                @if(trim($sentence)) <!-- Check if the sentence is not empty -->
-                                    <li><h5>{{ trim($sentence) }}.</h5></li> <!-- Add a period at the end of each sentence -->
-                                @endif
+                            @if(trim($sentence))
+                                <li style="padding-left: 0; margin: 0;">
+                                        <div class="d-flex"> 
+                                        &nbsp; {{ trim($sentence) }}.
+                                    </div>
+                                </li>
+                            @endif
                             @endforeach
                         </ul>
                     </div>
@@ -61,44 +64,6 @@
 
                 <!-- Right Section: Booking Form -->
                 <div class="col-lg-3" style="margin-top:70px">
-                           <!-- Rating Section -->
-                            <div class="mb-3">
-                            <h3 class="mb-3 section-title text-start text-primary text-uppercase">Rating</h3>
-                           {{-- <div class="mb-5">
-                            @if($hotel_detail->hotelStarRating == '2')
-                                <div class="ps-2">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                </div>
-                            @elseif($hotel_detail->hotelStarRating == '3')
-                                <div class="ps-2">
-                                  <i class="fa fa-star text-warning"></i>
-                                  <i class="fa fa-star text-warning"></i>
-                                  <i class="fa fa-star text-warning"></i>
-                                </div>
-                            @elseif($hotel_detail->hotelStarRating == '4')
-                                <div class="ps-2">
-                                  <i class="fa fa-star text-warning"></i>
-                                  <i class="fa fa-star text-warning"></i>
-                                  <i class="fa fa-star text-warning"></i>
-                                  <i class="fa fa-star text-warning"></i>
-                                </div>
-                            @elseif($hotel_detail->hotelStarRating == '5')
-                                 <div class="ps-2">
-                                   <i class="fa fa-star text-warning"></i>
-                                   <i class="fa fa-star text-warning"></i>
-                                   <i class="fa fa-star text-warning"></i>
-                                   <i class="fa fa-star text-warning"></i>
-                                </div>
-                            @endif
-                            </div>--}}
-                    </div>
-                            
-                            <!-- Price Section -->
-                            <div class="mb-3">
-                             <h3 class="mb-4 section-title text-start text-primary text-uppercase">Price per Night</h3>
-                                {{--<h4>{{$hotel_detail->hotelPrice}} {{$hotel_detail->currency}}</h4>--}}
-                            </div>
                     <div class="border p-5 rounded booking-form" style="width: 450px;">
                         <h4 class="mb-4 text-uppercase">Book Your Stay</h4>
                         <form>
@@ -127,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row form-row mt-5">
+       {{--     <div class="row form-row mt-5">
                 @foreach ($packageType as $id => $type)
                     <div class="col-md-2 mb-3">
                         <label class="particles-checkbox-container">
@@ -141,31 +106,34 @@
                         </label>
                     </div>
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- Hotel Details End -->
     <div class="row" style="margin-bottom:250px">
-    <div class="col-md-12">
-    <div class="tabs" style="width: 100%;">
+    <div class="col-lg-12">
+    <div class="tabs" style="width: 100%; ">
         <!-- Tab Name start here -->
         <nav role="navigation" class="transformer-tabs" id="navtabs" style="width: 100%;">
             <div class="container" style="width: 100%;">
-                <div class="nav nav-tabs-package" id="nav-tab" role="tablist">
-                    <div class="nav-item-package">
-                        <a href="#Hotels" id="lnkHotels" style="text-decoration: none;" class="nav-link-package active" data-bs-toggle="tab" role="tab" aria-selected="true">Hotels</a>
+                <div class="nav nav-tabs-package" id="nav-tab" role="tablist" style="width: 100%;">
+                    <div class="nav-item-package ">
+                        <a href="#Hotels" id="lnkHotels" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package active" data-bs-toggle="tab" role="tab" aria-selected="true">Hotels</a>
                     </div>
                     <div class="nav-item-package">
-                        <a href="#TourCost" id="lnkTourCost" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Tour Cost</a>
+                        <a href="#TourCost" id="lnkTourCost" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Tour Cost</a>
                     </div>
                     <div class="nav-item-package">
-                        <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Itinerary</a>
+                        <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Itinerary</a>
                     </div>
                     <!-- <div class="nav-item-package">
                         <a href="#PackageOverview" style="text-decoration: none;" id="lnkPackageOverview" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Package Overview</a>
                     </div> -->
                     <div class="nav-item-package">
-                        <a href="#InclusionsExclusions" style="text-decoration: none;" id="lnkInclusionsExclusions" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Inclusions / Exclusions</a>
+                        <a href="#InclusionsExclusions" style="text-decoration: none;font-size:14px;font-weight:600;" id="lnkInclusionsExclusions" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Inclusions / Exclusions</a>
+                    </div>
+                    <div class="nav-item-package">
+                        <a href="#PaymentPolicy" style="text-decoration: none;font-size:14px;font-weight:600;" id="lnkPaymentPolicy" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false"> Important Notes</a>
                     </div>
                     <!-- <div class="nav-item-package">
                         <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Itinerary</a>
@@ -192,6 +160,7 @@
    
     #navtabs {
         background-color: transparent;
+        width: 100%;
     }
 
     /* Ensure the entire navigation tab container takes full width */
@@ -274,25 +243,48 @@
     transform: translateX(-50%);
     transition: all 0.3s ease-in-out;
 }
-
-
-    /* Mobile view adjustments */
-    @media (max-width: 768px) {
-      .nav-tabs-package {
-        flex-direction: column; /* Stack the tabs vertically on smaller screens */
-      }
-
-      .nav-item-package {
-        width: 100%;  /* Ensure each tab item stretches across full width */
-      }
-
-      .nav-link-package {
-        padding: 12px;
-        font-size: 16px;
-      }
-
-      
+@media (max-width: 768px) {
+    .nav-tabs-package {
+        flex-direction: column !important; 
+        align-items: center; /* Center align tabs */
+        width: 100%;
     }
+
+    .nav-item-package {
+        width: 100%; /* Make each tab full width */
+        text-align: center;
+        margin-bottom: 5px; /* Add spacing between tabs */
+    }
+
+    .nav-link-package {
+        display: block;
+        width: 100%; /* Full width for better touch interaction */
+        padding: 12px 0; /* Adjust padding for better tap area */
+        font-size: 14px;
+    }
+
+    .nav-link-package.active::after {
+        width: 50%; /* Adjust active indicator */
+        height: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link-package {
+        font-size: 13px; /* Slightly reduce font size for small screens */
+        padding: 10px 0;
+    }
+
+    .nav-item-package {
+        margin-bottom: 3px; /* Reduce spacing for very small screens */
+    }
+
+    .nav-link-package.active::after {
+        width: 40%; /* Further adjust active indicator */
+    }
+}
+
+
 </style>
         <div class="tab-content" id="nav-tabContent">
             <!-- Hotels tab content start -->
@@ -339,11 +331,6 @@
                                         @endif
                                     </div>
                                 </div>
-                           
-                                <!-- <div>
-                                    <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina </p>
-                                </div> -->
-                                <!-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> -->
                             </div>
                         </div>
                         </div>
@@ -390,11 +377,6 @@
                                         @endif
                                     </div>
                                 </div>
-
-                                <!-- <div>
-                                    <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina </p>
-                                </div> -->
-                                <!-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> -->
                             </div>
                            </div>
                          </div>
@@ -524,7 +506,7 @@
                                 </div>
 
                                 <style>
-                                    .room-rates {
+                                .room-rates {
                                 font-family: Arial, sans-serif;
                                 margin: 20px;
                                 }
@@ -642,44 +624,6 @@
                                 </ul>
                             </div>
                         </div>
-
-                        <!-- Box 3 -->
-                        <div class="col-md-12 col-sm-12 mb-3">
-                            <div class="box box-3">
-                                <h5 style="font-size:xx-large">Cancellation Policy</h5>
-                                <ul>
-                                    @foreach (explode('.', $packages->cancellation_policy) as $sentence)
-                                        @if(trim($sentence))
-                                            <li style="padding-left: 0; margin: 0;">
-                                                <div class="d-flex">
-                                                    <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
-                                                    &nbsp; {{ trim($sentence) }}.
-                                                </div>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Box 4 -->
-                        <div class="col-md-12 col-sm-12 mb-3">
-                            <div class="box box-4">
-                            <h5 style="font-size:xx-large">Payment Policy</h5>
-                                <ul>
-                                    @foreach (explode('.', $packages->payment_policy) as $sentence)
-                                        @if(trim($sentence))
-                                            <li style="padding-left: 0; margin: 0;">
-                                                <div class="d-flex">
-                                                    <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
-                                                    &nbsp; {{ trim($sentence) }}.
-                                                </div>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -739,15 +683,6 @@ li {
         transform: rotateZ(360deg);
     }
 }
-
-
-/* .page-wrapper {
-  height: 100vh;
-  background-color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
         /* General box styling */
 .box {
     background-color: #fff; /* White background for the boxes */
@@ -824,76 +759,16 @@ li {
                                     @if(trim($sentence))
                                     <div class="timeline-container primary">
                                         <div class="timeline-icon">
-                                            <i class="far fa-grin-wink"></i>
+                                        <i class="bi bi-check2-circle"></i> 
                                         </div>
                                         <div class="timeline-body">
                                             <!-- <h4 class="timeline-title"><span class="badge">Primary</span></h4> -->
-                                            <p>{{ trim($sentence) }}</p>
+                                            <p style="color:#0F172B">{{ trim($sentence) }}</p>
                                             <!-- <p class="timeline-subtitle">1 Hours Ago</p> -->
                                         </div>
                                     </div>
                                     @endif
                                 @endforeach
-                                <!-- <div class="timeline-container primary">
-                                    <div class="timeline-icon">
-                                        <i class="far fa-grin-wink"></i>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title"><span class="badge">Primary</span></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                                        <p class="timeline-subtitle">1 Hours Ago</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-container danger">
-                                    <div class="timeline-icon">
-                                        <i class="far fa-grin-hearts"></i>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title"><span class="badge">Danger</span></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                                        <p class="timeline-subtitle">2 Hours Ago</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-container success">
-                                    <div class="timeline-icon">
-                                        <i class="far fa-grin-tears"></i>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title"><span class="badge">Success</span></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                                        <p class="timeline-subtitle">6 Hours Ago</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-container warning">
-                                    <div class="timeline-icon">
-                                        <i class="far fa-grimace"></i>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title"><span class="badge">Warning</span></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                                        <p class="timeline-subtitle">1 Day Ago</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-container">
-                                    <div class="timeline-icon">
-                                        <i class="far fa-grin-beam-sweat"></i>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title"><span class="badge">Secondary</span></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                                        <p class="timeline-subtitle">3 Days Ago</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-container info">
-                                    <div class="timeline-icon">
-                                        <i class="far fa-grin"></i>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title"><span class="badge">Info</span></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                                        <p class="timeline-subtitle">4 Days Ago</p>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
         <!-- itenaru -->
@@ -909,39 +784,20 @@ li {
 
 /* Colors */
 :root {
-  --primary: #1d8cf8;
-  --secondary: #4f537b;
+  /* --primary: #1d8cf8;
+  --secondary: #FEA116;
   --info: #11cdef;
   --success: #00bf9a;
   --warning: #ff8d72;
-  --danger: #fd5d93;
+  --danger: #fd5d93; */
 
   /* --body-bg: #1e1e2f; */
-  --timeline-before-bg: #222a42;
-  --timeline-body-bg: #27293d;
+  --timeline-before-bg: #FEA116;
+  --timeline-body-bg: #FEA116;
   --timeline-body-round: 3px;
   --timeline-body-shadow: 1px 3px 9px rgba(0,0,0, .1);
 }
 
-/* body {
-  font-family: 'K2D', sans-serif;
-  background: var(--body-bg);
-  letter-spacing: 1px;
-} */
-
-/* Page container */
-/* .container {
-  max-width: 650px;
-  margin: 50px auto;
-} */
-
-/* Typography */
-/* p {
-  font-weight: 300;
-  line-height: 1.5;
-  font-size: 14px;
-  opacity: .8;
-} */
 
 /* Timeline style */
 .timeline {
@@ -975,7 +831,7 @@ li {
   border-radius: 50%;
   text-align: center;
   font-size: 2rem;
-  background: var(--secondary);
+  background: #FEA116;
 }
 
 .timeline-icon i {
@@ -1015,7 +871,7 @@ li {
 }
 
 .timeline-title .badge {
-  background: var(--secondary);
+  background:#FEA116;
   padding: 4px 8px;
   border-radius: 3px;
   font-size: 12px;
@@ -1033,7 +889,7 @@ li {
 /* Primary Timeline */
 .primary .badge,
 .primary .timeline-icon {
-  background: var(--primary) !important;
+  background: #1d8cf8 !important;
 }
 
 /* Info Timeline */
@@ -1073,33 +929,6 @@ li {
   color: white;
 }
 
-/* .author a:hover {
-  text-decoration: none;
-} */
-
-/* .btn:link,
-.btn:visited {
-  margin-top: 1em;
-  text-decoration: none;
-  display: inline-block;
-  font-family: inherit;
-  font-weight: 100;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  background-color: black;
-  padding: 1.5em 2rem;
-  border-radius: 1em;
-  transition: .5s all;
-} */
-
-/* .btn:hover,
-.btn:focus,
-.btn:active {
-  background-color: lighten(black, 10%);
-} */
-
 </style>
                     </div>
                 </div>
@@ -1112,14 +941,43 @@ li {
                         <div class="col-md-12 col-sm-12">
                             <div class="packageoverviewbox">
                                 <div class="row">
-                                <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
-                                    <ul>
-                                        @foreach (explode('.', $packages->payment_policy) as $sentence)
-                                            @if(trim($sentence)) <!-- Check if the sentence is not empty -->
-                                                <li><h5>{{ trim($sentence) }}</h5>.</li> <!-- Add a period at the end of each sentence -->
-                                            @endif
-                                        @endforeach
-                                    </ul>
+                                                            <!-- Box 3 -->
+                        <div class="col-md-12 col-sm-12 mb-3">
+                            <div class="box box-3">
+                                <h5 style="font-size:xx-large">Cancellation Policy</h5>
+                                <ul>
+                                    @foreach (explode('.', $packages->cancellation_policy) as $sentence)
+                                        @if(trim($sentence))
+                                            <li style="padding-left: 0; margin: 0;">
+                                                <div class="d-flex">
+                                                    <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                    &nbsp; {{ trim($sentence) }}.
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Box 4 -->
+                        <div class="col-md-12 col-sm-12 mb-3">
+                            <div class="box box-4">
+                            <h5 style="font-size:xx-large">Payment Policy</h5>
+                                <ul>
+                                    @foreach (explode('.', $packages->payment_policy) as $sentence)
+                                        @if(trim($sentence))
+                                            <li style="padding-left: 0; margin: 0;">
+                                                <div class="d-flex">
+                                                    <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                    &nbsp; {{ trim($sentence) }}.
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
                                 </div>
                             </div>
                         </div>
