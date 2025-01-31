@@ -135,8 +135,8 @@ Madina Munawwara.</p>
                     <div class="single-info bg-white shadow p-4 text-center hover-animate contact-box">
                         <i class="icofont-google-map display-4 text-primary mb-3"></i>
                         <div class="content">
-                            <h3 class="h5 font-weight-bold text-dark">Dubai Office</h3>
-                            <p class="text-muted">1208, MAI Tower, Nhada, <br> Dubai.</p>
+                            <h3 class="h5 font-weight-bold text-dark">Mumbai Office</h3>
+                            <p class="text-muted"> Issak Manzil, Shop No 10, Dongri, Mumbai  <br> India.</p>
                         </div>
                     </div>
                 </div>
@@ -147,8 +147,8 @@ Madina Munawwara.</p>
                     <div class="single-info bg-white shadow p-4 text-center hover-animate contact-box">
                         <i class="icofont-google-map display-4 text-primary mb-3"></i>
                         <div class="content">
-                            <h3 class="h5 font-weight-bold text-dark">Sharjah Office</h3>
-                            <p class="text-muted">705, F1 Building, Rolla Market, Near Hisn Fort. Sharjah</p>
+                            <h3 class="h5 font-weight-bold text-dark">Bengaluru Office</h3>
+                            <p class="text-muted">135. MM ROAD, Opp MLA Office, Frazer Town,<br> India</p>
                         </div>
                     </div>
                 </div>
@@ -174,8 +174,8 @@ Lancashire, BB1 5NP. <br>UK<br></p>
                     <div class="single-info bg-white shadow p-4 text-center hover-animate contact-box">
                         <i class="icofont-google-map display-4 text-primary mb-3"></i>
                         <div class="content">
-                            <h3 class="h5 font-weight-bold text-dark">India Office</h3>
-                            <p class="text-muted">305, S. V. P. Road, Issak Manzil, Shop No 10, Dongri, Mumbai - 400 003.</p>
+                            <h3 class="h5 font-weight-bold text-dark">Delhi Office</h3>
+                            <p class="text-muted">108/109/110, 1st Floor, Vardhman City 2 Plaza,Turkman Gate, New Delhi - 400 003.</p>
                         </div>
                     </div>
                 </div>

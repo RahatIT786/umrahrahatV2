@@ -1,4 +1,30 @@
 <section>
+    <style>
+        .package-image {
+            width: 18vw;
+            height: 18vw;
+            max-width: 100%;
+            max-height: 100%;
+            aspect-ratio: 1 / 1; /* Ensures a square shape */
+            border-radius: 15px;
+        }
+    
+        @media (max-width: 768px) {
+            .package-image {
+                width: 50vw; /* Increase size for mobile */
+                height: 50vw;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .package-image {
+                width: 80vw; /* Full width for smaller screens */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+    </style>
+
+
     <div id="popupContainerHome">
         <div id="popupForm" class="popup-form hdden">
           <div class="form-container">
@@ -399,9 +425,12 @@ function startAnimations() {
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="row g-0">
                                 <!-- Left Column: Image Section -->
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="position-relative">
-                                        <img class="img-fluid" src="{{Storage::exists($package->photo_path) ? Storage::url($package->photo_path) : asset('asserts/user/img/haj/masque.jpg')}}" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
+                                <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
+                                    <div class="position-relative package-image">
+                                        <img class="img-fluid" 
+                                             src="{{Storage::exists($package->photo_path) ? Storage::url($package->photo_path) : asset('asserts/user/img/haj/masque.jpg')}}" 
+                                             alt="" 
+                                             style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                                         <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
                                     </div>
                                 </div>
@@ -446,6 +475,7 @@ function startAnimations() {
                                         <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
                                     </div>
                                     <div >
+                                        <div class="mb-3" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-plane-departure"></i> Departure Dates : </span><span >Every Wednesday</span>   </div>
                                        <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Hotel : </span><span >Al Deafah in Makka</span> | Anwar Deafah in Madina  </div>
                                        <div class="d-flex align-items-center  flex-md-row flex-column">
                                         <div>
@@ -456,7 +486,8 @@ function startAnimations() {
                                         <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-jug-detergent"></i> <span style="font-size: 12px;">LAUNDRY</span></span>
                                         <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-file-shield"></i><span style="font-size: 12px;">BORDER TAX</span></span>
                                         <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-sim-card"></i> <span style="font-size: 12px;">SAUDI SIM</span></span>
-                                        <span class="d-flex flex-column justify-content-center align-items-center"> <span style="font-size: 12px;"> <a >VIEW MORE <i class="fa-solid fa-arrow-right"></i></a></span></span>
+                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-bus"></i> <span style="font-size: 12px;">TRANSPORT</span></span>
+                                        {{-- <span class="d-flex flex-column justify-content-center align-items-center"> <span style="font-size: 12px;"> <a >VIEW MORE <i class="fa-solid fa-arrow-right"></i></a></span></span> --}}
                                        
                                        
                                        </div>
