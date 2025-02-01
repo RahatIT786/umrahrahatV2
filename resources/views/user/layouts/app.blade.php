@@ -44,9 +44,13 @@
  <div>
 
   <!------>
-  <div class="chat-icon" onclick="toggleChat()">
+  {{-- <div class="chat-icon" onclick="toggleChat()">
     💬
+</div> --}}
+<div class="chat-icon" onclick="toggleChat()">
+ BOOK NOW
 </div>
+
 
 <!-- Chat Box -->
 <div class="chat-box" id="chatBox">
@@ -107,20 +111,35 @@
   .chat-icon {
     z-index: 5;
       position: fixed;
-      bottom: 11rem;
-      right: 20px;
+      top: 25rem;
+      right: -47px;
       background-color: #FEAF39;
       color: white;
-      width: 60px;
-      height: 100px;
-      /* border-radius: 50%; */
+      
+      height: 50px;
+      letter-spacing: 2px;
+      padding: 0px 10px;
+      border-radius: 15px 15px 0 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 24px;
+      font-size: 18px;
+     transform: rotate(270deg);
       cursor: pointer;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
+}
+
+/* Hover effect */
+.chat-icon:hover {
+  transition: linear 0.8s ;
+  transform: rotate(270deg);
+    transform: translate(-80px,20px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    background-color: rgb(6, 184, 6); /* Slightly darker background color on hover */
+}
+
+
+ 
 
   /* Chat Box */
   .chat-box {
