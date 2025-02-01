@@ -129,6 +129,20 @@ Madina Munawwara.</p>
                     </div>
                 </div>
                 <!--/End single-info -->
+                <!-- single-info -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4 mt-3">
+                    <div class="single-info bg-white shadow p-4 text-center hover-animate contact-box">
+                        <i class="icofont-google-map display-4 text-primary mb-3"></i>
+                        <div class="content">
+                            <h3 class="h5 font-weight-bold text-dark">UK Office</h3>
+                            <p class="text-muted">
+26 Coniston Road,Blackburn,
+
+Lancashire, BB1 5NP. <br>UK<br></p>
+                        </div>
+                    </div>
+                </div>
+                <!--/End single-info -->
 
                 <!-- single-info -->
                 <div class="col-lg-4 col-md-6 col-12 mb-4 mt-3">
@@ -154,20 +168,7 @@ Madina Munawwara.</p>
                 </div>
                 <!--/End single-info -->
 
-                <!-- single-info -->
-                <div class="col-lg-4 col-md-6 col-12 mb-4 mt-3">
-                    <div class="single-info bg-white shadow p-4 text-center hover-animate contact-box">
-                        <i class="icofont-google-map display-4 text-primary mb-3"></i>
-                        <div class="content">
-                            <h3 class="h5 font-weight-bold text-dark">UK Office</h3>
-                            <p class="text-muted">
-26 Coniston Road,Blackburn,
-
-Lancashire, BB1 5NP. <br>UK<br></p>
-                        </div>
-                    </div>
-                </div>
-                <!--/End single-info -->
+                
 
                 <!-- single-info -->
                 <div class="col-lg-4 col-md-6 col-12 mb-4 mt-3">

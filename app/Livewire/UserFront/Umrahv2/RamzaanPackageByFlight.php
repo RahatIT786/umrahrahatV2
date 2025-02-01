@@ -8,7 +8,7 @@ use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
 use Livewire\Attributes\Layout; 
 
-class RamzaanPackage extends Component
+class RamzaanPackageByFlight extends Component
 {
     public $allPackages;
     public $inclusions;
@@ -58,9 +58,10 @@ class RamzaanPackage extends Component
     public function render()
     {
         // Fetch all main packages with delete_status 1
-        $query = MainPackage::where('delete_status', 1)->where('service_type','1')->where(function ($query) {
-            $query->whereNull('flights')
-                  ->orWhere('flights', '');
+        $query = MainPackage::where('delete_status', 1)->where('service_type','1')
+        ->where(function ($query) {
+            $query->whereNotNull('flights')
+                  ->where('flights', '!=', '');
         });
 
 
@@ -72,6 +73,6 @@ class RamzaanPackage extends Component
         }
         $this->allPackages = $query->get();
         // Render the Livewire view with allPackages data
-        return view('livewire.user_front.umrahv2.ramzaan-main-package', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
+        return view('livewire.user_front.umrahv2.ramzaan-main-package-by-flight', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
     }
 }

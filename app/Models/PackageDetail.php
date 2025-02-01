@@ -35,11 +35,27 @@ class PackageDetail extends Model
         'package_includes',
     ];
 
-    public function packageType(): BelongsTo
-    {
-        return $this->belongsTo(PackageType::class, 'pkg_type_id');
-    }
+   
 
+   //written by abusin -start
+   public function packageType(): BelongsTo
+   {
+       return $this->belongsTo(PackageType::class, 'pkg_type_id');
+   }
+
+ // In PackageDetail.php
+public function makkaHotelDetail()
+{
+    return $this->hasOne(HotelDetail::class, 'id','makka_hotel_id');
+}
+
+public function madinaHotelDetail()
+{
+    return $this->hasOne(HotelDetail::class, 'id','madina_hotel_id');
+}
+   //written by abusin -end
+
+    
     // Optionally, you can cast some attributes to specific data types
     protected $casts = [
         'g_share' => 'decimal:2',
@@ -48,4 +64,6 @@ class PackageDetail extends Model
         't_share' => 'decimal:2',
         'd_share' => 'decimal:2',
     ];
+
+
 }

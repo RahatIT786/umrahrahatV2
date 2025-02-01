@@ -8,7 +8,7 @@ use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
 use Livewire\Attributes\Layout; 
 
-class RamzaanPackage extends Component
+class RamzaanLandPackage extends Component
 {
     public $allPackages;
     public $inclusions;
@@ -72,6 +72,6 @@ class RamzaanPackage extends Component
         }
         $this->allPackages = $query->get();
         // Render the Livewire view with allPackages data
-        return view('livewire.user_front.umrahv2.ramzaan-main-package', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
+        return view('livewire.user_front.umrahv2.ramzaan-land-package', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
     }
 }

@@ -86,6 +86,30 @@ class mainPackage extends Model
         return inclusion::whereIn('id', $inclusionIds)->pluck('InclusionName','id')->toArray();
     }
 
+    //written by abusin -start
+
+    public function sharingDetails(){
+        return $this->hasOne(PackageDetail::class,'pkg_id');
+    }
+    public function packageDetail()
+    {
+       $data= $this->hasOne(PackageDetail::class, 'pkg_id');
+        // dd($data);
+       return $data;
+    }
+
+   
+    public function packageType()
+{
+    return $this->belongsTo(PackageType::class, 'package_type_ids');
+}
+
+
+
+     //written by abusin -end
+
+
+
     protected $casts = [
         'type_ids' => 'array',
     ];

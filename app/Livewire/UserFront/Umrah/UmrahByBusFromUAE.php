@@ -106,7 +106,11 @@ class UmrahByBusFromUAE extends Component
     public function render()
     {
         // Fetch all main packages with delete_status 1
-        $query = MainPackage::where('delete_status', 1)->where('service_type','3');
+        $query = MainPackage::where('delete_status', 1)->where('service_type','3')->where(function ($query) {
+            $query->whereNull('flights')
+                  ->orWhere('flights', '');
+        });
+    
         if ($this->searchCity) {
             $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
         }
@@ -114,6 +118,7 @@ class UmrahByBusFromUAE extends Component
             $query->where('package_days', 'like', '%' . $this->searchDays . '%');
         }
         $this->allPackages = $query->get();
+        // dd( $this->allPackages);
         // Render the Livewire view with allPackages data
         return view('livewire.user_front.umrah.umrah-by-bus-from-u-a-e', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
     }

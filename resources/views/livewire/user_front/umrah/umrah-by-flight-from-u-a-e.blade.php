@@ -35,7 +35,7 @@
         <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Umrah By Bus From UAE</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Umrah By Flight From UAE</h1>
                     <nav aria-label="breadcrumb">
                        
                     </nav>
@@ -206,31 +206,31 @@
                                 <div class="d-flex mb-3" style="font-size: 12px;">
                                   
                                     <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-bus text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->g_share) }}</span>.AED</span>
+                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{$package->sharingDetails->g_share + 1200  }} </span>.AED</span>
                                     </small>
                                     <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-bus text-primary me-2"></i>Quint :  <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->qt_share) }}</span>.AED</span>
+                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span><span style="font-size: 18px;">{{$package->sharingDetails->qt_share  + 1200 }}</span>.AED</span>
                                     </small>
                                     <small class="me-3 pe-3">
-                                        <i class="fa-solid fa-bus text-primary me-2"></i>Quad : <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->qd_share) }}</span>.AED</span>
+                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span><span style="font-size: 18px;">{{$package->sharingDetails->qd_share  + 1200 }}</span>.AED</span>
                                     </small>
                                 </div>
                                 <div class="d-flex mb-3" style="font-size: 12px;">
                                     <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-bus text-primary me-2"></i>Triple : <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->t_share) }}</span>.AED</span>
+                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span><span style="font-size: 18px;">{{$package->sharingDetails->t_share  + 1200 }}</span>.AED</span>
                                     </small>
                                     <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-bus text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->d_share) }}</span>.AED</span>
+                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{$package->sharingDetails->d_share  + 1200 }}</span>.AED</span>
                                     </small>
                                     <small class="me-3 pe-3">
-                                        <i class="fa-solid fa-bus text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->single) }}</span>.AED</span>
+                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{$package->sharingDetails->single  + 1200 }}</span>.AED</span>
                                     </small>
                                 </div>
                                 <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
                                 </div>
                                 <div >
-                                    <div class="mb-3" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-bus"></i> Departure Dates : </span><span >Every Wednesday</span>   </div>
+                                    <div class="mb-3" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-plane-departure"></i> Departure Dates : </span><span >Every Wednesday</span>   </div>
                                    <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Hotel : </span><span ><span>{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> in Makka</span> | <span>{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> in Madina  </div>
                                    <div class="d-flex align-items-center  flex-md-row flex-column">
                                     {{-- @if($package->packageDetail && $package->packageDetail->hotelDetail)
