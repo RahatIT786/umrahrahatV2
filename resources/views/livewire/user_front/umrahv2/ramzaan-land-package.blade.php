@@ -37,7 +37,7 @@
         <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Ramzaan Package from UAE</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Ramzaan Land Packages from UAE</h1>
                     <nav aria-label="breadcrumb">
                        
                     </nav>
@@ -197,24 +197,24 @@
                                     </div>
                                     <div class="d-flex mb-3" style="font-size: 12px;">
                                         <small class="border-end me-3 pe-3">
-                                            <i class="fa-solid fa-bus text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{intval($package->sharingDetails->g_share) }}</span>.AED</span>
+                                            <i class="fa-solid fa-bus text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{intval($package->sharingDetails->g_share)  - 250}}</span>.AED</span>
                                         </small>
                                         <small class="border-end me-3 pe-3">
-                                            <i class="fa-solid fa-bus text-primary me-2"></i>Quint :  <span><span style="font-size: 18px;">{{intval($package->sharingDetails->qt_share)}}</span>.AED</span>
+                                            <i class="fa-solid fa-bus text-primary me-2"></i>Quint :  <span><span style="font-size: 18px;">{{intval($package->sharingDetails->qt_share) - 250}}</span>.AED</span>
                                         </small>
                                         <small class="me-3 pe-3">
-                                            <i class="fa-solid fa-bus text-primary me-2"></i>Quad : <span><span style="font-size: 18px;">{{intval($package->sharingDetails->qd_share)}}</span>.AED</span>
+                                            <i class="fa-solid fa-bus text-primary me-2"></i>Quad : <span><span style="font-size: 18px;">{{intval($package->sharingDetails->qd_share) - 250}}</span>.AED</span>
                                         </small>
                                     </div>
                                     <div class="d-flex mb-3" style="font-size: 12px;">
                                         <small class="border-end me-3 pe-3">
-                                            <i class="fa-solid fa-bus text-primary me-2"></i>Triple : <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->t_share)}}</span>.AED</span>
+                                            <i class="fa-solid fa-bus text-primary me-2"></i>Triple : <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->t_share) - 250}}</span>.AED</span>
                                         </small>
                                         <small class="border-end me-3 pe-3">
-                                            <i class="fa-solid fa-bus text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{intval($package->sharingDetails->d_share)}}</span>.AED</span>
+                                            <i class="fa-solid fa-bus text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{intval($package->sharingDetails->d_share) - 250}}</span>.AED</span>
                                         </small>
                                         <small class="me-3 pe-3">
-                                            <i class="fa-solid fa-bus text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{intval($package->sharingDetails->single)}}</span>.AED</span>
+                                            <i class="fa-solid fa-bus text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{intval($package->sharingDetails->single) - 250}}</span>.AED</span>
                                         </small>
                                     </div>
                                     <div>

@@ -28,4 +28,17 @@ class HotelDetail extends Model
         'hotelImage5',
         'deleteStatus',
     ];
+
+
+     //written by abusin -start
+
+    public function packageDetail()
+    {
+        return $this->belongsTo(PackageDetail::class, 'makka_hotel_id');
+    }
+     //written by abusin -end
+
+
+
+
 }

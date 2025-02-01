@@ -12,7 +12,8 @@ class PdfTemplateController extends Controller
        
 
 
-        $pdf=Pdf::loadView('pdf_template.itinerary');
+        // $pdf=Pdf::loadView('pdf_template.itinerary');
+        $pdf=Pdf::loadView('pdf_template.flyer');
         return $pdf->download('umrahPackage.pdf');
     }
 }

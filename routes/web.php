@@ -87,10 +87,13 @@ use App\Livewire\BankAccount;
 use App\Livewire\OurServices;
 
 use App\Livewire\UserFront\Umrah\UmrahByBusFromUAE;
+use App\Livewire\UserFront\Umrah\UmrahByFlightFromUAE;
+use App\Livewire\UserFront\Umrah\UmrahLandPackageUAE;
 use App\Livewire\UserFront\Umrah\UmrahMainPackage;
 use App\Livewire\UserFront\Umrah\ViewPackageDetails;
 use App\Livewire\UserFront\Umrahv2\HajjPackage;
 use App\Livewire\UserFront\Umrahv2\HajjPackageLong;
+use App\Livewire\UserFront\Umrahv2\RamzaanLandPackage;
 use App\Livewire\UserFront\Umrahv2\RamzaanPackage as Umrahv2RamzaanPackage;
 use App\Livewire\UserFront\Umrahv2\Transport;
 
@@ -105,6 +108,7 @@ use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
 use App\Livewire\UserFront\Umrahv2\Sightseeing;
 use App\Livewire\UserFront\Umrahv2\Catring;
 use App\Livewire\UserFront\Umrahv2\Laundry as Umrahv2Laundry;
+use App\Livewire\UserFront\Umrahv2\RamzaanPackageByFlight;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
 use Illuminate\Support\Facades\Artisan;
@@ -145,6 +149,8 @@ Route::get('/view-package-detail/{package}',ViewPackageDetails::class)->name('vi
 Route::get('/transport',Transport::class)->name('transport');
 
 Route::get('/pack/ramzaan/bybus',Umrahv2RamzaanPackage::class)->name('ramzaan.bybus');
+Route::get('/pack/ramzaan/byflight',RamzaanPackageByFlight::class)->name('ramzaan.byflight');
+Route::get('/pack/ramzaan/landpackage',RamzaanLandPackage::class)->name('ramzaan.landpackage');
 Route::get('/pack/hajj/bybus',HajjPackage::class)->name('hajj.bybus');
 Route::get('/pack/hajj/long',HajjPackageLong::class)->name('hajj.bybus.long');
 
@@ -157,6 +163,8 @@ Route::post('/qbook/chat',[RamzaanPackageController::class ,'saveQbookChat'])->n
 
 //umrah by bus
 Route::get('/umrah-by-bus',UmrahByBusFromUAE::class)->name('umrah-by-bus-from-uae');
+Route::get('/umrah-by-flight',UmrahByFlightFromUAE::class)->name('umrah-by-flight-from-uae');
+Route::get('/umrah-landpackages',UmrahLandPackageUAE::class)->name('umrah-landpackages-uae');
 
 //footer pages
 Route::get('/who-we-are',WhoWeAre::class)->name('who-we-are');
@@ -175,7 +183,9 @@ Route::get('/user/myassistant',Assistant::class)->name('myassistant');
 
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
-
+Route::get('/fpdf',function(){
+    return view('pdf_template.flyer');
+});
 Route::get('/comming-soon',function(){
 return view('user.partials.comming_soon');
 })->name('coming-soon');

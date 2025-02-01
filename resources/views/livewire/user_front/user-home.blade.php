@@ -6,7 +6,7 @@
             max-width: 100%;
             max-height: 100%;
             aspect-ratio: 1 / 1; /* Ensures a square shape */
-            border-radius: 15px;
+            border-radius: 15px;a
         }
     
         @media (max-width: 768px) {
@@ -420,11 +420,13 @@ function startAnimations() {
                     <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Package </span></h1>
                 </div>
                 <div class="row g-4">
+                        <!----package-start------>
                   @foreach ($packages as $package )
                     <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="row g-0">
                                 <!-- Left Column: Image Section -->
+                             
                                 <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
                                     <div class="position-relative package-image">
                                         <img class="img-fluid" 
@@ -481,6 +483,7 @@ function startAnimations() {
                                         <div>
                                             <span style="font-weight:500; color: #0D1425;"><i class="fa-solid fa-bag-shopping"></i> What you get:</span>
                                         </div>
+                                        
                                        <div class="d-flex gap-3 mt-3 mb-3 ms-3 ">
                                         <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-bowl-food"></i> <span style="font-size: 12px;">MEALS</span></span>
                                         <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-jug-detergent"></i> <span style="font-size: 12px;">LAUNDRY</span></span>
@@ -491,9 +494,26 @@ function startAnimations() {
                                        
                                        
                                        </div>
+
+                                      
                                         
                                        </div>
+                                       <div>
+                                             <div class="d-flex mb-2">
+                                            <img style="height: 20px;" src="{{asset('images/googlereview.png')}}"  alt="googlereview"> 
+                                            <div class="ms-2">
+                                                <span>4.5</span>
+                                                <small class="fa fa-star text-primary"></small>
+                                                <small class="fa fa-star text-primary"></small>
+                                                <small class="fa fa-star text-primary"></small>
+                                                <small class="fa fa-star text-primary"></small>
+                                                <a style="color: #007bff; text-decoration: underline;"  target="_blank" href="https://www.google.com/search?q=rahat+travels&oq=rahat+travels&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQIxgnMgwIAhAAGBQYhwIYgAQyDAgDEAAYFBiHAhiABDINCAQQLhivARjHARiABDIHCAUQABiABDIGCAYQRRg8MgYIBxBFGD3SAQg0OTUxajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8#lrd=0x3be7ce3cd58b13c3:0xb07729f581586b81,1,,,,">Goolge review</a>
+                                                
+                                            </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                   
                                     
                                     {{-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> --}}
                                     <div class="d-flex justify-content-between">
@@ -510,6 +530,7 @@ function startAnimations() {
                     </div>
 
                   @endforeach
+                   <!----package-end------>
                     
                 </div>
             </div>

@@ -112,8 +112,8 @@
       background-color: #FEAF39;
       color: white;
       width: 60px;
-      height: 60px;
-      border-radius: 50%;
+      height: 100px;
+      /* border-radius: 50%; */
       display: flex;
       justify-content: center;
       align-items: center;

@@ -41,9 +41,17 @@
                         </div>
                         <div class="col-lg-5 px-5 text-end">
                             <div class="d-inline-flex align-items-center py-2">
-                                <div>
-                                    <a class="me-3" href="" style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user-secret"></i> Agent Login</a>
-                                    <a class="me-3" href=""  style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user"></i> User Login</a>
+                                {{-- <div>
+                                    <a class="me-3" href="" style="color: #666565;" style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user-secret" ></i> Agent Login</a>
+                                    <a class="me-3" href=""  style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user" style="color: #666565;"></i> User Login</a>
+                                </div> --}}
+                                <div class="h-100 d-inline-flex align-items-center  me-4">
+                                    <i class="fa-solid fa-user-tie text-primary me-2" ></i>
+                                   
+                                    <p class="mb-0"><a href=""  style="text-transform:uppercase;color:#666565;  font-size: 14px; font-weight: 500;">agent login</a></p> &nbsp; &nbsp;
+                                    <i class="fa-solid fa-user text-primary me-2"></i>
+                                   
+                                    <p class="mb-0"><a href=""  style="text-transform:uppercase;color:#666565;  font-size: 14px; font-weight: 500;" >user login</a></p>
                                 </div>
                                 <a class="me-3" >|</a>
                                 <a class="me-3" href="https://www.facebook.com/rahattravelsofindia/"><i class="fab fa-facebook-f"></i></a>
@@ -73,8 +81,8 @@
                                     </a>
                                     <div class="dropdown-menu rounded-0 m-0" aria-labelledby="umrahDropdown">
                                         <a href="{{route('umrah-by-bus-from-uae')}}" class="dropdown-item">By Bus From UAE</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">By Flight from UAE</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Land Packages (All Gulf)</a>
+                                        <a href="{{route('umrah-by-flight-from-uae')}}" class="dropdown-item">By Flight from UAE</a>
+                                        <a href="{{route('umrah-landpackages-uae')}}" class="dropdown-item">Land Packages</a>
                                     </div>
                                 </div>
                                 <div class="nav-item dropdown">
@@ -87,8 +95,8 @@
 
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('ramzaan.bybus')}}" class="dropdown-item">By Bus from UAE</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">By Flight from UAE</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Land Packages (All Gulf)</a>
+                                        <a href="{{route('ramzaan.byflight')}}" class="dropdown-item">By Flight from UAE</a>
+                                        <a href="{{route('ramzaan.landpackage')}}" class="dropdown-item">Land Packages</a>
                      
                                     </div>
                                 </div>
@@ -140,33 +148,32 @@
                                     <img style="height: 30px; display: block;" src="{{asset('images/Catering_Icon.png')}}" alt="Catering Icon">
                                     <span>Catering</span>
                                 </a>
-                                <a href="https://rahatholidays.com/" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
+                                <a href="https://rahatholidays.com/"  target="_blank" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
                                     <img style="height: 30px; display: block;" src="{{asset('images/Holiday_Icon.png')}}" alt="Catering Icon">
                                     <span>Holidays</span>
                                 </a>
-                                <a href="{{route('partner-with-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
-                                    <img style="height: 30px; display: block" src="{{asset('images/Partner_With_Us_Icon.png')}}" alt="">
-                                   <span>Join Us</span>
-                                </a>
+                               
                                 <div class="nav-item dropdown">
 
                                     <a    class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
-                                        <img style="height:30px;" src="{{asset('images/Majid_Icon.png')}}" alt="">
+                                        <img style="height:30px;" src="{{asset('images/Services.png')}}" alt="">
                                         services</a>
 
                                     <div class="dropdown-menu rounded-0 m-0" >
                                         <a href="{{route('user.laundry')}}" class="dropdown-item">Laundry</a>
                                         <a href="{{route('myassistant')}}" class="dropdown-item">Guide and Assitant</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Pickup & Drop Service</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Transports</a>
-                                        <a href="{{route('catring')}}" class="dropdown-item">Catering</a>
-                                        <a href="{{route('saudi-visa')}}" class="dropdown-item">Visa</a>
+                                       
+                                       
                      
                                     </div>
                                 </div>
-                                <a href="{{route('contact-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
+                                <a href="{{route('partner-with-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
                                     <img style="height: 30px; display: block" src="{{asset('images/Partner_With_Us_Icon.png')}}" alt="">
-                                   <span>Contact</span>
+                                   <span>Join Us</span>
+                                </a>
+                                <a href="{{route('contact-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
+                                    <img style="height: 30px; display: block" src="{{asset('images/Contact.png')}}" alt="">
+                                   <span>Contact Us</span>
 
                                    {{-- <div class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
                                 <a style="color:black" href="{{route('partner-with-us')}}">Join Us</a> &nbsp;

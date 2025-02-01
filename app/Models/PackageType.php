@@ -16,4 +16,12 @@ class PackageType extends Model
     {
         return $query->where('delete_status', 1);
     }
+
+
+      //written by abusin -start
+      public function mainPackage(){
+        return $this->belongsTo(mainPackage::class,'id');
+      }
+      
+      //written by abusin -end
 }

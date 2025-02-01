@@ -49,7 +49,7 @@
                     <h1 class="mb-5">Book My Assistant<span class="text-primary text-uppercase"></span></h1>
                 </div>
                 <div class="row g-4 d-flex flex-column  align-items-center">
-                    <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.1s">
+                    <div class="col-lg-10 col-md-8 wow fadeInUp " data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
                             <div class="position-relative p-3 col-lg-4 col-md-4">
                                 <img class="img-fluid" src="{{asset('images/bookmyassistant.jpeg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
@@ -57,18 +57,28 @@
                             <div class="p-4 mt-2 " >
                                <div class="d-flex flex-column justify-content-between h-100">
                                 <h2>Need Personal Assistance for Umrah? We've Got You Covered!</h2>
-                                <p>Whether you need personal assistance (Gents or Ladies) for performing Umrah or require wheelchair assistance, Rahat Group is here to help.</p>
+                                <p>Whether you need personal assistance <strong>(Gents or Ladies)</strong> for performing Umrah or require wheelchair assistance, Rahat Group is here to help.</p>
                                 <p class="text-body mb-3">The ultimate act of worship, Hajj and Umrah, represents a deep spiritual journey of devotion, submission, and faith...</p>
-                                <ul>
-                                    <li>Personal Guides: Available to assist you throughout your Umrah rituals.</li>
-                                    <li>Wheelchair Support: For those in need of mobility assistance.</li>
-                                </ul>
-                                <p>Rahat Group is committed to ensuring a comfortable and stress-free pilgrimage for all our guests.</p>
-                                <ul>
+                                <div>
+                                    <div class="d-flex ">
+                                        <div class="me-2"><strong><i class="fa-solid fa-hands-holding-child text-primary"></i> Personal Guides: </strong></div>
+                                        <div>Available to assist you throughout your Umrah rituals</div>
+                                    </div>
+                                    <div class="d-flex mt-3">
+                                        <div class="me-2"><strong><i class="fa-solid fa-wheelchair text-primary"></i> Wheelchair Support: </strong></div>
+                                        <div>Rahat Group is committed to ensuring a comfortable and stress-free pilgrimage for all our guests.</div>
+                                    </div>
+                                </div>
+                                {{-- <ul style="list-style: none;">
+                                    <li> .</li>
+                                    <li><strong><i class="fa-solid fa-wheelchair"></i> Wheelchair Support:</strong> For those in need of mobility assistance.</li>
+                                </ul>  --}}
+                                <p></p>
+                                {{-- <ul>
                                     <li>Imran : +966 56 389 8353</li>
                                     <li>Shoeb: +966 58 379 8252</li>
                                     <li>Owais: +966 59 607 8838</li>
-                                </ul>
+                                </ul> --}}
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Enquire Now</a>
                                     {{-- <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:navigate href="{{route('singleBlog1')}}">Read More</a> --}}
