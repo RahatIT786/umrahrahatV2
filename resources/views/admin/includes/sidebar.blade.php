@@ -57,6 +57,19 @@
                 </li>
               </ul>
             </li>
+
+            <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Ziyarat Controller</div>
+              </a>
+              <ul>
+                <li> <a href="{{ route('admin.ziyarat') }}" wire:navigate><i class="bi bi-circle"></i>List All Ziyarat</a>
+                </li>
+              </ul>
+            </li>
+
             <li>
               <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bi bi-award-fill"></i>
@@ -158,7 +171,24 @@
           
               </ul>
             </li>
-
+            <li>
+              <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                </div>
+                <div class="menu-title">Transport Controller</div>
+              </a>
+              <ul>
+                <li> 
+                  <a href="{{ route('admin.carType') }}" wire:navigate><i class="bi bi-circle"></i>List Car Type</a>
+                </li>
+                <li> 
+                  <a href="{{ route('admin.carSector') }}" wire:navigate><i class="bi bi-circle"></i>List Car Sector</a>
+                </li>
+                <li> 
+                  <a href="{{ route('admin.listTransport') }}" wire:navigate><i class="bi bi-circle"></i>List Car Rentel</a>
+                </li>
+              </ul>
+            </li>
 
             <li>
               <a class="has-arrow" href="javascript:;">

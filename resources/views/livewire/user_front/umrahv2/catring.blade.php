@@ -46,76 +46,49 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase"></h6>
-                    <h1 class="mb-5">Our Catring Service<span class="text-primary text-uppercase"></span></h1>
+                    <h1 class="mb-5">Our Catering Service<span class="text-primary text-uppercase"></span></h1>
                 </div>
-                <div class="row g-4 d-flex flex-column  align-items-center">
-                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.1s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative p-3 col-lg-4">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring1.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                            </div>
-                            <div class="p-4 mt-2 " >
-                               <div class="d-flex flex-column justify-content-between h-100">
-                                <p class="text-body mb-3">The ultimate act of worship, Hajj and Umrah, represents a deep spiritual journey of devotion, submission, and faith...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:navigate href="{{route('singleBlog1')}}">Read More</a>
-                                </div>
-                               </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                @foreach ($foodDetails as $food)
-                <div class="col-lg-8 col-md-10 wow fadeInUp  " data-wow-delay="0.3s">
-                    <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                        <div class="position-relative  p-3 col-lg-4 col-md-4">
-                            <img class="img-fluid " src="{{Storage::url($food['foodBreakFastImagePath'])}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                        </div>
-                        <div class="p-4 mt-2">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h5>{{$food['foodType']}}</h5>
-                                <h6 class="me-2">{{$food['foodPrice']}} .<span>{{$food['currency']}}</span></h6>
-                            </div>
-                            <div class="d-flex flex-column justify-content-between h-90">
-                                <p class="text-body mb-3">{{ Str::limit($food['foodBreakFast'], 200, '...') }}</p>
+                <div class="row g-4 align-items-center">
+                    @foreach ($foodDetails as $food)
+                        <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="room-item shadow rounded overflow-hidden">
+                                <div class="row g-0">
+                                    <!-- Right Column: Food Details Section (col-4) -->
+                                    <div class="col-lg-12 col-md-12 p-4 mt-2">
+                                        <div class="position-relative">
+                                            <img class="img-fluid" src="{{ Storage::url($food['foodBreakFastImagePath']) }}" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
+                                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
+                                                <!-- Optional small label here if needed -->
+                                            </small>
+                                        </div>
 
-                            <div class="d-flex justify-content-between">
-                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{Storage::url($food['footPdf'])}}">Food Menu</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog2')}}">Read More</a>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                    
-                @endforeach
-                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative  p-3 col-lg-4">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring3.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                            </div>
-                            <div class="p-4 mt-2">
-                                <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog3')}}">Read More</a>
+                                        <div class="d-flex justify-content-between my-3">
+                                            <h5 class="mb-0">{{$food['foodType']}}</h5>
+                                        </div>
+
+                                        <div>
+                                            <p style="border: 1px dashed #FEA116; padding: 2px 4px;" class="text-center">
+                                                {{$food['foodPrice']}} <span>{{$food['currency']}}</span>
+                                            </p>
+                                        </div>
+
+                                        <p class="text-body mb-3 text-justify">
+                                            {{ Str::limit($food['foodBreakFast'], 200, '...') }}
+                                        </p>
+
+                                        <div class="d-flex justify-content-between">
+                                            <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{ Storage::url($food['footPdf']) }}">
+                                                <i class="fa-solid fa-book"></i> Food Menu
+                                            </a>
+                                            <a class="btn btn-sm btn-dark rounded py-2 px-4">
+                                                <i class="fa-regular fa-paper-plane"></i> Book Enquire
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
-                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative p-3 col-lg-4">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring4.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                            </div>
-                            <div class="p-4 mt-2">
-                                <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog3')}}">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
+                    @endforeach
                 </div>
             </div>
         </div>

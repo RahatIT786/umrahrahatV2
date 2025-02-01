@@ -17,79 +17,78 @@
                 </div>
             </div>
         </div>
-<div class="container mt-5 mb-5">
+        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+          <div class="bg-white shadow" style="padding: 35px;">
+              <div class="row g-2">
+                  <div class="col-md-3">
+                      <button class="btn btn-primary w-100">Search Package</button>
+                  </div>
+                  <div class="col-md-9">
+                      <div class="row g-2">
+                          <form class="col-md-4"  wire:submit.prevent="">
+                              <select class="form-select" wire:model.live="searchCity">
+                                  <option value='' selected>City</option>
+                                  <option value="MAKKAH">MAKKAH</option>
+                                  <option value="MADINAH">MADINAH</option>
+                                  <option value="BAGHDAD">BAGHDAD</option>
+                                  <option value="NAJAF">NAJAF</option>
+                                  <option value="KARBALA">KARBALA</option>
+                              </select>
+                          </form>
+                          <form class="col-md-4" wire:submit.prevent="">
+                              <select class="form-select" wire:model.live="searchRating">
+                                  <option value='' selected>Star Rating</option>
+                                  <option value="2">2 Stars</option>
+                                  <option value="3">3 Stars</option>
+                                  <option value="4">4 Stars</option>
+                                  <option value="5">5 Stars</option>
+                                  <option value="6">Building Accomutation Stars</option>
+                                  <option value="7">Standard Hotel Stars</option>
+                              </select>
+                          </form>
+                          <div class="col-md-4">
+                              <form wire:submit.prevent="" class="date" id="date2" >
+                                  <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Hotel Name" />
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+        <div class="container mt-5 mb-5">
     <h4 class="text-center text-dark mb-5 font-weight-bold">Explore Makkah's Historical & Spiritual Landmarks</h4>
-    <style>
-        .price-box {
-            display: inline-block;
-            padding: 5px 20px; /* Smaller padding */
-            border: 2px solid #007bff;
-            background-color: #f0f8ff;
-            color: #007bff;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            height: 50px; /* Set a fixed height */
-            line-height: 40px; /* Vertically center the text within the box */
-        }
-        .price-box1 {
-            display: inline-block;
-            padding: 5px 20px; /* Smaller padding */
-            border: 2px solid #27c621;
-            background-color: #f0f8ff;
-            color: #27c621;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            height: 50px; /* Set a fixed height */
-            line-height: 40px; /* Vertically center the text within the box */
-        }
-    </style>
-    @foreach ($allSights as $allSight)
+    
     <div class="row">
-    <!-- Image Column -->
-        <div class="col-lg-6 mb-4">
+        <!-- Jabal-e-Soor Card -->
+         @foreach ($allSights as $allSight)
+         <div class="col-lg-6 mb-4">
             <div class="card shadow-sm">
-             <img src="{{ asset('storage/' . $allSight->sightMainImage) }}" class="card-img-top" alt="Jabal-e-Soor" style="height: 30rem; object-fit: cover;">
-            </div>
-        </div>
-
-        <!-- Content Column -->
-        <div class="col-lg-6 mb-4 d-flex">
-            <div class="card shadow-sm w-100 d-flex flex-column">
-                <div class="card-body d-flex flex-column flex-grow-1">
+                <img style="height: 20rem;" src="{{asset('storage/' . $allSight->sightMainImage)}}" class="card-img-top" alt="Jabal-e-Soor">
+                <div class="card-body">
                     <div class="d-flex justify-content-between">
-                        <h3 class="card-title text-dark font-weight-semibold mb-5">{{$allSight->sightName}}</h3>
-                        <p class="price-box">Price for 4 people: 200 AED</p>
+                        <h5 class="card-title text-dark font-weight-semibold">{{$allSight->sightName}}</h5>
+                        <div  class="d-flex"><i style="font-size: 20px;color:#FEAF39" class="bi bi-geo-alt-fill"></i> &nbsp; <h4>{{$allSight->sightCity}}</h4> </div>
                     </div>
-                    <div  class="d-flex justify-content-between">
-                        <div class="d-flex">
-                            <i style="font-size: 20px;color:chocolate;margin-right:15px" class="bi bi-geo-alt-fill"></i>
-                            <h5>{{$allSight->sightCity}}</h5>
-                        </div>
-                        <div>
-                        <p class="price-box1">Price for 7 people: 300 AED</p>
-                        </div>
+                    
+                    <p class="card-text text-dark font-italic mt-3">
+                    {{ \Illuminate\Support\Str::limit($allSight->sightDiscription, 250, '...') }}
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <a href="{{route('singleSightSeeing',['id'=>$allSight->id])}}" class="btn btn-sm btn-primary rounded py-2 px-4 me-2" >
+                            <i class="fa-solid fa-file-zipper"></i> More info
+                        </a>
+                        <a class="btn btn-sm btn-dark rounded py-2 px-4">
+                            <i class="fa-regular fa-paper-plane"></i>  Book Enquire
+                        </a>
                     </div>
-                    <h6 class="card-text text-dark font-italic">
-                        {{$allSight->sightDiscription}}
-                    </h6>
-                </div>
-
-                <div class="d-flex justify-content-evenly p-3" style="margin-top: auto;">
-                    <!-- <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" >
-                        <i class="fa-solid fa-book"></i> View Brochure
-                    </a> -->
-                    <a class="btn btn-sm btn-dark rounded py-2 px-4">
-                      <i class="fa-regular fa-paper-plane"></i>  Book Enquire
-                    </a>
                 </div>
             </div>
         </div>
-
+         @endforeach
     </div>
-    @endforeach
-     <!-- Jabal-e-Soor Card -->
 </div>
-
 </section>

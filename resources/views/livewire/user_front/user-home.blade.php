@@ -508,7 +508,6 @@ function startAnimations() {
                             </div>
                         </div>
                     </div>
-
                   @endforeach
                     
                 </div>
