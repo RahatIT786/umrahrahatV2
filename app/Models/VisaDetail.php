@@ -10,6 +10,8 @@ class VisaDetail extends Model
     use HasFactory;
     protected $fillable = [
         'visa_type',
+        'country',
+        'validity',
         'documents_required',
         'processing_time',
         'price',

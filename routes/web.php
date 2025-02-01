@@ -45,6 +45,17 @@ use App\Livewire\Admin\Components\CatringView;
 use App\Livewire\Admin\Components\ListSightSeeing;
 use App\Livewire\Admin\Components\AddSightSeeing;
 
+//Transport Controller
+use App\Livewire\Admin\Components\CarType;
+use App\Livewire\Admin\Components\CarSector;
+use App\Livewire\Admin\Components\CarRentel;
+use App\Livewire\Admin\Components\AddTransport;
+
+//Ziyarat Controller
+use App\Livewire\Admin\Components\Ziyarat;
+use App\Livewire\Admin\Components\AddZiyarat;
+
+
 use App\Livewire\Admin\umrahv2\AgentSignup;
 use App\Livewire\Admin\umrahv2\QuickEnquires;
 
@@ -106,6 +117,7 @@ use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
 
 use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
 use App\Livewire\UserFront\Umrahv2\Sightseeing;
+use App\Livewire\UserFront\Umrahv2\SingleSightSeeing;
 use App\Livewire\UserFront\Umrahv2\Catring;
 use App\Livewire\UserFront\Umrahv2\Laundry as Umrahv2Laundry;
 use App\Livewire\UserFront\Umrahv2\RamzaanPackageByFlight;
@@ -156,6 +168,7 @@ Route::get('/pack/hajj/long',HajjPackageLong::class)->name('hajj.bybus.long');
 
 // Route::get('/partner-with-us',PartnerWithUs::class)->name('partner-with-us');
 Route::get('/sightseeing',Sightseeing::class)->name('sightseeing');
+Route::get('/single-sightSeeing/{id}',SingleSightSeeing::class)->name('singleSightSeeing');
 Route::get('/catring',Catring::class)->name('catring');
 Route::get('/bankaccount',BankAccount::class)->name('bankaccount');
 Route::get('/ourservices',OurServices::class)->name('ourservices');
@@ -231,9 +244,15 @@ Route::get('/admin/edit-sight-details/{id}',AddSightSeeing::class)->name('admin.
 Route::get('/admin/addlaundry',Laundry::class)->name('admin.laundry');
 Route::get('/admin/listlaundry',ListLaundry::class)->name('admin.list-laundry');
 
+//Transport Controller
+Route::get('/admin/add-car-type',CarType::class)->name('admin.carType');
+Route::get('/admin/add-car-sector',CarSector::class)->name('admin.carSector');
+Route::get('/admin/list-transport',CarRentel::class)->name('admin.listTransport');
+Route::get('/admin/add-transport',AddTransport::class)->name('admin.addTransport');
 
-
-
+//Ziyarat Controller
+Route::get('/admin/list-ziyarat',Ziyarat::class)->name('admin.ziyarat');
+Route::get('/admin/add-ziyarat',AddZiyarat::class)->name('admin.add-ziyarat');
 
 Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
 Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');

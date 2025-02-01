@@ -23,6 +23,8 @@ class SaudiVisa extends Component
     public $enquirePopUp;
     public $browcherData;
     public $enquireData;
+    public $searchVisaType;
+    public $searchCountry;
     public $showModal = false;
     // public function mount(){
     //     $this->visaDetails = VisaDetail::where('delete_status', 1)->get();
@@ -93,7 +95,20 @@ class SaudiVisa extends Component
 
     public function render()
     {
-        $this->visaDetails = VisaDetail::where('delete_status', 1)->get();
+        $query = VisaDetail::where('delete_status', 1);
+
+        // Apply search filters only if they have values
+        if ($this->searchVisaType) {
+            $query->where('visa_type', 'like', '%' . $this->searchVisaType . '%');
+        }
+
+        if ($this->searchCountry) {
+            $query->where('country', 'like', '%' . $this->searchCountry . '%');
+        }
+
+        // Execute the query and get the results
+        $this->visaDetails = $query->get();
+
         return view('livewire.user_front.saudi-visa',['visaDetails' => $this->visaDetails]);
     }
 }

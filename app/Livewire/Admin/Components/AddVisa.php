@@ -12,6 +12,8 @@ class AddVisa extends Component
     use WithFileUploads;
 
     public $visaType;
+    public $country;
+    public $validity;
     public $documentsRequired;
     public $processingTime;
     public $price;
@@ -30,6 +32,8 @@ class AddVisa extends Component
 
     protected $rules = [
         'visaType' => 'required|string',
+        'country' => 'required',
+        'validity' => 'required',
         'documentsRequired' => 'required|string',
         'processingTime' => 'required|integer',
         'price' => 'required|numeric',
@@ -41,6 +45,8 @@ class AddVisa extends Component
         'visaType.required' => 'Visa type is required.',
         'visaType.string' => 'Visa type must be a string.',
         'visaType.max' => 'Visa type cannot exceed 255 characters.',
+        'country.required' => 'country type is required.',
+        'validity.required' => 'validity type is required.',
         'documentsRequired.required' => 'Fill this field.',
         'documentsRequired.string' => 'Documents required must be a string.',
         'documentsRequired.max' => 'Documents required description cannot exceed 1000 characters.',
@@ -63,6 +69,8 @@ class AddVisa extends Component
             $visa = VisaDetail::findOrFail($id);
             $this->visaId = $visa->id;
             $this->visaType = $visa->visa_type;
+            $this->country = $visa->country;
+            $this->validity = $visa->validity;
             $this->documentsRequired = $visa->documents_required;
             $this->processingTime = $visa->processing_time;
             $this->price = $visa->price;
@@ -84,6 +92,8 @@ class AddVisa extends Component
            // dd($this->visaType);
             $visa->update([
                 'visa_type' => $this->visaType,
+                'country' => $this->country,
+                'validity' => $this->validity,
                 'documents_required' => $this->documentsRequired,
                 'processing_time' => $this->processingTime,
                 'price' => $this->price,
@@ -95,6 +105,8 @@ class AddVisa extends Component
             // Add new visa
             VisaDetail::create([
                 'visa_type' => $this->visaType,
+                'country' => $this->country,
+                'validity' => $this->validity,
                 'documents_required' => $this->documentsRequired,
                 'processing_time' => $this->processingTime,
                 'price' => $this->price,
@@ -105,7 +117,7 @@ class AddVisa extends Component
             session()->flash('message', 'Visa details added successfully!');
         }
         // Reset form fields
-        $this->reset(['visaType', 'documentsRequired', 'processingTime', 'price', 'file', 'flyer']);
+        $this->reset(['visaType','country','validity', 'documentsRequired', 'processingTime', 'price', 'file', 'flyer']);
     }   
 
     #[Layout('admin.Layouts.app')]

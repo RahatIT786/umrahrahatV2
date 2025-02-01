@@ -25,6 +25,20 @@
                             @error('visaType') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
+                        <!-- country  -->
+                        <div class="col-md-6 mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" id="country" wire:model="country" class="form-control" placeholder="Enter country">
+                            @error('country') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        <!-- validity  -->
+                        <div class="col-md-6 mb-3">
+                            <label for="validity" class="form-label">Validity</label>
+                            <input type="number" id="validity" wire:model="validity" class="form-control" placeholder="Enter validity">
+                            @error('validity') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
                         <!-- Documents Required -->
                         <div class="col-md-6 mb-3">
                             <label for="documentsRequired" class="form-label">Documents Required</label>

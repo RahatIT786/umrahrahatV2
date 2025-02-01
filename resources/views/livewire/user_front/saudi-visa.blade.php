@@ -23,34 +23,22 @@
             <div class="bg-white shadow" style="padding: 35px;">
                 <div class="row g-2">
                     <div class="col-md-3">
-                        <button class="btn btn-primary w-100">Search Hotels</button>
+                        <button class="btn btn-primary w-100">Search Visa</button>
                     </div>
                     <div class="col-md-9">
                         <div class="row g-2">
-                            <form class="col-md-4"  wire:submit.prevent="">
-                                <select class="form-select" wire:model.live="searchCity">
-                                    <option value='' selected>City</option>
-                                    <option value="MAKKAH">MAKKAH</option>
-                                    <option value="MADINAH">MADINAH</option>
-                                    <option value="BAGHDAD">BAGHDAD</option>
-                                    <option value="NAJAF">NAJAF</option>
-                                    <option value="KARBALA">KARBALA</option>
+                            <form class="col-md-6"  wire:submit.prevent="">
+                                <select class="form-select" wire:model.live="searchVisaType">
+                                    <option value='' selected>Select Visa Type</option>
+                                    <option value="UMRAH VISA">UMRAH VISA</option>
+                                    <option value="TOURIST VISA">TOURIST VISA</option>
+                                    <option value="BUSINESS VISA">BUSINESS VISA</option>
+                                    <option value="PERSONAL VISA">PERSONAL VISA</option>
                                 </select>
-                            </form>
-                            <form class="col-md-4" wire:submit.prevent="">
-                                <select class="form-select" wire:model.live="searchRating">
-                                    <option value='' selected>Star Rating</option>
-                                    <option value="2">2 Stars</option>
-                                    <option value="3">3 Stars</option>
-                                    <option value="4">4 Stars</option>
-                                    <option value="5">5 Stars</option>
-                                    <option value="6">Building Accomutation Stars</option>
-                                    <option value="7">Standard Hotel Stars</option>
-                                </select>
-                            </form>
-                            <div class="col-md-4">
+                            </form>   
+                            <div class="col-md-6">
                                 <form wire:submit.prevent="" class="date" id="date2" >
-                                    <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Hotel Name" />
+                                    <input  wire:model.live="searchCountry" type="text" class="form-control" placeholder="Country Name" />
                                 </form>
                             </div>
                         </div>
@@ -105,7 +93,7 @@ window.onload = function() {
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
                             {{-- <img class="img-fluid" src="asserts/user/img/haj/pack1.jpg" alt=""> --}}
-                            <img class="img-fluid" src="{{Storage::url($visaDetail->file_path)}}" alt="" style="height: 15rem;">
+                            <img class="img-fluid" src="{{Storage::url($visaDetail->file_path)}}" alt="" style="height: 15rem;width:100%;">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4"></small>
                         </div>
                         <div class="p-4 mt-2">
