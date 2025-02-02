@@ -203,12 +203,34 @@
                 <li> 
                   <a href="{{ route('admin.departure-city') }}" wire:navigate><i class="bi bi-circle"></i>Departure city</a>
                 </li>
-                <li> 
-                  <a href="{{ route('admin.package-types') }}" wire:navigate><i class="bi bi-circle"></i>Package Types</a>
-                </li>
+               
                 <li> 
                   <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
                 </li>
+                  <!----------->
+                  <li>
+                    <a class="has-arrow" href="javascript:;">
+                      <div class="parent-icon"><i class="bi bi-award-fill"></i>
+                      </div>
+                      <div class="menu-title">Package Setting</div>
+                    </a>
+                    <ul>
+                      <li> 
+                        <a href="{{ route('admin.package-types') }}" wire:navigate><i class="bi bi-circle"></i>Package Types</a>
+                      </li>
+                      <li> 
+                        <a href="{{ route('admin.package.transport.type') }}" wire:navigate><i class="bi bi-circle"></i>Package Transport Type</a>
+                      </li>
+                      {{-- <li> 
+                        <a href="{{ route('admin.package-types') }}" wire:navigate><i class="bi bi-circle"></i>Package Types</a>
+                      </li>
+                      <li> 
+                        <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
+                      </li> --}}
+                    </ul>
+                  </li>
+                  <!----------->
+
               </ul>
             </li>
 

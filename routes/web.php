@@ -54,8 +54,7 @@ use App\Livewire\Admin\Components\AddTransport;
 //Ziyarat Controller
 use App\Livewire\Admin\Components\Ziyarat;
 use App\Livewire\Admin\Components\AddZiyarat;
-
-
+use App\Livewire\Admin\Components\PackageTransportType;
 use App\Livewire\Admin\umrahv2\AgentSignup;
 use App\Livewire\Admin\umrahv2\QuickEnquires;
 
@@ -261,6 +260,7 @@ Route::get('/admin/flight-management',FlightManagent::class)->name('admin.flight
 Route::get('/admin/add-flight-details',AddflightManagent::class)->name('addFlight');
 Route::get('/flightDataEdit/{id}',AddflightManagent::class)->name('flightDataEdit');
 Route::get('/admin/departure-city',DepartureCity::class)->name('admin.departure-city');
+Route::get('/admin/package-transport-type',PackageTransportType::class)->name('admin.package.transport.type');
 Route::get('/admin/add-departure-city',AddDepartureCity::class)->name('add.departureCity');
 Route::get('/admin/EditCity/{id}',AddDepartureCity::class)->name('editCitydata');
 Route::get('/admin/package-types',PackageTypeMaster::class)->name('admin.package-types');

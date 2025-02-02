@@ -24,17 +24,22 @@ class CarType extends Component
     {
         $this->showAddModal = false;
     }
+    public function closeSaveModal(){
+        $this->showAddModal = false;
+    }
     public function closeDeleteModal(){
         $this->showModal = false;
     }
     public function save()
     {
-         $this->showAddModal = false;
+       
           carTypeAdd::create([
                 'car_type' => $this->carType,
                 'delete_status' => 1
             ]);
             session()->flash('message', 'Car Type details successfully added.');
+            $this->dispatch('carTypeSaved');
+            $this->showAddModal = false;
     }
     public function confirmDelete($id)
     {
