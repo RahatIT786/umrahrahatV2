@@ -14,11 +14,11 @@
                   <form class="row g-3" wire:submit.prevent="save" onsubmit="event.preventDefault();">
                         
                         <!-- Package Master Name* -->
-                        {{-- <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label for="package_name" class="form-label">Package Master Name*</label>
                             <input type="text" id="package_name" wire:model="package_name" class="form-control" placeholder="Enter Package Master Name">
                             @error('package_name') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div> --}}
+                        </div>
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Package Name</label>
