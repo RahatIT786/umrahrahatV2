@@ -105,7 +105,7 @@ class AddCatring extends Component
                     'currency' => $this->currency,
                     'foodBreakFast' => $this->foodBreakFast,
                     'foodLunch' => $this->foodLunch,
-                    'foodDinner' => $this->foodDinner,
+                    //'foodDinner' => $this->foodDinner,
                     'foodBreakFastImagePath' => $foodBreakFastImagePath ?? $food->foodBreakFastImagePath,
                     'foodLunchImagePath' => $foodLunchImagePath ?? $food->foodLunchImagePath,
                     'foodDinnerImagePath' => $foodDinnerImagePath ?? $food->foodDinnerImagePath,
@@ -118,7 +118,7 @@ class AddCatring extends Component
                 'foodPrice' => $this->foodPrice,
                 'currency' => $this->currency,
                 'foodBreakFast' => $this->foodBreakFast,// this is using for description
-                // 'foodLunch' => $this->foodLunch,
+                'foodLunch' => $this->foodLunch,
                 // 'foodDinner' => $this->foodDinner,
                 'foodBreakFastImagePath' => $foodBreakFastImagePath, // this is using for food image
                 // 'foodLunchImagePath' => $foodLunchImagePath,

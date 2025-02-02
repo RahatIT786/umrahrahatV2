@@ -31,11 +31,5 @@
 <link href="{{ asset('/public/asserts/admin/css/header-colors.css') }}" rel="stylesheet" />
 
 
-
-
-
-
-
-
-  <title>Snacked - Bootstrap 5 Admin Template</title>
+ <title>Umrah Rahat</title>
 </head>

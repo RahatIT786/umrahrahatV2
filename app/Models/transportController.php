@@ -25,14 +25,14 @@ class transportController extends Model
         'delete_status',
     ];
         // Relationship with CarType
-        public function carType()
+        public function cartypemaster()
         {
-            return $this->belongsTo(CarType::class, 'carType');
+            return $this->hasOne(CarType::class, 'id' ,'id');
         }
     
         // Relationship with CarSector
-        public function carSector()
+        public function carsectormaster()
         {
-            return $this->belongsTo(CarSector::class, 'carSector');
+            return $this->hasOne(CarSector::class, 'id','id');
         }
 }
