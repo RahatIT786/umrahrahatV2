@@ -192,7 +192,11 @@
                             <!-- Right Column: Package Details -->
                             <div class="col-lg-8 col-md-8 p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">{{ucfirst($package->packageType->packageType)}}</h5>
+                                    
+                                   <div>
+                                    <h5 class="mb-2">{{ucfirst($package->name)}}</h5>
+                                    <p class="mb-2" style="font-weight: 400; ">Package Type:  {{ucfirst($package->packageType->packageType)}}</p>
+                                   </div>
                                     <div class="ps-2">
                                         <!-- Rating stars -->
                                         {{-- <small class="fa fa-star text-primary"></small>
@@ -223,7 +227,7 @@
                                         <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{$package->sharingDetails->d_share  - 250 }}</span>.AED</span>
                                     </small>
                                     <small class="me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{$package->sharingDetails->single  - 250 }}</span>.AED</span>
+                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{$package->sharingDetails->single  - 250    }}</span>.AED</span>
                                     </small>
                                 </div>
                                 <div>

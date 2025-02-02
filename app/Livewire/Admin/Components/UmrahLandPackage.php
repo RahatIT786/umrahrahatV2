@@ -21,7 +21,7 @@ class UmrahLandPackage extends Component
 {
     use LivewireAlert, WithFileUploads;
 
-    public $package_name = 'default value', $packageImage, $packageDescription;
+    public $package_name , $packageImage, $packageDescription;
     public $package_type_ids = [];
     public $makka_rating = [];
     public $makkaHotel = [], $makka_hotel = [];
