@@ -129,11 +129,11 @@
                 </div>
             </div>
         </div>--}}
-        <div class="modal @if($showAddModal) fade show @endif" 
+        <div class="modal @if($showAddModal)  show @endif" 
      id="exampleVerticallycenteredModal" 
      tabindex="-1" 
      aria-labelledby="exampleModalCenterTitle" 
-     aria-hidden="true"
+     aria-hidden="true"s
      @if($showAddModal) style="display: block;" @endif>
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -144,7 +144,7 @@
                         aria-label="Close"
                         wire:click="closeModal"></button>
             </div>
-            <form wire:submit.prevent="save">
+            <form wire:submit.prevent="save" onsubmit="location.reload()">
                 <div class="modal-body">
                     <label for="car_type" class="form-label">Car Type Name</label>
                     <input type="text" class="form-control" id="car_type" wire:model="carType" required>
@@ -155,12 +155,19 @@
                             data-bs-dismiss="modal" 
                             wire:click="closeModal">Cancel
                     </button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary"  >Save</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<script>
+    function reloadPage() {
+        setTimeout(() => {
+            location.reload();  // Reloads the page after a short delay
+        }, 100);  // Delay to ensure the Livewire 'save' method is called
+    }
+</script>
 
 
 
