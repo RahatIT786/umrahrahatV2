@@ -41,10 +41,11 @@
                 </thead>
                <tbody>
                     @foreach ($transportDetails as $index => $transportDetail)
+                       
                         <tr>
                             <td>{{  $index + 1 }}</td>
-                            <td>{{ $transportDetail->carType }}</td>
-                            <td>{{ $transportDetail->carSector }}</td>
+                            <td>{{ $transportDetail->carType->car_type}}</td>
+                            <td>{{ $transportDetail->carSector->car_sector}}</td>
                             <td>{{ $transportDetail->seatsCount }}</td>
                             <td>{{ $transportDetail->price }}</td>
                             <td class="text-center">

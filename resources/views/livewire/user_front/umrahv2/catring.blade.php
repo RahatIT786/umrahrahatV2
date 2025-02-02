@@ -46,7 +46,7 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase"></h6>
-                    <h1 class="mb-5">Our Catering Service<span class="text-primary text-uppercase"></span></h1>
+                    <!-- <h1 class="mb-5">Our Catering Service<span class="text-primary text-uppercase"></span></h1> -->
                 </div>
                 <div class="row g-4 align-items-center">
                     @foreach ($foodDetails as $food)
@@ -64,6 +64,7 @@
 
                                         <div class="d-flex justify-content-between my-3">
                                             <h5 class="mb-0">{{$food['foodType']}}</h5>
+                                            <a href="{{$food['foodLunch']}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-youtube mx-3"></i></a> 
                                         </div>
 
                                         <div>

@@ -37,7 +37,7 @@ class CarRentel extends Component
     #[Layout('admin.Layouts.app')]
     public function render()
     {
-        $transportDetails = transportController::with(['carType', 'carSector'])->where('delete_status', 1)
+        $transportDetails = transportController::with(['cartypemaster', 'carsectormaster'])->where('delete_status', 1)
         ->where(function($query){
             $query->where('carType', 'like', '%'.$this->search.'%')
                   ->orWhere('carSector', 'like', '%'.$this->search.'%')

@@ -41,31 +41,31 @@
               <!-- Name -->
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Enter your name" wire:model='name' required>
+                <input class="input1" type="text" id="name" placeholder="Enter your name" wire:model='name' required>
                 @error('name') <span class="error">{{ $message }}</span> @enderror
               </div>
               <!-- Mobile -->
               <div class="form-group">
                 <label for="mobile">Mobile</label>
-                <input type="text" id="mobile" placeholder="Enter your mobile number" wire:model='qmobile' required>
+                <input class="input1" type="text" id="mobile" placeholder="Enter your mobile number" wire:model='qmobile' required>
                 @error('mobile') <span class="error">{{ $message }}</span> @enderror
               </div>
               <!-- Date of Travel -->
               <div class="form-group">
                 <label for="date">Date of Travel</label>
-                <input type="date" id="date" wire:model='date_of_travel' required>
+                <input class="input1" type="date" id="date" wire:model='date_of_travel' required>
                 @error('date_of_travel') <span class="error">{{ $message }}</span> @enderror
               </div>
               <!-- Total Pax -->
               <div class="form-group">
                 <label for="pax">Total Pax</label>
-                <input type="number" id="pax" placeholder="Enter number of travelers" wire:model='total_pax' required>
+                <input class="input1" type="number" id="pax" placeholder="Enter number of travelers" wire:model='total_pax' required>
                 @error('total_pax') <span class="error">{{ $message }}</span> @enderror
               </div>
               <!-- Travel Mode -->
               <div class="form-group">
                 <label for="mode">Travel Mode</label>
-                <select id="mode" wire:model='travel_type' required>
+                <select class="input1" id="mode" wire:model='travel_type' required>
                   <option value="">Select</option>
                   <option value="Bus">By Bus</option>
                   <option value="Flight">By Flight</option>
@@ -142,6 +142,15 @@ function closeForm() {
   #popupContainerHome .hidden {
     display: none;
   }
+  /* .input1 {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+} */
   
   /* Form Container */
   #popupContainerHome .form-container {
@@ -152,7 +161,11 @@ function closeForm() {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    animation: fadeIn 0.3s ease;
+    /* animation: fadeIn 0.3s ease;
+    background-image: url({{asset('asserts/user/img/mina.jpg')}});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  */
   }
   @keyframes fadeIn {
     from {
@@ -240,9 +253,10 @@ function closeForm() {
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Memorable and spiritually enriching Umrah pilgrimages </h1>
+                                <h5 class="text-white mb-4 animated slideInDown">Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
+                                makes that sacred experience all that much better</h5>
                                 <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book A Package</a>
-                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
+                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Package</a>
                             </div>
                         </div>
                     </div>
@@ -251,7 +265,7 @@ function closeForm() {
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Throughout your life you have prayed, fasted and given in charity</h1>
+                                <h5 class=" text-white mb-4 animated slideInDown">RAHAT GROUP, your premier partner in facilitating memorable and spiritually enriching Holy pilgrimages.</h5>
                                 <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Quick Book</a>
                                 <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
                             </div>

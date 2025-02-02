@@ -31,22 +31,25 @@
                         <!-- Currency Selection -->
                         <div class="col-md-12 mb-3">
                             <label class="form-label">Select Currencwy</label>
-                            <div class="form-check">
-                                <input type="radio" id="currencyINR" name="currency" value="INR" wire:model="currency" class="form-check-input">
-                                <label for="currencyINR" class="form-check-label">INR</label>
+                            <div class="d-flex">
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyINR" name="currency" value="INR" wire:model="currency" class="form-check-input">
+                                    <label for="currencyINR" class="form-check-label">INR</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyAED" name="currency" value="AED" wire:model="currency" class="form-check-input">
+                                    <label for="currencyAED" class="form-check-label">AED</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyUSD" name="currency" value="USD" wire:model="currency" class="form-check-input">
+                                    <label for="currencyUSD" class="form-check-label">USD</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencySAR" name="currency" value="SAR" wire:model="currency" class="form-check-input">
+                                    <label for="currencySAR" class="form-check-label">SAR</label>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencyAED" name="currency" value="AED" wire:model="currency" class="form-check-input">
-                                <label for="currencyAED" class="form-check-label">AED</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencyUSD" name="currency" value="USD" wire:model="currency" class="form-check-input">
-                                <label for="currencyUSD" class="form-check-label">USD</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencySAR" name="currency" value="SAR" wire:model="currency" class="form-check-input">
-                                <label for="currencySAR" class="form-check-label">SAR</label>
-                            </div>
+                            
                           {{--  @error('currency') <span class="text-danger">{{ $message }}</span> @enderror--}}
                         </div>
 
@@ -55,23 +58,23 @@
 
 
                     {{-- <h5>BreakFast , Lunch and Dinner</h5> --}}
-                    <h5>Food Description</h5>
-                    <hr>
+                    <!-- <h5>Food Description</h5> -->
+                    <!-- <hr> -->
                     <!-- Flight & Transport -->
                    
-                        <div class="col-md-12 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label for="foodBreakFast" class="form-label">Description</label>
                             <textarea id="foodBreakFast" wire:model="foodBreakFast" class="form-control " placeholder="Enter Description "></textarea>
                         </div>
 
-                        {{-- <!-- Meals -->
-                        <div class="col-md-4 mb-3">
-                            <label for="foodLunch" class="form-label">Lunch</label>
-                            <textarea id="foodLunch" wire:model="foodLunch" class="form-control " placeholder="Enter Lunch"></textarea>
+                         <!-- Meals -->
+                        <div class="col-md-6 mb-3">
+                            <label for="foodLunch" class="form-label">You Tube Link</label>
+                            <input id="foodLunch" wire:model="foodLunch" class="form-control " placeholder="You Tube Link"></input>
                         </div>
 
                         <!-- Visa & Taxes -->
-                        <div class="col-md-4 mb-3">
+                      {{--  <div class="col-md-4 mb-3">
                             <label for="foodDinner" class="form-label">Dinner</label>
                             <textarea id="foodDinner" wire:model="foodDinner" class="form-control " placeholder="Enter Dinner"></textarea>
                         </div> --}}
