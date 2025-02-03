@@ -221,10 +221,10 @@
                       <li> 
                         <a href="{{ route('admin.package.transport.type') }}" wire:navigate><i class="bi bi-circle"></i>Package Transport Type</a>
                       </li>
-                      {{-- <li> 
-                        <a href="{{ route('admin.package-types') }}" wire:navigate><i class="bi bi-circle"></i>Package Types</a>
+                       <li> 
+                        <a href="{{ route('admin.service-type') }}" wire:navigate><i class="bi bi-circle"></i>Service Types</a>
                       </li>
-                      <li> 
+                     {{-- <li> 
                         <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
                       </li> --}}
                     </ul>
