@@ -107,11 +107,8 @@ class UmrahLandPackageUAE extends Component
     {
         // Fetch all main packages with delete_status 1
         $query = MainPackage::where('delete_status', 1)
-        ->where('service_type', '3')
-        ->where(function ($query) {
-            $query->whereNotNull('flights')
-                  ->where('flights', '!=', '');
-        });
+        ->where('service_type',strtolower(__('message.umrah')))
+        ->where('departure_type',strtolower(__('message.land')));
 
     
         if ($this->searchCity) {

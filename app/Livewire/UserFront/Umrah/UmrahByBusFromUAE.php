@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Models\mainPackage as MainPackage;
 use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
+use App\Models\UserSearchQueries;
 use Livewire\Attributes\Layout; 
 
 class UmrahByBusFromUAE extends Component
@@ -99,6 +100,17 @@ class UmrahByBusFromUAE extends Component
 
 
 
+    public function searchSubmit(){
+
+        $searchQuery=[
+            ci
+        ];
+
+        UserSearchQueries::create([
+            'page'=>__('message.umrah').__('message.bus'),
+            'information'=>
+        ]);
+    }
 
 
 
@@ -107,8 +119,8 @@ class UmrahByBusFromUAE extends Component
     {
         // Fetch all main packages with delete_status 1
         $query = MainPackage::where('delete_status', 1)
-        ->where('service_type',strtolower('umrah'))
-                ->where('departure_type',strtolower('bus'));
+        ->where('service_type',strtolower(__('message.umrah')))
+                ->where('departure_type',strtolower(__('message.bus')));
     
         if ($this->searchCity) {
             $query->where('depart_city', 'like', '%' . $this->searchCity . '%');

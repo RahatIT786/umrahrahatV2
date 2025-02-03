@@ -9,6 +9,16 @@ return[
 // BUTTON VARIABLE NAMES 
 'book_now'=>'Book Now',
 
+
+//nav bar data get variables
+'ramzaan'=>'ramzaan',
+'umrah'=>'umrah',
+'hajj'=>'hajj',
+
+'bus'=>'bus',
+'flight'=>'flight',
+'land'=>'land',
+
 //----------------ADMIN-VARIABLE-END---------------------------------------------------
 
 

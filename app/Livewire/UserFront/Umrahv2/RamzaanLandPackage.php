@@ -58,10 +58,9 @@ class RamzaanLandPackage extends Component
     public function render()
     {
         // Fetch all main packages with delete_status 1
-        $query = MainPackage::where('delete_status', 1)->where('service_type','1')->where(function ($query) {
-            $query->whereNull('flights')
-                  ->orWhere('flights', '');
-        });
+        $query = MainPackage::where('delete_status', 1)
+        ->where('service_type',strtolower(__('message.ramzaan')))
+        ->where('departure_type',strtolower(__('message.land')));
 
 
         if ($this->searchCity) {
