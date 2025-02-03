@@ -106,14 +106,14 @@ class UmrahByBusFromUAE extends Component
     public function render()
     {
         // Fetch all main packages with delete_status 1
-        $query = MainPackage::where('delete_status', 1)->where('service_type','3')->where(function ($query) {
-            $query->whereNull('flights')
-                  ->orWhere('flights', '');
-        });
+        $query = MainPackage::where('delete_status', 1)
+        ->where('service_type',strtolower('umrah'))
+                ->where('departure_type',strtolower('bus'));
     
         if ($this->searchCity) {
             $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
         }
+        
         if ($this->searchDays) {
             $query->where('package_days', 'like', '%' . $this->searchDays . '%');
         }

@@ -255,8 +255,8 @@ function closeForm() {
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
                                 <h5 class="text-white mb-4 animated slideInDown">Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
                                 makes that sacred experience all that much better</h5>
-                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book A Package</a>
-                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Package</a>
+                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{__('message.exp_package')}}</a>
+                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">{{__('message.exp_hotel')}}</a>
                             </div>
                         </div>
                     </div>
@@ -266,8 +266,8 @@ function closeForm() {
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
                                 <h5 class=" text-white mb-4 animated slideInDown">RAHAT GROUP, your premier partner in facilitating memorable and spiritually enriching Holy pilgrimages.</h5>
-                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Quick Book</a>
-                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
+                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{__('message.exp_package')}}</a>
+                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">{{__('message.exp_hotel')}}</a>
                             </div>
                         </div>
                     </div>
@@ -535,7 +535,7 @@ function startAnimations() {
                                             <i class="fa-solid fa-file-zipper"></i>  View Package
                                         </a>
                                         <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
-                                            <i class="fa-regular fa-paper-plane"></i>  Book Enquire
+                                            <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                         </a>
                                     </div>
                                 </div>

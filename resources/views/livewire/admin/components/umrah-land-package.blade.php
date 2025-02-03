@@ -7,7 +7,7 @@
                 </div>
                 <div class="card-body">
                     @if (session()->has('message'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success text-center">
                             {{ session('message') }}
                         </div>
                     @endif
@@ -43,8 +43,10 @@
                         <label  class="form-label">Service Type</label>
                                 <select class="form-control" wire:model="service_type" wire:change="service_type">
                                     <option value="">Select Service Type</option>
-                                    <option value="1">Ramzan</option>
-                                    <option value="2">Hajj</option>
+                                    @foreach ($packageServiceType as $type )
+                                        <option value="{{$type->service_type}}">{{ucfirst($type->service_type)}}</option>
+                                    @endforeach
+                                  
                                     <option value="3">Umrah</option>
                                 </select>
                                 @error("service_type")<span class="text-danger">{{ $message }}</span>@enderror
@@ -72,7 +74,7 @@
                             <option value="">Select Departure Type</option>
                            @foreach ($departureTypes as $type)
 
-                              <option value="{{$type->id}}">{{ucfirst($type->type)}}</option> 
+                              <option value="{{$type->type}}">{{ucfirst($type->type)}}</option> 
                            @endforeach
                         </select>
                         @error('package_da') <span class="text-danger">{{ $message }}</span> @enderror
@@ -117,7 +119,8 @@
                     </div>
 
                     <!-- Flight Name -->
-                  @if ($departure_type === (string) $flightValueId )
+                   
+                  @if (strtolower((string) $departure_type) === strtolower((string) $flightValue))
                   <div class="col-md-4 mb-3">
                     <label class="form-label">Flights</label>
 

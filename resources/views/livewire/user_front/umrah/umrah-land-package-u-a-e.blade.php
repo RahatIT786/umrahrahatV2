@@ -302,7 +302,7 @@
 
         <!--enquire form start-->
       {{-- @if ($umrahEmquire) --}}
-      <div id="popupContainer">
+      {{-- <div id="popupContainer">
         <div id="popupForm" class="popup-form hdden">
           <div class="form-container">
             <button id="closeForm" class="close-btn" wire:click='umrahEnquirePopupClose'>&times;</button>
@@ -354,11 +354,11 @@
             </form>
           </div>
         </div>
-      </div>
+      </div> --}}
           
       
      
-        <script>
+        {{-- <script>
 // JavaScript function to show the form after a delay of 3 seconds (3000 milliseconds)
 window.addEventListener('load', function() {
     setTimeout(function() {
@@ -370,7 +370,7 @@ window.addEventListener('load', function() {
 function closeForm() {
     document.getElementById('popupContainer').classList.remove('show');
 }
-</script>
+</script> --}}
 
 <style>
     /* Scoped Styles for #popupContainer */
