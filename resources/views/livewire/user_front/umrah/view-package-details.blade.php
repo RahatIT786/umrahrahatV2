@@ -8,7 +8,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
                             <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                            <h1 class="display-3 text-white mb-4 animated slideInDown">{{ $this->packages->name }}</h1>
+                            <h1 class="text-white mb-4 animated slideInDown">{{ $this->packages->name }}</h1>
                         </div>
                     </div>
                 </div>
