@@ -70,6 +70,7 @@ class RamzaanPackage extends Component
             $query->where('package_days', 'like', '%' . $this->searchDays . '%');
         }
         $this->allPackages = $query->get();
+
         // Render the Livewire view with allPackages data
         return view('livewire.user_front.umrahv2.ramzaan-main-package', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
     }

@@ -10,6 +10,7 @@ use App\Models\DepartureCity;
 use App\Models\FlightManagement;
 use App\Models\inclusion;
 use App\Models\HotelDetail;
+use App\Models\package_user_enquire;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
@@ -24,6 +25,33 @@ class ViewPackageDetails extends Component
     // public $service_id = 2; // Default to service_id 1
     public $makkah_hotel_details, $madina_hotel_details;
     // protected $listeners = ['putInData'];
+
+        //==========================================================================//
+        public $package_user_name;
+        public $package_user_email;
+        public $package_user_phone;
+        public $package_user_adult;
+        public $package_user_child;
+        public $package_user_package_name;
+        public $package_user_service_type;
+        public $package_user_departure_type;
+    
+    
+        public function packageEnquire(){
+            package_user_enquire::create([
+                'package_user_name' => $this->package_user_name,
+                'package_user_email' => $this->package_user_email,
+                'package_user_phone' => $this->package_user_phone,
+                'package_user_adult' => $this->package_user_adult,
+                'package_user_child' => $this->package_user_child,
+                'package_user_package_name' => $this->package_user_package_name ?? '',
+                'package_user_service_type' => $this->package_user_service_type ?? '',
+                'package_user_departure_type' => $this->package_user_departure_type ?? '',
+            ]);
+            session()->flash('success', 'Your enquiry has been submitted successfully!');
+            $this->reset(['package_user_name','package_user_email','package_user_phone', 'package_user_adult', 'package_user_child']);
+        }
+        //==========================================================================//
 
     public function mount($package)
     {
@@ -40,6 +68,9 @@ class ViewPackageDetails extends Component
         // $this->serviceArray = ServiceType::has('packages')->active()->get();
         // dd($this->serviceArray);
         $this->packages = mainPackage::where('id', $package)->with('pkgDetails.packageType')->first();
+        $this->package_user_package_name = $this->packages->name;
+        $this->package_user_service_type = $this->packages->service_type;
+        $this->package_user_departure_type = $this->packages->departure_type;
         //dd($this->packages);
         // Start joddha 19/10/2024
         // Assuming pack_id stores multiple IDs, fetch PNRs related to the package

@@ -255,11 +255,14 @@
                     </a>
                 </li>
                 
-            <li>
-
-
+              <li>
                   <a href="{{route('agentsignup')}}" >
                       <i class="bi bi-circle"></i>Enquires From Agent
+                  </a>
+              </li>
+              <li>
+                  <a href="{{route('package-enquire-from-user')}}" >
+                      <i class="bi bi-circle"></i>Package Enquires From user
                   </a>
               </li>
                    <!--

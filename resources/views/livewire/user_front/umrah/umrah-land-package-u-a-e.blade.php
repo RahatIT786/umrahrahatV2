@@ -97,84 +97,8 @@
                 </div>
                 <div class="row g-4">
                    
-                    {{-- @foreach ($allPackages as $package )
-                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="row g-0">
-                                <!-- Left Column: Image Section (col-4) -->
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="position-relative">
-                                        <img class="img-fluid" src="{{ Storage::url($package->packageImage) }}" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
-                                        <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$package->package_days}} Days</small>
-                                    </div>
-                                </div>
-
-                                <!-- Right Column: Package Details Section (col-8) -->
-                                <div class="col-lg-8 col-md-6 p-4 mt-2">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mb-0">{{$package->name}}</h5>
-                                    </div>
-
-                                    <div class="container">
-                                        <!-- First Row for Inclusions -->
-                                        @php
-                                            // Convert the comma-separated string to an array
-                                            $packageIncludes = explode(',', $package->package_includes);
-                                        @endphp
-                                        <div class="row">
-                                            @foreach ($packageIncludes as $include)
-                                                @foreach ($inclusions as $includeItem)
-                                                    @if ($includeItem->id == $include)
-                                                        <div class="col-md-6 mb-3">
-                                                            @if ($includeItem->id == 2)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZamZam</small>
-                                                            @elseif($includeItem->id == 3)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-bus text-primary me-2"></i>Transport</small>
-                                                            @elseif($includeItem->id == 4)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>Saudi Sim</small>
-                                                            @elseif($includeItem->id == 5)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-luggage-cart text-primary me-2"></i>Welcome Kit</small>
-                                                            @elseif($includeItem->id == 6)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
-                                                            @elseif($includeItem->id == 7)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-person-praying text-primary me-2"></i>ZIYARAT</small>
-                                                            @elseif($includeItem->id == 8)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                                            @elseif($includeItem->id == 9)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-ticket text-primary me-2"></i>Ticket</small>
-                                                            @endif
-                                                        </div>
-                                                    @endif
-                                                @endforeach
-                                            @endforeach
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p style="border: 1px dashed #FEA116; padding: 2px 4px;" class="text-center">{{$package->package_days}} Days , {{$package->package_days - 1}} Nights</p>
-                                    </div>
-
-                                    <p class="text-body mb-3 text-justify">{{ \Illuminate\Support\Str::limit($package->description, 250, '...') }}</p>
-
-                                    <div class="d-flex justify-content-between">
-
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{ route('viewPackageDetails', ['package' => $package->id]) }}">
-                                            <i class="fa-solid fa-book"></i> View Package
-                                        </a>
-                                        <a class="btn btn-sm btn-dark rounded py-2 px-4">
-                                            <i class="fa-regular fa-paper-plane"></i> Book Enquire
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    @endforeach --}}
-
                     <!---package-start------>
-                   @foreach ( $allPackages as $package  )
+                    @foreach ( $allPackages as $package  )
                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="row g-0">
@@ -192,50 +116,42 @@
                             <!-- Right Column: Package Details -->
                             <div class="col-lg-8 col-md-8 p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    
                                    <div>
-                                    <h5 class="mb-2">{{ucfirst($package->name)}}</h5>
-                                    <p class="mb-2" style="font-weight: 400; ">Package Type:  {{ucfirst($package->packageType->packageType)}}</p>
+                                    <h5 class="mb-0">{{ucfirst($package->name)}}</h5>
+                                    <p class="mt-2 text-primary">{{ucfirst($package->packageType->packageType)}} Combo Pack <i class="fa-solid fa-bag-shopping" style="color: #0D1425;"></i></p>
+                                    <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
                                    </div>
+                                   @php
+                                   $minPrice=min(
+                                    intval($package->sharingDetails->g_share),
+                                    intval($package->sharingDetails->qt_share),
+                                    intval($package->sharingDetails->qd_share),
+                                    intval($package->sharingDetails->t_share),
+                                    intval($package->sharingDetails->d_share),
+                                    intval($package->sharingDetails->single),
+                                   );
+                                   @endphp
+                                   
                                     <div class="ps-2">
-                                        <!-- Rating stars -->
-                                        {{-- <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small> --}}
-                                        <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
+                                       <h5 style="color: gray">Start From</h5>
+                                       <div class="text-end">
+                                        <del class="text-danger">{{$minPrice * 1.1}}.AED</del> 
+                                        <p class="text-end" style="color: black;"><span style="font-size: 22px;   font-weight: 500;">{{$minPrice }}</span>.AED <br>
+                                        <span style="color: green; font-size: 11px; font-weight: 600;">YOU SAVED {{($minPrice * 1.1) - ($minPrice )}}.AED  <i class="fa-solid fa-sack-xmark"></i></span>
+                                        </p> 
+                                       
+                                       </div>
+                                      
                                     </div>
                                 </div>
-                                <div class="d-flex mb-3" style="font-size: 12px;">
-                                  
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{$package->sharingDetails->g_share - 250  }} </span>.AED</span>
-                                    </small>
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span><span style="font-size: 18px;">{{$package->sharingDetails->qt_share  - 250 }}</span>.AED</span>
-                                    </small>
-                                    <small class="me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span><span style="font-size: 18px;">{{$package->sharingDetails->qd_share  - 250 }}</span>.AED</span>
-                                    </small>
-                                </div>
-                                <div class="d-flex mb-3" style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span><span style="font-size: 18px;">{{$package->sharingDetails->t_share  - 250 }}</span>.AED</span>
-                                    </small>
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{$package->sharingDetails->d_share  - 250 }}</span>.AED</span>
-                                    </small>
-                                    <small class="me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{$package->sharingDetails->single  - 250    }}</span>.AED</span>
-                                    </small>
-                                </div>
+
                                 <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
                                 </div>
                                 <div >
-                                    <div class="mb-3" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-plane-departure"></i> Departure Dates : </span><span >Every Wednesday</span>   </div>
-                                   <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Hotel : </span><span ><span>{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> in Makka</span> | <span>{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> in Madina  </div>
+                                    <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-bus"></i> Departure Days : </span><span >Every Wednesday</span>   </div>
+                                   <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Makka Hotel : </span><span ><span>{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> </span>  </div>
+                                   <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Madina Hotel : </span><span ><span>{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> </span> </div>
                                    <div class="d-flex align-items-center  flex-md-row flex-column">
                                     {{-- @if($package->packageDetail && $package->packageDetail->hotelDetail)
                                              <p>{{ $package->packageDetail->hotelDetail->hotelName ?? 'Hotel Name Not Available' }}</p>
@@ -280,97 +196,23 @@
                                 
                                 {{-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> --}}
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})">
-                                        <i class="fa-solid fa-file-zipper"></i>  View Package
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{route('viewPackageDetails', $package->id)}}" >
+                                        <i class="fa-solid fa-file-zipper"></i>  View Packages
                                     </a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
-                                        <i class="fa-regular fa-paper-plane"></i>  Book Enquire
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" >
+                                        <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                   </div>
                    @endforeach
                     <!---package-end------>
                 </div>
             </div>
         </div>
         <!-- package End -->
-
-
-
-        <!--enquire form start-->
-      {{-- @if ($umrahEmquire) --}}
-      {{-- <div id="popupContainer">
-        <div id="popupForm" class="popup-form hdden">
-          <div class="form-container">
-            <button id="closeForm" class="close-btn" wire:click='umrahEnquirePopupClose'>&times;</button>
-            <h2 class="form-title">Quick Book</h2>
-            <p class="text-center ">Feel free to submit your query</p>
-            <form wire:submit.prevent="quickEnquireSumbit">
-                @csrf
-                @if(session()->has('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-              <!-- Name -->
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Enter your name" wire:model='name' required>
-                @error('name') <span class="error">{{ $message }}</span> @enderror
-              </div>
-              <!-- Mobile -->
-              <div class="form-group">
-                <label for="mobile">Mobile</label>
-                <input type="text" id="mobile" placeholder="Enter your mobile number" wire:model='mobile' required>
-                @error('mobile') <span class="error">{{ $message }}</span> @enderror
-              </div>
-              <!-- Date of Travel -->
-              <div class="form-group">
-                <label for="date">Date of Travel</label>
-                <input type="date" id="date" wire:model='date_of_travel' required>
-                @error('date_of_travel') <span class="error">{{ $message }}</span> @enderror
-              </div>
-              <!-- Total Pax -->
-              <div class="form-group">
-                <label for="pax">Total Pax</label>
-                <input type="number" id="pax" placeholder="Enter number of travelers" wire:model='total_pax' required>
-                @error('total_pax') <span class="error">{{ $message }}</span> @enderror
-              </div>
-              <!-- Travel Mode -->
-              <div class="form-group">
-                <label for="mode">Travel Mode</label>
-                <select id="mode" wire:model='travel_type' required>
-                  <option value="">Select</option>
-                  <option value="Bus">By Bus</option>
-                  <option value="Flight">By Flight</option>
-                </select>
-                @error('travel_type') <span class="error">{{ $message }}</span> @enderror
-              </div>
-              <!-- Submit Button -->
-              <button type="submit" class="submit-btn">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div> --}}
-          
-      
-     
-        {{-- <script>
-// JavaScript function to show the form after a delay of 3 seconds (3000 milliseconds)
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        document.getElementById('popupContainer').classList.add('show');
-    }, 4000); // Show the form after 3 seconds
-});
-
-// JavaScript function to close the form
-function closeForm() {
-    document.getElementById('popupContainer').classList.remove('show');
-}
-</script> --}}
 
 <style>
     /* Scoped Styles for #popupContainer */
@@ -498,12 +340,4 @@ function closeForm() {
   
   </style>
 
-
-
-
-   
-          
-      {{-- @endif --}}
-        <!---enquire form end-->
-    <!-- Room End -->
 </section>

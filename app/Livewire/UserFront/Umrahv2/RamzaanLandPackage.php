@@ -62,7 +62,6 @@ class RamzaanLandPackage extends Component
         ->where('service_type',strtolower(__('message.ramzaan')))
         ->where('departure_type',strtolower(__('message.land')));
 
-
         if ($this->searchCity) {
             $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
         }

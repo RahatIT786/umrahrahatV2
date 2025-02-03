@@ -275,7 +275,7 @@
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{route('viewPackageDetails', $package->id)}}" >
                                         <i class="fa-solid fa-file-zipper"></i>  View Packages
                                     </a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" >
                                         <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                     </a>
                                 </div>

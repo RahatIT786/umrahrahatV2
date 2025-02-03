@@ -37,7 +37,7 @@
                 <div class="alert alert-success">
                     {{ session('success') }}
                 </div>
-            @endif
+               @endif
               <!-- Name -->
               <div class="form-group">
                 <label for="name">Name</label>
