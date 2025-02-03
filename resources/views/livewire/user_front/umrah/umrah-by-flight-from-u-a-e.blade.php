@@ -192,46 +192,42 @@
                             <!-- Right Column: Package Details -->
                             <div class="col-lg-8 col-md-8 p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">{{ucfirst($package->packageType->packageType)}}</h5>
+                                   <div>
+                                    <h5 class="mb-0">{{ucfirst($package->name)}}</h5>
+                                    <p class="mt-2 text-primary">{{ucfirst($package->packageType->packageType)}} Combo Pack <i class="fa-solid fa-bag-shopping" style="color: #0D1425;"></i></p>
+                                    <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
+                                   </div>
+                                   @php
+                                   $minPrice=min(
+                                    intval($package->sharingDetails->g_share),
+                                    intval($package->sharingDetails->qt_share),
+                                    intval($package->sharingDetails->qd_share),
+                                    intval($package->sharingDetails->t_share),
+                                    intval($package->sharingDetails->d_share),
+                                    intval($package->sharingDetails->single),
+                                   );
+                                   @endphp
+                                   
                                     <div class="ps-2">
-                                        <!-- Rating stars -->
-                                        {{-- <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small> --}}
-                                        <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
+                                       <h5 style="color: gray">Start From</h5>
+                                       <div class="text-end">
+                                        <del class="text-danger">{{$minPrice * 1.1}}.AED</del> 
+                                        <p class="text-end" style="color: black;"><span style="font-size: 22px;   font-weight: 500;">{{$minPrice }}</span>.AED <br>
+                                        <span style="color: green; font-size: 11px; font-weight: 600;">YOU SAVED {{($minPrice * 1.1) - ($minPrice )}}.AED  <i class="fa-solid fa-sack-xmark"></i></span>
+                                        </p> 
+                                       
+                                       </div>
+                                      
                                     </div>
                                 </div>
-                                <div class="d-flex mb-3" style="font-size: 12px;">
-                                  
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{$package->sharingDetails->g_share + 1200  }} </span>.AED</span>
-                                    </small>
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span><span style="font-size: 18px;">{{$package->sharingDetails->qt_share  + 1200 }}</span>.AED</span>
-                                    </small>
-                                    <small class="me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span><span style="font-size: 18px;">{{$package->sharingDetails->qd_share  + 1200 }}</span>.AED</span>
-                                    </small>
-                                </div>
-                                <div class="d-flex mb-3" style="font-size: 12px;">
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span><span style="font-size: 18px;">{{$package->sharingDetails->t_share  + 1200 }}</span>.AED</span>
-                                    </small>
-                                    <small class="border-end me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{$package->sharingDetails->d_share  + 1200 }}</span>.AED</span>
-                                    </small>
-                                    <small class="me-3 pe-3">
-                                        <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{$package->sharingDetails->single  + 1200 }}</span>.AED</span>
-                                    </small>
-                                </div>
+
                                 <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
                                 </div>
                                 <div >
-                                    <div class="mb-3" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-plane-departure"></i> Departure Dates : </span><span >Every Wednesday</span>   </div>
-                                   <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Hotel : </span><span ><span>{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> in Makka</span> | <span>{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> in Madina  </div>
+                                    <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-bus"></i> Departure Days : </span><span >Every Wednesday</span>   </div>
+                                   <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Makka Hotel : </span><span ><span>{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> </span>  </div>
+                                   <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Madina Hotel : </span><span ><span>{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> </span> </div>
                                    <div class="d-flex align-items-center  flex-md-row flex-column">
                                     {{-- @if($package->packageDetail && $package->packageDetail->hotelDetail)
                                              <p>{{ $package->packageDetail->hotelDetail->hotelName ?? 'Hotel Name Not Available' }}</p>
@@ -276,8 +272,8 @@
                                 
                                 {{-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> --}}
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})">
-                                        <i class="fa-solid fa-file-zipper"></i>  View Package
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{route('viewPackageDetails', $package->id)}}" >
+                                        <i class="fa-solid fa-file-zipper"></i>  View Packages
                                     </a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
                                         <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
@@ -286,7 +282,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                   </div>
                    @endforeach
                     <!---package-end------>
                 </div>

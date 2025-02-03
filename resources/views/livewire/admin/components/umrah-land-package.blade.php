@@ -46,8 +46,6 @@
                                     @foreach ($packageServiceType as $type )
                                         <option value="{{$type->service_type}}">{{ucfirst($type->service_type)}}</option>
                                     @endforeach
-                                  
-                                    <option value="3">Umrah</option>
                                 </select>
                                 @error("service_type")<span class="text-danger">{{ $message }}</span>@enderror
                         </div>
