@@ -100,20 +100,6 @@ class UmrahByBusFromUAE extends Component
 
 
 
-    // public function searchSubmit(){
-
-    //     $searchQuery=[
-    //         ci
-    //     ];
-
-    //     UserSearchQueries::create([
-    //         'page'=>__('message.umrah').__('message.bus'),
-    //         'information'=>
-    //     ]);
-    // }
-
-
-
     #[Layout('user.Layouts.app')]
     public function render()
     {
