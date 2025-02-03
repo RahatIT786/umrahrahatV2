@@ -38,29 +38,29 @@
                         <th class="border-0 py-2 text-center">Delete</th>
                     </tr>
                 </thead>
-               {{-- <tbody>
-                    @foreach ($cartypes as $index => $cartype)
+               <tbody>
+                    @foreach ($serviceTypes as $index => $serviceType)
                         <tr>
                             <td>{{  $index + 1 }}</td>
-                            <td>{{ $cartype->car_type }}</td>
+                            <td>{{ $serviceType->service_type }}</td>
                             <td>
-                                @if ( $cartype->delete_status == 1 )
+                                @if ( $serviceType->delete_status == 1 )
                                     Active
                                 @endif
                             </td>
                             <td class="text-center">
-                                <a class="text-primary"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                                <a class="text-primary" wire:click.prevent="edit({{ $serviceType->id }})" data-bs-toggle="modal"  title="Edit">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a wire:click="confirmDelete({{ $cartype->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal1">
+                                <a wire:click="confirmDelete({{ $serviceType->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal1">
                                     <i class="bi bi-trash-fill"></i>
                                 </a>
                             </td>
                         </tr>
                     @endforeach
-                </tbody> --}}
+                </tbody>
             </table>
         </div>
 
@@ -129,7 +129,40 @@
                 </div>
             </div>
         </div>--}}
-        <div class="modal @if($showAddModal)  show @endif" 
+
+        <div class="modal @if($showAddModal || $showEditModal) show @endif"
+            id="exampleVerticallycenteredModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+            @if($showAddModal || $showEditModal) style="display: block;" @endif>
+            
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">
+                            {{ $showEditModal ? 'Edit Service Type' : 'Add Service Type' }}
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" wire:click="closeModal"></button>
+                    </div>
+
+                    <form wire:submit.prevent="{{ $showEditModal ? 'update' : 'save' }}">
+                        <div class="modal-body">
+                            <label for="service_type" class="form-label">Service Type Name</label>
+                            <input type="text" class="form-control" id="service_type" wire:model="service_type" required>
+                            @error('service_type') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" wire:click="closeModal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">{{ $showEditModal ? 'Update' : 'Save' }}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+       {{--- <div class="modal @if($showAddModal)  show @endif" 
             id="exampleVerticallycenteredModal" 
             tabindex="-1" 
             aria-labelledby="exampleModalCenterTitle" 
@@ -144,7 +177,7 @@
                                 aria-label="Close"
                                 wire:click="closeModal"></button>
                     </div>
-                    <form wire:submit.prevent="save" onsubmit="location.reload()">
+                    <form wire:submit.prevent="save" onsubmit="setTimeout(() => location.reload(), 1000); return false;">
                         <div class="modal-body">
                             <label for="car_type" class="form-label">Service Type Name</label>
                             <input type="text" class="form-control" id="car_type" wire:model="service_type" required>
@@ -160,7 +193,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>--}}
 
         <!-- Pagination -->
       {{-- <div class="d-flex justify-content-end mt-3">

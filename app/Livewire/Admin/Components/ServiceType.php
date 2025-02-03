@@ -15,24 +15,47 @@ class ServiceType extends Component
     public $service_type;
     public $ServiceTypeId;
     public $search = null;
+    public $service_type_id, $showEditModal = false;
     public function addCarType()
     {
         $this->showAddModal = true;
     }
 
-    public function closeModal()
-    {
-        $this->showAddModal = false;
-    }
     public function closeSaveModal(){
         $this->showAddModal = false;
     }
     public function closeDeleteModal(){
         $this->showModal = false;
     }
+
+    public function edit($id)
+    { 
+        //dd($id);
+        $service = serviceTypeModal::findOrFail($id);
+        $this->service_type_id = $service->id;
+        $this->service_type = $service->service_type;
+        $this->showEditModal = true;
+    }
+    public function update()
+    {
+        $this->validate([
+            'service_type' => 'required|string|max:255',
+        ]);
+
+        $service = serviceTypeModal::findOrFail($this->service_type_id);
+        $service->service_type = $this->service_type;
+        $service->save();
+        $this->showEditModal = false;
+        session()->flash('message', 'Service Type updated successfully.');
+    }
+    public function closeModal()
+    {
+        $this->showAddModal = false;
+        $this->showEditModal = false;
+    }
     public function save()
     {
-        dd($this->service_type);
+       // dd($this->service_type);
        
         serviceTypeModal::create([
                 'service_type' => $this->service_type,
@@ -59,6 +82,7 @@ class ServiceType extends Component
     #[Layout('admin.Layouts.app')]
     public function render()
     {
-        return view('livewire.admin.components.service-type');
+        $serviceTypes  = serviceTypeModal::where('delete_status',1)->paginate(10);
+        return view('livewire.admin.components.service-type',['serviceTypes' => $serviceTypes]);
     }
 }
