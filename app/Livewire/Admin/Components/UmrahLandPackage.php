@@ -16,6 +16,7 @@ use App\Models\FlightManagement;
 use App\Models\DepartureCity;
 use App\Models\CateringController;
 use App\Models\Laundry;
+use App\Models\PackageDepartureType;
 
 class UmrahLandPackage extends Component
 {
@@ -42,6 +43,10 @@ class UmrahLandPackage extends Component
     public $laundrayController;
 
     public $g_share_price = [], $qt_share_price = [], $qd_share_price = [], $t_share_price = [], $d_share_price = [], $single_price = [], $child_w_b = [], $child_wo_b = [], $infants = [];
+    public $departureTypes;
+
+    public $departure_type=0;
+    public $flightValueId;
 
     public $paymentPolicy = 'A minimum of Rs. 40,000 per person must be paid to secure a booking if the departure date is after 21 days.
 50% of the total amount is due 21 to 30 days before departure.
@@ -139,8 +144,19 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
         $this->DepartureCity = DepartureCity::where('delete_status',1)->get();
         $this->foodController = CateringController::where('delete_status',1)->get();
         $this->laundrayController = Laundry::where('delete_status',1)->get();
+        $this->departureTypes=PackageDepartureType::where('delete_status',1)->get();
+
+        $this->flightValueId=PackageDepartureType::where('delete_status',1)
+        ->where('type',strtolower('flight'))
+        ->pluck('id')
+        ->first();
     }
     public $selected_package_type = null;
+
+    public function changeDeparture($dtype){
+        $this->departure_type=$dtype;
+
+    }
 
 
     public function updatedSelectedPackageType($value)
@@ -347,6 +363,8 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
                     ]);
     }
 
+
+    
     #[Layout('admin.Layouts.app')]
     public function render()
     {

@@ -47,7 +47,10 @@ class PackageTransportType extends Component
     public function confirmDelete($id)
     {
        
-        $this->showModal = true;
+      $delData=  PackageDepartureType::findOrFail($id);
+      $delData->delete_status=2;
+      $delData->save();
+      $this->render();
     }
 
     public function closeModal()

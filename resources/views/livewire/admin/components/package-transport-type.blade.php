@@ -31,7 +31,7 @@
            <form wire:submit.prevent="saveDepartureType" class="d-flex gap-2 align-items-end justify-content-center">
                 <div>
                 <label for="">Add Type</label>
-                <input type="text" class="form-control" wire:model="departureType" placeholder="Enter Type" >
+                <input type="text" class="form-control" wire:model="departureType" placeholder="Enter Type" required>
                 </div>
                 <div>
                     <button class="btn btn-success" type="submit">ADD</button>

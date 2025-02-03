@@ -22,7 +22,7 @@
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Package Name</label>
-                            <select class="form-control" id="packageType" wire:model.live="selected_package_type" required>
+                            <select class="form-control" id="packageType" wire:model.live="selected_package_type" wr required>
                                 <option value="">Select Package Type</option>
                                 @foreach ($packageType as $key => $value)
                                     <option value="{{ $value->id }}">{{ $value->packageType }}</option>
@@ -66,6 +66,17 @@
                         @error('packageType') <span class="text-danger">{{ $message }}</span> @enderror
                     </div> --}}
 
+                    <div class="col-md-6 mb-3">
+                        <label for="package_days" class="form-label">Departure Type</label>
+                        <select class="form-control" wire:model="departure_type" wire:change="changeDeparture($event.target.value)">
+                            <option value="">Select Departure Type</option>
+                           @foreach ($departureTypes as $type)
+
+                              <option value="{{$type->id}}">{{ucfirst($type->type)}}</option> 
+                           @endforeach
+                        </select>
+                        @error('package_da') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
                         <!--Package Discription -->
                         <div class="col-md-6 mb-3">
                             <label for="packageDescription" class="form-label">Description*</label>
@@ -98,7 +109,7 @@
                             @foreach ($packageIncludes as $index => $value)
                                 <div class="form-check" style="margin-right:20px">
                                     <input class="form-check-input" type="checkbox" id="{{$value->InclusionName}}" value="{{$value->id}}" wire:model="includes">
-                                    <label class="form-check-label" for="{{$value->InclusionName}}">{{$value->InclusionName}}</label>
+                                    <label class="form-check-label" for="{{$value->InclusionName}}">{{ucfirst($value->InclusionName)}}</label>
                                 </div>
                             @endforeach
                         </div>
@@ -106,19 +117,22 @@
                     </div>
 
                     <!-- Flight Name -->
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Flights</label>
+                  @if ($departure_type === (string) $flightValueId )
+                  <div class="col-md-4 mb-3">
+                    <label class="form-label">Flights</label>
 
-                        <div class="">
-                            @foreach ($flightList as $index => $value)
-                                <div class="form-check" style="margin-right:20px">
-                                    <input class="form-check-input" type="checkbox" id="{{$value->FlightName}}" value="{{$value->id}}" wire:model="flights">
-                                    <label class="form-check-label" for="{{$value->FlightName}}">{{$value->	FlightName}}</label>
-                                </div>
-                            @endforeach
-                        </div>
-                        @error('flights') <span class="text-danger">{{ $message }}</span> @enderror
+                    <div class="">
+                        @foreach ($flightList as $index => $value)
+                            <div class="form-check" style="margin-right:20px">
+                                <input class="form-check-input" type="checkbox" id="{{$value->FlightName}}" value="{{$value->id}}" wire:model="flights">
+                                <label class="form-check-label" for="{{$value->FlightName}}">{{ucfirst($value->	FlightName)}}</label>
+                            </div>
+                        @endforeach
                     </div>
+                    @error('flights') <span class="text-danger">{{ $message }}</span> @enderror
+                </div>
+                  
+                  @endif
 
                     <!-- Departure City Name -->
                     <div class="col-md-4 mb-3">
@@ -128,7 +142,7 @@
                             @foreach ($DepartureCity as $index => $value)
                                 <div class="form-check" style="margin-right:20px">
                                     <input class="form-check-input" type="checkbox" id="{{$value->CityName}}" value="{{$value->id}}" wire:model="departureCities">
-                                    <label class="form-check-label" for="{{$value->CityName}}">{{$value->CityName}}</label>
+                                    <label class="form-check-label" for="{{$value->CityName}}">{{ucfirst($value->CityName)}}</label>
                                 </div>
                             @endforeach
                         </div>
