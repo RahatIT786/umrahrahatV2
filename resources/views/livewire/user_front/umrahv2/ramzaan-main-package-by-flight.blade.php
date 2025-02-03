@@ -258,7 +258,7 @@
                                             <i class="fa-solid fa-file-zipper"></i>  View Package
                                         </a>
                                         <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
-                                            <i class="fa-regular fa-paper-plane"></i>  Book Enquire
+                                            <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                         </a>
                                     </div>
                                 </div>

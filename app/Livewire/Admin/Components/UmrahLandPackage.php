@@ -17,6 +17,7 @@ use App\Models\DepartureCity;
 use App\Models\CateringController;
 use App\Models\Laundry;
 use App\Models\PackageDepartureType;
+use App\Models\ServiceType;
 
 class UmrahLandPackage extends Component
 {
@@ -45,8 +46,10 @@ class UmrahLandPackage extends Component
     public $g_share_price = [], $qt_share_price = [], $qd_share_price = [], $t_share_price = [], $d_share_price = [], $single_price = [], $child_w_b = [], $child_wo_b = [], $infants = [];
     public $departureTypes;
 
-    public $departure_type=0;
-    public $flightValueId;
+    public $departure_type=null;
+    public $flightValue;
+
+    public $packageServiceType;
 
     public $paymentPolicy = 'A minimum of Rs. 40,000 per person must be paid to secure a booking if the departure date is after 21 days.
 50% of the total amount is due 21 to 30 days before departure.
@@ -145,10 +148,10 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
         $this->foodController = CateringController::where('delete_status',1)->get();
         $this->laundrayController = Laundry::where('delete_status',1)->get();
         $this->departureTypes=PackageDepartureType::where('delete_status',1)->get();
-
-        $this->flightValueId=PackageDepartureType::where('delete_status',1)
+        $this->packageServiceType=ServiceType::where('delete_status',1)->get();
+        $this->flightValue=PackageDepartureType::where('delete_status',1)
         ->where('type',strtolower('flight'))
-        ->pluck('id')
+        ->pluck('type')
         ->first();
     }
     public $selected_package_type = null;
@@ -264,6 +267,7 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
                 $pkg_data = [
                     'name' => $this->package_name,
                     'service_type' => $this->service_type,
+                    'departure_type'=>$this->departure_type,
                     'package_days' => $this->package_days,
                     'package_type_ids' => $id_string,
                     'description' => $this->packageDescription,

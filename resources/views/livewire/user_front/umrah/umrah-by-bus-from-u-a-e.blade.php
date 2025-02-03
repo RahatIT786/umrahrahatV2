@@ -192,18 +192,35 @@
                             <!-- Right Column: Package Details -->
                             <div class="col-lg-8 col-md-8 p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">{{ucfirst($package->packageType->packageType)}}</h5>
+                                   <div>
+                                    <h5 class="mb-0">{{ucfirst($package->name)}}</h5>
+                                    <p class="mt-2 text-primary">{{ucfirst($package->packageType->packageType)}} Combo Pack <i class="fa-solid fa-bag-shopping" style="color: #0D1425;"></i></p>
+                                    <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
+                                   </div>
+                                   @php
+                                   $minPrice=min(
+                                    intval($package->sharingDetails->g_share),
+                                    intval($package->sharingDetails->qt_share),
+                                    intval($package->sharingDetails->qd_share),
+                                    intval($package->sharingDetails->t_share),
+                                    intval($package->sharingDetails->d_share),
+                                    intval($package->sharingDetails->single),
+                                   );
+                                   @endphp
+                                   
                                     <div class="ps-2">
-                                        <!-- Rating stars -->
-                                        {{-- <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small> --}}
-                                        <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
+                                       <h5 style="color: gray">Start From</h5>
+                                       <div class="text-end">
+                                        <del class="text-danger">{{$minPrice * 1.1}}.AED</del> 
+                                        <p class="text-end" style="color: black;"><span style="font-size: 22px;   font-weight: 500;">{{$minPrice }}</span>.AED <br>
+                                        <span style="color: green; font-size: 11px; font-weight: 600;">YOU SAVED {{($minPrice * 1.1) - ($minPrice )}}.AED  <i class="fa-solid fa-sack-xmark"></i></span>
+                                        </p> 
+                                       
+                                       </div>
+                                      
                                     </div>
                                 </div>
-                                <div class="d-flex mb-3" style="font-size: 12px;">
+                                {{-- <div class="d-flex mb-3" style="font-size: 12px;">
                                   
                                     <small class="border-end me-3 pe-3">
                                         <i class="fa-solid fa-bus text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->g_share) }}</span>.AED</span>
@@ -225,13 +242,14 @@
                                     <small class="me-3 pe-3">
                                         <i class="fa-solid fa-bus text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{ intval($package->sharingDetails->single) }}</span>.AED</span>
                                     </small>
-                                </div>
+                                </div> --}}
                                 <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
                                 </div>
                                 <div >
-                                    <div class="mb-3" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-bus"></i> Departure Dates : </span><span >Every Wednesday</span>   </div>
-                                   <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Hotel : </span><span ><span>{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> in Makka</span> | <span>{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> in Madina  </div>
+                                    <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-bus"></i> Departure Days : </span><span >Every Wednesday</span>   </div>
+                                   <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Makka Hotel : </span><span ><span>{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> </span>  </div>
+                                   <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Madina Hotel : </span><span ><span>{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> </span> </div>
                                    <div class="d-flex align-items-center  flex-md-row flex-column">
                                     {{-- @if($package->packageDetail && $package->packageDetail->hotelDetail)
                                              <p>{{ $package->packageDetail->hotelDetail->hotelName ?? 'Hotel Name Not Available' }}</p>
@@ -280,7 +298,7 @@
                                         <i class="fa-solid fa-file-zipper"></i>  View Package
                                     </a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
-                                        <i class="fa-regular fa-paper-plane"></i>  Book Enquire
+                                        <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                     </a>
                                 </div>
                             </div>
@@ -298,7 +316,7 @@
 
         <!--enquire form start-->
       {{-- @if ($umrahEmquire) --}}
-      <div id="popupContainer">
+      {{-- <div id="popupContainer">
         <div id="popupForm" class="popup-form hdden">
           <div class="form-container">
             <button id="closeForm" class="close-btn" wire:click='umrahEnquirePopupClose'>&times;</button>
@@ -350,22 +368,22 @@
             </form>
           </div>
         </div>
-      </div>
+      </div> --}}
           
       
      
         <script>
 // JavaScript function to show the form after a delay of 3 seconds (3000 milliseconds)
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        document.getElementById('popupContainer').classList.add('show');
-    }, 4000); // Show the form after 3 seconds
-});
+// window.addEventListener('load', function() {
+//     setTimeout(function() {
+//         document.getElementById('popupContainer').classList.add('show');
+//     }, 4000); // Show the form after 3 seconds
+// });
 
-// JavaScript function to close the form
-function closeForm() {
-    document.getElementById('popupContainer').classList.remove('show');
-}
+// // JavaScript function to close the form
+// function closeForm() {
+//     document.getElementById('popupContainer').classList.remove('show');
+// }
 </script>
 
 <style>
