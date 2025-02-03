@@ -38,13 +38,13 @@
                     </a>
                 </li>
                 
-            <li>
+            {{-- <li>
 
 
                   <a href="{{route('package.ramzan')}}" >
                       <i class="bi bi-circle"></i>Ramzaan Package Manager
                   </a>
-              </li>
+              </li> --}}
                    <!--
                 <li> <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
                     <a href="{{route('admin.umrah-land-packages')}}" wire:navigate>
@@ -219,7 +219,7 @@
                         <a href="{{ route('admin.package-types') }}" wire:navigate><i class="bi bi-circle"></i>Package Types</a>
                       </li>
                       <li> 
-                        <a href="{{ route('admin.package.transport.type') }}" wire:navigate><i class="bi bi-circle"></i>Package Transport Type</a>
+                        <a href="{{ route('admin.package.transport.type') }}" wire:navigate><i class="bi bi-circle"></i>Package Departure Type</a>
                       </li>
                        <li> 
                         <a href="{{ route('admin.service-type') }}" wire:navigate><i class="bi bi-circle"></i>Service Types</a>

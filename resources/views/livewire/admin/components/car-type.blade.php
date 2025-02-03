@@ -133,7 +133,7 @@
      id="exampleVerticallycenteredModal" 
      tabindex="-1" 
      aria-labelledby="exampleModalCenterTitle" 
-     aria-hidden="true"s
+     aria-hidden="true"
      @if($showAddModal) style="display: block;" @endif>
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
