@@ -21,38 +21,6 @@ class AgentSignup extends Component
     }
 
 
-   
-
-
-
-
-
-
-
-
-
-   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     #[Layout('admin.Layouts.app')]
     public function render()
     {

@@ -11,7 +11,7 @@ return[
 
 
 //nav bar data get variables
-'ramzaan'=>'ramzaan',
+'ramzaan'=>'ramzan',
 'umrah'=>'umrah',
 'hajj'=>'hajj',
 

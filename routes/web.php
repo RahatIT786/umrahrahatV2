@@ -59,6 +59,9 @@ use App\Livewire\Admin\umrahv2\AgentSignup;
 use App\Livewire\Admin\umrahv2\QuickEnquires;
 use App\Livewire\Admin\Components\ServiceType;
 
+//PackageEnquireFromUser
+use App\Livewire\Admin\Components\PackageEnquireFromUser;
+
 use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\PackageManager\ListPackage;
@@ -115,6 +118,8 @@ use App\Livewire\WhoWeAre; // Ensure this class exists in the specified namespac
 
 use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
 
+
+
 use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
 use App\Livewire\UserFront\Umrahv2\Sightseeing;
 use App\Livewire\UserFront\Umrahv2\SingleSightSeeing;
@@ -125,6 +130,9 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
 use Illuminate\Support\Facades\Artisan;
 use Livewire\Livewire;
+
+use App\Models\package_user_enquire;
+use App\Models\transportController;
 
 //USER ROUTES START
 Route::get('/', UserHome::class)->name('layouts.app');
@@ -254,6 +262,10 @@ Route::get('/admin/add-transport',AddTransport::class)->name('admin.addTransport
 Route::get('/admin/list-ziyarat',Ziyarat::class)->name('admin.ziyarat');
 Route::get('/admin/add-ziyarat',AddZiyarat::class)->name('admin.add-ziyarat');
 
+
+//Package Enquire From User
+Route::get('/admin/package-enquiry-from-user',PackageEnquireFromUser::class)->name('package-enquire-from-user');
+
 Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
 Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');
 Route::get('/admin/umrah-land-package',UmrahLandPackage::class)->name('admin.umrah-land-packages');
@@ -290,10 +302,23 @@ Route::get('/admin/agentsignup',AgentSignup::class)->name('agentsignup');
 
 //ADMIN ROUTES END
 
+// Route::get('/test1',function(){
+//    $data = package_user_enquire::with('serviceType')->get();
+// //    foreach ($data as $enquiry) {
+// //             echo $enquiry->package_user_name .'<br>';  // Accessing data from PackageUserEnquire
+// //             echo $enquiry->serviceType->service_type.'<br>';  // Accessing related data from ServiceType
+// //         }
+//    return response()->json($data);
+// });
 
 
+// Route::get('/test',function(){
+//     $data = transportController::with(['cartypemaster','carsectormaster'])->get();
+//     return response()->json($data);
+//  });
+ 
 
-
+// Route::get('/enquiries-json', [PackageEnquireFromUser::class, 'getEnquiriesJson']);
 
 
 

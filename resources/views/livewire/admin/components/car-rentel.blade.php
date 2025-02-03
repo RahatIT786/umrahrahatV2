@@ -44,8 +44,8 @@
                        
                         <tr>
                             <td>{{  $index + 1 }}</td>
-                            <td>{{ $transportDetail->carType->car_type}}</td>
-                            <td>{{ $transportDetail->carSector->car_sector}}</td>
+                            <td>{{ $transportDetail->cartypemaster->car_type}}</td>
+                            <td>{{ $transportDetail->carsectormaster->car_sector}}</td>
                             <td>{{ $transportDetail->seatsCount }}</td>
                             <td>{{ $transportDetail->price }}</td>
                             <td class="text-center">

@@ -205,6 +205,7 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
             'FlightTransport' => 'required',
             'packageMeals' => 'required',
             'packageVisaTaxes' => 'required',
+            'departure_type' => 'required',
             
             'makka_rating.' . $key => 'required',
             'makka_hotel.' . $key => 'required',
