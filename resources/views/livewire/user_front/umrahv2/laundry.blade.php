@@ -17,7 +17,7 @@
                     <!-- <h6 class="section-title text-center text-primary text-uppercase">RahatGroup</h6> -->
                     <!-- <h1 class="mb-5">Our Laundry Service<span class="text-primary text-uppercase"></span></h1> -->
                 </div>
-                <div class="row g-4 d-flex flex-column  align-items-center">
+                <div class="row g-4 d-flex   align-items-center">
 
                 @foreach ($laundryDetails as $landry)
                 <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
