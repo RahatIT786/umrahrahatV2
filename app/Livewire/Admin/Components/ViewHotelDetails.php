@@ -25,6 +25,9 @@ class ViewHotelDetails extends Component
     public $hotelImage3Path;
     public $hotelImage4Path;
     public $hotelImage5Path;
+    public $hotelYouTube;
+    public $hotelMap;
+    public $hotelManagerContect;
 
 
     public function mount($id = null){
@@ -38,6 +41,9 @@ class ViewHotelDetails extends Component
             $this->hotelStarRating = $hotel->hotelStarRating;
             $this->hotelAddress = $hotel->hotelAddress;
             $this->hotelDiscription = $hotel->hotelDiscription;
+            $this->hotelYouTube = $hotel->hotelYouTube;
+            $this->hotelMap = $hotel->hotelMap;
+            $this->hotelManagerContect = $hotel->hotelManagerContect;
             $this->hotelCheckInTime = $hotel->hotelCheckInTime;
             $this->hotelCheckOutTime = $hotel->hotelCheckOutTime;
             $this->hotelDistance = $hotel->hotelDistance;

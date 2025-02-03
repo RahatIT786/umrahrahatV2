@@ -7,6 +7,7 @@ use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
+use App\Models\HotelCities;
 
 class AddHotalDetais extends Component
 {
@@ -36,6 +37,11 @@ class AddHotalDetais extends Component
     public $hotelImage4;
     public $hotelImage5;
     public $deleteStatus = 1;
+    public $hotel_cities;
+
+    public $hotelYouTube;
+    public $hotelMap;
+    public $hotelManagerContect;
 
     protected $rules = [
         "hotelName"=> "required|string|max:150",
@@ -54,6 +60,9 @@ class AddHotalDetais extends Component
         'hotelImage3'=> 'nullable|image|max:5120',
         'hotelImage4'=> 'nullable|image|max:5120',
         'hotelImage5'=> 'nullable|image|max:5120',
+        'hotelYouTube' => 'nullable',
+        'hotelMap' => 'nullable',
+        'hotelManagerContect' => 'required',
     ];
 
     protected $messages = [
@@ -102,6 +111,8 @@ class AddHotalDetais extends Component
         
         'hotelImage5.image' => 'The hotel image 5 must be an image file.',
         'hotelImage5.max' => 'The hotel image 5 size must not exceed 5MB.',
+
+        'hotelManagerContect' => 'Hotel Manager Contect Must be fill'
     ];
 
     public function mount($id = null){
@@ -115,6 +126,11 @@ class AddHotalDetais extends Component
             $this->hotelStarRating = $hotel->hotelStarRating;
             $this->hotelAddress = $hotel->hotelAddress;
             $this->hotelDiscription = $hotel->hotelDiscription;
+
+            $this->hotelYouTube = $hotel->hotelYouTube;
+            $this->hotelMap = $hotel->hotelMap;
+            $this->hotelManagerContect = $hotel->hotelManagerContect;
+
             $this->hotelCheckInTime = $hotel->hotelCheckInTime;
             $this->hotelCheckOutTime = $hotel->hotelCheckOutTime;
             $this->hotelDistance = $hotel->hotelDistance;
@@ -126,6 +142,7 @@ class AddHotalDetais extends Component
             $this->hotelImage5Path = $hotel->hotelImage5;
             
         }
+        $this->hotel_cities = HotelCities::where('delete_status',1)->get();
     }
 
     public function submit(){
@@ -158,6 +175,11 @@ class AddHotalDetais extends Component
                 'hotelStarRating' => $this->hotelStarRating,
                 'hotelAddress' => $this->hotelAddress,
                 'hotelDiscription' => $this->hotelDiscription,
+
+                'hotelYouTube' => $this->hotelYouTube,
+                'hotelMap' => $this->hotelMap,
+                'hotelManagerContect' => $this->hotelManagerContect,
+
                 'hotelCheckInTime' => $this->hotelCheckInTime,
                 'hotelCheckOutTime' => $this->hotelCheckOutTime,
                 'hotelDistance' => $this->hotelDistance,
@@ -180,6 +202,11 @@ class AddHotalDetais extends Component
                 'hotelStarRating' => $this->hotelStarRating,
                 'hotelAddress' => $this->hotelAddress,
                 'hotelDiscription' => $this->hotelDiscription,
+
+                'hotelYouTube' => $this->hotelYouTube,
+                'hotelMap' => $this->hotelMap,
+                'hotelManagerContect' => $this->hotelManagerContect,
+
                 'hotelCheckInTime' => $this->hotelCheckInTime,
                 'hotelCheckOutTime' => $this->hotelCheckOutTime,
                 'hotelDistance' => $this->hotelDistance,
@@ -203,6 +230,9 @@ class AddHotalDetais extends Component
             'hotelStarRating', 
             'hotelAddress', 
             'hotelDiscription',
+            'hotelYouTube',
+            'hotelMap',
+            'hotelManagerContect',
             'hotelCheckInTime',
             'hotelCheckOutTime',
             'hotelDistance',

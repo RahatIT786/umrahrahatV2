@@ -203,7 +203,9 @@
                 <li> 
                   <a href="{{ route('admin.departure-city') }}" wire:navigate><i class="bi bi-circle"></i>Departure city</a>
                 </li>
-               
+                <li> 
+                  <a href="{{ route('admin.hotel-cities') }}" wire:navigate><i class="bi bi-circle"></i>Hotel city</a>
+                </li>
                 <li> 
                   <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
                 </li>
