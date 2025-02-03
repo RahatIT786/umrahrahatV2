@@ -34,7 +34,7 @@ use App\Livewire\Admin\Components\ViewHotelDetails;
 use App\Livewire\Admin\Components\ViewUmrahPackages;
 use App\Livewire\Admin\Components\VisaRequest;
 use App\Livewire\Admin\PackageManager\AdminViewPackage;
-
+use App\Livewire\Admin\Components\HotelCities;
 
 //catring controller
 use App\Livewire\Admin\Components\Catringlist;
@@ -227,7 +227,7 @@ Route::get('/admin/hotel-details', ListHotalDetails::class)->name('admin.listHot
 Route::get('/admin/add-hotel-details',AddHotalDetais::class)->name('admin.addHotelDetails');
 Route::get('/admin/edit-hotal/{id}',AddHotalDetais::class)->name('editHotelData');
 Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelData');
-
+Route::get('/admin/add-hotel-cities',HotelCities::class)->name('admin.hotel-cities');
 
 //catring controller
 Route::get('/admin/catring-details',Catringlist::class)->name('admin.catring-list');

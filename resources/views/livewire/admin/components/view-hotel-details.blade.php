@@ -75,6 +75,19 @@
                             @error('hotelStarRating') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
+                        <div class="col-md-6 mb-3">
+                            <label for="hotelYouTube" class="form-label">Hotel YouTube Video Link</label>
+                            <input type="text" id="hotelYouTube" wire:model="hotelYouTube" class="form-control" placeholder="Enter Hotel YouTube Video Link">
+                            @error('hotelYouTube') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        <!-- Hotel You Tube Video -->
+                        <div class="col-md-6 mb-3">
+                            <label for="hotelMap" class="form-label">Hotel Map Link</label>
+                            <input type="text" id="hotelMap" wire:model="hotelMap" class="form-control" placeholder="Enter Hotel Map Link">
+                            @error('hotelMap') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
 
                         <!-- Hotel Address -->
                         <div class="col-md-6 mb-3">
@@ -83,11 +96,25 @@
                             @error('hotelAddress') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
+                         <!-- Hotel Manager Contect -->
+                         <div class="col-md-6 mb-3">
+                            <label for="hotelManagerContect" class="form-label">Hotel Manager Contect</label>
+                            <textarea id="hotelManagerContect" wire:model="hotelManagerContect" class="form-control" placeholder="Enter Manager Contect"></textarea>
+                            @error('hotelManagerContect') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
                         <!-- Hotel Discription -->
                         <div class="col-md-6 mb-3">
                             <label for="hotelDiscription" class="form-label">Hotel Discription</label>
                             <textarea id="hotelDiscription" wire:model="hotelDiscription" class="form-control" placeholder="Enter Hotel Discription" readonly></textarea>
                             @error('hotelDiscription') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                         <!--Hotel Distance-->
+                         <div class="col-md-6 mb-3">
+                            <label for="hotelDistance" class="form-label">Distance away from Center City</label>
+                            <input type="number" min="0" id="hotelDistance" class="form-control" wire:model="hotelDistance" placeholder="Enter Distance away from Center City" readonly>
+                            @error('hotelDistance') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
                         <!--Hotel CheckIn Time-->
@@ -104,12 +131,7 @@
                             @error('hotelCheckOutTime') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <!--Hotel Distance-->
-                        <div class="col-md-12 mb-3">
-                            <label for="hotelDistance" class="form-label">Distance away from Center City</label>
-                            <input type="number" min="0" id="hotelDistance" class="form-control" wire:model="hotelDistance" placeholder="Enter Distance away from Center City" readonly>
-                            @error('hotelDistance') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
+
 
                         <!-- File Upload for Main Hotel Image -->
                         <div class="col-md-6 mb-3">
