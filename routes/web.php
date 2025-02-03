@@ -57,6 +57,7 @@ use App\Livewire\Admin\Components\AddZiyarat;
 use App\Livewire\Admin\Components\PackageTransportType;
 use App\Livewire\Admin\umrahv2\AgentSignup;
 use App\Livewire\Admin\umrahv2\QuickEnquires;
+use App\Livewire\Admin\Components\ServiceType;
 
 use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
@@ -266,6 +267,7 @@ Route::get('/admin/EditCity/{id}',AddDepartureCity::class)->name('editCitydata')
 Route::get('/admin/package-types',PackageTypeMaster::class)->name('admin.package-types');
 Route::get('/admin/add-package-type',AddPackageTypeMaster::class)->name('addPackageType');
 Route::get('/admin/editPackageType/{id}',AddPackageTypeMaster::class)->name('packageTypeEdit');
+Route::get('/admin/service-type',ServiceType::class)->name('admin.service-type');
 Route::get('/admin/inclusion',InclusionMaster::class)->name('admin.inclusion');
 Route::get('/admin/add-inclusion',AddInclusionMaster::class)->name('addInclusions');
 Route::get('/admin/editInclusion/{id}',AddInclusionMaster::class)->name('editInclusion');
