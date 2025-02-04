@@ -191,7 +191,7 @@ Lancashire, BB1 5NP. <br>UK<br></p>
         <i class="icofont-google-map display-4 text-primary mb-3"></i>
         <div class="content">
             <h3 class="h5 font-weight-bold text-dark">Lucknow Office</h3>
-             <p class="text-muted">Galaxy Building, Tong</p>
+             <p class="text-muted">Galaxy Building, Tondan Marg, Thakurganj, Daulatganj, Lucknow, Uttar Pradesh-226003 </p>
         </div>
     </div>
 </div>
@@ -203,9 +203,7 @@ Lancashire, BB1 5NP. <br>UK<br></p>
         <i class="icofont-google-map display-4 text-primary mb-3"></i>
         <div class="content">
             <h3 class="h5 font-weight-bold text-dark">Hyderabad Office</h3>
-            <!-- <p class="text-muted">Ali ibne Talib Inside Qurban Mall.
-Awaali,
-Madina Munawwara.</p> -->
+           <p class="text-muted">Office No. 101-102,First floor Ashoka Plaza, Beside Golconda Hotel, Masab Tank, Hyderabad-500 028 </p>
         </div>
     </div>
 </div>
@@ -217,7 +215,7 @@ Madina Munawwara.</p> -->
         <i class="icofont-google-map display-4 text-primary mb-3"></i>
         <div class="content">
             <h3 class="h5 font-weight-bold text-dark">Ahmedabad Office</h3>
-            <!-- <p class="text-muted"> Issak Manzil, Shop No 10, Dongri, Mumbai  <br> India.</p> -->
+             <!-- <p class="text-muted"> Issak Manzil, Shop No 10, Dongri, Mumbai  <br> India.</p> -->
         </div>
     </div>
 </div>
@@ -229,7 +227,7 @@ Madina Munawwara.</p> -->
         <i class="icofont-google-map display-4 text-primary mb-3"></i>
         <div class="content">
             <h3 class="h5 font-weight-bold text-dark">Srinagar Office</h3>
-            <!-- <p class="text-muted">135. MM ROAD, Opp MLA Office, Frazer Town,<br> India</p> -->
+            <p class="text-muted">Al Habib Complex, Sathu Barbar Shah, M.A. Link road, Srinagar Kashmir, Near Flour Mill, J&K-190001<br> India</p> 
         </div>
     </div>
 </div>
@@ -241,7 +239,7 @@ Madina Munawwara.</p> -->
         <i class="icofont-google-map display-4 text-primary mb-3"></i>
         <div class="content">
             <h3 class="h5 font-weight-bold text-dark">Bhopal Office</h3>
-            <!-- <p class="text-muted">
+         <!-- <p class="text-muted">
 26 Coniston Road,Blackburn,
 
 Lancashire, BB1 5NP. <br>UK<br></p> -->
