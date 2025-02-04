@@ -30,11 +30,9 @@
                 <thead class="table-secondary">
                     <tr>
                         <th class="border-0 py-2">S.No</th>
-                        <th class="border-0 py-2">Visa Image</th>
-                        <th class="border-0 py-2">Flyer Image</th>
-                        <th class="border-0 py-2">Visa Type</th>
-                        <th class="border-0 py-2">Documents</th>
-                        <th class="border-0 py-2">Processing Time</th>
+                        <th class="border-0 py-2">Ziyarat Image</th>
+                        <th class="border-0 py-2">Master Name</th>
+                        <th class="border-0 py-2">City</th>
                         <th class="border-0 py-2">Price</th>
                         <th class="border-0 py-2 text-center">Edit</th>
                         <th class="border-0 py-2 text-center">Delete</th>
