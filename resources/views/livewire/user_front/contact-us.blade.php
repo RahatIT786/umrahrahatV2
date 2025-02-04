@@ -162,7 +162,8 @@ Lancashire, BB1 5NP. <br>UK<br></p>
                         <i class="icofont-google-map display-4 text-primary mb-3"></i>
                         <div class="content">
                             <h3 class="h5 font-weight-bold text-dark">Bengaluru Office</h3>
-                            <p class="text-muted">135. MM ROAD, Opp MLA Office, Frazer Town,<br> India</p>
+                            <p class="text-muted">
+                            Regional Office: 135. MM Road, Opp. MLA Office. Frazer Town, Bangalore - 560005 ,<br> India</p>
                         </div>
                     </div>
                 </div>
@@ -208,17 +209,18 @@ Lancashire, BB1 5NP. <br>UK<br></p>
     </div>
 </div>
 <!--/End single-info -->
-
-<!-- single-info -->
 <div class="col-lg-4 col-md-6 col-12 mb-4 mt-3">
     <div class="single-info bg-white shadow p-4 text-center hover-animate contact-box">
         <i class="icofont-google-map display-4 text-primary mb-3"></i>
         <div class="content">
-            <h3 class="h5 font-weight-bold text-dark">Ahmedabad Office</h3>
-             <!-- <p class="text-muted"> Issak Manzil, Shop No 10, Dongri, Mumbai  <br> India.</p> -->
+            <h3 class="h5 font-weight-bold text-dark">Jaipur Office</h3>
+             <p class="text-muted">Office No. 4054, Jagannath Shah ka Rasta, Ramganj Bazar, Jaipur, Rajasthan-302003 
+             </p> 
         </div>
     </div>
 </div>
+<!-- single-info -->
+
 <!--/End single-info -->
 
 <!-- single-info -->
@@ -253,8 +255,8 @@ Lancashire, BB1 5NP. <br>UK<br></p> -->
     <div class="single-info bg-white shadow p-4 text-center hover-animate contact-box">
         <i class="icofont-google-map display-4 text-primary mb-3"></i>
         <div class="content">
-            <h3 class="h5 font-weight-bold text-dark">Jaipur Office</h3>
-            <!-- <p class="text-muted">108/109/110, 1st Floor, Vardhman City 2 Plaza,Turkman Gate, New Delhi - 400 003.</p> -->
+            <h3 class="h5 font-weight-bold text-dark">Ahmedabad Office</h3>
+             <!-- <p class="text-muted"> Issak Manzil, Shop No 10, Dongri, Mumbai  <br> India.</p> -->
         </div>
     </div>
 </div>
