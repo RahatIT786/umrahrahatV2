@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\UserFront\UmrahV2;
+namespace App\Livewire\UserFront\Umrahv2;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout; 

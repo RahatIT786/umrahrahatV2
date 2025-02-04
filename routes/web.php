@@ -51,7 +51,7 @@ use App\Livewire\Admin\Components\CarType;
 use App\Livewire\Admin\Components\CarSector;
 use App\Livewire\Admin\Components\CarRentel;
 use App\Livewire\Admin\Components\AddTransport;
-use App\Livewire\UserFront\UmrahV2\TransfersSingle;
+use App\Livewire\UserFront\Umrahv2\TransfersSingle;
 
 //Ziyarat Controller
 use App\Livewire\Admin\Components\Ziyarat;
