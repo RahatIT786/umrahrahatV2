@@ -191,9 +191,7 @@ Lancashire, BB1 5NP. <br>UK<br></p>
         <i class="icofont-google-map display-4 text-primary mb-3"></i>
         <div class="content">
             <h3 class="h5 font-weight-bold text-dark">Lucknow Office</h3>
-            <!-- <p class="text-muted">Deafa International,
-Ajyad Sud Street.
-Anwar Deafa, Second Floor.</p> -->
+             <p class="text-muted">Galaxy Building, Tong</p>
         </div>
     </div>
 </div>

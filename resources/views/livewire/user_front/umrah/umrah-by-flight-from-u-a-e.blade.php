@@ -48,39 +48,44 @@
       <div class="container">
           <div class="bg-white shadow" style="padding: 35px;">
               <div class="row g-2">
-                  <div class="col-md-3">
-                      <button class="btn btn-primary w-100">Search Package</button>
-                  </div>
-                  <div class="col-md-9">
-                      <div class="row g-2">
-                          <form class="col-md-4"  wire:submit.prevent="">
-                              <select class="form-select" wire:model.live="searchCity">
-                                  <option value='' selected>City</option>
-                                  <option value="MAKKAH">MAKKAH</option>
-                                  <option value="MADINAH">MADINAH</option>
-                                  <option value="BAGHDAD">BAGHDAD</option>
-                                  <option value="NAJAF">NAJAF</option>
-                                  <option value="KARBALA">KARBALA</option>
-                              </select>
-                          </form>
-                          <form class="col-md-4" wire:submit.prevent="">
-                              <select class="form-select" wire:model.live="searchRating">
-                                  <option value='' selected>Star Rating</option>
-                                  <option value="2">2 Stars</option>
-                                  <option value="3">3 Stars</option>
-                                  <option value="4">4 Stars</option>
-                                  <option value="5">5 Stars</option>
-                                  <option value="6">Building Accomutation Stars</option>
-                                  <option value="7">Standard Hotel Stars</option>
-                              </select>
-                          </form>
-                          <div class="col-md-4">
-                              <form wire:submit.prevent="" class="date" id="date2" >
-                                  <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Hotel Name" />
-                              </form>
-                          </div>
-                      </div>
-                  </div>
+                 <form wire:submit.prevent="searchSubmit" >
+                    
+                    <div class="col-md-12">
+                        <div class="row g-2">
+                           <div class="col-md-4" >
+                            <form  wire:submit.prevent="">
+                                <select class="form-select" wire:model.live="departureCity ">
+                                    <option value='' selected>Select Your City</option>
+                                    <option value="MAKKAH">MAKKAH</option>
+                                    <option value="MADINAH">MADINAH</option>
+                                    <option value="BAGHDAD">BAGHDAD</option>
+                                    <option value="NAJAF">NAJAF</option>
+                                    <option value="KARBALA">KARBALA</option>
+                                </select>
+                            </form>
+                           </div>
+                            {{-- <form class="col-md-4" wire:submit.prevent="">
+                                <select class="form-select" wire:model.live="searchRating">
+                                    <option value='' selected>Star Rating</option>
+                                    <option value="2">2 Stars</option>
+                                    <option value="3">3 Stars</option>
+                                    <option value="4">4 Stars</option>
+                                    <option value="5">5 Stars</option>
+                                    <option value="6">Building Accomutation Stars</option>
+                                    <option value="7">Standard Hotel Stars</option>
+                                </select>
+                            </form> --}}
+                            <div class="col-md-4">
+                                <form wire:submit.prevent="" class="date" id="date2" >
+                                    <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Search Package Name" />
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary w-100">Search Package</button>
+                            </div>
+                        </div>
+                    </div>
+                 </form>
               </div>
           </div>
       </div>

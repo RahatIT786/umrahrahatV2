@@ -17,12 +17,12 @@
             <div class="bg-white shadow" style="padding: 35px;">
                 <div class="row g-2">
                     <div class="col-md-3">
-                        <button class="btn btn-primary w-100">Search Hotels</button>
+                        <button class="btn btn-primary w-100">Search Package</button>
                     </div>
                     <div class="col-md-9">
                         <div class="row g-2">
                             <form class="col-md-4"  wire:submit.prevent="">
-                                <select class="form-select" wire:model.live="searchCity">
+                                <select class="form-select" wire:model.live="Search Package">
                                     <option value='' selected>City</option>
                                     <option value="MAKKAH">MAKKAH</option>
                                     <option value="MADINAH">MADINAH</option>
@@ -31,7 +31,7 @@
                                     <option value="KARBALA">KARBALA</option>
                                 </select>
                             </form>
-                            <form class="col-md-4" wire:submit.prevent="">
+                            <!-- <form class="col-md-4" wire:submit.prevent="">
                                 <select class="form-select" wire:model.live="searchRating">
                                     <option value='' selected>Star Rating</option>
                                     <option value="2">2 Stars</option>
@@ -41,10 +41,10 @@
                                     <option value="6">Building Accomutation Stars</option>
                                     <option value="7">Standard Hotel Stars</option>
                                 </select>
-                            </form>
+                            </form> -->
                             <div class="col-md-4">
                                 <form wire:submit.prevent="" class="date" id="date2" >
-                                    <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Hotel Name" />
+                                    <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Package Name" />
                                 </form>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{route('viewPackageDetails', $package->id)}}" >
                                         <i class="fa-solid fa-file-zipper"></i>  View Packages
                                     </a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4">
                                         <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                     </a>
                                 </div>

@@ -17,7 +17,7 @@
             <div class="bg-white shadow" style="padding: 35px;">
                 <div class="row g-2">
                     <div class="col-md-3">
-                        <button class="btn btn-primary w-100">Search Hotels</button>
+                        <button class="btn btn-primary w-100">Search Package</button>
                     </div>
                     <div class="col-md-9">
                         <div class="row g-2">
@@ -44,7 +44,7 @@
                             </form>
                             <div class="col-md-4">
                                 <form wire:submit.prevent="" class="date" id="date2" >
-                                    <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Hotel Name" />
+                                    <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Search Package" />
                                 </form>
                             </div>
                         </div>
