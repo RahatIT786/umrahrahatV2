@@ -5,21 +5,20 @@ namespace App\Livewire\UserFront\Umrahv2;
 use Livewire\Component;
 use Livewire\Attributes\Layout; 
 use App\Models\transportController;
-use App\Models\CarType;
-use App\Models\CarSector;
 
-class Transport extends Component
+class TransfersSingle extends Component
 {
+    public $transportDetail;
+    public $car_id;
     public $carsectormaster, $cartypemaster, $star_rating, $car_type_id, $car_sector_id;
-    public function mount()
+
+    public function mount($id) 
     {
-        $this->carsectormaster = CarSector::select('car_sector', 'id')->where('delete_status',1)->get();
-        $this->cartypemaster = CarType::select('car_type', 'id')->where('delete_status',1)->get();
-        $this->car_sector_id = $this->carsectormaster->first()->id ?? null; 
-        $this->car_type_id = $this->cartypemaster->first()->id ?? null; 
+        $this->car_id = $id;
+        $this->transportDetail = transportController::find($this->car_id);
+        $this->car_sector_id = $this->transportDetail->carSector;
+        $this->car_type_id = $this->transportDetail->carType;
     }
-
-
     public function getcars()
     {
         // return transportController::with(['cartypemaster', 'carsectormaster'])->get();
@@ -28,6 +27,6 @@ class Transport extends Component
     #[Layout('user.Layouts.app')]
     public function render()
     {
-        return view('livewire.user_front.umrahv2.transport',['cars' => $this->getcars()]);
+        return view('livewire.user_front.umrahv2.transfers-single');
     }
 }

@@ -23,16 +23,16 @@
                         </div> 
   
 
-                       {{--  <div class="col-md-6 mb-3">
+                     <div class="col-md-6 mb-3">
                             <label class="form-label">Package Name</label>
                             <select class="form-control" id="packageType" wire:model.live="selected_package_type" required>
                                 <option value="">Select Package Type</option>
-                                @foreach ($packageType as $key => $value)
-                                    <option value="{{ $value->id }}">{{ $value->packageType }}</option>
+                                @foreach ($ziyaratCity as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->ziyarat_city }}</option>
                                 @endforeach
                             </select>
                             @error("selected_package_type") <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>--}}
+                        </div>
 
 
 
@@ -77,7 +77,7 @@
                         </div>
 
                         <!-- Package Image -->
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-12 mb-6">
                             <label for="packageImage" class="form-label">Package Image</label>
                             <input type="file" id="packageImage" class="form-control" wire:model="packageImage" accept="image/*">
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
@@ -136,6 +136,30 @@
                             @endforeach
                         </div>
                         @error('departureCity') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                  <!-- Laundry Type -->
+                    <div class="col-lg-6">
+                        <label  class="form-label">Laundry Type</label>
+                         <select class="form-control" wire:model="laundray_type">
+                            <option value="">Select Laundry Type</option>
+                                @foreach ($laundrayController as $index => $value)
+                                <option value="{{$value->id }}">{{$value->laundry_type}}</option>
+                                @endforeach
+                        </select>
+                        @error("laundray_type") <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Laundry Type -->
+                    <div class="col-lg-6">
+                        <label  class="form-label">Laundry Type</label>
+                         <select class="form-control" wire:model="laundray_type">
+                            <option value="">Select Laundry Type</option>
+                                @foreach ($laundrayController as $index => $value)
+                                <option value="{{$value->id }}">{{$value->laundry_type}}</option>
+                                @endforeach
+                        </select>
+                        @error("laundray_type") <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
                     <!-- Policies -->
@@ -212,22 +236,13 @@
 
                     
 
-                    @if ($this->package_type_ids != null)
-                     @foreach ( $package_type_ids as $k => $v )
-                         <hr>
-                         <div class="card-header">
-                            @foreach ($packageType as $key => $value)
-                               @if ( $v == $value->id)
-                                  <h4>{{ $value->packageType }}</h4>
-                               @endif 
-                            @endforeach
-                        </div>
-                        <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
+
+                      {{--  <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
 
                             <!-- Makkah Hotel -->
                             <div class="col-lg-2">
                                 <label for="SuperSaver_makkahHotelRatings" class="form-label">Makka Hotel Category</label>
-                                <select class="form-control" name="makka_rating" wire:model="makka_rating.{{$k}}" wire:change="getMakkaHotel({{ $k }})">
+                                <select class="form-control" name="makka_rating" wire:model="makka_rating" wire:change="getMakkaHotel({{ $k }})">
                                      <option value="">{{ 'Select' }} {{ 'Makka Hotel Category' }} </option>
                                      <option value="1">One Star</option>
                                      <option value="2">Two Star</option>
@@ -292,79 +307,124 @@
                             </select>
                             @error("food_type.{$k}")<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
-                      </div>
+                      </div> --}}
                       <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
-                           <!-- Laundry Type -->
-                            <div class="col-lg-2">
-                                <label  class="form-label">Laundry Type</label>
-                                <select class="form-control" wire:model="laundray_type.{{ $k }}">
-                                    <option value="">Select Laundry Type</option>
-                                    @foreach ($laundrayController as $index => $value)
-                                    <option value="{{$value->id }}">{{$value->laundry_type}}</option>
-                                    @endforeach
-                                </select>
-                                @error("laundray_type.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
+ 
                            <!-- Sharing -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label class="form-label">Sharing*</label>
-                                <input type="text" id="g_share_price{{ $k }}" wire:model="g_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("g_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="g_share_price" wire:model="g_share_price." class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("g_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             
                             <!-- Quint -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label  class="form-label">Quint*</label>
-                                <input type="text" id="SuperSaver_Quint" wire:model="qt_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("g_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="SuperSaver_Quint" wire:model="qt_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("g_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             <!-- Quad -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label class="form-label">Quad*</label>
-                                <input type="text" id="qd_share_price{{ $k }}" wire:model="qd_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("qd_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="qd_share_price" wire:model="qd_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("qd_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
-                            <!-- Triple -->
-                            <div class="col-lg-2">
-                                <label  class="form-label">Triple*</label>
-                                <input type="text" id="t_share_price{{ $k }}" wire:model="t_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("t_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
+
                       </div>
                       <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
+
+                           <!-- Triple -->
+                            <div class="col-lg-3">
+                                <label  class="form-label">Triple*</label>
+                                <input type="text" id="t_share_price" wire:model="t_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("t_share_price") <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
                         <!-- Double -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label  class="form-label">Double*</label>
-                                <input type="text" id="d_share_price{{ $k }}" wire:model="d_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("d_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="d_share_price" wire:model="d_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("d_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                         <!-- Single -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label  class="form-label">Single*</label>
-                                <input type="text" id="single_price{{ $k }}" wire:model="single_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("single_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <!-- Child with Bed* -->
-                            <div class="col-lg-2">
-                                <label  class="form-label">Child With Bed*</label>
-                                <input type="text" id="child_w_b{{ $k }}" wire:model="child_w_b.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("child_w_b.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <!-- Child without Bed* -->
-                            <div class="col-lg-2">
-                                <label class="form-label">Child Without Bed*</label>
-                                <input type="text" id="child_wo_b{{ $k }}" wire:model="child_wo_b.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("child_wo_b.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <div class="col-lg-2">
-                                <label  class="form-label">Child Infant*</label>
-                                <input type="text" id="infants{{ $k }}" wire:model="infants.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("infants.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="single_price" wire:model="single_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("single_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                         </div>
-                     @endforeach
-                    @endif
 
+                        <div class="col-lg-12  mb-3 d-flex justify-content-evenly">
+                            <!-- Child with Bed* -->
+                            <div class="col-lg-3">
+                                <label  class="form-label">Child With Bed*</label>
+                                <input type="text" id="child_w_b" wire:model="child_w_b" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("child_w_b") <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <!-- Child without Bed* -->
+                            <div class="col-lg-3">
+                                <label class="form-label">Child Without Bed*</label>
+                                <input type="text" id="child_wo_b" wire:model="child_wo_b" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("child_wo_b") <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="col-lg-3">
+                                <label  class="form-label">Child Infant*</label>
+                                <input type="text" id="infants" wire:model="infants" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("infants") <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <button type="button" wire:click="increaseHotelFields" class="btn btn-primary mx-3">Add Hotel</button>
+                            <button type="button" wire:click="decreaseHotelFields" class="btn btn-danger mx-3">Remove Hotel</button>
+                        </div>
+
+                        @for ( $i = 1 ; $i <= $hotelCount ; $i++)
+                        <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
+                            <div class="col-lg-3">
+                                <label for="HotelCity" class="form-label">Hotel City</label>
+                                <select class="form-control" name="HotelCity" wire:model="HotelCity" wire:change="getHotelcity">
+                                     <option value="">Select Hotel City</option>
+                                     <option value="1">One Star</option>
+                                     <option value="2">Two Star</option>
+                                     <option value="3">Three Star</option>
+                                     <option value="4">Four Star</option>
+                                     <option value="5">Five Star</option>
+                                     <option value="Standard Hotel">Standard Hotel</option>
+                                     <option value="Building Accommodation">Building Accommodation</option>
+                                </select>
+                                @error("HotelCity")<span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="HotelCategory" class="form-label">Hotel Category</label>
+                                <select class="form-control" name="HotelCategory" wire:model="HotelCategory" wire:change="getHotelCategory.
+                                ">
+                                     <option value="">{{ 'Select' }} {{ 'Makka Hotel Category' }} </option>
+                                     <option value="1">One Star</option>
+                                     <option value="2">Two Star</option>
+                                     <option value="3">Three Star</option>
+                                     <option value="4">Four Star</option>
+                                     <option value="5">Five Star</option>
+                                     <option value="Standard Hotel">Standard Hotel</option>
+                                     <option value="Building Accommodation">Building Accommodation</option>
+                                </select>
+                                @error("makka_rating")<span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="SuperSaver_makkahHotelRatings" class="form-label">Hotel Name</label>
+                                <select class="form-control" name="makka_rating" wire:model="makka_rating" wire:change="getMakkaHotel">
+                                     <option value="">{{ 'Select' }} {{ 'Makka Hotel Category' }} </option>
+                                     <option value="1">One Star</option>
+                                     <option value="2">Two Star</option>
+                                     <option value="3">Three Star</option>
+                                     <option value="4">Four Star</option>
+                                     <option value="5">Five Star</option>
+                                     <option value="Standard Hotel">Standard Hotel</option>
+                                     <option value="Building Accommodation">Building Accommodation</option>
+                                </select>
+                                @error("makka_rating")<span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                        </div>
+                        @endfor
                     <!-- Submit Button -->
                     <!-- <div class="col-md-4 d-flex justify-content-end">
                         <button class="btn btn-primary w-100">Submit Hotel Details</button>

@@ -65,7 +65,11 @@
                 <div class="menu-title">Ziyarat Controller</div>
               </a>
               <ul>
-                <li> <a href="{{ route('admin.ziyarat') }}" wire:navigate><i class="bi bi-circle"></i>List All Ziyarat</a>
+                <li> 
+                  <a href="{{ route('admin.ziyarat') }}" wire:navigate><i class="bi bi-circle"></i>List All Ziyarat</a>
+                </li>
+                <li> 
+                  <a href="{{ route('admin.ziyarat-cities') }}" wire:navigate><i class="bi bi-circle"></i>Ziyarat Cities</a>
                 </li>
               </ul>
             </li>

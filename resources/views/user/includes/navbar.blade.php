@@ -107,12 +107,16 @@
                                         Ziyarats</a>
 
                                     <div class="dropdown-menu rounded-0 m-0" >
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Jordan</a>
+                                        @foreach($Ziyaratcities as $city)
+                                            <a href="{{route('user.ziyarat',['id'=>$city->id])}}" class="dropdown-item">{{$city->ziyarat_city}}</a>
+                                        @endforeach
+
+                                        <!-- <a href="{{route('coming-soon')}}" class="dropdown-item">Jordan</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Baghdad</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Egypt</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Turkey</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Uzbekistan</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Azerbaijan</a>
+                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Azerbaijan</a> -->
                      
                                     </div>
                                 </div>
@@ -137,7 +141,7 @@
                                         Visa
                                     
                                 </a>
-                                <a href="{{route('coming-soon')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
+                                <a href="{{route('transport')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
                                     <img style="height:30px;" src="{{asset('images/Transport_Icon.png')}}" alt="">
                                     Transfers </a>
                                 <a href="{{route('sightseeing')}}"  class="nav-item nav-link  d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >

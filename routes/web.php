@@ -33,6 +33,7 @@ use App\Livewire\Admin\Components\UmrahLandPackage;
 use App\Livewire\Admin\Components\ViewHotelDetails;
 use App\Livewire\Admin\Components\ViewUmrahPackages;
 use App\Livewire\Admin\Components\VisaRequest;
+use App\Livewire\Admin\Components\ZiyaratCities;
 use App\Livewire\Admin\PackageManager\AdminViewPackage;
 use App\Livewire\Admin\Components\HotelCities;
 
@@ -50,6 +51,7 @@ use App\Livewire\Admin\Components\CarType;
 use App\Livewire\Admin\Components\CarSector;
 use App\Livewire\Admin\Components\CarRentel;
 use App\Livewire\Admin\Components\AddTransport;
+use App\Livewire\UserFront\Umrahv2\TransfersSingle;
 
 //Ziyarat Controller
 use App\Livewire\Admin\Components\Ziyarat;
@@ -58,6 +60,7 @@ use App\Livewire\Admin\Components\PackageTransportType;
 use App\Livewire\Admin\umrahv2\AgentSignup;
 use App\Livewire\Admin\umrahv2\QuickEnquires;
 use App\Livewire\Admin\Components\ServiceType;
+// use App\Livewire\UserFront\Umrahv2\UserViewZiyarat;
 
 //PackageEnquireFromUser
 use App\Livewire\Admin\Components\PackageEnquireFromUser;
@@ -94,6 +97,7 @@ use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use App\Livewire\MissionVision;
 use App\Livewire\AgentSpeak;
+use App\Livewire\UserViewZiyarat;
 
 use App\Livewire\OurAwards;
 
@@ -117,6 +121,7 @@ use App\Livewire\UserFront\Umrahv2\Assistant;
 use App\Livewire\WhoWeAre; // Ensure this class exists in the specified namespace
 
 use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
+
 
 
 
@@ -165,8 +170,8 @@ Route::get('/umrah-pakage-sharjah',UmrahPackageSharjah::class)->name('umrahPacka
 Route::get('/umrah-packages',UmrahMainPackage::class)->name('umrahMainPackage');
 Route::get('/view-package-detail/{package}',ViewPackageDetails::class)->name('viewPackageDetails');
 
-//umrah v2
-Route::get('/transport',Transport::class)->name('transport');
+// //umrah v2
+// Route::get('/transport',Transport::class)->name('transport');
 
 Route::get('/pack/ramzaan/bybus',Umrahv2RamzaanPackage::class)->name('ramzaan.bybus');
 Route::get('/pack/ramzaan/byflight',RamzaanPackageByFlight::class)->name('ramzaan.byflight');
@@ -198,6 +203,13 @@ Route::get('/our-awards',OurAwards::class)->name('our-awards');
 
 //laundry routes
 Route::get('/user/laundry',Umrahv2Laundry::class)->name('user.laundry');
+
+//Transport
+Route::get('/user/transport',Transport::class)->name('transport');
+Route::get('/user/transport-details/{id}',TransfersSingle::class)->name('transport-single');
+
+//Ziyarat
+Route::get('/user/ziyarat/{id}',UserViewZiyarat::class)->name('user.ziyarat');
 
 //book my assitant
 Route::get('/user/myassistant',Assistant::class)->name('myassistant');
@@ -261,6 +273,7 @@ Route::get('/admin/add-transport',AddTransport::class)->name('admin.addTransport
 //Ziyarat Controller
 Route::get('/admin/list-ziyarat',Ziyarat::class)->name('admin.ziyarat');
 Route::get('/admin/add-ziyarat',AddZiyarat::class)->name('admin.add-ziyarat');
+Route::get('/admin/ziyarat-cities',ZiyaratCities::class)->name('admin.ziyarat-cities');
 
 
 //Package Enquire From User

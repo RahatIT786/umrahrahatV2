@@ -144,7 +144,7 @@
                         aria-label="Close"
                         wire:click="closeModal"></button>
             </div>
-            <form wire:submit.prevent="save">
+            <form wire:submit.prevent="save" onsubmit="location.reload()">
                 <div class="modal-body">
                     <label for="car_sector" class="form-label">Car Type Name</label>
                     <input type="text" class="form-control" id="car_sector" wire:model="car_sector" required>
@@ -155,12 +155,19 @@
                             data-bs-dismiss="modal" 
                             wire:click="closeModal">Cancel
                     </button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" onclick="reloadPage()" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<script>
+    function reloadPage() {
+        setTimeout(() => {
+            location.reload();  // Reloads the page after a short delay
+        }, 100);  // Delay to ensure the Livewire 'save' method is called
+    }
+</script>
 
 
 

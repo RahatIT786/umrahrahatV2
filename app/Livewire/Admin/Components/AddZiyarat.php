@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin\Components;
 
+use App\Models\ZiyaratCity;
 use Livewire\Component;
 use App\Models\HotelDetail;
 use Livewire\WithFileUploads;
@@ -40,6 +41,7 @@ class AddZiyarat extends Component
     public $service_type;
     public $foodController;
     public $laundrayController;
+    public $ziyaratCity;
 
     public $g_share_price = [], $qt_share_price = [], $qd_share_price = [], $t_share_price = [], $d_share_price = [], $single_price = [], $child_w_b = [], $child_wo_b = [], $infants = [];
 
@@ -132,6 +134,8 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
 
 14 Bid farewell to Madinah and depart to your home country or next destination.';
 
+public $hotelCount;
+
     public function mount(){
         $this->packageType = PackageType::where('delete_status',1)->get();
         $this->packageIncludes = inclusion::where('delete_status',1)->get();
@@ -139,6 +143,20 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
         $this->DepartureCity = DepartureCity::where('delete_status',1)->get();
         $this->foodController = CateringController::where('delete_status',1)->get();
         $this->laundrayController = Laundry::where('delete_status',1)->get();
+        $this->ziyaratCity = ZiyaratCity::where('delete_status',1)->get();
+    }
+
+    public function increaseHotelFields()
+    {
+        $this->hotelCount++;
+    }
+
+    // Method to decrease hotel fields
+    public function decreaseHotelFields()
+    {
+        if ($this->hotelCount > 1) {
+            $this->hotelCount--;
+        }
     }
     public $selected_package_type = null;
 
