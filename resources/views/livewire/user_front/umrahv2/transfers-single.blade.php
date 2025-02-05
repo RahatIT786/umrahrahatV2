@@ -32,7 +32,7 @@
                         <div class="custom-carousel" id="hotel-images-carousel">
                             <div class="custom-carousel-wrapper">
                                 <div class="custom-carousel-item">
-                                    <img class="w-100" src="{{asset( 'storage/'.$transportDetail->cartypemaster->carImagePath) }}" style="height:100%" alt="Car Image">
+                                    <img class="w-100" src="{{Storage::url($transportDetail->cartypemaster->carImagePath)}}" style="height:100%;width:100%" alt="Car Image">
                                 </div>   
                             </div>
                         </div>

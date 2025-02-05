@@ -64,7 +64,7 @@
                                     <!-- Right Column: Food Details Section (col-4) -->
                                     <div class="col-lg-12 col-md-12 p-4 mt-2">
                                         <div class="position-relative">
-                                            <img class="img-fluid" src="{{Storage::url($car->cartypemaster->carImagePath)}}" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
+                                            <img class="img-fluid" src="{{Storage::url($car->cartypemaster->carImagePath)}}" alt="" style="height: 13rem; width: 100%; object-fit: cover;">
                                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
                                                 <!-- Optional small label here if needed -->
                                             </small>
