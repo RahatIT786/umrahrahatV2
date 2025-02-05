@@ -193,9 +193,9 @@
 
 
         <!-- Pagination -->
-       {{-- <div class="d-flex justify-content-end mt-3">
-            {{ $visaDetails->links() }}
-        </div>--}}
+        <div class="d-flex justify-content-end mt-3">
+            {{ $cartypes->links('vendor.pagination.custom') }}
+        </div>
 
     </div>
 </div>

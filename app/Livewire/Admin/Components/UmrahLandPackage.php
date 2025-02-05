@@ -187,7 +187,7 @@ public $madina_nights;
             'packageInclusion' => 'required',
             'packageExclusion' => 'required',
             'packageItinerary' => 'required',
-            'FlightTransport' => 'required',
+            // 'FlightTransport' => 'required',
             'packageMeals' => 'required',
             'packageVisaTaxes' => 'required',
             'departure_type' => 'required',

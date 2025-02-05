@@ -64,7 +64,10 @@
 
                                         <div class="d-flex justify-content-between my-3">
                                             <h5 class="mb-0">{{$food['foodType']}}</h5>
-                                            <a href="{{$food['foodLunch']}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-youtube mx-3"></i></a> 
+                                            <div>
+                                                <a href="{{Storage::url($food['footPdf'])}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-filetype-pdf mx-3"></i></a> 
+                                                <a href="{{$food['foodLunch']}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-youtube mx-3"></i></a> 
+                                            </div>
                                         </div>
 
                                         <div>

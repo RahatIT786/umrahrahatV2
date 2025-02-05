@@ -178,25 +178,27 @@
                     <h5>Package Overview</h5>
                     <hr>
                     <!-- Flight & Transport -->
-                    <div class="col-md-4 mb-3">
+                    {{-- <div class="col-md-4 mb-3">
                         <label for="FlightTransport" class="form-label">Flight & Transport</label>
                         <textarea id="FlightTransport" wire:model="FlightTransport" class="form-control" placeholder="Enter Flight & Transport"></textarea>
                         @error('FlightTransport') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
-
-                    <!-- Meals -->
-                    <div class="col-md-4 mb-3">
+                    </div> --}}
+                    <div class="col-lg-12 mb-3  d-flex justify-content-evenly">
+                     <!-- Meals -->
+                    <div class="col-lg-5 mb-6">
                         <label for="packageMeals" class="form-label">Meals</label>
                         <textarea id="packageMeals" wire:model="packageMeals" class="form-control" placeholder="Enter Meals"></textarea>
                         @error('packageMeals') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
                     <!-- Visa & Taxes -->
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-5 mb-6">
                         <label for="packageVisaTaxes" class="form-label">Visa & Taxes</label>
                         <textarea id="packageVisaTaxes" wire:model="packageVisaTaxes" class="form-control" placeholder="Enter Visa & Taxes"></textarea>
                         @error('packageVisaTaxes') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
+                    </div>
+
 
                     <!-- Inclusion , Exclusion And Itinerary -->
                     <h5>Inclusion , Exclusion And Itinerary</h5>
