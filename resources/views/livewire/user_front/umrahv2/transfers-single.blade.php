@@ -1,6 +1,6 @@
 <section class="hotel-page" style="margin-bottom:100px">
     <!-- Hotel Banner Start -->
-    <div class="container-fluid p-0 mb-5 hotel-banner">
+    <!-- <div class="container-fluid p-0 mb-5 hotel-banner">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Hotel Banner End -->
 
     <!-- Hotel Details Start -->

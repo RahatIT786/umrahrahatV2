@@ -23,7 +23,7 @@ class Transport extends Component
     public function getcars()
     {
         // return transportController::with(['cartypemaster', 'carsectormaster'])->get();
-        return transportController::search('carType', $this->car_type_id)->search('carSector', $this->car_sector_id)->get();
+        return transportController::where('delete_status', 1)->search('carType', $this->car_type_id)->search('carSector', $this->car_sector_id)->get();
     }
     #[Layout('user.Layouts.app')]
     public function render()

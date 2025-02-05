@@ -52,6 +52,8 @@ use App\Livewire\Admin\Components\CarSector;
 use App\Livewire\Admin\Components\CarRentel;
 use App\Livewire\Admin\Components\AddTransport;
 use App\Livewire\UserFront\Umrahv2\TransfersSingle;
+use App\Livewire\Admin\Components\AddCarType;
+
 
 //Ziyarat Controller
 use App\Livewire\Admin\Components\Ziyarat;
@@ -265,10 +267,11 @@ Route::get('/admin/addlaundry',Laundry::class)->name('admin.laundry');
 Route::get('/admin/listlaundry',ListLaundry::class)->name('admin.list-laundry');
 
 //Transport Controller
-Route::get('/admin/add-car-type',CarType::class)->name('admin.carType');
+Route::get('/admin/list-car-type',CarType::class)->name('admin.carType');
 Route::get('/admin/add-car-sector',CarSector::class)->name('admin.carSector');
 Route::get('/admin/list-transport',CarRentel::class)->name('admin.listTransport');
 Route::get('/admin/add-transport',AddTransport::class)->name('admin.addTransport');
+Route::get('/admin/add-car-type',AddCarType::class)->name('admin.addcarType');
 
 //Ziyarat Controller
 Route::get('/admin/list-ziyarat',Ziyarat::class)->name('admin.ziyarat');

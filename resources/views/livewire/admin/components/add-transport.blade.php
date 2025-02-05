@@ -73,7 +73,7 @@
                             @error('seatsCount') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <!-- Hotel Star Rating -->
+                        {{-- Hotel Star Rating
                         <div class="col-md-6 mb-3">
                             <label for="airConditioner" class="form-label">Air Conditioner</label>
                             <select class="form-select" id="airConditioner" wire:model="airConditioner">
@@ -82,7 +82,7 @@
                                 <option value="2">No</option>
                             </select>
                             @error('airConditioner') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
+                        </div> --}}
 
                         
                         <!--Hotel CheckIn Time-->
@@ -92,7 +92,7 @@
                             @error('price') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <div class="col-md-6 mb-3">
+                        {{-- <div class="col-md-6 mb-3">
                             <label for="transportImage" class="form-label">Upload Supporting Image</label>
                             <input type="file" id="transportImage" class="form-control" wire:model="transportImage" accept="image/*">
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
@@ -108,7 +108,7 @@
                                     <img src="{{ asset($transportImagePath) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
                             @endif
-                        </div>
+                        </div> --}}
 
                         <!-- Hotel Address -->
                         <div class="col-md-6 mb-3">

@@ -11,10 +11,9 @@
         <!-- Header with Create Button -->
         <div class="d-flex align-items-center justify-content-between mb-3">
             <h6 class="card-title mb-0">Transport Management</h6>
-            <a style="height: 40px; width: 140px; background-color: #007bff; color: white !important; text-decoration: none; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-weight: 600; transition: background-color 0.3s ease;" 
-   class="text-danger" data-bs-placement="bottom" title="Create Car" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
-    <i class="bx bx-plus me-1"></i> Create Car
-</a>
+            <a href="{{ route('admin.addcarType') }}" wire:navigate class="btn btn-sm btn-primary">
+                <i class="bx bx-plus me-1"></i> Create Car
+            </a>
 
         </div>
 
@@ -22,7 +21,7 @@
         <div class="d-flex align-items-center mb-3">
             <h4 class="mb-0">All Car Types</h4>
             <form class="ms-auto position-relative" wire:submit.prevent="">
-                <input type="text" class="form-control" placeholder="Search Visa" wire:model.live="search">
+                <input type="text" class="form-control" placeholder="Search Car" wire:model.live="search">
             </form>
         </div>
 
@@ -44,8 +43,10 @@
                             <td>{{  $index + 1 }}</td>
                             <td>{{ $cartype->car_type }}</td>
                             <td>
-                                @if ( $cartype->delete_status == 1 )
-                                    Active
+                                @if ($cartype->carImagePath	)
+                                    <img src="{{asset('storage/'.$cartype->carImagePath)}}" alt="Hotel Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
+                                @else
+                                    No Image available
                                 @endif
                             </td>
                             <td class="text-center">
@@ -146,9 +147,29 @@
             </div>
             <form wire:submit.prevent="save" onsubmit="location.reload()">
                 <div class="modal-body">
-                    <label for="car_type" class="form-label">Car Type Name</label>
-                    <input type="text" class="form-control" id="car_type" wire:model="carType" required>
-                    @error('carType') <span class="text-danger">{{ $message }}</span> @enderror
+                    <div>
+                        <label for="car_type" class="form-label">Car Type Name</label>
+                        <input type="text" class="form-control" id="car_type" wire:model="carType" required>
+                        @error('carType') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <div class="">
+                        <label for="carImage" class="form-label">Upload Supporting Image</label>
+                            <input type="file" id="carImage" class="form-control" wire:model="carImage" accept="image/*">
+                            <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
+                            @error('carImage') <span class="text-danger">{{ $message }}</span> @enderror
+
+                        @if ($carImage)
+                            <div class="mt-3">
+                                <img src="{{ $carImage->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
+                            </div>
+                        @elseif ($carId && $carImagePath)
+                            <div class="mt-3">
+                                <img src="{{ asset( $hotelImage1Path) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px;">
+                            </div>
+                        @endif
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" 
