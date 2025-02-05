@@ -32,6 +32,8 @@ class mainPackage extends Model
         'flight_transport',
         'packageMeals', 
         'visa_taxes',
+        'makkah_nights',
+        'madina_nights',
         'delete_status',
     ];
     public function scopeDesc($query)

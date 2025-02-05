@@ -4,10 +4,10 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('asserts/user/img/haj/mecca1.jpg') }}"  alt="Image" style="height: 35vh; object-fit: cover;">
+                    <img class="w-100" src="{{ asset('asserts/user/img/haj/mecca1.jpg') }}"  alt="Image" style="height: 15vh; object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
-                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
+                            <!-- <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6> -->
                             <h1 class="text-white mb-4 animated slideInDown">{{ $this->packages->name }}</h1>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
 
                     <!-- Hotel Description -->
                     <div class="mt-4">
-                    <h5 style="font-size: xx-large; font-family: 'Poppins', sans-serif;">DISCRIPTION</h5>
+                    <h5 style="font-size: xx-large; font-family: 'Poppins', sans-serif;">DESCRIPTION</h5>
                         <ul>
                             @foreach (explode('.', $packages->description) as $sentence)
                             @if(trim($sentence))
@@ -410,12 +410,7 @@
                                     <h3>Sharing</h3>
                                     <span class="rate-value">{{ $this->g_share}}</span>
                                     <span class="rate-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/6_Person.png')}}" style="height:5rem">
                                     </span> <!-- Example icon -->
                                     </div>
                                     @endif
@@ -425,25 +420,18 @@
                                     <h3>Quint</h3>
                                     <span class="rate-value">{{$this->qt_share}}</span>
                                     <span class="rate-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/5_Person.png')}}" style="height:5rem">
                                     </span> <!-- Example icon -->
                                     </div>
                                     @endif
                                     
                                     @if ($this->qd_share > 0)
                                     <div class="rate">
-                                    <h3>Quat</h3>
+                                    <h3>Quad</h3>
                                     <span class="rate-value">{{$this->qd_share}}</span>
                                     <span class="rate-icon">
                                     
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/4_Person.png')}}" style="height:5rem">
                                         
                                     </span> <!-- Example icon -->
                                     </div>
@@ -454,10 +442,7 @@
                                     <h3>Triple</h3>
                                     <span class="rate-value">{{$this->t_share}}</span>
                                     <span class="rate-icon">
-                                  
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/3_Person.png')}}" style="height:5rem">
                                     </span> <!-- Example icon -->
                                     </div>
                                     @endif
@@ -467,9 +452,7 @@
                                     <h3>Double</h3>
                                     <span class="rate-value">{{$this->d_share}}</span>
                                     <span class="rate-icon">
-                                   
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/2_Person.png')}}" style="height:5rem">
                                     </span> <!-- Example icon -->
                                     </div>
                                     @endif
@@ -479,7 +462,7 @@
                                     <h3>Single</h3>
                                     <span class="rate-value">{{$this->single}}</span>
                                     <span class="rate-icon">        
-                                        <i class="fa-solid fa-user"></i>
+                                    <img src="{{asset('asserts/user/img/price/1_Person.png')}}" style="height:5rem">
                                        
                                     </span> <!-- Example icon -->
                                     </div>
@@ -493,7 +476,7 @@
                                     <div class="rate">
                                     <h4>Child with Bed</h4>
                                     <span class="rate-value">{{$this->child_with_bed}}</span>
-                                    <span class="rate-icon"><i class="fa-solid fa-child"></i> + <i class="fa-solid fa-bed"></i></span> <!-- Example icon -->
+                                    <span class="rate-icon"><i style="color:#0078C4" class="fa-solid fa-child"></i> + <i style="color:#0078C4" class="fa-solid fa-bed"></i></span> <!-- Example icon -->
                                     </div>
                                     @endif
 
@@ -501,7 +484,7 @@
                                     <div class="rate">
                                     <h4>Child without Bed</h4>
                                     <span class="rate-value">{{$this->child_no_bed}}</span>
-                                    <span class="rate-icon"><i class="fa-solid fa-child"></i> </span><!-- Example icon -->
+                                    <span class="rate-icon"><i style="color:#0078C4" class="fa-solid fa-child"></i> </span><!-- Example icon -->
                                     </div>
                                     @endif
 
@@ -509,7 +492,7 @@
                                     <div class="rate">
                                     <h4>Infant</h4>
                                     <span class="rate-value">{{$this->infant}}</span>
-                                    <span class="rate-icon"><i class="fa-solid fa-baby-carriage"></i></span> <!-- Example icon -->
+                                    <span class="rate-icon"><i style="color:#0078C4" class="fa-solid fa-baby-carriage"></i></span> <!-- Example icon -->
                                     </div>
                                     @endif
 
