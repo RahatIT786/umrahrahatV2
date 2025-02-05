@@ -122,6 +122,9 @@
             </div>
         </div>
 
-     
+             <!-- Pagination -->
+        <div class="d-flex justify-content-end mt-3">
+            {{ $HotelDetails->links('vendor.pagination.custom') }}
+        </div>
     </div>
 </div>

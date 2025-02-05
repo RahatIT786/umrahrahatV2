@@ -172,9 +172,9 @@
 
 
         <!-- Pagination -->
-       {{-- <div class="d-flex justify-content-end mt-3">
-            {{ $visaDetails->links() }}
-        </div>--}}
+        <div class="d-flex justify-content-end mt-3">
+            {{ $carSectors->links('vendor.pagination.custom') }}
+        </div>
 
     </div>
 </div>

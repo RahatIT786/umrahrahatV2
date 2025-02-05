@@ -202,13 +202,13 @@
               </a>
               <ul>
                 <li> 
-                  <a href="{{ route('admin.flight-managent') }}" wire:navigate><i class="bi bi-circle"></i>Flight Management</a>
+                  <a href="{{ route('admin.flight-managent') }}" wire:navigate><i class="bi bi-circle"></i>Manage Flights </a>
                 </li>
                 <li> 
-                  <a href="{{ route('admin.departure-city') }}" wire:navigate><i class="bi bi-circle"></i>Departure city</a>
+                  <a href="{{ route('admin.departure-city') }}" wire:navigate><i class="bi bi-circle"></i>Manage Departure city</a>
                 </li>
                 <li> 
-                  <a href="{{ route('admin.hotel-cities') }}" wire:navigate><i class="bi bi-circle"></i>Hotel city</a>
+                  <a href="{{ route('admin.hotel-cities') }}" wire:navigate><i class="bi bi-circle"></i>Manage Hotel city</a>
                 </li>
                 <li> 
                   <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
