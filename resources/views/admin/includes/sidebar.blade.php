@@ -224,12 +224,12 @@
                       <li> 
                         <a href="{{ route('admin.package-types') }}" wire:navigate><i class="bi bi-circle"></i>Package Types</a>
                       </li>
-                      <li> 
+                      {{-- <li> 
                         <a href="{{ route('admin.package.transport.type') }}" wire:navigate><i class="bi bi-circle"></i>Package Departure Type</a>
-                      </li>
-                       <li> 
+                      </li> --}}
+                       {{-- <li> 
                         <a href="{{ route('admin.service-type') }}" wire:navigate><i class="bi bi-circle"></i>Service Types</a>
-                      </li>
+                      </li> --}}
                      {{-- <li> 
                         <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
                       </li> --}}
@@ -267,6 +267,11 @@
               <li>
                   <a href="{{route('package-enquire-from-user')}}" >
                       <i class="bi bi-circle"></i>Package Enquires From user
+                  </a>
+              </li>
+              <li>
+                  <a href="{{route('hotel-enquire-from-user')}}" >
+                      <i class="bi bi-circle"></i>Hotel Enquires From user
                   </a>
               </li>
                    <!--

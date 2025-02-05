@@ -102,73 +102,7 @@
                     {{-- <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Package </span></h1> --}}
                 </div>
                 <div class="row g-4">
-                   
-                    {{-- @foreach ($allPackages as $package )
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="room-item shadow rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="{{  Storage::url($package->packageImage)}}" alt="" style="height: 15rem; width:100%;">
-                                    <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$package->package_days}} Days</small>
-                                </div>
-                                <div class="p-4 mt-2">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mb-0">{{$package->name}}</h5>
-                                        <!-- <div class="ps-2 ">
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                        </div> -->
-                                    </div>
-                                    <div class="container">
-                                        <!-- First Row -->
-                                        @php
-                                            // Convert the comma-separated string to an array
-                                            $packageIncludes = explode(',', $package->package_includes);
-                                        @endphp
-                                        <div class="row">
-                                            @foreach ($packageIncludes as $include)
-                                                @foreach ($inclusions as $includeItem)
-                                                    @if ($includeItem->id == $include)
-                                                        <div class="col-md-6 mb-3">
-                                                            @if ($includeItem->id == 2)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZamZam</small>
-                                                            @elseif($includeItem->id == 3)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-bus text-primary me-2"></i>Transport</small>
-                                                            @elseif($includeItem->id == 4)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>Saudi Sim</small>
-                                                            @elseif($includeItem->id == 5)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-luggage-cart text-primary me-2"></i>Welcome Kit</small>
-                                                            @elseif($includeItem->id == 6)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
-                                                            @elseif($includeItem->id == 7)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-person-praying text-primary me-2"></i>ZIYARAT</small>
-                                                            @elseif($includeItem->id == 8)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                                            @elseif($includeItem->id == 9)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-ticket text-primary me-2"></i>Ticket</small>
-                                                            @endif
-                                                        </div>
-                                                    @endif
-                                                @endforeach
-                                            @endforeach
-                                        </div>
-                                    </div>                            
-                                    <div>
-                                        <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center"> {{$package->package_days}} Days , {{$package->package_days-1}}   Nights  </p>
-                                    </div>
-                                    <p class="text-body mb-3 text-justify">{{ \Illuminate\Support\Str::limit($package->description, 250, '...') }}</p>
-                                    <div class="d-flex justify-content-between">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{route('viewPackageDetails',['package'=>$package->id])}}"> <i class="fa-solid fa-book" ></i> View Package</a>
-                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" ><i class="fa-regular fa-paper-plane" ></i> Book Enquire</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach --}}
-
-
+                
                     <!----package-start------>
                     @foreach ( $allPackages as $package  )
                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
@@ -178,7 +112,7 @@
                             <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
                                 <div class="position-relative package-image">
                                     <img class="img-fluid" 
-                                         src="{{Storage::exists($package->packageImage) ? Storage::url($package->packageImage) : asset('asserts/user/img/haj/masque.jpg')}}" 
+                                         src="{{Storage::url($package->packageImage) ? Storage::url($package->packageImage) : asset('asserts/user/img/haj/masque.jpg')}}" 
                                          alt="" 
                                          style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                                     <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$package->package_days}} days</small>
@@ -187,11 +121,11 @@
 
                             <!-- Right Column: Package Details -->
                             <div class="col-lg-8 col-md-8 p-4 mt-2">
-                                <div class="d-flex justify-content-between mb-3">
+                                <div class="d-flex justify-content-between mb-0">
                                    <div>
-                                    <h5 class="mb-0">{{ucfirst($package->name)}}</h5>
-                                    <p class="mt-2 text-primary">{{ucfirst($package->packageType->packageType)}} Combo Pack <i class="fa-solid fa-bag-shopping" style="color: #0D1425;"></i></p>
-                                    <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
+                                    <h4 class="mb-0 " style="font-weight: 600;">{{ucfirst($package->name)}}</h4>
+                                    <p class="mt-2 text-primary"> <span style="color:#218838">{{ucfirst($package->packageType->packageType)}}</span> <span style=" ">  Combo Pack <i class="fa-solid fa-bag-shopping" style="color: #0D1425;"></i></span></p>
+                                    <span class="text-primary"  style=" cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
                                    </div>
                                    @php
                                    $minPrice=min(
@@ -218,7 +152,7 @@
                                 </div>
 
                                 <div>
-                                    <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
+                                    <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">{{$package->makkah_nights}} Nights Makkah , {{$package->madina_nights}} Nights Madina</p>
                                 </div>
                                 <div >
                                     <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-bus"></i> Departure Days : </span><span >Every Wednesday</span>   </div>

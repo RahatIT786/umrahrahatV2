@@ -7,7 +7,7 @@ use Livewire\Component;
 use App\Models\HotelDetail;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Layout;
-use App\Models\mainPackage;
+use App\Models\MainZiyarat;
 use App\Models\PackageDetail;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Illuminate\Support\Str;
@@ -17,6 +17,7 @@ use App\Models\FlightManagement;
 use App\Models\DepartureCity;
 use App\Models\CateringController;
 use App\Models\Laundry;
+use App\Models\HotelCities;
 
 class AddZiyarat extends Component
 {
@@ -134,7 +135,15 @@ Visit other historical and religious sites in Madinah such as Mount Uhud, Masjid
 
 14 Bid farewell to Madinah and depart to your home country or next destination.';
 
-public $hotelCount;
+public $hotelCount = 1;
+public $HotelCategory = [];
+public $HotelCity = [];
+public $hotel_name = [];
+public $HotelCities;
+public $hotels = [
+    ['city' => '', 'category' => '', 'names' => [], 'selected_name' => '']
+];
+public $hotelIdsString;
 
     public function mount(){
         $this->packageType = PackageType::where('delete_status',1)->get();
@@ -144,37 +153,40 @@ public $hotelCount;
         $this->foodController = CateringController::where('delete_status',1)->get();
         $this->laundrayController = Laundry::where('delete_status',1)->get();
         $this->ziyaratCity = ZiyaratCity::where('delete_status',1)->get();
+        $this->HotelCities = HotelCities::where('delete_status',1)->get();
+        $this->hotelCount = 1;
+        $this->HotelCity = [1 => ''];
+        $this->HotelCategory = [1 => ''];
+        $this->hotel_name = [1 => []];
     }
 
     public function increaseHotelFields()
     {
-        $this->hotelCount++;
+        $this->hotels[] = ['city' => '', 'category' => '', 'names' => [], 'selected_name' => ''];
     }
-
-    // Method to decrease hotel fields
+    
     public function decreaseHotelFields()
     {
-        if ($this->hotelCount > 1) {
-            $this->hotelCount--;
+        if (count($this->hotels) > 1) {
+            array_pop($this->hotels);  // Removes the last hotel object
         }
     }
-    public $selected_package_type = null;
-
-
-    public function updatedSelectedPackageType($value)
+    
+    public function getHotelCategory($index)
     {
-        $this->package_type_ids = $value ? [$value] : []; // Store it as an array
+        $selectedCategory = $this->hotels[$index]['category'];
+        $selectedCity = $this->hotels[$index]['city'];
+    
+        $hotels = HotelDetail::where('hotelStarRating', $selectedCategory)
+            ->where('deleteStatus', 1)
+            ->where('hotelCity', $selectedCity)
+            ->pluck('hotelName', 'id')
+            ->toArray();
+    
+        $this->hotels[$index]['names'] = $hotels;
     }
-
-    public function getMakkaHotel($index)
-    {
-        // Fetch hotels based on the selected rating
-        $hotels = HotelDetail::where('hotelStarRating', $this->makka_rating[$index])
-            ->where('deleteStatus',1)
-            ->where('hotelCity', 'MAKKAH')
-            ->pluck('hotelName', 'id')->toArray();
-        $this->makkaHotel[$index] = $hotels;
-    }
+    
+    
 
     public function getMadinaHotel($index)
     {
@@ -242,15 +254,49 @@ public $hotelCount;
             'infants.' . $key . '.required' => 'Please enter the price for infant.',
         ]);
     }
+
+    protected $rules = [
+        'package_name' => 'required',
+        'service_type' => 'required',
+        'package_days' => 'required',
+        'packageDescription' => 'required',
+        'packageImage' => 'required',
+        'paymentPolicy' => 'required',
+        'importantNotes' => 'required',
+        'cancellationPolicy' => 'required',
+        'packageInclusion' => 'required',
+        'packageExclusion' => 'required',
+        'packageItinerary' => 'required',
+        'FlightTransport' => 'required',
+        'packageMeals' => 'required',
+        'packageVisaTaxes' => 'required',
+        'g_share_price'=> 'required',
+        'qt_share_price' => 'required',
+        'qd_share_price' => 'required',
+        't_share_price' => 'required',
+        'd_share_price' => 'required',
+        'single_price' => 'required',
+        'child_w_b' => 'required',
+        'child_wo_b' => 'required',
+        'infants' => 'required',
+        'includes' => 'required',
+    ];
     
 
         public function save(){
-            foreach ($this->package_type_ids as $key => $value) {
-                $this->validatePackage($key);
+
+            $this->validate();
+
+            $hotelIds = [];
+            foreach ($this->hotels as $hotel) {
+                if (!empty($hotel['selected_name'])) {
+                    $hotelIds[] = $hotel['selected_name'];
+                }
             }
+            // Convert array to a comma-separated string
+            $this->hotelIdsString = implode(',', $hotelIds);
+
             $packageImagePath = $this->packageImage ? $this->packageImage->store('uploads', 'public') : null;
-            $key = array_values($this->package_type_ids);
-            $id_string = implode(',', $key);
             $keys = array_values($this->includes);
             $package_includes = implode(',', $keys);
         
@@ -267,12 +313,11 @@ public $hotelCount;
                     'name' => $this->package_name,
                     'service_type' => $this->service_type,
                     'package_days' => $this->package_days,
-                    'package_type_ids' => $id_string,
                     'description' => $this->packageDescription,
                     'packageImage' => $packageImagePath,
                     'package_includes' =>  $package_includes,
-                    'flights' => $allFlights,
-                    'Depart_city' => $departCity,
+                    'flights' => $allFlights ?? '',
+                    'Depart_city' => $departCity ?? '',
                     'payment_policy' => $this->paymentPolicy,
                     'important_notes' => $this->importantNotes,
                     'cancellation_policy' => $this->cancellationPolicy,
@@ -282,53 +327,26 @@ public $hotelCount;
                     'flight_transport' => $this->FlightTransport,
                     'packageMeals' => $this->packageMeals,
                     'visa_taxes' => $this->packageVisaTaxes,
-                    'delete_status' => true,
+                    'laundray_type' => $this->laundray_type ?? '',
+                    'food_type' => $this->food_type ?? '',
+                    'g_share_price' => $this->g_share_price,
+                    'qt_share_price' => $this->qt_share_price,
+                    'qd_share_price' => $this->qd_share_price,
+                    't_share_price' => $this->t_share_price,
+                    'd_share_price' => $this->d_share_price,
+                    'single_price' => $this->single_price,
+                    'child_w_b' => $this->child_w_b,
+                    'child_wo_b' => $this->child_wo_b,
+                    'infants' => $this->infants,
+                    'hotelIds' => $this->hotelIdsString,
+                    'delete_status' => 1,
                 ];
 
-                 $package = mainPackage::create($pkg_data);
+                 $package = MainZiyarat::create($pkg_data);
 
-                //dump($package);
 
-                //Create Package details
-                    // $details_data = [];
-                    // $keys = array_values($this->includes);
-                    // $package_includes = implode(',', $keys);
-
-                    foreach ($this->package_type_ids as $key => $value) {
-                        // $keys = array_keys($this->package_includes[$key]);
-                        // $package_includes = implode(',', $keys);
-                        //  dd($this->child_wo_b[$key]);
-                        $details_data[] = [
-                            'pkg_id' => $package->id,
-                            'pkg_type_id' => $value,
-                            'makka_category' => $this->makka_rating[$key] ?? null,
-                            'makka_hotel_id' => $this->makka_hotel[$key] ?? null,
-                            'madina_category' => $this->madina_rating[$key] ?? null,
-                            'madina_hotel_id' => $this->madina_hotel[$key] ?? null,
-                            'meal_type' => $this->food_type[$key] ?? null,
-                            'laundry_type' => $this->laundray_type[$key] ?? null,
-                            'g_share' => isset($this->g_share_price[$key]) && $this->g_share_price[$key] != "" ? $this->g_share_price[$key] : 0,
-                            'qt_share' => isset($this->qt_share_price[$key]) && $this->qt_share_price[$key] != "" ? $this->qt_share_price[$key] : 0,
-                            'qd_share' => isset($this->qd_share_price[$key]) && $this->qd_share_price[$key] != "" ? $this->qd_share_price[$key] : 0,
-                            't_share' => isset($this->t_share_price[$key]) && $this->t_share_price[$key] != "" ? $this->t_share_price[$key] : 0,
-                            'd_share' => isset($this->d_share_price[$key]) && $this->d_share_price[$key] != "" ? $this->d_share_price[$key] : 0,
-                            'single' => isset($this->single_price[$key]) && $this->single_price[$key] != "" ? $this->single_price[$key] : 0,
-                            'child_with_bed' => isset($this->child_w_b[$key]) && $this->child_w_b[$key] != "" ? $this->child_w_b[$key] : 0, 
-                            'child_no_bed' => $this->child_wo_b[$key],
-                            'infant' => isset($this->infants[$key]) && $this->infants[$key] != "" ? $this->infants[$key] : 0,
-                            
-                        ];
-                    }
-                    //dd($details_data);
-                    foreach ($details_data as $details) {
-
-                        PackageDetail::create($details);
-                    }
                     session()->flash('message', 'Package details added successfully!');
 
-                    // $this->alert('success', 'Created Successfully');
-                    //return redirect()->route('admin.umrah-land-packages')->with('success', 'Package created successfully.');
-                    // Reset form fields after successful submission
                     $this->reset([
                         'package_name',
                         'package_days',

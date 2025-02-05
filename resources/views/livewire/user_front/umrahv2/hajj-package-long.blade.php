@@ -65,7 +65,7 @@
                 <div class="row g-4">
                    
                     <!---package-start------>
-                   @foreach ( $allPackages as $package  )
+                    @foreach ( $allPackages as $package  )
                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="row g-0">
@@ -73,20 +73,20 @@
                             <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
                                 <div class="position-relative package-image">
                                     <img class="img-fluid" 
-                                         src="{{Storage::exists($package->packageImage) ? Storage::url($package->packageImage) : asset('asserts/user/img/haj/masque.jpg')}}" 
+                                         src="{{Storage::url($package->packageImage) ? Storage::url($package->packageImage) : asset('asserts/user/img/haj/masque.jpg')}}" 
                                          alt="" 
-                                         style="width: 100%; height: 27rem; object-fit: cover; border-radius: 15px;">
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                                     <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$package->package_days}} days</small>
                                 </div>
                             </div>
 
                             <!-- Right Column: Package Details -->
                             <div class="col-lg-8 col-md-8 p-4 mt-2">
-                                <div class="d-flex justify-content-between mb-3">
+                                <div class="d-flex justify-content-between mb-0">
                                    <div>
-                                    <h5 class="mb-0">{{ucfirst($package->name)}}</h5>
-                                    <p class="mt-2 text-primary">{{ucfirst($package->packageType->packageType)}} Combo Pack <i class="fa-solid fa-bag-shopping" style="color: #0D1425;"></i></p>
-                                    <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
+                                    <h4 class="mb-0 " style="font-weight: 600;">{{ucfirst($package->name)}}</h4>
+                                    <p class="mt-2 text-primary"> <span style="color:#218838">{{ucfirst($package->packageType->packageType)}}</span> <span style=" ">  Combo Pack <i class="fa-solid fa-bag-shopping" style="color: #0D1425;"></i></span></p>
+                                    <span class="text-primary"  style=" cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
                                    </div>
                                    @php
                                    $minPrice=min(
@@ -113,7 +113,7 @@
                                 </div>
 
                                 <div>
-                                    <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
+                                    <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">{{$package->makkah_nights}} Nights Makkah , {{$package->madina_nights}} Nights Madina</p>
                                 </div>
                                 <div >
                                     <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-bus"></i> Departure Days : </span><span >Every Wednesday</span>   </div>
@@ -166,7 +166,7 @@
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{route('viewPackageDetails', $package->id)}}" >
                                         <i class="fa-solid fa-file-zipper"></i>  View Packages
                                     </a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" >
                                         <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                     </a>
                                 </div>
