@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class CarType extends Model
 {
     use HasFactory;
-    protected $fillable = ['car_type', 'delete_status'];
+    protected $fillable = ['car_type', 'carImagePath', 'delete_status'];
     // Relationship with TransportController
     // public function transportControllers()
     // {
