@@ -60,7 +60,7 @@ class UmrahByBusFromUAE extends Component
         $departCities = $packages->map(function ($package) {
             return explode(',', $package->depart_city);
         });
-
+        
         // Flatten the array and remove any duplicates
         $mergedCities = array_merge(...$departCities->toArray());
 
@@ -116,7 +116,7 @@ class UmrahByBusFromUAE extends Component
             $query->where('package_days', 'like', '%' . $this->searchDays . '%');
         }
         $this->allPackages = $query->get();
-        // dd( $this->allPackages);
+        //  dd( $this->allCities);
         // Render the Livewire view with allPackages data
         return view('livewire.user_front.umrah.umrah-by-bus-from-u-a-e', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
     }

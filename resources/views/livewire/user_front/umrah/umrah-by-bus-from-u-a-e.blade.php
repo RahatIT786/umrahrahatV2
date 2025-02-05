@@ -48,7 +48,8 @@
       <div class="container">
           <div class="bg-white shadow" style="padding: 35px;">
               <div class="row g-2">
-                 <form wire:submit.prevent="searchSubmit" >
+                 {{-- <form wire:submit.prevent="searchSubmit" > --}}
+               
                     
                     <div class="col-md-12">
                         <div class="row g-2">
@@ -85,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                 </form>
+                {{-- </form>--}}
               </div>
           </div>
       </div>
