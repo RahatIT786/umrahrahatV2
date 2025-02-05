@@ -73,7 +73,7 @@
                                 <div class="row g-0">
                                     <!-- Left Column: Image Section (col-4) -->
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="position-relative">
+                                        <div class="position-relative mb-3">
                                             <img class="img-fluid" src="{{ asset($hotelDetail->hotelMainImage) }}" style="height: 300px; width: 100%; object-fit: cover;" alt="">
                                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{ $hotelDetail->hotelPrice }}/Night</small>
                                         </div>

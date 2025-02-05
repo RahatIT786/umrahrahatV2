@@ -60,7 +60,7 @@
 
                     <!-- Hotel Description -->
                     @if (!empty($hotel_detail->hotelYouTube))
-                       <a href="https://www.youtube.com/channel/YourChannelLink" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: #FF0000; font-weight: bold; font-size: 16px;">
+                       <a href="{{$hotel_detail->hotelYouTube}}" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: #FF0000; font-weight: bold; font-size: 16px;">
                             <i class="fa-brands fa-youtube" style="font-size: 24px; margin-right: 8px;"></i>
                             Watch Our Exclusive Awazem Hotels Tour!
                         </a>
@@ -120,26 +120,37 @@
                             </div>
                     <div class="border p-5 rounded booking-form" style="width: 450px;">
                         <h4 class="mb-4 text-uppercase">Book Your Stay</h4>
-                        <form>
+                        <form  wire:submit.prevent="packageEnquire">
+                            @csrf
+                                @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                <label for="package_user_name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="package_user_name" placeholder="Enter your name" wire:model='package_user_name' required>
+                                @error('package_user_name') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                <label for="package_user_email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="package_user_email" placeholder="Enter your email" wire:model='package_user_email' required>
+                                @error('package_user_email') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                                <label for="package_user_phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="package_user_phone" placeholder="Enter your phone number" wire:model='package_user_phone' required>
+                                @error('package_user_phone') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="num-adults" class="form-label">Adults</label>
-                                <input type="number" class="form-control" id="num-adults" min="1">
+                                <input type="number" class="form-control" id="num-adults" min="1" wire:model='package_user_adult' required>
+                                @error('package_user_adult') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="num-children" class="form-label">Children</label>
-                                <input type="number" class="form-control" id="num-children" min="0">
+                                <input type="number" class="form-control" id="num-children" min="0" wire:model='package_user_child' required>
+                                @error('package_user_child') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Book Now</button>
                         </form>
@@ -767,7 +778,7 @@ li {
                                                             <!-- Box 3 -->
                         <div class="col-md-12 col-sm-12 mb-3">
                             <div class="box box-3">
-                                <h5 style="font-size:xx-large">Distance from city center: {{ number_format($hotel_detail->hotelDistance, 0) }} Km</h5>
+                                <h5 style="font-size:xx-large">Distance from city center: {{ number_format($hotel_detail->hotelDistance, 0) }} m</h5>
                             </div>
                         </div>
 
