@@ -5,12 +5,18 @@ namespace App\Livewire;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\HotelDetail;
+use App\Models\HotelCities;
+
 class Hotels extends Component
 {
     public $hotel_detail;
     public $searchCity;
     public $searchRating;
     public $searchHotel;
+    public $hotelCities;
+    public function mount(){
+        $this->hotelCities = HotelCities::where('delete_status',1)->get();
+    }
     #[Layout('user.Layouts.app')]
     public function render()
     {

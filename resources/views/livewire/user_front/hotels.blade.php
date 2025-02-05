@@ -29,11 +29,9 @@
                                 <form class="col-md-4"  wire:submit.prevent="">
                                     <select class="form-select" wire:model.live="searchCity">
                                         <option value='' selected>City</option>
-                                        <option value="MAKKAH">MAKKAH</option>
-                                        <option value="MADINAH">MADINAH</option>
-                                        <option value="BAGHDAD">BAGHDAD</option>
-                                        <option value="NAJAF">NAJAF</option>
-                                        <option value="KARBALA">KARBALA</option>
+                                        @foreach ($hotelCities as $hotelcity)
+                                            <option value="{{$hotelcity->hotel_city}}">{{$hotelcity->hotel_city}}</option>
+                                        @endforeach
                                     </select>
                                 </form>
                                 <form class="col-md-4" wire:submit.prevent="">
