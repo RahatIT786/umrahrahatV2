@@ -61,7 +61,7 @@ class ZiyaratCities extends Component
                 'ziyarat_city' => $this->ziyarat_city,
                 'delete_status' => 1
             ]);
-            session()->flash('message', 'Hotel Cities successfully added.');
+            session()->flash('message', 'ziyarat Cities successfully added.');
             // $this->dispatch('carTypeSaved');
             $this->showAddModal = false;
     }
@@ -75,14 +75,20 @@ class ZiyaratCities extends Component
         if ($this->ziyarat_city_id) {
             $visaDetails = ZiyaratCity::findOrFail($this->ziyarat_city_id);
             $visaDetails->update(['delete_status' => 2]);
-            session()->flash('message', 'Hotel Cities successfully marked as deleted.');
+            session()->flash('message', 'ziyarat Cities successfully marked as deleted.');
             $this->showModal = false;
         }
     }
     #[Layout('admin.Layouts.app')]
     public function render()
     {
-        $ziyaratCities  = ZiyaratCity::where('delete_status',1)->paginate(10);
+        $ziyaratCities  = ZiyaratCity::where('delete_status',1)
+        ->where(function($query){
+            $query->where('ziyarat_city', 'like', '%'.$this->search.'%');
+        })
+        ->paginate(10);
         return view('livewire.admin.components.ziyarat-cities',['ziyaratCities' => $ziyaratCities]);
     }
 }
+
+

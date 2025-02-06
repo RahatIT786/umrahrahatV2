@@ -145,7 +145,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between">
                                          <p class=""> <strong>Total Days :</strong> {{$package->package_days}} Days ,</p>
-                                         <p class="mx-3"> <strong> Makkah Nights:</strong> {{$package->package_days}}, &nbsp; <strong> Madina Nights:</strong> {{$package->package_days}}</p>
+                                         <p class="mx-3"> <strong> Makkah Nights:</strong> {{$package->makkah_nights}}, &nbsp; <strong> Madina Nights:</strong> {{$package->madina_nights}}</p>
                                     </div>
                                    </div>
                                    @php

@@ -26,8 +26,8 @@
                   </div>
                   <div class="col-md-9">
                       <div class="row g-2">
-                          <form class="col-md-4"  wire:submit.prevent="">
-                              <select class="form-select" wire:model.live="searchCity">
+                          <form class="col-md-6"  wire:submit.prevent="">
+                              <select class="form-select" wire:model.live="sightCity">
                                   <option value='' selected>City</option>
                                   <option value="MAKKAH">MAKKAH</option>
                                   <option value="MADINAH">MADINAH</option>
@@ -36,20 +36,9 @@
                                   <option value="KARBALA">KARBALA</option>
                               </select>
                           </form>
-                          <form class="col-md-4" wire:submit.prevent="">
-                              <select class="form-select" wire:model.live="searchRating">
-                                  <option value='' selected>Star Rating</option>
-                                  <option value="2">2 Stars</option>
-                                  <option value="3">3 Stars</option>
-                                  <option value="4">4 Stars</option>
-                                  <option value="5">5 Stars</option>
-                                  <option value="6">Building Accomutation Stars</option>
-                                  <option value="7">Standard Hotel Stars</option>
-                              </select>
-                          </form>
-                          <div class="col-md-4">
+                          <div class="col-md-6">
                               <form wire:submit.prevent="" class="date" id="date2" >
-                                  <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Hotel Name" />
+                                  <input  wire:model.live="searchName" type="text" class="form-control" placeholder="Sight Name" />
                               </form>
                           </div>
                       </div>
@@ -90,5 +79,10 @@
         </div>
          @endforeach
     </div>
+                @if(count($allSights) >= $limit)
+                    <div class="text-center " style="margin-bottom:150px;margin-top:50px">
+                        <button class="btn btn-primary" wire:click="loadMore">Load More</button>
+                    </div>
+                @endif
 </div>
 </section>
