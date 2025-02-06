@@ -111,15 +111,9 @@
                                     @endphp
                                     @foreach ($packageIncludesArray as $include)
                                     @if ($include == 2)
-                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                      <span style="font-size: 25px;" class="mx-2"> <i class="fa-solid fa-bottle-water"></i> </span> 
                                      <span style="font-size: 12px;">zamzam</span>
-                                     </div>
-
-                                    @elseif ($include == 3)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""> <i class="fa-solid fa-bus"></i></span> 
-                                    <span style="font-size: 12px;">Bus</span>
                                     </div>
 
                                     @elseif ($include == 4)

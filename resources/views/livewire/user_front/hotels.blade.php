@@ -126,6 +126,11 @@
                         </div>
                     @endif
                 </div>
+                @if(count($hotelDetails) >= $limit)
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary" wire:click="loadMore">Load More</button>
+                    </div>
+                @endif
             </div>
         </div>
     <!-- Room End -->

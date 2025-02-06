@@ -51,10 +51,10 @@
                         <i class="bi bi-circle"></i>Umrah Land Packages
                     </a>
                 </li> -->
-                <li> 
+                {{-- <li> 
                   <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
 
-                </li>
+                </li> --}}
               </ul>
             </li>
 
@@ -87,7 +87,7 @@
                 </li>
               </ul>
             </li>
-            <li>
+            {{-- <li>
               <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bi bi-award-fill"></i>
                 </div>
@@ -101,7 +101,7 @@
                   <a href="{{ route('admin.visa-request-history') }}" wire:navigate><i class="bi bi-circle"></i>Visa Request History</a>
                 </li>
               </ul>
-            </li>
+            </li> --}}
            
             <!-- <li>
               <a class="has-arrow" href="javascript:;">
