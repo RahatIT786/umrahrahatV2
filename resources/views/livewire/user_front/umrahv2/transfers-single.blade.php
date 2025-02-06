@@ -93,7 +93,7 @@
             <div class="container" style="width: 100%;">
                 <div class="nav nav-tabs-package" id="nav-tab" role="tablist" style="width: 100%;">
                     <div class="nav-item-package ">
-                        <a href="#Hotels" id="lnkHotels" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package active" data-bs-toggle="tab" role="tab" aria-selected="true">Discription</a>
+                        <a href="#Hotels" id="lnkHotels" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package active" data-bs-toggle="tab" role="tab" aria-selected="true">Description</a>
                     </div>
                     <!-- <div class="nav-item-package">
                         <a href="#TourCost" id="lnkTourCost" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Contact</a>
@@ -273,7 +273,7 @@
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 mb-3">
                                             <div class="box box-1">
-                                                <h5 style="font-size:xx-large">Discription</h5>
+                                                <h5 style="font-size:xx-large">Description</h5>
                                                 <ul style=" list-style-type: none; padding-left: 0;">
                                               @foreach (explode('.', $transportDetail->discription) as $sentence)
                                                     @if(trim($sentence))

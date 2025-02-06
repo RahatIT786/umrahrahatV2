@@ -142,7 +142,7 @@
                         <div class="">
                             @foreach ($DepartureCity as $index => $value)
                                 <div class="form-check" style="margin-right:20px">
-                                    <input class="form-check-input" type="checkbox" id="{{$value->CityName}}" value="{{$value->id}}" wire:model="departureCities">
+                                    <input class="form-check-input" type="checkbox" id="{{$value->CityName}}" value="{{$value->CityName}}" wire:model="departureCities">
                                     <label class="form-check-label" for="{{$value->CityName}}">{{ucfirst($value->CityName)}}</label>
                                 </div>
                             @endforeach
