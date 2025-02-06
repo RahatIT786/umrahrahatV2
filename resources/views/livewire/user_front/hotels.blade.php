@@ -37,12 +37,12 @@
                                 <form class="col-md-4" wire:submit.prevent="">
                                     <select class="form-select" wire:model.live="searchRating">
                                         <option value='' selected>Star Rating</option>
-                                        <option value="2">2 Stars</option>
-                                        <option value="3">3 Stars</option>
-                                        <option value="4">4 Stars</option>
-                                        <option value="5">5 Stars</option>
-                                        <option value="6">Building Accomutation Stars</option>
-                                        <option value="7">Standard Hotel Stars</option>
+                                        <option value="2">2 Star</option>
+                                        <option value="3">3 Star</option>
+                                        <option value="4">4 Star</option>
+                                        <option value="5">5 Star</option>
+                                        <option value="6">Building Accomutation</option>
+                                        <option value="7">Standard Hotel </option>
                                     </select>
                                 </form>
                                 <div class="col-md-4">
@@ -84,19 +84,29 @@
                                         <div class="d-flex justify-content-between mb-3">
                                             <h5 class="mb-0">{{ $hotelDetail->hotelName }}</h5>
                                         </div>
-                                        <div class="d-flex mb-3 justify-content-between">
+                                        <div class="d-flex mb-3 ">
                                             <small class="border-end me-3 pe-3">
                                                 <i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $hotelDetail->hotelCity }}
                                             </small>
-                                            <small><i class="fa fa-wifi text-primary me-2"></i> Wifi</small>
+                                            <small class="border-end me-3 pe-3">
+                                                <i class="fa fa-wifi text-primary me-2"></i>
+                                            </small>
+                                            <small class="border-end me-3 pe-3">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </small>
                                             <!-- Star Rating -->
                                             @php
                                                 $stars = intval($hotelDetail->hotelStarRating);  // Convert the string to an integer
                                             @endphp
                                             <div>
-                                            @for ($i = 0; $i < $stars; $i++)
-                                                <small class="fa fa-star text-primary"></small>
-                                            @endfor
+                                            @if ($stars == 7)
+                                                <p>Standard Hotel</p>
+                                            @else
+                                                @for ($i = 0; $i < $stars; $i++)
+                                                    <small class="fa fa-star text-primary"></small>
+                                                @endfor
+                                            @endif
+
                                             </div>
                                         </div>
                                         <p class="text-body mb-3">{{ \Illuminate\Support\Str::limit($hotelDetail->hotelDiscription, 250, '...') }}</p>

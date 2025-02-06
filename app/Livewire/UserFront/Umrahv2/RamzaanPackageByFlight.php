@@ -18,6 +18,7 @@ class RamzaanPackageByFlight extends Component
     public $searchCity;
     public $searchDays;
     public $packageDays;
+    public $searchPackage;
 
     public function mount()
     {
@@ -63,8 +64,8 @@ class RamzaanPackageByFlight extends Component
         ->where('departure_type',strtolower(__('message.flight')));
 
 
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
+        if ($this->searchPackage) {
+            $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
         if ($this->searchDays) {
             $query->where('package_days', 'like', '%' . $this->searchDays . '%');
