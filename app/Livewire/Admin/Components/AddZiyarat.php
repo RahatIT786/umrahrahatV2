@@ -23,7 +23,7 @@ class AddZiyarat extends Component
 {
     use LivewireAlert, WithFileUploads;
 
-    public $package_name = 'default value', $packageImage, $packageDescription;
+    public $package_name , $packageImage, $packageDescription;
     public $package_type_ids = [];
     public $makka_rating = [];
     public $makkaHotel = [], $makka_hotel = [];
@@ -198,62 +198,7 @@ public $hotelIdsString;
             ->pluck('hotelName', 'id')->toArray();
         $this->madinaHotel[$index] = $hotels;
     }
-    private function validatePackage($key)
-    {
-        $this->validate([
-            'package_name' => 'required',
-            'service_type' => 'required',
-            'package_days' => 'required',
-            'package_type_ids' => 'required|array|min:1',
-            'packageDescription' => 'required',
-            'packageImage' => 'required',
-            'paymentPolicy' => 'required',
-            'importantNotes' => 'required',
-            'cancellationPolicy' => 'required',
-            'packageInclusion' => 'required',
-            'packageExclusion' => 'required',
-            'packageItinerary' => 'required',
-            'FlightTransport' => 'required',
-            'packageMeals' => 'required',
-            'packageVisaTaxes' => 'required',
-            
-            'makka_rating.' . $key => 'required',
-            'makka_hotel.' . $key => 'required',
-            'madina_rating.' . $key => 'required',
-            'madina_hotel.' . $key => 'required',
-            'food_type.' . $key => 'required',
-            'laundray_type.' . $key => 'required',
-            
-            'g_share_price.' . $key => 'required|numeric|min:0',
-            'qt_share_price.' . $key => 'nullable|numeric|min:0',
-            'qd_share_price.' . $key => 'nullable|numeric|min:0',
-            't_share_price.' . $key => 'nullable|numeric|min:0',
-            'd_share_price.' . $key => 'nullable|numeric|min:0',
-            'single_price.' . $key => 'nullable|numeric|min:0',
-            
-            'child_w_b.' . $key => 'required|numeric|min:0',
-            'child_wo_b.' . $key => 'required|numeric|min:0',
-            'infants.' . $key => 'required|numeric|min:0',
-        ], [
-            'makka_rating.' . $key . '.required' => 'Please select a hotel rating for Makkah.',
-            'makka_hotel.' . $key . '.required' => 'Please select a hotel for Makkah.',
-            'madina_rating.' . $key . '.required' => 'Please select a hotel rating for Madinah.',
-            'madina_hotel.' . $key . '.required' => 'Please select a hotel for Madinah.',
-            'food_type.' . $key . '.required' => 'Please enter the food type.',
-            'laundray_type.' . $key . '.required' => 'Please enter the laundry type.',
-            
-            'g_share_price.' . $key . '.required' => 'Please enter the general sharing price.',
-            'qt_share_price.' . $key . '.nullable' => 'Please enter the quint sharing price if applicable.',
-            'qd_share_price.' . $key . '.nullable' => 'Please enter the quad sharing price if applicable.',
-            't_share_price.' . $key . '.nullable' => 'Please enter the triple sharing price if applicable.',
-            'd_share_price.' . $key . '.nullable' => 'Please enter the double sharing price if applicable.',
-            'single_price.' . $key . '.nullable' => 'Please enter the single sharing price if applicable.',
-            
-            'child_w_b.' . $key . '.required' => 'Please enter the price for child with bed.',
-            'child_wo_b.' . $key . '.required' => 'Please enter the price for child without bed.',
-            'infants.' . $key . '.required' => 'Please enter the price for infant.',
-        ]);
-    }
+
 
     protected $rules = [
         'package_name' => 'required',
@@ -280,6 +225,32 @@ public $hotelIdsString;
         'child_wo_b' => 'required',
         'infants' => 'required',
         'includes' => 'required',
+    ];
+
+    protected $messages = [
+        'package_name.required' => 'package master name is required.',
+        'service_type.required' => 'package name is required.',
+        'package_days.required' => 'Package Day is required.',
+        'packageDescription.required' => 'Package Description is required.',
+        'paymentPolicy.required' => 'Payment Policy is required.',
+        'importantNotes.required' => 'Important Notes is required.',
+        'cancellationPolicy.required' => 'Cancellation Policy Notes is required.',
+        'packageInclusion.required' => 'Package Inclusion is required.',
+        'packageExclusion.required' => 'Package Exclusion  is required.',
+        'packageItinerary.required' => 'Package Itinerary is required.',
+        'FlightTransport.required' => 'Flight Transport is required.',
+        'packageMeals.required' => 'Package Meals is required.',
+        'packageVisaTaxes.required'=> 'Package Visa Taxes is required',
+        'g_share_price.required' => 'g_share_price is required.',
+        'qt_share_price.required' => 'qt_share_price is required.',
+        'qd_share_price.required' => 'qd_share_price is required.',
+        't_share_price.required' => 't_share_price is required.',
+        'd_share_price.required' => 'd_share_price is required.',
+        'single_price.required' => 'single_price is required.',
+        'child_w_b.required' => 'child_w_b is required.',
+        'child_wo_b.required' => 'child_wo_b is required.',
+        'infants.required' => 'infants is required.',
+        'includes.required' => 'includes is required.',
     ];
     
 

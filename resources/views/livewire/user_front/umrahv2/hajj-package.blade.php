@@ -59,7 +59,7 @@
                                     <img class="img-fluid" 
                                          src="{{Storage::url($package->packageImage) ? Storage::url($package->packageImage) : asset('asserts/user/img/haj/masque.jpg')}}" 
                                          alt="" 
-                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                                         style="width: 100%; height: 30rem; object-fit: cover; border-radius: 15px;">
                                     <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded mb-3 py-1 px-3 ms-4">{{$package->package_days}} days</small> -->
                                 </div>
                             </div>

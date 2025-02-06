@@ -108,7 +108,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        @error('departureCity') <span class="text-danger">{{ $message }}</span> @enderror
+                        @error('departureCities') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
                   <!-- Laundry Type -->
@@ -124,7 +124,7 @@
                     </div>
 
                             <!-- Meal Type -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-6">
                             <label for="SuperSaver_MealType" class="form-label">Meal Type</label>
                             <select class="form-control" wire:model="food_type" >
                                 <option value="">Select Meal Type</option>
