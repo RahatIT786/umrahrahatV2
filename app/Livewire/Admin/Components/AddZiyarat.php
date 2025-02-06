@@ -316,7 +316,7 @@ public $hotelIdsString;
                  $package = MainZiyarat::create($pkg_data);
 
 
-                    session()->flash('message', 'Package details added successfully!');
+                    session()->flash('message', 'Ziyarat details added successfully!');
 
                     $this->reset([
                         'package_name',

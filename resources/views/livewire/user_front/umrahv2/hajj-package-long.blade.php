@@ -51,20 +51,20 @@
                     @foreach ( $allPackages as $package  )
                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="room-item shadow rounded overflow-hidden">
-                        <div class="row g-0">
+                        <div style="height: 20rem;" class="row">
                             <!-- Left Column: Image Section -->
-                            <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
-                                <div class="position-relative package-image">
-                                    <img class="img-fluid" 
+                            <div style="height: 300px;" class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
+                                <div class=" ">
+                                    <img class="" 
                                          src="{{Storage::url($package->packageImage) ? Storage::url($package->packageImage) : asset('asserts/user/img/haj/masque.jpg')}}" 
                                          alt="" 
-                                         style="width: 100%; height: 30rem; object-fit: cover; border-radius: 15px;">
+                                         style="width: 100%; height: 17rem; object-fit: cover; border-radius: 15px;">
                                     <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded mb-3 py-1 px-3 ms-4">{{$package->package_days}} days</small> -->
                                 </div>
                             </div>
 
                             <!-- Right Column: Package Details -->
-                            <div class="col-lg-8 col-md-8 p-4 mt-2">
+                            <div style="height: 30rem;" class="col-lg-8 col-md-8 px-4 mt-0">
                                 <div class="d-flex justify-content-between mb-0">
                                    <div>
                                     <h4 class="mb-0 " style="font-weight: 600;"> {{ucfirst($package->name)}}</h4>
@@ -143,8 +143,9 @@
 
                                     
                                     </div>
-                                    <div>
-                                         <p class=""> <strong>Total Days :</strong> {{$package->package_days}} Days</p>
+                                    <div class="d-flex justify-content-between">
+                                         <p class=""> <strong>Total Days :</strong> {{$package->package_days}} Days ,</p>
+                                         <p class="mx-3"> <strong> Makkah Nights:</strong> {{$package->package_days}}, &nbsp; <strong> Madina Nights:</strong> {{$package->package_days}}</p>
                                     </div>
                                    </div>
                                    @php
@@ -172,23 +173,28 @@
                                 </div>
 
                                 <div>
-                                    <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">{{$package->makkah_nights}} Nights Makkah , {{$package->madina_nights}} Nights Madina</p>
+                                    <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="">
+                                       
+                                          <span class="mx-3"> <span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Makkah Hotel : </span><span >{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span></span> 
+                                          <span class="mx-3"> <span class="mx-3" style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Madina Hotel : </span><span >{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span></span>  
+                                       
+                                    </p>
                                 </div >
                                   <div class="d-flex justify-content-between">
                                     <div>
                                     <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-bus"></i> Departure Days : </span><span >Every Wednesday</span>   </div>
-                                    <div class="mb-2" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Makka Hotel : </span><span ><span>{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> </span>  </div>
-                                    <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Madina Hotel : </span><span ><span>{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span> </span> </div>
+                                        @php
+                                            $departCities = explode(',', $package->depart_city);
+                                        @endphp
+                                    <div class="mb-2" style="font-weight:500;">
+                                        <span style="font-weight:500; color: #0D1425;"> <i class="bi bi-geo-alt-fill">
+                                        </i> Departure cities :
+                                        @foreach ($departCities as $city)
+                                            {{ $city }} ,
+                                        @endforeach
+                                        </span>
+                                    </div>
                                     <div class="d-flex align-items-center  flex-md-row flex-column">
-                                        {{-- @if($package->packageDetail && $package->packageDetail->hotelDetail)
-                                                <p>{{ $package->packageDetail->hotelDetail->hotelName ?? 'Hotel Name Not Available' }}</p>
-                                        @else
-                                        <p>Hotel details not available</p>
-                                        @endif --}}
-
-
-                                    
-                                        
                                         </div>
                                         <div>
                                             <div class="d-flex mb-2">
@@ -216,10 +222,7 @@
                                     </div>
 
                                 </div>
-                               
-                                
                                 {{-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> --}}
-
                             </div>
                         </div>
                     </div>
