@@ -20,33 +20,44 @@
                             @error('sightName') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
+                        <!-- Currency Selection -->
+                        <div class="col-md-6 mb-3 ">
+                            <label class="form-label">Select Currency</label>
+                            <div class="d-flex">
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyINR" name="currency" value="INR" wire:model="currency" class="form-check-input">
+                                    <label for="currencyINR" class="form-check-label">INR</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyAED" name="currency" value="AED" wire:model="currency" class="form-check-input">
+                                    <label for="currencyAED" class="form-check-label">AED</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyUSD" name="currency" value="USD" wire:model="currency" class="form-check-input">
+                                    <label for="currencyUSD" class="form-check-label">USD</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencySAR" name="currency" value="SAR" wire:model="currency" class="form-check-input">
+                                    <label for="currencySAR" class="form-check-label">SAR</label>
+                                </div>
+                                @error('currency') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                        </div>
+
                         <!-- Hotel Price -->
                         <div class="col-md-6 mb-3">
-                            <label for="sightPrice" class="form-label">Sight Price</label>
+                            <label for="sightPrice" class="form-label">Sight Price (4 peoples)</label>
                             <input type="text" id="sightPrice" wire:model="sightPrice" class="form-control" placeholder="Enter Sight Price">
                             @error('sightPrice') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <!-- Currency Selection -->
-                        <div class="col-md-12 mb-3">
-                            <label class="form-label">Select Currency</label>
-                            <div class="form-check">
-                                <input type="radio" id="currencyINR" name="currency" value="INR" wire:model="currency" class="form-check-input">
-                                <label for="currencyINR" class="form-check-label">INR</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencyAED" name="currency" value="AED" wire:model="currency" class="form-check-input">
-                                <label for="currencyAED" class="form-check-label">AED</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencyUSD" name="currency" value="USD" wire:model="currency" class="form-check-input">
-                                <label for="currencyUSD" class="form-check-label">USD</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencySAR" name="currency" value="SAR" wire:model="currency" class="form-check-input">
-                                <label for="currencySAR" class="form-check-label">SAR</label>
-                            </div>
-                            @error('currency') <span class="text-danger">{{ $message }}</span> @enderror
+
+
+                        <!-- Hotel Price -->
+                        <div class="col-md-6 mb-3">
+                            <label for="sightPrice1" class="form-label">Sight Price (7 peoples)</label>
+                            <input type="text" id="sightPrice1" wire:model="sightPrice1" class="form-control" placeholder="Enter Sight Price">
+                            @error('sightPrice1') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
 

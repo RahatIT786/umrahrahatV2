@@ -16,6 +16,7 @@ class sightController extends Model
     protected $fillable = [
         'sightName',
         'sightPrice',
+        'sightPrice1',
         'currency',
         'sightCity',
         'sightDiscription',
