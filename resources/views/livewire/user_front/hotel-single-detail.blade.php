@@ -1,21 +1,4 @@
 <section class="hotel-page" style="margin-bottom:100px">
-    <!-- Hotel Banner Start -->
-    <div class="container-fluid p-0 mb-5 hotel-banner">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('asserts/user/img/haj/mecca1.jpg') }}" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 700px;">
-                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                            <h1 class="display-3 text-white mb-4 animated slideInDown">{{ $hotel_detail->hotelName }}</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Hotel Banner End -->
 
     <!-- Hotel Details Start -->
     <div class=" py-5 hotel-details" id="hotel-details">
@@ -168,7 +151,7 @@
             <div class="container" style="width: 100%;">
                 <div class="nav nav-tabs-package" id="nav-tab" role="tablist" style="width: 100%;">
                     <div class="nav-item-package ">
-                        <a href="#Hotels" id="lnkHotels" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package active" data-bs-toggle="tab" role="tab" aria-selected="true">Discription</a>
+                        <a href="#Hotels" id="lnkHotels" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package active" data-bs-toggle="tab" role="tab" aria-selected="true">Description</a>
                     </div>
                     <!-- <div class="nav-item-package">
                         <a href="#TourCost" id="lnkTourCost" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Contact</a>
@@ -185,10 +168,10 @@
                     <div class="nav-item-package">
                         <a href="#PaymentPolicy" style="text-decoration: none;font-size:14px;font-weight:600;" id="lnkPaymentPolicy" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Getting around</a>
                     </div>
-                    <!-- <div class="nav-item-package">
-                        <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Itinerary</a>
+                     <div class="nav-item-package">
+                        <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Map</a>
                     </div>
-                    <div class="nav-item-package">
+                    <!--<div class="nav-item-package">
                         <a href="#PaymentPolicy" id="lnkPaymentPolicy" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Payment Policy / Important Notes</a>
                     </div>
                     <div class="nav-item-package">
@@ -348,7 +331,7 @@
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 mb-3">
                                             <div class="box box-1">
-                                                <h5 style="font-size:xx-large">Discription</h5>
+                                                <h5 style="font-size:xx-large">Description</h5>
                                                 <ul style=" list-style-type: none; padding-left: 0;">
                                                 @foreach (explode('.', $hotel_detail->hotelDiscription) as $sentence)
                                                     @if(trim($sentence))
@@ -590,180 +573,18 @@ li {
 }
 
     </style>
-</div>
-
-
+            </div>
 
             <!-- Itinerary -->
             <div id="Itinerary" class="tab-pane fade show" role="tabpanel">
                 <div class="container">
                     <div class="row" style="margin-top:40px">
-
-                        <!-- itenary -->
-                        <div class="container">
-                            <div class="timeline">
-                              
-                            </div>
+                        <div class="col-md-12  " data-wow-delay="0.1s">
+                        <iframe class=" rounded w-100 h-100"
+                            src="{{$hotel_detail->hotelMap}}"
+                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
                         </div>
-        <!-- itenaru -->
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Niramit:300,300i,700');
-
-/* Global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Colors */
-:root {
-  /* --primary: #1d8cf8;
-  --secondary: #FEA116;
-  --info: #11cdef;
-  --success: #00bf9a;
-  --warning: #ff8d72;
-  --danger: #fd5d93; */
-
-  /* --body-bg: #1e1e2f; */
-  --timeline-before-bg: #FEA116;
-  --timeline-body-bg: #FEA116;
-  --timeline-body-round: 3px;
-  --timeline-body-shadow: 1px 3px 9px rgba(0,0,0, .1);
-}
-
-
-/* Timeline style */
-.timeline {
-  position: relative;
-  padding-left: 4rem;
-  margin: 0 0 0 30px;
-  color: white;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--timeline-body-bg);
-}
-
-.timeline-container {
-  position: relative;
-  margin-bottom: 2.5rem;
-}
-
-.timeline-icon {
-  position: absolute;
-  left: -88px;
-  top: 4px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 2rem;
-  background: #FEA116;
-}
-
-.timeline-icon i {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.timeline-icon img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.timeline-body {
-  background: var(--timeline-body-bg);
-  border-radius: var(--timeline-body-round);
-  padding: 20px 20px 15px;
-  box-shadow: var(--timeline-body-shadow);
-}
-
-.timeline-body::before {
-  content: '';
-  background: inherit;
-  width: 20px;
-  height: 20px;
-  display: block;
-  position: absolute;
-  left: -10px;
-  transform: rotate(45deg);
-  border-radius: 0 0 0 2px;
-}
-
-.timeline-title {
-  margin-bottom: 1.4rem;
-}
-
-.timeline-title .badge {
-  background:#FEA116;
-  padding: 4px 8px;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.timeline-subtitle {
-  font-weight: 300;
-  font-style: italic;
-  opacity: .4;
-  margin-top: 16px;
-  font-size: 11px;
-}
-
-/* Primary Timeline */
-.primary .badge,
-.primary .timeline-icon {
-  background: #1d8cf8 !important;
-}
-
-/* Info Timeline */
-.info .badge,
-.info .timeline-icon {
-  background: var(--info) !important;
-}
-
-/* Success Timeline */
-.success .badge,
-.success .timeline-icon {
-  background: var(--success) !important;
-}
-
-/* Warning Timeline */
-.warning .badge,
-.warning .timeline-icon {
-  background: var(--warning) !important;
-}
-
-/* Danger Timeline */
-.danger .badge,
-.danger .timeline-icon {
-  background: var(--danger) !important;
-}
-
-.author {
-  font-family: inherit;
-  padding: 3em;
-  text-align: center;
-  width: 100%;
-  color: white;
-}
-
-.author a:link,
-.author a:visited {
-  color: white;
-}
-
-</style>
                     </div>
                 </div>
             </div>
@@ -810,9 +631,9 @@ li {
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+
 </div>
 
 </div>

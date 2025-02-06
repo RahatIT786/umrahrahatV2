@@ -86,13 +86,13 @@
                                         </div>
                                         <div class="d-flex mb-3 ">
                                             <small class="border-end me-3 pe-3">
-                                                <i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $hotelDetail->hotelCity }}
+                                               <a href="{{$hotelDetail->hotelMap}}"></a> <i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $hotelDetail->hotelCity }}
                                             </small>
                                             <small class="border-end me-3 pe-3">
                                                 <i class="fa fa-wifi text-primary me-2"></i>
                                             </small>
-                                            <small class="border-end me-3 pe-3">
-                                                <i class="fa-brands fa-youtube"></i>
+                                            <small  class="border-end me-3 pe-3">
+                                              <a href="{{$hotelDetail->hotelYouTube}}"> <i style="font-size: 20px;color:red" class="fa-brands fa-youtube"></i></a> 
                                             </small>
                                             <!-- Star Rating -->
                                             @php
