@@ -248,8 +248,8 @@
                                      <option value="3">Three Star</option>
                                      <option value="4">Four Star</option>
                                      <option value="5">Five Star</option>
-                                     <option value="Standard Hotel">Standard Hotel</option>
-                                     <option value="Building Accommodation">Building Accommodation</option>
+                                     <option value="7">Standard Hotel</option>
+                                     <option value="6">Building Accommodation</option>
                                 </select>
                                 @error("makka_rating.{$k}")<span class="text-danger">{{ $message }}</span> @enderror
                             </div>

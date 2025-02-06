@@ -1,20 +1,20 @@
 <section class="" style="margin-bottom:100px">
     <!-- Hotel Banner Start -->
-    <div class=" p-0 mb-5 hotel-banner">
+    {{-- <div class=" p-0 mb-5 hotel-banner">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="w-100" src="{{ asset('asserts/user/img/haj/mecca1.jpg') }}"  alt="Image" style="height: 15vh; object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
-                            <!-- <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6> -->
+                             <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6> 
                             <h1 class="text-white mb-4 animated slideInDown">{{ $this->packages->name }}</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Hotel Banner End -->
 
     <!-- Hotel Details Start -->
