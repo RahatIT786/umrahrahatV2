@@ -3,6 +3,14 @@
  <!-- This is where the content from the Livewire component will be injected -->
 
 <style>
+@keyframes jump {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px); /* Moves the icon up by 10px */
+        }
+    }
  
 #whatsapp{
     height: clamp(25px,30vw,5rem);
@@ -11,6 +19,7 @@
     right: 10px;
     bottom:6rem;
     cursor: pointer;
+    animation: jump 1.5s infinite ease-in-out; 
   
 }
 #call{
@@ -21,6 +30,7 @@
     left: 1rem;
     bottom:7rem;
     cursor: pointer;
+     animation: jump 1.5s infinite ease-in-out; 
   
 
 }

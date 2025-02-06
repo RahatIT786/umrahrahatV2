@@ -54,10 +54,10 @@
                                     <p class="mb-0"><a href=""  style="text-transform:uppercase;color:#666565;  font-size: 14px; font-weight: 500;" >user login</a></p>
                                 </div>
                                 <a class="me-3" >|</a>
-                                <a class="me-3" href="https://www.facebook.com/rahattravelsofindia/"><i class="fab fa-facebook-f"></i></a>
-                                <a class="me-3" href="https://x.com/i/flow/login?redirect_after_login=%2FRahatTravelsInd"><i class="fab fa-twitter"></i></a>
-                                <a class="me-3" href="https://www.linkedin.com/in/imran-rahat-00267274/"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="me-3" href="https://www.instagram.com/rahattravelsofindia/"><i class="fab fa-instagram"></i></a>
+                                <a class="me-3 " href="https://www.facebook.com/rahattravelsofindia/"><i class="fab fa-facebook-f "></i></a>
+                                <a class="me-3 " href="https://x.com/i/flow/login?redirect_after_login=%2FRahatTravelsInd"><i class="fab fa-twitter"></i></a>
+                                <a class="me-3 " href="https://www.linkedin.com/in/imran-rahat-00267274/"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-3 " href="https://www.instagram.com/rahattravelsofindia/"><i class="fab fa-instagram"></i></a>
                                 <a class="" href="https://www.youtube.com/@RahatGroup"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0 " >
                                 <div class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center" id="umrahDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" id="umrahDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                         <img style="height:30px;" src="{{asset('images/umrah_Icon.png')}}" alt="">
                                         <span>Umrah</span>
                                     </a>
@@ -226,6 +226,16 @@
       </div>
   <!-- Header End -->
 
+
+  <style>
+    .zoom-effect img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-effect:hover img {
+    transform: scale(1.4); /* Adjust the zoom scale value as per your requirement */
+}
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </section>
