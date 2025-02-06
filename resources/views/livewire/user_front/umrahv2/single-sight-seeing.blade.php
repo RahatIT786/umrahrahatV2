@@ -2,21 +2,7 @@
     <!-- ------------------------------------------------------------------ -->
 <!-- ---------------------- Start Makkah Sightseeing ---------------- -->
 <!-- ------------------------------------------------------------------ -->
-        <div class="container-fluid p-0 mb-5">
-            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="w-100 " src="{{asset('asserts/user/img/haj/mecca1.jpg')}}" alt="Image" style="height: 30vh; object-fit: cover;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
-                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">{{$sight_detail->sightName}}</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 <div class="container mt-5 mb-5">
     <h4 class="text-center text-dark mb-5 font-weight-bold">Explore Makkah's Historical & Spiritual Landmarks</h4>
     <style>
@@ -60,7 +46,7 @@
                 <div class="card-body d-flex flex-column flex-grow-1">
                     <div class="d-flex justify-content-between">
                         <h3 class="card-title text-dark font-weight-semibold mb-5">{{$sight_detail->sightName}}</h3>
-                        <p class="price-box">Price for 4 people: 200 AED</p>
+                        <p class="price-box">Price for 4 people: {{$sight_detail->sightPrice}} AED</p>
                     </div>
                     <div  class="d-flex justify-content-between">
                         <div class="d-flex">
@@ -68,7 +54,7 @@
                             <h5>{{$sight_detail->sightCity}}</h5>
                         </div>
                         <div>
-                        <p class="price-box1">Price for 7 people: 300 AED</p>
+                        <p class="price-box1">Price for 7 people:{{$sight_detail->sightPrice1}} AED</p>
                         </div>
                     </div>
                     <h6 class="card-text text-dark font-italic">

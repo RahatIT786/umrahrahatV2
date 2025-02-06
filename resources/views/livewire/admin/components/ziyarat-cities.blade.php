@@ -22,7 +22,7 @@
         <div class="d-flex align-items-center mb-3">
             <h4 class="mb-0"></h4>
             <form class="ms-auto position-relative" wire:submit.prevent="">
-                <input type="text" class="form-control" placeholder="Search Hotel Cities" wire:model.live="search">
+                <input type="text" class="form-control" placeholder="Search Ziyarat Cities" wire:model.live="search">
             </form>
         </div>
 

@@ -116,12 +116,6 @@
                                      <span style="font-size: 12px;">zamzam</span>
                                      </div>
 
-                                    @elseif ($include == 3)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""> <i class="fa-solid fa-bus"></i></span> 
-                                    <span style="font-size: 12px;">Bus</span>
-                                    </div>
-
                                     @elseif ($include == 4)
                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class=""> <i class="fa-solid fa-sim-card"></i></span> 
@@ -178,7 +172,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between">
                                          <p class=""> <strong>Total Days :</strong> {{$package->package_days}} Days ,</p>
-                                         <p class="mx-3"> <strong> Makkah Nights:</strong> {{$package->package_days}}, &nbsp; <strong> Madina Nights:</strong> {{$package->package_days}}</p>
+                                         <p class="mx-3"> <strong> Makkah Nights:</strong> {{$package->makkah_nights}}, &nbsp; <strong> Madina Nights:</strong> {{$package->madina_nights}}</p>
                                     </div>
                                    </div>
                                    @php

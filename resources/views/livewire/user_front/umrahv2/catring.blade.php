@@ -8,38 +8,6 @@
             </div>
         </div>
         <!-- Page Header End -->
-        <!-- <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
-    <div class="container">
-        <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
-            <div class="row g-2">
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="clients-count">0</h2>
-                        <h5>Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="success-rate">0</h2>
-                        <h5>Success Rate</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="rating-clients">0</h2>
-                        <h5>Rating Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="experience-years">0</h2>
-                        <h5>Years of Experience</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 
         <!-- Room Start -->
         <div class="container-xxl py-5">
@@ -64,6 +32,7 @@
                                         <div class="d-flex justify-content-between my-3">
                                             <h5 class="mb-0">{{$food['foodType']}}</h5>
                                             <div>
+                                                <img src="{{asset('asserts/user/img/halalimg.png')}}" alt="halal" style="height:4rem;padding-bottom:20px">
                                                 <a href="{{Storage::url($food['footPdf'])}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-filetype-pdf mx-3"></i></a> 
                                                 <a href="{{$food['foodLunch']}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-youtube mx-3"></i></a> 
                                             </div>
