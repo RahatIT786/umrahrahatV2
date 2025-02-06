@@ -238,6 +238,33 @@ function closeForm() {
         color: #ff8c00;
     }
   }
+
+  #header-2{
+    color:#0ed30e;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+   /* animation: blink 1.5s infinite ease-in-out; */
+  }
+
+  /* @keyframes blink{
+    20%{
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    }
+    60%{
+        text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.8);
+    }
+    80%{
+        text-shadow: 6px 6px 8px rgba(255, 255, 255, 0.8);
+    }
+  } */
+  /* @keyframes textGlow {
+    0% { text-shadow: 0 0 5px #0ed30e, 0 0 10px #0ed30e; }
+    50% { text-shadow: 0 0 10px #ffffff, 0 0 20px #ffeb3b; }
+    100% { text-shadow: 0 0 5px #0ed30e, 0 0 10px #0ed30e; }
+}
+
+.glowing-text {
+    animation: textGlow 1.5s infinite alternate;
+} */
   
   </style>
 
@@ -255,26 +282,29 @@ function closeForm() {
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100 " src="{{asset('asserts/user/img/haj/mecca1.jpg')}}" alt="Image" style="height: 70vh; object-fit: cover;">
+                        <img class="w-100 " src="{{asset('newImg/IMG_3185.JPG')}}" alt="Image" style="height:50vh; object-fit: cover; object-position: center bottom;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
+                            {{-- <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                                <h5 class="text-white mb-4 animated slideInDown">Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
+                                <h5 class="text-white mb-4 animated slideInDown" style="">Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
                                 makes that sacred experience all that much better</h5>
                                 <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{__('message.exp_package')}}</a>
                                 <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">{{__('message.exp_hotel')}}</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100 " src="{{asset('asserts/user/img/haj/mecca3.jpg')}}" alt="Image" style="height: 70vh;">
+                        <img class="w-100" src="{{asset('newImg/vecteezy_islamic-2.jpg')}}" alt="Image" style="height:50vh; object-fit: cover; object-position: center;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
+                            {{-- <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
-                                <h5 class=" text-white mb-4 animated slideInDown">RAHAT GROUP, your premier partner in facilitating memorable and spiritually enriching Holy pilgrimages.</h5>
+                                <h1 class="text-white mb-4 animated slideInDown glowing-text">
+                                    Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
+                                    makes that sacred experience all that much better
+                                </h1>
                                 <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{__('message.exp_package')}}</a>
                                 <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">{{__('message.exp_hotel')}}</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -379,16 +409,16 @@ function startAnimations() {
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('asserts/user/img/haj/macca.jpg')}}" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('newImg/mosque-6153752_640.jpg')}}" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('asserts/user/img/haj/childmeccac.jpg')}}">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('newImg/masque.jpg')}}">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('asserts/user/img/haj/masque.jpg')}}">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('newImg/yasmine-arfaoui.jpg')}}">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('asserts/user/img/haj/peopelmacca.jpg')}}">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('newImg/IMG_3179.JPG')}}">
                             </div>
                         </div>
                     </div>
