@@ -18,6 +18,7 @@ class HajjPackageLong extends Component
     public $searchCity;
     public $searchDays;
     public $packageDays;
+    public $searchPackage;
 
     public function mount()
     {
@@ -63,8 +64,8 @@ class HajjPackageLong extends Component
         ->where('service_type', '2')
         ->where('package_days', '>', 18);
         
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
+        if ($this->searchPackage) {
+            $query->where('depart_city', 'like', '%' . $this->searchPackage . '%');
         }
         if ($this->searchDays) {
             $query->where('package_days', 'like', '%' . $this->searchDays . '%');

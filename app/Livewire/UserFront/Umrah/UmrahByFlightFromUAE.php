@@ -29,6 +29,7 @@ class UmrahByFlightFromUAE extends Component
     public $date_of_travel;
     public $total_pax;
     public $travel_type;
+    public $searchPackage;
 
     protected $rules = [
         'name' => 'required|string|max:255',
@@ -112,12 +113,10 @@ class UmrahByFlightFromUAE extends Component
        
 
     
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
+        if ($this->searchPackage) {
+            $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
-        if ($this->searchDays) {
-            $query->where('package_days', 'like', '%' . $this->searchDays . '%');
-        }
+
         $this->allPackages = $query->get();
         // dd( $this->allPackages);
         // Render the Livewire view with allPackages data

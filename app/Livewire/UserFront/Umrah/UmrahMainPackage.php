@@ -18,6 +18,7 @@ class UmrahMainPackage extends Component
     public $searchCity;
     public $searchDays;
     public $packageDays;
+    public $searchPackage;
 
     public function mount()
     {
@@ -57,11 +58,8 @@ class UmrahMainPackage extends Component
     {
         // Fetch all main packages with delete_status 1
         $query = MainPackage::where('delete_status', 1);
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
-        }
-        if ($this->searchDays) {
-            $query->where('package_days', 'like', '%' . $this->searchDays . '%');
+        if ($this->searchPackage) {
+            $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
         $this->allPackages = $query->get();
         // Render the Livewire view with allPackages data
