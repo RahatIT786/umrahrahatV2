@@ -55,7 +55,7 @@
                         <div class="row g-2">
                             <div class="col-md-8">
                                 <form wire:submit.prevent="" class="date" id="date2" >
-                                    <input  wire:model.live="searchHotel" type="text" class="form-control" placeholder="Search Package Name" />
+                                    <input  wire:model.live="searchPackage" type="text" class="form-control" placeholder="Search Package Name" />
                                 </form>
                             </div>
                             <div class="col-md-4">
@@ -100,7 +100,7 @@
                             <div class="col-lg-8 col-md-8 p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-0">
                                    <div>
-                                    <h4 class="mb-0 " style="font-weight: 600;">{{ucfirst($package->packageType->packageType)}} - {{ucfirst($package->name)}}</h4>
+                                    <h4 class="mb-0 " style="font-weight: 600;"> {{ucfirst($package->name)}}</h4>
                                     <div class="d-flex my-4">
                                     <p style="font-weight: bold;" class="my-1">Inclusion :</p>
                                     @php

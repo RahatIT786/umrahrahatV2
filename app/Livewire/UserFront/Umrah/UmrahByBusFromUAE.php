@@ -24,6 +24,8 @@ class UmrahByBusFromUAE extends Component
     //for enquire form variables
     public $umrahEmquire;
 
+    public $searchPackage;
+
     //popup form variable 
     public $name;
     public $mobile;
@@ -108,13 +110,10 @@ class UmrahByBusFromUAE extends Component
         ->where('service_type',strtolower(__('message.umrah')))
                 ->where('departure_type',strtolower(__('message.bus')));
     
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
+        if ($this->searchPackage) {
+            $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
         
-        if ($this->searchDays) {
-            $query->where('package_days', 'like', '%' . $this->searchDays . '%');
-        }
         $this->allPackages = $query->get();
         //  dd( $this->allCities);
         // Render the Livewire view with allPackages data
