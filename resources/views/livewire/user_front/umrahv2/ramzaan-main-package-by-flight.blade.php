@@ -104,61 +104,61 @@
                                     @endphp
                                     @foreach ($packageIncludesArray as $include)
                                     @if ($include == 2)
-                                     <div class="d-flex flex-column mx-3">
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                      <span style="font-size: 25px;" class="mx-2"> <i class="fa-solid fa-bottle-water"></i> </span> 
                                      <span style="font-size: 12px;">zamzam</span>
                                      </div>
 
                                     @elseif ($include == 3)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class=""> <i class="fa-solid fa-bus"></i></span> 
                                     <span style="font-size: 12px;">Bus</span>
                                     </div>
 
                                     @elseif ($include == 4)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class=""> <i class="fa-solid fa-sim-card"></i></span> 
                                     <span style="font-size: 12px;">Saudi SIM</span>
                                     </div>
 
                                     @elseif ($include == 5)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class=""><i class="fa-solid fa-bag-shopping"></i></span> 
-                                    <span style="font-size: 12px;">Welcome Kid</span>
+                                    <span style="font-size: 12px;">Welcome Kit</span>
                                     </div>
 
                                     @elseif ($include == 6)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class=""><i class="fa-solid fa-bowl-food"></i></span> 
                                     <span style="font-size: 12px;">Meals</span>
                                     </div>
 
                                     @elseif ($include == 7)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class="mx-2"><i class="fa-solid fa-person-praying"></i></span> 
                                     <span style="font-size: 12px;">Ziyarat</span>
                                     </div>
 
                                     @elseif ($include == 8)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class=""> <i class="fa-brands fa-cc-visa"></i></span> 
                                     <span style="font-size: 12px;">Visa</span>
                                     </div>
 
                                     @elseif ($include == 9)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class=""> <i class="fa-solid fa-ticket"></i></span> 
                                     <span style="font-size: 12px;">Ticket</span>
                                     </div>
 
                                     @elseif ($include == 10)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class="">  <i class="fa-solid fa-jug-detergent"></i></span> 
                                     <span style="font-size: 12px;">Laundry</span>
                                     </div>
 
                                     @elseif ($include == 11)
-                                    <div class="d-flex flex-column mx-3">
+                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
                                     <span style="font-size: 25px;" class="">  <i class="fa-solid fa-file-shield"></i></span> 
                                     <span style="font-size: 12px;">Barder Tax</span>
                                     </div>

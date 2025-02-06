@@ -15,8 +15,8 @@ class Transport extends Component
     {
         $this->carsectormaster = CarSector::select('car_sector', 'id')->where('delete_status',1)->get();
         $this->cartypemaster = CarType::select('car_type', 'id')->where('delete_status',1)->get();
-        $this->car_sector_id = $this->carsectormaster->first()->id ?? null; 
-        $this->car_type_id = $this->cartypemaster->first()->id ?? null; 
+        $this->car_sector_id = $this->carsectormaster[0]->id;
+       
     }
 
 

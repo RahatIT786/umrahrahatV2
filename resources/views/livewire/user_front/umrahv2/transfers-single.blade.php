@@ -55,7 +55,7 @@
                              </div>
                             </div>
                     <div class="border p-5 rounded booking-form" style="width: 450px;">
-                        <h4 class="mb-4 text-uppercase">Book Your Stay</h4>
+                        <h4 class="mb-4 text-uppercase">Book Your Car</h4>
                         <form>
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
