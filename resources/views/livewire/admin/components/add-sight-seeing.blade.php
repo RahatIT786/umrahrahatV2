@@ -87,19 +87,19 @@
 
                         
                         <!-- Hotel Discription -->
-                        <div class="col-md-6 mb-3">
+                        {{-- <div class="col-md-6 mb-3">
                             <label for="sightInclusion" class="form-label">Sight Discription</label>
                             <textarea id="sightInclusion" wire:model="sightInclusion" class="form-control" placeholder="Enter Sight Inclusion"></textarea>
                             @error('sightInclusion') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
                         
-                        <!-- Hotel Discription -->
+                         Hotel Discription -->
                         <div class="col-md-6 mb-3">
                             <label for="sightNotes" class="form-label">Sight Discription</label>
                             <textarea id="sightNotes" wire:model="sightNotes" class="form-control" placeholder="Enter Sight Notes"></textarea>
                             @error('sightNotes') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
+                        </div> --}}
 
                         <!-- File Upload for Main Hotel Image -->
                         <div class="col-md-6 mb-3">
