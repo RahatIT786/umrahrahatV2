@@ -80,82 +80,6 @@
                 </div>
                 <div class="row g-4">
                    
-                    {{-- @foreach ($allPackages as $package )
-                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="row g-0">
-                                <!-- Left Column: Image Section (col-4) -->
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="position-relative">
-                                        <img class="img-fluid" src="{{ Storage::url($package->packageImage) }}" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
-                                        <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">{{$package->package_days}} Days</small>
-                                    </div>
-                                </div>
-
-                                <!-- Right Column: Package Details Section (col-8) -->
-                                <div class="col-lg-8 col-md-6 p-4 mt-2">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mb-0">{{$package->name}}</h5>
-                                    </div>
-
-                                    <div class="container">
-                                        <!-- First Row for Inclusions -->
-                                        @php
-                                            // Convert the comma-separated string to an array
-                                            $packageIncludes = explode(',', $package->package_includes);
-                                        @endphp
-                                        <div class="row">
-                                            @foreach ($packageIncludes as $include)
-                                                @foreach ($inclusions as $includeItem)
-                                                    @if ($includeItem->id == $include)
-                                                        <div class="col-md-6 mb-3">
-                                                            @if ($includeItem->id == 2)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-bottle-water text-primary me-2"></i>ZamZam</small>
-                                                            @elseif($includeItem->id == 3)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-bus text-primary me-2"></i>Transport</small>
-                                                            @elseif($includeItem->id == 4)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-sim-card text-primary me-2"></i>Saudi Sim</small>
-                                                            @elseif($includeItem->id == 5)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-luggage-cart text-primary me-2"></i>Welcome Kit</small>
-                                                            @elseif($includeItem->id == 6)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-utensils text-primary me-2"></i>MEALS</small>
-                                                            @elseif($includeItem->id == 7)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-person-praying text-primary me-2"></i>ZIYARAT</small>
-                                                            @elseif($includeItem->id == 8)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-passport text-primary me-2"></i>VISA</small>
-                                                            @elseif($includeItem->id == 9)
-                                                                <small class="border-end me-3 pe-3"><i class="fa-solid fa-ticket text-primary me-2"></i>Ticket</small>
-                                                            @endif
-                                                        </div>
-                                                    @endif
-                                                @endforeach
-                                            @endforeach
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p style="border: 1px dashed #FEA116; padding: 2px 4px;" class="text-center">{{$package->package_days}} Days , {{$package->package_days - 1}} Nights</p>
-                                    </div>
-
-                                    <p class="text-body mb-3 text-justify">{{ \Illuminate\Support\Str::limit($package->description, 250, '...') }}</p>
-
-                                    <div class="d-flex justify-content-between">
-
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{ route('viewPackageDetails', ['package' => $package->id]) }}">
-                                            <i class="fa-solid fa-book"></i> View Package
-                                        </a>
-                                        <a class="btn btn-sm btn-dark rounded py-2 px-4">
-                                            <i class="fa-regular fa-paper-plane"></i> Book Enquire
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    @endforeach --}}
-
                     <!---package-start------>
                     @foreach ( $allPackages as $package  )
                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
@@ -191,12 +115,6 @@
                                      <span style="font-size: 25px;" class="mx-2"> <i class="fa-solid fa-bottle-water"></i> </span> 
                                      <span style="font-size: 12px;">zamzam</span>
                                      </div>
-
-                                    @elseif ($include == 3)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""> <i class="fa-solid fa-bus"></i></span> 
-                                    <span style="font-size: 12px;">Bus</span>
-                                    </div>
 
                                     @elseif ($include == 4)
                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">

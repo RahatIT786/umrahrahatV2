@@ -21,7 +21,6 @@
              <th>Adult</th>
              <th>Child</th>
              <th>Package name</th>
-             <th>Service type</th>
              <th>Departure type</th>
             </tr>
           </thead>
@@ -37,7 +36,6 @@
            <td>{{$q->package_user_adult}}</td>
            <td>{{$q->package_user_child}}</td>
            <td>{{$q->package_user_package_name}}</td>
-           <td>{{$q->serviceType->service_type}}</td>
            <td>{{$q->package_user_departure_type}}</td>
        </tr>
                

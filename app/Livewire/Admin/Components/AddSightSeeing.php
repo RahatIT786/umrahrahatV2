@@ -123,7 +123,7 @@ class AddSightSeeing extends Component
                 'sightImage3' => $sightImage3Path ?? $sight->sightImage3,
                 'deleteStatus' => $this->deleteStatus,
             ]);
-            session()->flash('message', 'Hotel details updated successfully!');
+            session()->flash('message', 'Sight details updated successfully!');
         } else {
             // Create new hotel record
             sightController::create([

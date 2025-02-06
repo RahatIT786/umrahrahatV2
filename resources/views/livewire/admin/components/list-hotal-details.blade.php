@@ -20,7 +20,7 @@
         <div class="d-flex align-items-center mb-3">
             <h4 class="mb-0">All Hotel</h4>
             <form class="ms-auto position-relative" wire:submit.prevent="">
-                <input type="text" class="form-control" placeholder="Search Visa" wire:model.live="search">
+                <input type="text" class="form-control" placeholder="Search Hotel" wire:model.live="search">
             </form>
         </div>
 
