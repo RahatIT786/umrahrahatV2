@@ -99,6 +99,7 @@ use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use App\Livewire\MissionVision;
 use App\Livewire\AgentSpeak;
+use App\Livewire\Agm;
 use App\Livewire\UserViewZiyarat;
 
 use App\Livewire\OurAwards;
@@ -201,6 +202,7 @@ Route::get('/why-choose-us',WhyChooseUs::class)->name('why-choose-us');
 Route::get('/partner-with-us',PartnerFooter::class)->name('partner-with-us');
 Route::get('/director-speak',DirectorSpeak::class)->name('director-speak');
 Route::get('/agent-speak',AgentSpeak::class)->name('agent-speak');
+Route::get('/agm',Agm::class)->name('agm');
 Route::get('/our-awards',OurAwards::class)->name('our-awards');
 
 //laundry routes
