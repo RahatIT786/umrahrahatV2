@@ -232,6 +232,12 @@ function closeForm() {
   #popupContainerHome .submit-btn:hover {
     background-color: #218838;
   }
+  ul li{
+    list-style: none;
+    i{
+        color: #ff8c00;
+    }
+  }
   
   </style>
 
@@ -390,6 +396,172 @@ function startAnimations() {
             </div>
         </div>
         <!-- About End -->
+
+        <!-----PACKAGE-CONTENT-START---------------->
+        <div class="container-xxl mt-3" id="about">
+            <div class="container" >
+                <div class="row  align-items-center">
+                   <a href="{{route('umrah-by-bus-from-uae')}}"> <h5>Umrah by Bus –  <span class="text-primary text-uppercase">Affordable & Comfortable Pilgrimage</span> </h5></a>
+                    <p>Experience a hassle-free and budget-friendly Umrah journey by bus without compromising on comfort. We are the only tour operator in the UAE offering Umrah packages with inclusive food, laundry, and Ziyarat services to ensure a seamless pilgrimage experience.</p>
+                <div>
+                <h5 style="text-decoration: underline; text-decoration-color: #ff8c00;">Flexible & Customizable Packages</h5>
+
+                <p>Choose from a variety of packages tailored to suit your budget and preferences:</p>
+                <ul>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Super Saver</li>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Bronze</li>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Silver</li>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Gold</li>
+                </ul>
+                <p>Need a personalized itinerary? We also offer customized packages to cater to special requests.</p>
+                </div>
+
+            <div class="px-3 py-3" style="border: 1px dashed #ff8c00; border-radius: 30px 0 30px 0;">
+
+                <div class="d-flex justify-content-between" >
+                    <div>
+                        <h5>What’s Included in Our Umrah Bus Packages?</h5>
+                        <p>Our all-inclusive packages cover:</p>
+                        <ul>
+                            <li>✔️ Comfortable Transportation</li>
+                            <li>✔️ One-Year Multiple Entry Tourist Visa</li>
+                            <li>✔️ Border Tax</li>
+                            <li>✔️ All Meals (Breakfast, Lunch & Dinner)</li>
+                            <li>✔️ Laundry Services</li>
+                            <li>✔️ Zamzam Water</li>
+                            <li>✔️ Guided Ziyarat Tours</li>
+                            <li>✔️ Accommodation in Mecca & Medina</li>
+                            <li>✔️ Transfers & Experienced Guides</li>
+                        </ul>
+                        
+                    </div>
+                        <div>
+                            <h5>10-Day Umrah by Bus Itinerary</h5>
+                        <ul>
+                            <li>🚌 Departure: Every Wednesday from Abu Dhabi, Dubai & Sharjah</li>
+                            <li>📅 Duration: 10 Days</li>
+                            <li>🕋 Mecca Stay: 6 Days</li>
+                            <li>🕌 Medina Stay: 2 Days</li>
+                            <li>🚍 Travel Time: 2 Days</li>
+                        </ul>
+                        </div>
+    
+                        
+                 </div>
+                 <p style="color: #0f172b">You’ll have the opportunity to perform one Jumma prayer in Mecca and one in Medina, making your journey even more spiritually rewarding</p>
+            </div>
+                  
+             <div class="d-flex justify-content-between mt-5" >
+                <div>
+                    <h5><i class="fa-solid fa-face-smile"></i> Additional Services</h5>
+                    <p>In addition to our Bus Packages, we also provide:</p>
+                    <ul>
+                        <li>✈️ Umrah by Air Packages</li>
+                        <li>🛂 Umrah Visa Services</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5><i class="fa-regular fa-folder-open"></i> Umrah Visa Requirements</h5>
+                    <p>To apply for an Umrah visa, you will need:</p>
+                    <ul>
+                        <li>📌 Original Passport (Valid for at least 6 months)</li>
+                        <li>📌 UAE Residence Visa / Permit (Valid for at least 3 months)</li>
+                        <li>📌 Copy of Emirates ID</li>
+                        <li>📌 Original Vaccination Card</li>
+                    </ul>
+                </div>
+
+             </div>
+
+
+             <div>  
+
+                <h5>Umrah Package by Air from Dubai <i class="fa-solid fa-plane-departure"></i></h5>
+                <p>At Umrah Rahat, we offer the most affordable and well-designed Umrah Packages by Air from Dubai, catering to individuals, couples, families, and groups.</p>
+                <div class="d-flex">
+                    <div>
+                        <h5 class="text-primary">What’s Included in Our Umrah Packages?</h5>
+                        <ul>
+                            <li><strong>✔ Choice of Accommodation</strong> – Stay in 3-star, 4-star, or 5-star hotels with sharing options</li>
+                            <li><strong>✔ Return Airfare</strong> – Seamless travel with round-trip tickets included</li>
+                            <li><strong>✔ Umrah Visa</strong> – Complete assistance with visa processing</li>
+                            <li><strong>✔ Private Family Packages Available</strong> – Umrah by Air without sharing accommodation for families</li>
+                        </ul>
+                        
+                    </div>
+                    <div>
+                        <h5  class="text-primary">Why Choose Us?</h5>
+                        <ul>
+                            <li><strong>🏆 Years of Expertise</strong> – Trusted specialists with extensive experience in Umrah tour management</li>
+                            <li><strong>😊 Satisfied Clients</strong> – A large and loyal customer base built through successful Umrah operations</li>
+                            <li><strong>✈ Airline Partnerships</strong> – Strong connections with multiple airlines to offer the best travel deals</li>
+                            <li><strong>💰 Best Value</strong> – Affordable, high-quality packages designed to suit every budget</li>
+                        </ul>
+                        
+                        
+                    </div>
+                </div>
+                <div class="pt-3" style="border-top: 1px solid #FEA116;">
+                    <h5>An Unforgettable Umrah Experience</h5>
+                    <p>Embark on the spiritual journey of a lifetime with Rahat Holidays, where we prioritize your comfort, convenience, and devotion. We understand the significance of Umrah and are committed to making it a seamless, sacred, and stress-free experience for you.</p>
+                    <h5>Why Choose Our Umrah Packages?</h5>
+                    <ul>
+                        <li><strong><i class="fa-solid fa-hotel"></i> Hand-Picked Hotels </strong> – Stay in Makkah hotels within walking distance of Al Masjid Al Haram</li>
+                        <li><strong><i class="fa-solid fa-plane-circle-check"></i> Hassle-Free Travel</strong> – We arrange your return flights & airport transfers from Jeddah</li>
+                        <li><strong><i class="fa-solid fa-heart"></i> Unbeatable Value</strong>  – Limited-time super low Umrah packages starting from just AED 999 per person</li>
+                        <li><strong><i class="fa-solid fa-hand-holding-heart"></i> Exclusive Perks</strong>  – Enjoy complimentary upgrades and added extras for a more rewarding pilgrimage</li>
+                        <li><strong><i class="fa-solid fa-medal"></i> Award-Winning Service</strong> – Our commitment to excellence ensures memorable experiences that last a lifetime</li>
+                    </ul>
+                </div>
+                
+
+                <div class="d-flex">
+                    <div>
+                        <h5 >Plan Your Umrah with Ease</h5>
+                        <p>We are committed to providing the best and most budget-friendly Umrah packages every year, ensuring a comfortable and spiritually fulfilling journey. Whether you prefer Umrah by Air or Bus, we have the perfect package for you!</p>
+                        <p>
+                            <span style="transform:scale(1.4);" class="btn-play">📞</span> Contact us today to book your Umrah journey from Dubai! <br>
+                            <a href="tel:+971566115491">971566115491</a>
+                        </p>
+                    </div>
+    
+                  
+                    
+                  <div>
+                    <h6>📅 Book Now & Save!</h6>
+                    <p>Take advantage of exclusive offers and let us handle every detail of your Umrah journey.</p>
+                    <p>📞 Contact Our Expert Travel Consultants Today to customize your perfect pilgrimage</p>
+                  </div>
+                </div>
+
+             </div>
+                    
+                <div>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+        <!-----PACKAGE-CONTENT-END---------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Video Start -->
         <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
