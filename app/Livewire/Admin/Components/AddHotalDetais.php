@@ -8,6 +8,7 @@ use Livewire\Attributes\Layout;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
 use App\Models\HotelCities;
+use App\Models\HotelCost;
 
 class AddHotalDetais extends Component
 {
@@ -42,6 +43,14 @@ class AddHotalDetais extends Component
     public $hotelYouTube;
     public $hotelMap;
     public $hotelManagerContect;
+    public $hotels = [];
+    public $hotelSeasonStart = [];
+    public $hotelSeasonEnd = [];
+    public $hotelMeal = [];
+    public $hotelDouble = [];
+    public $hotelTriple = [];
+    public $hotelQuad = [];
+    public $hotelQuint = [];
 
     protected $rules = [
         "hotelName"=> "required|string|max:150",
@@ -144,8 +153,20 @@ class AddHotalDetais extends Component
         }
         $this->hotel_cities = HotelCities::where('delete_status',1)->get();
     }
+    public function increaseHotelFields()
+    {
+        $this->hotels[] = [];
+    }
+
+    public function decreaseHotelFields()
+    {
+        if (count($this->hotels) > 1) {
+            array_pop($this->hotels);  // Removes the last hotel object
+        }
+    }
 
     public function submit(){
+
         $this->validate();
 
         // Store the images
@@ -194,7 +215,7 @@ class AddHotalDetais extends Component
             session()->flash('message', 'Hotel details updated successfully!');
         } else {
             // Create new hotel record
-            HotelDetail::create([
+           $hotel = HotelDetail::create([
                 'hotelName' => $this->hotelName,
                 'hotelPrice' => $this->hotelPrice,
                 'currency' => $this->currency,
@@ -218,32 +239,58 @@ class AddHotalDetais extends Component
                 'hotelImage5' => $hotelImage5Url,
                 'deleteStatus' => $this->deleteStatus, 
             ]);
+
+            foreach ($this->hotels as $key => $value) {
+
+                $details_data[] = [
+                    'hotel_id' => $hotel->id,
+                    'hotelSeasonStart' => $this->hotelSeasonStart[$key] ?? null,
+                    'hotelSeasonEnd' => $this->hotelSeasonEnd[$key] ?? null,
+                    'hotelMeal' => $this->hotelMeal[$key] ?? null,
+                    'hotelDouble' => $this->hotelDouble[$key] ?? null,
+                    'hotelTriple' => $this->hotelTriple[$key] ?? null,
+                    'hotelQuad' => $this->hotelQuad[$key] ?? null,
+                    'hotelQuint' => $this->hotelQuint[$key] ?? null,    
+                ];
+            }
+
+            foreach ($details_data as $details) {
+
+                HotelCost::create($details);
+            }
             session()->flash('message', 'Hotel details added successfully!');
         }
-
-        // Reset form fields
-        $this->reset([
-            'hotelName', 
-            'hotelPrice',
-            'currency', 
-            'hotelCity', 
-            'hotelStarRating', 
-            'hotelAddress', 
-            'hotelDiscription',
-            'hotelYouTube',
-            'hotelMap',
-            'hotelManagerContect',
-            'hotelCheckInTime',
-            'hotelCheckOutTime',
-            'hotelDistance',
-            'hotelMainImage',
-            'hotelImage1',
-            'hotelImage2',
-            'hotelImage3',
-            'hotelImage4',
-            'hotelImage5',
-        ]);
-    }
+        foreach($this->hotels as $key => $value){}
+            // Reset form fields
+            $this->reset([
+                'hotelName', 
+                'hotelPrice',
+                'currency', 
+                'hotelCity', 
+                'hotelStarRating', 
+                'hotelAddress', 
+                'hotelDiscription',
+                'hotelYouTube',
+                'hotelMap',
+                'hotelManagerContect',
+                'hotelCheckInTime',
+                'hotelCheckOutTime',
+                'hotelDistance',
+                'hotelMainImage',
+                'hotelImage1',
+                'hotelImage2',
+                'hotelImage3',
+                'hotelImage4',
+                'hotelImage5',
+                'hotelSeasonStart',
+                'hotelSeasonEnd',
+                'hotelMeal',
+                'hotelDouble',
+                'hotelTriple',
+                'hotelQuad',
+                'hotelQuint',
+            ]);
+        }
 
     #[Layout('admin.Layouts.app')]
     public function render()

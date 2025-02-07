@@ -256,6 +256,60 @@
                             @endif
                         </div>
 
+                        <div class="d-flex">
+                            <button type="button" wire:click="increaseHotelFields" class="btn btn-primary mx-3">Add Hotel</button>
+                            <button type="button" wire:click="decreaseHotelFields" class="btn btn-danger mx-3">Remove Hotel</button>
+                        </div>
+
+                        @foreach ($hotels as $i => $hotel)
+                            <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
+                                <div class="col-md-3 mb-4">
+                                    <label for="hotelSeasonStart.{{$i}}" class="form-label">Season Start</label>
+                                    <input type="date" id="hotelSeasonStart.{{$i}}" wire:model="hotelSeasonStart.{{$i}}" class="form-control" placeholder="Enter Season Start">
+                                    @error('hotelSeasonStart.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                                
+                                <div class="col-md-3 mb-4">
+                                    <label for="hotelSeasonEnd.{{$i}}" class="form-label">Season End</label>
+                                    <input type="date" id="hotelSeasonEnd.{{$i}}" wire:model="hotelSeasonEnd.{{$i}}" class="form-control" placeholder="Enter Season End">
+                                    @error('hotelSeasonEnd.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                                <div class="col-md-3 mb-4">
+                                    <label for="hotelMeal.{{$i}}" class="form-label">Meal Type</label>
+                                    <input type="text" id="hotelMeal.{{$i}}" wire:model="hotelMeal.{{$i}}" class="form-control" placeholder="Enter Meal Type">
+                                    @error('hotelMeal.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                            </div>
+                            <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
+                                <div class="col-md-2 mb-3">
+                                    <label for="hotelDouble.{{$i}}" class="form-label">Double</label>
+                                    <input type="text" id="hotelDouble.{{$i}}" wire:model="hotelDouble.{{$i}}" class="form-control" placeholder="Enter Double Price">
+                                    @error('hotelDouble.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                                
+                                <div class="col-md-2 mb-3">
+                                    <label for="hotelTriple.{{$i}}" class="form-label">Triple</label>
+                                    <input type="text" id="hotelTriple.{{$i}}" wire:model="hotelTriple.{{$i}}" class="form-control" placeholder="Enter Triple Price">
+                                    @error('hotelTriple.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                    <label for="hotelQuad.{{$i}}" class="form-label">Quad</label>
+                                    <input type="text" id="hotelQuad.{{$i}}" wire:model="hotelQuad.{{$i}}" class="form-control" placeholder="Enter Quad Price">
+                                    @error('hotelQuad.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                                
+                                <div class="col-md-2 mb-3">
+                                    <label for="hotelQuint.{{$i}}" class="form-label">Quit</label>
+                                    <input type="text" id="hotelQuint.{{$i}}" wire:model="hotelQuint.{{$i}}" class="form-control" placeholder="Enter Quint Price">
+                                    @error('hotelQuint.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                            </div>
+                            <hr>
+                        @endforeach
+
 
                         <!-- Submit Button -->
                         <div class="col-md-4 d-flex justify-content-end">

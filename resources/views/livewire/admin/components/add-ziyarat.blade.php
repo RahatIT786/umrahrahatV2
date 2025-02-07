@@ -322,7 +322,7 @@
                                     @error("hotels.{$index}.selected_name") <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
                             </div>
-                            @endforeach
+                        @endforeach
 
                     <!-- Submit Button -->
                     <div class="col-md-4 d-flex justify-content-end">
