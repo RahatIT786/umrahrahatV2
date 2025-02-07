@@ -277,7 +277,7 @@
                         <h3 class="mb-3 section-title text-start text-primary text-uppercase">{{$hotel['hotelCity']}} Hotel</h3>
                             <div class="room-item shadow rounded overflow-hidden">
                             <a href="{{route('hotel-Detail', ['id' => $hotel['id']])}}"><h5 class="mb-0">
-                            <div class="position-relative">
+                            <div class="position-relative"  style="height:450px">
                                 <img class="img-fluid" src="{{asset($hotel['hotelImage1'])}}" alt=""> 
                                 
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
