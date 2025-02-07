@@ -275,9 +275,9 @@
                      <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         
                         <h3 class="mb-3 section-title text-start text-primary text-uppercase">{{$hotel['hotelCity']}} Hotel</h3>
-                            <div class="room-item shadow rounded overflow-hidden">
+                            <div class="room-item shadow rounded overflow-hidden"  style="height:450px">
                             <a href="{{route('hotel-Detail', ['id' => $hotel['id']])}}"><h5 class="mb-0">
-                            <div class="position-relative"  style="height:450px">
+                            <div class="position-relative" >
                                 <img class="img-fluid" src="{{asset($hotel['hotelImage1'])}}" alt=""> 
                                 
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
