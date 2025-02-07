@@ -45,10 +45,10 @@
                                     <a class="me-3" href="" style="color: #666565;" style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user-secret" ></i> Agent Login</a>
                                     <a class="me-3" href=""  style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user" style="color: #666565;"></i> User Login</a>
                                 </div> --}}
-                              <div class="d-flex align-items-cente justify-content-between px-2 " style="position: absolute; top:5px; right: 25vw; border: 1px solid #b9b6b6; border-radius:9px;">
+                              <div class="d-flex align-items-cente justify-content-between px-2 " style="position: absolute; top:3px; right: 28vw;  border-radius:9px;">
                                 {{-- <span class="mt-2"><i class="fa-solid fa-language" "></i></span> --}}
                                 <span class="mt-2"><i class="fa-solid fa-earth-asia" style="font-size: 20px;"></i></span>
-                                <span id="google_translate_element"  class="me-2 "></span>
+                                <span id="google_translate_element"  ></span>
                               </div>
                                 <div class="h-100 d-inline-flex align-items-center  me-4">
                                    
@@ -172,7 +172,7 @@
                                     <div class="dropdown-menu rounded-0 m-0" >
                                         <a href="{{route('user.laundry')}}" class="dropdown-item">Laundry</a>
                                         <a href="{{route('myassistant')}}" class="dropdown-item">Guide and Assitant</a>
-                                        <a  class="dropdown-item">Forex</a>
+                                        <a  class="dropdown-item" onclick="toggleForexForm()">Forex</a>
                                        
                                        
                      
@@ -231,6 +231,8 @@
                 </div>
             </div>
       </div>
+
+
   <!-- Header End -->
 <!---------------------->
 <style>
@@ -250,6 +252,7 @@
         border-radius: 5px !important;
         width: 5rem !important;
         border: red !important;
+        
     }
     .goog-te-combo:focus{
         border: red !important;
@@ -316,4 +319,206 @@
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  
+
+<!-----forex-form-div-style-script-start----------------->
+
+<div id="forex-popup-form">
+    <div class="form-header">
+        <h2>Forex Enquiry Form</h2>
+        <span class="close-btn" onclick="toggleForexForm()">&times;</span>
+    </div>
+
+    <p><strong>📞 Call Us At:</strong> +91 9967786446, 7863878630</p>
+    
+    <hr>
+
+    <div class="input-group" >
+        <label>Salutation</label>
+        <select>
+            <option>Mrs</option>
+            <option>Mr</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label> Name</label>
+        <input type="text" placeholder="Enter First Name">
+    </div>
+
+    {{-- <div class="input-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Enter Last Name">
+    </div> --}}
+
+    <div class="input-group">
+        <label>Mobile</label>
+        <input type="text" placeholder="+91 Mobile Number">
+    </div>
+
+    <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter Email Address">
+    </div>
+
+    <div class="input-group">
+        <label>Currency Type</label>
+        <select>
+            <option>USD</option>
+            <option>EUR</option>
+            <option>CNY</option>
+            <option>INR</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>Amount Required</label>
+        <input type="text" placeholder="Enter Amount">
+    </div>
+
+    <div class="input-group">
+        <label>Pick Up Option</label>
+        <select>
+            <option>Pick Up</option>
+            <option>Home Delivery</option>
+        </select>
+    </div>
+
+    <div class="checkbox-group">
+        <input type="checkbox" checked>
+        <label>Documents required: Pan Card, Passport, Flight Ticket, Visa Copy</label>
+    </div>
+
+    <div class="button-group">
+        <button class="whatsapp-btn">WhatsApp</button>
+        <button class="submit-btn">Send Enquiry</button>
+    </div>
+</div>
+
+  <style>
+      #forex-popup-form {
+        /* display: none; */
+            position: fixed;
+            top: -140%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            transition: top 0.5s ease-in-out; /* Smooth animation */
+            z-index: 4;
+
+        }
+
+        /* Show form */
+        #forex-popup-form.show {
+            top: 50px; /* Moves down smoothly */
+        }
+
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-header h2 {
+            margin: 0;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            font-size: 20px;
+            color: gray;
+            transition: 0.3s;
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+
+        .input-group {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-group input {
+            margin-right: 5px;
+        }
+
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1da851;
+        }
+
+        .submit-btn {
+            background-color: #6a0dad;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #580aaf;
+        }
+       
+  </style>
+ <script>
+        function toggleForexForm() {
+            var form = document.getElementById("forex-popup-form");
+             
+            if (form.classList.contains("show")) {
+                form.classList.remove("show"); // Hide form
+            } else {
+                form.classList.add("show"); // Show form
+            }
+        }
+    </script>
+<!-----forex-form-div-style-script-end----------------->
 </section>
