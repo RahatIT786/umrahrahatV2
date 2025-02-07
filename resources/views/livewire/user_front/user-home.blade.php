@@ -295,7 +295,7 @@ function closeForm() {
                     <div class="carousel-item active">
                         <img class="w-100 " src="{{asset('newImg/IMG_3185.JPG')}}" alt="Image" style="height:50vh; object-fit: cover; object-position: center bottom;">
                         
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="carousel-captio d-flex flex-column align-items-center justify-content-center">
                             {{-- <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
                                 <h5 class="text-white mb-4 animated slideInDown" style="">Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
@@ -307,7 +307,7 @@ function closeForm() {
                     </div>
                     <div class="carousel-item">
                         <img class="w-100" src="{{asset('newImg/vecteezy_islamic-2.jpg')}}" alt="Image" style="height:50vh; object-fit: cover; object-position: center;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="carousel-captio d-flex flex-column align-items-center justify-content-center">
                             {{-- <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
                                 <h1 class="text-white mb-4 animated slideInDown glowing-text">
