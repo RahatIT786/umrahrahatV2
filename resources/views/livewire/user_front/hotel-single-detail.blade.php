@@ -48,17 +48,6 @@
                             Watch Our Exclusive Awazem Hotels Tour!
                         </a>
                     @endif
-
-                  {{---  <div class="mt-4">
-                        <h3 class="mb-4 section-title text-start text-primary text-uppercase">Check-in/Check-out</h3>
-                         <h5 class="mb-3"><i class="fa fa-clock text-primary"></i> Check-in from: {{ \Carbon\Carbon::parse($hotel_detail->hotelCheckInTime)->format('H:i') }}</h5>
-                         <h5 class="mb-5"><i class="fa fa-clock text-primary"></i> Check-out until: {{ \Carbon\Carbon::parse($hotel_detail->hotelCheckOutTime)->format('H:i') }}</h5>
-                    </div>
-
-                    <div class="mt-4">
-                        <h3 class="mb-4 section-title text-start text-primary text-uppercase">Getting around</h3>
-                        <h5 class="mb-3"><i class="fa fa-road text-primary"></i>  Distance from city center: {{ number_format($hotel_detail->hotelDistance, 0) }} Km</h5>
-                    </div>--}}
                 </div>
 
                 <!-- Right Section: Booking Form -->
@@ -96,11 +85,11 @@
                         </div>
                     </div>
                             
-                            <!-- Price Section -->
-                            <div class="mb-3">
-                             <h3 class="mb-4 section-title text-start text-primary text-uppercase">Price per Night</h3>
-                                <h4>{{$hotel_detail->hotelPrice}} {{$hotel_detail->currency}}</h4> <!-- You can dynamically set this value -->
-                            </div>
+                  <!-- Price Section -->
+                  <div class="mb-3">
+                    <h3 class="mb-4 section-title text-start text-primary text-uppercase">Price per Night</h3>
+                    <h4>{{$hotel_detail->hotelPrice}} {{$hotel_detail->currency}}</h4> <!-- You can dynamically set this value -->
+                  </div>
                     <div class="border p-5 rounded booking-form" style="width: 450px;">
                         <h4 class="mb-4 text-uppercase">Book Your Stay</h4>
                         <form  wire:submit.prevent="packageEnquire">
