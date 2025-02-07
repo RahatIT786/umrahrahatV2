@@ -21,9 +21,11 @@
         <div class="gallery-container">
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="event">Events</button>
-                <button class="filter-btn" data-filter="agm">AGM</button>
                 <button class="filter-btn" data-filter="award">Awards</button>
+                <button class="filter-btn" data-filter="agm">AGM</button>
+                <button class="filter-btn" data-filter="event">Events</button>
+                
+              
             </div>
     
             <div class="gallery-grid">
