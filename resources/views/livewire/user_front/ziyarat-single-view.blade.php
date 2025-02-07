@@ -81,21 +81,6 @@
                     </div>
                 </div>
             </div>
-       {{--     <div class="row form-row mt-5">
-                @foreach ($packageType as $id => $type)
-                    <div class="col-md-2 mb-3">
-                        <label class="particles-checkbox-container">
-                            <input type="radio" class="particles-checkbox" name="package_type" id="{{ $id }}"
-                                value="{{ $id }}" wire:change="changeFlavour"
-                                wire:model="selectedPackageFlavourId"  @if ($loop->first) checked @endif >
-                            <span class="paln-label" for="{{ $id }}">
-                                <p>{{ $type }}</p>
-                            </span>
-                            <span class="check-mark"></span>
-                        </label>
-                    </div>
-                @endforeach
-            </div> --}}
         </div>
     </div>
     <!-- Hotel Details End -->
@@ -341,7 +326,7 @@
                         <h3 class="mb-3 section-title text-start text-primary text-uppercase">Hotel Details</h3>
                             <div class="room-item shadow rounded overflow-hidden">
                             <a href="{{route('hotel-Detail', ['id' => $hotel['id']])}}"><h5 class="mb-0">
-                            <div class="position-relative">
+                            <div class="position-relative" style="height:350px">
                                 <!-- <img class="img-fluid" src="{{asset($hotel['hotelImage1'])}}" alt=""> 
                                 
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small> -->
@@ -350,9 +335,9 @@
                                         @foreach (explode('.', $hotel['hotelDiscription']) as $sentence)
                                             @if(trim($sentence))
                                                 <li class="px-3">
-                                                    <div class="d-flex leter" style="font-family: Arial, sans-serif;color:#0F172B" >
+                                                    <div class="d-flex leter" style="font-family: 'Poppins', sans-serif; color: #0F172B;" >
                                                         <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
-                                                        &nbsp; <p>{{ trim($sentence) }}</p>
+                                                        &nbsp; <p style="font-family: 'Arial', sans-serif; font-size: 16px; font-weight: bold; color: black;">{{ trim($sentence) }}</p>
                                                     </div>
                                                 </li>
                                             @endif
@@ -361,35 +346,8 @@
 
                             </div>
                             <div class="p-4 mt-2">
-                                <div class="d-flex justify-content-between mb-3">
-                                <h5 class="mb-0">{{$hotel['hotelName']}}</h5>
-                                    <div class="ps-2 ">
-                                        @if ($hotel['hotelStarRating'] == 1)
-                                            <small class="fa fa-star text-primary"></small>
-                                        @endif
-                                        @if ($hotel['hotelStarRating'] == 2)
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                        @endif
-                                        @if ($hotel['hotelStarRating'] == 3)
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                        @endif
-                                        @if ($hotel['hotelStarRating'] == 4)
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                        @endif
-                                        @if ($hotel['hotelStarRating'] == 5)
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                        @endif
-                                    </div>
+                                <div class="d-flex  mb-3">
+                                    <a href="{{$hotel['hotelYouTube']}}"> <i class="fa-brands fa-youtube" style="font-size: 24px; margin-right: 8px;color:red"></i></a>
                                 </div>
                             </div>
                             </a>
