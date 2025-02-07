@@ -74,7 +74,7 @@
                             <div style="height: 30rem;" class="col-lg-8 col-md-8 px-4 mt-0">
                                 <div class="d-flex justify-content-between mb-0">
                                    <div>
-                                    <h4 class="mb-0 " style="font-weight: 600;"> {{ucfirst($package->name)}}</h4>
+                                    <h4 class="my-3 " style="font-weight: 600;"> {{ucfirst($package->name)}}</h4>
                                     <div class="d-flex my-2">
                                         <div>
                                            <p style="font-weight: bold;" class="my-1">Inclusion :</p>
@@ -146,21 +146,21 @@
                                     
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                         <p class=""> <strong>Total Days :</strong> {{$package->package_days}} Days ,</p>
+                                         <p class=""> <strong> {{$package->package_days }} </strong> Days , <strong> {{$package->package_days - 1}} </strong> Nights</p>
                                     </div>
                                    </div>
                                    @php
                                    $minPrice=min(
-                                    intval($package->g_share),
-                                    intval($package->qt_share),
-                                    intval($package->qd_share),
-                                    intval($package->t_share),
-                                    intval($package->d_share),
-                                    intval($package->single),
+                                    intval($package->g_share_price),
+                                    intval($package->qt_share_price),
+                                    intval($package->qd_share_price),
+                                    intval($package->t_share_price),
+                                    intval($package->d_share_price),
+                                    intval($package->single_price),
                                    );
                                    @endphp
-                                   
-                                    {{-- <div class="ps-2">
+                                
+                                   <div class="ps-2">
                                        <h5 style="color: gray">Start From</h5>
                                        <div class="text-end">
                                         <del class="text-danger">{{$minPrice * 1.1}}.AED</del> 
@@ -170,7 +170,7 @@
                                        
                                        </div>
                                       
-                                    </div> --}}
+                                    </div>
                                 </div>
 
                                 <div>
@@ -186,9 +186,9 @@
                                         @php
                                             $departCities = explode(',', $package->Depart_city);
                                         @endphp
-                                    <div class="mb-2" style="font-weight:500;">
+                                    <div class="mb-3" style="font-weight:500;">
                                         <span style="font-weight:500; color: #0D1425;"> <i class="bi bi-geo-alt-fill">
-                                        </i> Departure cities :
+                                        </i> <strong> Destinations cities </strong>:
                                         @foreach ($departCities as $city)
                                             {{ $city }} ,
                                         @endforeach
@@ -213,7 +213,7 @@
                                     </div>
 
                                     <div class="d-flex flex-column gap-3">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" >
+                                        <a href="{{route('user.ziyarat-single',['id' => $package->id])}}" class="btn btn-sm btn-primary rounded py-2 px-4 me-2" >
                                             <i class="fa-solid fa-file-zipper"></i> View Packages
                                         </a>
                                         <a class="btn btn-sm btn-dark rounded py-2 px-4">

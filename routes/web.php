@@ -101,7 +101,7 @@ use App\Livewire\MissionVision;
 use App\Livewire\AgentSpeak;
 use App\Livewire\Agm;
 use App\Livewire\UserViewZiyarat;
-
+use App\Livewire\ZiyaratSingleView;
 use App\Livewire\OurAwards;
 
 use App\Livewire\BankAccount;
@@ -214,6 +214,7 @@ Route::get('/user/transport-details/{id}',TransfersSingle::class)->name('transpo
 
 //Ziyarat
 Route::get('/user/ziyarat/{id}',UserViewZiyarat::class)->name('user.ziyarat');
+Route::get('/user/ziyarat-single/{id}',ZiyaratSingleView::class)->name('user.ziyarat-single');
 
 //book my assitant
 Route::get('/user/myassistant',Assistant::class)->name('myassistant');
