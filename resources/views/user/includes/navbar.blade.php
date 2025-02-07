@@ -45,7 +45,13 @@
                                     <a class="me-3" href="" style="color: #666565;" style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user-secret" ></i> Agent Login</a>
                                     <a class="me-3" href=""  style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user" style="color: #666565;"></i> User Login</a>
                                 </div> --}}
+                              <div class="d-flex align-items-cente justify-content-between px-2 " style="position: absolute; top:5px; right: 25vw; border: 1px solid #b9b6b6; border-radius:9px;">
+                                {{-- <span class="mt-2"><i class="fa-solid fa-language" "></i></span> --}}
+                                <span class="mt-2"><i class="fa-solid fa-earth-asia" style="font-size: 20px;"></i></span>
+                                <span id="google_translate_element"  class="me-2 "></span>
+                              </div>
                                 <div class="h-100 d-inline-flex align-items-center  me-4">
+                                   
                                     <i class="fa-solid fa-user-tie text-primary me-2" ></i>
                                    
                                     <p class="mb-0"><a href=""  style="text-transform:uppercase;color:#666565;  font-size: 14px; font-weight: 500;">agent login</a></p> &nbsp; &nbsp;
@@ -166,6 +172,7 @@
                                     <div class="dropdown-menu rounded-0 m-0" >
                                         <a href="{{route('user.laundry')}}" class="dropdown-item">Laundry</a>
                                         <a href="{{route('myassistant')}}" class="dropdown-item">Guide and Assitant</a>
+                                        <a  class="dropdown-item">Forex</a>
                                        
                                        
                      
@@ -225,7 +232,78 @@
             </div>
       </div>
   <!-- Header End -->
+<!---------------------->
+<style>
+    /* .goog-te-combo option:hover {
+        background-color: black !important;
+        color: white !important;
+    } */
+         .VIpgJd-ZVi9od-ORHb-OEVmcd{
+            visibility:hidden !important; 
+        }
+        .VIpgJd-ZVi9od-l4eHX-hSRGPd{
+            /* visibility:hidden !important; */
+            display: none !important;
+        }
+    .goog-te-combo{
+        padding: 8px !important;
+        border-radius: 5px !important;
+        width: 5rem !important;
+        border: red !important;
+    }
+    .goog-te-combo:focus{
+        border: red !important;
+        outline: red !important;
+    }
+    
+        /* Hide Google Translate toolbar */
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    } 
+    
+    /* Remove the space reserved for the toolbar */
+    body {
+        top: 0px !important; 
+    }
+    
+    /* Hide the Google Translate badge */
+    .goog-logo-link {
+        display: none !important;
+    } 
+    
+    /* Hide the text label "Powered by Google Translate" */
+    .goog-te-gadget {
+        color: transparent !important;
+    } 
+    
+    /* If there's a dropdown box you want to keep, you can style it here */
+    #google_translate_element select {
+        color: black; 
+        /* height: 15px !important; */
+         /* Keep the dropdown visible but text styled */
+    }
+    .skiptranslate .goog-te-gadget{
+        height: 1rem !important;
+    }
+    
+    </style>
+    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
 
+        var selectedLanguage = document.querySelector(".goog-te-combo");
+
+// Select the first option and change its text
+// if (selectedLanguage.option.length > 0) {
+//     selectedLanguage.option[0].text = 'En'; // Change "Select Language" to "En"
+// }
+
+        </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!----------------------->
 
   <style>
     .zoom-effect img {

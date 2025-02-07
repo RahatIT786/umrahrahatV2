@@ -6,6 +6,42 @@
                     <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
                 </div>
                 <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <a class="service-item rounded" href="{{route('umrah-by-bus-from-uae')}}">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-mosque fa-2x  text-primary"></i>
+                                </div>
+                            </div>
+                           
+                            <h5 class="mb-3">Umrah</h5>
+                            <p class="text-body mb-0">Specialized packages for Umrah pilgrims.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <a class="service-item rounded" href="{{route('hajj.bybus')}}">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-place-of-worship fa-2x  text-primary"></i>
+                                </div>
+                            </div>
+                           
+                            <h5 class="mb-3">Hajj</h5>
+                            <p class="text-body mb-0">Comprehensive Hajj travel and accommodation solutions.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="service-item rounded" >
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-person-praying fa-2x text-primary"></i>
+                                </div>
+                              
+                            </div>
+                            <h5 class="mb-3">Ziyarat</h5>
+                            <p class="text-body mb-0">Organized visits to religious and historical sites. </p>
+                        </a>
+                    </div>
                     <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                         <a class="service-item rounded" href="{{route('hotels')}}">
                             <div class="service-icon bg-transparent border rounded p-1">
@@ -77,42 +113,7 @@
                             <p class="text-body mb-0"> Free laundry services for convenience.</p>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="{{route('umrah-by-bus-from-uae')}}">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-mosque fa-2x  text-primary"></i>
-                                </div>
-                            </div>
-                           
-                            <h5 class="mb-3">Umrah</h5>
-                            <p class="text-body mb-0">Specialized packages for Umrah pilgrims.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="{{route('hajj.bybus')}}">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-place-of-worship fa-2x  text-primary"></i>
-                                </div>
-                            </div>
-                           
-                            <h5 class="mb-3">Hajj</h5>
-                            <p class="text-body mb-0">Comprehensive Hajj travel and accommodation solutions.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="service-item rounded" >
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-person-praying fa-2x text-primary"></i>
-                                </div>
-                              
-                            </div>
-                            <h5 class="mb-3">Ziyarat</h5>
-                            <p class="text-body mb-0">Organized visits to religious and historical sites. </p>
-                        </a>
-                    </div>
+                    
                     <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
                         <a class="service-item rounded" href="https://rahatitsolutions.com/" target="_blank">
                             <div class="service-icon bg-transparent border rounded p-1">
@@ -127,7 +128,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" >
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                    
@@ -140,7 +141,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="{{route('partner-with-us')}}">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                    

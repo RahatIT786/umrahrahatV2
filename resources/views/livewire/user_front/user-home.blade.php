@@ -22,6 +22,17 @@
                 height: auto; /* Maintain aspect ratio */
             }
         }
+
+        @keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); } /* Zoom in */
+    100% { transform: scale(1); } /* Zoom out */
+}
+
+.carousel-item img {
+    animation: zoomInOut 9s infinite ease-in-out;
+}
+
     </style>
 
 
@@ -283,6 +294,7 @@ function closeForm() {
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="w-100 " src="{{asset('newImg/IMG_3185.JPG')}}" alt="Image" style="height:50vh; object-fit: cover; object-position: center bottom;">
+                        
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             {{-- <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
