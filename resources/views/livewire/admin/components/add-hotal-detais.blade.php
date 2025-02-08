@@ -309,7 +309,12 @@
 
                                 <div class="col-md-2 mb-4">
                                     <label for="hotelMeal.{{$i}}" class="form-label">Meal Type</label>
-                                    <input type="text" id="hotelMeal.{{$i}}" wire:model="hotelMeal.{{$i}}" class="form-control" placeholder="Enter Meal Type">
+                                    <select class="form-select" id="hotelMeal.{{$i}}" wire:model="hotelMeal.{{$i}}">
+                                        <option value="">Food Type</option>
+                                        @foreach ($hotel_foods as $food)
+                                            <option value="{{$food->id}}">{{$food->foodType}}</option>
+                                        @endforeach
+                                    </select>
                                     @error('hotelMeal.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
 
