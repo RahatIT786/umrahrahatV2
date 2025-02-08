@@ -360,7 +360,6 @@ public $madina_nights;
                     ]);
     }
 
-
     
     #[Layout('admin.Layouts.app')]
     public function render()

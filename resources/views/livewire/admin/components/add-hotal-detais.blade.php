@@ -55,35 +55,35 @@
                             <label class="form-label">Select Hotel Amenities</label>
                             <div class=" flex-wrap">
                                 <div class="form-check mx-2">
-                                    <input type="checkbox" id="amenityTV" value="1" wire:model="hotelAmenities" class="form-check-input">
+                                    <input type="checkbox" id="amenityTV" value="1" wire:model="hotel_amenities" class="form-check-input">
                                     <label for="amenityTV" class="form-check-label">TV</label>
                                 </div>
                                 <div class="form-check mx-2">
-                                    <input type="checkbox" id="amenityElevator" value="2" wire:model="hotelAmenities" class="form-check-input">
+                                    <input type="checkbox" id="amenityElevator" value="2" wire:model="hotel_amenities" class="form-check-input">
                                     <label for="amenityElevator" class="form-check-label">Elevator</label>
                                 </div>
                                 <div class="form-check mx-2">
-                                    <input type="checkbox" id="amenityFridge" value="3" wire:model="hotelAmenities" class="form-check-input">
+                                    <input type="checkbox" id="amenityFridge" value="3" wire:model="hotel_amenities" class="form-check-input">
                                     <label for="amenityFridge" class="form-check-label">Fridge</label>
                                 </div>
                                 <div class="form-check mx-2">
-                                    <input type="checkbox" id="amenityWashroom" value="4" wire:model="hotelAmenities" class="form-check-input">
+                                    <input type="checkbox" id="amenityWashroom" value="4" wire:model="hotel_amenities" class="form-check-input">
                                     <label for="amenityWashroom" class="form-check-label">Attached Washroom</label>
                                 </div>
                                 <div class="form-check mx-2">
-                                    <input type="checkbox" id="amenityAC" value="5" wire:model="hotelAmenities" class="form-check-input">
+                                    <input type="checkbox" id="amenityAC" value="5" wire:model="hotel_amenities" class="form-check-input">
                                     <label for="amenityAC" class="form-check-label">AC</label>
                                 </div>
                                 <div class="form-check mx-2">
-                                    <input type="checkbox" id="amenityCarpetedRooms" value="6" wire:model="hotelAmenities" class="form-check-input">
+                                    <input type="checkbox" id="amenityCarpetedRooms" value="6" wire:model="hotel_amenities" class="form-check-input">
                                     <label for="amenityCarpetedRooms" class="form-check-label">Carpeted Rooms</label>
                                 </div>
                                 <div class="form-check mx-2">
-                                    <input type="checkbox" id="amenityIronRooms" value="7" wire:model="hotelAmenities" class="form-check-input">
+                                    <input type="checkbox" id="amenityIronRooms" value="7" wire:model="hotel_amenities" class="form-check-input">
                                     <label for="amenityIronRooms" class="form-check-label">Iron Rooms</label>
                                 </div>
                             </div>
-                            @error('hotelAmenities') <span class="text-danger">{{ $message }}</span> @enderror
+                            @error('hotel_amenities') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
 
@@ -289,8 +289,8 @@
                         </div>
 
                         <div class="d-flex">
-                            <button type="button" wire:click="increaseHotelFields" class="btn btn-primary mx-3">Add Hotel</button>
-                            <button type="button" wire:click="decreaseHotelFields" class="btn btn-danger mx-3">Remove Hotel</button>
+                            <button type="button" wire:click="increaseHotelFields" class="btn btn-primary mx-3">Add Periods</button>
+                            <button type="button" wire:click="decreaseHotelFields" class="btn btn-danger mx-3">Remove Periods</button>
                         </div>
 
                         @foreach ($hotels as $i => $hotel)
