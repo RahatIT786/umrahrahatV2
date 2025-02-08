@@ -1,9 +1,9 @@
 <section>
       <!-- Page Header Start -->
-      <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
+      {{-- <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('newImg/bannerImage/visa_banner.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    {{-- <h1 class="display-3 text-white mb-3 animated slideInDown">Saudi Visa</h1> --}}
+                    {{-- <h1 class="display-3 text-white mb-3 animated slideInDown">Saudi Visa</h1> \
                     <!-- <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -11,6 +11,21 @@
                             <li class="breadcrumb-item text-white active" aria-current="page">Rooms</li>
                         </ol>
                     </nav> -->
+                </div>
+            </div>
+        </div> --}}
+        <div class="container-fluid p-0 mb-5 hotel-banner">
+            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item imgZoom active">
+                        <img class="w-100" style="height: 15vw;" src="{{ asset('newImg/bannerImage/visa-banner2.jpg') }}" alt="Image" style="object-position: center;">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                {{-- <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Our Hotels</h1> --}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

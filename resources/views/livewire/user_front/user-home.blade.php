@@ -357,7 +357,7 @@ function animateNumber(id, start, end, duration, suffix = '') {
 
 
 function startAnimations() {
-        animateNumber('clients-count', 0, 720, 3000, 'K +');
+        animateNumber('clients-count', 0, 3, 3000, 'Million +');
         animateNumber('success-rate', 0, 99, 3000, '%');
         animateNumber('rating-clients', 0, 4, 3000, '.5');
         animateNumber('experience-years', 0, 17, 3000, '+');
@@ -400,7 +400,7 @@ function startAnimations() {
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">280</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">450</h2>
                                         <p class="mb-0">Staffs</p>
                                     </div>
                                 </div>
@@ -410,7 +410,7 @@ function startAnimations() {
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
                                         <!-- <h2 class="mb-1" data-toggle="counter-up">100 </h2> -->
-                                        <h2 class="mb-1" ><span data-toggle="counter-up">720</span>k</h2>
+                                        <h2 class="mb-1" ><span data-toggle="counter-up">2</span>Million</h2>
                                         <p class="mb-0">Happy Clients</p>
                                     </div>
                                 </div>
