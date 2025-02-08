@@ -46,7 +46,7 @@
                             <td>{{  $index + 1 }}</td>
                             <td>
                                 @if ($package->packageImage)
-                                    <img src="{{Storage::url($package->packageImage) }}" alt="Visa Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
+                                    <img src="{{Storage::url($package->packageImage) }}" alt="Package Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
                                 @else
                                     No Image available
                                 @endif

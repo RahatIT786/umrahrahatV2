@@ -43,7 +43,7 @@ class AddHotalDetais extends Component
     public $hotelYouTube;
     public $hotelMap;
     public $hotelManagerContect;
-    public $hotelAmenities = [];
+    public $hotel_amenities = [];
     public $hotels = [];
     public $hotelSeasonStart = [];
     public $hotelSeasonEnd = [];
@@ -170,8 +170,7 @@ class AddHotalDetais extends Component
     public function submit(){
 
         
-        $amenitiesString = implode(',', $this->hotelAmenities);
-        $this->hotelAminity =$amenitiesString;
+        $this->hotelAminity = implode(',', $this->hotel_amenities);
         // dd($amenitiesString);
 
         $this->validate();
@@ -283,7 +282,6 @@ class AddHotalDetais extends Component
                 'hotelDiscription',
                 'hotelYouTube',
                 'hotelMap',
-                'hotel_amenities',
                 'hotelManagerContect',
                 'hotelCheckInTime',
                 'hotelCheckOutTime',
@@ -294,6 +292,7 @@ class AddHotalDetais extends Component
                 'hotelImage3',
                 'hotelImage4',
                 'hotelImage5',
+                'hotel_amenities'
             ]);
         
             // Reset array fields separately
