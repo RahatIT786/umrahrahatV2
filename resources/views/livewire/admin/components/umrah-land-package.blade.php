@@ -307,7 +307,7 @@
 
                             <!-- madina Nights -->
                             <div class="col-lg-4 mb-3">
-                                <label for="madina_nights" class="form-label">Makkah Nights</label>
+                                <label for="madina_nights" class="form-label">Madina Nights</label>
                                 <input type="number" id="madina_nights" wire:model="madina_nights" class="form-control" placeholder="Enter Madina Nights">
                                 @error('madina_nights') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
