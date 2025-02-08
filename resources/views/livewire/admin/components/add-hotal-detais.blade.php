@@ -14,18 +14,13 @@
                     <form class="row g-3 needs-validation" wire:submit.prevent="submit">
                         
                         <!-- Hotel Name -->
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-12 mb-3">
                             <label for="hotelName" class="form-label">Hotel Name</label>
                             <input type="text" id="hotelName" wire:model="hotelName" class="form-control" placeholder="Enter Hotel Name">
                             @error('hotelName') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <!-- Hotel Price -->
-                        <div class="col-md-6 mb-3">
-                            <label for="hotelPrice" class="form-label">Hotel Price</label>
-                            <input type="text" id="hotelPrice" wire:model="hotelPrice" class="form-control" placeholder="Enter Hotel Price">
-                            @error('hotelPrice') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
+
 
                         <!-- Currency Selection -->
                         <div class="col-md-6 mb-3">
