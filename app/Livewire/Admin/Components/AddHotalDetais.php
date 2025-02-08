@@ -58,7 +58,6 @@ class AddHotalDetais extends Component
 
     protected $rules = [
         "hotelName"=> "required|string|max:150",
-        "hotelPrice"=> "required|numeric",
         "currency"=> "required",
         "hotelCity"=> "required|string",
         "hotelStarRating"=> "required|string",
@@ -82,9 +81,6 @@ class AddHotalDetais extends Component
         'hotelName.required' => 'Hotel name is required.',
         'hotelName.string' => 'Hotel name must be a string.',
         'hotelName.max' => 'Hotel name cannot exceed 150 characters.',
-        
-        'hotelPrice.required' => 'Hotel price is required.',
-        'hotelPrice.numeric' => 'Hotel price must be a numeric value.',
         
         'hotelCity.required' => 'Hotel city is required.',
         'hotelCity.string' => 'Hotel city must be a string.',
@@ -133,7 +129,7 @@ class AddHotalDetais extends Component
             $hotel = HotelDetail::findOrFail( $id );
             $this->hotelId = $hotel->id;
             $this->hotelName = $hotel->hotelName;
-            $this->hotelPrice =$hotel->hotelPrice;
+            $this->hotelPrice = 'null';
             $this->currency = $hotel->currency;
             $this->hotelCity = $hotel->hotelCity;
             $this->hotelStarRating = $hotel->hotelStarRating;
@@ -201,7 +197,7 @@ class AddHotalDetais extends Component
             $hotel = HotelDetail::findOrFail($this->hotelId);
             $hotel->update([
                 'hotelName' => $this->hotelName,
-                'hotelPrice' => $this->hotelPrice,
+                'hotelPrice' => 0,
                 'currency' => $this->currency,
                 'hotelCity' => $this->hotelCity,
                 'hotelStarRating' => $this->hotelStarRating,
@@ -230,7 +226,7 @@ class AddHotalDetais extends Component
             // Create new hotel record
            $hotel = HotelDetail::create([
                 'hotelName' => $this->hotelName,
-                'hotelPrice' => $this->hotelPrice,
+                'hotelPrice' => 0,
                 'currency' => $this->currency,
                 'hotelCity' => $this->hotelCity,
                 'hotelStarRating' => $this->hotelStarRating,
@@ -244,12 +240,12 @@ class AddHotalDetais extends Component
                 'hotelCheckInTime' => $this->hotelCheckInTime,
                 'hotelCheckOutTime' => $this->hotelCheckOutTime,
                 'hotelDistance' => $this->hotelDistance,
-                'hotelMainImage' => $hotelMainImageUrl,
-                'hotelImage1' => $hotelImage1Url,
-                'hotelImage2' => $hotelImage2Url,
-                'hotelImage3' => $hotelImage3Url,
-                'hotelImage4' => $hotelImage4Url,
-                'hotelImage5' => $hotelImage5Url,
+                'hotelMainImage' => $hotelMainImageUrl ?? null,
+                'hotelImage1' => $hotelImage1Url ?? null,
+                'hotelImage2' => $hotelImage2Url ?? null,
+                'hotelImage3' => $hotelImage3Url ?? null,
+                'hotelImage4' => $hotelImage4Url ?? null,
+                'hotelImage5' => $hotelImage5Url ?? null,
                 'deleteStatus' => $this->deleteStatus, 
             ]);
 
@@ -276,8 +272,7 @@ class AddHotalDetais extends Component
         foreach ($this->hotels as $key => $value) {
             // Reset form fields for each hotel
             $this->reset([
-                'hotelName', 
-                'hotelPrice',
+                'hotelName',
                 'currency', 
                 'hotelCity', 
                 'hotelStarRating', 
