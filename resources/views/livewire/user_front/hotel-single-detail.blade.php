@@ -555,7 +555,7 @@
                                     <section >
                                         <div class="text-center d-flex align-items-center justify-content-between ">
                                             <div id="p-date" ><i class="fa-solid fa-calendar-days"></i> <span>{{ \Carbon\Carbon::parse($hotelCost['hotelSeasonStart'])->format('d M Y') }}</span> &nbsp; <i class="fa-solid fa-arrow-left"></i> &nbsp; To &nbsp; <i class="fa-solid fa-arrow-right"></i>&nbsp;<span>{{ \Carbon\Carbon::parse($hotelCost['hotelSeasonEnd'])->format('d M Y') }}</span></div >
-                                            <div class="meal"><span>Meal Type </span> <span class="p-meal">Bronc</span> 😋🍝</div>
+                                            <div class="meal"><span>Meal Type </span> <span class="p-meal">{{$hotelCost['hotelMeal']}}</span> 😋🍝</div>
                                         </div>
                                             <div class="period-price">
                                                 <span class="share-price">
@@ -801,10 +801,12 @@ li {
                 <div class="container">
                     <div class="row" style="margin-top:40px">
                         <div class="col-md-12  " data-wow-delay="0.1s">
-                        <iframe class=" rounded w-100 h-100"
-                            src="{{$hotel_detail->hotelMap}}"
+                            @if (!empty($hotel_detail->hotelMap))
+                            <iframe class=" rounded w-100 h-100"
+                            src="{{$hotel_detail->hotelMap}} "
                             frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
                             tabindex="0"></iframe>
+                            @endif
                         </div>
                     </div>
                 </div>
