@@ -132,6 +132,7 @@ use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
 use App\Livewire\UserFront\Umrahv2\Sightseeing;
 use App\Livewire\UserFront\Umrahv2\SingleSightSeeing;
 use App\Livewire\UserFront\Umrahv2\Catring;
+use App\Livewire\UserFront\Umrahv2\CustomPackage;
 use App\Livewire\UserFront\Umrahv2\Laundry as Umrahv2Laundry;
 use App\Livewire\UserFront\Umrahv2\RamzaanPackageByFlight;
 use Illuminate\Support\Facades\Route;
@@ -219,6 +220,8 @@ Route::get('/user/ziyarat-single/{id}',ZiyaratSingleView::class)->name('user.ziy
 //book my assitant
 Route::get('/user/myassistant',Assistant::class)->name('myassistant');
 
+//custom package 
+Route::get('/custom/package',CustomPackage::class)->name('custom.package');
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
 Route::get('/fpdf',function(){

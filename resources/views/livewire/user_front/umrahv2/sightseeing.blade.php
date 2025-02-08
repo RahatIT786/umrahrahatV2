@@ -5,12 +5,12 @@
         <div class="container-fluid p-0 mb-5">
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="w-100 " src="{{asset('asserts/user/img/haj/mecca1.jpg')}}" alt="Image" style="height: 30vh; object-fit: cover;">
+                    <div class="carousel-item imgZoom  active">
+                        <img class="w-100 " src="{{asset('newImg/bannerImage/sight_seeing.jpg')}}" alt="Image" style="height: 25vw; object-position:center;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
-                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Sightseeing</h1>
+                                {{-- <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Sightseeing</h1> --}}
                             </div>
                         </div>
                     </div>

@@ -89,6 +89,7 @@
                                         <a href="{{route('umrah-by-bus-from-uae')}}" class="dropdown-item">By Bus From UAE</a>
                                         <a href="{{route('umrah-by-flight-from-uae')}}" class="dropdown-item">By Flight from UAE</a>
                                         <a href="{{route('umrah-landpackages-uae')}}" class="dropdown-item">Land Packages</a>
+                                        <a href="{{route('custom.package')}}" class="dropdown-item">Custom Package</a>
                                     </div>
                                 </div>
                                 <div class="nav-item dropdown">
@@ -333,13 +334,7 @@
     
     <hr>
 
-    <div class="input-group" >
-        <label>Salutation</label>
-        <select>
-            <option>Mrs</option>
-            <option>Mr</option>
-        </select>
-    </div>
+   
 
     <div class="input-group">
         <label> Name</label>
@@ -399,7 +394,7 @@
       #forex-popup-form {
         /* display: none; */
             position: fixed;
-            top: -140%;
+            top: -200%;
             left: 50%;
             transform: translateX(-50%);
             width: 400px;

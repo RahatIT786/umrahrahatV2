@@ -14,4 +14,9 @@ class CarType extends Model
     // {
     //     return $this->hasOne(transportController::class, 'carType');
     // }
+
+
+    public function transports(){
+        return $this->hasMany(transportController::class,'carType','id');
+    }
 }
