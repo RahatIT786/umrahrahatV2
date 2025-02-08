@@ -6,11 +6,14 @@ use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\HotelDetail;
 use App\Models\hotel_user_enquire;
+use App\Models\HotelCost;
 
 class HotelSingleDetail extends Component
 {
     public $hotel_detail;
     public $hotel_id;
+    public $HotelDetails;
+    public $hotelCostDatas;
 
             //==========================================================================//
             public $package_user_name;
@@ -43,6 +46,20 @@ class HotelSingleDetail extends Component
         $this->hotel_id = $id;
         $this->hotel_detail = HotelDetail::find($this->hotel_id);
         $this->package_user_hotel_name = $this->hotel_detail->hotelName;
+        //  $this->hotelCostDatas = $this->getPeriods();
+        //  dd($this->hotelCostDatas);
+    }
+    public function getPeriods(){
+        // Fetch the hotel details based on the hotel IDs
+
+        $hotelCosts = HotelCost::where('hotel_id', 56 )->get();
+        // Store the hotel details in an array for use on the user side
+
+        $hotelCostData = [];
+        foreach ($hotelCosts as $hotel) {
+            $hotelCostData[] = $hotel->toArray();
+        }
+        return $hotelCostData;
     }
 
 

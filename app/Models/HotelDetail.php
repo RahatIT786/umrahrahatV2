@@ -23,6 +23,7 @@ class HotelDetail extends Model
         'hotelCheckInTime',
         'hotelCheckOutTime',
         'hotelDistance',
+        'hotel_amenities',
         'hotelMainImage',
         'hotelImage1',
         'hotelImage2',
