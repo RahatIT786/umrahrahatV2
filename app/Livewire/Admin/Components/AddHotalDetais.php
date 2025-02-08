@@ -9,6 +9,7 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
 use App\Models\HotelCities;
 use App\Models\HotelCost;
+use App\Models\CateringController;
 
 class AddHotalDetais extends Component
 {
@@ -53,6 +54,7 @@ class AddHotalDetais extends Component
     public $hotelQuad = [];
     public $hotelQuint = [];
     public $hotelAminity ;
+    public $hotel_foods;
 
     protected $rules = [
         "hotelName"=> "required|string|max:150",
@@ -154,6 +156,7 @@ class AddHotalDetais extends Component
             
         }
         $this->hotel_cities = HotelCities::where('delete_status',1)->get();
+        $this->hotel_foods = CateringController::where('delete_status',1)->get();
     }
     public function increaseHotelFields()
     {
