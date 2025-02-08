@@ -58,12 +58,12 @@
     </tbody>
 </table>
 
-        <div class="d-flex justify-content-evenly">
-        <div class="col-lg-8 distance-box">
-            <div>
+        <div class="col-lg-12 d-flex justify-content-evenly">
+        <div class=" distance-box">
+            <div >
                 <i style="font-size: 20px;" class="bi bi-geo-alt-fill"></i>
             </div>
-            <div class="content d-flex">
+            <div  class="content d-flex ">
                 <h5 class="mx-1">Distance from City Center</h5>
                 <p>{{ number_format($hotel_detail->hotelDistance, 0) }} m</p>
             </div>
@@ -126,7 +126,7 @@
     border-radius: 10px;
     border: 2px solid #ddd;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 600px;
 }
 
 .distance-box .icon img {
@@ -543,43 +543,143 @@
 
             <!-- Includion and exclution -->
             <div id="InclusionsExclusions" class="tab-pane fade show" role="tabpanel">
-    <div class="container">
-        <div class="row" style="margin-top:40px">
-            <div class="col-md-12 col-sm-12">
-                <div class="packageoverviewbox">
-                    <div class="row">
-                        <!-- Box 1 -->
-                        <div class="col-md-12 col-sm-12 mb-3">
-                            <div class="box box-1">
-                                <h5 style="font-size:xx-large">Check In</h5>
-                              
-                                 <li style="padding-left: 0; margin: 0;">
-                                    <div class="d-flex">
-                                        <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
-                                     &nbsp; {{ \Carbon\Carbon::parse($hotel_detail->hotelCheckInTime)->format('H:i') }}
-                                    </div>
-                                 </li>
-                          
+            <div class="container">
+                <div class="row" style="margin-top:40px">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="packageoverviewbox">
+                            <div class="row">
+                                @foreach ($hotelCostDatas as $hotelCost)
+                                 <div class="container my-2">
+                                    <div class="period-label py-3 px-3">  
+                                        <img class="halal_label" src="{{asset('asserts/user/img/halal.png')}}" alt="">
+                                    <section >
+                                        <div class="text-center d-flex align-items-center justify-content-between ">
+                                            <div id="p-date" ><i class="fa-solid fa-calendar-days"></i> <span>{{ \Carbon\Carbon::parse($hotelCost['hotelSeasonStart'])->format('d M Y') }}</span> &nbsp; <i class="fa-solid fa-arrow-left"></i> &nbsp; To &nbsp; <i class="fa-solid fa-arrow-right"></i>&nbsp;<span>{{ \Carbon\Carbon::parse($hotelCost['hotelSeasonEnd'])->format('d M Y') }}</span></div >
+                                            <div class="meal"><span>Meal Type </span> <span class="p-meal">Bronc</span> 😋🍝</div>
+                                        </div>
+                                            <div class="period-price">
+                                                <span class="share-price">
+                                                    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                                                        <img src="{{asset('asserts/user/img/price/2_Person.png')}}" style="height: 2.5rem;" alt="">
+                                                        <span class="price-title">Double</span>
+                                                        <span style="font-size:20px" class="price">{{$hotelCost['hotelDouble']}}</span>
+                                                    </div>
+                                                   
+                                                </span>
+                                                <span  class="share-price">
+                                                    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                                                        <img src="{{asset('asserts/user/img/price/3_Person.png')}}" style="height: 2.5rem;" alt="">
+                                                        <span class="price-title">Triple</span>
+                                                        <span style="font-size:20px" class="price">{{$hotelCost['hotelTriple']}}</span>
+                                                    </div>
+                                                </span>
+                                                <span  class="share-price">
+                                                    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                                                        <img src="{{asset('asserts/user/img/price/4_Person.png')}}" style="height: 2.5rem;" alt="">
+                                                        <span class="price-title">Quad</span>
+                                                        <span style="font-size:20px" class="price">{{$hotelCost['hotelQuad']}}</span>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                    </section>
+                                    
+                                </div>
                             </div>
-                        </div>
-                        
-                        <!-- Box 2 -->
-                        <div class="col-md-12 col-sm-12 mb-3">
-                            <div class="box box-2">
-                                <h5 style="font-size:xx-large">Check Out</h5>
-                                <li style="padding-left: 0; margin: 0;">
-                                    <div class="d-flex">
-                                        <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
-                                     &nbsp; {{ \Carbon\Carbon::parse($hotel_detail->hotelCheckOutTime)->format('H:i') }}
-                                    </div>
-                                 </li>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /* font-variation-settings:
+    "wdth" 100; */
+        }
+        .period-label{
+          position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+           background-color: whitesmoke;
+            border-radius: 6px;
+
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+            #p-date{
+                border: 0.2px solid #ff670e;
+                /* border: 1px solid #fea116; */
+                padding: 4px 10px;
+                border-radius: 20px;
+                font-weight: 600;
+            }
+            .period-price{
+                display: flex;
+                justify-content: space-around;
+                gap: 15px;
+                margin: 20px auto;
+            }
+            .share-price{
+                display: flex;
+                /* flex-direction: column; */
+                height: 90px;
+                width: 130px;
+                justify-content: center;
+                align-items: center;
+                /* border: 1px solid #aad15f; */
+                padding: 10px;
+                /* border-radius: 50px; */
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.1s linear;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                .price{
+                    color: rgb(3, 12, 3);
+                    font-weight: 700;
+                }
+               
+                
+            }
+            .share-price:hover{
+                    transform: scale(1.1);
+                }
+            .price-title{
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 12px;
+
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .meal{
+                
+                padding: 4px 10px;
+                border-radius: 20px;
+                font-weight: 600;
+                color: white;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 800;
+                
+                background-color: rgb(4, 170, 4);
+            }
+            .p-meal{
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .halal_label{
+                position: absolute;
+                right: -40px;
+               bottom: -40px;
+                transform: rotate(320deg);
+                height: 7rem;
+            }
+
+        }
+
+ </style>
 <style>
 
 ul {
@@ -719,7 +819,7 @@ li {
                                 <div class="row">
                                                             <!-- Box 3 -->
                         <div class="col-md-12 col-sm-12 mb-3">
-                            <div class="box box-3">
+                            <div class="box ">
                                 <h5 style="font-size:xx-large">Distance from city center: {{ number_format($hotel_detail->hotelDistance, 0) }} m</h5>
                             </div>
                         </div>

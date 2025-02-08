@@ -46,12 +46,10 @@ class HotelSingleDetail extends Component
         $this->hotel_id = $id;
         $this->hotel_detail = HotelDetail::find($this->hotel_id);
         $this->package_user_hotel_name = $this->hotel_detail->hotelName;
-        //  $this->hotelCostDatas = $this->getPeriods();
-        //  dd($this->hotelCostDatas);
+        $this->hotelCostDatas = $this->getPeriods();
     }
     public function getPeriods(){
         // Fetch the hotel details based on the hotel IDs
-
         $hotelCosts = HotelCost::where('hotel_id', 56 )->get();
         // Store the hotel details in an array for use on the user side
 
