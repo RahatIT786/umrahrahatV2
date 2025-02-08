@@ -43,6 +43,7 @@ class AddHotalDetais extends Component
     public $hotelYouTube;
     public $hotelMap;
     public $hotelManagerContect;
+    public $hotelAmenities = [];
     public $hotels = [];
     public $hotelSeasonStart = [];
     public $hotelSeasonEnd = [];
@@ -51,6 +52,7 @@ class AddHotalDetais extends Component
     public $hotelTriple = [];
     public $hotelQuad = [];
     public $hotelQuint = [];
+    public $hotelAminity ;
 
     protected $rules = [
         "hotelName"=> "required|string|max:150",
@@ -167,6 +169,11 @@ class AddHotalDetais extends Component
 
     public function submit(){
 
+        
+        $amenitiesString = implode(',', $this->hotelAmenities);
+        $this->hotelAminity =$amenitiesString;
+        // dd($amenitiesString);
+
         $this->validate();
 
         // Store the images
@@ -184,6 +191,8 @@ class AddHotalDetais extends Component
         $hotelImage3Url = $hotelImage3Path ? Storage::url($hotelImage3Path) : null;
         $hotelImage4Url = $hotelImage4Path ? Storage::url($hotelImage4Path) : null;
         $hotelImage5Url = $hotelImage5Path ? Storage::url($hotelImage5Path) : null;
+
+       
 
         if ($this->hotelId) {
             // Update existing hotel record
@@ -204,6 +213,8 @@ class AddHotalDetais extends Component
                 'hotelCheckInTime' => $this->hotelCheckInTime,
                 'hotelCheckOutTime' => $this->hotelCheckOutTime,
                 'hotelDistance' => $this->hotelDistance,
+                'hotel_amenities'=>$this->hotelAminity,
+
                 'hotelMainImage' => $hotelMainImageUrl ?? $hotel->hotelMainImage,
                 'hotelImage1' => $hotelImage1Url ?? $hotel->hotelImage1,
                 'hotelImage2' => $hotelImage2Url ?? $hotel->hotelImage2,
@@ -223,7 +234,7 @@ class AddHotalDetais extends Component
                 'hotelStarRating' => $this->hotelStarRating,
                 'hotelAddress' => $this->hotelAddress,
                 'hotelDiscription' => $this->hotelDiscription,
-
+                'hotel_amenities'=>$this->hotelAminity,
                 'hotelYouTube' => $this->hotelYouTube,
                 'hotelMap' => $this->hotelMap,
                 'hotelManagerContect' => $this->hotelManagerContect,
@@ -260,8 +271,8 @@ class AddHotalDetais extends Component
             }
             session()->flash('message', 'Hotel details added successfully!');
         }
-        foreach($this->hotels as $key => $value){}
-            // Reset form fields
+        foreach ($this->hotels as $key => $value) {
+            // Reset form fields for each hotel
             $this->reset([
                 'hotelName', 
                 'hotelPrice',
@@ -272,6 +283,7 @@ class AddHotalDetais extends Component
                 'hotelDiscription',
                 'hotelYouTube',
                 'hotelMap',
+                'hotel_amenities',
                 'hotelManagerContect',
                 'hotelCheckInTime',
                 'hotelCheckOutTime',
@@ -282,14 +294,18 @@ class AddHotalDetais extends Component
                 'hotelImage3',
                 'hotelImage4',
                 'hotelImage5',
-                'hotelSeasonStart',
-                'hotelSeasonEnd',
-                'hotelMeal',
-                'hotelDouble',
-                'hotelTriple',
-                'hotelQuad',
-                'hotelQuint',
             ]);
+        
+            // Reset array fields separately
+            $this->hotelSeasonStart[$key] = null;
+            $this->hotelSeasonEnd[$key] = null;
+            $this->hotelMeal[$key] = null;
+            $this->hotelDouble[$key] = null;
+            $this->hotelTriple[$key] = null;
+            $this->hotelQuad[$key] = null;
+            $this->hotelQuint[$key] = null;
+        }
+        
         }
 
     #[Layout('admin.Layouts.app')]

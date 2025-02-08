@@ -42,13 +42,130 @@
                     <!-- Hotel Banner End -->
 
                     <!-- Hotel Description -->
-                    @if (!empty($hotel_detail->hotelYouTube))
-                       <a href="{{$hotel_detail->hotelYouTube}}" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: #FF0000; font-weight: bold; font-size: 16px;">
-                            <i class="fa-brands fa-youtube" style="font-size: 24px; margin-right: 8px;"></i>
-                            Watch Our Exclusive Awazem Hotels Tour!
-                        </a>
-                    @endif
+
+                    <table class="table table-bordered text-center mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Check In</th>
+            <th>Check Out</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ \Carbon\Carbon::parse($hotel_detail->hotelCheckInTime)->format('H:i') }}</td>
+            <td>{{ \Carbon\Carbon::parse($hotel_detail->hotelCheckOutTime)->format('H:i') }}</td>
+        </tr>
+    </tbody>
+</table>
+
+        <div class="d-flex justify-content-evenly">
+        <div class="col-lg-8 distance-box">
+            <div>
+                <i style="font-size: 20px;" class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="content d-flex">
+                <h5 class="mx-1">Distance from City Center</h5>
+                <p>{{ number_format($hotel_detail->hotelDistance, 0) }} m</p>
+            </div>
+        </div>
+        <div class="col-lg-6">
+        @if (!empty($hotel_detail->hotelYouTube))
+            <div class="youtube-box">
+                <div class="content d-flex">
+                    <i style="color:#FF0000" class="bi bi-youtube mt-1"></i>
+                    <a style="color:#0F172B" class="mx-3 " href="{{ $hotel_detail->hotelYouTube }}" target="_blank">Hotel Video Tour</a>
                 </div>
+            </div>
+        @endif
+        </div>
+        </div>
+
+
+<style>
+    .youtube-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+
+.youtube-box .content h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2C3E50;
+    margin: 0;
+}
+
+.youtube-box .content a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF0000;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.youtube-box .content a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<style>
+    .distance-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.distance-box .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.distance-box .content h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2C3E50;
+    margin: 0;
+}
+
+.distance-box .content p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0D6EFD;
+    margin: 0;
+}
+
+</style>
+
+
+                </div>
+
+                <style>
+                    #sty{
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: bold;
+                        color: #0F172B;
+                    }
+
+                    .stylish-time {
+                        font-family: 'Dancing Script', cursive;
+                        font-size: 20px;
+                        color: #2C3E50;
+                    }
+                </style>
 
                 <!-- Right Section: Booking Form -->
                 <div class="col-lg-3" style="margin-top:70px">
@@ -148,17 +265,17 @@
                     <!-- <div class="nav-item-package">
                         <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Itinerary</a>
                     </div> -->
-                    <div class="nav-item-package">
+                    <!-- <div class="nav-item-package">
                         <a href="#PackageOverview" style="text-decoration: none;" id="lnkPackageOverview" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Contact</a>
-                    </div>
+                    </div> -->
                     <div class="nav-item-package">
-                        <a href="#InclusionsExclusions" style="text-decoration: none;font-size:14px;font-weight:600;" id="lnkInclusionsExclusions" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Check-in/Check-out</a>
+                        <a href="#InclusionsExclusions" style="text-decoration: none;font-size:14px;font-weight:600;" id="lnkInclusionsExclusions" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Periods</a>
                     </div>
-                    <div class="nav-item-package">
+                    <!-- <div class="nav-item-package">
                         <a href="#PaymentPolicy" style="text-decoration: none;font-size:14px;font-weight:600;" id="lnkPaymentPolicy" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Getting around</a>
-                    </div>
+                    </div> -->
                      <div class="nav-item-package">
-                        <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Map</a>
+                        <a href="#Itinerary" id="lnkItinerary" style="text-decoration: none;font-size:14px;font-weight:600;" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Map</a>
                     </div>
                     <!--<div class="nav-item-package">
                         <a href="#PaymentPolicy" id="lnkPaymentPolicy" class="nav-link-package" data-bs-toggle="tab" role="tab" aria-selected="false">Payment Policy / Important Notes</a>
@@ -323,6 +440,21 @@
                                                 <h5 style="font-size:xx-large">Description</h5>
                                                 <ul style=" list-style-type: none; padding-left: 0;">
                                                 @foreach (explode('.', $hotel_detail->hotelDiscription) as $sentence)
+                                                    @if(trim($sentence))
+                                                        <li style="padding-left: 0; margin: 0;">
+                                                            <div class="d-flex">
+                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                                &nbsp; {{ trim($sentence) }}
+                                                            </div>
+                                                        </li>
+                                                    @endif
+                                                @endforeach
+                                                </ul>
+                                            </div>
+                                            <div class="box box-1 my-3">
+                                                <h5 style="font-size:xx-large">Hotel Manager Contact</h5>
+                                                <ul style=" list-style-type: none; padding-left: 0;">
+                                                @foreach (explode('.', $hotel_detail->hotelManagerContect) as $sentence)
                                                     @if(trim($sentence))
                                                         <li style="padding-left: 0; margin: 0;">
                                                             <div class="d-flex">

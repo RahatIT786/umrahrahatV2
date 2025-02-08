@@ -150,15 +150,19 @@
                                     </div>
                                    </div>
                                    @php
-                                   $minPrice=min(
-                                    intval($package->sharingDetails->g_share),
-                                    intval($package->sharingDetails->qt_share),
-                                    intval($package->sharingDetails->qd_share),
-                                    intval($package->sharingDetails->t_share),
-                                    intval($package->sharingDetails->d_share),
-                                    intval($package->sharingDetails->single),
-                                   );
-                                   @endphp
+                                        // Extract values and remove 0
+                                        $prices = array_filter([
+                                            intval($package->sharingDetails->g_share),
+                                            intval($package->sharingDetails->qt_share),
+                                            intval($package->sharingDetails->qd_share),
+                                            intval($package->sharingDetails->t_share),
+                                            intval($package->sharingDetails->d_share),
+                                            intval($package->sharingDetails->single),
+                                        ], fn($value) => $value > 0); // Remove 0 values
+
+                                        // Get the minimum price, default to 1 if empty
+                                        $minPrice = !empty($prices) ? min($prices) : 1;
+                                    @endphp
                                    
                                     <div class="ps-2">
                                        <h5 style="color: gray">Start From</h5>
