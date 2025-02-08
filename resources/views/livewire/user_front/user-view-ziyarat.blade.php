@@ -188,7 +188,7 @@
                                         @endphp
                                     <div class="mb-3" style="font-weight:500;">
                                         <span style="font-weight:500; color: #0D1425;"> <i class="bi bi-geo-alt-fill">
-                                        </i> <strong> Destinations cities </strong>:
+                                        </i> <strong> Departure cities </strong>:
                                         @foreach ($departCities as $city)
                                             {{ $city }} ,
                                         @endforeach
