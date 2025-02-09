@@ -1,133 +1,83 @@
 <section>
      <!-- Page Header Start -->
-     <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
-            <div class="container-fluid page-header-inner py-5">
-                <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Laundry</h1>
-                </div>
-            </div>
-        </div>
-        <!-- Page Header End -->
-        <!-- <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
-    <div class="container">
-        <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
-            <div class="row g-2">
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="clients-count">0</h2>
-                        <h5>Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="success-rate">0</h2>
-                        <h5>Success Rate</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="rating-clients">0</h2>
-                        <h5>Rating Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="experience-years">0</h2>
-                        <h5>Years of Experience</h5>
+        <div class="container-fluid p-0 mb-5 hotel-banner">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" style="height: 30rem;" src="{{ asset('asserts/user/img/haj/mecca1.jpg') }}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 700px;">
+                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
+                            <h1 class="display-3 text-white mb-4 animated slideInDown">Our Laundry Service</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
+        <!-- Page Header End -->
 
         <!-- Room Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">RahatGroup</h6>
-                    <h1 class="mb-5">Our Laundry Service<span class="text-primary text-uppercase"></span></h1>
+                    <!-- <h6 class="section-title text-center text-primary text-uppercase">RahatGroup</h6> -->
+                    <!-- <h1 class="mb-5">Our Laundry Service<span class="text-primary text-uppercase"></span></h1> -->
                 </div>
-                <div class="row g-4 d-flex flex-column  align-items-center">
-                    {{-- <div class="col-lg-8 col-md-10 wow fadeInUp " data-wow-delay="0.1s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative p-3 col-lg-4 col-md-4">
-                                <img class="img-fluid" src="{{asset('images/bookmyassistant.jpeg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                            </div>
-                            <div class="p-4 mt-2 " >
-                               <div class="d-flex flex-column justify-content-between h-100">
-                                <h3>{{}}</h3>
-                                <p class="text-body mb-3">The ultimate act of worship, Hajj and Umrah, represents a deep spiritual journey of devotion, submission, and faith...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:navigate href="{{route('singleBlog1')}}">Read More</a>
-                                </div>
-                               </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                @foreach ($laundryDetails as $landry)
-                <div class="col-lg-8 col-md-10 wow fadeInUp  " data-wow-delay="0.3s">
-                    <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                        <div class="position-relative  p-3 col-lg-4 col-md-4">
-                            <img class="img-fluid " src="{{Storage::url($landry['image_path'])}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                        </div>
-                        <div class="p-4 mt-2">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h5>{{$landry['laundry_type']}}</h5>
-                                <div>
-                                    <h6 class="">{{$landry['price']}} .<span>AED</span></h6>
-                                    <del style="font-size: 14px;" >{{ round($landry['price'] * 1.1) }}.00. <span>AED</span> </del>
-                                </div>
-                            </div>
-                            <div>
-                                <span>Washing Days : {{$landry['days']}}</span>
-                                <p>How Many Cloths : {{$landry['cloth_count']}}</p>
-                            </div>
-                            <div class="d-flex flex-column justify-content-between h-90 ">
-                                {{-- <p class="text-body mb-3">{{ Str::limit($landry['note'], 300, '...') }}</p> --}}
-                                <div class="m-2">
-                                    <h5>Free Benifits</h5>
-                                    {!! $landry['note'] !!}
-                                </div>
+                <div class="row g-4 d-flex   align-items-center">
 
-                            <div class="d-flex justify-content-between">
-                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Book Here</a>
-                                {{-- <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog2')}}">Read More</a> --}}
-                            </div>
+                @foreach ($laundryDetails as $landry)
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="room-item shadow rounded overflow-hidden">
+                                <div class="row g-0">
+                                    <!-- Right Column: Food Details Section (col-4) -->
+                                    <div class="col-lg-12 col-md-12 p-4 mt-2">
+                                        <div class="position-relative">
+                                            <img class="img-fluid" src="{{Storage::url($landry['image_path'])}}" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
+                                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
+                                                <!-- Optional small label here if needed -->
+                                            </small>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between my-3">
+                                            <h5 class="mb-0">{{$landry['laundry_type']}}</h5>
+                                          
+                                        </div>
+
+                                        <div>
+                                            <p style="border: 1px dashed #FEA116; padding: 2px 4px;" class="text-center">
+                                                {{$landry['price']}} <span>AED</span>
+                                            </p>
+                                        </div>
+
+                                        <div>
+                                            <p style="border: 1px dashed #FEA116; padding: 2px 4px;" class="text-center">
+                                                <span>Washing Days : {{$landry['days']}}</span>
+                                                <p>How Many Cloths : {{$landry['cloth_count']}}</p>
+                                            </p>
+                                        </div>
+
+                                        <p class="text-body mb-3 text-justify">
+                                           
+                                        </p>
+                                        <div>
+                                        <h5>Free Benifits</h5>
+                                        {!! $landry['note'] !!}
+                                        </div>
+
+                                        <div class="d-flex justify-content-between">
+
+                                            <a class="btn btn-sm btn-dark rounded py-2 px-4">
+                                                <i class="fa-regular fa-paper-plane"></i> Book Enquire
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>                    
+                                   
                 @endforeach
-                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative  p-3 col-lg-4">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring3.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                            </div>
-                            <div class="p-4 mt-2">
-                                <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog3')}}">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative p-3 col-lg-4">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring4.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                            </div>
-                            <div class="p-4 mt-2">
-                                <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog3')}}">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
+
                 </div>
             </div>
         </div>

@@ -23,16 +23,16 @@
                         </div> 
   
 
-                       {{--  <div class="col-md-6 mb-3">
+                     <div class="col-md-6 mb-3">
                             <label class="form-label">Package Name</label>
-                            <select class="form-control" id="packageType" wire:model.live="selected_package_type" required>
+                            <select class="form-control" id="service_type" wire:model.live="service_type" required>
                                 <option value="">Select Package Type</option>
-                                @foreach ($packageType as $key => $value)
-                                    <option value="{{ $value->id }}">{{ $value->packageType }}</option>
+                                @foreach ($ziyaratCity as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->ziyarat_city }}</option>
                                 @endforeach
                             </select>
-                            @error("selected_package_type") <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>--}}
+                            @error("service_type") <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
 
 
 
@@ -42,33 +42,6 @@
                             @error('package_days') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                     {{--   <div class="col-md-6 mb-3">
-                        <label  class="form-label">Service Type</label>
-                                <select class="form-control" wire:model="service_type" wire:change="service_type">
-                                    <option value="">Select Service Type</option>
-                                    <option value="1">Ramzan</option>
-                                    <option value="2">Hajj</option>
-                                    <option value="3">Umrah</option>
-                                </select>
-                                @error("service_type")<span class="text-danger">{{ $message }}</span>@enderror
-                        </div> --}}
-
-
-                     <!-- Package Type* -->
-                    {{-- <div class="col-md-12 mb-3">
-                        <label class="form-label">Package Type</label>
-
-                        <div class="d-flex">
-                            @foreach ($packageType as $key => $value)
-                                <div class="form-check" style="margin-right:20px">
-                                    <input class="form-check-input" type="checkbox" id="{{ $value->id }}" value="{{ $value->id }}" wire:model.live="package_type_ids">
-                                    <label class="form-check-label" for="{{ $value->id }}">{{ $value->packageType }}</label>
-                                </div>
-                            @endforeach
-                        </div>
-                        @error('packageType') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div> --}}
-
                         <!--Package Discription -->
                         <div class="col-md-6 mb-3">
                             <label for="packageDescription" class="form-label">Description*</label>
@@ -77,7 +50,7 @@
                         </div>
 
                         <!-- Package Image -->
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-12 mb-6">
                             <label for="packageImage" class="form-label">Package Image</label>
                             <input type="file" id="packageImage" class="form-control" wire:model="packageImage" accept="image/*">
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
@@ -130,13 +103,37 @@
                         <div class="">
                             @foreach ($DepartureCity as $index => $value)
                                 <div class="form-check" style="margin-right:20px">
-                                    <input class="form-check-input" type="checkbox" id="{{$value->CityName}}" value="{{$value->id}}" wire:model="departureCities">
+                                    <input class="form-check-input" type="checkbox" id="{{$value->CityName}}" value="{{$value->CityName}}" wire:model="departureCities">
                                     <label class="form-check-label" for="{{$value->CityName}}">{{$value->CityName}}</label>
                                 </div>
                             @endforeach
                         </div>
-                        @error('departureCity') <span class="text-danger">{{ $message }}</span> @enderror
+                        @error('departureCities') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
+
+                  <!-- Laundry Type -->
+                    <div class="col-lg-6">
+                        <label  class="form-label">Laundry Type</label>
+                         <select class="form-control" wire:model="laundray_type">
+                            <option value="">Select Laundry Type</option>
+                                @foreach ($laundrayController as $index => $value)
+                                <option value="{{$value->id }}">{{$value->laundry_type}}</option>
+                                @endforeach
+                        </select>
+                        @error("laundray_type") <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                            <!-- Meal Type -->
+                            <div class="col-lg-6">
+                            <label for="SuperSaver_MealType" class="form-label">Meal Type</label>
+                            <select class="form-control" wire:model="food_type" >
+                                <option value="">Select Meal Type</option>
+                                @foreach ($foodController as $index => $value)
+                                  <option value="{{$value->id }}">{{$value->foodType}}</option>
+                                @endforeach
+                            </select>
+                            @error("food_type")<span class="text-danger">{{ $message }}</span>@enderror
+                            </div>
 
                     <!-- Policies -->
                     <h5>Policies</h5>
@@ -210,165 +207,127 @@
                         @error('packageItinerary') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
-                    
-
-                    @if ($this->package_type_ids != null)
-                     @foreach ( $package_type_ids as $k => $v )
-                         <hr>
-                         <div class="card-header">
-                            @foreach ($packageType as $key => $value)
-                               @if ( $v == $value->id)
-                                  <h4>{{ $value->packageType }}</h4>
-                               @endif 
-                            @endforeach
-                        </div>
-                        <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
-
-                            <!-- Makkah Hotel -->
-                            <div class="col-lg-2">
-                                <label for="SuperSaver_makkahHotelRatings" class="form-label">Makka Hotel Category</label>
-                                <select class="form-control" name="makka_rating" wire:model="makka_rating.{{$k}}" wire:change="getMakkaHotel({{ $k }})">
-                                     <option value="">{{ 'Select' }} {{ 'Makka Hotel Category' }} </option>
-                                     <option value="1">One Star</option>
-                                     <option value="2">Two Star</option>
-                                     <option value="3">Three Star</option>
-                                     <option value="4">Four Star</option>
-                                     <option value="5">Five Star</option>
-                                     <option value="Standard Hotel">Standard Hotel</option>
-                                     <option value="Building Accommodation">Building Accommodation</option>
-                                </select>
-                                @error("makka_rating.{$k}")<span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <!-- Display the fetched hotel names dynamically -->
-                            <div class="col-lg-2">
-                                <label  class="form-label">Makka Hotel</label>
-                                <select class="form-control" id="makka_hotel{{ $k }}" name="makka_hotel" wire:model="makka_hotel.{{ $k }}">
-                                    <option value="">Select Hotels</option>
-                                    @if (!empty($makkaHotel[$k]))
-                                        @foreach ($makkaHotel[$k] as $id => $hotelName)
-                                            <option value="{{ $id }}">{{ $hotelName }}</option>
-                                        @endforeach
-                                    @endif  
-                                </select>
-                                @error("makka_hotel.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <!-- Madina Hotel -->
-                            <div class="col-lg-2">
-                            <label  class="form-label">Madina Hotel Category</label>
-                                <select class="form-control" wire:model="madina_rating.{{ $k }}" wire:change="getMadinaHotel({{ $k }})">
-                                    <option value="">{{ 'Madina Hotel Category' }}</option>
-                                    <option value="1">One Star</option>
-                                    <option value="2">Two Star</option>
-                                    <option value="3">Three Star</option>
-                                    <option value="4">Four Star</option>
-                                    <option value="5">Five Star</option>
-                                    <option value="Standard Hotel">Standard Hotel</option>
-                                    <option value="Building Accommodation">Building Accommodation</option>
-                                </select>
-                                @error("madina_rating.{$k}")<span class="text-danger">{{ $message }}</span>@enderror
-                            </div>
-                            <!-- Display the fetched hotel names dynamically -->
-                            <div class="col-lg-2">
-                            <label  class="form-label">Madina Hotel</label>
-                            <select class="form-control" id="madina_hotel{{ $k }}" wire:model="madina_hotel.{{ $k }}">
-                                <option value="">Select Hotels</option>
-                                    @if (!empty($madinaHotel[$k]))
-                                        @foreach ($madinaHotel[$k] as $id => $hotel_name)
-                                            <option value="{{ $id }}">{{ $hotel_name }}</option>
-                                        @endforeach
-                                    @endif
-                            </select>
-                            @error("madina_hotel.{$k}")<span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <!-- Madina Hotel -->
-                            <!-- Meal Type -->
-                            <div class="col-lg-2">
-                            <label for="SuperSaver_MealType" class="form-label">Meal Type</label>
-                            <select class="form-control" wire:model="food_type.{{ $k }}" >
-                                <option value="">Select Meal Type</option>
-                                @foreach ($foodController as $index => $value)
-                                  <option value="{{$value->id }}">{{$value->foodType}}</option>
-                                @endforeach
-                            </select>
-                            @error("food_type.{$k}")<span class="text-danger">{{ $message }}</span>@enderror
-                            </div>
-                      </div>
                       <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
-                           <!-- Laundry Type -->
-                            <div class="col-lg-2">
-                                <label  class="form-label">Laundry Type</label>
-                                <select class="form-control" wire:model="laundray_type.{{ $k }}">
-                                    <option value="">Select Laundry Type</option>
-                                    @foreach ($laundrayController as $index => $value)
-                                    <option value="{{$value->id }}">{{$value->laundry_type}}</option>
-                                    @endforeach
-                                </select>
-                                @error("laundray_type.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
+ 
                            <!-- Sharing -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label class="form-label">Sharing*</label>
-                                <input type="text" id="g_share_price{{ $k }}" wire:model="g_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("g_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="g_share_price" wire:model="g_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("g_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             
                             <!-- Quint -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label  class="form-label">Quint*</label>
-                                <input type="text" id="SuperSaver_Quint" wire:model="qt_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("g_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="SuperSaver_Quint" wire:model="qt_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("qt_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             <!-- Quad -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label class="form-label">Quad*</label>
-                                <input type="text" id="qd_share_price{{ $k }}" wire:model="qd_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("qd_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="qd_share_price" wire:model="qd_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("qd_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
-                            <!-- Triple -->
-                            <div class="col-lg-2">
-                                <label  class="form-label">Triple*</label>
-                                <input type="text" id="t_share_price{{ $k }}" wire:model="t_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("t_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
+
                       </div>
                       <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
+
+                           <!-- Triple -->
+                            <div class="col-lg-3">
+                                <label  class="form-label">Triple*</label>
+                                <input type="text" id="t_share_price" wire:model="t_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("t_share_price") <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
                         <!-- Double -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label  class="form-label">Double*</label>
-                                <input type="text" id="d_share_price{{ $k }}" wire:model="d_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("d_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="d_share_price" wire:model="d_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("d_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                         <!-- Single -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <label  class="form-label">Single*</label>
-                                <input type="text" id="single_price{{ $k }}" wire:model="single_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("single_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <!-- Child with Bed* -->
-                            <div class="col-lg-2">
-                                <label  class="form-label">Child With Bed*</label>
-                                <input type="text" id="child_w_b{{ $k }}" wire:model="child_w_b.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("child_w_b.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <!-- Child without Bed* -->
-                            <div class="col-lg-2">
-                                <label class="form-label">Child Without Bed*</label>
-                                <input type="text" id="child_wo_b{{ $k }}" wire:model="child_wo_b.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("child_wo_b.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <div class="col-lg-2">
-                                <label  class="form-label">Child Infant*</label>
-                                <input type="text" id="infants{{ $k }}" wire:model="infants.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                                @error("infants.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="text" id="single_price" wire:model="single_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("single_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                         </div>
-                     @endforeach
-                    @endif
+
+                        <div class="col-lg-12  mb-3 d-flex justify-content-evenly">
+                            <!-- Child with Bed* -->
+                            <div class="col-lg-3">
+                                <label  class="form-label">Child With Bed*</label>
+                                <input type="text" id="child_w_b" wire:model="child_w_b" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("child_w_b") <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <!-- Child without Bed* -->
+                            <div class="col-lg-3">
+                                <label class="form-label">Child Without Bed*</label>
+                                <input type="text" id="child_wo_b" wire:model="child_wo_b" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("child_wo_b") <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="col-lg-3">
+                                <label  class="form-label">Child Infant*</label>
+                                <input type="text" id="infants" wire:model="infants" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                @error("infants") <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <button type="button" wire:click="increaseHotelFields" class="btn btn-primary mx-3">Add Hotel</button>
+                            <button type="button" wire:click="decreaseHotelFields" class="btn btn-danger mx-3">Remove Hotel</button>
+                        </div>
+
+
+                        @foreach ($hotels as $index => $hotel)
+                            <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
+                                <!-- Hotel City -->
+                                <div class="col-lg-3">
+                                    <label class="form-label">Hotel City</label>
+                                    <select class="form-control" wire:model="hotels.{{$index}}.city">
+                                        <option value="">Select Hotel City</option>
+                                        @foreach ($HotelCities as $Hotelcity)
+                                            <option value="{{ $Hotelcity->hotel_city }}">{{ $Hotelcity->hotel_city }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error("hotels.{$index}.city") <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                                <!-- Hotel Category -->
+                                <div class="col-lg-3">
+                                    <label class="form-label">Hotel Category</label>
+                                    <select class="form-control" wire:model="hotels.{{$index}}.category" wire:change="getHotelCategory({{$index}})">
+                                        <option value="">Select Hotel Category</option>
+                                        <option value="1">One Star</option>
+                                        <option value="2">Two Star</option>
+                                        <option value="3">Three Star</option>
+                                        <option value="4">Four Star</option>
+                                        <option value="5">Five Star</option>
+                                        <option value="Standard Hotel">Standard Hotel</option>
+                                        <option value="Building Accommodation">Building Accommodation</option>
+                                    </select>
+                                    @error("hotels.{$index}.category") <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                                <!-- Hotel Name -->
+                                <div class="col-lg-3">
+                                    <label class="form-label">Hotel Name</label>
+                                    <select class="form-control" wire:model="hotels.{{$index}}.selected_name">
+                                        <option value="">Select Hotel Name</option>
+                                        @if (!empty($hotel['names']) && is_array($hotel['names']))
+                                            @foreach ($hotel['names'] as $id => $hotelName)
+                                                <option value="{{ $id }}">{{ $hotelName  }}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                    @error("hotels.{$index}.selected_name") <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                            </div>
+                        @endforeach
 
                     <!-- Submit Button -->
-                    <!-- <div class="col-md-4 d-flex justify-content-end">
+                    <div class="col-md-4 d-flex justify-content-end">
                         <button class="btn btn-primary w-100">Submit Hotel Details</button>
-                    </div> -->
+                    </div>
                   </form>
                 </div>
             </div>

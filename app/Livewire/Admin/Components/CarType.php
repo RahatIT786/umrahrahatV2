@@ -6,15 +6,21 @@ use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\CarType as carTypeAdd;
 use Livewire\WithPagination; 
+use Livewire\WithFileUploads;
 
 class CarType extends Component
 {
+    use WithFileUploads;
     use WithPagination;  
     public $showAddModal = false;
     public $showModal = false;
     public $carType;
     public $carTypeId;
     public $search = null;
+    public $carImage;
+    public $carImagePath;
+    public $carId;
+
     public function addCarType()
     {
         $this->showAddModal = true;

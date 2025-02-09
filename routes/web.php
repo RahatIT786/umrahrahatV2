@@ -33,8 +33,9 @@ use App\Livewire\Admin\Components\UmrahLandPackage;
 use App\Livewire\Admin\Components\ViewHotelDetails;
 use App\Livewire\Admin\Components\ViewUmrahPackages;
 use App\Livewire\Admin\Components\VisaRequest;
+use App\Livewire\Admin\Components\ZiyaratCities;
 use App\Livewire\Admin\PackageManager\AdminViewPackage;
-
+use App\Livewire\Admin\Components\HotelCities;
 
 //catring controller
 use App\Livewire\Admin\Components\Catringlist;
@@ -50,6 +51,9 @@ use App\Livewire\Admin\Components\CarType;
 use App\Livewire\Admin\Components\CarSector;
 use App\Livewire\Admin\Components\CarRentel;
 use App\Livewire\Admin\Components\AddTransport;
+use App\Livewire\UserFront\Umrahv2\TransfersSingle;
+use App\Livewire\Admin\Components\AddCarType;
+
 
 //Ziyarat Controller
 use App\Livewire\Admin\Components\Ziyarat;
@@ -57,6 +61,11 @@ use App\Livewire\Admin\Components\AddZiyarat;
 use App\Livewire\Admin\Components\PackageTransportType;
 use App\Livewire\Admin\umrahv2\AgentSignup;
 use App\Livewire\Admin\umrahv2\QuickEnquires;
+use App\Livewire\Admin\Components\ServiceType;
+// use App\Livewire\UserFront\Umrahv2\UserViewZiyarat;
+
+//PackageEnquireFromUser
+use App\Livewire\Admin\Components\PackageEnquireFromUser;
 
 use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
@@ -90,7 +99,9 @@ use App\Livewire\UserFront\Dummy\RamzanPackageFromIndiaDummy;
 use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use App\Livewire\MissionVision;
 use App\Livewire\AgentSpeak;
-
+use App\Livewire\Agm;
+use App\Livewire\UserViewZiyarat;
+use App\Livewire\ZiyaratSingleView;
 use App\Livewire\OurAwards;
 
 use App\Livewire\BankAccount;
@@ -114,10 +125,14 @@ use App\Livewire\WhoWeAre; // Ensure this class exists in the specified namespac
 
 use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
 
+
+
+
 use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
 use App\Livewire\UserFront\Umrahv2\Sightseeing;
 use App\Livewire\UserFront\Umrahv2\SingleSightSeeing;
 use App\Livewire\UserFront\Umrahv2\Catring;
+use App\Livewire\UserFront\Umrahv2\CustomPackage;
 use App\Livewire\UserFront\Umrahv2\Laundry as Umrahv2Laundry;
 use App\Livewire\UserFront\Umrahv2\RamzaanPackageByFlight;
 use Illuminate\Support\Facades\Route;
@@ -161,6 +176,9 @@ Route::get('/test',function(){
 
 
 
+use App\Models\package_user_enquire;
+use App\Models\transportController;
+
 //USER ROUTES START
 Route::get('/', UserHome::class)->name('layouts.app');
 Route::get('/about',UserAbout::class)->name('about');
@@ -192,8 +210,8 @@ Route::get('/umrah-pakage-sharjah',UmrahPackageSharjah::class)->name('umrahPacka
 Route::get('/umrah-packages',UmrahMainPackage::class)->name('umrahMainPackage');
 Route::get('/view-package-detail/{package}',ViewPackageDetails::class)->name('viewPackageDetails');
 
-//umrah v2
-Route::get('/transport',Transport::class)->name('transport');
+// //umrah v2
+// Route::get('/transport',Transport::class)->name('transport');
 
 Route::get('/pack/ramzaan/bybus',Umrahv2RamzaanPackage::class)->name('ramzaan.bybus');
 Route::get('/pack/ramzaan/byflight',RamzaanPackageByFlight::class)->name('ramzaan.byflight');
@@ -221,14 +239,25 @@ Route::get('/why-choose-us',WhyChooseUs::class)->name('why-choose-us');
 Route::get('/partner-with-us',PartnerFooter::class)->name('partner-with-us');
 Route::get('/director-speak',DirectorSpeak::class)->name('director-speak');
 Route::get('/agent-speak',AgentSpeak::class)->name('agent-speak');
+Route::get('/agm',Agm::class)->name('agm');
 Route::get('/our-awards',OurAwards::class)->name('our-awards');
 
 //laundry routes
 Route::get('/user/laundry',Umrahv2Laundry::class)->name('user.laundry');
 
+//Transport
+Route::get('/user/transport',Transport::class)->name('transport');
+Route::get('/user/transport-details/{id}',TransfersSingle::class)->name('transport-single');
+
+//Ziyarat
+Route::get('/user/ziyarat/{id}',UserViewZiyarat::class)->name('user.ziyarat');
+Route::get('/user/ziyarat-single/{id}',ZiyaratSingleView::class)->name('user.ziyarat-single');
+
 //book my assitant
 Route::get('/user/myassistant',Assistant::class)->name('myassistant');
 
+//custom package 
+Route::get('/custom/package',CustomPackage::class)->name('custom.package');
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
 Route::get('/fpdf',function(){
@@ -262,7 +291,7 @@ Route::get('/admin/hotel-details', ListHotalDetails::class)->name('admin.listHot
 Route::get('/admin/add-hotel-details',AddHotalDetais::class)->name('admin.addHotelDetails');
 Route::get('/admin/edit-hotal/{id}',AddHotalDetais::class)->name('editHotelData');
 Route::get('/admin/view-hotel/{id}',ViewHotelDetails::class)->name('viewHotelData');
-
+Route::get('/admin/add-hotel-cities',HotelCities::class)->name('admin.hotel-cities');
 
 //catring controller
 Route::get('/admin/catring-details',Catringlist::class)->name('admin.catring-list');
@@ -280,14 +309,20 @@ Route::get('/admin/addlaundry',Laundry::class)->name('admin.laundry');
 Route::get('/admin/listlaundry',ListLaundry::class)->name('admin.list-laundry');
 
 //Transport Controller
-Route::get('/admin/add-car-type',CarType::class)->name('admin.carType');
+Route::get('/admin/list-car-type',CarType::class)->name('admin.carType');
 Route::get('/admin/add-car-sector',CarSector::class)->name('admin.carSector');
 Route::get('/admin/list-transport',CarRentel::class)->name('admin.listTransport');
 Route::get('/admin/add-transport',AddTransport::class)->name('admin.addTransport');
+Route::get('/admin/add-car-type',AddCarType::class)->name('admin.addcarType');
 
 //Ziyarat Controller
 Route::get('/admin/list-ziyarat',Ziyarat::class)->name('admin.ziyarat');
 Route::get('/admin/add-ziyarat',AddZiyarat::class)->name('admin.add-ziyarat');
+Route::get('/admin/ziyarat-cities',ZiyaratCities::class)->name('admin.ziyarat-cities');
+
+
+//Package Enquire From User
+Route::get('/admin/package-enquiry-from-user',PackageEnquireFromUser::class)->name('package-enquire-from-user');
 
 Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
 Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');
@@ -302,6 +337,7 @@ Route::get('/admin/EditCity/{id}',AddDepartureCity::class)->name('editCitydata')
 Route::get('/admin/package-types',PackageTypeMaster::class)->name('admin.package-types');
 Route::get('/admin/add-package-type',AddPackageTypeMaster::class)->name('addPackageType');
 Route::get('/admin/editPackageType/{id}',AddPackageTypeMaster::class)->name('packageTypeEdit');
+Route::get('/admin/service-type',ServiceType::class)->name('admin.service-type');
 Route::get('/admin/inclusion',InclusionMaster::class)->name('admin.inclusion');
 Route::get('/admin/add-inclusion',AddInclusionMaster::class)->name('addInclusions');
 Route::get('/admin/editInclusion/{id}',AddInclusionMaster::class)->name('editInclusion');
@@ -324,10 +360,23 @@ Route::get('/admin/agentsignup',AgentSignup::class)->name('agentsignup');
 
 //ADMIN ROUTES END
 
+// Route::get('/test1',function(){
+//    $data = package_user_enquire::with('serviceType')->get();
+// //    foreach ($data as $enquiry) {
+// //             echo $enquiry->package_user_name .'<br>';  // Accessing data from PackageUserEnquire
+// //             echo $enquiry->serviceType->service_type.'<br>';  // Accessing related data from ServiceType
+// //         }
+//    return response()->json($data);
+// });
 
 
+// Route::get('/test',function(){
+//     $data = transportController::with(['cartypemaster','carsectormaster'])->get();
+//     return response()->json($data);
+//  });
+ 
 
-
+// Route::get('/enquiries-json', [PackageEnquireFromUser::class, 'getEnquiriesJson']);
 
 
 

@@ -10,7 +10,8 @@ class PackageDepartureType extends Model
     use HasFactory;
 
     protected $fillable=[
-        'type'
+        'type',
+        'delete_status'
     ];
 
 }

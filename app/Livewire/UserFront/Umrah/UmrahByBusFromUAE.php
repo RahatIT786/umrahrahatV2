@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Models\mainPackage as MainPackage;
 use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
+use App\Models\UserSearchQueries;
 use Livewire\Attributes\Layout; 
 
 class UmrahByBusFromUAE extends Component
@@ -22,6 +23,8 @@ class UmrahByBusFromUAE extends Component
 
     //for enquire form variables
     public $umrahEmquire;
+
+    public $searchPackage;
 
     //popup form variable 
     public $name;
@@ -59,7 +62,7 @@ class UmrahByBusFromUAE extends Component
         $departCities = $packages->map(function ($package) {
             return explode(',', $package->depart_city);
         });
-
+        
         // Flatten the array and remove any duplicates
         $mergedCities = array_merge(...$departCities->toArray());
 
@@ -99,26 +102,20 @@ class UmrahByBusFromUAE extends Component
 
 
 
-
-
-
     #[Layout('user.Layouts.app')]
     public function render()
     {
         // Fetch all main packages with delete_status 1
-        $query = MainPackage::where('delete_status', 1)->where('service_type','3')->where(function ($query) {
-            $query->whereNull('flights')
-                  ->orWhere('flights', '');
-        });
+        $query = MainPackage::where('delete_status', 1)
+        ->where('service_type',strtolower(__('message.umrah')))
+                ->where('departure_type',strtolower(__('message.bus')));
     
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
+        if ($this->searchPackage) {
+            $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
-        if ($this->searchDays) {
-            $query->where('package_days', 'like', '%' . $this->searchDays . '%');
-        }
+        
         $this->allPackages = $query->get();
-        // dd( $this->allPackages);
+        //  dd( $this->allCities);
         // Render the Livewire view with allPackages data
         return view('livewire.user_front.umrah.umrah-by-bus-from-u-a-e', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
     }

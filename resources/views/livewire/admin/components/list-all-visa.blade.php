@@ -111,7 +111,7 @@
 
         <!-- Pagination -->
         <div class="d-flex justify-content-end mt-3">
-            {{ $visaDetails->links() }}
+            {{ $visaDetails->links('vendor.pagination.custom') }}
         </div>
 
     </div>

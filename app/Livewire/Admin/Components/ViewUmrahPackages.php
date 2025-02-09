@@ -42,6 +42,10 @@ class ViewUmrahPackages extends Component
     public $payment_policy, $important_notes, $cancellation_policy, $flight_transport, $meals, $packageMeals, $visa_taxes, $inclusion, $exlusion, $itinerary;
     public $package;
 
+
+
+
+
     public function mount($package)
     {
         $this->package = mainPackage::with('pkgDetails')->where('id', $package)->first();

@@ -22,7 +22,7 @@
         <div class="d-flex align-items-center mb-3">
             <h4 class="mb-0">All Car Sector</h4>
             <form class="ms-auto position-relative" wire:submit.prevent="">
-                <input type="text" class="form-control" placeholder="Search Visa" wire:model.live="search">
+                <input type="text" class="form-control" placeholder="Search Sector" wire:model.live="search">
             </form>
         </div>
 
@@ -144,7 +144,7 @@
                         aria-label="Close"
                         wire:click="closeModal"></button>
             </div>
-            <form wire:submit.prevent="save">
+            <form wire:submit.prevent="save" onsubmit="location.reload()">
                 <div class="modal-body">
                     <label for="car_sector" class="form-label">Car Type Name</label>
                     <input type="text" class="form-control" id="car_sector" wire:model="car_sector" required>
@@ -155,19 +155,26 @@
                             data-bs-dismiss="modal" 
                             wire:click="closeModal">Cancel
                     </button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" onclick="reloadPage()" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<script>
+    function reloadPage() {
+        setTimeout(() => {
+            location.reload();  // Reloads the page after a short delay
+        }, 100);  // Delay to ensure the Livewire 'save' method is called
+    }
+</script>
 
 
 
         <!-- Pagination -->
-       {{-- <div class="d-flex justify-content-end mt-3">
-            {{ $visaDetails->links() }}
-        </div>--}}
+        <div class="d-flex justify-content-end mt-3">
+            {{ $carSectors->links('vendor.pagination.custom') }}
+        </div>
 
     </div>
 </div>

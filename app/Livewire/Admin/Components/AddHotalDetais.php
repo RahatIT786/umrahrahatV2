@@ -7,6 +7,9 @@ use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
+use App\Models\HotelCities;
+use App\Models\HotelCost;
+use App\Models\CateringController;
 
 class AddHotalDetais extends Component
 {
@@ -36,10 +39,25 @@ class AddHotalDetais extends Component
     public $hotelImage4;
     public $hotelImage5;
     public $deleteStatus = 1;
+    public $hotel_cities;
+
+    public $hotelYouTube;
+    public $hotelMap;
+    public $hotelManagerContect;
+    public $hotel_amenities = [];
+    public $hotels = [];
+    public $hotelSeasonStart = [];
+    public $hotelSeasonEnd = [];
+    public $hotelMeal = [];
+    public $hotelDouble = [];
+    public $hotelTriple = [];
+    public $hotelQuad = [];
+    public $hotelQuint = [];
+    public $hotelAminity ;
+    public $hotel_foods;
 
     protected $rules = [
         "hotelName"=> "required|string|max:150",
-        "hotelPrice"=> "required|numeric",
         "currency"=> "required",
         "hotelCity"=> "required|string",
         "hotelStarRating"=> "required|string",
@@ -54,15 +72,15 @@ class AddHotalDetais extends Component
         'hotelImage3'=> 'nullable|image|max:5120',
         'hotelImage4'=> 'nullable|image|max:5120',
         'hotelImage5'=> 'nullable|image|max:5120',
+        'hotelYouTube' => 'nullable',
+        'hotelMap' => 'nullable',
+        'hotelManagerContect' => 'required',
     ];
 
     protected $messages = [
         'hotelName.required' => 'Hotel name is required.',
         'hotelName.string' => 'Hotel name must be a string.',
         'hotelName.max' => 'Hotel name cannot exceed 150 characters.',
-        
-        'hotelPrice.required' => 'Hotel price is required.',
-        'hotelPrice.numeric' => 'Hotel price must be a numeric value.',
         
         'hotelCity.required' => 'Hotel city is required.',
         'hotelCity.string' => 'Hotel city must be a string.',
@@ -102,6 +120,8 @@ class AddHotalDetais extends Component
         
         'hotelImage5.image' => 'The hotel image 5 must be an image file.',
         'hotelImage5.max' => 'The hotel image 5 size must not exceed 5MB.',
+
+        'hotelManagerContect' => 'Hotel Manager Contect Must be fill'
     ];
 
     public function mount($id = null){
@@ -109,12 +129,17 @@ class AddHotalDetais extends Component
             $hotel = HotelDetail::findOrFail( $id );
             $this->hotelId = $hotel->id;
             $this->hotelName = $hotel->hotelName;
-            $this->hotelPrice =$hotel->hotelPrice;
+            $this->hotelPrice = 'null';
             $this->currency = $hotel->currency;
             $this->hotelCity = $hotel->hotelCity;
             $this->hotelStarRating = $hotel->hotelStarRating;
             $this->hotelAddress = $hotel->hotelAddress;
             $this->hotelDiscription = $hotel->hotelDiscription;
+
+            $this->hotelYouTube = $hotel->hotelYouTube;
+            $this->hotelMap = $hotel->hotelMap;
+            $this->hotelManagerContect = $hotel->hotelManagerContect;
+
             $this->hotelCheckInTime = $hotel->hotelCheckInTime;
             $this->hotelCheckOutTime = $hotel->hotelCheckOutTime;
             $this->hotelDistance = $hotel->hotelDistance;
@@ -126,9 +151,27 @@ class AddHotalDetais extends Component
             $this->hotelImage5Path = $hotel->hotelImage5;
             
         }
+        $this->hotel_cities = HotelCities::where('delete_status',1)->get();
+        $this->hotel_foods = CateringController::where('delete_status',1)->get();
+    }
+    public function increaseHotelFields()
+    {
+        $this->hotels[] = [];
+    }
+
+    public function decreaseHotelFields()
+    {
+        if (count($this->hotels) > 1) {
+            array_pop($this->hotels);  // Removes the last hotel object
+        }
     }
 
     public function submit(){
+
+        
+        $this->hotelAminity = implode(',', $this->hotel_amenities);
+        // dd($amenitiesString);
+
         $this->validate();
 
         // Store the images
@@ -147,20 +190,29 @@ class AddHotalDetais extends Component
         $hotelImage4Url = $hotelImage4Path ? Storage::url($hotelImage4Path) : null;
         $hotelImage5Url = $hotelImage5Path ? Storage::url($hotelImage5Path) : null;
 
+       
+
         if ($this->hotelId) {
             // Update existing hotel record
             $hotel = HotelDetail::findOrFail($this->hotelId);
             $hotel->update([
                 'hotelName' => $this->hotelName,
-                'hotelPrice' => $this->hotelPrice,
+                'hotelPrice' => 0,
                 'currency' => $this->currency,
                 'hotelCity' => $this->hotelCity,
                 'hotelStarRating' => $this->hotelStarRating,
                 'hotelAddress' => $this->hotelAddress,
                 'hotelDiscription' => $this->hotelDiscription,
+
+                'hotelYouTube' => $this->hotelYouTube,
+                'hotelMap' => $this->hotelMap,
+                'hotelManagerContect' => $this->hotelManagerContect,
+
                 'hotelCheckInTime' => $this->hotelCheckInTime,
                 'hotelCheckOutTime' => $this->hotelCheckOutTime,
                 'hotelDistance' => $this->hotelDistance,
+                'hotel_amenities'=>$this->hotelAminity,
+
                 'hotelMainImage' => $hotelMainImageUrl ?? $hotel->hotelMainImage,
                 'hotelImage1' => $hotelImage1Url ?? $hotel->hotelImage1,
                 'hotelImage2' => $hotelImage2Url ?? $hotel->hotelImage2,
@@ -172,48 +224,86 @@ class AddHotalDetais extends Component
             session()->flash('message', 'Hotel details updated successfully!');
         } else {
             // Create new hotel record
-            HotelDetail::create([
+           $hotel = HotelDetail::create([
                 'hotelName' => $this->hotelName,
-                'hotelPrice' => $this->hotelPrice,
+                'hotelPrice' => 0,
                 'currency' => $this->currency,
                 'hotelCity' => $this->hotelCity,
                 'hotelStarRating' => $this->hotelStarRating,
                 'hotelAddress' => $this->hotelAddress,
                 'hotelDiscription' => $this->hotelDiscription,
+                'hotel_amenities'=>$this->hotelAminity,
+                'hotelYouTube' => $this->hotelYouTube,
+                'hotelMap' => $this->hotelMap,
+                'hotelManagerContect' => $this->hotelManagerContect,
+
                 'hotelCheckInTime' => $this->hotelCheckInTime,
                 'hotelCheckOutTime' => $this->hotelCheckOutTime,
                 'hotelDistance' => $this->hotelDistance,
-                'hotelMainImage' => $hotelMainImageUrl,
-                'hotelImage1' => $hotelImage1Url,
-                'hotelImage2' => $hotelImage2Url,
-                'hotelImage3' => $hotelImage3Url,
-                'hotelImage4' => $hotelImage4Url,
-                'hotelImage5' => $hotelImage5Url,
+                'hotelMainImage' => $hotelMainImageUrl ?? null,
+                'hotelImage1' => $hotelImage1Url ?? null,
+                'hotelImage2' => $hotelImage2Url ?? null,
+                'hotelImage3' => $hotelImage3Url ?? null,
+                'hotelImage4' => $hotelImage4Url ?? null,
+                'hotelImage5' => $hotelImage5Url ?? null,
                 'deleteStatus' => $this->deleteStatus, 
             ]);
+
+            foreach ($this->hotels as $key => $value) {
+
+                $details_data[] = [
+                    'hotel_id' => $hotel->id,
+                    'hotelSeasonStart' => $this->hotelSeasonStart[$key] ?? null,
+                    'hotelSeasonEnd' => $this->hotelSeasonEnd[$key] ?? null,
+                    'hotelMeal' => $this->hotelMeal[$key] ?? null,
+                    'hotelDouble' => $this->hotelDouble[$key] ?? null,
+                    'hotelTriple' => $this->hotelTriple[$key] ?? null,
+                    'hotelQuad' => $this->hotelQuad[$key] ?? null,
+                    'hotelQuint' => $this->hotelQuint[$key] ?? null,    
+                ];
+            }
+
+            foreach ($details_data as $details) {
+
+                HotelCost::create($details);
+            }
             session()->flash('message', 'Hotel details added successfully!');
         }
-
-        // Reset form fields
-        $this->reset([
-            'hotelName', 
-            'hotelPrice',
-            'currency', 
-            'hotelCity', 
-            'hotelStarRating', 
-            'hotelAddress', 
-            'hotelDiscription',
-            'hotelCheckInTime',
-            'hotelCheckOutTime',
-            'hotelDistance',
-            'hotelMainImage',
-            'hotelImage1',
-            'hotelImage2',
-            'hotelImage3',
-            'hotelImage4',
-            'hotelImage5',
-        ]);
-    }
+        foreach ($this->hotels as $key => $value) {
+            // Reset form fields for each hotel
+            $this->reset([
+                'hotelName',
+                'currency', 
+                'hotelCity', 
+                'hotelStarRating', 
+                'hotelAddress', 
+                'hotelDiscription',
+                'hotelYouTube',
+                'hotelMap',
+                'hotelManagerContect',
+                'hotelCheckInTime',
+                'hotelCheckOutTime',
+                'hotelDistance',
+                'hotelMainImage',
+                'hotelImage1',
+                'hotelImage2',
+                'hotelImage3',
+                'hotelImage4',
+                'hotelImage5',
+                'hotel_amenities'
+            ]);
+        
+            // Reset array fields separately
+            $this->hotelSeasonStart[$key] = null;
+            $this->hotelSeasonEnd[$key] = null;
+            $this->hotelMeal[$key] = null;
+            $this->hotelDouble[$key] = null;
+            $this->hotelTriple[$key] = null;
+            $this->hotelQuad[$key] = null;
+            $this->hotelQuint[$key] = null;
+        }
+        
+        }
 
     #[Layout('admin.Layouts.app')]
     public function render()

@@ -1,52 +1,34 @@
 <section>
      <!-- Page Header Start -->
-     <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
+     {{-- <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Catering</h1>
                 </div>
             </div>
-        </div>
-        <!-- Page Header End -->
-        <!-- <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
-    <div class="container">
-        <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
-            <div class="row g-2">
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="clients-count">0</h2>
-                        <h5>Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="success-rate">0</h2>
-                        <h5>Success Rate</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="rating-clients">0</h2>
-                        <h5>Rating Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="experience-years">0</h2>
-                        <h5>Years of Experience</h5>
+        </div> --}}
+        <div class="container-fluid p-0 mb-5 hotel-banner">
+            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item imgZoom active">
+                        <img class="w-100" style="height: 15vw;" src="{{ asset('newImg/bannerImage/catering_banner.jpg') }}" alt="Image" style="object-position: center;">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                {{-- <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Our Hotels</h1> --}}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div> -->
+        <!-- Page Header End -->
 
         <!-- Room Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase"></h6>
-                    <!-- <h1 class="mb-5">Our Catering Service<span class="text-primary text-uppercase"></span></h1> -->
+                    
                 </div>
                 <div class="row g-4 align-items-center">
                     @foreach ($foodDetails as $food)
@@ -64,7 +46,11 @@
 
                                         <div class="d-flex justify-content-between my-3">
                                             <h5 class="mb-0">{{$food['foodType']}}</h5>
-                                            <a href="{{$food['foodLunch']}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-youtube mx-3"></i></a> 
+                                            <div>
+                                                <img src="{{asset('asserts/user/img/halalimg.png')}}" alt="halal" style="height:4rem;padding-bottom:20px">
+                                                <a href="{{Storage::url($food['footPdf'])}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-filetype-pdf mx-3"></i></a> 
+                                                <a href="{{$food['foodLunch']}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-youtube mx-3"></i></a> 
+                                            </div>
                                         </div>
 
                                         <div>

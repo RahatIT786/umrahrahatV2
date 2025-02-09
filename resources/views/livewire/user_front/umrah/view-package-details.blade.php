@@ -1,20 +1,20 @@
 <section class="" style="margin-bottom:100px">
     <!-- Hotel Banner Start -->
-    <div class=" p-0 mb-5 hotel-banner">
+    {{-- <div class=" p-0 mb-5 hotel-banner">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('asserts/user/img/haj/mecca1.jpg') }}"  alt="Image" style="height: 35vh; object-fit: cover;">
+                    <img class="w-100" src="{{ asset('asserts/user/img/haj/mecca1.jpg') }}"  alt="Image" style="height: 15vh; object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
-                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                            <h1 class="display-3 text-white mb-4 animated slideInDown">{{ $this->packages->name }}</h1>
+                             <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6> 
+                            <h1 class="text-white mb-4 animated slideInDown">{{ $this->packages->name }}</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Hotel Banner End -->
 
     <!-- Hotel Details Start -->
@@ -47,7 +47,7 @@
 
                     <!-- Hotel Description -->
                     <div class="mt-4">
-                    <h5 style="font-size: xx-large; font-family: 'Poppins', sans-serif;">DISCRIPTION</h5>
+                    <h5 style="font-size: xx-large; font-family: 'Poppins', sans-serif;">DESCRIPTION</h5>
                         <ul>
                             @foreach (explode('.', $packages->description) as $sentence)
                             @if(trim($sentence))
@@ -66,26 +66,37 @@
                 <div class="col-lg-3" style="margin-top:70px">
                     <div class="border p-5 rounded booking-form" style="width: 450px;">
                         <h4 class="mb-4 text-uppercase">Book Your Stay</h4>
-                        <form>
+                        <form  wire:submit.prevent="packageEnquire">
+                            @csrf
+                                @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                <label for="package_user_name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="package_user_name" placeholder="Enter your name" wire:model='package_user_name' required>
+                                @error('package_user_name') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                <label for="package_user_email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="package_user_email" placeholder="Enter your email" wire:model='package_user_email' required>
+                                @error('package_user_email') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                                <label for="package_user_phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="package_user_phone" placeholder="Enter your phone number" wire:model='package_user_phone' required>
+                                @error('package_user_phone') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="num-adults" class="form-label">Adults</label>
-                                <input type="number" class="form-control" id="num-adults" min="1">
+                                <input type="number" class="form-control" id="num-adults" min="1" wire:model='package_user_adult' required>
+                                @error('package_user_adult') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="num-children" class="form-label">Children</label>
-                                <input type="number" class="form-control" id="num-children" min="0">
+                                <input type="number" class="form-control" id="num-children" min="0" wire:model='package_user_child' required>
+                                @error('package_user_child') <span class="error">{{ $message }}</span> @enderror
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Book Now</button>
                         </form>
@@ -295,6 +306,7 @@
                          <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                          <h3 class="mb-3 section-title text-start text-primary text-uppercase">{{$makkah_hotel_details->hotelCity}} Hotel</h3>
                           <div class="room-item shadow rounded overflow-hidden">
+                          <a href="{{route('hotel-Detail', ['id' => $madina_hotel_details->id])}}">
                             <div class="position-relative">
                                 <img class="img-fluid"  src="{{asset($makkah_hotel_details->hotelImage1)}}" alt="test"> 
                                
@@ -332,6 +344,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </div>
                         </div>
                        
@@ -339,8 +352,10 @@
 
                  
                         <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        
                         <h3 class="mb-3 section-title text-start text-primary text-uppercase">{{$madina_hotel_details->hotelCity}} Hotel</h3>
                           <div class="room-item shadow rounded overflow-hidden">
+                          <a href="{{route('hotel-Detail', ['id' => $madina_hotel_details->id])}}"><h5 class="mb-0">
                             <div class="position-relative">
                                 <img class="img-fluid" src="{{asset($madina_hotel_details->hotelImage1)}}" alt=""> 
                                 
@@ -348,7 +363,7 @@
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">{{$madina_hotel_details->hotelName}}</h5>
+                                <h5 class="mb-0">{{$madina_hotel_details->hotelName}}</h5>
                                     <div class="ps-2 ">
                                         @if ($madina_hotel_details->hotelStarRating == 1)
                                          <small class="fa fa-star text-primary"></small>
@@ -378,7 +393,9 @@
                                     </div>
                                 </div>
                             </div>
+                            </a>
                            </div>
+                          
                          </div>
                     </div>
                 </div>
@@ -399,12 +416,7 @@
                                     <h3>Sharing</h3>
                                     <span class="rate-value">{{ $this->g_share}}</span>
                                     <span class="rate-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/6_Person.png')}}" style="height:5rem">
                                     </span> <!-- Example icon -->
                                     </div>
                                     @endif
@@ -414,25 +426,18 @@
                                     <h3>Quint</h3>
                                     <span class="rate-value">{{$this->qt_share}}</span>
                                     <span class="rate-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/5_Person.png')}}" style="height:5rem">
                                     </span> <!-- Example icon -->
                                     </div>
                                     @endif
                                     
                                     @if ($this->qd_share > 0)
                                     <div class="rate">
-                                    <h3>Quat</h3>
+                                    <h3>Quad</h3>
                                     <span class="rate-value">{{$this->qd_share}}</span>
                                     <span class="rate-icon">
                                     
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/4_Person.png')}}" style="height:5rem">
                                         
                                     </span> <!-- Example icon -->
                                     </div>
@@ -443,10 +448,7 @@
                                     <h3>Triple</h3>
                                     <span class="rate-value">{{$this->t_share}}</span>
                                     <span class="rate-icon">
-                                  
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/3_Person.png')}}" style="height:5rem">
                                     </span> <!-- Example icon -->
                                     </div>
                                     @endif
@@ -456,9 +458,7 @@
                                     <h3>Double</h3>
                                     <span class="rate-value">{{$this->d_share}}</span>
                                     <span class="rate-icon">
-                                   
-                                        <i class="fa-solid fa-user"></i>
-                                        <i class="fa-solid fa-user"></i>
+                                        <img src="{{asset('asserts/user/img/price/2_Person.png')}}" style="height:5rem">
                                     </span> <!-- Example icon -->
                                     </div>
                                     @endif
@@ -468,7 +468,7 @@
                                     <h3>Single</h3>
                                     <span class="rate-value">{{$this->single}}</span>
                                     <span class="rate-icon">        
-                                        <i class="fa-solid fa-user"></i>
+                                    <img src="{{asset('asserts/user/img/price/1_Person.png')}}" style="height:5rem">
                                        
                                     </span> <!-- Example icon -->
                                     </div>
@@ -482,7 +482,7 @@
                                     <div class="rate">
                                     <h4>Child with Bed</h4>
                                     <span class="rate-value">{{$this->child_with_bed}}</span>
-                                    <span class="rate-icon"><i class="fa-solid fa-child"></i> + <i class="fa-solid fa-bed"></i></span> <!-- Example icon -->
+                                    <span class="rate-icon"><i style="color:#0078C4" class="fa-solid fa-child"></i> + <i style="color:#0078C4" class="fa-solid fa-bed"></i></span> <!-- Example icon -->
                                     </div>
                                     @endif
 
@@ -490,7 +490,7 @@
                                     <div class="rate">
                                     <h4>Child without Bed</h4>
                                     <span class="rate-value">{{$this->child_no_bed}}</span>
-                                    <span class="rate-icon"><i class="fa-solid fa-child"></i> </span><!-- Example icon -->
+                                    <span class="rate-icon"><i style="color:#0078C4" class="fa-solid fa-child"></i> </span><!-- Example icon -->
                                     </div>
                                     @endif
 
@@ -498,7 +498,7 @@
                                     <div class="rate">
                                     <h4>Infant</h4>
                                     <span class="rate-value">{{$this->infant}}</span>
-                                    <span class="rate-icon"><i class="fa-solid fa-baby-carriage"></i></span> <!-- Example icon -->
+                                    <span class="rate-icon"><i style="color:#0078C4" class="fa-solid fa-baby-carriage"></i></span> <!-- Example icon -->
                                     </div>
                                     @endif
 

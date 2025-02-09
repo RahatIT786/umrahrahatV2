@@ -3,6 +3,14 @@
  <!-- This is where the content from the Livewire component will be injected -->
 
 <style>
+@keyframes jump {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px); /* Moves the icon up by 10px */
+        }
+    }
  
 #whatsapp{
     height: clamp(25px,30vw,5rem);
@@ -11,6 +19,7 @@
     right: 10px;
     bottom:6rem;
     cursor: pointer;
+    animation: jump 1.5s infinite ease-in-out; 
   
 }
 #call{
@@ -21,6 +30,7 @@
     left: 1rem;
     bottom:7rem;
     cursor: pointer;
+     animation: jump 1.5s infinite ease-in-out; 
   
 
 }
@@ -227,6 +237,54 @@ function toggleChat() {
 </script>
 
 
+<style>
+  .package-image {
+      width: 18vw;
+      height: 18vw;
+      max-width: 100%;
+      max-height: 100%;
+      aspect-ratio: 1 / 1; /* Ensures a square shape */
+      border-radius: 15px;a
+  }
+
+  @media (max-width: 768px) {
+      .package-image {
+          width: 50vw; /* Increase size for mobile */
+          height: 50vw;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .package-image {
+          width: 80vw; /* Full width for smaller screens */
+          height: auto; /* Maintain aspect ratio */
+      }
+  }
+
+  @keyframes zoomInOut {
+    0% { 
+    transform: scale(1); 
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.1); 
+    opacity: 1; /* Keep normal opacity */
+  }
+  90% {
+    transform: scale(1); 
+    opacity: 1; /* Reset zoom */
+  }
+  100% { 
+    background-color: white; /* White blink effect */
+    opacity: 0; 
+  }/* Zoom out */
+}
+
+.imgZoom img {
+animation: zoomInOut 9s infinite ease-in-out;
+}
+
+</style>
 
  </div>
 

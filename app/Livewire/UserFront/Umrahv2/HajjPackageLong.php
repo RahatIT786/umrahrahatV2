@@ -18,6 +18,7 @@ class HajjPackageLong extends Component
     public $searchCity;
     public $searchDays;
     public $packageDays;
+    public $searchPackage;
 
     public function mount()
     {
@@ -60,11 +61,11 @@ class HajjPackageLong extends Component
     {
         // Fetch all main packages with delete_status 1
         $query = MainPackage::where('delete_status', 1)
-        ->where('service_type', '2')
+        ->where('service_type', 'Hajj')
         ->where('package_days', '>', 18);
         
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
+        if ($this->searchPackage) {
+            $query->where('depart_city', 'like', '%' . $this->searchPackage . '%');
         }
         if ($this->searchDays) {
             $query->where('package_days', 'like', '%' . $this->searchDays . '%');

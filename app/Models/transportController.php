@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\SearchScopes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class transportController extends Model
 {
-    use HasFactory;
+    use HasFactory, SearchScopes;
 
     // Specify the table name if it doesn't follow the plural convention
     protected $table = 'transport_controllers';
@@ -27,12 +28,21 @@ class transportController extends Model
         // Relationship with CarType
         public function cartypemaster()
         {
-            return $this->belongsTo(CarType::class,'car_type','id');
+            return $this->belongsTo(CarType::class, 'carType' ,'id');
         }
 
         // Relationship with CarSector
         public function carsectormaster()
         {
-            return $this->belongsTo(CarSector::class, 'car_sector','id');
+            return $this->belongsTo(CarSector::class, 'carSector','id');
+        }
+        public function scopeSearchCarTypeMaster($q, $value)
+        {
+            return $q->when(!empty($value), function ($qr) use ($value) {
+                $qr->whereHas('cartypemaster', function ($query) use ($value) {
+                    $query->where('car_type', "LIKE", "%{$value}%");
+                });
+            });
+
         }
 }

@@ -30,56 +30,44 @@
                 <thead class="table-secondary">
                     <tr>
                         <th class="border-0 py-2">S.No</th>
-                        <th class="border-0 py-2">Visa Image</th>
-                        <th class="border-0 py-2">Flyer Image</th>
-                        <th class="border-0 py-2">Visa Type</th>
-                        <th class="border-0 py-2">Documents</th>
-                        <th class="border-0 py-2">Processing Time</th>
-                        <th class="border-0 py-2">Price</th>
+                        <th class="border-0 py-2">Ziyarat Image</th>
+                        <th class="border-0 py-2">Master Name</th>
+                        <th class="border-0 py-2">Place</th>
                         <th class="border-0 py-2 text-center">Edit</th>
                         <th class="border-0 py-2 text-center">Delete</th>
                     </tr>
                 </thead>
-               {{-- <tbody>
-                    @foreach ($visaDetails as $index => $visa)
+               <tbody>
+                    @foreach ($ZiyaratDetails as $index => $ziyarat)
                         <tr>
-                            <td>{{ $visaDetails->firstItem() + $index }}</td>
+                            <td>{{ $index + 1}}</td> 
                             <td>
-                                @if ($visa->file_path)
-                                    <img src="{{Storage::url($visa->file_path) }}" alt="Visa Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
+                                @if ($ziyarat->packageImage)
+                                    <img src="{{Storage::url($ziyarat->packageImage) }}" alt="Ziyarat Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
                                 @else
                                     No Image available
                                 @endif
                             </td>
-                            <td>
-                                @if ($visa->flyer_path)
-                                    <img src="{{Storage::url($visa->flyer_path) }}" alt="Flyer Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
-                                @else
-                                    No Flyer available
-                                @endif
-                            </td>
-                            <td>{{ $visa->visa_type }}</td>
-                            <td>{{ $visa->documents_required }}</td>
-                            <td>{{ $visa->processing_time }} days</td>
-                            <td>{{ number_format($visa->price, 2) }}</td>
+                            <td>{{ $ziyarat->name }}</td>
+                            <td>{{ $ziyarat->service_type }}</td>
                             <td class="text-center">
-                                <a class="text-primary" href="{{ route('editdata', ['id' => $visa->id]) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                                <a class="text-primary"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a wire:click="confirmDelete({{ $visa->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
+                                <a wire:click="confirmDelete({{ $ziyarat->id }})" class="text-danger" data-bs-placement="bottom" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">
                                     <i class="bi bi-trash-fill"></i>
                                 </a>
                             </td>
                         </tr>
                     @endforeach
-                </tbody> --}}
+                </tbody>
             </table>
         </div>
 
         <!-- Modal for Delete Confirmation -->
-      {{--  <div class="modal fade @if($showModal) show @endif" 
+      <div class="modal fade @if($showModal) show @endif" 
              id="exampleVerticallycenteredModal" 
              tabindex="-1" 
              aria-labelledby="exampleModalCenterTitle" 
@@ -95,7 +83,7 @@
                                 wire:click="closeModal"></button>
                     </div>
                     <div class="modal-body">
-                        Are you sure you want to delete this visa?
+                        Are you sure you want to delete this Ziyarat?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" 
@@ -107,12 +95,12 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
 
         <!-- Pagination -->
-      {{--  <div class="d-flex justify-content-end mt-3">
-            {{ $visaDetails->links() }}
-        </div>--}}
+       <div class="d-flex justify-content-end mt-3">
+            {{ $ZiyaratDetails->links('vendor.pagination.custom') }}
+        </div>
 
     </div>
 </div>

@@ -32,8 +32,9 @@
                         <th class="border-0 py-2">S.No</th>
                         <th class="border-0 py-2">Package Image</th>
                         <th class="border-0 py-2">Package Name</th>
-                        {{-- <th class="border-0 py-2">Service Type</th> --}}
+                        <th class="border-0 py-2">Service Type</th>
                         <th class="border-0 py-2">Package Type</th>
+                        <th class="border-0 py-2">Departure Type</th>
                         <th class="border-0 py-2 text-center">View</th>
                         <th class="border-0 py-2 text-center">Edit</th>
                         <th class="border-0 py-2 text-center">Delete</th>
@@ -45,14 +46,15 @@
                             <td>{{  $index + 1 }}</td>
                             <td>
                                 @if ($package->packageImage)
-                                    <img src="{{Storage::url($package->packageImage) }}" alt="Visa Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
+                                    <img src="{{Storage::url($package->packageImage) }}" alt="Package Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
                                 @else
                                     No Image available
                                 @endif
                             </td>
                             <td>{{ $package->name }}</td>
-                            {{-- <td>{{ $package->name }}</td> --}}
+                            <td>{{ $package->service_type }}</td>
                             <td>{{ $package->packageType->packageType }}</td>
+                            <td>{{ $package->departure_type }}</td>
                             <td class="text-center">
                                 <a style="padding: 5px; border-radius:20px;" href="{{route('admin.viewUmrahPackage',['package' => $package->id])}}" class="text-primary bg-light-primary shadow-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Views">
                                      <i class="bi bi-eye-fill"></i>
@@ -102,6 +104,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="d-flex justify-content-end mt-3">
+            {{ $packaheDetails->links('vendor.pagination.custom') }}
         </div>
     </div>
 </div>

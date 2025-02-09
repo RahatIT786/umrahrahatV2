@@ -29,6 +29,7 @@ class UmrahLandPackageUAE extends Component
     public $date_of_travel;
     public $total_pax;
     public $travel_type;
+    public $searchPackage;
 
     protected $rules = [
         'name' => 'required|string|max:255',
@@ -107,18 +108,12 @@ class UmrahLandPackageUAE extends Component
     {
         // Fetch all main packages with delete_status 1
         $query = MainPackage::where('delete_status', 1)
-        ->where('service_type', '3')
-        ->where(function ($query) {
-            $query->whereNotNull('flights')
-                  ->where('flights', '!=', '');
-        });
+        ->where('service_type',strtolower(__('message.umrah')))
+        ->where('departure_type',strtolower(__('message.land')));
 
     
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
-        }
-        if ($this->searchDays) {
-            $query->where('package_days', 'like', '%' . $this->searchDays . '%');
+        if ($this->searchPackage) {
+            $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
         $this->allPackages = $query->get();
         // dd( $this->allPackages);

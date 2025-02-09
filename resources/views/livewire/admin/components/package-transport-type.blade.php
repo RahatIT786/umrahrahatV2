@@ -31,7 +31,7 @@
            <form wire:submit.prevent="saveDepartureType" class="d-flex gap-2 align-items-end justify-content-center">
                 <div>
                 <label for="">Add Type</label>
-                <input type="text" class="form-control" wire:model="departureType" placeholder="Enter Type" >
+                <input type="text" class="form-control" wire:model="departureType" placeholder="Enter Type" required>
                 </div>
                 <div>
                     <button class="btn btn-success" type="submit">ADD</button>
@@ -59,7 +59,7 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                            
-                            <td><input id="{{$data->id}}" style="border: none;" type="text" value="{{ $data->type }}" class="form-control" readonly></td>
+                            <td><input id="{{$data->id}}" style="border: none;" type="text" value="{{ucfirst($data->type)}}" class="form-control" readonly></td>
                             <td>
                                 @if ($typeEdit && $editId==$data->id )
                               <form  class="d-flex gap-2" model:submit.prevent="saveEditedType" >

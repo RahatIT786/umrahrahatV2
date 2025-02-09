@@ -5,11 +5,14 @@ namespace App\Livewire\Admin\Components;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\mainPackage;
+use Livewire\WithPagination; 
 
 class ListUmrahPackages extends Component
 {
+    use WithPagination;  
     public $showModal = false;
     public $packageId;
+    public $search;
     public function confirmDelete($id)
     {
         $this->packageId = $id;
@@ -34,7 +37,10 @@ class ListUmrahPackages extends Component
     #[Layout('admin.Layouts.app')]
     public function render()
     {
-        $packaheDetails = mainPackage::where('delete_status', 1)->get();
+        $packaheDetails = mainPackage::where('delete_status', 1)
+        ->where(function($query){
+            $query->where('name', 'like', '%'.$this->search.'%');
+            })->paginate(10);
         return view('livewire.admin.components.list-umrah-packages',['packaheDetails' => $packaheDetails]);
     }
 }

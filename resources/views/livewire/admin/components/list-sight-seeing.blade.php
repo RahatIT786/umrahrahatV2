@@ -105,5 +105,10 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Pagination -->
+        <div class="d-flex justify-content-end mt-3">
+            {{ $sightDetail->links('vendor.pagination.custom') }}
+        </div>
     </div>
 </div>

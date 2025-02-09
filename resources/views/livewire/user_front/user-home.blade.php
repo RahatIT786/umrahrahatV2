@@ -22,6 +22,17 @@
                 height: auto; /* Maintain aspect ratio */
             }
         }
+
+        @keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); } /* Zoom in */
+    100% { transform: scale(1); } /* Zoom out */
+}
+
+.carousel-item img {
+    animation: zoomInOut 9s infinite ease-in-out;
+}
+
     </style>
 
 
@@ -37,7 +48,7 @@
                 <div class="alert alert-success">
                     {{ session('success') }}
                 </div>
-            @endif
+               @endif
               <!-- Name -->
               <div class="form-group">
                 <label for="name">Name</label>
@@ -232,6 +243,39 @@ function closeForm() {
   #popupContainerHome .submit-btn:hover {
     background-color: #218838;
   }
+  ul li{
+    list-style: none;
+    i{
+        color: #ff8c00;
+    }
+  }
+
+  #header-2{
+    color:#0ed30e;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+   /* animation: blink 1.5s infinite ease-in-out; */
+  }
+
+  /* @keyframes blink{
+    20%{
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    }
+    60%{
+        text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.8);
+    }
+    80%{
+        text-shadow: 6px 6px 8px rgba(255, 255, 255, 0.8);
+    }
+  } */
+  /* @keyframes textGlow {
+    0% { text-shadow: 0 0 5px #0ed30e, 0 0 10px #0ed30e; }
+    50% { text-shadow: 0 0 10px #ffffff, 0 0 20px #ffeb3b; }
+    100% { text-shadow: 0 0 5px #0ed30e, 0 0 10px #0ed30e; }
+}
+
+.glowing-text {
+    animation: textGlow 1.5s infinite alternate;
+} */
   
   </style>
 
@@ -249,26 +293,30 @@ function closeForm() {
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100 " src="{{asset('asserts/user/img/haj/mecca1.jpg')}}" alt="Image" style="height: 70vh; object-fit: cover;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
+                        <img class="w-100 " src="{{asset('newImg/IMG_3185.JPG')}}" alt="Image" style="height:50vh; object-fit: cover; object-position: center bottom;">
+                        
+                        <div class="carousel-captio d-flex flex-column align-items-center justify-content-center">
+                            {{-- <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
-                                <h5 class="text-white mb-4 animated slideInDown">Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
+                                <h5 class="text-white mb-4 animated slideInDown" style="">Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
                                 makes that sacred experience all that much better</h5>
-                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book A Package</a>
-                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Package</a>
-                            </div>
+                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{__('message.exp_package')}}</a>
+                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">{{__('message.exp_hotel')}}</a>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100 " src="{{asset('asserts/user/img/haj/mecca3.jpg')}}" alt="Image" style="height: 70vh;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
+                        <img class="w-100" src="{{asset('newImg/vecteezy_islamic-2.jpg')}}" alt="Image" style="height:50vh; object-fit: cover; object-position: center;">
+                        <div class="carousel-captio d-flex flex-column align-items-center justify-content-center">
+                            {{-- <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Umrah Karein to RAHAT se</h6>
-                                <h5 class=" text-white mb-4 animated slideInDown">RAHAT GROUP, your premier partner in facilitating memorable and spiritually enriching Holy pilgrimages.</h5>
-                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Quick Book</a>
-                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Explore Hotel</a>
-                            </div>
+                                <h1 class="text-white mb-4 animated slideInDown glowing-text">
+                                    Style, Class, Grace, Elegance and Charm of the Holy Journey through Rahat Travels
+                                    makes that sacred experience all that much better
+                                </h1>
+                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{__('message.exp_package')}}</a>
+                                <a href="#" class="btn btn-light py-md-3 px-md-5 animated slideInRight">{{__('message.exp_hotel')}}</a>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -286,40 +334,6 @@ function closeForm() {
         </div>
         <!-- Carousel End -->
 
-
-        <!-- Booking Start -->
-  {{-- <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
-    <div class="container">
-        <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
-            <div class="row g-2">
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="clients-count">0</h2>
-                        <h5>Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="success-rate">0</h2>
-                        <h5>Success Rate</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="rating-clients">0</h2>
-                        <h5>Rating Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="experience-years">0</h2>
-                        <h5>Years of Experience</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
 
 
 <script>
@@ -343,7 +357,7 @@ function animateNumber(id, start, end, duration, suffix = '') {
 
 
 function startAnimations() {
-        animateNumber('clients-count', 0, 720, 3000, 'K +');
+        animateNumber('clients-count', 0, 3, 3000, 'Million +');
         animateNumber('success-rate', 0, 99, 3000, '%');
         animateNumber('rating-clients', 0, 4, 3000, '.5');
         animateNumber('experience-years', 0, 17, 3000, '+');
@@ -386,7 +400,7 @@ function startAnimations() {
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">280</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">450</h2>
                                         <p class="mb-0">Staffs</p>
                                     </div>
                                 </div>
@@ -396,7 +410,7 @@ function startAnimations() {
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
                                         <!-- <h2 class="mb-1" data-toggle="counter-up">100 </h2> -->
-                                        <h2 class="mb-1" ><span data-toggle="counter-up">720</span>k</h2>
+                                        <h2 class="mb-1" ><span data-toggle="counter-up">2</span>Million</h2>
                                         <p class="mb-0">Happy Clients</p>
                                     </div>
                                 </div>
@@ -407,16 +421,16 @@ function startAnimations() {
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('asserts/user/img/haj/macca.jpg')}}" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('newImg/mosque-6153752_640.jpg')}}" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('asserts/user/img/haj/childmeccac.jpg')}}">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('newImg/masque.jpg')}}">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('asserts/user/img/haj/masque.jpg')}}">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('newImg/yasmine-arfaoui.jpg')}}">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('asserts/user/img/haj/peopelmacca.jpg')}}">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('newImg/IMG_3179.JPG')}}">
                             </div>
                         </div>
                     </div>
@@ -425,130 +439,170 @@ function startAnimations() {
         </div>
         <!-- About End -->
 
+        <!-----PACKAGE-CONTENT-START---------------->
+        <div class="container-xxl mt-3" id="about">
+            <div class="container" >
+                <div class="row  align-items-center">
+                   <a href="{{route('umrah-by-bus-from-uae')}}"> <h5>Umrah by Bus –  <span class="text-primary text-uppercase">Affordable & Comfortable Pilgrimage</span> </h5></a>
+                    <p>Experience a hassle-free and budget-friendly Umrah journey by bus without compromising on comfort. We are the only tour operator in the UAE offering Umrah packages with inclusive food, laundry, and Ziyarat services to ensure a seamless pilgrimage experience.</p>
+                <div>
+                <h5 style="text-decoration: underline; text-decoration-color: #ff8c00;">Flexible & Customizable Packages</h5>
 
-        <!-- Package Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Package</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Package </span></h1>
+                <p>Choose from a variety of packages tailored to suit your budget and preferences:</p>
+                <ul>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Super Saver</li>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Bronze</li>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Silver</li>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Gold</li>
+                </ul>
+                <p>Need a personalized itinerary? We also offer customized packages to cater to special requests.</p>
                 </div>
-                <div class="row g-4">
-                        <!----package-start------>
-                  @foreach ($packages as $package )
-                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="room-item shadow rounded overflow-hidden">
-                            <div class="row g-0">
-                                <!-- Left Column: Image Section -->
-                             
-                                <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
-                                    <div class="position-relative package-image">
-                                        <img class="img-fluid" 
-                                             src="{{Storage::exists($package->photo_path) ? Storage::url($package->photo_path) : asset('asserts/user/img/haj/masque.jpg')}}" 
-                                             alt="" 
-                                             style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
-                                        <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">8 days</small>
-                                    </div>
-                                </div>
 
-                                <!-- Right Column: Package Details -->
-                                <div class="col-lg-8 col-md-8 p-4 mt-2">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mb-0">{{ucfirst($package->package_name)}}</h5>
-                                        <div class="ps-2">
-                                            <!-- Rating stars -->
-                                            {{-- <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small>
-                                            <small class="fa fa-star text-primary"></small> --}}
-                                            <span class="text-primary"  style="bordr: 1px solid #FEA116; cursor: pointer; color: #FEA16; font-weight:500;"><i class="fa-solid fa-download"></i> <span style="font-size: 12px;">Download Brochure</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3" style="font-size: 12px;">
-                                        <small class="border-end me-3 pe-3">
-                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Sharing : <span><span style="font-size: 18px;">{{$package->sharing}}</span>.AED</span>
-                                        </small>
-                                        <small class="border-end me-3 pe-3">
-                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quint :  <span><span style="font-size: 18px;">{{$package->quint}}</span>.AED</span>
-                                        </small>
-                                        <small class="me-3 pe-3">
-                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Quad : <span><span style="font-size: 18px;">{{$package->quad}}</span>.AED</span>
-                                        </small>
-                                    </div>
-                                    <div class="d-flex mb-3" style="font-size: 12px;">
-                                        <small class="border-end me-3 pe-3">
-                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Triple : <span><span style="font-size: 18px;">{{$package->triple}}</span>.AED</span>
-                                        </small>
-                                        <small class="border-end me-3 pe-3">
-                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Double :  <span><span style="font-size: 18px;">{{$package->double}}</span>.AED</span>
-                                        </small>
-                                        <small class="me-3 pe-3">
-                                            <i class="fa-solid fa-plane-departure text-primary me-2"></i>Single : <span><span style="font-size: 18px;">{{$package->single}}</span>.AED</span>
-                                        </small>
-                                    </div>
-                                    <div>
-                                        <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="text-center">06 Nights Makka , 02 Nights Madina</p>
-                                    </div>
-                                    <div >
-                                        <div class="mb-3" style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-plane-departure"></i> Departure Dates : </span><span >Every Wednesday</span>   </div>
-                                       <div style="font-weight:500;"><span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Hotel : </span><span >Al Deafah in Makka</span> | Anwar Deafah in Madina  </div>
-                                       <div class="d-flex align-items-center  flex-md-row flex-column">
-                                        <div>
-                                            <span style="font-weight:500; color: #0D1425;"><i class="fa-solid fa-bag-shopping"></i> What you get:</span>
-                                        </div>
-                                        
-                                       <div class="d-flex gap-3 mt-3 mb-3 ms-3 ">
-                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-bowl-food"></i> <span style="font-size: 12px;">MEALS</span></span>
-                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-jug-detergent"></i> <span style="font-size: 12px;">LAUNDRY</span></span>
-                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-file-shield"></i><span style="font-size: 12px;">BORDER TAX</span></span>
-                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-sim-card"></i> <span style="font-size: 12px;">SAUDI SIM</span></span>
-                                        <span class="d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-bus"></i> <span style="font-size: 12px;">TRANSPORT</span></span>
-                                        {{-- <span class="d-flex flex-column justify-content-center align-items-center"> <span style="font-size: 12px;"> <a >VIEW MORE <i class="fa-solid fa-arrow-right"></i></a></span></span> --}}
-                                       
-                                       
-                                       </div>
+            <div class="px-3 py-3" style="border: 1px dashed #ff8c00; border-radius: 30px 0 30px 0;">
 
-                                      
-                                        
-                                       </div>
-                                       <div>
-                                             <div class="d-flex mb-2">
-                                            <img style="height: 20px;" src="{{asset('images/googlereview.png')}}"  alt="googlereview"> 
-                                            <div class="ms-2">
-                                                <span>4.5</span>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <small class="fa fa-star text-primary"></small>
-                                                <a style="color: #007bff; text-decoration: underline;"  target="_blank" href="https://www.google.com/search?q=rahat+travels&oq=rahat+travels&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQIxgnMgwIAhAAGBQYhwIYgAQyDAgDEAAYFBiHAhiABDINCAQQLhivARjHARiABDIHCAUQABiABDIGCAYQRRg8MgYIBxBFGD3SAQg0OTUxajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8#lrd=0x3be7ce3cd58b13c3:0xb07729f581586b81,1,,,,">Goolge review</a>
-                                                
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                    
-                                    {{-- <p class="text-body mb-3 text-justify">Experience a spiritual journey like never before with our  Umrah Package. Enjoy premium accommodation, exquisite catering, and seamless transport services.</p> --}}
-                                    <div class="d-flex justify-content-between">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" wire:click="openBrowcher({{$package->id}})">
-                                            <i class="fa-solid fa-file-zipper"></i>  View Package
-                                        </a>
-                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openEnquire({{$package->id}})">
-                                            <i class="fa-regular fa-paper-plane"></i>  Book Enquire
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="d-flex justify-content-between" >
+                    <div>
+                        <h5>What’s Included in Our Umrah Bus Packages?</h5>
+                        <p>Our all-inclusive packages cover:</p>
+                        <ul>
+                            <li>✔️ Comfortable Transportation</li>
+                            <li>✔️ One-Year Multiple Entry Tourist Visa</li>
+                            <li>✔️ Border Tax</li>
+                            <li>✔️ All Meals (Breakfast, Lunch & Dinner)</li>
+                            <li>✔️ Laundry Services</li>
+                            <li>✔️ Zamzam Water</li>
+                            <li>✔️ Guided Ziyarat Tours</li>
+                            <li>✔️ Accommodation in Mecca & Medina</li>
+                            <li>✔️ Transfers & Experienced Guides</li>
+                        </ul>
+                        
                     </div>
-                  @endforeach
-                   <!----package-end------>
+                        <div>
+                            <h5>10-Day Umrah by Bus Itinerary</h5>
+                        <ul>
+                            <li>🚌 Departure: Every Wednesday from Abu Dhabi, Dubai & Sharjah</li>
+                            <li>📅 Duration: 10 Days</li>
+                            <li>🕋 Mecca Stay: 6 Days</li>
+                            <li>🕌 Medina Stay: 2 Days</li>
+                            <li>🚍 Travel Time: 2 Days</li>
+                        </ul>
+                        </div>
+    
+                        
+                 </div>
+                 <p style="color: #0f172b">You’ll have the opportunity to perform one Jumma prayer in Mecca and one in Medina, making your journey even more spiritually rewarding</p>
+            </div>
+                  
+             <div class="d-flex justify-content-between mt-5" >
+                <div>
+                    <h5><i class="fa-solid fa-face-smile"></i> Additional Services</h5>
+                    <p>In addition to our Bus Packages, we also provide:</p>
+                    <ul>
+                        <li>✈️ Umrah by Air Packages</li>
+                        <li>🛂 Umrah Visa Services</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5><i class="fa-regular fa-folder-open"></i> Umrah Visa Requirements</h5>
+                    <p>To apply for an Umrah visa, you will need:</p>
+                    <ul>
+                        <li>📌 Original Passport (Valid for at least 6 months)</li>
+                        <li>📌 UAE Residence Visa / Permit (Valid for at least 3 months)</li>
+                        <li>📌 Copy of Emirates ID</li>
+                        <li>📌 Original Vaccination Card</li>
+                    </ul>
+                </div>
+
+             </div>
+
+
+             <div>  
+
+                <h5>Umrah Package by Air from Dubai <i class="fa-solid fa-plane-departure"></i></h5>
+                <p>At Umrah Rahat, we offer the most affordable and well-designed Umrah Packages by Air from Dubai, catering to individuals, couples, families, and groups.</p>
+                <div class="d-flex">
+                    <div>
+                        <h5 class="text-primary">What’s Included in Our Umrah Packages?</h5>
+                        <ul>
+                            <li><strong>✔ Choice of Accommodation</strong> – Stay in 3-star, 4-star, or 5-star hotels with sharing options</li>
+                            <li><strong>✔ Return Airfare</strong> – Seamless travel with round-trip tickets included</li>
+                            <li><strong>✔ Umrah Visa</strong> – Complete assistance with visa processing</li>
+                            <li><strong>✔ Private Family Packages Available</strong> – Umrah by Air without sharing accommodation for families</li>
+                        </ul>
+                        
+                    </div>
+                    <div>
+                        <h5  class="text-primary">Why Choose Us?</h5>
+                        <ul>
+                            <li><strong>🏆 Years of Expertise</strong> – Trusted specialists with extensive experience in Umrah tour management</li>
+                            <li><strong>😊 Satisfied Clients</strong> – A large and loyal customer base built through successful Umrah operations</li>
+                            <li><strong>✈ Airline Partnerships</strong> – Strong connections with multiple airlines to offer the best travel deals</li>
+                            <li><strong>💰 Best Value</strong> – Affordable, high-quality packages designed to suit every budget</li>
+                        </ul>
+                        
+                        
+                    </div>
+                </div>
+                <div class="pt-3" style="border-top: 1px solid #FEA116;">
+                    <h5>An Unforgettable Umrah Experience</h5>
+                    <p>Embark on the spiritual journey of a lifetime with Rahat Holidays, where we prioritize your comfort, convenience, and devotion. We understand the significance of Umrah and are committed to making it a seamless, sacred, and stress-free experience for you.</p>
+                    <h5>Why Choose Our Umrah Packages?</h5>
+                    <ul>
+                        <li><strong><i class="fa-solid fa-hotel"></i> Hand-Picked Hotels </strong> – Stay in Makkah hotels within walking distance of Al Masjid Al Haram</li>
+                        <li><strong><i class="fa-solid fa-plane-circle-check"></i> Hassle-Free Travel</strong> – We arrange your return flights & airport transfers from Jeddah</li>
+                        <li><strong><i class="fa-solid fa-heart"></i> Unbeatable Value</strong>  – Limited-time super low Umrah packages starting from just AED 999 per person</li>
+                        <li><strong><i class="fa-solid fa-hand-holding-heart"></i> Exclusive Perks</strong>  – Enjoy complimentary upgrades and added extras for a more rewarding pilgrimage</li>
+                        <li><strong><i class="fa-solid fa-medal"></i> Award-Winning Service</strong> – Our commitment to excellence ensures memorable experiences that last a lifetime</li>
+                    </ul>
+                </div>
+                
+
+                <div class="d-flex">
+                    <div>
+                        <h5 >Plan Your Umrah with Ease</h5>
+                        <p>We are committed to providing the best and most budget-friendly Umrah packages every year, ensuring a comfortable and spiritually fulfilling journey. Whether you prefer Umrah by Air or Bus, we have the perfect package for you!</p>
+                        <p>
+                            <span style="transform:scale(1.4);" class="btn-play">📞</span> Contact us today to book your Umrah journey from Dubai! <br>
+                            <a href="tel:+971566115491">971566115491</a>
+                        </p>
+                    </div>
+    
+                  
                     
+                  <div>
+                    <h6>📅 Book Now & Save!</h6>
+                    <p>Take advantage of exclusive offers and let us handle every detail of your Umrah journey.</p>
+                    <p>📞 Contact Our Expert Travel Consultants Today to customize your perfect pilgrimage</p>
+                  </div>
+                </div>
+
+             </div>
+                    
+                <div>
+
+                </div>
+
                 </div>
             </div>
         </div>
-        
+        <!-----PACKAGE-CONTENT-END---------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <!-- Video Start -->
@@ -559,8 +613,8 @@ function startAnimations() {
                         <h6 class="section-title text-start text-white text-uppercase mb-3">RAHAT GROUP</h6>
                         <h1 class="text-white mb-4">Dedicated to ensuring a seamless and fulfilling experience for every pilgrim</h1>
                         <p class="text-white mb-4">Rahat Group offers a wide range of services, including Hajj and Umrah packages, elite catering, visa processing, and travel services, providing quality and tailored experiences for its customers.</p>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Our Package</a>
-                        <a href="{{route('package.download')}}" class="btn btn-light py-md-3 px-md-5">Book A Package</a>
+                        <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Our Package</a> -->
+                        <a  class="btn btn-light py-md-3 px-md-5">Book A Package</a>
                     </div>
                 </div>
                 <div class="col-md-6">

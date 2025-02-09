@@ -7,12 +7,21 @@ use App\Models\PackageRequest;
 use App\Models\UmrahEnquire;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
+use App\Models\mainPackage as MainPackage;
 
 
    
 
 class UserHome extends Component
 {
+    public $allPackages;
+    public $inclusions;
+    public $departCities;
+    public $selectedCity;
+    public $allCities;
+    public $searchCity;
+    public $searchDays;
+    public $packageDays;
 
     public $browcherPopUp;
 
@@ -124,6 +133,20 @@ class UserHome extends Component
     #[Layout('user.Layouts.app')]
     public function render()
     {
-        return view('livewire.user_front.user-home');
+
+                // Fetch all main packages with delete_status 1
+                $query = MainPackage::where('delete_status', 1)
+                ->where('service_type',strtolower(__('message.umrah')))
+                        ->where('departure_type',strtolower(__('message.bus')));
+            
+                if ($this->searchCity) {
+                    $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
+                }
+                
+                if ($this->searchDays) {
+                    $query->where('package_days', 'like', '%' . $this->searchDays . '%');
+                }
+                $this->allPackages = $query->get();
+        return view('livewire.user_front.user-home',['allPackages' => $this->allPackages]);
     }
 }

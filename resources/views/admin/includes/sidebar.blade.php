@@ -38,23 +38,23 @@
                     </a>
                 </li>
                 
-            <li>
+            {{-- <li>
 
 
                   <a href="{{route('package.ramzan')}}" >
                       <i class="bi bi-circle"></i>Ramzaan Package Manager
                   </a>
-              </li>
+              </li> --}}
                    <!--
                 <li> <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
                     <a href="{{route('admin.umrah-land-packages')}}" wire:navigate>
                         <i class="bi bi-circle"></i>Umrah Land Packages
                     </a>
                 </li> -->
-                <li> 
+                {{-- <li> 
                   <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
 
-                </li>
+                </li> --}}
               </ul>
             </li>
 
@@ -65,7 +65,11 @@
                 <div class="menu-title">Ziyarat Controller</div>
               </a>
               <ul>
-                <li> <a href="{{ route('admin.ziyarat') }}" wire:navigate><i class="bi bi-circle"></i>List All Ziyarat</a>
+                <li> 
+                  <a href="{{ route('admin.ziyarat') }}" wire:navigate><i class="bi bi-circle"></i>List All Ziyarat</a>
+                </li>
+                <li> 
+                  <a href="{{ route('admin.ziyarat-cities') }}" wire:navigate><i class="bi bi-circle"></i>Ziyarat Cities</a>
                 </li>
               </ul>
             </li>
@@ -83,7 +87,7 @@
                 </li>
               </ul>
             </li>
-            <li>
+            {{-- <li>
               <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bi bi-award-fill"></i>
                 </div>
@@ -97,7 +101,7 @@
                   <a href="{{ route('admin.visa-request-history') }}" wire:navigate><i class="bi bi-circle"></i>Visa Request History</a>
                 </li>
               </ul>
-            </li>
+            </li> --}}
            
             <!-- <li>
               <a class="has-arrow" href="javascript:;">
@@ -198,12 +202,14 @@
               </a>
               <ul>
                 <li> 
-                  <a href="{{ route('admin.flight-managent') }}" wire:navigate><i class="bi bi-circle"></i>Flight Management</a>
+                  <a href="{{ route('admin.flight-managent') }}" wire:navigate><i class="bi bi-circle"></i>Manage Flights </a>
                 </li>
                 <li> 
-                  <a href="{{ route('admin.departure-city') }}" wire:navigate><i class="bi bi-circle"></i>Departure city</a>
+                  <a href="{{ route('admin.departure-city') }}" wire:navigate><i class="bi bi-circle"></i>Manage Departure city</a>
                 </li>
-               
+                <li> 
+                  <a href="{{ route('admin.hotel-cities') }}" wire:navigate><i class="bi bi-circle"></i>Manage Hotel city</a>
+                </li>
                 <li> 
                   <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
                 </li>
@@ -218,13 +224,13 @@
                       <li> 
                         <a href="{{ route('admin.package-types') }}" wire:navigate><i class="bi bi-circle"></i>Package Types</a>
                       </li>
-                      <li> 
-                        <a href="{{ route('admin.package.transport.type') }}" wire:navigate><i class="bi bi-circle"></i>Package Transport Type</a>
-                      </li>
                       {{-- <li> 
-                        <a href="{{ route('admin.package-types') }}" wire:navigate><i class="bi bi-circle"></i>Package Types</a>
-                      </li>
-                      <li> 
+                        <a href="{{ route('admin.package.transport.type') }}" wire:navigate><i class="bi bi-circle"></i>Package Departure Type</a>
+                      </li> --}}
+                       {{-- <li> 
+                        <a href="{{ route('admin.service-type') }}" wire:navigate><i class="bi bi-circle"></i>Service Types</a>
+                      </li> --}}
+                     {{-- <li> 
                         <a href="{{ route('admin.inclusion') }}" wire:navigate><i class="bi bi-circle"></i>Inclusions</a>
                       </li> --}}
                     </ul>
@@ -253,13 +259,21 @@
                     </a>
                 </li>
                 
-            <li>
-
-
+              <li>
                   <a href="{{route('agentsignup')}}" >
                       <i class="bi bi-circle"></i>Enquires From Agent
                   </a>
               </li>
+              <li>
+                  <a href="{{route('package-enquire-from-user')}}" >
+                      <i class="bi bi-circle"></i>Package Enquires From user
+                  </a>
+              </li>
+              {{-- <li>
+                  <a href="{{route('hotel-enquire-from-user')}}" >
+                      <i class="bi bi-circle"></i>Hotel Enquires From user
+                  </a>
+              </li> --}}
                    <!--
                 <li> <a href="{{route('admin.package-request')}}" wire:navigate><i class="bi bi-circle"></i>Package Requests</a>
                     <a href="{{route('admin.umrah-land-packages')}}" wire:navigate>

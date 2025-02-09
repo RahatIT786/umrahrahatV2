@@ -14,6 +14,7 @@ class AddSightSeeing extends Component
     public $sightId;
     public $sightName;
     public $sightPrice;
+    public $sightPrice1;
     public $currency;
     public $sightCity;
     public $sightInclusion;
@@ -32,6 +33,7 @@ class AddSightSeeing extends Component
     protected $rules = [
         "sightName"=> "required|string|max:500",
         "sightPrice"=> "required|numeric",
+        'sightPrice1' => "required|numeric",
         "currency"=> "required",
         "sightCity"=> "required|string",
         "sightDiscription"=> "required|string",
@@ -48,6 +50,9 @@ class AddSightSeeing extends Component
         
         'sightPrice.required' => 'sight price is required.',
         'sightPrice.numeric' => 'sight price must be a numeric value.',
+
+        'sightPrice1.required' => 'sight price is required.',
+        'sightPrice1.numeric' => 'sight price must be a numeric value.',
         
         'sightCity.required' => 'sight city is required.',
         'sightCity.string' => 'sight city must be a string.',
@@ -75,6 +80,7 @@ class AddSightSeeing extends Component
             $this->sightId = $sight->id;
             $this->sightName = $sight->sightName;
             $this->sightPrice =$sight->sightPrice;
+            $this->sightPrice1 = $sight->sightPrice1;
             $this->currency = $sight->currency;
             $this->sightCity = $sight->sightCity;
             $this->sightDiscription = $sight->sightDiscription;
@@ -105,6 +111,7 @@ class AddSightSeeing extends Component
             $sight->update([
                 'sightName' => $this->sightName,
                 'sightPrice' => $this->sightPrice,
+                'sightPrice1' => $this->sightPrice1,
                 'currency' => $this->currency,
                 'sightCity' => $this->sightCity,
                 'sightDiscription' => $this->sightDiscription,
@@ -116,17 +123,18 @@ class AddSightSeeing extends Component
                 'sightImage3' => $sightImage3Path ?? $sight->sightImage3,
                 'deleteStatus' => $this->deleteStatus,
             ]);
-            session()->flash('message', 'Hotel details updated successfully!');
+            session()->flash('message', 'Sight details updated successfully!');
         } else {
             // Create new hotel record
             sightController::create([
                 'sightName' => $this->sightName,
                 'sightPrice' => $this->sightPrice,
+                'sightPrice1' => $this->sightPrice1,
                 'currency' => $this->currency,
                 'sightCity' => $this->sightCity,
                 'sightDiscription' => $this->sightDiscription,
-                'sightInclusion' => $this->sightInclusion,
-                'sightNotes' => $this->sightNotes,
+                'sightInclusion' => $this->sightInclusion ?? '',
+                'sightNotes' => $this->sightNotes ?? '',
                 'sightMainImage' => $sightMainImagePath,
                 'sightImage1' => $sightImage1Path,
                 'sightImage2' => $sightImage2Path,
@@ -140,6 +148,7 @@ class AddSightSeeing extends Component
         $this->reset([
             'sightName', 
             'sightPrice',
+            'sightPrice1',
             'currency', 
             'sightCity', 
             'sightDiscription', 

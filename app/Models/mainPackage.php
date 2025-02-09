@@ -15,6 +15,7 @@ class mainPackage extends Model
     protected $fillable = [ 
         'name',
         'service_type',
+        'departure_type',
         'package_days',
         'package_type_ids',
         'description',
@@ -31,6 +32,8 @@ class mainPackage extends Model
         'flight_transport',
         'packageMeals', 
         'visa_taxes',
+        'makkah_nights',
+        'madina_nights',
         'delete_status',
     ];
     public function scopeDesc($query)

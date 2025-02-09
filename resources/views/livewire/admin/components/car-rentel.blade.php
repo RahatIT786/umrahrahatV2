@@ -31,6 +31,7 @@
                 <thead class="table-secondary">
                     <tr>
                         <th class="border-0 py-2">S.No</th>
+                        <th class="border-0 py-2">Car Image</th>
                         <th class="border-0 py-2">Car Type</th>
                         <th class="border-0 py-2">Car Sector</th>
                         <th class="border-0 py-2">Seats Count</th>
@@ -44,8 +45,15 @@
 
                         <tr>
                             <td>{{  $index + 1 }}</td>
-                            <td>{{ $transportDetail->carType}}</td>
-                            <td>{{ $transportDetail->carSector}}</td>
+                            <td>
+                                @if ($transportDetail->cartypemaster->carImagePath	)
+                                    <img src="{{asset('storage/'.$transportDetail->cartypemaster->carImagePath)}}" alt="Hotel Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
+                                @else
+                                    No Image available
+                                @endif
+                            </td>
+                            <td>{{ $transportDetail->cartypemaster->car_type}}</td>
+                            <td>{{ $transportDetail->carsectormaster->car_sector}}</td>
                             <td>{{ $transportDetail->seatsCount }}</td>
                             <td>{{ $transportDetail->price }}</td>
                             <td class="text-center">
@@ -97,9 +105,9 @@
 
 
         <!-- Pagination -->
-       {{-- <div class="d-flex justify-content-end mt-3">
-            {{ $visaDetails->links() }}
-        </div>--}}
+       <div class="d-flex justify-content-end mt-3">
+            {{ $transportDetails->links('vendor.pagination.custom') }}
+        </div>
 
     </div>
 </div>

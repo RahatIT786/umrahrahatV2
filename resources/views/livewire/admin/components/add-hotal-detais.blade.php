@@ -14,43 +14,72 @@
                     <form class="row g-3 needs-validation" wire:submit.prevent="submit">
                         
                         <!-- Hotel Name -->
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-12 mb-3">
                             <label for="hotelName" class="form-label">Hotel Name</label>
                             <input type="text" id="hotelName" wire:model="hotelName" class="form-control" placeholder="Enter Hotel Name">
                             @error('hotelName') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <!-- Hotel Price -->
-                        <div class="col-md-6 mb-3">
-                            <label for="hotelPrice" class="form-label">Hotel Price</label>
-                            <input type="text" id="hotelPrice" wire:model="hotelPrice" class="form-control" placeholder="Enter Hotel Price">
-                            @error('hotelPrice') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
+
 
                         <!-- Currency Selection -->
-                        <div class="col-md-12 mb-3">
-                            <label class="form-label">Select Currency</label>
-                            <div class="form-check">
-                                <input type="radio" id="currencyINR" name="currency" value="INR" wire:model="currency" class="form-check-input">
-                                <label for="currencyINR" class="form-check-label">INR</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencyAED" name="currency" value="AED" wire:model="currency" class="form-check-input">
-                                <label for="currencyAED" class="form-check-label">AED</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencyUSD" name="currency" value="USD" wire:model="currency" class="form-check-input">
-                                <label for="currencyUSD" class="form-check-label">USD</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="currencySAR" name="currency" value="SAR" wire:model="currency" class="form-check-input">
-                                <label for="currencySAR" class="form-check-label">SAR</label>
+                        <div class="col-md-6 mb-3">
+                        <label class="form-label">Select Currency</label>
+                            <div class="">
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyINR" name="currency" value="INR" wire:model="currency" class="form-check-input">
+                                    <label for="currencyINR" class="form-check-label">INR</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyAED" name="currency" value="AED" wire:model="currency" class="form-check-input">
+                                    <label for="currencyAED" class="form-check-label">AED</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencyUSD" name="currency" value="USD" wire:model="currency" class="form-check-input">
+                                    <label for="currencyUSD" class="form-check-label">USD</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input type="radio" id="currencySAR" name="currency" value="SAR" wire:model="currency" class="form-check-input">
+                                    <label for="currencySAR" class="form-check-label">SAR</label>
+                                </div>
                             </div>
                             @error('currency') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-
-
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Select Hotel Amenities</label>
+                            <div class=" flex-wrap">
+                                <div class="form-check mx-2">
+                                    <input type="checkbox" id="amenityTV" value="1" wire:model="hotel_amenities" class="form-check-input">
+                                    <label for="amenityTV" class="form-check-label">TV</label>
+                                </div>
+                                <div class="form-check mx-2">
+                                    <input type="checkbox" id="amenityElevator" value="2" wire:model="hotel_amenities" class="form-check-input">
+                                    <label for="amenityElevator" class="form-check-label">Elevator</label>
+                                </div>
+                                <div class="form-check mx-2">
+                                    <input type="checkbox" id="amenityFridge" value="3" wire:model="hotel_amenities" class="form-check-input">
+                                    <label for="amenityFridge" class="form-check-label">Fridge</label>
+                                </div>
+                                <div class="form-check mx-2">
+                                    <input type="checkbox" id="amenityWashroom" value="4" wire:model="hotel_amenities" class="form-check-input">
+                                    <label for="amenityWashroom" class="form-check-label">Attached Washroom</label>
+                                </div>
+                                <div class="form-check mx-2">
+                                    <input type="checkbox" id="amenityAC" value="5" wire:model="hotel_amenities" class="form-check-input">
+                                    <label for="amenityAC" class="form-check-label">AC</label>
+                                </div>
+                                <div class="form-check mx-2">
+                                    <input type="checkbox" id="amenityCarpetedRooms" value="6" wire:model="hotel_amenities" class="form-check-input">
+                                    <label for="amenityCarpetedRooms" class="form-check-label">Carpeted Rooms</label>
+                                </div>
+                                <div class="form-check mx-2">
+                                    <input type="checkbox" id="amenityIronRooms" value="7" wire:model="hotel_amenities" class="form-check-input">
+                                    <label for="amenityIronRooms" class="form-check-label">Iron Rooms</label>
+                                </div>
+                            </div>
+                            @error('hotel_amenities') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
 
 
                         <!-- Hotel City -->
@@ -58,11 +87,9 @@
                             <label for="hotelCity" class="form-label">Hotel City</label>
                             <select class="form-select" id="hotelCity" wire:model="hotelCity">
                                 <option value="">Select City</option>
-                                <option value="MAKKAH">MAKKAH</option>
-                                <option value="MADINAH">MADINAH</option>
-                                <option value="BAGHDAD">BAGHDAD</option>
-                                <option value="NAJAF">NAJAF</option>
-                                <option value="KARBALA">KARBALA</option>
+                                @foreach ($hotel_cities as $hotel_city)
+                                    <option value="{{$hotel_city->hotel_city}}">{{$hotel_city->hotel_city}}</option>
+                                @endforeach
                             </select>
                             @error('hotelCity') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
@@ -82,12 +109,18 @@
                             @error('hotelStarRating') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-
-                        <!-- Hotel Address -->
+                        <!-- Hotel You Tube Video -->
                         <div class="col-md-6 mb-3">
-                            <label for="hotelAddress" class="form-label">Hotel Address</label>
-                            <textarea id="hotelAddress" wire:model="hotelAddress" class="form-control" placeholder="Enter Hotel Address"></textarea>
-                            @error('hotelAddress') <span class="text-danger">{{ $message }}</span> @enderror
+                            <label for="hotelYouTube" class="form-label">Hotel YouTube Video Link</label>
+                            <input type="text" id="hotelYouTube" wire:model="hotelYouTube" class="form-control" placeholder="Enter Hotel YouTube Video Link">
+                            @error('hotelYouTube') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        <!-- Hotel You Tube Video -->
+                        <div class="col-md-6 mb-3">
+                            <label for="hotelMap" class="form-label">Hotel Map Link</label>
+                            <input type="text" id="hotelMap" wire:model="hotelMap" class="form-control" placeholder="Enter Hotel Map Link">
+                            @error('hotelMap') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
                         <!-- Hotel Discription -->
@@ -96,6 +129,29 @@
                             <textarea id="hotelDiscription" wire:model="hotelDiscription" class="form-control" placeholder="Enter Hotel Discription"></textarea>
                             @error('hotelDiscription') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
+
+
+                        <!-- Hotel Address -->
+                        <div class="col-md-6 mb-3">
+                            <label for="hotelAddress" class="form-label">Hotel Address</label>
+                            <textarea id="hotelAddress" wire:model="hotelAddress" class="form-control" placeholder="Enter Hotel Address"></textarea>
+                            @error('hotelAddress') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        <!-- Hotel Manager Contect -->
+                        <div class="col-md-6 mb-3">
+                            <label for="hotelManagerContect" class="form-label">Hotel Manager Contect</label>
+                            <textarea id="hotelManagerContect" wire:model="hotelManagerContect" class="form-control" placeholder="Enter Manager Contect"></textarea>
+                            @error('hotelManagerContect') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        <!--Hotel Distance-->
+                        <div class="col-md-6 mb-3">
+                            <label for="hotelDistance" class="form-label">Distance away from Center City</label>
+                            <input type="number" min="0" id="hotelDistance" class="form-control" wire:model="hotelDistance" placeholder="Enter Distance away from Center City">
+                            @error('hotelDistance') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
 
                         <!--Hotel CheckIn Time-->
                         <div class="col-md-6 mb-3">
@@ -111,12 +167,7 @@
                             @error('hotelCheckOutTime') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <!--Hotel Distance-->
-                        <div class="col-md-12 mb-3">
-                            <label for="hotelDistance" class="form-label">Distance away from Center City</label>
-                            <input type="number" min="0" id="hotelDistance" class="form-control" wire:model="hotelDistance" placeholder="Enter Distance away from Center City">
-                            @error('hotelDistance') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
+
 
                         <!-- File Upload for Main Hotel Image -->
                         <div class="col-md-6 mb-3">
@@ -231,6 +282,62 @@
                                 </div>
                             @endif
                         </div>
+
+                        <div class="d-flex">
+                            <button type="button" wire:click="increaseHotelFields" class="btn btn-primary mx-3">Add Periods</button>
+                            <button type="button" wire:click="decreaseHotelFields" class="btn btn-danger mx-3">Remove Periods</button>
+                        </div>
+
+                        @foreach ($hotels as $i => $hotel)
+                            <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
+                                <div class="col-md-2 mb-4">
+                                    <label for="hotelSeasonStart.{{$i}}" class="form-label">Season Start</label>
+                                    <input type="date" id="hotelSeasonStart.{{$i}}" wire:model="hotelSeasonStart.{{$i}}" class="form-control" placeholder="Enter Season Start">
+                                    @error('hotelSeasonStart.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                                
+                                <div class="col-md-2 mb-4">
+                                    <label for="hotelSeasonEnd.{{$i}}" class="form-label">Season End</label>
+                                    <input type="date" id="hotelSeasonEnd.{{$i}}" wire:model="hotelSeasonEnd.{{$i}}" class="form-control" placeholder="Enter Season End">
+                                    @error('hotelSeasonEnd.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                                <div class="col-md-2 mb-4">
+                                    <label for="hotelMeal.{{$i}}" class="form-label">Meal Type</label>
+                                    <select class="form-select" id="hotelMeal.{{$i}}" wire:model="hotelMeal.{{$i}}">
+                                        <option value="">Food Type</option>
+                                        <option value="Suhoor or Iftar">Suhoor or Iftar</option>
+                                        <option value="Full Board">Full Board</option>
+                                        <option value="Breakfast">Breakfast</option>
+                                        <option value="Iftar">Iftar</option>
+                                        <option value="Room Only">Room Only</option>
+                                        <option value="Indian FB">Indian FB</option>
+                                    </select>
+                                    @error('hotelMeal.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                    <label for="hotelDouble.{{$i}}" class="form-label">Double</label>
+                                    <input type="text" id="hotelDouble.{{$i}}" wire:model="hotelDouble.{{$i}}" class="form-control" placeholder="Enter Double Price">
+                                    @error('hotelDouble.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                                
+                                <div class="col-md-2 mb-3">
+                                    <label for="hotelTriple.{{$i}}" class="form-label">Triple</label>
+                                    <input type="text" id="hotelTriple.{{$i}}" wire:model="hotelTriple.{{$i}}" class="form-control" placeholder="Enter Triple Price">
+                                    @error('hotelTriple.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                    <label for="hotelQuad.{{$i}}" class="form-label">Quad</label>
+                                    <input type="text" id="hotelQuad.{{$i}}" wire:model="hotelQuad.{{$i}}" class="form-control" placeholder="Enter Quad Price">
+                                    @error('hotelQuad.{{$i}}') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                            </div>
+
+                            <hr>
+                        @endforeach
 
 
                         <!-- Submit Button -->

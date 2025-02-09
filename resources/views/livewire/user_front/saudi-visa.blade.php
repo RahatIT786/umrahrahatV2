@@ -1,9 +1,9 @@
 <section>
       <!-- Page Header Start -->
-      <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
+      {{-- <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('newImg/bannerImage/visa_banner.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Saudi Visa</h1>
+                    {{-- <h1 class="display-3 text-white mb-3 animated slideInDown">Saudi Visa</h1> \
                     <!-- <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -11,6 +11,21 @@
                             <li class="breadcrumb-item text-white active" aria-current="page">Rooms</li>
                         </ol>
                     </nav> -->
+                </div>
+            </div>
+        </div> --}}
+        <div class="container-fluid p-0 mb-5 hotel-banner">
+            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item imgZoom active">
+                        <img class="w-100" style="height: 15vw;" src="{{ asset('newImg/bannerImage/visa-banner2.jpg') }}" alt="Image" style="object-position: center;">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                {{-- <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Our Hotels</h1> --}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,59 +37,41 @@
         <div class="container">
             <div class="bg-white shadow" style="padding: 35px;">
                 <div class="row g-2">
-                    <div class="col-md-3">
-                        <button class="btn btn-primary w-100">Search Visa</button>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="row g-2">
-                            <form class="col-md-6"  wire:submit.prevent="">
-                                <select class="form-select" wire:model.live="searchVisaType">
-                                    <option value='' selected>Select Visa Type</option>
-                                    <option value="UMRAH VISA">UMRAH VISA</option>
-                                    <option value="TOURIST VISA">TOURIST VISA</option>
-                                    <option value="BUSINESS VISA">BUSINESS VISA</option>
-                                    <option value="PERSONAL VISA">PERSONAL VISA</option>
-                                </select>
-                            </form>   
-                            <div class="col-md-6">
-                                <form wire:submit.prevent="" class="date" id="date2" >
-                                    <input  wire:model.live="searchCountry" type="text" class="form-control" placeholder="Country Name" />
-                                </form>
+                    
+                    <form >
+                        <div class="col-md">
+                            <div class="row g-2 d-flex justify-content-center align-items-center">
+                               
+                                <div class="col-lg-4 col-md-4">
+                                    <form class=""  wire:submit.prevent="">
+                                        <select class="form-select" wire:model.live="searchVisaType">
+                                            <option value='' selected>Select Visa Type</option>
+                                            <option value="UMRAH VISA">UMRAH VISA</option>
+                                            <option value="TOURIST VISA">TOURIST VISA</option>
+                                            <option value="BUSINESS VISA">BUSINESS VISA</option>
+                                            <option value="PERSONAL VISA">PERSONAL VISA</option>
+                                        </select>
+                                    </form>   
+                                </div>
+                                <div class="col-md-4">
+                                    <form wire:submit.prevent="" class="date" id="date2" >
+                                        <input  wire:model.live="searchCountry" type="text" class="form-control" placeholder="Country Name" />
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-primary w-100">Search Visa</button>
+                                </div>
+                               
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- Booking End -->
 
-<script>
-// Function to animate numbers
-function animateNumber(id, start, end, duration, suffix = '') {
-    let current = start;
-    let increment = end > start ? 1 : -1;
-    let stepTime = Math.abs(Math.floor(duration / (end - start)));
-    let element = document.getElementById(id);
-    
-    let timer = setInterval(function() {
-        current += increment;
-        element.textContent = current + suffix;
-        
-        if (current === end) {
-            clearInterval(timer);
-        }
-    }, stepTime);
-}
 
-// Call animateNumber for each counter with appropriate values
-window.onload = function() {
-    animateNumber('clients-count', 0, 5, 3000, 'K +');  // 5K+ Clients
-    animateNumber('success-rate', 0, 97, 3000, '%');    // 87% Success Rate
-    animateNumber('rating-clients', 0, 4, 3000);      // 4.7 Rating Clients
-    animateNumber('experience-years', 0, 20, 3000, '+'); // 20+ Years of Experience
-};
-</script>
 
 
         <!-- Booking End -->
@@ -84,8 +81,8 @@ window.onload = function() {
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Saudi Visa</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Visa Service</span></h1>
+                    {{-- <h6 class="section-title text-center text-primary text-uppercase">Saudi Visa</h6> --}}
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Visa </span></h1>
                 </div>
                 <div class="row g-4">
                   @foreach ($visaDetails as $visaDetail )

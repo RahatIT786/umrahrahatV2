@@ -18,6 +18,7 @@ class RamzaanPackageByFlight extends Component
     public $searchCity;
     public $searchDays;
     public $packageDays;
+    public $searchPackage;
 
     public function mount()
     {
@@ -58,15 +59,13 @@ class RamzaanPackageByFlight extends Component
     public function render()
     {
         // Fetch all main packages with delete_status 1
-        $query = MainPackage::where('delete_status', 1)->where('service_type','1')
-        ->where(function ($query) {
-            $query->whereNotNull('flights')
-                  ->where('flights', '!=', '');
-        });
+        $query = MainPackage::where('delete_status', 1)
+        ->where('service_type',strtolower(__('message.ramzaan')))
+        ->where('departure_type',strtolower(__('message.flight')));
 
 
-        if ($this->searchCity) {
-            $query->where('depart_city', 'like', '%' . $this->searchCity . '%');
+        if ($this->searchPackage) {
+            $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
         if ($this->searchDays) {
             $query->where('package_days', 'like', '%' . $this->searchDays . '%');
