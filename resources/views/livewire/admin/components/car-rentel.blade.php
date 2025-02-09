@@ -41,11 +41,11 @@
                 </thead>
                <tbody>
                     @foreach ($transportDetails as $index => $transportDetail)
-                       
+
                         <tr>
                             <td>{{  $index + 1 }}</td>
-                            <td>{{ $transportDetail->carType->car_type}}</td>
-                            <td>{{ $transportDetail->carSector->car_sector}}</td>
+                            <td>{{ $transportDetail->carType}}</td>
+                            <td>{{ $transportDetail->carSector}}</td>
                             <td>{{ $transportDetail->seatsCount }}</td>
                             <td>{{ $transportDetail->price }}</td>
                             <td class="text-center">
@@ -65,18 +65,18 @@
         </div>
 
         <!-- Modal for Delete Confirmation -->
-        <div class="modal fade @if($showModal) show @endif" 
-             id="exampleVerticallycenteredModal" 
-             tabindex="-1" 
-             aria-labelledby="exampleModalCenterTitle" 
+        <div class="modal fade @if($showModal) show @endif"
+             id="exampleVerticallycenteredModal"
+             tabindex="-1"
+             aria-labelledby="exampleModalCenterTitle"
              aria-hidden="true"
              @if($showModal) style="display: block;" @endif>
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalCenterTitle">Confirm Deletion</h5>
-                        <button type="button" class="btn-close" 
-                                data-bs-dismiss="modal" 
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"
                                 aria-label="Close"
                                 wire:click="closeModal"></button>
                     </div>
@@ -84,11 +84,11 @@
                         Are you sure you want to delete this Car Type?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" 
-                                data-bs-dismiss="modal" 
+                        <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal"
                                 wire:click="closeModal">Cancel</button>
-                        <button type="button" class="btn btn-danger" 
-                                wire:click="deleteData" 
+                        <button type="button" class="btn btn-danger"
+                                wire:click="deleteData"
                                 data-bs-dismiss="modal">Delete</button>
                     </div>
                 </div>

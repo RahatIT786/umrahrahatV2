@@ -4,12 +4,14 @@ namespace App\Livewire\Admin\Components;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
-use Livewire\WithPagination; 
+use Livewire\WithPagination;
 use App\Models\transportController;
+use Illuminate\Support\Facades\Response;
+
 
 class CarRentel extends Component
 {
-    use WithPagination; 
+    use WithPagination;
 
     public $showModal = false;
     public $transportId;
@@ -45,7 +47,12 @@ class CarRentel extends Component
                   ->orWhere('price', 'like', '%'.$this->search.'%');
         })
         ->paginate(10);
-        // dd($transportDetails );
-        return view('livewire.admin.components.car-rentel',['transportDetails' => $transportDetails]);
+
+        //return response()->json($transportDetails)->with(['cartypemaster', 'carsectormaster']);
+        //return response()->json($transportDetails);
+        //return Response::json($transportDetails);
+
+        dd($transportDetails);
+       // return view('livewire.admin.components.car-rentel',['transportDetails' => $transportDetails]);
     }
 }

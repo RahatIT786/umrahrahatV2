@@ -124,6 +124,42 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\UserHome;
 use Illuminate\Support\Facades\Artisan;
 use Livewire\Livewire;
+use App\Models\SuperAdmin;
+use App\Models\testUser;
+use App\Models\transportController;
+use App\Models\userTest1;
+use Illuminate\Support\Facades\Response;
+
+
+Route::get('/addpassword',function(){
+   $suss = SuperAdmin::create(
+        [
+            'email' => 'info@rahat.in',
+            'password'=> Hash::make('info@rahat.in'),
+            'role'=>'admin'
+        ]
+    );
+    if($suss){
+        echo 'suss';
+    }
+});
+
+Route::get('/test',function(){
+    $user = testUser::with(['phone'])->whereId(1)->first();
+    //return Response::json($user->phone->phone);
+    //return transportController::with(['cartypemaster', 'carsectormaster'])->whereId(1)->first();
+
+    // $user = userTest1::with(['age','phone'])->whereId(1)->first();
+    // dd($user);
+    return Response::json($user);
+    //  $transport = transportController::with(['cartypemaster'])->whereId(1)->first();
+    //  return Response::json($transport);
+    // dd($transport);
+});
+
+
+
+
 
 //USER ROUTES START
 Route::get('/', UserHome::class)->name('layouts.app');
@@ -133,8 +169,8 @@ Route::get('/our-services',OurService::class)->name('our-services');
 Route::get('/ramzan-umrah-package',RamzanUmrahPackages::class)->name('ramzan-umrah-package');
 Route::get('/blog',Blog::class)->name('blog');
 Route::get('/gallery',Gallery::class)->name('gallery');
-Route::get('/saudi-visa',SaudiVisa::class)->name('saudi-visa'); 
-Route::get('/contact-us',ContactUs::class)->name('contact-us'); 
+Route::get('/saudi-visa',SaudiVisa::class)->name('saudi-visa');
+Route::get('/contact-us',ContactUs::class)->name('contact-us');
 Route::get('/single-blog1',SingleBlog1::class)->name('singleBlog1');
 Route::get('/single-blog2',SingleBlog2::class)->name('singleBlog2');
 Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');

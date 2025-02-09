@@ -27,12 +27,12 @@ class transportController extends Model
         // Relationship with CarType
         public function cartypemaster()
         {
-            return $this->hasOne(CarType::class, 'id' ,'id');
+            return $this->belongsTo(CarType::class,'car_type','id');
         }
-    
+
         // Relationship with CarSector
         public function carsectormaster()
         {
-            return $this->hasOne(CarSector::class, 'id','id');
+            return $this->belongsTo(CarSector::class, 'car_sector','id');
         }
 }
