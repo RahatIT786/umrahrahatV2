@@ -117,6 +117,7 @@
     <script src="{{asset('asserts/user/js/awardScript.js')}}"></script>
 
     <!-- Template Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('asserts/user/js/main.js')}}"></script>
     <livewire:scripts />
 </body>

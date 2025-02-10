@@ -20,18 +20,18 @@
                         <div class="col-lg-7 px-5 text-start">
                             {{-- <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
-                               
+
                                 <p class="mb-0"><a href="mailto:info@rahat.in" style="color:#666565; " >info@rahat.in</a></p> &nbsp; &nbsp;
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
-                               
+
                                 <p class="mb-0"><a href="tel:+917506195551" style="color:#666565; " >+917506195551</a></p>
                             </div> --}}
                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
-                               
+
                                 <p class="mb-0"><a href="mailto:dubai@rahat.in" style="color:#666565; " >dubai@rahat.in</a></p> &nbsp; &nbsp;
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
-                               
+
                                 <p class="mb-0"><a href="tel:+971567866713" style="color:#666565; " >+971567866713</a></p>
                             </div>
                             {{-- <div class="h-100 d-inline-flex align-items-center py-2 ">
@@ -46,24 +46,35 @@
                                     <a class="me-3" href=""  style="text-transform:uppercase; font-size: 14px; font-weight: 500;"><i class="fa-solid fa-user" style="color: #666565;"></i> User Login</a>
                                 </div> --}}
                               <div class="d-flex align-items-cente justify-content-between px-2 " style="position: absolute; top:3px; right: 28vw;  border-radius:9px;">
-                                {{-- <span class="mt-2"><i class="fa-solid fa-language" "></i></span> --}}
+                                {{-- <span class="mt-2"><i class="fa-solid fa-language" ></i></span> --}}
                                 <span class="mt-2"><i class="fa-solid fa-earth-asia" style="font-size: 20px;"></i></span>
                                 <span id="google_translate_element"  ></span>
                               </div>
                                 <div class="h-100 d-inline-flex align-items-center  me-4">
-                                   
-                                        <div class="dropdown me-4">
+
+                                    <div class="dropdown me-4">
                                             <i class="fa-solid fa-user-tie text-primary me-2"></i>
-                                            <a class="dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-transform:uppercase;color:#666565; font-size: 14px; font-weight: 500;">
-                                                Agent Login
-                                            </a>
-                                            <ul class="dropdown-menu">
+                                            @if(Session::has('agent'))
+                                                <a class="dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-transform:uppercase;color:#666565; font-size: 14px; font-weight: 500;">
+                                                    {{ Session::get('agent')->name }}
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="{{ route('agent.dashboard') }}">Dashboard</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('agent.logout') }}">Logout</a></li>
+                                                </ul>
+                                            @else
+                                                <a class="dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-transform:uppercase;color:#666565; font-size: 14px; font-weight: 500;">
+                                                    Agent Login
+                                                </a>
+                                                <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
-            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
-                                            </ul>
+                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+                                                </ul>
+                                            @endif
                                         </div>
+
                                     <i class="fa-solid fa-user text-primary me-2"></i>
-                                   
+
                                     <p class="mb-0"><a href=""  style="text-transform:uppercase;color:#666565;  font-size: 14px; font-weight: 500;" >user login</a></p>
                                 </div>
                                 <a class="me-3" >|</a>
@@ -83,8 +94,8 @@
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                      
-                        
+
+
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0 " >
                                 <div class="nav-item dropdown">
@@ -104,14 +115,14 @@
                                     <a href="{{route('about')}}"  class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
                                         <img style="height:30px;" src="{{asset('images/ramzaanLogo.png')}}" alt="">
                                         Ramzan
-                                        
+
                                     </a>
 
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('ramzaan.bybus')}}" class="dropdown-item">By Bus from UAE</a>
                                         <a href="{{route('ramzaan.byflight')}}" class="dropdown-item">By Flight from UAE</a>
                                         <a href="{{route('ramzaan.landpackage')}}" class="dropdown-item">Land Packages</a>
-                     
+
                                     </div>
                                 </div>
                                 <div class="nav-item dropdown">
@@ -131,7 +142,7 @@
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Turkey</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Uzbekistan</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Azerbaijan</a> -->
-                     
+
                                     </div>
                                 </div>
                                 <div class="nav-item dropdown">
@@ -143,7 +154,7 @@
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('hajj.bybus')}}" class="dropdown-item">Short Hajj</a>
                                         <a href="{{route('hajj.bybus.long')}}" class="dropdown-item">Long Hajj</a>
-                     
+
                                     </div>
                                 </div>
                                 <a href="{{route('hotels')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect " >
@@ -151,9 +162,9 @@
                                     Hotels</a>
                                 <a href="{{route('saudi-visa')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect"  >
                                     <img style="height:30px;" src="{{asset('images/Visa_Icon.png')}}" alt="">
-                                    
+
                                         Visa
-                                    
+
                                 </a>
                                 <a href="{{route('transport')}}"  class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
                                     <img style="height:30px;" src="{{asset('images/Transport_Icon.png')}}" alt="">
@@ -161,7 +172,7 @@
                                 <a href="{{route('sightseeing')}}"  class="nav-item nav-link  d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" >
                                     <img style="height:30px;" src="{{asset('images/SIGHTSEEING_2nd_Icon.png')}}" alt="">
                                     Sightseeing</a>
-                                
+
                                 <a href="{{route('catring')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
                                     <img style="height: 30px; display: block;" src="{{asset('images/Catering_Icon.png')}}" alt="Catering Icon">
                                     <span>Catering</span>
@@ -170,7 +181,7 @@
                                     <img style="height: 30px; display: block;" src="{{asset('images/Holiday_Icon.png')}}" alt="Catering Icon">
                                     <span>Holidays</span>
                                 </a>
-                               
+
                                 <div class="nav-item dropdown">
 
                                     <a    class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
@@ -181,9 +192,9 @@
                                         <a href="{{route('user.laundry')}}" class="dropdown-item">Laundry</a>
                                         <a href="{{route('myassistant')}}" class="dropdown-item">Guide and Assitant</a>
                                         <a  class="dropdown-item" onclick="toggleForexForm()">Forex</a>
-                                       
-                                       
-                     
+
+
+
                                     </div>
                                 </div>
                                 <a href="{{route('partner-with-us')}}" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
@@ -197,9 +208,9 @@
                                    {{-- <div class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
                                 <a style="color:black" href="{{route('partner-with-us')}}">Join Us</a> &nbsp;
                             </div>
-                            
+
                             <div style="margin-left: 0px;" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
-                                
+
                                 <a style="color:black" href="{{route('contact-us')}}">Contact Us</a>
                             </div> --}}
                                 </a>
@@ -209,8 +220,8 @@
                                 {{-- <a href="{{route('coming-soon')}}"  class="nav-item nav-link " >Hajj Packages</a> --}}
 
 
-                                   
-                               
+
+
                                 {{-- <a href="{{route('hotels')}}"  class="nav-item nav-link">Hotels</a> --}}
                                 {{-- <div class="nav-item dropdown">
 
@@ -219,7 +230,7 @@
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Dubai Visa</a>
                                         <a href="{{route('coming-soon')}}" class="dropdown-item">Saudi Visa</a>
-                     
+
                                     </div>
                                 </div> --}}
                                 {{-- <a href="{{route('coming-soon')}}"  class="nav-item nav-link">Transport</a> --}}
@@ -230,8 +241,8 @@
 
 
                             </div>
-                            
-                  
+
+
                             <!-- <a href="{{route('contact-us')}}" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a> -->
 
                         </div>
@@ -271,25 +282,35 @@
 
 
 <!-- Register Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="registerModalLabel">Agent Register</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal " id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="registerModalLabel">Agent Register</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="{{route('send.otp')}}" method="POST">
+            @csrf
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter full name" required>
             </div>
-            <div class="modal-body">
-                <form action="{{ route('send.otp') }}" method="POST">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <input type="text" class="form-control" name="phone" placeholder="Enter phone number" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send OTP</button>
-                </form>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" name="email" placeholder="Enter email" required>
             </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" name="phone" placeholder="Enter phone number" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+            </form>
         </div>
     </div>
+</div>
+
+
 
   <!-- Header End -->
 <!---------------------->
@@ -299,7 +320,7 @@
         color: white !important;
     } */
          .VIpgJd-ZVi9od-ORHb-OEVmcd{
-            visibility:hidden !important; 
+            visibility:hidden !important;
         }
         .VIpgJd-ZVi9od-l4eHX-hSRGPd{
             /* visibility:hidden !important; */
@@ -310,45 +331,45 @@
         border-radius: 5px !important;
         width: 5rem !important;
         border: red !important;
-        
+
     }
     .goog-te-combo:focus{
         border: red !important;
         outline: red !important;
     }
-    
+
         /* Hide Google Translate toolbar */
     .goog-te-banner-frame.skiptranslate {
         display: none !important;
-    } 
-    
+    }
+
     /* Remove the space reserved for the toolbar */
     body {
-        top: 0px !important; 
+        top: 0px !important;
     }
-    
+
     /* Hide the Google Translate badge */
     .goog-logo-link {
         display: none !important;
-    } 
-    
+    }
+
     /* Hide the text label "Powered by Google Translate" */
     .goog-te-gadget {
         color: transparent !important;
-    } 
-    
+    }
+
     /* If there's a dropdown box you want to keep, you can style it here */
     #google_translate_element select {
-        color: black; 
+        color: black;
         /* height: 15px !important; */
          /* Keep the dropdown visible but text styled */
     }
     .skiptranslate .goog-te-gadget{
         height: 1rem !important;
     }
-    
+
     </style>
-    
+
     <script type="text/javascript">
         function googleTranslateElementInit() {
           new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
@@ -362,7 +383,7 @@
 // }
 
         </script>
-    
+
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!----------------------->
 
@@ -377,7 +398,7 @@
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-  
+
 
 <!-----forex-form-div-style-script-start----------------->
 
@@ -388,10 +409,10 @@
     </div>
 
     <p><strong>📞 Call Us At:</strong> +91 9967786446, 7863878630</p>
-    
+
     <hr>
 
-   
+
 
     <div class="input-group">
         <label> Name</label>
@@ -559,12 +580,12 @@
         .submit-btn:hover {
             background-color: #580aaf;
         }
-       
+
   </style>
  <script>
         function toggleForexForm() {
             var form = document.getElementById("forex-popup-form");
-             
+
             if (form.classList.contains("show")) {
                 form.classList.remove("show"); // Hide form
             } else {
