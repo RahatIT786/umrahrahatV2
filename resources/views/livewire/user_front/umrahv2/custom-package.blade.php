@@ -16,64 +16,7 @@
                     
                 </div>
                 <div class="row g-4 align-items-center">
-{{--                   
-                    <div>
-                        <!-- Stepper Progress Bar -->
-                        <div class="stepper">
-                            @for ($i = 1; $i <= $totalSteps; $i++)
-                                <div class="step {{ $i <= $currentStep ? 'active' : '' }}"></div>
-                            @endfor
-                        </div>
-                    
-                        <!-- Step Content -->
-                        <div class="step-content">
-                            @if ($currentStep == 1)
-                                <div>
-                                    <label for="field1">Field 1</label>
-                                    <input type="text" wire:model="formData.field1" id="field1">
-                                    @error('formData.field1') <span class="error">{{ $message }}</span> @enderror
-                                </div>
-                            @elseif ($currentStep == 2)
-                                <div>
-                                    <label for="field2">Field 2</label>
-                                    <input type="text" wire:model="formData.field2" id="field2">
-                                    @error('formData.field2') <span class="error">{{ $message }}</span> @enderror
-                                </div>
-                            @elseif ($currentStep == 3)
-                                <div>
-                                    <label for="field3">Field 3</label>
-                                    <input type="text" wire:model="formData.field3" id="field3">
-                                    @error('formData.field3') <span class="error">{{ $message }}</span> @enderror
-                                </div>
-                            @elseif ($currentStep == 4)
-                                <div>
-                                    <label for="field4">Field 4</label>
-                                    <input type="text" wire:model="formData.field4" id="field4">
-                                    @error('formData.field4') <span class="error">{{ $message }}</span> @enderror
-                                </div>
-                            @elseif ($currentStep == 5)
-                                <div>
-                                    <label for="field5">Field 5</label>
-                                    <input type="text" wire:model="formData.field5" id="field5">
-                                    @error('formData.field5') <span class="error">{{ $message }}</span> @enderror
-                                </div>
-                            @endif
-                        </div>
-                    
-                        <!-- Navigation Buttons -->
-                        <div class="step-navigation">
-                            @if ($currentStep > 1)
-                                <button wire:click="previousStep" type="button">Back</button>
-                            @endif
-                    
-                            @if ($currentStep < $totalSteps)
-                                <button wire:click="nextStep" type="button">Continue</button>
-                                <button wire:click="skipStep" type="button">Skip</button>
-                            @else
-                                <button wire:click="submitForm" type="button">Submit</button>
-                            @endif
-                        </div>
-                    </div> --}}
+
 
 
                     <div>
@@ -94,40 +37,40 @@
                             <div class="d-flex justify-content-evenly align-items-center flex-column custom-field-bars py-4" style="">
                                 <h5 class="mt-2 mb-2 text-primary" style="">Personal Details</h5>
                                 <hr>
-                               <div class="row col-lg-12">
-                                <div class="col-lg-4">
-                                    <label for="field1">Name</label>
-                                    <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="Name">
+                                <div class="row col-lg-12">
+                                    <div class="col-lg-6">
+                                        <label for="field1">Name</label>
+                                        <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="Name">
+                                       </div>
+    
+                                       <div class="col-lg-6">
+                                        <label for="field1">Mobile</label>
+                                        <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="Mobile">
+                                       </div>
+    
+                                     
+    
                                    </div>
-
-                                   <div class="col-lg-4">
-                                    <label for="field1">Mobile</label>
-                                    <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="Mobile">
+                                   <div class="row col-lg-12">
+                                    <div class="col-lg-6">
+                                        <label for="field1">Email</label>
+                                        <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="Email">
+                                     </div>
+    
+                                       <div class="col-lg-6 mt-3">
+                                        <label for="field1">Choose Your Currency <i class="fa-solid fa-coins"></i></label>
+                                        <div class="d-flex gap-3 justify-content-start ">
+                                       
+                                            @foreach ($currencies as $currency )
+                                            <label>
+                                                <input wire:model.live="selectedCurrency" type="radio" class="single-select" name="currency" value="{{$currency}}" style="box-shadow: none !important;" />
+                                                <span>{{$currency}}</span>
+                                              </label>
+                                             @endforeach
+                                          </div>
+                                       </div>
                                    </div>
-
-                                   <div class="col-lg-4">
-                                    <label for="field1">Email</label>
-                                    <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="Email">
-                                   </div>
-
-                               </div>
-                               <div class="row col-lg-12 mt-4">
-                                <div class="col-lg-4">
-                                    <label for="field1">Adult</label>
-                                    <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="No.of Adults">
-                                   </div>
-
-                                   <div class="col-lg-4">
-                                    <label for="field1">Child</label>
-                                    <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="No.of Childs">
-                                   </div>
-
-                                   <div class="col-lg-4">
-                                    <label for="field1">Infant</label>
-                                    <input class="form-control" type="text" wire:model="formData.field1" id="field1" placeholder="Infant">
-                                   </div>
-
-                               </div>
+                              
 
 
 
@@ -137,6 +80,7 @@
 
                             @if ($currentStep >= 2)
                             <div class="d-flex justify-content-evenly align-items-center flex-column custom-field-bars py-4 px-4" >
+                                
                                 <h5 class="mt-2 mb-2 text-primary" style="">Hotel Details</h5>
                               
                                <hr>
@@ -147,7 +91,7 @@
                                     <select name="" class="form-control" id="">
                                         <option value="">Select Hotel</option>
                                         @foreach ($makkaHotels as $hotel)
-                                          <option value="">{{$hotel}}</option>  
+                                          <option value="">{{ucfirst($hotel)}}</option>  
                                         @endforeach
                                       
                                     </select>
@@ -165,82 +109,14 @@
                                        </div>
                                   </div>
                                   <div>
-                                    <button class="btn btn-primary"  wire:click="addMakkaRoom">Add Room</button>
+                                    {{-- <button class="btn btn-primary"  wire:click="addMakkaRoom">Add Room</button> --}}
+
+                                    {{-- room guest adding start --}}
+                                    <livewire:components.rooms-guests />
+                                     {{-- room guest adding end--}}
+
                                   </div>
-                                 <div class="d-flex flex-wrap">
-                                   <!-- Rooms List -->
-   
-        @foreach($makkaRooms as $index => $room)
-            <div class="col-lg-4 p-3" style="">
-                <h6 style="color: rgba(0, 0, 0, 0.5);">Room {{ $index + 1 }}</h6>
-
-                <div class="mt-2">
-                    <label>Adult</label>
-                    <input class="form-control" type="number" max="4" min="1" wire:model="makkarooms.{{ $index }}.adults">
-                </div> 
-
-                <div class="mt-2">
-                    <label>Child (Note* Child below age 6 no bed)</label>
-                    <input class="form-control" type="number" max="2" min="0" wire:model="makkarooms.{{ $index }}.children">
-                </div> 
-
-                <button class="btn btn-danger mt-2" wire:click="removeMakkaRoom({{ $index }})">Remove</button>
-            </div>
-        @endforeach
-  
-
-                                   {{-- <div class="col-lg-4 p-3" style="border: 1px solid #666;">
-                                    <h3>Room 1</h3>
-                                    <div class=" mt-2">
-                                        <label for="field1">Adult</label>
-                                        <input class="form-control" type="number" max="4" min="1"  id="field1" placeholder="No.of Adults">
-                                       </div> 
-    
-                                       <div class=" mt-2">
-                                        <label for="field1">Child (Note* Child below age 6 no bed)</label>
-                                        <input class="form-control" type="number" max="2" min="1"  id="field1" placeholder="No.of Childs">
-                                        
-                                       </div> 
-                                   </div>
-
-                                   <div class="col-lg-4 p-3" style="border: 1px solid #666;">
-                                    <h3>Room 1</h3>
-                                    <div class=" mt-2">
-                                        <label for="field1">Adult</label>
-                                        <input class="form-control" type="number" max="4" min="1"  id="field1" placeholder="No.of Adults">
-                                       </div> 
-    
-                                       <div class=" mt-2">
-                                        <label for="field1">Child (Note* Child below age 6 no bed)</label>
-                                        <input class="form-control" type="number" max="2" min="1"  id="field1" placeholder="No.of Childs">
-                                        
-                                       </div> 
-                                   </div>
-
-                                   <div class="col-lg-4 p-3" style="border: 1px solid #666;">
-                                    <h3>Room 1</h3>
-                                    <div class=" mt-2">
-                                        <label for="field1">Adult</label>
-                                        <input class="form-control" type="number" max="4" min="1"  id="field1" placeholder="No.of Adults">
-                                       </div> 
-    
-                                       <div class=" mt-2">
-                                        <label for="field1">Child (Note* Child below age 6 no bed)</label>
-                                        <input class="form-control" type="number" max="2" min="1"  id="field1" placeholder="No.of Childs">
-                                        
-                                       </div> 
-                                   </div> --}}
-                                 </div>
-
-                                   {{-- <div class="col-lg-4 mt-2">
-                                    <label for="field1">Room Type</label>
-                                    <input class="form-control" type="text"  id="field1" placeholder="Email">
-                                   </div> --}}
-
-                                   {{-- <div class="col-lg-4 mt-2">
-                                    <label for="field1">Room Count</label>
-                                    <input class="form-control" type="text"  id="field1" placeholder="Email">
-                                   </div> --}}
+                                
 
                                </div>
 
@@ -252,7 +128,7 @@
                                     <select name="" class="form-control" id="">
                                         <option value="">Select Hotel</option>
                                         @foreach ($madinaHotels as  $hotel)
-                                        <option value="">{{$hotel}}</option>
+                                        <option value="">{{ucfirst($hotel)}}</option>
                                             
                                         @endforeach
                                        
@@ -271,33 +147,26 @@
                                        </div>
                                   </div>
                                   <div>
-                                    <button class="btn btn-primary"  wire:click="addRoom">Add Room</button>
+                                    <h3 id="guestCount">Total Guest : </h3>
+                                    <livewire:components.rooms-guests />
+                                    {{-- <button class="btn btn-primary"  wire:click="addRoom">Add Room</button> --}}
+                                   
                                   </div>
-                                 <div class="d-flex flex-wrap">
-                                   <!-- Rooms List -->
-   
-        @foreach($rooms as $index => $room)
-            <div class="col-lg-4 p-3" style="">
-                <h6 style="color: rgba(0, 0, 0, 0.5);">Room {{ $index + 1 }}</h6>
-
-                <div class="mt-2">
-                    <label>Adult</label>
-                    <input class="form-control" type="number" max="4" min="1" wire:model="rooms.{{ $index }}.adults">
-                </div> 
-
-                <div class="mt-2">
-                    <label>Child (Note* Child below age 6 no bed)</label>
-                    <input class="form-control" type="number" max="2" min="0" wire:model="rooms.{{ $index }}.children">
-                </div> 
-
-                <button class="btn btn-danger mt-2" wire:click="removeRoom({{ $index }})">Remove</button>
-            </div>
-        @endforeach
-  
-
-                                  
-                                 </div>
-
+                                
+                                  {{-- <script>
+                                    document.addEventListener('livewire:load', function () {
+                                        Livewire.on('totalGuestsUpdated', totalGuests => {
+                                            document.getElementById('guestCount').innerText = totalGuests;
+                                        });
+                                    });
+                                </script> --}}
+                                 <script>
+                                    document.addEventListener('livewire:load', function () {
+                                        Livewire.dispatcher.addListener('totalGuestsUpdated', (event) => {
+                                            document.getElementById('guestCount').innerText = event.detail.totalGuests;
+                                        });
+                                    });
+                                </script>
                                  
 
                                </div>
@@ -319,10 +188,10 @@
                                     <div class="col-lg-6 mb-3">
                                 
                                     <label for="field1">Visa Type</label>
-                                    <select name="" class="form-control" id="" wire:model="visatype">
+                                    <select name="" class="form-control" id="" wire:model.live="visatype">
                                         <option value="">Select Visa Type</option>
                                         @foreach ($visaType as  $type)
-                                        <option value="{{$type->id}}">{{$type->visa_type}}</option>
+                                        <option value="{{$type->id}}">{{ucfirst($type->visa_type)}}</option>
                                             
                                         @endforeach
                                        
@@ -339,7 +208,7 @@
                                       </div>
                                       <div class="price">
                                         <span> price:</span><br>
-                                        <span>{{$visaTotalPrice}}</span>
+                                        <span>{{$visaTotalPrice.'.'.$masterCurrency}}</span>
                                     </div>
                                    </div>
 
@@ -351,30 +220,32 @@
                             <div class="d-flex justify-content-evenly align-items-center flex-column custom-field-bars py-4" style="padding: 5px;">
                                 <h5 class="mt-2 mb-2 text-primary" style="">Trasport Details</h5>
                                 <hr>
+
+                                <div class="col-lg-6 mb-3">
+                                    <label for="field1">Select Car Type</label>
+                                    <select name="" class="form-control" id="" wire:model.live="selectedCarType">
+                                        <option value="">Select Car Type</option>
+                                        @foreach ($carType as  $type)
+                                        <option value="{{$type->id}}">{{ucfirst($type->car_type)}}</option>
+                                            
+                                        @endforeach
+                                       
+                                    </select>
+                                   </div>
                               
                                     <div class="col-lg-6 mb-3">
                                     <label for="field1">Select Sector</label>
                                     <select name="" class="form-control" id="">
                                         <option value="">Select Sector</option>
                                         @foreach ($carSector as  $type)
-                                        <option value="{{$type->id}}">{{$type->car_sector}}</option>
+                                        <option value="{{$type->id}}">{{ucfirst($type->car_sector)}}</option>
                                             
                                         @endforeach
                                        
                                     </select>
                                    </div>
 
-                                   <div class="col-lg-6 mb-3">
-                                    <label for="field1">Select Car Type</label>
-                                    <select name="" class="form-control" id="">
-                                        <option value="">Select Car Type</option>
-                                        @foreach ($carType as  $type)
-                                        <option value="">{{$type}}</option>
-                                            
-                                        @endforeach
-                                       
-                                    </select>
-                                   </div>
+                                  
 
                                   
 
@@ -399,7 +270,7 @@
                                         <select name="" class="form-control" id="" wire:model.live="SelectedMakkaSight">
                                             <option value="">Select Sight</option>
                                             @foreach ($makkaSightSeeing as  $type)
-                                            <option value="{{$type}}">{{$type}}</option>
+                                            <option value="{{$type}}">{{ucfirst($type)}}</option>
                                                 
                                             @endforeach
                                            
@@ -407,7 +278,7 @@
                                        </div>
                                     <div class="price">
                                         <span> price:</span><br>
-                                        <span>{{$makkaSightPrice}}</span>
+                                        <span>{{$makkaSightPrice.'.'.$masterCurrency}}</span>
                                     </div>
                                    </div>
 
@@ -417,7 +288,7 @@
                                         <select name="" class="form-control" id="" wire:model.live="SelectedMadinaSight">
                                             <option value="">Select Sight</option>
                                             @foreach ($madinaSightSeeing as  $type)
-                                            <option value="{{$type}}">{{$type}}</option>
+                                            <option value="{{$type}}">{{ucfirst($type)}}</option>
                                                 
                                             @endforeach
                                            
@@ -425,7 +296,7 @@
                                        </div>
                                     <div class="price">
                                         <span> price:</span><br>
-                                        <span>{{$madinaSightPrice}}</span>
+                                        <span>{{$madinaSightPrice.'.'.$masterCurrency}}</span>
                                     </div>
                                    </div>
 
@@ -455,7 +326,7 @@
                                         <select name="" class="form-control" id="" wire:model.live="SelectedMeal">
                                             <option value="">Select Meal Type</option>
                                             @foreach ($mealType as  $type)
-                                            <option value="{{$type}}">{{$type}}</option>
+                                            <option value="{{$type}}">{{ucfirst($type)}}</option>
                                                 
                                             @endforeach
                                            
@@ -463,7 +334,7 @@
                                        </div>
                                     <div class="price">
                                         <span>Meal price:</span><br>
-                                        <span>{{$mealPrice}}</span>
+                                        <span>{{$mealPrice.'.'.$masterCurrency}}</span>
                                     </div>
                                    </div>
 
@@ -473,7 +344,7 @@
                                         <select name="" class="form-control" id="" wire:model.live="SelectedLaundry">
                                             <option value="" >Select Laundry Type</option>
                                             @foreach ($laundryType as  $type)
-                                            <option value="{{$type}}">{{$type}}</option>
+                                            <option value="{{$type}}">{{ucfirst($type)}}</option>
                                                 
                                             @endforeach
                                            
@@ -481,7 +352,7 @@
                                        </div>
                                     <div class="price">
                                         <span>Laundry price:</span><br>
-                                        <span>{{$laundryPrice}}</span>
+                                        <span>{{$laundryPrice.'.'.$masterCurrency}}</span>
                                     </div>
                                    </div>
 
@@ -492,7 +363,7 @@
                                        </div>
                                     <div class="price">
                                         <span>Umrah Kit Gent price:</span><br>
-                                        <span>{{$genKitPrice}}</span>
+                                        <span>{{$genKitPrice.'.'.$masterCurrency}}</span>
                                     </div>
                                    </div>
                                    <div class="col-lg-6 d-flex justify-content-between">
@@ -502,7 +373,7 @@
                                        </div>
                                     <div class="price">
                                         <span>Umrah Kit Ladies price:</span><br>
-                                        <span>{{$ladiKitPrice}}</span>
+                                        <span>{{$ladiKitPrice.'.'.$masterCurrency}}</span>
                                     </div>
                                    </div>
 
@@ -1103,6 +974,30 @@
    justify-content: center;
    align-items: center; 
    margin-top: 19px
+}
+
+
+
+.plus-btn{
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.minus-btn{
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.orange-color-btn{
+    background-color: #fea116;
+    border: none;
+    border-radius: 10px;
 }
         </style>
 
