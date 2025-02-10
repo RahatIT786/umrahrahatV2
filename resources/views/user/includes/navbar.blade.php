@@ -52,9 +52,16 @@
                               </div>
                                 <div class="h-100 d-inline-flex align-items-center  me-4">
                                    
-                                    <i class="fa-solid fa-user-tie text-primary me-2" ></i>
-                                   
-                                    <p class="mb-0"><a href=""  style="text-transform:uppercase;color:#666565;  font-size: 14px; font-weight: 500;">agent login</a></p> &nbsp; &nbsp;
+                                        <div class="dropdown me-4">
+                                            <i class="fa-solid fa-user-tie text-primary me-2"></i>
+                                            <a class="dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-transform:uppercase;color:#666565; font-size: 14px; font-weight: 500;">
+                                                Agent Login
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+                                            </ul>
+                                        </div>
                                     <i class="fa-solid fa-user text-primary me-2"></i>
                                    
                                     <p class="mb-0"><a href=""  style="text-transform:uppercase;color:#666565;  font-size: 14px; font-weight: 500;" >user login</a></p>
@@ -233,6 +240,56 @@
             </div>
       </div>
 
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Agent Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="loginName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="loginName" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginNumber" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="loginNumber" placeholder="Enter your phone number">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Agent Register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('send.otp') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" name="phone" placeholder="Enter phone number" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send OTP</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
   <!-- Header End -->
 <!---------------------->
