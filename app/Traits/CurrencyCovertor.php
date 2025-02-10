@@ -35,7 +35,7 @@ trait CurrencyCovertor
         $makkasightPrice=sightController::where('delete_status',1)
                                         ->where('sightCity','makkah')
                                         ->where('sightName',$sightType)
-                                        ->value('sightPrice1');
+                                        ->value('sightPrice');
         
         $currentPrice=$this->fetchExchangeRates($currencyType);
         $totalPrice=round(
