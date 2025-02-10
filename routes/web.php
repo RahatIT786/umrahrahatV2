@@ -144,6 +144,12 @@ use Livewire\Livewire;
 use App\Models\package_user_enquire;
 use App\Models\transportController;
 
+//agent
+use App\Livewire\Agent\Dashboard as AgentDashBoard;
+
+
+
+
 //USER ROUTES STARTpp
 Route::get('/', UserHome::class)->name('layouts.app');
 Route::get('/about',UserAbout::class)->name('about');
@@ -152,8 +158,8 @@ Route::get('/our-services',OurService::class)->name('our-services');
 Route::get('/ramzan-umrah-package',RamzanUmrahPackages::class)->name('ramzan-umrah-package');
 Route::get('/blog',Blog::class)->name('blog');
 Route::get('/gallery',Gallery::class)->name('gallery');
-Route::get('/saudi-visa',SaudiVisa::class)->name('saudi-visa'); 
-Route::get('/contact-us',ContactUs::class)->name('contact-us'); 
+Route::get('/saudi-visa',SaudiVisa::class)->name('saudi-visa');
+Route::get('/contact-us',ContactUs::class)->name('contact-us');
 Route::get('/single-blog1',SingleBlog1::class)->name('singleBlog1');
 Route::get('/single-blog2',SingleBlog2::class)->name('singleBlog2');
 Route::get('/single-blog3',SingleBlog3::class)->name('singleBlog3');
@@ -221,7 +227,7 @@ Route::get('/user/ziyarat-single/{id}',ZiyaratSingleView::class)->name('user.ziy
 //book my assitant
 Route::get('/user/myassistant',Assistant::class)->name('myassistant');
 
-//custom package 
+//custom package
 Route::get('/custom/package',CustomPackage::class)->name('custom.package');
 
 Route::get('/download',[PdfTemplateController::class,'downloadItinerary'])->name('package.download');
@@ -236,6 +242,14 @@ return view('user.partials.comming_soon');
 
 Route::get('/login',[AuthController::class,'adminLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
+
+
+//Agent Login
+Route::post('/agent/register', [OTPController::class, 'register'])->name('send.otp');
+Route::post('/verify-otp', [OTPController::class, 'verifyOTP'])->name('verify.otp');
+Route::get('/logout', [OTPController::class, 'logout'])->name('agent.logout');
+
+Route::get('/agent/dashboard',AgentDashBoard::class)->name('agent.dashboard');
 
 // ADMIN ROUTES START
 Route::middleware(['auth:admins'])->group(function () {
@@ -290,9 +304,7 @@ Route::get('/admin/ziyarat-cities',ZiyaratCities::class)->name('admin.ziyarat-ci
 Route::get('/admin/package-enquiry-from-user',PackageEnquireFromUser::class)->name('package-enquire-from-user');
 
 
-//Agent Login 
-Route::post('/send-otp', [OTPController::class, 'sendOTP'])->name('send.otp');
-Route::post('/verify-otp', [OTPController::class, 'verifyOTP'])->name('verify.otp');
+
 
 Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
 Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');
@@ -344,7 +356,7 @@ Route::get('/admin/agentsignup',AgentSignup::class)->name('agentsignup');
 //     $data = transportController::with(['cartypemaster','carsectormaster'])->get();
 //     return response()->json($data);
 //  });
- 
+
 
 // Route::get('/enquiries-json', [PackageEnquireFromUser::class, 'getEnquiriesJson']);
 
