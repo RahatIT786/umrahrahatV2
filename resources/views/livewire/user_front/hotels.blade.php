@@ -4,7 +4,7 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item imgZoom active">
-                    <img class="w-100" style="height: 15vw;" src="{{ asset('newImg/bannerImage/hotel_banner.jpeg') }}" alt="Image" style="object-position: center;">
+                    <img class="w-100" style="height: 15vw;" src="{{ asset('newImg/bannerImage/hotelbanner2.jpg') }}" alt="Image" style="object-position: bottom;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
                             {{-- <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">RAHAT GROUP</h6>
