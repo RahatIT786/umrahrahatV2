@@ -125,8 +125,9 @@ use App\Livewire\WhoWeAre; // Ensure this class exists in the specified namespac
 
 use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
 
-
-
+//agent login
+use App\Http\Controllers\navbarController;
+use App\Http\Controllers\OTPController;
 
 use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
 use App\Livewire\UserFront\Umrahv2\Sightseeing;
@@ -142,7 +143,7 @@ use Livewire\Livewire;
 use App\Models\package_user_enquire;
 use App\Models\transportController;
 
-//USER ROUTES START
+//USER ROUTES STARTpp
 Route::get('/', UserHome::class)->name('layouts.app');
 Route::get('/about',UserAbout::class)->name('about');
 Route::get('/package',PackageUserView::class)->name('package');
@@ -284,6 +285,11 @@ Route::get('/admin/ziyarat-cities',ZiyaratCities::class)->name('admin.ziyarat-ci
 
 //Package Enquire From User
 Route::get('/admin/package-enquiry-from-user',PackageEnquireFromUser::class)->name('package-enquire-from-user');
+
+
+//Agent Login 
+Route::post('/send-otp', [OTPController::class, 'sendOTP'])->name('send.otp');
+Route::post('/verify-otp', [OTPController::class, 'verifyOTP'])->name('verify.otp');
 
 Route::get('/admin/all-packages',ListUmrahPackages::class)->name('admin.umrahPackage');
 Route::get('/admin/view-umrah-package/{package}',ViewUmrahPackages::class)->name('admin.viewUmrahPackage');
