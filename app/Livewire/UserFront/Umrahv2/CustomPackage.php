@@ -106,7 +106,7 @@ class CustomPackage extends Component
     public function updateAllCurrencyPrice($currencyType){
        $currentPrice= $this->fetchExchangeRates($currencyType);
       $this->visaTotalPrice =  $this->visaPriceCovertor($currencyType,$this->visatype,$this->visacount);
-       $this->makkaSightPrice=$this->makkaSightSeeingPriceCovertor($currencyType,$this->makkaSightSeeing);
+       $this->makkaSightPrice=$this->makkaSightSeeingPriceCovertor($currencyType,$this->SelectedMakkaSight);
         
     }
 
