@@ -128,6 +128,7 @@ use App\Livewire\UserFront\Umrahv2\UmrahMainPackage as Umrahv2UmrahMainPackage;
 //agent login
 use App\Http\Controllers\navbarController;
 use App\Http\Controllers\OTPController;
+use App\Livewire\Agent\AgentBooking;
 
 use App\Livewire\UserFront\Umrahv2\PartnerWithUs;
 use App\Livewire\UserFront\Umrahv2\Sightseeing;
@@ -250,6 +251,17 @@ Route::post('/verify-otp', [OTPController::class, 'verifyOTP'])->name('verify.ot
 Route::get('/logout', [OTPController::class, 'logout'])->name('agent.logout');
 
 Route::get('/agent/dashboard',AgentDashBoard::class)->name('agent.dashboard');
+Route::get('/agent/booking',AgentBooking::class)->name('agent.booking');
+
+
+
+
+
+
+
+
+
+
 
 // ADMIN ROUTES START
 Route::middleware(['auth:admins'])->group(function () {

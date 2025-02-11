@@ -35,7 +35,7 @@ class AddZiyarat extends Component
     public $departureCities = [];
     public $DepartureCity = [];
     public $food_type = [];
-    public  $laundray_type = [];
+    public $laundray_type = [];
     public $includes = [];
     public $flightList = [];
     public $package_days;
@@ -55,7 +55,7 @@ For bookings within 21 days of departure,
 For advance bookings, 100% payment must be cleared at least 21 days before departure.
 No tickets will be issued if the payment for tickets is not completed 21 days before departure, in accordance with airline regulations.
 Indian passport valid for at least 6 months having minimum 2 blank pages.
-Pan card copy (Linked with Aadhar Number)' ; 
+Pan card copy (Linked with Aadhar Number)' ;
 
     public $importantNotes = 'All Prices quoted are per person and in Indian Rupees.
 In case of package booked without umrah visa through us, than transportation will be subject to availability.
@@ -87,14 +87,14 @@ Subject to Mumbai Jurisdiction only.',
 50% of the package amount is non-refundable if canceled 21 to 30 days before departure.
 100% of the package amount is non-refundable if canceled within 21 days of departure.
 Date change charges: Rs. 10,000 per person, plus any applicable additional charges, for changes made 21 to 30 days before departure. Otherwise, the cancellation policies apply.
-No date changes are allowed within 20 days of departure; cancellations apply.', 
+No date changes are allowed within 20 days of departure; cancellations apply.',
 $FlightTransport = '
 Economy Class Return Ticket
 Round Trip Transfers on SIC Basis',
 $packageMeals = 'Breakfast, Lunch & Dinner
 Prepared by Indian Chefs in Hygienic & Licensed Kitchens.
 Served in Buffet Style in Our Allotment Hotels & Food Parcels in 4 & 5 Star Hotels.',
-$packageVisaTaxes = 'Single Entry Umrah Visa with Insurance is included.', 
+$packageVisaTaxes = 'Single Entry Umrah Visa with Insurance is included.',
 $packageInclusion = 'Return Flights in Economy Class. (VIA Flight on FIT Basis)
 Visa & Insurance.
 Hotels Stay. (Bus Service)
@@ -164,29 +164,29 @@ public $hotelIdsString;
     {
         $this->hotels[] = ['city' => '', 'category' => '', 'names' => [], 'selected_name' => ''];
     }
-    
+
     public function decreaseHotelFields()
     {
         if (count($this->hotels) > 1) {
             array_pop($this->hotels);  // Removes the last hotel object
         }
     }
-    
+
     public function getHotelCategory($index)
     {
         $selectedCategory = $this->hotels[$index]['category'];
         $selectedCity = $this->hotels[$index]['city'];
-    
+
         $hotels = HotelDetail::where('hotelStarRating', $selectedCategory)
             ->where('deleteStatus', 1)
             ->where('hotelCity', $selectedCity)
             ->pluck('hotelName', 'id')
             ->toArray();
-    
+
         $this->hotels[$index]['names'] = $hotels;
     }
-    
-    
+
+
 
     public function getMadinaHotel($index)
     {
@@ -252,7 +252,7 @@ public $hotelIdsString;
         'infants.required' => 'infants is required.',
         'includes.required' => 'includes is required.',
     ];
-    
+
 
         public function save(){
 
@@ -270,11 +270,11 @@ public $hotelIdsString;
             $packageImagePath = $this->packageImage ? $this->packageImage->store('uploads', 'public') : null;
             $keys = array_values($this->includes);
             $package_includes = implode(',', $keys);
-        
+
             // Use $this->flights instead of $this->keys
             $allFlights = implode(',', $this->flights);
             //dump($allFlights);
-        
+
             // Using $this->departureCities
             $values = array_values($this->departureCities);
             $departCity = implode(',', $values);
@@ -298,8 +298,6 @@ public $hotelIdsString;
                     'flight_transport' => $this->FlightTransport,
                     'packageMeals' => $this->packageMeals,
                     'visa_taxes' => $this->packageVisaTaxes,
-                    'laundray_type' => $this->laundray_type ?? '',
-                    'food_type' => $this->food_type ?? '',
                     'g_share_price' => $this->g_share_price,
                     'qt_share_price' => $this->qt_share_price,
                     'qd_share_price' => $this->qd_share_price,
@@ -320,6 +318,7 @@ public $hotelIdsString;
 
                     $this->reset([
                         'package_name',
+                        'service_type',
                         'package_days',
                         'packageImage',
                         'packageDescription',

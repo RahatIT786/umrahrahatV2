@@ -13,15 +13,15 @@
                     @endif
                   <form class="row g-3" wire:submit.prevent="save" onsubmit="event.preventDefault();">
 
-                  
-                        
+
+
                         <!-- Package Master Name* -->
                       <div class="col-md-6 mb-3">
                             <label for="package_name" class="form-label">Package Master Name*</label>
                             <input type="text" id="package_name" wire:model="package_name" class="form-control" placeholder="Enter Package Master Name">
                             @error('package_name') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div> 
-  
+                        </div>
+
 
                      <div class="col-md-6 mb-3">
                             <label class="form-label">Package Name</label>
@@ -56,13 +56,13 @@
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
                             @error('packageImage') <span class="text-danger">{{ $message }}</span> @enderror
 
-                            
+
                             @if ($packageImage)
                                 <div class="mt-3">
                                     <img src="{{ $packageImage->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
                             @endif
-        
+
                         </div>
 
 
@@ -112,28 +112,10 @@
                     </div>
 
                   <!-- Laundry Type -->
-                    <div class="col-lg-6">
-                        <label  class="form-label">Laundry Type</label>
-                         <select class="form-control" wire:model="laundray_type">
-                            <option value="">Select Laundry Type</option>
-                                @foreach ($laundrayController as $index => $value)
-                                <option value="{{$value->id }}">{{$value->laundry_type}}</option>
-                                @endforeach
-                        </select>
-                        @error("laundray_type") <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
+
 
                             <!-- Meal Type -->
-                            <div class="col-lg-6">
-                            <label for="SuperSaver_MealType" class="form-label">Meal Type</label>
-                            <select class="form-control" wire:model="food_type" >
-                                <option value="">Select Meal Type</option>
-                                @foreach ($foodController as $index => $value)
-                                  <option value="{{$value->id }}">{{$value->foodType}}</option>
-                                @endforeach
-                            </select>
-                            @error("food_type")<span class="text-danger">{{ $message }}</span>@enderror
-                            </div>
+
 
                     <!-- Policies -->
                     <h5>Policies</h5>
@@ -208,14 +190,14 @@
                     </div>
 
                       <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
- 
+
                            <!-- Sharing -->
                             <div class="col-lg-3">
                                 <label class="form-label">Sharing*</label>
                                 <input type="text" id="g_share_price" wire:model="g_share_price" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                                 @error("g_share_price") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
-                            
+
                             <!-- Quint -->
                             <div class="col-lg-3">
                                 <label  class="form-label">Quint*</label>
