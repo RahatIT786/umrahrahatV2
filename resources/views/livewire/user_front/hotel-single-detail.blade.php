@@ -548,7 +548,7 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="packageoverviewbox">
                             <div class="row">
-                                
+
                                 @foreach ($hotelCostDatas as $hotelCost)
 
                                  <div class="container my-2">
@@ -557,7 +557,7 @@
                                     <section >
                                         <div class="text-center d-flex align-items-center justify-content-between ">
                                             <div id="p-date" ><i class="fa-solid fa-calendar-days"></i> <span>{{ \Carbon\Carbon::parse($hotelCost['hotelSeasonStart'])->format('d M Y') }}</span> &nbsp; <i class="fa-solid fa-arrow-left"></i> &nbsp; To &nbsp; <i class="fa-solid fa-arrow-right"></i>&nbsp;<span>{{ \Carbon\Carbon::parse($hotelCost['hotelSeasonEnd'])->format('d M Y') }}</span></div >
-                                            <div class="meal"><span>Meal Type </span> <span class="p-meal">{{$hotelCost['hotelMeal']}}</span> 😋🍝</div>
+                                            <div class="meal"><span>Meal Type </span> <span class="p-meal">{{$hotelCost['hotelMeal']}}</span></div>
                                         </div>
                                             <div class="period-price">
                                                 <span class="share-price">

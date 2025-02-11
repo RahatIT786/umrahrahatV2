@@ -14,7 +14,7 @@ use App\Models\CateringController;
 class AddHotalDetais extends Component
 {
     use WithFileUploads;
-    
+
     public $hotelId;
     public $hotelName;
     public $hotelPrice;
@@ -81,23 +81,23 @@ class AddHotalDetais extends Component
         'hotelName.required' => 'Hotel name is required.',
         'hotelName.string' => 'Hotel name must be a string.',
         'hotelName.max' => 'Hotel name cannot exceed 150 characters.',
-        
+
         'hotelCity.required' => 'Hotel city is required.',
         'hotelCity.string' => 'Hotel city must be a string.',
-        
+
         'hotelStarRating.required' => 'Hotel star rating is required.',
         'hotelStarRating.string' => 'Hotel star rating must be a string.',
-        
+
         'hotelAddress.required' => 'Hotel address is required.',
         'hotelAddress.string' => 'Hotel address must be a string.',
         'hotelAddress.max' => 'Hotel address cannot exceed 1000 characters.',
-        
+
         'hotelDiscription.required' => 'Hotel description is required.',
         'hotelDiscription.string' => 'Hotel description must be a string.',
         'hotelDiscription.max' => 'Hotel description cannot exceed 1000 characters.',
-        
+
         'hotelCheckInTime.required' => 'Hotel check-in time is required.',
-        
+
         'hotelCheckOutTime.required' => 'Hotel check-out time is required.',
 
         'hotelDistance.required'=> 'Hotel Distance is required',
@@ -105,19 +105,19 @@ class AddHotalDetais extends Component
 
         'hotelMainImage.image' => 'The hotel main image must be an image file.',
         'hotelMainImage.max' => 'The hotel main image size must not exceed 5MB.',
-        
+
         'hotelImage1.image' => 'The hotel image 1 must be an image file.',
         'hotelImage1.max' => 'The hotel image 1 size must not exceed 5MB.',
-        
+
         'hotelImage2.image' => 'The hotel image 2 must be an image file.',
         'hotelImage2.max' => 'The hotel image 2 size must not exceed 5MB.',
-        
+
         'hotelImage3.image' => 'The hotel image 3 must be an image file.',
         'hotelImage3.max' => 'The hotel image 3 size must not exceed 5MB.',
-        
+
         'hotelImage4.image' => 'The hotel image 4 must be an image file.',
         'hotelImage4.max' => 'The hotel image 4 size must not exceed 5MB.',
-        
+
         'hotelImage5.image' => 'The hotel image 5 must be an image file.',
         'hotelImage5.max' => 'The hotel image 5 size must not exceed 5MB.',
 
@@ -149,7 +149,7 @@ class AddHotalDetais extends Component
             $this->hotelImage3Path = $hotel->hotelImage3;
             $this->hotelImage4Path = $hotel->hotelImage4;
             $this->hotelImage5Path = $hotel->hotelImage5;
-            
+
         }
         $this->hotel_cities = HotelCities::where('delete_status',1)->get();
         $this->hotel_foods = CateringController::where('delete_status',1)->get();
@@ -168,7 +168,7 @@ class AddHotalDetais extends Component
 
     public function submit(){
 
-        
+
         $this->hotelAminity = implode(',', $this->hotel_amenities);
         // dd($amenitiesString);
 
@@ -190,7 +190,7 @@ class AddHotalDetais extends Component
         $hotelImage4Url = $hotelImage4Path ? Storage::url($hotelImage4Path) : null;
         $hotelImage5Url = $hotelImage5Path ? Storage::url($hotelImage5Path) : null;
 
-       
+
 
         if ($this->hotelId) {
             // Update existing hotel record
@@ -221,6 +221,24 @@ class AddHotalDetais extends Component
                 'hotelImage5' => $hotelImage5Url ?? $hotel->hotelImage5,
                 'deleteStatus' => $this->deleteStatus,
             ]);
+            foreach ($this->hotels as $key => $value) {
+
+                $details_data[] = [
+                    'hotel_id' => $hotel->id,
+                    'hotelSeasonStart' => $this->hotelSeasonStart[$key] ?? null,
+                    'hotelSeasonEnd' => $this->hotelSeasonEnd[$key] ?? null,
+                    'hotelMeal' => $this->hotelMeal[$key] ?? null,
+                    'hotelDouble' => $this->hotelDouble[$key] ?? null,
+                    'hotelTriple' => $this->hotelTriple[$key] ?? null,
+                    'hotelQuad' => $this->hotelQuad[$key] ?? null,
+                    'hotelQuint' => $this->hotelQuint[$key] ?? null,
+                ];
+            }
+
+            foreach ($details_data as $details) {
+
+                HotelCost::create($details);
+            }
             session()->flash('message', 'Hotel details updated successfully!');
         } else {
             // Create new hotel record
@@ -246,7 +264,7 @@ class AddHotalDetais extends Component
                 'hotelImage3' => $hotelImage3Url ?? null,
                 'hotelImage4' => $hotelImage4Url ?? null,
                 'hotelImage5' => $hotelImage5Url ?? null,
-                'deleteStatus' => $this->deleteStatus, 
+                'deleteStatus' => $this->deleteStatus,
             ]);
 
             foreach ($this->hotels as $key => $value) {
@@ -259,7 +277,7 @@ class AddHotalDetais extends Component
                     'hotelDouble' => $this->hotelDouble[$key] ?? null,
                     'hotelTriple' => $this->hotelTriple[$key] ?? null,
                     'hotelQuad' => $this->hotelQuad[$key] ?? null,
-                    'hotelQuint' => $this->hotelQuint[$key] ?? null,    
+                    'hotelQuint' => $this->hotelQuint[$key] ?? null,
                 ];
             }
 
@@ -273,10 +291,10 @@ class AddHotalDetais extends Component
             // Reset form fields for each hotel
             $this->reset([
                 'hotelName',
-                'currency', 
-                'hotelCity', 
-                'hotelStarRating', 
-                'hotelAddress', 
+                'currency',
+                'hotelCity',
+                'hotelStarRating',
+                'hotelAddress',
                 'hotelDiscription',
                 'hotelYouTube',
                 'hotelMap',
@@ -292,7 +310,7 @@ class AddHotalDetais extends Component
                 'hotelImage5',
                 'hotel_amenities'
             ]);
-        
+
             // Reset array fields separately
             $this->hotelSeasonStart[$key] = null;
             $this->hotelSeasonEnd[$key] = null;
@@ -302,7 +320,7 @@ class AddHotalDetais extends Component
             $this->hotelQuad[$key] = null;
             $this->hotelQuint[$key] = null;
         }
-        
+
         }
 
     #[Layout('admin.Layouts.app')]
