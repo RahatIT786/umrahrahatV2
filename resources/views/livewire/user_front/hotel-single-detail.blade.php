@@ -201,7 +201,7 @@
                             @endif
                         </div>
                     </div>
-                            
+
                   <!-- Price Section -->
                   <div class="mb-3">
                     <h3 class="mb-4 section-title text-start text-primary text-uppercase">Price per Night</h3>
@@ -292,11 +292,11 @@
     .zoom-effect img {
         transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
     }
-    
+
     .zoom-effect img:hover {
         transform: scale(1.2); /* Zooms the image by 20% */
     }
-   
+
     #navtabs {
         background-color: transparent;
         width: 100%;
@@ -311,7 +311,7 @@
       /* border: 2px solid black; */
       background-color: none !important;
     }
-    
+
     .nav-tabs-package {
       display: flex;              /* Display tabs in a row */
       justify-content: space-between;  /* Distribute space evenly between tabs */
@@ -384,7 +384,7 @@
 }
 @media (max-width: 768px) {
     .nav-tabs-package {
-        flex-direction: column !important; 
+        flex-direction: column !important;
         align-items: center; /* Center align tabs */
         width: 100%;
     }
@@ -443,7 +443,7 @@
                                                     @if(trim($sentence))
                                                         <li style="padding-left: 0; margin: 0;">
                                                             <div class="d-flex">
-                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt="">
                                                                 &nbsp; {{ trim($sentence) }}
                                                             </div>
                                                         </li>
@@ -458,7 +458,7 @@
                                                     @if(trim($sentence))
                                                         <li style="padding-left: 0; margin: 0;">
                                                             <div class="d-flex">
-                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt="">
                                                                 &nbsp; {{ trim($sentence) }}
                                                             </div>
                                                         </li>
@@ -491,7 +491,7 @@
                                                     @if(trim($sentence))
                                                         <li style="padding-left: 0; margin: 0;">
                                                             <div class="d-flex">
-                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt="">
                                                                 &nbsp; {{ trim($sentence) }}
                                                             </div>
                                                         </li>
@@ -524,7 +524,7 @@
                                                     @if(trim($sentence))
                                                         <li style="padding-left: 0; margin: 0;">
                                                             <div class="d-flex">
-                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt="">
                                                                 &nbsp; {{ trim($sentence) }}
                                                             </div>
                                                         </li>
@@ -536,7 +536,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -548,9 +548,11 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="packageoverviewbox">
                             <div class="row">
+                                
                                 @foreach ($hotelCostDatas as $hotelCost)
+
                                  <div class="container my-2">
-                                    <div class="period-label py-3 px-3">  
+                                    <div class="period-label py-3 px-3">
                                         <img class="halal_label" src="{{asset('asserts/user/img/halal.png')}}" alt="">
                                     <section >
                                         <div class="text-center d-flex align-items-center justify-content-between ">
@@ -564,7 +566,7 @@
                                                         <span class="price-title">Double</span>
                                                         <span style="font-size:20px" class="price">{{$hotelCost['hotelDouble']}}</span>
                                                     </div>
-                                                   
+
                                                 </span>
                                                 <span  class="share-price">
                                                     <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
@@ -582,7 +584,7 @@
                                                 </span>
                                             </div>
                                     </section>
-                                    
+
                                 </div>
                             </div>
                                 @endforeach
@@ -640,8 +642,8 @@
                     color: rgb(3, 12, 3);
                     font-weight: 700;
                 }
-               
-                
+
+
             }
             .share-price:hover{
                     transform: scale(1.1);
@@ -654,7 +656,7 @@
                 color: rgba(0, 0, 0, 0.6);
             }
             .meal{
-                
+
                 padding: 4px 10px;
                 border-radius: 20px;
                 font-weight: 600;
@@ -662,7 +664,7 @@
                 text-transform: uppercase;
                 font-size: 14px;
                 font-weight: 800;
-                
+
                 background-color: rgb(4, 170, 4);
             }
             .p-meal{
@@ -729,8 +731,8 @@ li {
     border: 2.5px dashed #4BB543;
 }
 
-@keyframes spin { 
-    100% { 
+@keyframes spin {
+    100% {
         transform: rotateZ(360deg);
     }
 }
@@ -812,7 +814,7 @@ li {
                 </div>
             </div>
 
-            <!-- Paymrnt policy -->  
+            <!-- Paymrnt policy -->
             <div id="PaymentPolicy" class="tab-pane fade show" role="tabpanel">
                 <div class="container">
                     <div class="row" style="margin-top:40px">
@@ -831,7 +833,7 @@ li {
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -845,12 +847,12 @@ li {
                                 <div class="row">
                                 <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
                                     <ul>
-                                       
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
