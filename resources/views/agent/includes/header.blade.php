@@ -5,19 +5,19 @@
             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="assets/images/logo-sm.svg" alt="" height="26">
+                        <img src="{{asset('asserts/agent/images/logo-sm.svg')}}" alt="" height="26">
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/logo-sm.svg" alt="" height="26"> <span class="logo-txt">Vuesy</span>
+                        <img src="{{asset('asserts/agent/images/logo-sm.svg')}}" alt="" height="26"> <span class="logo-txt">Vuesy</span>
                     </span>
                 </a>
 
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="assets/images/logo-sm.svg" alt="" height="26">
+                        <img src="{{asset('asserts/agent/images/logo-sm.svg')}}" alt="" height="26">
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/logo-sm.svg" alt="" height="26"> <span class="logo-txt">Vuesy</span>
+                        <img src="{{asset('asserts/agent/images/logo-sm.svg')}}" alt="" height="26"> <span class="logo-txt">Vuesy</span>
                     </span>
                 </a>
             </div>
@@ -55,27 +55,27 @@
                                                     <div class="row g-0">
                                                         <div class="col-lg-5">
                                                             <div>
-                                                                <a href="ui-alerts.html" class="dropdown-item" data-key="t-alerts">Alerts</a>
-                                                                <a href="ui-buttons.html" class="dropdown-item" data-key="t-buttons">Buttons</a>
-                                                                <a href="ui-cards.html" class="dropdown-item" data-key="t-cards">Cards</a>
-                                                                <a href="ui-carousel.html" class="dropdown-item" data-key="t-carousel">Carousel</a>
-                                                                <a href="ui-dropdowns.html" class="dropdown-item" data-key="t-dropdowns">Dropdowns</a>
-                                                                <a href="ui-grid.html" class="dropdown-item" data-key="t-grid">Grid</a>
-                                                                <a href="ui-images.html" class="dropdown-item" data-key="t-images">Images</a>
-                                                                <a href="ui-modals.html" class="dropdown-item" data-key="t-modals">Modals</a>
-                                                                <a href="ui-offcanvas.html" class="dropdown-item" data-key="t-offcanvas">Offcanvas</a>
+                                                                <a  class="dropdown-item" data-key="t-alerts">Alerts</a>
+                                                                <a  class="dropdown-item" data-key="t-buttons">Buttons</a>
+                                                                <a  class="dropdown-item" data-key="t-cards">Cards</a>
+                                                                <a  class="dropdown-item" data-key="t-carousel">Carousel</a>
+                                                                <a  class="dropdown-item" data-key="t-dropdowns">Dropdowns</a>
+                                                                <a  class="dropdown-item" data-key="t-grid">Grid</a>
+                                                                <a  class="dropdown-item" data-key="t-images">Images</a>
+                                                                <a  class="dropdown-item" data-key="t-modals">Modals</a>
+                                                                <a  class="dropdown-item" data-key="t-offcanvas">Offcanvas</a>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-5">
                                                             <div>
-                                                                <a href="ui-placeholders.html" class="dropdown-item" data-key="t-placeholders">Placeholders</a>
-                                                                <a href="ui-progressbars.html" class="dropdown-item" data-key="t-progress-bars">Progress Bars</a>
-                                                                <a href="ui-tabs-accordions.html" class="dropdown-item" data-key="t-tabs-accordions">Tabs & Accordions</a>
-                                                                <a href="ui-typography.html" class="dropdown-item" data-key="t-typography">Typography</a>
-                                                                <a href="ui-video.html" class="dropdown-item" data-key="t-video">Video</a>
-                                                                <a href="ui-general.html" class="dropdown-item" data-key="t-general">General</a>
-                                                                <a href="ui-colors.html" class="dropdown-item" data-key="t-colors">Colors</a>
-                                                                <a href="ui-utilities.html" class="dropdown-item" data-key="t-utilities">Utilities</a>
+                                                                <a  class="dropdown-item" data-key="t-placeholders">Placeholders</a>
+                                                                <a  class="dropdown-item" data-key="t-progress-bars">Progress Bars</a>
+                                                                <a  class="dropdown-item" data-key="t-tabs-accordions">Tabs & Accordions</a>
+                                                                <a  class="dropdown-item" data-key="t-typography">Typography</a>
+                                                                <a  class="dropdown-item" data-key="t-video">Video</a>
+                                                                <a  class="dropdown-item" data-key="t-general">General</a>
+                                                                <a  class="dropdown-item" data-key="t-colors">Colors</a>
+                                                                <a  class="dropdown-item" data-key="t-utilities">Utilities</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -86,12 +86,12 @@
                                                 <div>
                                                     <div class="menu-title">Extended</div>
                                                     <div>
-                                                        <a href="extended-lightbox.html" class="dropdown-item" data-key="t-lightbox">Lightbox</a>
-                                                        <a href="extended-rangeslider.html" class="dropdown-item" data-key="t-range-slider">Range Slider</a>
-                                                        <a href="extended-sweet-alert.html" class="dropdown-item" data-key="t-sweet-alert">SweetAlert 2</a>
-                                                        <a href="extended-rating.html" class="dropdown-item" data-key="t-rating">Rating</a>
-                                                        <a href="extended-notifications.html" class="dropdown-item" data-key="t-notifications">Notifications</a>
-                                                        <a href="extended-swiperslider.html" class="dropdown-item" data-key="t-swiperslider">Swiper Slider</a>
+                                                        <a  class="dropdown-item" data-key="t-lightbox">Lightbox</a>
+                                                        <a  class="dropdown-item" data-key="t-range-slider">Range Slider</a>
+                                                        <a  class="dropdown-item" data-key="t-sweet-alert">SweetAlert 2</a>
+                                                        <a  class="dropdown-item" data-key="t-rating">Rating</a>
+                                                        <a  class="dropdown-item" data-key="t-notifications">Notifications</a>
+                                                        <a  class="dropdown-item" data-key="t-swiperslider">Swiper Slider</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -107,10 +107,10 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
-                                    <a href="apps-calendar.html" class="dropdown-item" data-key="t-calendar">Calendar</a>
-                                    <a href="apps-chat.html" class="dropdown-item" data-key="t-chat">Chat</a>
-                                    <a href="apps-kanban-board.html" class="dropdown-item" data-key="t-kanban">Kanban Board</a>
-                                    <a href="apps-file-manager.html" class="dropdown-item" data-key="t-filemanager">File Manager</a>
+                                    <a  class="dropdown-item" data-key="t-calendar">Calendar</a>
+                                    <a  class="dropdown-item" data-key="t-chat">Chat</a>
+                                    <a  class="dropdown-item" data-key="t-kanban">Kanban Board</a>
+                                    <a  class="dropdown-item" data-key="t-filemanager">File Manager</a>
 
                                     <div class="dropdown">
                                         <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-ecommerce"
@@ -118,14 +118,14 @@
                                             <span data-key="t-ecommerce">Ecommerce</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-ecommerce">
-                                            <a href="ecommerce-products.html" class="dropdown-item" data-key="t-products">Products</a>
-                                            <a href="ecommerce-product-detail.html" class="dropdown-item" data-key="t-product-detail">Product Detail</a>
-                                            <a href="ecommerce-orders.html" class="dropdown-item" data-key="t-orders">Orders</a>
-                                            <a href="ecommerce-customers.html" class="dropdown-item" data-key="t-customers">Customers</a>
-                                            <a href="ecommerce-cart.html" class="dropdown-item" data-key="t-cart">Cart</a>
-                                            <a href="ecommerce-checkout.html" class="dropdown-item" data-key="t-checkout">Checkout</a>
-                                            <a href="ecommerce-shops.html" class="dropdown-item" data-key="t-shops">Shops</a>
-                                            <a href="ecommerce-add-product.html" class="dropdown-item" data-key="t-add-product">Add Product</a>
+                                            <a  class="dropdown-item" data-key="t-products">Products</a>
+                                            <a  class="dropdown-item" data-key="t-product-detail">Product Detail</a>
+                                            <a  class="dropdown-item" data-key="t-orders">Orders</a>
+                                            <a  class="dropdown-item" data-key="t-customers">Customers</a>
+                                            <a  class="dropdown-item" data-key="t-cart">Cart</a>
+                                            <a  class="dropdown-item" data-key="t-checkout">Checkout</a>
+                                            <a  class="dropdown-item" data-key="t-shops">Shops</a>
+                                            <a  class="dropdown-item" data-key="t-add-product">Add Product</a>
                                         </div>
                                     </div>
                                     <div class="dropdown">
@@ -134,8 +134,8 @@
                                             <span data-key="t-email">Email</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-email">
-                                            <a href="email-inbox.html" class="dropdown-item" data-key="t-inbox">Inbox</a>
-                                            <a href="email-read.html" class="dropdown-item" data-key="t-read-email">Read Email</a>
+                                            <a  class="dropdown-item" data-key="t-inbox">Inbox</a>
+                                            <a  class="dropdown-item" data-key="t-read-email">Read Email</a>
                                         </div>
                                     </div>
 
@@ -145,13 +145,13 @@
                                         <span data-key="t-contacts">Contacts</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-contact">
-                                            <a href="contacts-grid.html" class="dropdown-item" data-key="t-user-grid">User Grid</a>
-                                            <a href="contacts-list.html" class="dropdown-item" data-key="t-user-list">User List</a>
-                                            <a href="contacts-settings.html" class="dropdown-item" data-key="t-user-settings">User Settings</a>
+                                            <a  class="dropdown-item" data-key="t-user-grid">User Grid</a>
+                                            <a  class="dropdown-item" data-key="t-user-list">User List</a>
+                                            <a  class="dropdown-item" data-key="t-user-settings">User Settings</a>
                                         </div>
                                     </div>
 
-                                    <a href="apps-gallery.html" class="dropdown-item" data-key="t-gallery">Gallery</a>
+                                    <a  class="dropdown-item" data-key="t-gallery">Gallery</a>
 
 
                                     <div class="dropdown">
@@ -160,10 +160,10 @@
                                         <span data-key="t-projects">Projects</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-projects">
-                                            <a href="projects-grid.html" class="dropdown-item" data-key="t-p-grid">Projects Grid</a>
-                                            <a href="projects-list.html" class="dropdown-item" data-key="t-p-list">Projects List</a>
-                                            <a href="projects-overview.html" class="dropdown-item" data-key="t-p-overview">Project Overview</a>
-                                            <a href="projects-create.html" class="dropdown-item" data-key="t-create-new">Create New</a>
+                                            <a  class="dropdown-item" data-key="t-p-grid">Projects Grid</a>
+                                            <a  class="dropdown-item" data-key="t-p-list">Projects List</a>
+                                            <a  class="dropdown-item" data-key="t-p-overview">Project Overview</a>
+                                            <a  class="dropdown-item" data-key="t-create-new">Create New</a>
                                         </div>
                                     </div>
                                 </div>
@@ -182,13 +182,13 @@
                                             <span data-key="t-forms">Forms</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-form">
-                                            <a href="form-elements.html" class="dropdown-item" data-key="t-basic-elements">Basic Elements</a>
-                                            <a href="form-validation.html" class="dropdown-item" data-key="t-validation">Validation</a>
-                                            <a href="form-advanced.html" class="dropdown-item" data-key="t-advanced-plugins">Advanced Plugins</a>
-                                            <a href="form-editors.html" class="dropdown-item" data-key="t-editors">Editors</a>
-                                            <a href="form-uploads.html" class="dropdown-item" data-key="t-file-upload">File Upload</a>
-                                            <a href="form-wizard.html" class="dropdown-item" data-key="t-wizard">Wizard</a>
-                                            <a href="form-mask.html" class="dropdown-item" data-key="t-mask">Mask</a>
+                                            <a  class="dropdown-item" data-key="t-basic-elements">Basic Elements</a>
+                                            <a  class="dropdown-item" data-key="t-validation">Validation</a>
+                                            <a  class="dropdown-item" data-key="t-advanced-plugins">Advanced Plugins</a>
+                                            <a  class="dropdown-item" data-key="t-editors">Editors</a>
+                                            <a  class="dropdown-item" data-key="t-file-upload">File Upload</a>
+                                            <a  class="dropdown-item" data-key="t-wizard">Wizard</a>
+                                            <a  class="dropdown-item" data-key="t-mask">Mask</a>
                                         </div>
                                     </div>
                                     <div class="dropdown">
@@ -197,8 +197,8 @@
                                             <span data-key="t-tables">Tables</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-table">
-                                            <a href="tables-basic.html" class="dropdown-item" data-key="t-bootstrap-basic">Bootstrap Basic</a>
-                                            <a href="tables-advanced.html" class="dropdown-item" data-key="t-advanced-tables">Advance Tables</a>
+                                            <a  class="dropdown-item" data-key="t-bootstrap-basic">Bootstrap Basic</a>
+                                            <a  class="dropdown-item" data-key="t-advanced-tables">Advance Tables</a>
                                         </div>
                                     </div>
                                     <div class="dropdown">
@@ -207,22 +207,22 @@
                                             <span data-key="t-apex-charts">Apex Charts</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-charts">
-                                            <a href="charts-line.html" class="dropdown-item" data-key="t-line">Line</a>
-                                            <a href="charts-area.html" class="dropdown-item" data-key="t-area">Area</a>
-                                            <a href="charts-column.html" class="dropdown-item" data-key="t-column">Column</a>
-                                            <a href="charts-bar.html" class="dropdown-item" data-key="t-bar">Bar</a>
-                                            <a href="charts-mixed.html" class="dropdown-item" data-key="t-mixed">Mixed</a>
-                                            <a href="charts-timeline.html" class="dropdown-item" data-key="t-timeline">Timeline</a>
-                                            <a href="charts-candlestick.html" class="dropdown-item" data-key="t-candlestick">Candlestick</a>
-                                            <a href="charts-boxplot.html" class="dropdown-item" data-key="t-boxplot">Boxplot</a>
-                                            <a href="charts-bubble.html" class="dropdown-item" data-key="t-bubble">Bubble</a>
-                                            <a href="charts-scatter.html" class="dropdown-item" data-key="t-scatter">Scatter</a>
-                                            <a href="charts-heatmap.html" class="dropdown-item" data-key="t-heatmap">Heatmap</a>
-                                            <a href="charts-treemap.html" class="dropdown-item" data-key="t-treemap">Treemap</a>
-                                            <a href="charts-pie.html" class="dropdown-item" data-key="t-pie">Pie</a>
-                                            <a href="charts-radialbar.html" class="dropdown-item" data-key="t-radialbar">Radialbar</a>
-                                            <a href="charts-radar.html" class="dropdown-item" data-key="t-radar">Radar</a>
-                                            <a href="charts-polararea.html" class="dropdown-item" data-key="t-polararea">Polararea</a>
+                                            <a  class="dropdown-item" data-key="t-line">Line</a>
+                                            <a  class="dropdown-item" data-key="t-area">Area</a>
+                                            <a  class="dropdown-item" data-key="t-column">Column</a>
+                                            <a  class="dropdown-item" data-key="t-bar">Bar</a>
+                                            <a  class="dropdown-item" data-key="t-mixed">Mixed</a>
+                                            <a  class="dropdown-item" data-key="t-timeline">Timeline</a>
+                                            <a  class="dropdown-item" data-key="t-candlestick">Candlestick</a>
+                                            <a  class="dropdown-item" data-key="t-boxplot">Boxplot</a>
+                                            <a  class="dropdown-item" data-key="t-bubble">Bubble</a>
+                                            <a  class="dropdown-item" data-key="t-scatter">Scatter</a>
+                                            <a  class="dropdown-item" data-key="t-heatmap">Heatmap</a>
+                                            <a  class="dropdown-item" data-key="t-treemap">Treemap</a>
+                                            <a  class="dropdown-item" data-key="t-pie">Pie</a>
+                                            <a  class="dropdown-item" data-key="t-radialbar">Radialbar</a>
+                                            <a  class="dropdown-item" data-key="t-radar">Radar</a>
+                                            <a  class="dropdown-item" data-key="t-polararea">Polararea</a>
                                         </div>
                                     </div>
                                     <div class="dropdown">
@@ -231,11 +231,11 @@
                                             <span data-key="t-icons">Icons</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-icons">
-                                            <a href="icons-unicons.html" class="dropdown-item" data-key="t-unicons">Unicons</a>
-                                            <a href="icons-feathericons.html" class="dropdown-item" data-key="t-feather-icons">Feather icons</a>
-                                            <a href="icons-boxicons.html" class="dropdown-item" data-key="t-boxicons">Boxicons</a>
-                                            <a href="icons-materialdesign.html" class="dropdown-item" data-key="t-material-design">Material Design</a>
-                                            <a href="icons-fontawesome.html" class="dropdown-item" data-key="t-font-awesome">Font Awesome 5</a>
+                                            <a  class="dropdown-item" data-key="t-unicons">Unicons</a>
+                                            <a  class="dropdown-item" data-key="t-feather-icons">Feather icons</a>
+                                            <a  class="dropdown-item" data-key="t-boxicons">Boxicons</a>
+                                            <a  class="dropdown-item" data-key="t-material-design">Material Design</a>
+                                            <a  class="dropdown-item" data-key="t-font-awesome">Font Awesome 5</a>
                                         </div>
                                     </div>
                                     <div class="dropdown">
@@ -244,9 +244,9 @@
                                             <span data-key="t-maps">Maps</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-map">
-                                            <a href="maps-google.html" class="dropdown-item" data-key="t-google">Google</a>
-                                            <a href="maps-vector.html" class="dropdown-item" data-key="t-vector">Vector</a>
-                                            <a href="maps-leaflet.html" class="dropdown-item" data-key="t-leaflet">Leaflet</a>
+                                            <a  class="dropdown-item" data-key="t-google">Google</a>
+                                            <a  class="dropdown-item" data-key="t-vector">Vector</a>
+                                            <a  class="dropdown-item" data-key="t-leaflet">Leaflet</a>
                                         </div>
                                     </div>
                                 </div>
@@ -265,8 +265,8 @@
                                             <span data-key="t-pricing">Pricing</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-pricing">
-                                            <a href="pricing-basic.html" class="dropdown-item" data-key="t-basic">Basic</a>
-                                            <a href="pricing-table.html" class="dropdown-item" data-key="t-table">table</a>
+                                            <a  class="dropdown-item" data-key="t-basic">Basic</a>
+                                            <a  class="dropdown-item" data-key="t-table">table</a>
                                         </div>
                                     </div>
 
@@ -276,8 +276,8 @@
                                             <span data-key="t-invoices">Invoices</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-invoices">
-                                            <a href="invoices-list.html" class="dropdown-item" data-key="t-invoice-list">Invoice List</a>
-                                            <a href="invoices-detail.html" class="dropdown-item" data-key="t-invoice-detail">Invoice Detail</a>
+                                            <a  class="dropdown-item" data-key="t-invoice-list">Invoice List</a>
+                                            <a  class="dropdown-item" data-key="t-invoice-detail">Invoice Detail</a>
                                         </div>
                                     </div>
                                     <div class="dropdown">
@@ -286,8 +286,8 @@
                                             <span data-key="t-timeline">Timeline</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-timeline">
-                                            <a href="timeline-center.html" class="dropdown-item" data-key="t-center-view">Center View</a>
-                                            <a href="timeline-left.html" class="dropdown-item" data-key="t-left-view">Left View</a>
+                                            <a  class="dropdown-item" data-key="t-center-view">Center View</a>
+                                            <a  class="dropdown-item" data-key="t-left-view">Left View</a>
                                         </div>
                                     </div>
                                     <div class="dropdown">
@@ -302,15 +302,15 @@
                                                     <span data-key="t-basic">Basic</span> <div class="arrow-down"></div>
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="topnav-auth-basic">
-                                                    <a href="auth-signin-basic.html" class="dropdown-item" data-key="t-signin">Sign In</a>
-                                                    <a href="auth-signup-basic.html" class="dropdown-item" data-key="t-signup">Sign Up</a>
-                                                    <a href="auth-signout-basic.html" class="dropdown-item" data-key="t-signout">Sign Out</a>
-                                                    <a href="auth-lockscreen-basic.html" class="dropdown-item" data-key="t-lock-screen">Lock Screen</a>
-                                                    <a href="auth-forgotpassword-basic.html" class="dropdown-item" data-key="t-forgot-password">Forgot Password</a>
-                                                    <a href="auth-resetpassword-basic.html" class="dropdown-item" data-key="t-reset-password">Reset Password</a>
-                                                    <a href="auth-emailverification-basic.html" class="dropdown-item" data-key="t-email-verification">Email Verification</a>
-                                                    <a href="auth-2step-basic.html" class="dropdown-item" data-key="t-2step-verification">2-step Verification</a>
-                                                    <a href="auth-thankyou-basic.html" class="dropdown-item" data-key="t-thankyou">Thank you</a>
+                                                    <a  class="dropdown-item" data-key="t-signin">Sign In</a>
+                                                    <a  class="dropdown-item" data-key="t-signup">Sign Up</a>
+                                                    <a  class="dropdown-item" data-key="t-signout">Sign Out</a>
+                                                    <a  class="dropdown-item" data-key="t-lock-screen">Lock Screen</a>
+                                                    <a  class="dropdown-item" data-key="t-forgot-password">Forgot Password</a>
+                                                    <a  class="dropdown-item" data-key="t-reset-password">Reset Password</a>
+                                                    <a  class="dropdown-item" data-key="t-email-verification">Email Verification</a>
+                                                    <a  class="dropdown-item" data-key="t-2step-verification">2-step Verification</a>
+                                                    <a  class="dropdown-item" data-key="t-thankyou">Thank you</a>
                                                 </div>
                                             </div>
                                             <div class="dropdown">
@@ -319,15 +319,15 @@
                                                     <span data-key="t-cover">Cover</span> <div class="arrow-down"></div>
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="topnav-auth-cover">
-                                                    <a href="auth-signin-cover.html" class="dropdown-item" data-key="t-signin">Sign In</a>
-                                                    <a href="auth-signup-cover.html" class="dropdown-item" data-key="t-signup">Sign Up</a>
-                                                    <a href="auth-signout-cover.html" class="dropdown-item" data-key="t-signout">Sign Out</a>
-                                                    <a href="auth-lockscreen-cover.html" class="dropdown-item" data-key="t-lock-screen">Lock Screen</a>
-                                                    <a href="auth-forgotpassword-cover.html" class="dropdown-item" data-key="t-forgot-password">Forgot Password</a>
-                                                    <a href="auth-resetpassword-cover.html" class="dropdown-item" data-key="t-reset-password">Reset Password</a>
-                                                    <a href="auth-emailverification-cover.html" class="dropdown-item" data-key="t-email-verification">Email Verification</a>
-                                                    <a href="auth-2step-cover.html" class="dropdown-item" data-key="t-2step-verification">2-step Verification</a>
-                                                    <a href="auth-thankyou-cover.html" class="dropdown-item" data-key="t-thankyou">Thank you</a>
+                                                    <a  class="dropdown-item" data-key="t-signin">Sign In</a>
+                                                    <a  class="dropdown-item" data-key="t-signup">Sign Up</a>
+                                                    <a  class="dropdown-item" data-key="t-signout">Sign Out</a>
+                                                    <a  class="dropdown-item" data-key="t-lock-screen">Lock Screen</a>
+                                                    <a  class="dropdown-item" data-key="t-forgot-password">Forgot Password</a>
+                                                    <a  class="dropdown-item" data-key="t-reset-password">Reset Password</a>
+                                                    <a  class="dropdown-item" data-key="t-email-verification">Email Verification</a>
+                                                    <a  class="dropdown-item" data-key="t-2step-verification">2-step Verification</a>
+                                                    <a  class="dropdown-item" data-key="t-thankyou">Thank you</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -344,8 +344,8 @@
                                                     <span>404</span> <div class="arrow-down"></div>
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="topnav-404">
-                                                    <a href="error-404-basic.html" class="dropdown-item" data-key="t-basic">Basic</a>
-                                                    <a href="error-404-cover.html" class="dropdown-item" data-key="t-cover">Cover</a>
+                                                    <a  class="dropdown-item" data-key="t-basic">Basic</a>
+                                                    <a  class="dropdown-item" data-key="t-cover">Cover</a>
                                                 </div>
                                             </div>
                                             <div class="dropdown">
@@ -354,8 +354,8 @@
                                                     <span>500</span> <div class="arrow-down"></div>
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="topnav-500">
-                                                    <a href="error-500-basic.html" class="dropdown-item" data-key="t-basic">Basic</a>
-                                                    <a href="error-500-cover.html" class="dropdown-item" data-key="t-cover">Cover</a>
+                                                    <a  class="dropdown-item" data-key="t-basic">Basic</a>
+                                                    <a class="dropdown-item" data-key="t-cover">Cover</a>
                                                 </div>
                                             </div>
 
@@ -367,15 +367,15 @@
                                             <span data-key="t-utility">Utility</span> <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-utility">
-                                            <a href="pages-starter.html" class="dropdown-item" data-key="t-starter-page">Starter Page</a>
-                                            <a href="pages-profile.html" class="dropdown-item" data-key="t-profile">Profile</a>
-                                            <a href="pages-maintenance.html" class="dropdown-item" data-key="t-maintenance">Maintenance</a>
-                                            <a href="pages-comingsoon.html" class="dropdown-item" data-key="t-coming-soon">Coming Soon</a>
-                                            <a href="pages-faqs.html" class="dropdown-item" data-key="t-faqs">FAQs</a>
+                                            <a  class="dropdown-item" data-key="t-starter-page">Starter Page</a>
+                                            <a  class="dropdown-item" data-key="t-profile">Profile</a>
+                                            <a  class="dropdown-item" data-key="t-maintenance">Maintenance</a>
+                                            <a  class="dropdown-item" data-key="t-coming-soon">Coming Soon</a>
+                                            <a  class="dropdown-item" data-key="t-faqs">FAQs</a>
                                         </div>
                                     </div>
 
-                                    <a href="layout-vertical.html" class="dropdown-item" data-key="t-vertical">Vertical</a>
+                                    <a  class="dropdown-item" data-key="t-vertical">Vertical</a>
                                 </div>
                             </li>
 
@@ -407,32 +407,32 @@
             <div class="dropdown d-inline-block language-switch">
                 <button type="button" class="btn header-item noti-icon"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img id="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                    <img id="header-lang-img" src="{{asset('asserts/agent/images/flags/us.jpg')}}" alt="Header Language" height="16">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
-                        <img src="assets/images/flags/us.jpg" alt="user-image" class="me-2" height="12"> <span class="align-middle">English</span>
+                        <img src="{{asset('asserts/agent/images/flags/us.jpg')}}" alt="user-image" class="me-2" height="12"> <span class="align-middle">English</span>
                     </a>
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
-                        <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-2" height="12"> <span class="align-middle">Spanish</span>
+                        <img src="{{asset('asserts/agent/images/flags/spain.jpg')}}" alt="user-image" class="me-2" height="12"> <span class="align-middle">Spanish</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
-                        <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-2" height="12"> <span class="align-middle">German</span>
+                        <img src="{{asset('asserts/agent/images/flags/germany.jpg')}}" alt="user-image" class="me-2" height="12"> <span class="align-middle">German</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
-                        <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-2" height="12"> <span class="align-middle">Italian</span>
+                        <img src="{{asset('asserts/agent/images/flags/italy.jpg')}}" alt="user-image" class="me-2" height="12"> <span class="align-middle">Italian</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
-                        <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-2" height="12"> <span class="align-middle">Russian</span>
+                        <img src="{{asset('asserts/agent/images/flags/russia.jpg')}}" alt="user-image" class="me-2" height="12"> <span class="align-middle">Russian</span>
                     </a>
                 </div>
             </div>
@@ -460,7 +460,7 @@
                         <a href="" class="text-reset notification-item">
                             <div class="d-flex border-bottom align-items-start">
                                 <div class="flex-shrink-0">
-                                    <img src="assets/images/users/avatar-3.jpg"
+                                    <img src="{{asset('asserts/agent/images/users/avatar-3.jpg')}}"
                                     class="me-3 rounded-circle avatar-sm" alt="user-pic">
                                 </div>
                                 <div class="flex-grow-1">
@@ -513,7 +513,7 @@
                         <a href="" class="text-reset notification-item">
                             <div class="d-flex border-bottom align-items-start">
                                 <div class="flex-shrink-0">
-                                    <img src="assets/images/users/avatar-4.jpg"
+                                    <img src="{{asset('asserts/agent/images/users/avatar-4.jpg')}}"
                                         class="me-3 rounded-circle avatar-sm" alt="user-pic">
                                 </div>
                                 <div class="flex-grow-1">
@@ -543,7 +543,7 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item user text-start d-flex align-items-center" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-3.jpg"
+                    <img class="rounded-circle header-profile-user" src="{{asset('asserts/agent/images/users/avatar-3.jpg')}}"
                     alt="Header Avatar">
                     <span class="ms-2 d-none d-xl-inline-block user-item-desc">
                         <span class="user-name">Marie N. <i class="mdi mdi-chevron-down"></i></span>
@@ -551,15 +551,15 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end pt-0">
                     <h6 class="dropdown-header">Welcome Marie N!</h6>
-                    <a class="dropdown-item" href="pages-profile.html"><i class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
-                    <a class="dropdown-item" href="apps-chat.html"><i class="mdi mdi-message-text-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Messages</span></a>
-                    <a class="dropdown-item" href="apps-kanban-board.html"><i class="mdi mdi-calendar-check-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Taskboard</span></a>
-                    <a class="dropdown-item" href="pages-faqs.html"><i class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Help</span></a>
+                    <a class="dropdown-item" ><i class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
+                    <a class="dropdown-item" ><i class="mdi mdi-message-text-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Messages</span></a>
+                    <a class="dropdown-item" ><i class="mdi mdi-calendar-check-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Taskboard</span></a>
+                    <a class="dropdown-item" ><i class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Help</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#"><i class="mdi mdi-wallet text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Balance : <b>$6951.02</b></span></a>
-                    <a class="dropdown-item d-flex align-items-center" href="contacts-settings.html"><i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Settings</span><span class="badgebg-success-subtle text-success ms-auto">New</span></a>
-                    <a class="dropdown-item" href="auth-lockscreen-cover.html"><i class="mdi mdi-lock text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a>
-                    <a class="dropdown-item" href="auth-signout-cover.html"><i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Logout</span></a>
+                    <a class="dropdown-item d-flex align-items-center"><i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Settings</span><span class="badgebg-success-subtle text-success ms-auto">New</span></a>
+                    <a class="dropdown-item"><i class="mdi mdi-lock text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a>
+                    <a class="dropdown-item" ><i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Logout</span></a>
                 </div>
             </div>
         </div>
