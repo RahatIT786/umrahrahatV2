@@ -104,6 +104,14 @@ return [
             explode(',', env('APP_PREVIOUS_KEYS', ''))
         ),
     ],
+    'providers' => [
+        Mews\Captcha\CaptchaServiceProvider::class,
+    ],
+    'aliases' => [
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
+    ],
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -122,5 +130,5 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
-    
+
 ];
