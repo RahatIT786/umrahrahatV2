@@ -7,6 +7,7 @@
                                         Rooms & Guests
                                     </button>
                                     <span>Total Guest: {{$this->totalGuests}}</span>
+                                    <span>Total Rooms: {{$this->totalRooms }} </span>
                                    </div>
                                 
                                     <!-- Popup -->
@@ -43,7 +44,7 @@
                                                         <label>Child {{ $childIndex + 1 }} Age:</label>
                                                         <select wire:model="rooms.{{ $index }}.childrenAges.{{ $childIndex }}" class="border rounded px-2 py-1 w-full">
                                                             <option value="">Select Age</option>
-                                                            @for ($i = 1; $i <= 17; $i++)
+                                                            @for ($i = 1; $i <= 13; $i++)
                                                                 <option value="{{ $i }}">{{ $i }}</option>
                                                             @endfor
                                                         </select>
