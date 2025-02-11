@@ -22,8 +22,8 @@ class HotelSingleDetail extends Component
             public $package_user_adult;
             public $package_user_child;
             public $package_user_hotel_name;
-        
-        
+
+
             public function packageEnquire(){
               hotel_user_enquire::create([
                     'package_user_name' => $this->package_user_name,
@@ -39,20 +39,21 @@ class HotelSingleDetail extends Component
             }
             //==========================================================================//
 
-    public function mount($id) 
+    public function mount($id)
     {
         // Get the hotel detail by ID
-  
+
         $this->hotel_id = $id;
         $this->hotel_detail = HotelDetail::find($this->hotel_id);
         $this->package_user_hotel_name = $this->hotel_detail->hotelName;
         $this->hotelCostDatas = $this->getPeriods();
+
     }
     public function getPeriods(){
         // Fetch the hotel details based on the hotel IDs
-        $hotelCosts = HotelCost::where('hotel_id', 56 )->get();
+        $hotelCosts = HotelCost::where('hotel_id', $this->hotel_id )->get();
         // Store the hotel details in an array for use on the user side
-
+        //dd($hotelCosts);
         $hotelCostData = [];
         foreach ($hotelCosts as $hotel) {
             $hotelCostData[] = $hotel->toArray();
