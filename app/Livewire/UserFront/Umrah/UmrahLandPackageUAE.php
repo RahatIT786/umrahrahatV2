@@ -7,7 +7,7 @@ use Livewire\Component;
 use App\Models\mainPackage as MainPackage;
 use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
-use Livewire\Attributes\Layout; 
+use Livewire\Attributes\Layout;
 
 class UmrahLandPackageUAE extends Component
 {
@@ -23,13 +23,14 @@ class UmrahLandPackageUAE extends Component
     //for enquire form variables
     public $umrahEmquire;
 
-    //popup form variable 
+    //popup form variable
     public $name;
     public $mobile;
     public $date_of_travel;
     public $total_pax;
     public $travel_type;
     public $searchPackage;
+    public $limit = 5;
 
     protected $rules = [
         'name' => 'required|string|max:255',
@@ -50,12 +51,16 @@ class UmrahLandPackageUAE extends Component
         $this->departCities = $this->getAllDepartCities();
         $this->packageDays =MainPackage::where('delete_status', 1)->where('service_type','3')->pluck('package_days');
     }
+    public function loadMore()
+    {
+        $this->limit += 5; // Load 10 more hotels
+    }
 
     public function getAllDepartCities()
     {
         // Fetch all packages from the database
         $packages = MainPackage::where('delete_status', 1)->get();
-        
+
         // Map over each package and convert `depart_city` to an array
         $departCities = $packages->map(function ($package) {
             return explode(',', $package->depart_city);
@@ -75,7 +80,7 @@ class UmrahLandPackageUAE extends Component
     }
 
     public function umrahEnquirePopu(){
-      
+
         $this->umrahEmquire=true;
     }
     public function umrahEnquirePopupClose(){
@@ -92,7 +97,7 @@ class UmrahLandPackageUAE extends Component
         'total_pax' => $this->total_pax,
         'travel_type' => $this->travel_type,
     ]);
-    
+
     $this->umrahEmquire=false;
     session()->flash('success', 'Your enquiry has been submitted successfully!');
     }
@@ -111,11 +116,11 @@ class UmrahLandPackageUAE extends Component
         ->where('service_type',strtolower(__('message.umrah')))
         ->where('departure_type',strtolower(__('message.land')));
 
-    
+
         if ($this->searchPackage) {
             $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
-        $this->allPackages = $query->get();
+        $this->allPackages = $query->take($this->limit)->get();
         // dd( $this->allPackages);
         // Render the Livewire view with allPackages data
         return view('livewire.user_front.umrah.umrah-land-package-u-a-e', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
