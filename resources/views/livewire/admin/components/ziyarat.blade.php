@@ -40,7 +40,7 @@
                <tbody>
                     @foreach ($ZiyaratDetails as $index => $ziyarat)
                         <tr>
-                            <td>{{ $index + 1}}</td> 
+                            <td>{{ $index + 1}}</td>
                             <td>
                                 @if ($ziyarat->packageImage)
                                     <img src="{{Storage::url($ziyarat->packageImage) }}" alt="Ziyarat Image" class="img-thumbnail shadow-lg" style="height: 5rem;">
@@ -49,7 +49,7 @@
                                 @endif
                             </td>
                             <td>{{ $ziyarat->name }}</td>
-                            <td>{{ $ziyarat->service_type }}</td>
+                            <td>{{ $ziyarat->serviceCity->ziyarat_city }}</td>
                             <td class="text-center">
                                 <a class="text-primary"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="bi bi-pencil-fill"></i>
@@ -67,18 +67,18 @@
         </div>
 
         <!-- Modal for Delete Confirmation -->
-      <div class="modal fade @if($showModal) show @endif" 
-             id="exampleVerticallycenteredModal" 
-             tabindex="-1" 
-             aria-labelledby="exampleModalCenterTitle" 
+      <div class="modal fade @if($showModal) show @endif"
+             id="exampleVerticallycenteredModal"
+             tabindex="-1"
+             aria-labelledby="exampleModalCenterTitle"
              aria-hidden="true"
              @if($showModal) style="display: block;" @endif>
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalCenterTitle">Confirm Deletion</h5>
-                        <button type="button" class="btn-close" 
-                                data-bs-dismiss="modal" 
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"
                                 aria-label="Close"
                                 wire:click="closeModal"></button>
                     </div>
@@ -86,11 +86,11 @@
                         Are you sure you want to delete this Ziyarat?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" 
-                                data-bs-dismiss="modal" 
+                        <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal"
                                 wire:click="closeModal">Cancel</button>
-                        <button type="button" class="btn btn-danger" 
-                                wire:click="deleteData" 
+                        <button type="button" class="btn btn-danger"
+                                wire:click="deleteData"
                                 data-bs-dismiss="modal">Delete</button>
                     </div>
                 </div>

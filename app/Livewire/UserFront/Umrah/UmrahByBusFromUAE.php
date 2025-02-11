@@ -8,7 +8,7 @@ use App\Models\mainPackage as MainPackage;
 use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
 use App\Models\UserSearchQueries;
-use Livewire\Attributes\Layout; 
+use Livewire\Attributes\Layout;
 
 class UmrahByBusFromUAE extends Component
 {
@@ -26,12 +26,14 @@ class UmrahByBusFromUAE extends Component
 
     public $searchPackage;
 
-    //popup form variable 
+    //popup form variable
     public $name;
     public $mobile;
     public $date_of_travel;
     public $total_pax;
     public $travel_type;
+    public $isOpen = false;
+    public $package = [];
 
     protected $rules = [
         'name' => 'required|string|max:255',
@@ -52,17 +54,28 @@ class UmrahByBusFromUAE extends Component
         $this->departCities = $this->getAllDepartCities();
         $this->packageDays =MainPackage::where('delete_status', 1)->where('service_type','3')->pluck('package_days');
     }
+    public function openModal($packageData)
+    {
+        $this->package = $packageData;
+       // dd($this->package);
+        $this->isOpen = true;
+    }
+
+    public function closeModal()
+    {
+        $this->isOpen = false;
+    }
 
     public function getAllDepartCities()
     {
         // Fetch all packages from the database
         $packages = MainPackage::where('delete_status', 1)->get();
-        
+
         // Map over each package and convert `depart_city` to an array
         $departCities = $packages->map(function ($package) {
             return explode(',', $package->depart_city);
         });
-        
+
         // Flatten the array and remove any duplicates
         $mergedCities = array_merge(...$departCities->toArray());
 
@@ -77,7 +90,7 @@ class UmrahByBusFromUAE extends Component
     }
 
     public function umrahEnquirePopu(){
-      
+
         $this->umrahEmquire=true;
     }
     public function umrahEnquirePopupClose(){
@@ -94,7 +107,7 @@ class UmrahByBusFromUAE extends Component
         'total_pax' => $this->total_pax,
         'travel_type' => $this->travel_type,
     ]);
-    
+
     $this->umrahEmquire=false;
     session()->flash('success', 'Your enquiry has been submitted successfully!');
     }
@@ -109,11 +122,11 @@ class UmrahByBusFromUAE extends Component
         $query = MainPackage::where('delete_status', 1)
         ->where('service_type',strtolower(__('message.umrah')))
                 ->where('departure_type',strtolower(__('message.bus')));
-    
+
         if ($this->searchPackage) {
             $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
-        
+
         $this->allPackages = $query->get();
         //  dd( $this->allCities);
         // Render the Livewire view with allPackages data
