@@ -218,6 +218,15 @@
             }
         }
     </style>
+ {{-- <link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.2/dist/css/tom-select.css" rel="stylesheet"> --}}
+
+
+<!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">
 
     <livewire:styles />
+
+
+
 </head>
+

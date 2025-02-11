@@ -8,14 +8,16 @@ use Livewire\Component;
 class RoomsGuests extends Component
 {
 
+        public $roomCount;
+
 // below the code are add guest for room -start
 public $rooms = [
-    ['adults' => 1, 'children' => 0, 'childrenAges' => []]
+    ['adults' => 0, 'children' => 0, 'childrenAges' => []]
 ];
 
 public function addRoom()
 {
-    $this->rooms[] = ['adults' => 1, 'children' => 0, 'childrenAges' => []];
+    $this->rooms[] = ['adults' => 0, 'children' => 0, 'childrenAges' => []];
     $this->emitTotalGuests();
 }
 
@@ -29,18 +31,22 @@ public function removeRoom($index)
 public function updateCount($index, $type, $change)
 {
     if ($type === 'adults') {
-        $this->rooms[$index]['adults'] = max(1, $this->rooms[$index]['adults'] + $change);
+        // Ensure the number of adults stays between 1 and 4
+        $this->rooms[$index]['adults'] = max(1, min(6, $this->rooms[$index]['adults'] + $change));
     } elseif ($type === 'children') {
-        if ($change > 0) {
+        if ($change > 0 && $this->rooms[$index]['children'] < 2) {
+            // Only add a child if the max limit (2) is not reached
             $this->rooms[$index]['children']++;
             $this->rooms[$index]['childrenAges'][] = null;
-        } else if ($this->rooms[$index]['children'] > 0) {
+        } elseif ($change < 0 && $this->rooms[$index]['children'] > 0) {
+            // Remove child if there are any
             $this->rooms[$index]['children']--;
             array_pop($this->rooms[$index]['childrenAges']);
         }
     }
     $this->emitTotalGuests();
 }
+
 
 public function getTotalGuestsProperty()
 {
@@ -49,7 +55,10 @@ public function getTotalGuestsProperty()
     }, 0);
     
 }
-
+public function getTotalRoomsProperty()
+{
+    return count($this->rooms);
+}
 
 // below the code are add guest for room -end
 
