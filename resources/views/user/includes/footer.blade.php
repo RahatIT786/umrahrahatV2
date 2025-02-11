@@ -12,8 +12,8 @@
                         <p class="mb-2"><a style="color:white" href="tel:+971566115491"><i class="fa fa-phone-alt me-3"></i>+971 56 6115491  </a></p>
                         <p class="mb-2"><a style="color:white" href="tel:+971567866713"><i class="fa fa-phone-alt me-3"></i>+971 56 7866713 </a></p>
                         <p class="mb-2"><a style="color:white" href="mailto:dubai@Rahat.in"><i class="fa fa-envelope me-3"></i>Dubai@Rahat.in</a></p>
-                       
-                       
+
+
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/rahattravelsofindia/"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/rahattravelsofindia/"><i class="fab fa-facebook-f"></i></a>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                               
+
                                 <a class="btn btn-link" href="{{route('umrah-by-bus-from-uae')}}">Umrah Packages </a>
                                 <a class="btn btn-link" href="{{route('hotels')}}">Hotels & Rooms </a>
                                 <a class="btn btn-link" href="{{route('saudi-visa')}}">Visas & Insurance </a>
@@ -46,15 +46,15 @@
                                 <a class="btn btn-link" href="{{route('user.laundry')}}">Laundry Services </a>
                                 <a class="btn btn-link" href="{{route('sightseeing')}}">Sightseeing in Makka Madina </a>
                                 <a class="btn btn-link" href="{{route('myassistant')}}">Guides and Assistance </a>
-                              
-                               
+
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- <div class="container pb-5">
-                <div class="row g-5 d-flex justify-content-center" id="footer-contact"> 
+                <div class="row g-5 d-flex justify-content-center" id="footer-contact">
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">MAKKA - SAUDI</h6>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Deafa International, <br> Ajyad Sud Street.<br> Anwar Deafa, Second Floor.</p>
@@ -72,13 +72,13 @@
                     </div>
                 </div>
             </div> -->
-     
+
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        Copyright © 2025 Rahat IT Solutions. All Rights Reserved. 
-							
+                        Copyright © 2025 Rahat IT Solutions. All Rights Reserved.
+
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 							Designed By <a class="border-bottom" href="http://rahatitsolutions.com/">Rahat IT Solution</a>
                         </div>
@@ -112,13 +112,14 @@
     <script src="{{asset('asserts/user/lib/tempusdominus/js/moment.min.js')}}"></script>
     <script src="{{asset('asserts/user/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
     <script src="{{asset('asserts/user/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-    
+
     <!-- award Script -->
     <script src="{{asset('asserts/user/js/awardScript.js')}}"></script>
 
     <!-- Template Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('asserts/user/js/main.js')}}"></script>
+    
     <livewire:scripts />
 </body>
 

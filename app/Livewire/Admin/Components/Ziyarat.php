@@ -5,11 +5,11 @@ namespace App\Livewire\Admin\Components;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\MainZiyarat;
-use Livewire\WithPagination; 
+use Livewire\WithPagination;
 
 class Ziyarat extends Component
 {
-    use WithPagination; 
+    use WithPagination;
 
     public $showModal = false;
     public $ziyaratId;
@@ -37,7 +37,8 @@ class Ziyarat extends Component
     #[Layout('admin.Layouts.app')]
     public function render()
     {
-        $ZiyaratDetails = MainZiyarat::where('delete_status', 1)->paginate(10);
+        $ZiyaratDetails = MainZiyarat::with('serviceCity')->where('delete_status', 1)->paginate(10);
+        //dd($ZiyaratDetails);
         return view('livewire.admin.components.ziyarat',['ZiyaratDetails' => $ZiyaratDetails]);
     }
 }
