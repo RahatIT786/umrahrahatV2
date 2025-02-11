@@ -1,4 +1,38 @@
 <section>
+
+    
+    <script>
+
+// console.log("🔍 Checking if #transportPart exists...");
+// let transportPart = document.getElementById('transportPart');
+
+// if (transportPart) {
+//     console.log("✅ Found #transportPart");
+// } else {
+//     console.error("❌ #transportPart NOT FOUND in the DOM!");
+// }
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     document.getElementById('transportPart').style.display='none';
+        //     function toggleTransportPart() {
+        //         let currentStep = @json($currentStep); // Pass Livewire variable to JavaScript
+        //         let transportPart = document.getElementById('transportPart');
+    
+        //         if (currentStep > 3) {
+        //             transportPart.style.display = 'block';
+        //         } else {
+        //             transportPart.style.display = 'none';
+        //         }
+        //     }
+    
+        //     toggleTransportPart(); // Initial check
+    
+        //     document.addEventListener('livewire:load', toggleTransportPart);
+        //     Livewire.hook('message.processed', (message, component) => {
+        //         toggleTransportPart();
+        //     });
+        // });
+    </script>
      <!-- Page Header Start -->
      <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('asserts/user/img/haj/mecca3.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
@@ -116,6 +150,7 @@
                                      {{-- room guest adding end--}}
 
                                   </div>
+                                 
                                 
 
                                </div>
@@ -217,7 +252,8 @@
                             @endif
 
                             @if ($currentStep >= 4)
-                            <div class="d-flex justify-content-evenly align-items-center flex-column custom-field-bars py-4" style="padding: 5px;">
+                           
+                            <div id="transportPart2" class="d-flex justify-content-evenly align-items-center flex-column custom-field-bars py-4" style="padding: 5px; display: none;" >
                                 <h5 class="mt-2 mb-2 text-primary" style="">Trasport Details</h5>
                                 <hr>
 
@@ -232,10 +268,51 @@
                                        
                                     </select>
                                    </div>
+                                  
+
+                                  
+                                    <div class="col-lg-6 mb-3 d-flex justify-content-between">
+                                       <div>
+                                        <label for="sectorSelect">Select Sector</label>
+                                        <select name="" class="form-control" id="" wire:model.live="SelectedSectorUpdate">
+                                            @foreach ($carSector as $type)
+                                                <option value="{{ $type->id }}">{{ ucfirst($type->car_sector) }}</option>
+                                            @endforeach
+                                        </select>
+                                       </div>
+                                       <div class="price">
+                                        <span> price:</span><br>
+                                        <span>{{$sightSeeingTotalPrice.'.'.$masterCurrency}}</span>
+                                    </div>
+                                    </div>
+                                  
+
+                                {{-- <script src="https://cdn.jsdelivr.net/npm/tom-select@2.4.2/dist/js/tom-select.complete.min.js"></script> --}}
+{{-- <script>
+   document.addEventListener("DOMContentLoaded", function () {
+        Livewire.hook('message.processed', (message, component) => {
+            setTimeout(() => {
+                let selectElement = document.getElementById("sectorSelectid");
+
+                if (selectElement && !selectElement.tomselect) {
+                    new TomSelect("#sectorSelectid", {
+                        persist: false,
+                        createOnBlur: true,
+                        create: false
+                    });
+                    console.log("✅ Tom Select Applied!");
+                }
+            }, 500); // Small delay to ensure the element is rendered
+        });
+    });
+
+</script> --}}
+
+
                               
-                                    <div class="col-lg-6 mb-3">
+                                    {{-- <div class="col-lg-6 mb-3">
                                     <label for="field1">Select Sector</label>
-                                    <select name="" class="form-control" id="">
+                                    <select name="sectors[]" class="form-control" id="sectorSelect" multiple>
                                         <option value="">Select Sector</option>
                                         @foreach ($carSector as  $type)
                                         <option value="{{$type->id}}">{{ucfirst($type->car_sector)}}</option>
@@ -243,9 +320,40 @@
                                         @endforeach
                                        
                                     </select>
-                                   </div>
+                                   </div> --}}
+                                   {{-- <div wire:ignore.self>
+                                    <livewire:components.select-multi-sector />
+                                </div> --}}
+                                   {{-- start --}}
+                                   {{-- <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="sectorDropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                        Select Sectors
+                                    </button>
+                                
+                                    <ul class="dropdown-menu" aria-labelledby="sectorDropdown">
+                                        @foreach ($carSector as $sector)
+                                            <li>
+                                                <div class="form-check dropdown-item">
+                                                    <input type="checkbox" class="form-check-input" id="sector{{ $sector->id }}" 
+                                                           value="{{ $sector->id }}" wire:model="selectedSectors">
+                                                    <label class="form-check-label" for="sector{{ $sector->id }}">
+                                                        {{ ucfirst($sector->car_sector) }}
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div> --}}
+                                
+                                <!-- Display Selected Sectors -->
+                                {{-- <h6 class="mt-3">Selected Sectors:</h6>
+                                <ul>
+                                    @foreach ($selectedSectors as $selected)
+                                        <li>{{ $carSector->where('id', $selected)->first()->car_sector ?? '' }}</li>
+                                    @endforeach --}}
+                                </ul>
+                                   {{-- end --}}
 
-                                  
 
                                   
 
@@ -999,8 +1107,59 @@
     border: none;
     border-radius: 10px;
 }
+
+
         </style>
 
+<script>
+
+    console.log("🔍 Checking if #transportPart exists...");
+    let transportPart = document.getElementById('transportPart2');
+    
+    if (transportPart) {
+        console.log("✅ Found #transportPar2");
+    } else {
+        console.error("❌ #transportPart2 NOT FOUND in the DOM!");
+    }
+    
+    if (transportPart) {
+    console.log("✅ Found #transportPart");
+} else {
+    console.error("❌ #transportPart NOT FOUND in the DOM!");
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    function toggleTransportPart() {
+        let transportPart = document.getElementById('transportPart2');
+        let currentStep = @json($currentStep); // Get Livewire step value
+
+        console.log("Current Step:", currentStep); // Debugging log
+
+        if (transportPart) {
+            if (currentStep > 3) {
+                transportPart.style.display = 'block';
+            } else {
+                transportPart.style.display = 'none';
+            }
+        } else {
+            console.error("❌ #transportPart2 NOT FOUND in the DOM!");
+        }
+    }
+
+    // Wait for Livewire to load
+    document.addEventListener('livewire:load', toggleTransportPart);
+    
+    // Run after Livewire updates
+    Livewire.hook('message.processed', (message, component) => {
+        toggleTransportPart();
+    });
+
+    // Initial hide (if Livewire is not fast enough)
+    setTimeout(toggleTransportPart, 500);
+});
+
+
+        </script>
 
 
 

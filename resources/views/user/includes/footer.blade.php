@@ -119,6 +119,66 @@
     <!-- Template Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('asserts/user/js/main.js')}}"></script>
+
+    
+
+   
+      
+
+<!-- JS -->
+
+
+
+
+{{-- choose multiple items --}}
+
+
+{{-- <script src="https://cdn.jsdelivr.net/npm/tom-select@2.4.2/dist/js/tom-select.complete.min.js"></script> --}}
+{{-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function initTomSelect() {
+            let selectElement = document.getElementById("sectorSelectid");
+
+            if (selectElement && !selectElement.tomselect) {
+                new TomSelect("#sectorSelectid", {
+                    persist: false,
+                    createOnBlur: true,
+                    create: false
+                });
+                console.log("✅ Tom Select Applied!");
+            } else {
+                console.warn("⚠️ Tom Select not initialized - Element not found yet.");
+            }
+        }
+
+        // Listen for Livewire updates
+        document.addEventListener("livewire:load", initTomSelect);
+        Livewire.hook('message.processed', (message, component) => {
+            initTomSelect();
+        });
+    });
+
+</script> --}}
+<!-- jQuery (Required for Select2) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+
+{{-- <script>
+
+    console.log("🔍 Checking if #transportPart exists...");
+    let transportPart = document.getElementById('transportPart2');
+    
+    if (transportPart) {
+        console.log("✅ Found #transportPar2");
+    } else {
+        console.error("❌ #transportPart2 NOT FOUND in the DOM!");
+    }
+    
+            
+        </script> --}}
     <livewire:scripts />
 </body>
 

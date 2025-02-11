@@ -29,19 +29,23 @@ class CustomPackage extends Component
     public $makkaHotels;
     public $madinaHotels;
     public $visaType;
+    public $sightSeeingTotalPrice;
     public $carSector;
     public $carType=[];
+    public $carTypeId;
     public $makkaSightSeeing;
     public $madinaSightSeeing;
     public $mealType;
     public $laundryType;
 
-    public $selectedSector;
+    public $SelectedSectorUpdate;
 
     public $makkaCheckIn;
     public $makkaCheckOut;
 
     public $madinaCheckIn;
+
+    
     public $madinaCheckOut;
     public $makkaHotelDaysCount;
     public $madinaHotelDaysCount;
@@ -69,6 +73,8 @@ class CustomPackage extends Component
     public $exchangeRates = [];
 
     public $currencies=['SAR','AED','USD','EUR','INR'];
+
+    public $selectedSectors = []; 
     public function mount(){
         
 
@@ -116,60 +122,27 @@ class CustomPackage extends Component
                     ->join('transport_controllers','car_sectors.id','=','transport_controllers.carSector')
                     ->where('transport_controllers.carType',$carTypeId)
                     ->select('car_sectors.id','car_sectors.car_sector')->get();
-       $this->carSector= $carSectors;           
+       $this->carSector= $carSectors;   
+       $this->carTypeId=$value;        
     }   
 
-//     public function fetchExchangeRates($currencyType)
-//     {
-      
-//         try {
-//             $apiKey = '593b72f2821a6b3e2d6a037b'; // Replace with your API key
-//             $baseCurrency = 'SAR'; // Change if needed
-//             $response = Http::withOptions([
-//                 'verify'=>false,
-//             ])->get("https://v6.exchangerate-api.com/v6/{$apiKey}/latest/{$baseCurrency}");
-//             // dd( $response);
-//             if ($response->successful()) {
-//                 // $this->exchangeRates = $response->json();
-//                 $data = $response->json();
-//                // Get base currency
-// $baseCurrency = $data['base_code'] ?? $data['base'] ?? 'Unknown';
+    public function updatedSelectedSectorUpdate($value){
+    
+        $sightTotalPrice= transportController::where('carType',$this->carTypeId)
+                                                ->where('carSector',$value)->value('price');
+                                               
+        $this->sightSeeingTotalPrice=round($sightTotalPrice * $this->masterCurrencyCurrentPrice);
+  
+    }
 
-// // Get exchange rates
-// $exchangeRates = $data['conversion_rates'] ?? [];
-// $currencyPrice = $data['conversion_rates'][$currencyType]; //
-
-// return $currencyPrice;
-
-
-// //     dd($usdPrice); // Output: 1
-
-// // // Debugging output
-// // dd([
-// //     'base_currency' => $baseCurrency,
-// //     'exchange_rates' => $exchangeRates,
-// // ]);
-//             }
-//         } catch (\Exception $e) {
-            
-//             $this->exchangeRates = []; // Handle API failure
-//             dd($e);
-//         }
-//     }
 
     
-    public function updatedSelectedSector($value){
-      
-        $this->carType= transportController::where('carSector',$value)->pluck('carType');
-    //    dd( $transportDetails);
-    //     $this->carType=CarType::where('delete_status',1)->where('id',$transportDetails->carType)->pluck('car_type');
-    //     dd($this->carType);
-    }
+   
     public function updatedUmrahGenKitCount($value){
-        $this->genKitPrice=1800 * $value;
+        $this->genKitPrice=78 * $value;
     }
     public function updatedUmrahLadiKitCount($value){
-        $this->ladiKitPrice=1500 * $value;
+        $this->ladiKitPrice=65 * $value;
     }
     public function updatedSelectedLaundry($value){
 

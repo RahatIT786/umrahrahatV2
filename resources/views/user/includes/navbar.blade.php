@@ -47,7 +47,7 @@
                                 </div> --}}
                               <div class="d-flex align-items-cente justify-content-between px-2 " style="position: absolute; top:3px; right: 28vw;  border-radius:9px;">
                                 {{-- <span class="mt-2"><i class="fa-solid fa-language" ></i></span> --}}
-                                <span class="mt-2"><i class="fa-solid fa-earth-asia" style="font-size: 20px;"></i></span>
+                                <span class="mt-"><i class="fa-solid fa-earth-asia" style="font-size: 20px;"></i></span>
                                 <span id="google_translate_element"  ></span>
                               </div>
                                 <div class="h-100 d-inline-flex align-items-center  me-4">
@@ -368,9 +368,17 @@
         height: 1rem !important;
     }
 
+    .goog-te-gadget-icon{
+        display: none !important;
+    }
+
+
+    .goog-te-gadget-simple{
+        border: none;
+    }
     </style>
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         function googleTranslateElementInit() {
           new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
@@ -378,11 +386,63 @@
         var selectedLanguage = document.querySelector(".goog-te-combo");
 
 // Select the first option and change its text
-// if (selectedLanguage.option.length > 0) {
-//     selectedLanguage.option[0].text = 'En'; // Change "Select Language" to "En"
-// }
+ if (selectedLanguage.option.length > 0) {
+     selectedLanguage.option[0].text = 'En'; // Change "Select Language" to "En"
+ }
 
-        </script>
+        </script> --}}
+
+        {{-- <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,ar,hi', // Only include English, Arabic, and Hindi
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+    
+            // Change the default "Select Language" text to "En"
+            function modifyLanguageDropdown() {
+                var selectedLanguage = document.querySelector(".goog-te-combo");
+                if (selectedLanguage && selectedLanguage.options.length > 0) {
+                    selectedLanguage.options[0].text = 'En'; // Change "Select Language" to "En"
+                }
+            }
+    
+            // Call the function after the Google Translate script has loaded
+            window.onload = function() {
+                googleTranslateElementInit();
+                setTimeout(modifyLanguageDropdown, 1000); // Delay to ensure the dropdown is loaded
+            };
+        </script> --}}
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,ar,hi', // Only include English, Arabic, and Hindi
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+
+    // Remove the "Select Language" option and keep only English, Arabic, and Hindi
+    function modifyLanguageDropdown() {
+        var dropdown = document.querySelector(".goog-te-combo");
+        if (dropdown && dropdown.options.length > 0) {
+            // Remove the first option ("Select Language")
+            dropdown.remove(0);
+
+            // Optionally, you can set the default selected language to English
+            dropdown.value = 'en';
+        }
+    }
+
+    // Call the function after the Google Translate script has loaded
+    window.onload = function() {
+        googleTranslateElementInit();
+        setTimeout(modifyLanguageDropdown, 1000); // Delay to ensure the dropdown is loaded
+    };
+</script>
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!----------------------->
