@@ -40,16 +40,16 @@
         </div>
 
         {{-- CAPTCHA --}}
-        <div class="d-flex align-items-center">
+        {{-- <div class="d-flex align-items-center">
             <img style="margin: 10px" src="{{ captcha_src() }}" alt="CAPTCHA">
             <a href="javascript:void(0);" onclick="refreshCaptcha()"> 🔄 Refresh</a>
         </div>
 
-        <input type="text" wire:model="captcha" class="form-control" placeholder="Enter CAPTCHA">
+        <input type="text" wire:model="captcha" class="form-control" placeholder="Enter CAPTCHA"> --}}
 
-        @error('captcha')
+        {{-- @error('captcha')
             <p class="text-danger">{{ $message }}</p>
-        @enderror
+        @enderror --}}
 
         <div class="text-center mt-4">
             <button type="submit" class="btn btn-primary px-4 py-2">
