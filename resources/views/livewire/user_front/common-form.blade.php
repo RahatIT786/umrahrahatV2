@@ -58,5 +58,3 @@
         </div>
     </form>
 </div>
-
-<script src="{{asset('asserts/captch.js')}}"></script>

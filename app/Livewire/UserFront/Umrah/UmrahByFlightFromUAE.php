@@ -7,7 +7,7 @@ use Livewire\Component;
 use App\Models\mainPackage as MainPackage;
 use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
-use Livewire\Attributes\Layout; 
+use Livewire\Attributes\Layout;
 
 class UmrahByFlightFromUAE extends Component
 {
@@ -23,13 +23,15 @@ class UmrahByFlightFromUAE extends Component
     //for enquire form variables
     public $umrahEmquire;
 
-    //popup form variable 
+    //popup form variable
     public $name;
     public $mobile;
     public $date_of_travel;
     public $total_pax;
     public $travel_type;
     public $searchPackage;
+    public $isOpen = false;
+    public $package = [];
 
     protected $rules = [
         'name' => 'required|string|max:255',
@@ -50,12 +52,23 @@ class UmrahByFlightFromUAE extends Component
         $this->departCities = $this->getAllDepartCities();
         $this->packageDays =MainPackage::where('delete_status', 1)->where('service_type','3')->pluck('package_days');
     }
+    public function openModal($packageData)
+    {
+        $this->package = $packageData;
+       // dd($this->package);
+        $this->isOpen = true;
+    }
+
+    public function closeModal()
+    {
+        $this->isOpen = false;
+    }
 
     public function getAllDepartCities()
     {
         // Fetch all packages from the database
         $packages = MainPackage::where('delete_status', 1)->get();
-        
+
         // Map over each package and convert `depart_city` to an array
         $departCities = $packages->map(function ($package) {
             return explode(',', $package->depart_city);
@@ -75,7 +88,7 @@ class UmrahByFlightFromUAE extends Component
     }
 
     public function umrahEnquirePopu(){
-      
+
         $this->umrahEmquire=true;
     }
     public function umrahEnquirePopupClose(){
@@ -92,7 +105,7 @@ class UmrahByFlightFromUAE extends Component
         'total_pax' => $this->total_pax,
         'travel_type' => $this->travel_type,
     ]);
-    
+
     $this->umrahEmquire=false;
     session()->flash('success', 'Your enquiry has been submitted successfully!');
     }
@@ -110,9 +123,9 @@ class UmrahByFlightFromUAE extends Component
         $query = MainPackage::where('delete_status', 1)
         ->where('service_type', strtolower(__('message.umrah')))
         ->where('departure_type',strtolower(__('message.flight')));
-       
 
-    
+
+
         if ($this->searchPackage) {
             $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }

@@ -31,6 +31,8 @@ class UmrahLandPackageUAE extends Component
     public $travel_type;
     public $searchPackage;
     public $limit = 5;
+    public $isOpen = false;
+    public $package = [];
 
     protected $rules = [
         'name' => 'required|string|max:255',
@@ -50,6 +52,17 @@ class UmrahLandPackageUAE extends Component
         // Get and process all depart city data
         $this->departCities = $this->getAllDepartCities();
         $this->packageDays =MainPackage::where('delete_status', 1)->where('service_type','3')->pluck('package_days');
+    }
+    public function openModal($packageData)
+    {
+        $this->package = $packageData;
+       // dd($this->package);
+        $this->isOpen = true;
+    }
+
+    public function closeModal()
+    {
+        $this->isOpen = false;
     }
     public function loadMore()
     {

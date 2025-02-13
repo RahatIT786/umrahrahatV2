@@ -299,6 +299,20 @@
 
               </ul>
             </li>
+            <li>
+                <a href="javascript:;" class="has-arrow">
+                  <div class="parent-icon"><i class="bi bi-basket2-fill"></i>
+                  </div>
+                  <div class="menu-title">Package Enquires</div>
+                </a>
+                <ul>
+                  <li>
+                      <a href="{{route('package-enquires')}}" wire:navigate>
+                          <i class="bi bi-circle"></i>Enquires From User
+                      </a>
+                  </li>
+                </ul>
+              </li>
           </ul>
           <!--end navigation-->
        </aside>

@@ -4,14 +4,14 @@ namespace App\Livewire\Admin\Components;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
-use Livewire\WithPagination; 
+use Livewire\WithPagination;
 use App\Models\HotelDetail;
 
 class ListHotalDetails extends Component
 {
-    use WithPagination;  
+    use WithPagination;
     public $search = null;
-    public $hotelId;  
+    public $hotelId;
     public $showModal = false;
 
     public function confirmDelete($id)
@@ -30,7 +30,7 @@ class ListHotalDetails extends Component
         if ($this->hotelId) {
             $hotelDetails = HotelDetail::findOrFail($this->hotelId);
             $hotelDetails->update(['deleteStatus' => 2]);
-            session()->flash('message', 'Visa details successfully marked as deleted.');
+            session()->flash('message', 'Hotel details successfully marked as deleted.');
             $this->showModal = false;
         }
     }
@@ -45,7 +45,7 @@ class ListHotalDetails extends Component
                   ->orWhere('hotelStarRating', 'like', '%'.$this->search.'%');
         })
         ->paginate(10);
-        
+
         return view('livewire.admin.components.list-hotal-details',['HotelDetails' => $HotelDetails]);
     }
 }
