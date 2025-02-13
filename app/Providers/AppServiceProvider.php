@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\ZiyaratCity;
+use App\Models\HolidayCity;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,7 +25,8 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('user.layouts.app', 'app-layout');
         View::composer('user.includes.navbar', function ($view) {
             $Ziyaratcities = ZiyaratCity::where('delete_status', 1)->get();
-            $view->with('Ziyaratcities', $Ziyaratcities);
+            $holidaycities = HolidayCity::where('delete_status',1)->get();
+            $view->with(['Ziyaratcities' => $Ziyaratcities, 'holidaycities' => $holidaycities]);
         });
     }
 }

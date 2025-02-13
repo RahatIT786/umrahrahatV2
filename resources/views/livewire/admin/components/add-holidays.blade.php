@@ -27,8 +27,8 @@
                             <label class="form-label">Package Name</label>
                             <select class="form-control" id="service_type" wire:model.live="service_type" required>
                                 <option value="">Select Package Type</option>
-                                @foreach ($ziyaratCity as $key => $value)
-                                    <option value="{{ $value->id }}">{{ $value->ziyarat_city }}</option>
+                                @foreach ($HolidayCity as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->Holiday_city }}</option>
                                 @endforeach
                             </select>
                             @error("service_type") <span class="text-danger">{{ $message }}</span> @enderror
@@ -308,7 +308,7 @@
 
                     <!-- Submit Button -->
                     <div class="col-md-4 d-flex justify-content-end">
-                        <button class="btn btn-primary w-100">Submit Ziyarat Details</button>
+                        <button class="btn btn-primary w-100">Submit Holiday Details</button>
                     </div>
                   </form>
                 </div>

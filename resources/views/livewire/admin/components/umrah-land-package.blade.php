@@ -12,7 +12,7 @@
                         </div>
                     @endif
                   <form class="row g-3" wire:submit.prevent="save" onsubmit="event.preventDefault();">
-                        
+
                         <!-- Package Master Name* -->
                         <div class="col-md-6 mb-3">
                             <label for="package_name" class="form-label">Package Master Name*</label>
@@ -72,7 +72,7 @@
                             <option value="">Select Departure Type</option>
                            @foreach ($departureTypes as $type)
 
-                              <option value="{{$type->type}}">{{ucfirst($type->type)}}</option> 
+                              <option value="{{$type->type}}">{{ucfirst($type->type)}}</option>
                            @endforeach
                         </select>
                         @error('package_da') <span class="text-danger">{{ $message }}</span> @enderror
@@ -91,13 +91,13 @@
                             <small class="form-text text-muted">Allowed file types: .jpg, .jpeg, .png</small>
                             @error('packageImage') <span class="text-danger">{{ $message }}</span> @enderror
 
-                            
+
                             @if ($packageImage)
                                 <div class="mt-3">
                                     <img src="{{ $packageImage->temporaryUrl() }}" alt="Preview" class="img-thumbnail" style="max-width: 200px;">
                                 </div>
                             @endif
-        
+
                         </div>
 
 
@@ -117,7 +117,7 @@
                     </div>
 
                     <!-- Flight Name -->
-                   
+
                   @if (strtolower((string) $departure_type) === strtolower((string) $flightValue))
                   <div class="col-md-4 mb-3">
                     <label class="form-label">Flights</label>
@@ -132,7 +132,7 @@
                     </div>
                     @error('flights') <span class="text-danger">{{ $message }}</span> @enderror
                 </div>
-                  
+
                   @endif
 
                     <!-- Departure City Name -->
@@ -224,7 +224,7 @@
                         @error('packageItinerary') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
-                    
+
 
                     @if ($this->package_type_ids != null)
                      @foreach ( $package_type_ids as $k => $v )
@@ -233,7 +233,7 @@
                             @foreach ($packageType as $key => $value)
                                @if ( $v == $value->id)
                                   <h4>{{ $value->packageType }}</h4>
-                               @endif 
+                               @endif
                             @endforeach
                         </div>
                         <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
@@ -262,7 +262,7 @@
                                         @foreach ($makkaHotel[$k] as $id => $hotelName)
                                             <option value="{{ $id }}">{{ $hotelName }}</option>
                                         @endforeach
-                                    @endif  
+                                    @endif
                                 </select>
                                 @error("makka_hotel.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
@@ -336,7 +336,7 @@
                                 @error("laundray_type.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                       </div>
-  
+
                       <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
 
                            <!-- Sharing -->
@@ -345,7 +345,7 @@
                                 <input type="text" id="g_share_price{{ $k }}" wire:model="g_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                                 @error("g_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
-                            
+
                             <!-- Quint -->
                             <div class="col-lg-4">
                                 <label  class="form-label">Quint*</label>
@@ -358,7 +358,7 @@
                                 <input type="text" id="qd_share_price{{ $k }}" wire:model="qd_share_price.{{ $k }}" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                                 @error("qd_share_price.{$k}") <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
-                           
+
                       </div>
                       <div class="col-lg-12 mb-3 d-flex justify-content-evenly">
                          <!-- Triple -->
@@ -404,7 +404,7 @@
 
                     <!-- Submit Button -->
                     <div class="col-md-4 d-flex justify-content-end">
-                        <button class="btn btn-primary w-100">Submit Hotel Details</button>
+                        <button class="btn btn-primary w-100">Submit Package Details</button>
                     </div>
                   </form>
                 </div>

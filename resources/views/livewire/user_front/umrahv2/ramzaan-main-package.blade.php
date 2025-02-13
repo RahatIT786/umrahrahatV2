@@ -39,7 +39,7 @@
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Ramzaan Package from UAE</h1>
                     <nav aria-label="breadcrumb">
-                       
+
                     </nav>
                 </div>
             </div>
@@ -51,8 +51,8 @@
           <div class="bg-white shadow" style="padding: 35px;">
               <div class="row g-2">
                  {{-- <form wire:submit.prevent="searchSubmit" > --}}
-               
-                    
+
+
                     <div class="col-md-12">
                         <div class="row g-2">
                             <div class="col-md-8">
@@ -76,7 +76,7 @@
        <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                  
+
                     {{-- <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Package </span></h1> --}}
                 </div>
                 <div class="row g-4">
@@ -88,9 +88,9 @@
                             <!-- Left Column: Image Section -->
                             <div style="height: 300px;" class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
                                 <div class=" ">
-                                    <img class="" 
-                                         src="{{Storage::url($package->packageImage) ? Storage::url($package->packageImage) : asset('asserts/user/img/haj/masque.jpg')}}" 
-                                         alt="" 
+                                    <img class=""
+                                         src="{{Storage::url($package->packageImage) ? Storage::url($package->packageImage) : asset('asserts/user/img/haj/masque.jpg')}}"
+                                         alt=""
                                          style="width: 100%; height: 17rem; object-fit: cover; border-radius: 15px;">
                                     <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded mb-3 py-1 px-3 ms-4">{{$package->package_days}} days</small> -->
                                 </div>
@@ -103,78 +103,91 @@
                                     <h4 class="mb-0 " style="font-weight: 600;"> {{ucfirst($package->name)}}</h4>
                                     <div class="d-flex my-2">
                                         <div>
-                                           <p style="font-weight: bold;" class="my-1">Inclusion :</p>
+                                           <p style="font-weight: bold;" class="my-1">Inclusion </p>
                                         </div>
 
                                     @php
                                         $packageIncludesArray = explode(',', $package->package_includes);
                                     @endphp
-                                    @foreach ($packageIncludesArray as $include)
-                                    @if ($include == 2)
+                                     @foreach ($packageIncludesArray as $include)
+                                     @if ($include == 2)
+                                      <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                      <span style="font-size: 20px;" class="mx-2"> <i class="fa-solid fa-bottle-water"></i> </span>
+                                      <span style="font-size: 12px;">zamzam</span>
+                                      </div>
+
+                                     @elseif ($include == 3)
                                      <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                     <span style="font-size: 25px;" class="mx-2"> <i class="fa-solid fa-bottle-water"></i> </span> 
-                                     <span style="font-size: 12px;">zamzam</span>
+                                     <span style="font-size: 20px;" class=""> <i class="fa-solid fa-bus"></i></span>
+                                     <span style="font-size: 12px;">Bus</span>
                                      </div>
 
-                                    @elseif ($include == 3)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""> <i class="fa-solid fa-bus"></i></span> 
-                                    <span style="font-size: 12px;">Bus</span>
-                                    </div>
+                                     @elseif ($include == 4)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class=""> <i class="fa-solid fa-sim-card"></i></span>
+                                     <span style="font-size: 12px;">Saudi SIM</span>
+                                     </div>
 
-                                    @elseif ($include == 4)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""> <i class="fa-solid fa-sim-card"></i></span> 
-                                    <span style="font-size: 12px;">Saudi SIM</span>
-                                    </div>
+                                     @elseif ($include == 5)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class=""><i class="fa-solid fa-bag-shopping"></i></span>
+                                     <span style="font-size: 12px;">Welcome Kit</span>
+                                     </div>
 
-                                    @elseif ($include == 5)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""><i class="fa-solid fa-bag-shopping"></i></span> 
-                                    <span style="font-size: 12px;">Welcome Kit</span>
-                                    </div>
+                                     @elseif ($include == 6)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class=""><i class="fa-solid fa-bowl-food"></i></span>
+                                     <span style="font-size: 12px;">Meals</span>
+                                     </div>
 
-                                    @elseif ($include == 6)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""><i class="fa-solid fa-bowl-food"></i></span> 
-                                    <span style="font-size: 12px;">Meals</span>
-                                    </div>
+                                     @elseif ($include == 7)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class="mx-2"><i class="fa-solid fa-person-praying"></i></span>
+                                     <span style="font-size: 12px;">Ziyarat</span>
+                                     </div>
 
-                                    @elseif ($include == 7)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class="mx-2"><i class="fa-solid fa-person-praying"></i></span> 
-                                    <span style="font-size: 12px;">Ziyarat</span>
-                                    </div>
+                                     @elseif ($include == 8)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class=""> <i class="fa-brands fa-cc-visa"></i></span>
+                                     <span style="font-size: 12px;">Visa</span>
+                                     </div>
 
-                                    @elseif ($include == 8)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""> <i class="fa-brands fa-cc-visa"></i></span> 
-                                    <span style="font-size: 12px;">Visa</span>
-                                    </div>
+                                     @elseif ($include == 9)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class=""> <i class="fa-solid fa-ticket"></i></span>
+                                     <span style="font-size: 12px;">Ticket</span>
+                                     </div>
 
-                                    @elseif ($include == 9)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class=""> <i class="fa-solid fa-ticket"></i></span> 
-                                    <span style="font-size: 12px;">Ticket</span>
-                                    </div>
+                                     @elseif ($include == 10)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class="">  <i class="fa-solid fa-jug-detergent"></i></span>
+                                     <span style="font-size: 12px;">Laundry</span>
+                                     </div>
 
-                                    @elseif ($include == 10)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class="">  <i class="fa-solid fa-jug-detergent"></i></span> 
-                                    <span style="font-size: 12px;">Laundry</span>
-                                    </div>
+                                     @elseif ($include == 11)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class="">  <i class="fa-solid fa-file-shield"></i></span>
+                                     <span style="font-size: 12px;">Barder Tax</span>
+                                     </div>
 
-                                    @elseif ($include == 11)
-                                    <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
-                                    <span style="font-size: 25px;" class="">  <i class="fa-solid fa-file-shield"></i></span> 
-                                    <span style="font-size: 12px;">Barder Tax</span>
-                                    </div>
+                                     @elseif ($include == 17)
+                                     <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                     <span style="font-size: 20px;" class="">  <i class="fa-solid fa-hotel"></i></span>
+                                     <span style="font-size: 12px;">Hotel</span>
+                                     </div>
 
+                                     @endif
+
+                                     @endforeach
+
+                                    @if (in_array(15, $packageIncludesArray) || in_array(18, $packageIncludesArray))
+                                        <div class="d-flex flex-column mx-2 justify-content-center align-items-center">
+                                           <span style="font-size: 20px;" class="">  <i class="fa-solid fa-person-chalkboard"></i></span>
+                                            <span style="font-size: 12px;">Professional Guide</span>
+                                        </div>
                                     @endif
 
-                                    @endforeach
 
-                                    
                                     </div>
                                     <div class="d-flex justify-content-between">
                                          <p class=""> <strong>Total Nights :</strong> {{$package->package_days}} Nights ,</p>
@@ -191,26 +204,26 @@
                                     intval($package->sharingDetails->single),
                                    );
                                    @endphp
-                                   
+
                                     <div class="ps-2">
                                        <h5 style="color: gray">Start From</h5>
                                        <div class="text-end">
-                                        <del class="text-danger">{{$minPrice * 1.1}}.AED</del> 
+                                        <del class="text-danger">{{$minPrice * 1.1}}.AED</del>
                                         <p class="text-end" style="color: black;"><span style="font-size: 22px;   font-weight: 500;">{{$minPrice }}</span>.AED <br>
                                         <span style="color: green; font-size: 11px; font-weight: 600;">YOU SAVED {{($minPrice * 1.1) - ($minPrice )}}.AED  <i class="fa-solid fa-sack-xmark"></i></span>
-                                        </p> 
-                                       
+                                        </p>
+
                                        </div>
-                                      
+
                                     </div>
                                 </div>
 
                                 <div>
                                     <p style="border: 1px dashed #FEA116; padding:2px 4px;" class="">
-                                       
-                                          <span class="mx-3"> <span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Makkah Hotel : </span><span >{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span></span> 
-                                          <span class="mx-3"> <span class="mx-3" style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Madina Hotel : </span><span >{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span></span>  
-                                       
+
+                                          <span class="mx-3"> <span style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Makkah Hotel : </span><span >{{ucfirst($package->packageDetail->makkaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span></span>
+                                          <span class="mx-3"> <span class="mx-3" style="font-weight:500; color: #0D1425;"> <i class="fa-solid fa-hotel"></i> Madina Hotel : </span><span >{{ucfirst($package->packageDetail->madinaHotelDetail->hotelName) ?? 'Hotel Name Not Available'}}</span></span>
+
                                     </p>
                                 </div >
                                   <div class="d-flex justify-content-between">
@@ -231,7 +244,7 @@
                                         </div>
                                         <div>
                                             <div class="d-flex mb-2">
-                                            <img style="height: 20px;" src="{{asset('images/googlereview.png')}}"  alt="googlereview"> 
+                                            <img style="height: 20px;" src="{{asset('images/googlereview.png')}}"  alt="googlereview">
                                             <div class="ms-2">
                                                 <span>4.5</span>
                                                 <small class="fa fa-star text-primary"></small>
@@ -239,7 +252,7 @@
                                                 <small class="fa fa-star text-primary"></small>
                                                 <small class="fa fa-star text-primary"></small>
                                                 <a style="color: #007bff; text-decoration: underline;"  target="_blank" href="https://www.google.com/search?q=rahat+travels&oq=rahat+travels&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQIxgnMgwIAhAAGBQYhwIYgAQyDAgDEAAYFBiHAhiABDINCAQQLhivARjHARiABDIHCAUQABiABDIGCAYQRRg8MgYIBxBFGD3SAQg0OTUxajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8#lrd=0x3be7ce3cd58b13c3:0xb07729f581586b81,1,,,,">Google review</a>
-                                                
+
                                             </div>
                                             </div>
                                         </div>

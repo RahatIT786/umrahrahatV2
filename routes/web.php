@@ -64,6 +64,12 @@ use App\Livewire\Admin\umrahv2\QuickEnquires;
 use App\Livewire\Admin\Components\ServiceType;
 // use App\Livewire\UserFront\Umrahv2\UserViewZiyarat;
 
+//Holiday Controller
+use App\Livewire\Admin\Components\Holidays;
+use App\Livewire\Admin\Components\AddHolidays;
+use App\Livewire\Admin\Components\HolidayCities;
+
+
 //PackageEnquireFromUser
 use App\Livewire\Admin\Components\PackageEnquireFromUser;
 
@@ -100,6 +106,8 @@ use App\Livewire\UserFront\Dummy\UmrahPackageFromIndiaDummy;
 use App\Livewire\MissionVision;
 use App\Livewire\AgentSpeak;
 use App\Livewire\Agm;
+use App\Livewire\UserViewHoliday;
+use App\Livewire\UserHolidaySingle;
 use App\Livewire\UserViewZiyarat;
 use App\Livewire\ZiyaratSingleView;
 use App\Livewire\OurAwards;
@@ -225,6 +233,10 @@ Route::get('/user/transport-details/{id}',TransfersSingle::class)->name('transpo
 Route::get('/user/ziyarat/{id}',UserViewZiyarat::class)->name('user.ziyarat');
 Route::get('/user/ziyarat-single/{id}',ZiyaratSingleView::class)->name('user.ziyarat-single');
 
+//Holiday
+Route::get('/user/holiday/{id}',UserViewHoliday::class)->name('user.holiday');
+Route::get('/user/holiday-single/{id}',UserHolidaySingle::class)->name('user.holiday-single');
+
 //book my assitant
 Route::get('/user/myassistant',Assistant::class)->name('myassistant');
 
@@ -311,6 +323,11 @@ Route::get('/admin/list-ziyarat',Ziyarat::class)->name('admin.ziyarat');
 Route::get('/admin/add-ziyarat',AddZiyarat::class)->name('admin.add-ziyarat');
 Route::get('/admin/ziyarat-cities',ZiyaratCities::class)->name('admin.ziyarat-cities');
 
+
+//Holiday Controller
+Route::get('/admin/list-holiday',Holidays::class)->name('admin.holiday');
+Route::get('/admin/add-holiday',AddHolidays::class)->name('admin.add-holiday');
+Route::get('/admin/holiday-cities',HolidayCities::class)->name('admin.holiday-cities');
 
 //Package Enquire From User
 Route::get('/admin/package-enquiry-from-user',PackageEnquireFromUser::class)->name('package-enquire-from-user');

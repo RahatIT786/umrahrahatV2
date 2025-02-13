@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HolidayCity;
 use Illuminate\Http\Request;
 use App\Models\ZiyaratCity;
 
@@ -32,6 +33,7 @@ class navbarController extends Controller
     public function showPackages()
     {
         $Ziyaratcities = ZiyaratCity::where('delete_status',1)->get();
-        return view('user.includes.navbar', ['Ziyaratcities'=>$Ziyaratcities]);  // Pass data to the Blade view
+        $holidaycities = HolidayCity::where('delete_status',1)->get();
+        return view('user.includes.navbar', ['Ziyaratcities'=>$Ziyaratcities,'holidaycities'=>$holidaycities]);  // Pass data to the Blade view
     }
 }

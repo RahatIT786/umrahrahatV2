@@ -6,8 +6,10 @@ use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\MainZiyarat;
 use Livewire\WithPagination;
+use App\Models\MainHoliday;
 
-class Ziyarat extends Component
+
+class Holidays extends Component
 {
     use WithPagination;
 
@@ -28,22 +30,20 @@ class Ziyarat extends Component
     public function deleteData()
     {
         if ($this->ziyaratId) {
-            $visaDetails = MainZiyarat::findOrFail($this->ziyaratId);
+            $visaDetails = MainHoliday::findOrFail($this->ziyaratId);
             $visaDetails->update(['delete_status' => 2]);
-            session()->flash('message', 'ziyarat details successfully marked as deleted.');
+            session()->flash('message', 'Holiday details successfully marked as deleted.');
             $this->showModal = false;
         }
     }
     #[Layout('admin.Layouts.app')]
     public function render()
     {
-        $ZiyaratDetails = MainZiyarat::with('serviceCity')->where('delete_status', 1)
-                            ->where(function($query){
-                                $query->where('name', 'like', '%'.$this->search.'%');
-                            })
-                            ->paginate(10);
-        //dd($ZiyaratDetails);
-        return view('livewire.admin.components.ziyarat',['ZiyaratDetails' => $ZiyaratDetails]);
+        $HolidayDetails = MainHoliday::with('serviceCity')->where('delete_status', 1)
+        ->where(function($query){
+            $query->where('name', 'like', '%'.$this->search.'%');
+        })
+        ->paginate(10);
+        return view('livewire.admin.components.holidays',['HolidayDetails' => $HolidayDetails]);
     }
 }
-

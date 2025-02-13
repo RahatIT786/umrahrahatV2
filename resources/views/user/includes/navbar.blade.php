@@ -135,14 +135,6 @@
                                         @foreach($Ziyaratcities as $city)
                                             <a href="{{route('user.ziyarat',['id'=>$city->id])}}" class="dropdown-item">{{$city->ziyarat_city}}</a>
                                         @endforeach
-
-                                        <!-- <a href="{{route('coming-soon')}}" class="dropdown-item">Jordan</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Baghdad</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Egypt</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Turkey</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Uzbekistan</a>
-                                        <a href="{{route('coming-soon')}}" class="dropdown-item">Azerbaijan</a> -->
-
                                     </div>
                                 </div>
                                 <div class="nav-item dropdown">
@@ -177,10 +169,20 @@
                                     <img style="height: 30px; display: block;" src="{{asset('images/Catering_Icon.png')}}" alt="Catering Icon">
                                     <span>Catering</span>
                                 </a>
-                                <a href="https://rahatholidays.com/"  target="_blank" class="nav-item nav-link d-flex flex-lg-column flex-row align-items-center text-center zoom-effect">
-                                    <img style="height: 30px; display: block;" src="{{asset('images/Holiday_Icon.png')}}" alt="Catering Icon">
-                                    <span>Holidays</span>
-                                </a>
+
+                                <div class="nav-item dropdown">
+
+                                    <a  class="nav-link dropdown-toggle d-flex flex-lg-column flex-row align-items-center text-center zoom-effect" data-bs-toggle="dropdown">
+                                        <img style="height: 30px; display: block;" src="{{asset('images/Holiday_Icon.png')}}" alt="Catering Icon">
+                                        <span>Holidays</span>
+                                    </a>
+
+                                    <div class="dropdown-menu rounded-0 m-0" >
+                                        @foreach($holidaycities as $city)
+                                            <a href="{{route('user.holiday',['id'=>$city->id])}}" class="dropdown-item">{{$city->Holiday_city}}</a>
+                                        @endforeach
+                                    </div>
+                                </div>
 
                                 <div class="nav-item dropdown">
 
@@ -400,7 +402,7 @@
                     layout: google.translate.TranslateElement.InlineLayout.SIMPLE
                 }, 'google_translate_element');
             }
-    
+
             // Change the default "Select Language" text to "En"
             function modifyLanguageDropdown() {
                 var selectedLanguage = document.querySelector(".goog-te-combo");
@@ -408,7 +410,7 @@
                     selectedLanguage.options[0].text = 'En'; // Change "Select Language" to "En"
                 }
             }
-    
+
             // Call the function after the Google Translate script has loaded
             window.onload = function() {
                 googleTranslateElementInit();

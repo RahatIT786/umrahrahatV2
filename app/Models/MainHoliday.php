@@ -5,13 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class MainZiyarat extends Model
+class MainHoliday extends Model
 {
     use HasFactory;
-    // Define the table name if it is different from the default plural of the model name
-    protected $table = 'main_ziyarats';
-
-    // Specify which attributes should be mass assignable
+    protected $table = 'main_holidays';
     protected $fillable = [
         'name',
         'service_type',
@@ -46,7 +43,6 @@ class MainZiyarat extends Model
     ];
     public function serviceCity()
     {
-        return $this->belongsTo(ZiyaratCity::class, 'service_type' ,'id');
+        return $this->belongsTo(HolidayCity::class, 'service_type' ,'id');
     }
-
 }
