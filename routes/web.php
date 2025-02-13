@@ -72,6 +72,8 @@ use App\Livewire\Admin\Components\HolidayCities;
 
 //PackageEnquireFromUser
 use App\Livewire\Admin\Components\PackageEnquireFromUser;
+use App\Livewire\Admin\Components\UserPackageEnquiry;
+
 
 use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
@@ -362,6 +364,9 @@ Route::get('/storageLink',[AuthController::class,'setStorageLink']);
 Route::get('/package/ramzan',RamzaanPackage::class)->name('package.ramzan');
 
 Route::get('/admin/quickenquire',QuickEnquires::class)->name('quick.enquiries');
+Route::get('/admin/package-enquires',UserPackageEnquiry::class)->name('package-enquires');
+
+
 Route::get('/admin/agentsignup',AgentSignup::class)->name('agentsignup');
 
 

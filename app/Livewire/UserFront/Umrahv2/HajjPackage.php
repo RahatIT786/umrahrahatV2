@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\mainPackage as MainPackage ;
 use App\Models\inclusion as Inclusion;
 use App\Models\DepartureCity;
-use Livewire\Attributes\Layout; 
+use Livewire\Attributes\Layout;
 
 class HajjPackage extends Component
 {
@@ -19,6 +19,8 @@ class HajjPackage extends Component
     public $searchDays;
     public $packageDays;
     public $searchPackage;
+    public $isOpen = false;
+    public $package = [];
 
     public function mount()
     {
@@ -29,6 +31,18 @@ class HajjPackage extends Component
         $this->departCities = $this->getAllDepartCities();
         $this->packageDays =MainPackage::where('delete_status', 1)->pluck('package_days');
     }
+    public function openModal($packageData)
+    {
+        $this->package = $packageData;
+       // dd($this->package);
+        $this->isOpen = true;
+    }
+
+    public function closeModal()
+    {
+        $this->isOpen = false;
+    }
+
 
     public function getAllDepartCities()
     {
@@ -37,7 +51,7 @@ class HajjPackage extends Component
         ->where('service_type', '2')
         ->where('package_days', '<=', 18)
         ->get();
-        
+
         // Map over each package and convert `depart_city` to an array
         $departCities = $packages->map(function ($package) {
             return explode(',', $package->depart_city);

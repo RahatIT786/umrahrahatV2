@@ -23,7 +23,6 @@ class CommonForm extends Component
         'name' => 'required',
         'email' => 'required | email',
         'phone' => 'required',
-        'captcha' => 'required|captcha',
     ];
 
     protected $messages = [
@@ -36,14 +35,15 @@ class CommonForm extends Component
     {
         // dd($this->package);
         $this->validate();
-        CommonFormModel::create([
+
+       $suss = CommonFormModel::create([
             'user_name' => $this->name,
             'user_email' => $this->email,
             'user_phone' => $this->phone,
             'user_adult' => $this->adult,
             'user_children' => $this->children,
-            'package_name' => $this->package->service_type,
-            'package_type' => $this->package->name,
+            'package_name' => $this->package['name'],
+            'package_type' => $this->package['service_type'],
         ]);
         $this->reset(['name', 'email', 'phone', 'adult', 'children']);
         session()->flash('message', 'Your query send successfully!');

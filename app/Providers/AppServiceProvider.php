@@ -24,8 +24,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Blade::component('user.layouts.app', 'app-layout');
         View::composer('user.includes.navbar', function ($view) {
-            $Ziyaratcities = ZiyaratCity::where('delete_status', 1)->get();
-            $holidaycities = HolidayCity::where('delete_status',1)->get();
+            $Ziyaratcities = ZiyaratCity::orderBy('ziyarat_city', 'asc')->where('delete_status', 1)->get();
+            $holidaycities = HolidayCity::orderBy('Holiday_city', 'asc')->where('delete_status',1)->get();
             $view->with(['Ziyaratcities' => $Ziyaratcities, 'holidaycities' => $holidaycities]);
         });
     }
