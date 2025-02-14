@@ -41,7 +41,7 @@
 
                                         <div class="d-flex justify-content-between my-3">
                                             <h5 class="mb-0">{{$landry['laundry_type']}}</h5>
-                                          
+
                                         </div>
 
                                         <div>
@@ -58,7 +58,7 @@
                                         </div>
 
                                         <p class="text-body mb-3 text-justify">
-                                           
+
                                         </p>
                                         <div>
                                         <h5>Free Benifits</h5>
@@ -66,16 +66,15 @@
                                         </div>
 
                                         <div class="d-flex justify-content-between">
-
-                                            <a class="btn btn-sm btn-dark rounded py-2 px-4">
-                                                <i class="fa-regular fa-paper-plane"></i> Book Enquire
+                                            <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openModal({{ $landry }})">
+                                                <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                                   
+
                 @endforeach
 
                 </div>
@@ -124,5 +123,21 @@
                 </div>
             </div>
         </div>
-
+    </div>
+    <!-- Room End -->
+    @if($isOpen)
+    <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-calendar-check"></i> Book Now</h5>
+                    <button type="button" class="btn-close text-white" wire:click="closeModal"></button>
+                </div>
+                <div class="modal-body">
+                    <livewire:LaundryForm :package="$package" />
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
 </section>

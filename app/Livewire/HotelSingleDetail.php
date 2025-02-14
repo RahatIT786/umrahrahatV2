@@ -14,6 +14,8 @@ class HotelSingleDetail extends Component
     public $hotel_id;
     public $HotelDetails;
     public $hotelCostDatas;
+    public $captcha;
+    public $captcha_code;
 
             //==========================================================================//
             public $package_user_name;
@@ -32,6 +34,7 @@ class HotelSingleDetail extends Component
                     'package_user_adult' => $this->package_user_adult,
                     'package_user_child' => $this->package_user_child,
                     'package_user_hotel_name' => $this->package_user_hotel_name ?? '',
+                    
                 ]);
 
                 session()->flash('success', 'Your enquiry has been submitted successfully!');

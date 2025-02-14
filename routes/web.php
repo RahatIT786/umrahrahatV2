@@ -73,7 +73,8 @@ use App\Livewire\Admin\Components\HolidayCities;
 //PackageEnquireFromUser
 use App\Livewire\Admin\Components\PackageEnquireFromUser;
 use App\Livewire\Admin\Components\UserPackageEnquiry;
-
+use App\Livewire\Admin\Components\HotelEnquireyFromUser;
+use App\Livewire\Admin\Components\UserHotelEnquiry;
 
 use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
@@ -333,7 +334,7 @@ Route::get('/admin/holiday-cities',HolidayCities::class)->name('admin.holiday-ci
 
 //Package Enquire From User
 Route::get('/admin/package-enquiry-from-user',PackageEnquireFromUser::class)->name('package-enquire-from-user');
-
+Route::get('/admin/hotel-enquiry-from-user',HotelEnquireyFromUser::class)->name('hotel-enquiry-from-user');
 
 
 
@@ -365,6 +366,7 @@ Route::get('/package/ramzan',RamzaanPackage::class)->name('package.ramzan');
 
 Route::get('/admin/quickenquire',QuickEnquires::class)->name('quick.enquiries');
 Route::get('/admin/package-enquires',UserPackageEnquiry::class)->name('package-enquires');
+Route::get('/admin/hotel-enquiry-from-user',UserHotelEnquiry::class)->name('hotel-enquiry-from-user');
 
 
 Route::get('/admin/agentsignup',AgentSignup::class)->name('agentsignup');

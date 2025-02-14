@@ -65,7 +65,7 @@
                     <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Hotels</span></h1> -->
                 </div>
                 <div class="row g-4">
-    
+
                     @if ($hotelDetails->count() > 0)
                         @foreach ($hotelDetails as $hotelDetail)
                         <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
@@ -92,7 +92,7 @@
                                                 <i class="fa fa-wifi text-primary me-2"></i>
                                             </small>
                                             <small  class="border-end me-3 pe-3">
-                                              <a href="{{$hotelDetail->hotelYouTube}}"> <i style="font-size: 20px;color:red" class="fa-brands fa-youtube"></i></a> 
+                                              <a href="{{$hotelDetail->hotelYouTube}}"> <i style="font-size: 20px;color:red" class="fa-brands fa-youtube"></i></a>
                                             </small>
                                             <!-- Star Rating -->
                                             @php
@@ -112,7 +112,9 @@
                                         <p class="text-body mb-3">{{ \Illuminate\Support\Str::limit($hotelDetail->hotelDiscription, 250, '...') }}</p>
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{ route('hotel-Detail', ['id' => $hotelDetail->id]) }}">View Detail</a>
-                                            <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#">Book Now</a>
+                                            <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openModal({{  $hotelDetail }})">
+                                                <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -134,5 +136,20 @@
             </div>
         </div>
     <!-- Room End -->
+    @if($isOpen)
+    <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-calendar-check"></i> Book Now</h5>
+                    <button type="button" class="btn-close text-white" wire:click="closeModal"></button>
+                </div>
+                <div class="modal-body">
+                    <livewire:HotelForm :package="$package" />
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
 
 </section>

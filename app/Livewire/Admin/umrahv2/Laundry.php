@@ -25,7 +25,7 @@ class Laundry extends Component
     public $note;
     public $description;
     public $image;
-    public $selectedOrderId; 
+    public $selectedOrderId;
     public $laundryTypes=[
         'Gold',
         'Silver',
@@ -56,11 +56,11 @@ Rahat Group is pleased to offer premium laundry services for your Hajj & Umrah g
         'price' => 'required|integer',
         'cloth_count' => 'required|string',
         'image'=>'required',
-       
-        
+
+
     ];
-  
-    
+
+
     public function mount(){
 
         $this->laundryTypes;
@@ -81,9 +81,9 @@ Rahat Group is pleased to offer premium laundry services for your Hajj & Umrah g
     // }
 
     public function updatedDefaultNotes($value){
-        dd($value);
+      //  dd($value);
         // = trim($value);
-        $this->defaultNotes  = strip_tags($value); 
+        $this->defaultNotes  = strip_tags($value);
 
     }
 
@@ -100,9 +100,9 @@ Rahat Group is pleased to offer premium laundry services for your Hajj & Umrah g
         //     'description' => $this->defaultDescription,
         //     // 'image' => $imagePath,
         // ]);
-       
 
-       
+
+
         $imagePath = null;
         if ($this->image) {
             $imagePath = $this->image->store('laundry_images', 'public');
@@ -122,7 +122,7 @@ Rahat Group is pleased to offer premium laundry services for your Hajj & Umrah g
             ]);
             session()->flash('message', 'Laundry Order Updated Successfully');
             $this->reset();
-           
+
 
         }
         else{
@@ -138,12 +138,11 @@ Rahat Group is pleased to offer premium laundry services for your Hajj & Umrah g
 
             ]);
             session()->flash('message', 'Laundry Order Created Successfully');
-            $this->reset(); 
-           
+            $this->reset();
+
 
         }
     }
-   
 
 
 
@@ -153,8 +152,9 @@ Rahat Group is pleased to offer premium laundry services for your Hajj & Umrah g
 
 
 
-   
-    
+
+
+
 
 
 

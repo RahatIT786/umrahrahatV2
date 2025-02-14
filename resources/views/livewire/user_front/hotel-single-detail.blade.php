@@ -241,6 +241,7 @@
                                 <input type="number" class="form-control" id="num-children" min="0" wire:model='package_user_child' required>
                                 @error('package_user_child') <span class="error">{{ $message }}</span> @enderror
                             </div>
+                            
                             <button type="submit" class="btn btn-primary w-100">Book Now</button>
                         </form>
                     </div>

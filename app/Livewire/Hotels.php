@@ -14,10 +14,23 @@ class Hotels extends Component
     public $searchHotel;
     public $hotelCities;
     public $limit = 5; // Start with 10 hotels
+    public $isOpen = false;
+    public $package = [];
 
     public function mount()
     {
         $this->hotelCities = HotelCities::where('delete_status', 1)->get();
+    }
+    public function openModal($package = [])
+    {
+        $this->package = $package;
+       // dd($this->package);
+        $this->isOpen = true;
+    }
+
+    public function closeModal()
+    {
+        $this->isOpen = false;
     }
 
     public function loadMore()

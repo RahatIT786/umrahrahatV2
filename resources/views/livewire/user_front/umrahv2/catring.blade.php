@@ -28,7 +28,7 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    
+
                 </div>
                 <div class="row g-4 align-items-center">
                     @foreach ($foodDetails as $food)
@@ -48,8 +48,8 @@
                                             <h5 class="mb-0">{{$food['foodType']}}</h5>
                                             <div>
                                                 <img src="{{asset('asserts/user/img/halalimg.png')}}" alt="halal" style="height:4rem;padding-bottom:20px">
-                                                <a href="{{Storage::url($food['footPdf'])}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-filetype-pdf mx-3"></i></a> 
-                                                <a href="{{$food['foodLunch']}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-youtube mx-3"></i></a> 
+                                                <a href="{{Storage::url($food['footPdf'])}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-filetype-pdf mx-3"></i></a>
+                                                <a href="{{$food['foodLunch']}}" target="_blank"><i style="font-size: 35px;color:red" class="bi bi-youtube mx-3"></i></a>
                                             </div>
                                         </div>
 
@@ -67,8 +67,8 @@
                                             <a class="btn btn-sm btn-primary rounded py-2 px-4 me-2" href="{{ Storage::url($food['footPdf']) }}">
                                                 <i class="fa-solid fa-book"></i> Food Menu
                                             </a>
-                                            <a class="btn btn-sm btn-dark rounded py-2 px-4">
-                                                <i class="fa-regular fa-paper-plane"></i> Book Enquire
+                                            <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openModal({{ $food }})">
+                                                <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                                             </a>
                                         </div>
                                     </div>
@@ -122,5 +122,20 @@
                 </div>
             </div>
         </div>
+        @if($isOpen)
+        <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title"><i class="fas fa-calendar-check"></i> Book Now</h5>
+                        <button type="button" class="btn-close text-white" wire:click="closeModal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <livewire:CatringForm :package="$package" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 
 </section>

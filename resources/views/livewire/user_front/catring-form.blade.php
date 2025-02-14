@@ -5,7 +5,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
     @endif
-
+    
     @if (session()->has('error'))
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             {{ session('error') }}
@@ -55,7 +55,7 @@
                     {{ $captcha_code }}
                 </div>
 
-            <a href="javascript:void(0);" wire:click="generateCaptcha" style="color:black" class="ms-3 text-primary">🔄 Refresh</a>
+            <a href="javascript:void(0);" wire:click="generateCaptcha" class="ms-3 text-primary">🔄 Refresh</a>
         </div>
 
         <input type="text" wire:model="captcha" class="form-control mt-2" placeholder="Enter CAPTCHA">

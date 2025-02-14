@@ -4,19 +4,18 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
-use App\Models\CommonForm as CommonFormModel;
+use App\Models\HotelForm as HotelFormModel;
 use Illuminate\Support\Facades\Session;
 
-class CommonForm extends Component
+
+class HotelForm extends Component
 {
     public $name;
     public $email;
     public $phone;
     public $adult;
-    public $children;
+    public $children,$captcha;
     public $package = [];
-
-    public $captcha;
     public $captcha_code;
 
     public function mount($package = [])
@@ -24,7 +23,6 @@ class CommonForm extends Component
         $this->package = $package;
         $this->generateCaptcha();
     }
-
     protected $rules = [
         'name' => 'required',
         'email' => 'required | email',
@@ -38,6 +36,7 @@ class CommonForm extends Component
         'phone.required' => 'Phone is required.',
         'captcha.required' => 'CAPTCHA is required.',
     ];
+
     public function generateCaptcha()
     {
         $this->captcha_code = strtoupper(substr(str_shuffle('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'), 0, 6));
@@ -46,32 +45,31 @@ class CommonForm extends Component
 
     public function submit()
     {
-        // dd($this->package);
         $this->validate();
-
         if (strtoupper($this->captcha) !== session('captcha')) {
             session()->flash('error', 'Incorrect CAPTCHA. Please try again.');
             $this->generateCaptcha();
             return;
         }
 
-       $suss = CommonFormModel::create([
+       $suss = HotelFormModel::create([
             'user_name' => $this->name,
             'user_email' => $this->email,
             'user_phone' => $this->phone,
             'user_adult' => $this->adult,
             'user_children' => $this->children,
-            'package_name' => $this->package['name'],
-            'package_type' => $this->package['service_type'],
+            'hotel_name' => $this->package['hotelName'],
+            'hotel_cities' => $this->package['hotelCity'],
         ]);
-        $this->reset(['name', 'email', 'phone', 'adult', 'children','captcha']);
+        $this->reset(['name', 'email', 'phone', 'adult', 'children']);
         session()->flash('message', 'Your query send successfully!');
 
         // Handle form submission with package details
     }
     #[Layout('user.Layouts.app')]
+
     public function render()
     {
-        return view('livewire.user_front.common-form');
+        return view('livewire.user_front.hotel-form');
     }
 }
