@@ -312,8 +312,33 @@
                       </a>
                   </li>
                   <li>
-                    <a href="{{route('hotel-enquiry-from-user')}}" wire:navigate>
+                    <a href="{{route('hotel-enquiry-user')}}" wire:navigate>
                         <i class="bi bi-circle"></i>Hotel Enquires From User
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('transfer-enquiry-from-user')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>Transfers Enquires From User
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('sightseeing-enquiry-from-user')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>sight Seeing Enquires From User
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('catring-enquiry-from-user')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>Catring Enquires From User
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('laundry-enquiry')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>Laundry Enquires From User
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('assist-enquiry')}}" wire:navigate>
+                        <i class="bi bi-circle"></i>Assistance Enquires From User
                     </a>
                 </li>
                 </ul>

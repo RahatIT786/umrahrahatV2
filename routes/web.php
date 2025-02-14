@@ -75,6 +75,11 @@ use App\Livewire\Admin\Components\PackageEnquireFromUser;
 use App\Livewire\Admin\Components\UserPackageEnquiry;
 use App\Livewire\Admin\Components\HotelEnquireyFromUser;
 use App\Livewire\Admin\Components\UserHotelEnquiry;
+use App\Livewire\Admin\Components\TransferEnquiry;
+use App\Livewire\Admin\Components\SightSeeingEnquiry;
+use App\Livewire\Admin\Components\CatringEnquiry;
+use App\Livewire\Admin\Components\LaundryEnquiry;
+use App\Livewire\Admin\Components\AssistEnquiry;
 
 use App\Livewire\Blog;
 use App\Livewire\Admin\Dashboard;
@@ -366,8 +371,12 @@ Route::get('/package/ramzan',RamzaanPackage::class)->name('package.ramzan');
 
 Route::get('/admin/quickenquire',QuickEnquires::class)->name('quick.enquiries');
 Route::get('/admin/package-enquires',UserPackageEnquiry::class)->name('package-enquires');
-Route::get('/admin/hotel-enquiry-from-user',UserHotelEnquiry::class)->name('hotel-enquiry-from-user');
-
+Route::get('/admin/hotel-enquiry',UserHotelEnquiry::class)->name('hotel-enquiry-user');
+Route::get('/admin/transfer-enquiry',TransferEnquiry::class)->name('transfer-enquiry-from-user');
+Route::get('/admin/sightseeing-enquiry',SightSeeingEnquiry::class)->name('sightseeing-enquiry-from-user');
+Route::get('/admin/catring-enquiry',CatringEnquiry::class)->name('catring-enquiry-from-user');
+Route::get('/admin/laundry-enquiry',LaundryEnquiry::class)->name('laundry-enquiry');
+Route::get('/admin/assist-enquiry',AssistEnquiry::class)->name('assist-enquiry');
 
 Route::get('/admin/agentsignup',AgentSignup::class)->name('agentsignup');
 
