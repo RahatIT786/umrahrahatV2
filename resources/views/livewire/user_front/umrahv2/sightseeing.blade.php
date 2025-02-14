@@ -50,7 +50,7 @@
 
         <div class="container mt-5 mb-5">
     <h4 class="text-center text-dark mb-5 font-weight-bold">Explore Makkah's Historical & Spiritual Landmarks</h4>
-    
+
     <div class="row">
         <!-- Jabal-e-Soor Card -->
          @foreach ($allSights as $allSight)
@@ -62,7 +62,7 @@
                         <h5 class="card-title text-dark font-weight-semibold">{{$allSight->sightName}}</h5>
                         <div  class="d-flex"><i style="font-size: 20px;color:#FEAF39" class="bi bi-geo-alt-fill"></i> &nbsp; <h4>{{$allSight->sightCity}}</h4> </div>
                     </div>
-                    
+
                     <p class="card-text text-dark font-italic mt-3">
                     {{ \Illuminate\Support\Str::limit($allSight->sightDiscription, 250, '...') }}
                     </p>
@@ -70,8 +70,8 @@
                         <a href="{{route('singleSightSeeing',['id'=>$allSight->id])}}" class="btn btn-sm btn-primary rounded py-2 px-4 me-2" >
                             <i class="fa-solid fa-file-zipper"></i> More info
                         </a>
-                        <a class="btn btn-sm btn-dark rounded py-2 px-4">
-                            <i class="fa-regular fa-paper-plane"></i>  Book Enquire
+                        <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openModal({{  $allSight }})">
+                            <i class="fa-regular fa-paper-plane"></i> {{__('message.book_now')}}
                         </a>
                     </div>
                 </div>
@@ -85,4 +85,20 @@
                     </div>
                 @endif
 </div>
+    <!-- Room End -->
+    @if($isOpen)
+    <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-calendar-check"></i> Book Now</h5>
+                    <button type="button" class="btn-close text-white" wire:click="closeModal"></button>
+                </div>
+                <div class="modal-body">
+                    <livewire:SightSeeingForm :package="$package" />
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
 </section>

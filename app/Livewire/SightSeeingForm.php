@@ -4,27 +4,27 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
-use App\Models\CommonForm as CommonFormModel;
+use App\Models\SightSeeingForm as SightSeeingFormModel;
 use Illuminate\Support\Facades\Session;
-
-class CommonForm extends Component
+class SightSeeingForm extends Component
 {
     public $name;
     public $email;
     public $phone;
     public $adult;
-    public $children;
+    public $children,$captcha;
     public $package = [];
-
-    public $captcha;
+    public $sightname,$sightplace;
     public $captcha_code;
 
     public function mount($package = [])
     {
         $this->package = $package;
+        $this->sightname = $this->package['sightName'];
+        $this->sightplace = $this->package['sightCity'];
         $this->generateCaptcha();
-    }
 
+    }
     protected $rules = [
         'name' => 'required',
         'email' => 'required | email',
@@ -46,23 +46,23 @@ class CommonForm extends Component
 
     public function submit()
     {
-        // dd($this->package);
         $this->validate();
 
-        if (strtoupper($this->captcha) !== session('captcha')) {
-            session()->flash('error', 'Incorrect CAPTCHA. Please try again.');
-            $this->generateCaptcha();
-            return;
-        }
+            if (strtoupper($this->captcha) !== session('captcha')) {
+                session()->flash('error', 'Incorrect CAPTCHA. Please try again.');
+                $this->generateCaptcha();
+                return;
+            }
 
-       $suss = CommonFormModel::create([
+        SightSeeingFormModel::create([
             'user_name' => $this->name,
             'user_email' => $this->email,
             'user_phone' => $this->phone,
             'user_adult' => $this->adult,
             'user_children' => $this->children,
-            'package_name' => $this->package['name'],
-            'package_type' => $this->package['service_type'],
+            'sight_name' => !empty($this->sightname) ? $this->sightname : 'Unknown',
+            'sight_city' => !empty($this->sightplace) ? $this->sightplace : 'Unknown',
+            'delete_status' => 1,
         ]);
         $this->reset(['name', 'email', 'phone', 'adult', 'children','captcha']);
         session()->flash('message', 'Your query send successfully!');
@@ -72,6 +72,6 @@ class CommonForm extends Component
     #[Layout('user.Layouts.app')]
     public function render()
     {
-        return view('livewire.user_front.common-form');
+        return view('livewire.user_front.sight-seeing-form');
     }
 }

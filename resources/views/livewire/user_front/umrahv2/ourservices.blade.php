@@ -34,5 +34,7 @@
             </div>
         </div>
         <!-- About End -->
+
+        <livewire:OurService />
 </section>
- 
+

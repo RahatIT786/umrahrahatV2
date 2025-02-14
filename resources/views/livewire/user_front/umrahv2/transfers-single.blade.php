@@ -33,7 +33,7 @@
                             <div class="custom-carousel-wrapper">
                                 <div class="custom-carousel-item">
                                     <img class="w-100" src="{{Storage::url($transportDetail->cartypemaster->carImagePath)}}" style="height:100%;width:100%" alt="Car Image">
-                                </div>   
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
 
                 <!-- Right Section: Booking Form -->
                 <div class="col-lg-3" style="margin-top:70px">
-                            
+
                             <!-- Price Section -->
                             <div class="mb-3">
                              <h3 class="mb-4 section-title text-start text-primary text-uppercase ">Price </h3>
@@ -56,26 +56,36 @@
                             </div>
                     <div class="border p-5 rounded booking-form" style="width: 450px;">
                         <h4 class="mb-4 text-uppercase">Book Your Car</h4>
-                        <form>
+                        @if (session()->has('message'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('message') }}
+                            </div>
+                        @endif
+                        <form wire:submit.prevent="submit">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                <input type="text" class="form-control" id="name" wire:model="name" placeholder="Enter your name">
+                                @error('name') <span class="text-danger small">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                <input type="email" class="form-control" id="email" wire:model="email"  placeholder="Enter your email">
+                                @error('email') <span class="text-danger small">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                                <input type="tel" class="form-control" id="phone" wire:model="phone"  placeholder="Enter your phone number">
+                                @error('phone') <span class="text-danger small">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="num-adults" class="form-label">Adults</label>
-                                <input type="number" class="form-control" id="num-adults" min="1">
+                                <input type="number" class="form-control" wire:model="adult" id="num-adults" min="1">
+                                @error('adult') <span class="text-danger small">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="num-children" class="form-label">Children</label>
-                                <input type="number" class="form-control" id="num-children" min="0">
+                                <input type="number" class="form-control" wire:model="children"  id="num-children" min="0">
+                                @error('children') <span class="text-danger small">{{ $message }}</span> @enderror
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Book Now</button>
                         </form>
@@ -128,11 +138,11 @@
     .zoom-effect img {
         transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
     }
-    
+
     .zoom-effect img:hover {
         transform: scale(1.2); /* Zooms the image by 20% */
     }
-   
+
     #navtabs {
         background-color: transparent;
         width: 100%;
@@ -147,7 +157,7 @@
       /* border: 2px solid black; */
       background-color: none !important;
     }
-    
+
     .nav-tabs-package {
       display: flex;              /* Display tabs in a row */
       justify-content: space-between;  /* Distribute space evenly between tabs */
@@ -220,7 +230,7 @@
 }
 @media (max-width: 768px) {
     .nav-tabs-package {
-        flex-direction: column !important; 
+        flex-direction: column !important;
         align-items: center; /* Center align tabs */
         width: 100%;
     }
@@ -279,7 +289,7 @@
                                                     @if(trim($sentence))
                                                         <li style="padding-left: 0; margin: 0;">
                                                             <div class="d-flex">
-                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt="">
                                                                 &nbsp; {{ trim($sentence) }}
                                                             </div>
                                                         </li>
@@ -308,7 +318,7 @@
                                             <div class="box box-1">
                                                 <h5 style="font-size:xx-large">Terms And Conditions</h5>
                                                 <ul style=" list-style-type: none; padding-left: 0;">
-                                                
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -336,7 +346,7 @@
                                                     @if(trim($sentence))
                                                         <li style="padding-left: 0; margin: 0;">
                                                             <div class="d-flex">
-                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                                                <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt="">
                                                                 &nbsp; {{ trim($sentence) }}
                                                             </div>
                                                         </li>
@@ -348,7 +358,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -364,24 +374,24 @@
                         <div class="col-md-12 col-sm-12 mb-3">
                             <div class="box box-1">
                                 <h5 style="font-size:xx-large">Check In</h5>
-                              
+
                               {{--   <li style="padding-left: 0; margin: 0;">
                                     <div class="d-flex">
-                                        <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                        <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt="">
                                      &nbsp; {{ \Carbon\Carbon::parse($hotel_detail->hotelCheckInTime)->format('H:i') }}
                                     </div>
                                  </li>--}}
-                          
+
                             </div>
                         </div>
-                        
+
                         <!-- Box 2 -->
                         <div class="col-md-12 col-sm-12 mb-3">
                             <div class="box box-2">
                                 <h5 style="font-size:xx-large">Check Out</h5>
                              {{--   <li style="padding-left: 0; margin: 0;">
                                     <div class="d-flex">
-                                        <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt=""> 
+                                        <img src="{{asset('asserts/user/img/svg/tick.svg')}}" height="25px" alt="">
                                      &nbsp; {{ \Carbon\Carbon::parse($hotel_detail->hotelCheckOutTime)->format('H:i') }}
                                     </div>
                                  </li>--}}
@@ -441,8 +451,8 @@ li {
     border: 2.5px dashed #4BB543;
 }
 
-@keyframes spin { 
-    100% { 
+@keyframes spin {
+    100% {
         transform: rotateZ(360deg);
     }
 }
@@ -518,7 +528,7 @@ li {
                         <!-- itenary -->
                         <div class="container">
                             <div class="timeline">
-                              
+
                             </div>
                         </div>
         <!-- itenaru -->
@@ -684,7 +694,7 @@ li {
                 </div>
             </div>
 
-            <!-- Paymrnt policy -->  
+            <!-- Paymrnt policy -->
             <div id="PaymentPolicy" class="tab-pane fade show" role="tabpanel">
                 <div class="container">
                     <div class="row" style="margin-top:40px">
@@ -692,14 +702,14 @@ li {
                             <div class="packageoverviewbox">
                                 <div class="row">
                                                             <!-- Box 3 -->
-                    
+
 
                         <!-- Box 4 -->
 
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -713,12 +723,12 @@ li {
                                 <div class="row">
                                 <!-- <h3 class="mb-3 section-title text-start text-primary text-uppercase">Package Overview</h3> -->
                                     <ul>
-                                       
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

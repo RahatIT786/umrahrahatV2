@@ -8,38 +8,7 @@
             </div>
         </div>
         <!-- Page Header End -->
-        <!-- <div class="container-fluid booking pb-5 wow fadeIn"  data-wow-delay="0.1s">
-    <div class="container">
-        <div class="bg-white shadow" style="padding: 35px; border: 2px dotted red;">
-            <div class="row g-2">
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="clients-count">0</h2>
-                        <h5>Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="success-rate">0</h2>
-                        <h5>Success Rate</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="rating-clients">0</h2>
-                        <h5>Rating Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="counter">
-                        <h2 style="color:#FEAF39" id="experience-years">0</h2>
-                        <h5>Years of Experience</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
+
 
         <!-- Room Start -->
         <div class="container-xxl py-5">
@@ -69,75 +38,21 @@
                                         <div>Rahat Group is committed to ensuring a comfortable and stress-free pilgrimage for all our guests.</div>
                                     </div>
                                 </div>
-                                {{-- <ul style="list-style: none;">
-                                    <li> .</li>
-                                    <li><strong><i class="fa-solid fa-wheelchair"></i> Wheelchair Support:</strong> For those in need of mobility assistance.</li>
-                                </ul>  --}}
+
                                 <p></p>
-                                {{-- <ul>
-                                    <li>Imran : +966 56 389 8353</li>
-                                    <li>Shoeb: +966 58 379 8252</li>
-                                    <li>Owais: +966 59 607 8838</li>
-                                </ul> --}}
+
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Enquire Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:click="openModal()">
+                                        <i class="fa-regular fa-paper-plane"></i> Enquire Now
+                                    </a>
+                                    {{-- <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Enquire Now</a> --}}
                                     {{-- <a class="btn btn-sm btn-dark rounded py-2 px-4" wire:navigate href="{{route('singleBlog1')}}">Read More</a> --}}
                                 </div>
                                </div>
                             </div>
                         </div>
                     </div>
-                {{-- @foreach ($foodDetails as $food)
-                <div class="col-lg-8 col-md-10 wow fadeInUp  " data-wow-delay="0.3s">
-                    <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                        <div class="position-relative  p-3 col-lg-4 col-md-4">
-                            <img class="img-fluid " src="{{Storage::url($food['foodBreakFastImagePath'])}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                        </div>
-                        <div class="p-4 mt-2">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h5>{{$food['foodType']}}</h5>
-                                <h6 class="me-2">{{$food['foodPrice']}} .<span>{{$food['currency']}}</span></h6>
-                            </div>
-                            <div class="d-flex flex-column justify-content-between h-90">
-                                <p class="text-body mb-3">{{ Str::limit($food['foodBreakFast'], 200, '...') }}</p>
 
-                            <div class="d-flex justify-content-between">
-                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{Storage::url($food['footPdf'])}}">Food Menu</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog2')}}">Read More</a>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                    
-                @endforeach --}}
-                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative  p-3 col-lg-4">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring3.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                            </div>
-                            <div class="p-4 mt-2">
-                                <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog3')}}">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    {{-- <div class="col-lg-8 col-md-8 wow fadeInUp " data-wow-delay="0.6s">
-                        <div class="room-item shadow rounded overflow-hidden d-flex" style="width: fit-content">
-                            <div class="position-relative p-3 col-lg-4">
-                                <img class="img-fluid" src="{{asset('asserts/user/img/catring4.jpg')}}" style="height: 200px; width:100%; border-radius:7px;" alt="">
-                            </div>
-                            <div class="p-4 mt-2">
-                                <p class="text-body mb-3">Ramadan, the blessed month of fasting, prayer, and reflection, is just around the corner. As we eagerly await its arrival...</p>
-                                <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('contact-us')}}">Contact US</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="{{route('singleBlog3')}}">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -184,5 +99,19 @@
                 </div>
             </div>
         </div>
-
+        @if($isOpen)
+        <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title"><i class="fas fa-calendar-check"></i> Book Now</h5>
+                        <button type="button" class="btn-close text-white" wire:click="closeModal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <livewire:AssistForm />
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 </section>

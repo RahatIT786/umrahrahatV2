@@ -3,7 +3,7 @@
 namespace App\Livewire\UserFront\Umrahv2;
 
 use Livewire\Component;
-use Livewire\Attributes\Layout; 
+use Livewire\Attributes\Layout;
 use App\Models\sightController;
 
 class Sightseeing extends Component
@@ -12,10 +12,25 @@ class Sightseeing extends Component
     public $searchName;
     public $sightCity;
     public $limit = 4;
+    public $isOpen = false;
+    public $package = [];
     public function loadMore()
     {
         $this->limit += 4; // Load 10 more hotels
     }
+
+    public function openModal($package = [])
+    {
+        $this->package = $package;
+       // dd($this->package);
+        $this->isOpen = true;
+    }
+
+    public function closeModal()
+    {
+        $this->isOpen = false;
+    }
+    
     #[Layout('user.Layouts.app')]
     public function render()
     {
