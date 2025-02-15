@@ -7,6 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <meta name="CopyRight" content="No Copying Allowed">
+
 
     <!-- Favicon -->
     <link href="{{asset("asserts/user/img/fav.jpg")}}" rel="icon">
@@ -47,6 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     
     <style>
+
         .dropdown-item:hover{
             background-color: #FEAF39;
             color:#fff;

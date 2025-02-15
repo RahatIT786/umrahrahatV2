@@ -36,7 +36,7 @@
 }
 </style>
 
- <body>
+ <body >
 
     <div id="whatsapp">
         {{-- <a href="https://wa.me/+971567866713"> --}}
