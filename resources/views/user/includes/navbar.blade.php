@@ -105,7 +105,7 @@
                                     </a>
                                     <div class="dropdown-menu rounded-0 m-0" aria-labelledby="umrahDropdown">
                                         <a href="{{route('umrah-by-bus-from-uae')}}" class="dropdown-item">By Bus From UAE</a>
-                                        <a href="{{route('umrah-by-flight-from-uae')}}" class="dropdown-item">By Flight from UAE</a>
+                                        <a href="{{route('umrah-by-flight-from-uae')}}" class="dropdown-item">By Flight from India</a>
                                         <a href="{{route('umrah-landpackages-uae')}}" class="dropdown-item">Land Packages</a>
                                         <a href="{{route('custom.package')}}" class="dropdown-item">Custom Package</a>
                                     </div>
@@ -120,7 +120,7 @@
 
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="{{route('ramzaan.bybus')}}" class="dropdown-item">By Bus from UAE</a>
-                                        <a href="{{route('ramzaan.byflight')}}" class="dropdown-item">By Flight from UAE</a>
+                                        <a href="{{route('ramzaan.byflight')}}" class="dropdown-item">By Flight from India</a>
                                         <a href="{{route('ramzaan.landpackage')}}" class="dropdown-item">Land Packages</a>
 
                                     </div>
