@@ -19,6 +19,15 @@ class UmrahByFlightFromUAE extends Component
     public $searchCity;
     public $searchDays;
     public $packageDays;
+    public $searchPackageForm;
+    public $largestDepartCity;
+    public $mostFrequentCity;
+    public $searchPackageDays;
+    public $searchPackageiCty0;
+    public $searchPackageiCty1;
+    public $searchPackageiCty2;
+    public $searchPackageiCty3;
+    public $searchPackageiCty4;
 
     //for enquire form variables
     public $umrahEmquire;
@@ -49,8 +58,19 @@ class UmrahByFlightFromUAE extends Component
         //dd( $this->inclusions);
         $this->allCities = DepartureCity::where('delete_status', 1)->get();
         // Get and process all depart city data
-        $this->departCities = $this->getAllDepartCities();
-        $this->packageDays =MainPackage::where('delete_status', 1)->where('service_type','3')->pluck('package_days');
+        $this->departCities = MainPackage::where('delete_status',1)->where('service_type','Umrah')->where('departure_type','flight')->pluck('depart_city');
+        $this->packageDays =MainPackage::where('delete_status', 1)->where('service_type','Umrah')->where('departure_type','flight')->pluck('package_days')->unique()->values();
+
+        // Step 2: Count occurrences of each unique value
+        $counts = array_count_values($this->departCities->toArray());
+
+        // Step 3: Get the most frequent value
+        $this->mostFrequentCity = array_search(max($counts), $counts);
+        //dd($this->mostFrequentCity);
+        // return $mostFrequentCity;
+
+        // // Step 4: Convert back to string and store it
+        $this->largestDepartCity = explode(',', $this->mostFrequentCity);
     }
     public function openModal($packageData)
     {
@@ -128,6 +148,27 @@ class UmrahByFlightFromUAE extends Component
 
         if ($this->searchPackage) {
             $query->where('name', 'like', '%' . $this->searchPackage . '%');
+        }
+        if($this->searchPackageForm){
+            $query->where('name', 'like', '%' . $this->searchPackageForm . '%');
+        }
+        if($this->searchPackageDays){
+            $query->where('package_days', 'like', '%' . $this->searchPackageDays . '%');
+        }
+        if($this->searchPackageiCty0){
+            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty0 . '%');
+        }
+        if($this->searchPackageiCty1){
+            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty1 . '%');
+        }
+        if($this->searchPackageiCty2){
+            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty2 . '%');
+        }
+        if($this->searchPackageiCty3){
+            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty3 . '%');
+        }
+        if($this->searchPackageiCty4){
+            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty4 . '%');
         }
 
         $this->allPackages = $query->get();
