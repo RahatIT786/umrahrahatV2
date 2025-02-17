@@ -107,13 +107,12 @@
                             <div class="mt-3">
                                 <h6>Number of Nights</h6>
                                 @foreach($packageDays as $i => $day)
-            
-                                <form wire:submit.prevent="" class="date" id="date2" >
                                     <div class="form-check">
-                                        <input wire:model.live="searchPackageDays{{ $i }}" class="form-check-input" type="checkbox" id="nights{{ $day }}" value="{{ $day }}">
+                                        <input wire:click="selectSingle('{{ $day }}')" class="form-check-input" type="checkbox"
+                                            id="nights{{ $day }}" value="{{ $day }}"
+                                            @if($searchPackageDays == $day) checked @endif>
                                         <label class="form-check-label" for="nights{{ $day }}">{{ $day }} Nights</label>
                                     </div>
-                                </form>
                                 @endforeach
                             </div>
 
@@ -122,7 +121,7 @@
                                 <h6>Departure cities</h6>
                                 @foreach($this->largestDepartCity as $i => $city)
                                     <div class="form-check">
-                                        <input wire:model.live="searchPackageiCty.{{ $i }}" class="form-check-input" type="checkbox" id="city.{{ $city }}" value="{{ $city }}">
+                                        <input wire:model.live="searchPackageCity.{{ $city }}" class="form-check-input" type="checkbox" id="city.{{ $city }}" value="{{ $city }}">
                                         <label class="form-check-label" for="city.{{ $city }}">{{ $city }}</label>
                                     </div>
                                 @endforeach

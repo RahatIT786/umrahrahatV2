@@ -21,17 +21,34 @@ class RamzaanPackage extends Component
     public $searchPackage;
     public $isOpen = false;
     public $package = [];
-
+    public $searchPackageCity;
+    public $largestDepartCity;
+    public $mostFrequentCity;
+    public $searchPackageDays = null;
+    public $searchPackageForm;
     public function mount()
     {
         // Fetch inclusions with delete_status 1
         $this->inclusions = Inclusion::where('delete_status', 1)->get();
         $this->allCities = DepartureCity::where('delete_status', 1)->get();
         // Get and process all depart city data
-        $this->departCities = $this->getAllDepartCities();
-        $this->packageDays =MainPackage::where('delete_status', 1)
-                                            ->where('service_type','1')
-                                            ->pluck('package_days');
+        // $this->departCities = $this->getAllDepartCities();
+        // $this->packageDays =MainPackage::where('delete_status', 1)
+        //                                     ->where('service_type','1')
+        //                                     ->pluck('package_days');
+
+        $this->departCities = MainPackage::where('delete_status', 1)->where('service_type', 'Ramzan')->where('departure_type', 'bus')->pluck('depart_city');
+        $this->packageDays = MainPackage::where('delete_status', 1)->where('service_type', 'Ramzan')->where('departure_type', 'bus')->pluck('package_days')->unique()->values();
+        // Step 2: Count occurrences of each unique value
+        $counts = array_count_values($this->departCities->toArray());
+
+        // Step 3: Get the most frequent value
+        $this->mostFrequentCity = array_search(max($counts), $counts);
+        //dd($this->mostFrequentCity);
+        // return $mostFrequentCity;
+
+        // // Step 4: Convert back to string and store it
+        $this->largestDepartCity = explode(',', $this->mostFrequentCity);
     }
     public function openModal($packageData)
     {
@@ -68,6 +85,15 @@ class RamzaanPackage extends Component
         return $uniqueCities;
     }
 
+    public function selectSingle($value)
+    {
+        $this->searchPackageDays = $value;
+    }
+    public function searchPackageCity($value)
+    {
+        $this->searchPackageCity = $value;
+    }
+
     #[Layout('user.Layouts.app')]
     public function render()
     {
@@ -80,8 +106,11 @@ class RamzaanPackage extends Component
         if ($this->searchPackage) {
             $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
-        if ($this->searchDays) {
-            $query->where('package_days', 'like', '%' . $this->searchDays . '%');
+        if ($this->searchPackageForm) {
+            $query->where('name', 'like', '%' . $this->searchPackageForm . '%');
+        }
+        if ($this->searchPackageDays) {
+            $query->where('package_days', 'like', '%' . $this->searchPackageDays . '%');
         }
         $this->allPackages = $query->get();
 
