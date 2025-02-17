@@ -22,27 +22,9 @@ class UmrahLandPackageUAE extends Component
     public $searchPackageForm;
     public $largestDepartCity;
     public $mostFrequentCity;
-    public $searchPackageDays0;
-    public $searchPackageDays1;
-    public $searchPackageDays2;
-    public $searchPackageDays3;
-    public $searchPackageDays4;
-    public $searchPackageDays5;
-    public $searchPackageDays6;
-    public $searchPackageDays7;
-    public $searchPackageDays8;
-    public $searchPackageDays9;
-
-    public $searchPackageiCty0;
-    public $searchPackageiCty1;
-    public $searchPackageiCty2;
-    public $searchPackageiCty3;
-    public $searchPackageiCty4;
-    public $searchPackageiCty5;
-    public $searchPackageiCty6;
-    public $searchPackageiCty7;
-    public $searchPackageiCty8;
-    public $searchPackageiCty9;
+    public $searchPackageDays= null;
+    public $searchDay;
+    public $searchPackageCity;
 
     //for enquire form variables
     public $umrahEmquire;
@@ -150,8 +132,16 @@ class UmrahLandPackageUAE extends Component
     session()->flash('success', 'Your enquiry has been submitted successfully!');
     }
 
-
-
+    public function updatedSearchPackageDay($value){
+        $this->searchDay = $value;
+    }
+    public function selectSingle($value)
+    {
+        $this->searchPackageDays = $value;
+    }
+    public function searchPackageCity($value){
+        $this->searchPackageCity = $value;
+    }
 
 
 
@@ -170,77 +160,15 @@ class UmrahLandPackageUAE extends Component
         if($this->searchPackageForm){
             $query->where('name', 'like', '%' . $this->searchPackageForm . '%');
         }
-
-        if($this->searchPackageDays0){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays0 . '%');
-        }
-        if($this->searchPackageDays1){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays1 . '%');
-        }
-        if($this->searchPackageDays2){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays2 . '%');
-        }
-        if($this->searchPackageDays3){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays3 . '%');
+       // dump($this->searchPackageDays);
+        if($this->searchPackageDays){
+            $query->where('package_days', 'like', '%' . $this->searchPackageDays );
         }
 
-        if($this->searchPackageDays4){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays4 . '%');
+        if($this->searchPackageCity){
+            $query->where('depart_city', 'like', '%' . $this->searchPackageCity . '%');
         }
 
-        if($this->searchPackageDays5){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays5 . '%');
-        }
-
-        if($this->searchPackageDays6){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays6 . '%');
-        }
-        if($this->searchPackageDays7){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays7 . '%');
-        }
-        if($this->searchPackageDays8){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays8 . '%');
-        }
-        if($this->searchPackageDays9){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays9 . '%');
-        }
-
-
-        if($this->searchPackageDays0){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays0 . '%');
-        }if($this->searchPackageDays0){
-            $query->where('package_days', 'like', '%' . $this->searchPackageDays0 . '%');
-        }
-        if($this->searchPackageiCty0){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty0 . '%');
-        }
-        if($this->searchPackageiCty1){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty1 . '%');
-        }
-        if($this->searchPackageiCty2){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty2 . '%');
-        }
-        if($this->searchPackageiCty3){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty3 . '%');
-        }
-        if($this->searchPackageiCty4){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty4 . '%');
-        }
-        if($this->searchPackageiCty5){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty5 . '%');
-        }
-        if($this->searchPackageiCty6){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty6 . '%');
-        }
-        if($this->searchPackageiCty7){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty7 . '%');
-        }
-        if($this->searchPackageiCty8){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty8 . '%');
-        }
-        if($this->searchPackageiCty9){
-            $query->where('depart_city', 'like', '%' . $this->searchPackageiCty9 . '%');
-        }
         $this->allPackages = $query->take($this->limit)->get();
         // dd( $this->allPackages);
         // Render the Livewire view with allPackages data

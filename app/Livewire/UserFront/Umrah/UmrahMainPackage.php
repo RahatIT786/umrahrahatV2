@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\MainPackage;
 use App\Models\Inclusion;
 use App\Models\DepartureCity;
-use Livewire\Attributes\Layout; 
+use Livewire\Attributes\Layout;
 
 class UmrahMainPackage extends Component
 {
@@ -19,6 +19,11 @@ class UmrahMainPackage extends Component
     public $searchDays;
     public $packageDays;
     public $searchPackage;
+    public $largestDepartCity;
+    public $mostFrequentCity;
+    public $searchPackageDays= null;
+    public $searchDay;
+    public $searchPackageCity;
 
     public function mount()
     {
@@ -26,15 +31,26 @@ class UmrahMainPackage extends Component
         $this->inclusions = Inclusion::where('delete_status', 1)->get();
         $this->allCities = DepartureCity::where('delete_status', 1)->get();
         // Get and process all depart city data
-        $this->departCities = $this->getAllDepartCities();
-        $this->packageDays =MainPackage::where('delete_status', 1)->pluck('package_days');
+      //  $this->departCities = $this->getAllDepartCities();
+        $this->departCities = MainPackage::where('delete_status',1)->where('service_type','Umrah')->where('departure_type','land')->pluck('depart_city');
+        $this->packageDays =MainPackage::where('delete_status', 1)->where('service_type','Umrah')->where('departure_type','land')->pluck('package_days')->unique()->values();
+        // Step 2: Count occurrences of each unique value
+        $counts = array_count_values($this->departCities->toArray());
+
+        // Step 3: Get the most frequent value
+        $this->mostFrequentCity = array_search(max($counts), $counts);
+        //dd($this->mostFrequentCity);
+        // return $mostFrequentCity;
+
+        // // Step 4: Convert back to string and store it
+        $this->largestDepartCity = explode(',', $this->mostFrequentCity);
     }
 
     public function getAllDepartCities()
     {
         // Fetch all packages from the database
         $packages = MainPackage::where('delete_status', 1)->get();
-        
+
         // Map over each package and convert `depart_city` to an array
         $departCities = $packages->map(function ($package) {
             return explode(',', $package->depart_city);

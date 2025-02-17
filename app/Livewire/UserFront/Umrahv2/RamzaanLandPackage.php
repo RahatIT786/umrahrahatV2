@@ -21,6 +21,13 @@ class RamzaanLandPackage extends Component
     public $searchPackage;
     public $isOpen = false;
     public $package = [];
+    public $searchPackageDays = null;
+    public $searchDay;
+    public $searchPackageCity;
+    public $largestDepartCity;
+    public $mostFrequentCity;
+    public $searchPackageForm;
+
 
     public function mount()
     {
@@ -28,15 +35,28 @@ class RamzaanLandPackage extends Component
         $this->inclusions = Inclusion::where('delete_status', 1)->get();
         $this->allCities = DepartureCity::where('delete_status', 1)->get();
         // Get and process all depart city data
-        $this->departCities = $this->getAllDepartCities();
-        $this->packageDays =MainPackage::where('delete_status', 1)
-                                            ->where('service_type','1')
-                                            ->pluck('package_days');
+        // $this->departCities = $this->getAllDepartCities();
+        // $this->packageDays = MainPackage::where('delete_status', 1)
+        //     ->where('service_type', '1')
+        //     ->pluck('package_days');
+
+        $this->departCities = MainPackage::where('delete_status', 1)->where('service_type', 'Ramzan')->where('departure_type', 'land')->pluck('depart_city');
+        $this->packageDays = MainPackage::where('delete_status', 1)->where('service_type', 'Ramzan')->where('departure_type', 'land')->pluck('package_days')->unique()->values();
+        // Step 2: Count occurrences of each unique value
+        $counts = array_count_values($this->departCities->toArray());
+
+        // Step 3: Get the most frequent value
+        $this->mostFrequentCity = array_search(max($counts), $counts);
+        //dd($this->mostFrequentCity);
+        // return $mostFrequentCity;
+
+        // // Step 4: Convert back to string and store it
+        $this->largestDepartCity = explode(',', $this->mostFrequentCity);
     }
     public function openModal($packageData)
     {
         $this->package = $packageData;
-       // dd($this->package);
+        // dd($this->package);
         $this->isOpen = true;
     }
 
@@ -68,20 +88,38 @@ class RamzaanLandPackage extends Component
         return $uniqueCities;
     }
 
+    public function selectSingle($value)
+    {
+        $this->searchPackageDays = $value;
+    }
+    public function searchPackageCity($value)
+    {
+        $this->searchPackageCity = $value;
+    }
+
     #[Layout('user.Layouts.app')]
     public function render()
     {
         // Fetch all main packages with delete_status 1
         $query = MainPackage::where('delete_status', 1)
-        ->where('service_type',strtolower(__('message.ramzaan')))
-        ->where('departure_type',strtolower(__('message.land')));
+            ->where('service_type', strtolower(__('message.ramzaan')))
+            ->where('departure_type', strtolower(__('message.land')));
 
         if ($this->searchPackage) {
             $query->where('name', 'like', '%' . $this->searchPackage . '%');
         }
-        if ($this->searchDays) {
-            $query->where('package_days', 'like', '%' . $this->searchDays . '%');
+        if ($this->searchPackageForm) {
+            $query->where('name', 'like', '%' . $this->searchPackageForm . '%');
         }
+        // dump($this->searchPackageDays);
+        if ($this->searchPackageDays) {
+            $query->where('package_days', 'like', '%' . $this->searchPackageDays);
+        }
+
+        if ($this->searchPackageCity) {
+            $query->where('depart_city', 'like', '%' . $this->searchPackageCity . '%');
+        }
+
         $this->allPackages = $query->get();
         // Render the Livewire view with allPackages data
         return view('livewire.user_front.umrahv2.ramzaan-land-package', ['allPackages' => $this->allPackages, 'departCities' => $this->departCities]);
