@@ -263,9 +263,9 @@
                                             <div class="ps-2">
                                                <h5 style="color: gray">Start From</h5>
                                                <div class="text-end">
-                                                <del class="text-danger">{{$minPrice * 1.1}}.AED</del>
-                                                <p class="text-end" style="color: black;"><span style="font-size: 22px;   font-weight: 500;">{{$minPrice }}</span>.AED <br>
-                                                <span style="color: green; font-size: 11px; font-weight: 600;">YOU SAVED {{($minPrice * 1.1) - ($minPrice )}}.AED  <i class="fa-solid fa-sack-xmark"></i></span>
+                                                <del class="text-danger">{{$minPrice * 1.1}}.SAR</del>
+                                                <p class="text-end" style="color: black;"><span style="font-size: 22px;   font-weight: 500;">{{$minPrice }}</span>.SAR <br>
+                                                <span style="color: green; font-size: 11px; font-weight: 600;">YOU SAVED {{($minPrice * 1.1) - ($minPrice )}}.SAR  <i class="fa-solid fa-sack-xmark"></i></span>
                                                 </p>
 
                                                </div>
